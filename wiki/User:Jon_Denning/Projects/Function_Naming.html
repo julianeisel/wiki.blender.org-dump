@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Jon Denning/Projects/Function Naming - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Jon_Denning/Projects/Function_Naming","wgTitle":"Jon Denning/Projects/Function Naming","wgCurRevisionId":29474,"wgRevisionId":29474,"wgArticleId":6288,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Jon_Denning/Projects/Function_Naming","wgRelevantArticleId":6288,"wgRequestId":"cc0c096021768f1f8c1fc0e5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Jon Denning","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Jon_Denning_Projects_Function_Naming rootpage-User_Jon_Denning skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="Function_Naming.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJon+Denning%2FProjects%2FFunction+Naming" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Function_Naming.html#Intro_to_this_Doc"><span class="tocnumber">1</span> <span class="toctext">Intro to this Doc</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Function_Naming.html#General"><span class="tocnumber">2</span> <span class="toctext">General</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Function_Naming.html#Other_Links"><span class="tocnumber">2.1</span> <span class="toctext">Other Links</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="Function_Naming.html#Maths"><span class="tocnumber">3</span> <span class="toctext">Maths</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="Function_Naming.html#Vectors"><span class="tocnumber">3.1</span> <span class="toctext">Vectors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="Function_Naming.html#Prefixes"><span class="tocnumber">4</span> <span class="toctext">Prefixes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="Function_Naming.html#Modules-ish"><span class="tocnumber">4.1</span> <span class="toctext">Modules-ish</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Function_Naming.html#Non-modules"><span class="tocnumber">4.2</span> <span class="toctext">Non-modules</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="Function_Naming.html#Suffixes"><span class="tocnumber">5</span> <span class="toctext">Suffixes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="Function_Naming.html#Operators"><span class="tocnumber">5.1</span> <span class="toctext">Operators</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Function_Naming.html#Non-operators"><span class="tocnumber">5.2</span> <span class="toctext">Non-operators</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Jon Denning/Projects/Function Naming</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Jon_Denning.html" title="User:Jon Denning">User:Jon Denning</a>&lrm; | <a href="../Projects.html" title="User:Jon Denning/Projects">Projects</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Intro_to_this_Doc">Intro to this Doc</span></h2>
+<p>I created this document as a simple guide to help me understand how functions are currently named and called, especially since some functions rely heavily on many levels of indirect calling.  Presently, this document is only based on my experience and understanding and some feedback, so it likely contains errors.
+</p><p>I have two hopes for this document:
+</p>
+<ul><li>after being reviewed, corrected, and improved, that this document could be made available to newcomers as part of their onboarding, and</li>
+<li>this document could morph into a function naming design doc</li></ul>
+<p>Notes: This is far from exhaustive or comprehensive, as I have only explored a small subset of the codebase.  Also, this is (mostly) my understanding of the code base, which could be incorrect.
+</p><p>Let me know if you find bugs or other ways to improve this document!
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="General">General</span></h2>
+<ul><li>A <code>static</code> function is only accessible within that file (limited scope, not a "global" function, which is the default).  While this qualifier is not part of the function's name, it is still useful to know for understanding the scope of functions.</li></ul>
+<ul><li>Naming should follow the <code>snake_case</code> convention.</li></ul>
+<ul><li>Different areas of code may adopt different coding styles, so prefixes and suffixes may not be correct or consistent.</li></ul>
+<ul><li>Many of these conventions will (hopefully!) change as Blender moves away from C and toward C++ (yay, namespaces!).</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Other_Links">Other Links</span></h3>
+<p>Always refer to official documentation.  Listed below are some great starting places.
+</p>
+<ul><li><a href="../../Source.html" title="Source">Blender Code Documentation</a></li>
+<li><a href="../../Style_Guide/C_Cpp.html" title="Style Guide/C Cpp">C/C++ Style Guide</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Maths">Maths</span></h2>
+<p>The mathematics code has its own naming convention.
+</p>
+<h3><span class="mw-headline" id="Vectors">Vectors</span></h3>
+<p>Vector functions have a prefix that indicates what operation is performed, a possible infix and 1+ suffixes to indicate vectors.  The first vector passed (whether infix or suffix if no infix) is usually considered the destination, and the second vector passed (if applicable) is considered the source.  If three or more vectors are given in total, the first is the destination, and the other two are sources.
+</p><p>Due to the limitations of C (no function overloading), a final suffix could be added to indicate that the vector types are <code>double</code> (<code>db</code>), <code>int</code> (<code>i</code>), <code>short</code> (<code>short</code>), etc.  If no type is given, <code>float</code> (<code>fl</code>) is assumed.
+</p><p>Note: a singleton vector (a single <code>float</code>) is denoted with <code>i</code>, <code>fl</code>, or <code>db</code>.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Prefix</th>
+<th>Meaning</th>
+<th>Analogy</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>zero_A</code></td>
+<td>zero</td>
+<td><code>A=0</code></td>
+<td>sets <code>A</code> to 0
+</td></tr>
+<tr>
+<td><code>is_zero_A</code></td>
+<td>test if zero</td>
+<td><code>A==0</code></td>
+<td>returns true if <code>A</code> is exactly 0 (no epsilon)
+</td></tr>
+<tr>
+<td><code>negate_A</code></td>
+<td>negation</td>
+<td><code>A=-A</code></td>
+<td>negates values of <code>A</code>
+</td></tr>
+<tr>
+<td><code>negate_A_B</code></td>
+<td>negated store</td>
+<td><code>A=-B</code></td>
+<td>stores in <code>A</code> the negated values of <code>B</code>
+</td></tr>
+<tr>
+<td><code>copy_A_B</code></td>
+<td>copy</td>
+<td><code>A=B</code></td>
+<td>copies values from destination (<code>B</code>) to source (<code>A</code>)
+</td></tr>
+<tr>
+<td><code>swap_A_B</code></td>
+<td>swap</td>
+<td><code>T=A; A=B; B=T</code></td>
+<td>swaps values in <code>A</code> with <code>B</code>
+</td></tr>
+<tr>
+<td><code>add_A_B</code></td>
+<td>incremental add</td>
+<td><code>A+=B</code></td>
+<td>adds values in <code>B</code> into <code>A</code>
+</td></tr>
+<tr>
+<td><code>add_A_BC</code></td>
+<td>add (overwrite)</td>
+<td><code>A=B+C</code></td>
+<td>stores sum of values in <code>B</code> and <code>C</code> in <code>A</code>
+</td></tr>
+<tr>
+<td><code>madd_A_BC</code></td>
+<td>Multiply and incremental ADD</td>
+<td><code>A+=B*C</code></td>
+<td>adds product of <code>B</code> and <code>C</code> to <code>A</code>
+</td></tr>
+<tr>
+<td><code>madd_A_BCD</code></td>
+<td>weighted addition</td>
+<td><code>A=B+C*D</code></td>
+<td>stores in <code>A</code> the weighted sum of <code>B</code> (scaled by 1) and product of <code>C</code> and <code>D</code>
+</td></tr>
+<tr>
+<td><code>sub_A_B</code></td>
+<td>decrement subtract</td>
+<td><code>A-=C</code></td>
+<td>subtracts values in <code>B</code> from <code>A</code>
+</td></tr>
+<tr>
+<td><code>sub_A_BC</code></td>
+<td>subtract (overwrite)</td>
+<td><code>A=B-C</code></td>
+<td>stores the difference of values of <code>B</code> and <code>C</code> in <code>A</code>
+</td></tr>
+<tr>
+<td><code>mul_A_B</code></td>
+<td>scaling</td>
+<td><code>A*=B</code></td>
+<td>scales values of <code>A</code> by <code>B</code>
+</td></tr>
+<tr>
+<td><code>mul_A_BC</code></td>
+<td>multiply (overwrite)</td>
+<td><code>A=B*C</code></td>
+<td>stores in <code>A</code> the product of <code>B</code> and <code>C</code>
+</td></tr>
+<tr>
+<td><code>invert_A</code></td>
+<td>invert</td>
+<td><code>A=1/A</code></td>
+<td>inverts values of <code>A</code>
+</td></tr>
+<tr>
+<td><code>invert_A_safe</code></td>
+<td>safe invert</td>
+<td><code>A=(1/A) if A!=0</code></td>
+<td>inverts values of <code>A</code>, but only if non-zero
+</td></tr>
+<tr>
+<td><code>abs_A</code></td>
+<td>ABSolute</td>
+<td><code>A=abs(A)</code></td>
+<td>stores in <code>A</code> the absolute value of <code>A</code>
+</td></tr>
+<tr>
+<td><code>abs_A_B</code></td>
+<td>ABSolute</td>
+<td><code>A=abs(B)</code></td>
+<td>stores in <code>A</code> the absolute value of <code>B</code>
+</td></tr>
+<tr>
+<td><code>dot_AB</code></td>
+<td>DOT (inner) product</td>
+<td><code>A·B</code></td>
+<td>returns the inner product of <code>A</code> and <code>B</code>
+</td></tr>
+<tr>
+<td><code>dot_ABC</code></td>
+<td>DOT product</td>
+<td><code>(B-A)·(C-A)</code></td>
+<td>returns the inner product of vector from <code>A</code> to <code>B</code> with vector from <code>A</code> to <code>C</code>
+</td></tr>
+<tr>
+<td><code>angle_ABC</code></td>
+<td>angle</td>
+<td><code>acos(norm(A-B)·norm(C-B))</code></td>
+<td>returns angle between direction from <code>B</code> to <code>A</code> and direction from <code>B</code> to <code>C</code>
+</td></tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Prefixes">Prefixes</span></h2>
+<p>Some general notes follow.
+</p>
+<ul><li>If the function begins with a capitalized letter, these functions should be considered as "public" and therefore part of the Blender API (callable from other parts of Blender code).</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Modules-ish">Modules-ish</span></h3>
+<p>Module prefixes can be in all caps (indicating public functions), but not always.  A module prefix indicates the module to which that function "belongs" (see <a href="../../Modules.html" title="Modules">Modules</a>).
+</p><p>The following list includes modules as well as subprojects, subareas, and other module-like groups of functions.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Prefix</th>
+<th>Meaning</th>
+<th>Link</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>BKE_*</code></td>
+<td>Blender KErnel</td>
+<td><a rel="nofollow" class="external text" href="https://developer.blender.org/tag/core/">Core Module</a></td>
+<td>These functions are usually core Blender functions and should be considered low-level
+</td></tr>
+<tr>
+<td><code>BM*</code> / <code>BM_*</code></td>
+<td>BMesh</td>
+<td><a rel="nofollow" class="external text" href="https://developer.blender.org/tag/modeling/">Modeling Module</a></td>
+<td>Deal with the BMesh data structure.  Most (all?) mesh altering operations (think Edit Mode) manipulate the mesh through BMesh operations.
+</td></tr>
+<tr>
+<td><code>ED_*</code></td>
+<td>EDit</td>
+<td><a rel="nofollow" class="external text" href="https://developer.blender.org/tag/modeling/">Modeling Module</a></td>
+<td>Manipulate Object data (Mesh, Curve, Text, etc.), used in Edit Mode.
+</td></tr>
+<tr>
+<td><code>EDBM_*</code></td>
+<td>EDit mesh + BMesh</td>
+<td>?</td>
+<td>Edit mesh / BMesh manipulation functions.
+</td></tr>
+<tr>
+<td><code>VIEW3D_*</code></td>
+<td>VIEWport 3D</td>
+<td><a rel="nofollow" class="external text" href="https://developer.blender.org/tag/eevee_viewport/">EEVEE &amp; Viewport Module</a></td>
+<td>Render code for 3D Viewport
+</td></tr>
+<tr>
+<td><code>WM_*</code></td>
+<td>Window Management</td>
+<td><a rel="nofollow" class="external text" href="https://developer.blender.org/tag/user_interface/">User Interface Module</a></td>
+<td>Deals with window interaction
+</td></tr></tbody></table>
+<p><br />
+Comments:
+</p>
+<ul><li>I'm not sure what distinguishes the <code>EDBM_*</code> fns differ from the <code>BM*</code> / <code>BM_*</code> fns, other than the BMesh fns are low level while the <code>EDBM</code> fns are higher (calling the BMesh fns) and work to maintain correspondence between edit mesh and bmesh.</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Non-modules">Non-modules</span></h3>
+<p>Non-module prefixes give indication as to how or why the function is called.  Groups of functions can adopt a local prefix (only used in a single file or small number of files) to show their relation (ex: <code>raycast_*</code> in <code>raycast_all_cb</code>, <code>raycast_tri_backface_culling_test</code>, and <code>raycast_obj_fn</code>).  The table below covers only the prefixes that are broadly adopted.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Prefix</th>
+<th>Meaning</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>cb_*</code></td>
+<td>CallBack</td>
+<td>Passed as arguments to other functions or stored in data structures to be called back at a later time.  Some example uses of callback functions are list filtering, operating on geometry, handling a timer event, etc. (See <code>*_fn</code> suffix)
+</td></tr>
+<tr>
+<td><code>register_*</code></td>
+<td>Register</td>
+<td>Register higher order functions (for types, operators, callbacks, etc.) into Blender ecosystem (API) for use in the rest of Blender
+</td></tr>
+<tr>
+<td><code>test_*</code></td>
+<td>Test</td>
+<td>Perform some binary test (return a <code>bool</code>), without side-effects.
+</td></tr></tbody></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Suffixes">Suffixes</span></h2>
+<h3><span class="mw-headline" id="Operators">Operators</span></h3>
+<p>Operators are groups of functions with the same base function name that all work together to perform some operation.  The suffix indicates what part that function performs for the overall operation.
+</p><p>Note: this follows the BPY <code>Operator</code> naming conventions.  See <code>wmOperatorType</code>.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Suffix</th>
+<th>Meaning</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>*_exec</code></td>
+<td>Execute</td>
+<td>Performs the operation, and then returns control to caller.  Although there could be adjustable parameters, <code>_exec</code> functions perform their job with needing user interaction.  They do what they do, then get out of the way.
+</td></tr>
+<tr>
+<td><code>*_invoke</code></td>
+<td>Invoke</td>
+<td>Performs the operation, but with a period of user interaction (adjusting parameters, cancelled, committed, etc.) before returning control to the caller.
+</td></tr>
+<tr>
+<td><code>*_poll</code></td>
+<td>Poll</td>
+<td>Return a <code>bool</code> to indicate whether the context is correct for the related <code>_exec</code> and/or <code>_invoke</code> functions to operate.
+</td></tr></tbody></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Non-operators">Non-operators</span></h3>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Suffix</th>
+<th>Meaning</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>*_clear</code> / <code>*_destroy</code> / <code>*_free</code></td>
+<td>Clear / Destroy / Free</td>
+<td>Frees memory use.  Usually related directly with data structures or a process that involves data structures.  Think of this as a deconstructor in C.  Note: <code>*_clear</code> should probably not deallocate memory, only free / unset it.
+</td></tr>
+<tr>
+<td><code>*_create</code> / <code>*_init</code> / <code>*_new</code> / <code>*_setup</code></td>
+<td>Create / Initialize / New / Setup</td>
+<td>Allocates and initializes data structures.  Usually related directly with data structures or a process that involves data structures.  Think of this as a constructor in C.
+</td></tr>
+<tr>
+<td><code>*_ensure</code></td>
+<td>Ensure</td>
+<td>Make sure that lookups and caches are set up and ready to use
+</td></tr>
+<tr>
+<td><code>*_ex</code></td>
+<td>EXecute</td>
+<td>Typically a wrapper for another function that has fewer arguments, but sometime it's the implementation it.
+</td></tr>
+<tr>
+<td><code>*_fn</code></td>
+<td>callback FuNction</td>
+<td>Passed as arguments to other functions or stored in data structures to be called back at a later time.  Some example uses of callback functions are list filtering, operating on geometry, handling a timer event, etc. (see <code>cb_*</code> prefix above)
+</td></tr>
+<tr>
+<td><code>*_get</code></td>
+<td>Getter</td>
+<td>Return a value that requires some calculation (could be cached, conditional, computed, etc.)
+</td></tr>
+<tr>
+<td><code>*_impl</code></td>
+<td>?</td>
+<td>A "backend implementation" (think virtual function in C++) helper function.  Typically, a main function will take an object as an argument, and then call the correct implementation for the given object.
+</td></tr></tbody></table>
+<p><br />
+Comments:
+</p>
+<ul><li>Should <code>get</code> be a final suffix as in <code>*_color_get</code>, or should it be a verb of the suffix as in <code>*_get_color</code>?</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120114
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.044 seconds
+Real time usage: 0.046 seconds
+Preprocessor visited node count: 42/1000000
+Preprocessor generated node count: 48/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6288-0!canonical and timestamp 20240112120114 and revision id 29474
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;oldid=29474">https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;oldid=29474</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 22 February 2022, at 20:36.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Jon_Denning/Projects/Function_Naming.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Jon_Denning/Projects/Function_Naming" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Jon_Denning.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Jon_Denning.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Jon_Denning.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;oldid=29474" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Projects/Function_Naming&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"0.046","ppvisitednodes":{"value":42,"limit":1000000},"ppgeneratednodes":{"value":48,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120114","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":92});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453e5fed2db78e","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

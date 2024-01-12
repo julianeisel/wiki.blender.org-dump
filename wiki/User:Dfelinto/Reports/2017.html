@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Dfelinto/Reports/2017 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Dfelinto/Reports/2017","wgTitle":"Dfelinto/Reports/2017","wgCurRevisionId":11394,"wgRevisionId":11394,"wgArticleId":4496,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Dfelinto/Reports/2017","wgRelevantArticleId":4496,"wgRequestId":"06027d66e143831e3a328db7","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Dfelinto","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Dfelinto_Reports_2017 rootpage-User_Dfelinto skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2017.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ADfelinto%2FReports%2F2017" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2017.html#December_25-29"><span class="tocnumber">1</span> <span class="toctext">December 25-29</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2017.html#December_18-22"><span class="tocnumber">2</span> <span class="toctext">December 18-22</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2017.html#December_11-15"><span class="tocnumber">3</span> <span class="toctext">December 11-15</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2017.html#December_4-8"><span class="tocnumber">4</span> <span class="toctext">December 4-8</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2017.html#November_27-1"><span class="tocnumber">5</span> <span class="toctext">November 27-1</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2017.html#November_20-24"><span class="tocnumber">6</span> <span class="toctext">November 20-24</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2017.html#November_13-17"><span class="tocnumber">7</span> <span class="toctext">November 13-17</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2017.html#November_6-10"><span class="tocnumber">8</span> <span class="toctext">November 6-10</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2017.html#October_30-3"><span class="tocnumber">9</span> <span class="toctext">October 30-3</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2017.html#October_23-27"><span class="tocnumber">10</span> <span class="toctext">October 23-27</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2017.html#October_16-20"><span class="tocnumber">11</span> <span class="toctext">October 16-20</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2017.html#October_9-13"><span class="tocnumber">12</span> <span class="toctext">October 9-13</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2017.html#October_2-6"><span class="tocnumber">13</span> <span class="toctext">October 2-6</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2017.html#September_25-29"><span class="tocnumber">14</span> <span class="toctext">September 25-29</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2017.html#September_18-22"><span class="tocnumber">15</span> <span class="toctext">September 18-22</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2017.html#September_11-15"><span class="tocnumber">16</span> <span class="toctext">September 11-15</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2017.html#September_4-8"><span class="tocnumber">17</span> <span class="toctext">September 4-8</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2017.html#Aug_28_-_Sep_1"><span class="tocnumber">18</span> <span class="toctext">Aug 28 - Sep 1</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2017.html#August_21-25"><span class="tocnumber">19</span> <span class="toctext">August 21-25</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2017.html#August_14-18"><span class="tocnumber">20</span> <span class="toctext">August 14-18</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2017.html#July_10-14"><span class="tocnumber">21</span> <span class="toctext">July 10-14</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2017.html#July_3-7"><span class="tocnumber">22</span> <span class="toctext">July 3-7</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2017.html#June_26-30"><span class="tocnumber">23</span> <span class="toctext">June 26-30</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2017.html#June_19-23"><span class="tocnumber">24</span> <span class="toctext">June 19-23</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2017.html#June_16"><span class="tocnumber">25</span> <span class="toctext">June 16</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2017.html#June_9"><span class="tocnumber">26</span> <span class="toctext">June 9</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2017.html#June_2"><span class="tocnumber">27</span> <span class="toctext">June 2</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2017.html#May_26"><span class="tocnumber">28</span> <span class="toctext">May 26</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2017.html#May_19"><span class="tocnumber">29</span> <span class="toctext">May 19</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2017.html#May_12"><span class="tocnumber">30</span> <span class="toctext">May 12</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2017.html#May_5"><span class="tocnumber">31</span> <span class="toctext">May 5</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Dfelinto/Reports/2017</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Dfelinto.html" title="User:Dfelinto">User:Dfelinto</a>&lrm; | <a href="../Reports.html" title="User:Dfelinto/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="December_25-29">December 25-29</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Implemented more of the design for collection editing as proposed here: <a rel="nofollow" class="external text" href="http://developer.blender.org/T53495">#53495</a>. That includes a change in how we auto-name collections, support to collections with the same name (nested under different collections), sorted fixes, and an addon to try the idea of editing the collections in the object level.
+</p><p><i>Add-on for per-object collection editing:</i>
+</p><p><a href="../../File:Dev-2.8-weekly-report-addon-collection-object-editor.png.html" class="image"><img alt="Dev-2.8-weekly-report-addon-collection-object-editor.png" src="../../../w/images/8/8a/Dev-2.8-weekly-report-addon-collection-object-editor.png" width="321" height="264" /></a>
+</p>
+<dl><dt><b>Master Commits</b></dt></dl>
+<ul><li>Fix T53513: Particle size showing in multiple places <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6c69ca57f6">a6c69ca57f</a>.</li></ul>
+<dl><dt><b>Blender 2.8 Commits</b></dt></dl>
+<ul><li>Depsgraph: Fix copy-on-write assert when freeing Freestyle config <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bd80ace2da7">bd80ace2da</a>.</li>
+<li>Fix T53638: View layer renaming crashes 1/2 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b517dc9b2db">b517dc9b2d</a>.</li>
+<li>Fix T53638: View layer renaming crashes 2/2 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/110373de6a5">110373de6a</a>.</li>
+<li>Collections: Allow collections from different "parents" to have the same name <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c9cb5dc3dab">c9cb5dc3da</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8620dd7adf2">8620dd7adf</a>.</li>
+<li>RNA: scene_collection.collections.new() name optional <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dfd7b0d07aa">dfd7b0d07a</a>.</li>
+<li>Context: Fix scene_collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/70cdc8412c4">70cdc8412c</a>.</li>
+<li>RNA cleanup: Argument names + tooltip for scene_collection.collections.remove() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b7f36300e0">2b7f36300e</a>.</li>
+<li>Fix T53647: Outliner crashes when active object is deleted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2a24afe8c1">f2a24afe8c</a>.</li>
+<li>Outliner/Collection: Operator to create (nested) collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8252a414d8c">8252a414d8</a>.</li>
+<li>Outliner/Collection: Operator to delete selected collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d08ef822ce">4d08ef822c</a>.</li>
+<li>Outliner/Collection: Interface for Master Collection Tree <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bbbdb27d658">bbbdb27d65</a>.</li></ul>
+<dl><dt><b>Addon</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/rBA8471942e21296fbbb819c6bddebb4d99e049fa24">Object collections manager</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>More work in the implementation of the collection editing design.
+</p>
+<h2><span class="mw-headline" id="December_18-22">December 18-22</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Tackled extensive review changes (thank you Sergey) for the now committed <a rel="nofollow" class="external text" href="https://developer.blender.org/D2966">Duplicator viewport/render visibility</a> patch. This concludes the implementation of the <a rel="nofollow" class="external text" href="https://developer.blender.org/T53493">Collections visibility settings Design Task</a>. This was followed sorted commits, including a fix/feature required by <a rel="nofollow" class="external text" href="https://cloud.blender.org/p/hero/">Hero</a>, to bring alpha transparency render for Eevee and Clay (the spotted image of the week) and initial collection editing related commits. Finally I wrote and posted a full Blender 2.8 report in the code blog.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../../File:Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png.html" class="image"><img alt="" src="../../../w/images/thumb/0/01/Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png/550px-Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png" width="550" height="382" class="thumbimage" srcset="../../../w/images/thumb/0/01/Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png/825px-Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png 1.5x, ../../../w/images/thumb/0/01/Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png/1100px-Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Dev-2.8-weekly-report-dfelinto-eevee-alpha-background.png.html" class="internal" title="Enlarge"></a></div>Guitar stage by Davide Tirindelli - demo of eevee alpha background</div></div></div></div>
+<dl><dt><b>Blender 2.8 Commits</b></dt></dl>
+<ul><li>Fix T53583: Crash when instancing a group with an armature <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/672c9a9a6d6">672c9a9a6d</a>.</li>
+<li>Fix T53442: Outliner refresh issues when adding new collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b3bcbc9e85a">b3bcbc9e85</a>.</li>
+<li>Fix for T53599: OpenGL render with transparent background <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3ef782af5d">e3ef782af5</a>.</li>
+<li>Implement duplicator viewport/render visibility options <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b89f2276e50">b89f2276e5</a>.</li>
+<li>T53610: Crash opening file with linked particles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fec3be6b545">fec3be6b54</a>.</li>
+<li>Collection: Name collection based on parent's name <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c08dac000ff">c08dac000f</a>.</li>
+<li>Collections: delete a collection move objects to master collection if users=0 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe1e2c2f89b">fe1e2c2f89</a>.</li></ul>
+<dl><dt><b>code.blender.org post</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://code.blender.org/2017/12/blender-2-8-xmas-report/">Blender 2.8 Xmas Report</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Continue with the collection editing design implementation.
+</p>
+<h2><span class="mw-headline" id="December_11-15">December 11-15</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Got the proposed designed reviewed and updated after 2 meetings, and implemented and committed the main collection visibility changes. The only thing that is work in progress is the duplicator visibility control. The patch was sent for review, but I still need to integrate the emitter visibility in the same functionality. Also helped Antonio Vazquez with his <a rel="nofollow" class="external text" href="https://code.blender.org/2017/12/drawing-2d-animation-in-blender-2-8/">Drawing 2D Animation in Blender 2.8</a> post.
+</p>
+<dl><dt><b>Blender 2.8 Commits</b></dt></dl>
+<ul><li>Fix workspace ui panel after workspace API change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b2ac71f456">1b2ac71f45</a>.</li>
+<li>Outliner: Fix selection drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53ea46d36c3">53ea46d36c</a>.</li>
+<li>Object selection: Fixing cases where old selection flag was used <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f59728b3ea0">f59728b3ea</a>.</li>
+<li>Fix RNA crash for objects without collection properties <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/569e29c49c1">569e29c49c</a>.</li>
+<li>Fix dupli-frames (and other duplis) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ddee0ba5ac">2ddee0ba5a</a>.</li>
+<li>Group collection viewport/render options and remove collection visibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f5106de610">1f5106de61</a>.</li>
+<li>Depsgraph / Render / Collection: Tag groups for rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a47fb764cd">3a47fb764c</a>.</li>
+<li>Depsgraph: Make DEG_OBJECT_ITER more granular <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/90b79176870">90b7917687</a>.</li>
+<li>Depsgraph: cleanup DEGOIterObjectData &gt; DEGObjectIterData <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0b5616aef1c">0b5616aef1</a>.</li></ul>
+<dl><dt><b>Pending patch</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2966">Implement duplicator viewport/render visibility options</a>.</li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Address eventually feedback in the duplicator patch and tackle particles emitters. And write a code.blender.org post about Blender 2.8 status. If there is time left I will start implementing the collection editing tasks.
+</p>
+<h2><span class="mw-headline" id="December_4-8">December 4-8</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>This week we had a long meeting on Tuesday to talk about how to address ongoing issues with Blender 2.8 communication and moving forward. One of the outcomes was to prioritize the design of the missing parts, so users know what is coming, and we can also more easily expand the team to help tackling these.
+</p><p>I worked in design documents for collections visibility settings, and collection editing as well as some minor commits. I'm quite happy with the proposal for visibility settings, but the collection editing will be a bit more polemic I'm afraid so I still need to polish it.
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix Collada building <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/237df2f8605">237df2f860</a>.</li></ul>
+<p><b>Blender 2.8 Commits</b>
+</p>
+<ul><li>Code cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0d4ab09da71">0d4ab09da7</a>.</li>
+<li>Fix group duplication bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af47ae07023">af47ae0702</a>.</li>
+<li>Workspace: Clarifying library remap workaround <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9454359a165">9454359a16</a>.</li></ul>
+<dl><dt><b>Design Proposals</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/T53493">Collections visibility settings - Design Task</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/T53495">View layer and collection editing - Design Task</a></li></ul>
+<p><a href="../../File:Dev-2.8-weekly-report-dfelinto-move-to-collection-mockup.png.html" class="image"><img alt="Dev-2.8-weekly-report-dfelinto-move-to-collection-mockup.png" src="../../../w/images/thumb/9/92/Dev-2.8-weekly-report-dfelinto-move-to-collection-mockup.png/550px-Dev-2.8-weekly-report-dfelinto-move-to-collection-mockup.png" width="550" height="376" srcset="../../../w/images/9/92/Dev-2.8-weekly-report-dfelinto-move-to-collection-mockup.png 1.5x" /></a>
+</p>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Finish design documents, gather more feedback for them, design other parts. I want to start a document in a state report for the Blender 2.8 project. But not before the designs are well received.
+</p>
+<h2><span class="mw-headline" id="November_27-1">November 27-1</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Finished the <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">group collection patch</a> and merged it in Blender 2.8.
+</p><p><a href="../../File:Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg.html" class="image"><img alt="Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg" src="../../../w/images/thumb/3/3d/Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg/550px-Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg" width="550" height="230" srcset="../../../w/images/thumb/3/3d/Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg/825px-Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg 1.5x, ../../../w/images/thumb/3/3d/Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg/1100px-Dev-2.8-weekly-report-dfelinto-group-collection-override.jpg 2x" /></a>
+</p><p>Also, I reviewed a patch about the outliner and reported yet another known issue for the outliner (<a rel="nofollow" class="external text" href="http://developer.blender.org/T53442">#53442</a>). It should be easy for new developers to tackle them. They are all listed further down for the records.
+</p>
+<dl><dt><b>Blender 2.8 Commits</b></dt></dl>
+<ul><li>Fixing alembic unittest after render layer purge <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/14c3ef82532">14c3ef8253</a>.</li>
+<li>Fix T53291: Deleting objects do not delete them from the blend file <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/91034646c7c">91034646c7</a>.</li>
+<li>Depsgraph: Fix Camera object showing when not in view layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f80fbbac3f">2f80fbbac3</a>.</li>
+<li>Depsgraph: Tag all id_types on_visible_update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2296b9776a8">2296b9776a</a>.</li>
+<li>Layer: Copy layer collection properties when doing a full copy of scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/33d2535189a">33d2535189</a>.</li>
+<li>Fix lightprobe single user not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba17d53e599">ba17d53e59</a>.</li>
+<li>Fix memory leak when single_obdata_users() fails to copy datablock <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79bbbf7e200">79bbbf7e20</a>.</li>
+<li>Depsgraph: Add assert to make sure the view layer is part of the scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58c743f7cc9">58c743f7cc</a>.</li>
+<li>Silence warning from object_relations.c <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a9101b332e3">a9101b332e</a>.</li>
+<li>Groups and collection: initial integration <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be9e469ead2">be9e469ead</a>.</li>
+<li>Groups and collection: create group from collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aeaf87bbeb0">aeaf87bbeb</a>.</li>
+<li>Groups and collection: editing group collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f91e0577861">f91e057786</a>.</li>
+<li>Fix update of non-scene owned layer collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/59e8b72881b">59e8b72881</a>.</li>
+<li>Fixup for workspace view_layer fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e9cf3fae8e2">e9cf3fae8e</a>.</li>
+<li>unittests: Update (fix) unittests after workspace API change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aa0c9867b27">aa0c9867b2</a>.</li></ul>
+<dl><dt><b>Outliner reported issues</b></dt></dl>
+<p><i>For the records, all the current reported outliner tasks are:</i>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51461">#51461</a>: Outliner: Problems removing multiple collections in sequence</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53340">#53340</a>: Outliner: Collections are collapsed when opening file</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53442">#53442</a>: Outliner: Drawing doesn't refresh after adding a new collection</li></ul>
+<p><br />
+</p>
+<dl><dt><b>Next week</b></dt></dl>
+<p>I would like to step down a bit from coding to make sure the project is on track. But if I'm up to coding again I would like to work improving the collection pipeline, with shortcuts (e.g., M), the outliner collection collapse issue, check with the UI team what will be the final design for the new collection editor, ... anyways, layer and collection pipeline.
+</p>
+<h2><span class="mw-headline" id="November_20-24">November 20-24</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Finished and committed the SceneRenderLayer &gt; SceneLayer patch, as well as SceneLayer &gt; ViewLayer rename refactor. There is no more reference to scene layer in the entire code.
+</p><p>I also did a few unittests to help make sure depsgraph changes are not breaking things. The dupli group tests couldn't me committed because it still fails because of a bug in the depsgraph dupli iterator.
+</p>
+<dl><dt><b>Blender 2.8 Commits</b></dt></dl>
+<ul><li>Shows all Cycles panels based on scene, not context engine <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff810f08d86">ff810f08d8</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Remove exclude_layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ce2370ce4f">9ce2370ce4</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Remove light_override <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f15c63b0c22">f15c63b0c2</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Convert material_override <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05306d97663">05306d9766</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Convert samples_override <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e22ca0fb860">e22ca0fb86</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Convert Z-Mask <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d276e45ee6c">d276e45ee6</a>.</li>
+<li>Bitflag tests simplification <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb67be3f22c">cb67be3f22</a>.</li>
+<li>Doversion: We should always add the old RenderLayer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a6df6b173c">0a6df6b173</a>.</li>
+<li>SceneRenderLayer &gt; SceneLayer: Convert Lay <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ba6103e66b">8ba6103e66</a>.</li>
+<li>SceneRenderLayer Removal/Refactor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a95bdfc65d">3a95bdfc65</a>.</li>
+<li>Fix SceneRenderLayer memory leak for files created with 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed1278b0bcd">ed1278b0bc</a>.</li>
+<li>Layers doversion: Don't set the Viewport created layer as renderable <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5265cfdef5e">5265cfdef5</a>.</li>
+<li>Fixup for last commit: flipped logic for disabling SceneLayer render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/66c0f041a9b">66c0f041a9</a>.</li>
+<li>Fix multi layer/multi pass render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15a0ad60274">15a0ad6027</a>.</li>
+<li>Fix doversion crash with 2.8 files that had freestyle 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/94d40aca0c6">94d40aca0c</a>.</li>
+<li>Rename any instance of scene layer or render layer in code with view layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3abe8b3292c">3abe8b3292</a>.</li>
+<li>New view layers should be named "View Layer" (not Render Layer) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/99f51804353">99f5180435</a>.</li>
+<li>Fix specific 2.8 broken files <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e314aa1e47b">e314aa1e47</a>.</li>
+<li>Cleanup: Rename ViewLayer *sl &gt; ViewLayer *view_layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b79b8478ee3">b79b8478ee</a>.</li>
+<li>Layers Unittest: Background set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1971dd29768">1971dd2976</a>.</li>
+<li>Object RNA: expose base_flag settings: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4493d0d085b">4493d0d085</a>.</li>
+<li>Unittest: Update background set test to test for proper flag <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc2ae8fdf2a">dc2ae8fdf2</a>.</li></ul>
+<p><br />
+</p>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Finish the <a rel="nofollow" class="external text" href="http://developer.blender.org/D2892">group collection patch</a> and commit it.
+</p>
+<h2><span class="mw-headline" id="November_13-17">November 13-17</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Aside from sorted commits, I worked in the SceneRenderLayer &gt; SceneLayer <a rel="nofollow" class="external text" href="https://developer.blender.org/D2919">patch</a> getting close to completion. I also worked with Sergey Sharybin on finishing and publishing the Depsgraph and dynamic override <a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/overrides/depsgraph">proposal</a>.
+</p>
+<dl><dt><b>Relevant 2.8 Commits</b></dt></dl>
+<ul><li>Cycles: Fix after recent merge from master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44517c5f217">44517c5f21</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26a72f0852a">26a72f0852</a>.</li>
+<li>Fix quick smoke getting view_render from the wrong place <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4beb64020d">f4beb64020</a>.</li>
+<li>Layers Unittest: Hidden flag to quckly update diffs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58a3057099f">58a3057099</a>.</li>
+<li>Unittest: Layers - include is_disabled for LayerCollection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1122a401b02">1122a401b0</a>.</li>
+<li>Fixup for doversion/layers: disable collections for scene layers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34c99ee85b8">34c99ee85b</a>.</li>
+<li>Layers doversion: Handle hide and hide_render objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ec01cc7c59">2ec01cc7c5</a>.</li></ul>
+<dl><dt><b>Docs</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/overrides/depsgraph">Depsgraph and dynamic override</a>.</li></ul>
+<dl><dt><b>Pending Patches</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2919">SceneRenderLayer &gt; SceneLayer refactor</a>.</li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Wrap up and commit the SceneRenderLayer patch, and handle more cleanup if needed by depsgraph or go back to groups user ref or collection groups.
+</p>
+<h2><span class="mw-headline" id="November_6-10">November 6-10</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Spent most of the week paying some old technical debts. Now we have no more BaseLegacy, Scene.basact, Scene.base anywhere in the code. Also finished and merged the ID Nodes iterator <a rel="nofollow" class="external text" href="https://developer.blender.org/D2899">Depsgraph: patch</a>. And other sorted fixes while handling the cleanups. Finally handled doversion for 2.79 files that have hide and hide_render objects. Rendering now is the same as it was (Cycles unittests all pass now).
+</p><p>Note: Decided with Sergey Sharybin that the Groups and collection <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">Patch</a> can wait until more technical debt is taken care of. Also we decided to have it simpler first (without Group Collections, but still using LayerCollections as the way for groups to handle their internal members and visibility), and then approach this afterwards.
+</p>
+<dl><dt><b>Relevant 2.8 Commits</b></dt></dl>
+<ul><li>Layers doversion: Handle hide and hide_render objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ec01cc7c59">2ec01cc7c5</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34c99ee85b8">34c99ee85b</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1122a401b02">1122a401b0</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58a3057099f">58a3057099</a></li>
+<li>Farewell BaseLegacy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7defb27f084">7defb27f08</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06a7db85bce">06a7db85bc</a>.</li>
+<li>Rename Scene macros back to their original _NEW less names <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cec7f1215ac">cec7f1215a</a>.</li>
+<li>Farewell Scene-&gt;basact <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c35f1d05eaa">c35f1d05ea</a>.</li>
+<li>Object.layers no longer around, removing from ui <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f8a07544390">f8a0754439</a>.</li>
+<li>Farewell Scene-&gt;base <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/206c94fea98">206c94fea9</a>.</li>
+<li>Partial Fix T53269: Dupli-verts/dupli-faces not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3750dfaa0a2">3750dfaa0a</a>.</li>
+<li>Refactor of BLI_iterator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b18e158025">1b18e15802</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f16199d4791">f16199d479</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c83b171794f">c83b171794</a>.</li>
+<li>Depsgraph: Iterates over ID Nodes instead of Bases <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/535adcdaa3c">535adcdaa3</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83de7c4094b">83de7c4094</a>.</li></ul>
+<dl><dt><b>Master Commits</b></dt></dl>
+<ul><li>Fix: unselectable objects can be selected via the NLA editor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee49ee24c33">ee49ee24c3</a>.</li>
+<li>Fix logic for pinning textures users from context <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92b342d30d3">92b342d30d</a>.</li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>More cleanups, specifically to move the data from SceneRenderLayer into SceneLayer. Followed by trying to merge <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">Groups and collection</a>. Bastien Montagne proposed to change how groups handle user count, so I may look at that before wrapping up the patch.
+</p>
+<h2><span class="mw-headline" id="October_30-3">October 30-3</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>More work on finishing the Groups and collection <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">Patch</a>. Short week due to holidays.
+</p>
+<dl><dt><b>Relevant Commits</b></dt></dl>
+<ul><li>Prevent users to be able to override context engine <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0dd98af2559">0dd98af255</a>.</li>
+<li>Workspace cleanup: engine_id is in ViewRender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bbb4fa7e476">bbb4fa7e47</a>.</li>
+<li>Collections: Bring back simple visibility behaviour <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7553523af7b">7553523af7</a>.</li>
+<li>Introduce "skip" in BLI_Iterator struct <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16f06e9dc9f">16f06e9dc9</a>.</li>
+<li>Fix renderlayers UI removing the wrong renderlayer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7aabe3f66ca">7aabe3f66c</a>.</li></ul>
+<h2><span class="mw-headline" id="October_23-27">October 23-27</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Sorted fixes in 2.8, long overdue refactor in rna (moving layer code from rna_scene.c to a new rna_layer.c file), <a rel="nofollow" class="external text" href="https://developer.blender.org/D2899">patch</a> to handle depsgraph objects iterator differently and finished up most (not all) work required for the "Groups and collection" <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">patch</a>.
+Note I decided not to do the "list" with all the required UI tasks, because during the UI team meeting, Julian Eisel said he will do it himself.
+</p>
+<dl><dt><b>Relevant Commits</b></dt></dl>
+<ul><li>Showing Clay collection settings when clay is the workspace not the scene engine <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4de8e12adac">4de8e12ada</a>.</li>
+<li>Fix freestyle UI after workspace &gt; engine changes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/86899c1adf1">86899c1adf</a>.</li>
+<li>Fix T53156: VSE not working since Workspace &gt; engine change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b739bc2dcd">6b739bc2dc</a>.</li>
+<li>Fix T52392: Node materials (Materials and World) not updated in viewport <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/005cb901133">005cb90113</a>.</li>
+<li>Fix non-instanced groups in no-collection file creating collections. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7484c6c5ee6">7484c6c5ee</a>.</li>
+<li>Refactor: Move rna_scene.c layer/collection to rna_layer.c <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/23a5726ec28">23a5726ec2</a>.</li></ul>
+<dl><dt><b>Work in Progress Patches</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2899">Depsgraph: Iterates over ID Nodes instead of Bases</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">Groups and collection</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>I want to spend the begin of the week (Monday/Tuesday) with Jonathan William to see if we can make good use of his time in Amsterdam. Also hopefully there is some review in the ID Nodes patch so I can tackle and merge it. And I would love to finish the group collection patch and send for review. That said, Thursday is holiday here and I'm taking Friday off, so it's a short week.
+</p>
+<h2><span class="mw-headline" id="October_16-20">October 16-20</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>I helped putting together a week-by-week planning for Depsgraph with Sergey <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Depsgraph/Planning-October2017&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Depsgraph/Planning-October2017 (page does not exist)">[1]</a> and Asset and Static Override with Bastien <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Assets_and_Static_Overrides/Roadmap_October_2017&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Assets and Static Overrides/Roadmap October 2017 (page does not exist)">[2]</a>. I then finished and committed the patch for engines to be part of workspace <a rel="nofollow" class="external text" href="https://developer.blender.org/D2842">[D2842</a>]. Next I started working on my three parts patch for groups and collections <a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">[D2892</a>]. Meanwhile I fixed/reported a few bugs in 2.8 related to group proxies. Group proxy, make dupli real are all working now. Finally I helped testing and reviewing Brecht's patch: "Multiview OpenEXR save/load refactor and fixes" <a rel="nofollow" class="external text" href="https://developer.blender.org/D2887">[D2887</a>].
+</p>
+<dl><dt><b>Relevant Commits</b></dt></dl>
+<ul><li>Fix/properly implement: "make group proxy" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fc10484f7c5">fc10484f7c</a>.</li>
+<li>Follow up to engine in workspaces, using clay as default <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bcb61b2fe9">0bcb61b2fe</a>.</li>
+<li>Fix crash when Making Duplicates Real for groups <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5aff67fb5ee">5aff67fb5e</a>.</li>
+<li>Layers: Fix selected lamp and dupli count for info stats <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/028a558116d">028a558116</a>.</li>
+<li>Fix for objects trailing in viewport when using BI in scene+Eevee in workspace <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/314542ffd4c">314542ffd4</a>.</li>
+<li>Workspace: Move engines to workspace and Properties Editor cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e4f2b2be26a">e4f2b2be26</a>.</li>
+<li>Fix compatibility flag for nodetree <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8962f90de4">e8962f90de</a>.</li></ul>
+<dl><dt><b>Work in Progress Patches</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2892">Groups and collection</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>I would like to put together a list with all the feedback we need from the UI/design team. With most of the planning out of the way (save from my own planning for workbench) we can have a better picture of what the bottlenecks are, and stimulate the design team to jump in. Apart from that I would like to finish the group collection patch entirely, so that I can move to polishing collection usability (even if we still miss final mockups for the UI).
+</p>
+<h2><span class="mw-headline" id="October_9-13">October 9-13</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Fixed Cycles material preview, helped Campbell Barton with <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Workflow/101_Roadmap&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Workflow/101 Roadmap (page does not exist)">101 roadmap</a>, ported <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/DesignDocument&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/DesignDocument (page does not exist)">Blender 2.8 Design Document</a> to wiki, discussed how to handle collection visibility a lot with Sergey Sharybin and Pablo Vazquez, and prepared a patch with suggested options and worked on my wokspace -&gt; engine patch.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53014">#53014</a>: Cycles material preview not working</li></ul>
+<dl><dt><b>Pending Patches</b></dt></dl>
+<ul><li>Bring engines to workspace and UI sanitize <a rel="nofollow" class="external text" href="https://developer.blender.org/D2842">D2842</a></li>
+<li>Layer evaluation --set-advanced-collection-evaluation <a rel="nofollow" class="external text" href="https://developer.blender.org/D2878">D2878</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>I want to finish my patches, and help getting asset manager or depsgraph a roadmap as well.
+</p>
+<h2><span class="mw-headline" id="October_2-6">October 2-6</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>First week working remotely. No proper weekly report. Things will be back from normal from now on.
+</p>
+<dl><dt><b>code.blender.org post</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://code.blender.org/2017/10/blender-2-8-design-document/">Blender 2.8 Design Document</a></li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>Now that the technical design doc is published, I want to wrap up pending patches related to new design (engine in workspace, collection hide/render flags, collection groups) and fixing material previews.
+</p>
+<h2><span class="mw-headline" id="September_25-29">September 25-29</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Last week working from the Blender Institute. No proper weekly report.
+</p>
+<h2><span class="mw-headline" id="September_18-22">September 18-22</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Finished with Pablo and Ton the <a rel="nofollow" class="external text" href="https://code.blender.org/2017/09/view-layers-and-collections/">code.blender.org</a> post about collections. Also Eevee was really broken (<a rel="nofollow" class="external text" href="http://developer.blender.org/T52855">#52855</a> since last week so I spent some time working with Clément to fix it. So we could present the new splashscreen with everything working. Started the implementation of collection enable/disable. Finished the week with a meeting with Bastien, Brecht and Sergey about 2.8 related design.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52813">#52813</a>: Audaspace: Leak when loading factory settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f84448d4a00">f84448d4a0</a></li>
+<li>Layer collection enable flag <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2db6cefa08">f2db6cefa0</a></li>
+<li>Depsgraph and collection enable/visibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ad2c0b6154">9ad2c0b615</a></li>
+<li>Eevee: Fix wrong MEM_callocN allocation size <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a99c64b12fb">a99c64b12f</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52855">#52855</a>: Eevee: viewport artifacts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/803c757c2b6">803c757c2b</a></li></ul>
+<dl><dt><b>Pending Patches</b></dt></dl>
+<ul><li>Build Info: Splash screen color change <a rel="nofollow" class="external text" href="https://developer.blender.org/D2852">D2852</a></li>
+<li>Collection enable/disable: use camera visibility as behaviour <a rel="nofollow" class="external text" href="https://developer.blender.org/D2851">D2851</a></li></ul>
+<dl><dt><b>code.blender.org post</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://code.blender.org/2017/09/view-layers-and-collections/">View Layers and Collections</a></li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Friday I will be gone, and I will spend some time during the week wrapping up my stay here (city hall, bank account, ...). But I will update the design doc, and update the patches based on the design meeting feedback. Hopefully will get those patches (workspace engine and collection visibility/renderability) merged by the end of the week.
+</p>
+<h2><span class="mw-headline" id="September_11-15">September 11-15</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Meeting about grease pencil on Tuesday. Thursday and Friday with Clément Foucault at the studio, defining the Eevee roadmap. And more coding work for the workspace engine changes, submitted for review on <a rel="nofollow" class="external text" href="https://developer.blender.org/D2842">D2842</a>. Which lead to time spent communicating the new design proposal, including a length back and forth at <a rel="nofollow" class="external text" href="https://developer.blender.org/D2842">D2842</a>. Also started own roadmap for upcoming 2 quarters.
+</p>
+<dl><dt><b>Branch: <code>temp-workspace-changes</code></b></dt></dl>
+<ul><li>Use engine from context/render in more places <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8cafa42a91a">8cafa42a91</a>.</li>
+<li>Fix engine context in Cycles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb259dc0442">cb259dc044</a>.</li>
+<li>Store engine_name in render struct and use it for render preview <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02bc44c5ab2">02bc44c5ab</a>.</li>
+<li>Workspace/Engine: Create BKE_render_* calls equivalent to BKE_scene_* <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fff4ab55578">fff4ab5557</a>.</li>
+<li>Fix UI compatibility to use context.engine <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7215830df90">7215830df9</a>.</li>
+<li>Use workspace engine for draw manager "render preview" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/efec3b097b8">efec3b097b</a>.</li></ul>
+<dl><dt><b>Patch reviewed, pending addressing suggestions</b></dt></dl>
+<ul><li>Bring engines to workspace and UI sanitize <a rel="nofollow" class="external text" href="https://developer.blender.org/D2842">D2842</a>.</li></ul>
+<dl><dt><b>Grease pencil</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2017-September/048748.html">Meeting notes</a>.</li></ul>
+<dl><dt><b>6 months roadmap</b></dt></dl>
+<ul><li>Work in progress: <a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1epHEKDUcsCLdBmy-RR-zbXLqrv8Mk5QHJFX0KnCz6c8/edit?usp=sharing">google.docs</a></li></ul>
+<h2><span class="mw-headline" id="September_4-8">September 4-8</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Final take on re-visiting the viewport design in light of the workspace implementation. Developed the final treatment on this with Ton Roosendaal and Pablo Vazquez. We will have this as properly formatted documents this week. After that I started some of the implementation regarding workspace changes. It's in a branch since I would like the design to be review by other developers before we bring this to 2.8.
+</p>
+<dl><dt><b>2.8 Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52441">#52441</a>: Principle BSDF clearcoat <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/518e7685790f">518e768579</a>.</li></ul>
+<dl><dt><b>Branch: <code>temp-workspace-changes</code></b></dt></dl>
+<ul><li>Expose scene &gt; engine in the UI (render panel) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a62a1e4">a62a1e4</a>.</li>
+<li>Use workspace -&gt; engine in the opengl render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f46edd0">f46edd0</a>.</li>
+<li>Use workspace -&gt; engine in the viewport <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6537660">6537660</a>.</li>
+<li>Collection Panel: Get mode from workspace <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f0ccf03">f0ccf03</a>.</li>
+<li>Context: Expose "engine" for Python and add BKE_render_engine_get() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fda4f87">fda4f87</a>.</li>
+<li>Properties Editor: Add Workspace and organize context path <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f14c7a7">f14c7a7</a>.</li>
+<li>Workspace: Add (render) engines <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/60081b0">60081b0</a>.</li>
+<li>Workspace: SETLOOPER should get render layer from workspace <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2a3e04">a2a3e04</a>.</li>
+<li>Pass workspace for space listeners <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb8f2c5">bb8f2c5</a>.</li>
+<li>Workspace: "use_scene_settings" flag <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ddf95cc">ddf95cc</a>.</li></ul>
+<dl><dt><b>Images</b></dt></dl>
+<p>Diagrams illustrating the move of toolsettings and draw settings from scene, viewport, object and data structs to workspaces.
+</p><p><a href="../../File:Dev-2.8-design-object-edit-mode-diagrams.png.html" class="image"><img alt="Dev-2.8-design-object-edit-mode-diagrams.png" src="../../../w/images/thumb/1/1f/Dev-2.8-design-object-edit-mode-diagrams.png/400px-Dev-2.8-design-object-edit-mode-diagrams.png" width="400" height="449" srcset="../../../w/images/thumb/1/1f/Dev-2.8-design-object-edit-mode-diagrams.png/600px-Dev-2.8-design-object-edit-mode-diagrams.png 1.5x, ../../../w/images/thumb/1/1f/Dev-2.8-design-object-edit-mode-diagrams.png/800px-Dev-2.8-design-object-edit-mode-diagrams.png 2x" /></a>
+</p>
+<dl><dt><b>Upcoming Task List</b></dt></dl>
+<ul><li>Enable collection</li>
+<li>Outliner filter</li>
+<li>Viewport collection editor</li>
+<li>"Group" collection</li>
+<li>Move tool and display settings to workspace</li>
+<li>Have engine render settings per workspace</li>
+<li>Modes data flush for workspaces</li>
+<li>Workspace UI: topbar, properties editor and viewport</li>
+<li>Current frame in workspace</li>
+<li>F12 layers are the enabled ones</li></ul>
+<h2><span class="mw-headline" id="Aug_28_-_Sep_1">Aug 28 - Sep 1</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Finished the previous design document, ported it to wiki. Worked in the tracker (triaging and bisecting). Worked in design of Object and Edit mode data (see diagrams below). And few sorted commits.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Increase max/min frame range to over a million <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44e10a5">44e10a5</a>.</li>
+<li>Eevee: Fix conditional statement depending on unitialized value <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/698bae0">698bae0</a>.</li>
+<li>First take on fixing OpenColorIO issues on Mac <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/510651e">510651e</a>.</li></ul>
+<dl><dt><b>Addendum to last week's design</b></dt></dl>
+<p><a href="../../File:Dev-2.8-design-worskpace-render.jpg.html" class="image"><img alt="Dev-2.8-design-worskpace-render.jpg" src="../../../w/images/thumb/f/f1/Dev-2.8-design-worskpace-render.jpg/500px-Dev-2.8-design-worskpace-render.jpg" width="500" height="208" srcset="../../../w/images/thumb/f/f1/Dev-2.8-design-worskpace-render.jpg/750px-Dev-2.8-design-worskpace-render.jpg 1.5x, ../../../w/images/thumb/f/f1/Dev-2.8-design-worskpace-render.jpg/1000px-Dev-2.8-design-worskpace-render.jpg 2x" /></a>
+</p>
+<dl><dt><b>Documentation</b></dt></dl>
+<ul><li><a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Usability/SceneOrganizationWorkspace&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Usability/SceneOrganizationWorkspace (page does not exist)">Scene Organization Workspace</a></li></ul>
+<dl><dt><b>Upcoming Diagrams</b></dt></dl>
+<p><a href="../../File:Dev-2.8-design-engine-settigns-diagrams.jpg.html" class="image"><img alt="Dev-2.8-design-engine-settigns-diagrams.jpg" src="../../../w/images/thumb/e/e7/Dev-2.8-design-engine-settigns-diagrams.jpg/500px-Dev-2.8-design-engine-settigns-diagrams.jpg" width="500" height="641" srcset="../../../w/images/thumb/e/e7/Dev-2.8-design-engine-settigns-diagrams.jpg/750px-Dev-2.8-design-engine-settigns-diagrams.jpg 1.5x, ../../../w/images/thumb/e/e7/Dev-2.8-design-engine-settigns-diagrams.jpg/1000px-Dev-2.8-design-engine-settigns-diagrams.jpg 2x" /></a>
+</p>
+<h2><span class="mw-headline" id="August_21-25">August 21-25</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>I worked in usability design for scene organization and workspaces. The document will be in the wiki soon. Apart from that I took a day to do 2.8 coding, and tackled the orco generated texture mapping.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Revert "material Glsl: Fix tangent with new orco." <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae04e27bfa5">ae04e27bfa</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52528">#52528</a>: generated texture mismatch between Cycles and Eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0feeef89f06">0feeef89f0</a></li>
+<li>Revert "Eevee: Fix generated coordinates when no texture coordinates connected" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/99b1f9f4f46">99b1f9f4f4</a></li>
+<li>Fix ORCO never used for draw manager (Eevee) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4e975b6b442">4e975b6b44</a></li>
+<li>Eevee: Fix generated coordinates when no texture coordinates connected <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e29a97813d">0e29a97813</a></li>
+<li>Cycles Bake: Fix overflow when using hundreds of images <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1fb26370067">1fb2637006</a></li>
+<li>GL_TEXTURE_2D_ARRAY wasn't handled in GPU_texture_update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7b3e33af43">d7b3e33af4</a></li>
+<li>GPU Texture: Use switch instead of if/else <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9457715d9a6">9457715d9a</a></li></ul>
+<dl><dt><b>Usability design proposal</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1o9TSVEmORCz_PODSAL6Yy2_I3iG6k9HQNjK-QWFMeWE/edit?usp=sharing">Google Docs</a> (to be migrated to wiki)</li></ul>
+<h2><span class="mw-headline" id="August_14-18">August 14-18</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Back from holidays. Eevee planning and eevee sample file organizing not included in this report.
+Preparing the room for moving on to usability next week.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Eevee: Convert metallic nodes into princinpled nodes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/036f43f3cde">036f43f3cd</a></li>
+<li>Swap Eevee material output with (Cycles) Material Output <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8f0ee157b2">e8f0ee157b</a></li>
+<li>Expose Transparency BSDF for Eevee UI <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ab6e8aad62">8ab6e8aad6</a></li>
+<li>Uniform Buffer Objects: More complete padding solution <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2dad2aa9b7d">2dad2aa9b7</a></li>
+<li>Fix ubo vec3 alignment issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4bd416b342">f4bd416b34</a></li>
+<li>Fix zombie manipulators when deleting collection from outliner <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4068d00830">a4068d0083</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52415">#52415</a>: Copy/Pasting a mesh immediately crashes blender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6bca0dcf7bd">6bca0dcf7b</a></li>
+<li>Update code comments from DAG_id_tag_update to DEG_id_tag_update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b95617b152">2b95617b15</a></li>
+<li>Depsgraph/Layers: Keep original visibility when doing full scene copy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/18ce2bfac63">18ce2bfac6</a></li></ul>
+<h2><span class="mw-headline" id="July_10-14">July 10-14</span></h2>
+<p>The highlight of this 4-day week was the Uniformbuffer block for nodetree parameters. That means you can tweak shaders in the nodetree and things are way faster. This is a huge improvement, particularly in systems that have no shader cache (e.g., Mesa drivers on linux). Apart from that we sanitized some of the workspace issues, and fixed some breakages.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Implement Uniformbuffer objects for nodetree parameters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a489273d7e">2a489273d7</a></li>
+<li>Fix snap in 2.8 after poor merge from master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4467efe9716">4467efe971</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ea4bb51df9">0ea4bb51df</a></li>
+<li>Revert "Fix T51794: Crash on hair file when opening with no UI" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78e2238fe4c">78e2238fe4</a></li>
+<li>Workspace: Fix crash on preview, and sanitize placeholder functions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b48694639af">b48694639a</a></li>
+<li>Eevee: Fix crash on eevee lamps and shadows <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/445963f2997">445963f299</a></li>
+<li>RNA/UI: Always use capitalized words in the UI <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5d74954bfe">e5d74954bf</a></li>
+<li>Lamps should not have their own gpu material <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2325d15d02e">2325d15d02</a></li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>It's my last week before holidays. So I'm either tackling something big (groups as collection? multi-window?) or trying to pin down usability and other pending topics for the team to tackle in the upcoming weeks.
+</p>
+<h2><span class="mw-headline" id="July_3-7">July 3-7</span></h2>
+<p>Apart from the listed commits and fixes, I worked on bring UBO (Uniform Buffer Objects) for nodetree inputs. That means we can have shader tweaking and animation work fast, without compromising the drawing performance. This is yet not finished though.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51963">#51963</a>: Eevee: ASAN crash on copy_attrib_name <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/871325e26f">871325e26f</a></li>
+<li>Eevee: Hide lightprobe data when using "Only Render"  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1ad0cc6bde">1ad0cc6bde</a></li>
+<li>Fix building with gcc6 after merge from master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3fc342bda0">3fc342bda0</a></li>
+<li>Fix alembic after merge from master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3eeac771d0">3eeac771d0</a></li>
+<li>Fix edit mode not drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e571e6d60e">e571e6d60e</a></li>
+<li>Eevee: Fix world test for volumetric <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84d20dd227">84d20dd227</a></li>
+<li>Expose rna_translate_ui_text to be used for interface templates <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eb48eeba84">eb48eeba84</a></li>
+<li>Override template: Add text and icon optional parameters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6de28e7f90">6de28e7f90</a></li>
+<li>Eevee: Move volumetric to its own panel, new settings to come <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/971ecfa721">971ecfa721</a></li>
+<li>Fix User Interface for Volumetric <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5495f89cf6">5495f89cf6</a></li>
+<li>Draw Manager: Use defines instead of hardcoded enum values <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15f5457502">15f5457502</a></li>
+<li>GPU: Silence warning of potentially unused variable (NormalMatrix) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e960cecdf8">e960cecdf8</a></li></ul>
+<dl><dt><b>Live Stream</b></dt></dl>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../../File:Dev-2.8-livestream-eevee.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/a/ad/Dev-2.8-livestream-eevee.jpg/550px-Dev-2.8-livestream-eevee.jpg" width="550" height="309" class="thumbimage" srcset="../../../w/images/thumb/a/ad/Dev-2.8-livestream-eevee.jpg/825px-Dev-2.8-livestream-eevee.jpg 1.5x, ../../../w/images/a/ad/Dev-2.8-livestream-eevee.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Dev-2.8-livestream-eevee.jpg.html" class="internal" title="Enlarge"></a></div><a rel="nofollow" class="external text" href="https://code.blender.org/2017/07/eevee-live-qa">Youtube 1 hour live-stream about Eevee and Blender 2.8</a></div></div></div></div>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Finish tweaking shader and animation updated uniforms patch. And then decide on what is more important next.
+</p>
+<h2><span class="mw-headline" id="June_26-30">June 26-30</span></h2>
+<p>We now can export renders from viewport, get a decent performance when adding lamps, changing the world, ...
+</p><p>Although some of this was thanks to my own fixes most of it was thanks to bug reports. I spent time on "quality assurance". Which translates to test the features that the team was implementing, and make sure they are 100% working, or if not, at least reported. That included reports for Eevee, Draw Manager and Gawain as you can see below.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Fix shaders not working in Eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f0b80425b8">6f0b80425b</a>.</li>
+<li>New scenes should use Eevee, not Blender Render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37593b6a42">37593b6a42</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51913">#51913</a>: Context tab for textures issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f11bcbed9d">f11bcbed9d</a></li>
+<li>Eevee: No need to free all the gpu materials when world changes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c62493891">2c62493891</a>.</li>
+<li>No need to free all the shaders when appending or reloading libraries <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98c8b5a6fb">98c8b5a6fb</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51721">#51721</a>: OpenGL Detection is broken on Windows (patch cleanup and commit) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b43cdc91ce">b43cdc91ce</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51877">#51877</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T51878">#51878</a>: Deleting a scene uses freed memory <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49a35033be">49a35033be</a>.</li></ul>
+<dl><dt><b>Uncommitted</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D2732">D2732</a>: Alternative Fix <s><a rel="nofollow" class="external text" href="http://developer.blender.org/T51877">#51877</a></s>: Deleting a scene uses freed memory.</li></ul>
+<dl><dt><b>Reported Bugs</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51904">#51904</a>: Eevee Depth of Field: Issues with opengl viewport render.</li>
+<li><s><a rel="nofollow" class="external text" href="http://developer.blender.org/T51913">#51913</a></s>: Context tab for textures issue.</li>
+<li><s><a rel="nofollow" class="external text" href="http://developer.blender.org/T51920">#51920</a></s>: Draw Manager: Set Origin is not updating mesh cache.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51921">#51921</a>: Gawain assert with heavy mesh when selecting vertices on edit mode.</li>
+<li><s><a rel="nofollow" class="external text" href="http://developer.blender.org/T51922">#51922</a></s>: Eevee: Probe and AO issues.</li>
+<li><s><a rel="nofollow" class="external text" href="http://developer.blender.org/T51924">#51924</a></s>: Eevee: Mysterious square shows up in spot lamp.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51925">#51925</a>: Eevee: Animated Eevee values slowdown.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51931">#51931</a>: Eevee: Tangent normal map refresh issue.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51938">#51938</a>: Draw Manager / Eevee: Sculpting mode doesn't have fancy shaders (UVs show black).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51939">#51939</a>: Eevee / Draw Manager: Tangent not available in sculpt mode.</li>
+<li><s><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdb07ff30e">cdb07ff30e</a></s>: Eevee: broken default coordinate.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51943">#51943</a>: Depsgraph: world update happening eternally on background (set) scene</li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Since I didn't dedicate time to work on render/material preview with Eevee, I would like to do it this week. As well as define with Sergey an attack plan for the uniforms issue.
+</p>
+<h2><span class="mw-headline" id="June_19-23">June 19-23</span></h2>
+<p>Mixed mixes and UI changes. Focus on rendering to image pipeline and Eevee shader compilation issues. Some grease pencil work to support the studio sequencer pipeline needs  (see <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2d285f0ff">c2d285f0ff</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/D2722">D2722</a>).
+</p><p>For the shader compilation issue (<a rel="nofollow" class="external text" href="http://developer.blender.org/T51467">#51467</a>) I created an opengl sandbox to help isolate the problem from Blender. See link below.
+</p><p><br />
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51863">#51863</a>: CompositorNodeSwitchView have the wrong rna API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be4b5551c7">be4b5551c7</a></li>
+<li>Grease Pencil: Fix hardcoded DKEY for continous drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2d285f0ff">c2d285f0ff</a></li>
+<li>Fixup for gawain rename <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/701a76769d">701a76769d</a></li>
+<li>Fix collada build after gawain rename/refactor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63d71edfca">63d71edfca</a></li>
+<li>Draw Manager: Introduce functions/options to indicate the type of render  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ef7ccb4d7">0ef7ccb4d7</a></li>
+<li>Indicate to users when manual conversion of Eevee materials is needed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7773a8ad04">7773a8ad04</a></li>
+<li>Light Probes: interface changes, and renames  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4cd9a3e337">4cd9a3e337</a></li>
+<li>Eevee: Interface and units <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d9c5433144">d9c5433144</a></li>
+<li>Eevee: Fix max range of lightprobes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b2e596ce9">5b2e596ce9</a></li></ul>
+<dl><dt><b>External Repository</b></dt></dl>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/dfelinto/opengl-sandbox">https://github.com/dfelinto/opengl-sandbox</a></li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Handle anti-aliasing situation for viewport render, investigate the shader issue a bit further, and do render/material preview for Eevee.
+</p>
+<h2><span class="mw-headline" id="June_16">June 16</span></h2>
+<p>Started on render_to_image. But spent most of the week on more fixes, setting up an Intel development machine to reproduce the issues there (try new drivers, ...), fixed group collection proposal document, helped Grease Pencil project, and organized the reports on <a rel="nofollow" class="external text" href="https://developer.blender.org/project/board/74/">2.8 workboard</a>.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Depsgraph: Traversing should be consistent for nodes and relationship <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ca497b911">8ca497b911</a></li>
+<li>Draw Manager: Fix memory issues when copying scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/109447d008">109447d008</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51777">#51777</a>: Separating objects by selected vertices in Eevee causes crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/47b9d0d0403">47b9d0d040</a></li>
+<li>Grease Pencil: Fix problems linking object with Pallete <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d3e2af877">8d3e2af877</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51463">#51463</a>: Eevee motion blur not working (with AMD) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1a7099f3ec">1a7099f3ec</a>.</li>
+<li>Fix duplication of scene, it was missing duplication of layer properties <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd21236ea1">cd21236ea1</a></li>
+<li>Expose World ID panel for Eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/281a4540e2">281a4540e2</a></li>
+<li>Fix object selection doversion issue since Workspace <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/946bc4d3c1">946bc4d3c1</a></li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>More 2.8, finish up render_to_image.
+</p>
+<h2><span class="mw-headline" id="June_9">June 9</span></h2>
+<p>A short week (Monday was holidays). I spent mostly finishing up dupli instancing issues (there are still some issues with using stack data).
+Multi-window investigation consumed some time (created a [non-committed] debug engine for that). See discussion in the investigation link.
+</p>
+<dl><dt><b>Commit</b></dt></dl>
+<ul><li>Fix crash when using sculpt dynamic smooth <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dadb99074c5">dadb99074c</a></li>
+<li>Draw Manager: stop using stack memory! <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f35df9a25ad">f35df9a25a</a></li>
+<li>Implement a new util function to get reference of mesh tex space <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/35f8a024969">35f8a02496</a></li>
+<li>Eevee DoF: Use more reasonable UI range for anamorphic bokeh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee93bc806ba">ee93bc806b</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51720">#51720</a>: Depth of Field Bug - Black Screen <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/461ea375ad6">461ea375ad</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51750">#51750</a>: Group selection broken <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/484e3527d14">484e3527d1</a></li>
+<li>gcc5 has issues with Wconversion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/29ace10f7e6">29ace10f7e</a></li>
+<li>Small cleanup: Use ELEM and wrong identation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f01329a84a">7f01329a84</a></li>
+<li>CMake: Update clay engine message <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6d2aabc1d00">6d2aabc1d0</a></li>
+<li>Draw Manager: Prevent misuse of static draw context <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb97b07e23d">cb97b07e23</a></li>
+<li>Force crash on depsgraph iterator wrong access. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d267d76540d">d267d76540</a></li>
+<li>Draw manager: visibility of objects centers to mimic old 2.7x behaviour <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a418e269c8c">a418e269c8</a></li>
+<li>Fix logic for bitwise flags in bases during deg iterator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ff405ebd49">8ff405ebd4</a></li>
+<li>Fixup for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/824bf261f773">824bf261f7</a> so Cycles does not show dupli <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5dccc97348">c5dccc9734</a></li>
+<li>Silence annoying rna warnings from Eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9dddd73ee30">9dddd73ee3</a></li>
+<li>Initial implementation for dupli objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/824bf261f77">824bf261f7</a></li></ul>
+<dl><dt><b>Design</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1box5BHnuCUo_iE92ZzxvVt9i8cHmDz97IGWInK546Yo/edit?usp=sharing">Blender 2.8: Groups and Collections</a> (to be finished and moved to wiki)</li></ul>
+<dl><dt><b>Investigations</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51736">#51736</a> Drawing issues when running in multiple windows</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T51722">#51722</a> Background updating error in Eevee</li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Finish the dupli group design, publish and start implementing it. Then pending tasks from previous week(s): tackle render_to_image/render_to_view and clear my coding agenda as much as possible to start usability issues in Draw Manager/Blender 2.8 viewport.
+</p>
+<h2><span class="mw-headline" id="June_2">June 2</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Wrapped up the core of dupli objects, implemented append, master Cycles baking bugfixing, blog post and documentation writing, grease pencil meeting, and overall cleanups.
+</p><p>Also spent some time trying to get unittests to work again. One of Eevee and workspace commits made multiple layer related unittests to fail. Leading to crashes on hair among other issues.
+</p><p>Some time on reviewing 2.8/Eevee progress and reporting issues, such as <a rel="nofollow" class="external text" href="https://developer.blender.org/T51464">T51464</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/T51465">T51465</a>.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Initial implementation for dupli objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/824bf261f77">824bf261f7</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ff405ebd49">8ff405ebd4</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ab9b943a2a">0ab9b943a2</a></li>
+<li>Silence warnings from Eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9dddd73ee30">9dddd73ee3</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6dfe56f01a2">6dfe56f01a</a></li>
+<li>Layer collection doversion: Remove "converted from 2.7" from the name <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eed26b25d2c">eed26b25d2</a></li>
+<li>Rename Eevee post process effects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eed26b25d2c">eed26b25d2</a></li>
+<li>Fix crash on rna show diffuse color update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4e39b316718">4e39b31671</a></li>
+<li>Fix crash when setting sculpt settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05f91559028">05f9155902</a></li>
+<li>Implement support for Append objects in Blender 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ab9b943a2a">0ab9b943a2</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/984cd29fdab">984cd29fda</a></li>
+<li>Depsgraph iterator refactor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c6227ce777">0c6227ce77</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3b24ece297a">3b24ece297</a></li></ul>
+<dl><dt><b>Commits Master</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T49570">T49570</a>: Cycles baking can't handle materials with no images <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2cd7b80cae6">2cd7b80cae</a></li>
+<li>Baking: Add logic to get material from API regardless of Mesh/Object ownership <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9cae631059c">9cae631059</a></li></ul>
+<dl><dt><b>Publications</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://code.blender.org/2017/05/viewport-past-present-and-future/">Viewport: Past, Present and Future</a></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/Viewport/Eevee/Roadmap-MayAugust-2017">Eevee Roadmap May/Aug 2017</a> (moved to wiki)</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/Viewport/Optimization">Viewport Optimization</a> (moved to wiki).</li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Finish Cycles dupli objects (or rather, review Sergey's work on it), investigate multi-window issues (clay/Eevee), render_to_image/render_to_view, and start to focus on usability, polish and finish up viewport mockups and designs. If time allows, I would like to stress test workspaces too, at least see if I can fix the crashes on the unittests.
+</p>
+<h2><span class="mw-headline" id="May_26">May 26</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>No report, spent the week with Clement on Eevee documentation, optimization and planning.
+</p>
+<h2><span class="mw-headline" id="May_19">May 19</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>The original plan of bringing render_to_image and render_to_view to draw manager was not successful. I ended up spending most of the week on fixes and cleanups.
+</p><p>As far as new features goes we got Freestyle working for 2.8 (with Cycles). This way we can also remove the Freestyle derivedmesh related code and keep testing to make sure it still renders fine in Cycles (and in the future with the other draw manager).
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T51501: Cycles baking cancel affects baking script <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b60f80e9b3">b60f80e9b3</a></li>
+<li>Fix info header stats to iterator over layer instead of scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1e31127933">1e31127933</a></li>
+<li>Fix hair width changing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e43597446e">e43597446e</a></li>
+<li>Clay/Hair: Only show hair when in object mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b11168c8f1">b11168c8f1</a></li>
+<li>Outliner: Bring back "activate" object when selecting from outliner <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15317775c5e">15317775c5</a></li>
+<li>Clay hair: use builtin reflect function <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fca52c42ae">fca52c42ae</a></li>
+<li>Fixup on weightpaint shader after rB{{GitCommit|fabd55a5e9} <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8e96a8b6b">c8e96a8b6b</a></li>
+<li>Freestyle working for Blender2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c55c2dbfba">c55c2dbfba</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2191912ca">c2191912ca</a></li>
+<li>Fix crash when adding Torus in edit mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4525357a3a">4525357a3a</a></li>
+<li>Fix crash when changing Clay "Edge Strength" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3af8f52752">3af8f52752</a></li>
+<li>Remove "Modern Viewport" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/740f33d8a2">740f33d8a2</a></li>
+<li>Remove viewport shading panel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/781e22c2df">781e22c2df</a></li>
+<li>Correct core profile way of getting color depth <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bad8b91fd3">bad8b91fd3</a></li>
+<li>Remove reference to WITH_GL_PROFILE_CORE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/60fc04fb9b">60fc04fb9b</a></li>
+<li>Remove reference to SUPPORT_LEGACY_MATRIX <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3527739002">3527739002</a></li>
+<li>Remove reference to WITH_LEGACY_OPENGL <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2383667a2e">2383667a2e</a></li>
+<li>Remove unused functions after WITH_LEGACY_OPENGL cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8975ad7a88">8975ad7a88</a></li></ul>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Since Clément is going to be here next week time will be spent on planning next steps for Eevee and the draw manager. Apart from that I still want to finish the render_to_image/render_to_view for draw manager.
+</p><p>The idea is to use F12 to always draw the current workspace with "render_to_image", and no extra engine/modes. Then to keep the "viewport render" (formerly known as OpenGL render) and also do a render_to_image, but including all the extra mode/engines being used.
+</p>
+<h2><span class="mw-headline" id="May_12">May 12</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>Fixed multi-view single camera mode in master and 2.8. This is the most common mode to use when working with multi-view, and had problems with selection, grease pencil, 3d cursor placement, and transform manipulators.
+</p><p>Expanded override interface to take arrays. That means color override properties are now supported.
+</p><p>Some time on reviewing Eevee progress and reporting issues, such as <a rel="nofollow" class="external text" href="https://developer.blender.org/T51695">T51695</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/T51694">T51694</a>.
+</p><p>Addressed concerns and move the <a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/overrides">Override Manifesto</a> to the wiki. And then I wrote a document on <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/DrawManager/Possibilities&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/DrawManager/Possibilities (page does not exist)">Draw Manager Possibilities</a>, to guide mockup designers and developers.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix Depth of Field (i.e., implement gpuPushAttrib stack) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65ebb668ec">65ebb668ec</a></li>
+<li>Fix multi-view single camera mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d2f1f80a6f">d2f1f80a6f</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/195d0fbae3">195d0fbae3</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/62aa925c11">62aa925c11</a> (master), <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a438750cad">a438750cad</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7902e3f1c8">7902e3f1c8</a> (blender2.8)</li>
+<li>Expand the collection settings RNA API for arrays <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f80260f11">4f80260f11</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4240b67e4c">4240b67e4c</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f305aba868">f305aba868</a></li>
+<li>Allow building the game engine with core profile <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bde45b5ae7">bde45b5ae7</a></li>
+<li>Force core profile as main profile <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8ab7d4656">c8ab7d4656</a></li>
+<li>Fix for edit modes (sculpt, weight paint) menus not showing in header <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/24168f72c3">24168f72c3</a></li>
+<li>UI: Expose more UI settings to CLAY and EEVEE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2eff390e13">2eff390e13</a></li></ul>
+<dl><dt><b>Publications</b></dt></dl>
+<ul><li><a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/DrawManager/Possibilities&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/DrawManager/Possibilities (page does not exist)">Draw Manager Possibilities</a></li>
+<li><a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/overrides&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/overrides (page does not exist)">Override Manifesto</a></li></ul>
+<h2><span class="mw-headline" id="May_5">May 5</span></h2>
+<dl><dt><b>Info</b></dt></dl>
+<p>The main task of this week was to integrate Cycles with the draw manager. This means using Cycles and object engine (selection outline, object center), edit engine (mesh overlay), weight paint, ...
+</p><p>This can be seen on youtube:
+<a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=UwarUj_Y6J0">https://www.youtube.com/watch?v=UwarUj_Y6J0</a>
+</p><p>On top of that, we now have a info system that can be used not only for cycles in the viewport, but also by any other engine at the same time.
+</p><p>Also I brought the pose bone drawing as part of the pose engine (so it works with the weightpaint engine as well).
+</p><p>The way we handle collection properties at read time was rethought. So now you can add new properties for any engine and get them automatically integrated into the existing elements. Without the need of version bumping for every elements.
+</p><p>And finally I implemented scene render settings. This means that engines can define their render settings in the scene level, and override them at the layer level. An example is the "samples" quality of clay shaders. Eevee is expected to use those as well.
+</p><p><br />
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix relationship lines <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b2e908f929">b2e908f929</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55ae54c469e">55ae54c469</a></li>
+<li>Better fix for duplicate objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e87ddda149">e87ddda149</a></li>
+<li>Draw Manager: Bring pose bones to the pose engine <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/673e6fc535">673e6fc535</a></li>
+<li>Draw Manager: Enable Pose engine as part of the weight paint mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f38a4a238">5f38a4a238</a></li>
+<li>Draw Manager: Fix pose mode not working well <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/50a7d104d2">50a7d104d2</a></li>
+<li>Draw Manager: Fix Cycles render stats on render preview <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a3d8ef059c">a3d8ef059c</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b5b9b2d04d">b5b9b2d04d</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/129355c80a">129355c80a</a></li>
+<li>Draw Manager: Implement overridable scene render settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d9c484152">8d9c484152</a>.</li></ul>
+<dl><dt><b>Next week</b></dt></dl>
+<p>More draw manager.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112051348
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.884 seconds
+Real time usage: 1.127 seconds
+Preprocessor visited node count: 14061/1000000
+Preprocessor generated node count: 7539/1000000
+Post‐expand include size: 74389/2097152 bytes
+Template argument size: 21540/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  691.021      1 -total
+ 91.70%  633.668    274 Template:GitCommit
+ 24.94%  172.339    274 Template:GitCommit/PhabricatorParseDeprecated
+ 18.35%  126.824    274 Template:GitCommit/PhabricatorParse
+  1.13%    7.821     37 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4496-0!canonical and timestamp 20240112051347 and revision id 11394
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;oldid=11394">https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;oldid=11394</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 26 June 2019, at 10:04.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Dfelinto/Reports/2017.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Dfelinto/Reports/2017" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Dfelinto.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Dfelinto.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Dfelinto.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;oldid=11394" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2017&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.884","walltime":"1.127","ppvisitednodes":{"value":14061,"limit":1000000},"ppgeneratednodes":{"value":7539,"limit":1000000},"postexpandincludesize":{"value":74389,"limit":2097152},"templateargumentsize":{"value":21540,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  691.021      1 -total"," 91.70%  633.668    274 Template:GitCommit"," 24.94%  172.339    274 Template:GitCommit/PhabricatorParseDeprecated"," 18.35%  126.824    274 Template:GitCommit/PhabricatorParse","  1.13%    7.821     37 Template:BugReport"]},"cachereport":{"timestamp":"20240112051348","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84454c776a4366f6","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

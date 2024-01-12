@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Jbakker/reports/2020 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Jbakker/reports/2020","wgTitle":"Jbakker/reports/2020","wgCurRevisionId":21254,"wgRevisionId":21254,"wgArticleId":4892,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Jbakker/reports/2020","wgRelevantArticleId":4892,"wgRequestId":"49f012acaf098df670b6b5c8","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Jbakker","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Jbakker_reports_2020 rootpage-User_Jbakker skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2020.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJbakker%2Freports%2F2020" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2020.html#Week_202050"><span class="tocnumber">1</span> <span class="toctext">Week 202050</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2020.html#Week_202049"><span class="tocnumber">2</span> <span class="toctext">Week 202049</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2020.html#Week_202048"><span class="tocnumber">3</span> <span class="toctext">Week 202048</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2020.html#Week_202047"><span class="tocnumber">4</span> <span class="toctext">Week 202047</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2020.html#Week_202046"><span class="tocnumber">5</span> <span class="toctext">Week 202046</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2020.html#Week_202045"><span class="tocnumber">6</span> <span class="toctext">Week 202045</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2020.html#Week_202044"><span class="tocnumber">7</span> <span class="toctext">Week 202044</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2020.html#Week_202043"><span class="tocnumber">8</span> <span class="toctext">Week 202043</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2020.html#Week_202042"><span class="tocnumber">9</span> <span class="toctext">Week 202042</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2020.html#Week_202041"><span class="tocnumber">10</span> <span class="toctext">Week 202041</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2020.html#Week_202040"><span class="tocnumber">11</span> <span class="toctext">Week 202040</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2020.html#Week_202039"><span class="tocnumber">12</span> <span class="toctext">Week 202039</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2020.html#Week_202038"><span class="tocnumber">13</span> <span class="toctext">Week 202038</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2020.html#Week_202037"><span class="tocnumber">14</span> <span class="toctext">Week 202037</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2020.html#Week_202036"><span class="tocnumber">15</span> <span class="toctext">Week 202036</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2020.html#Week_202035"><span class="tocnumber">16</span> <span class="toctext">Week 202035</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2020.html#Week_202034"><span class="tocnumber">17</span> <span class="toctext">Week 202034</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2020.html#Week_202033"><span class="tocnumber">18</span> <span class="toctext">Week 202033</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2020.html#Week_202032"><span class="tocnumber">19</span> <span class="toctext">Week 202032</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2020.html#Week_202031"><span class="tocnumber">20</span> <span class="toctext">Week 202031</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2020.html#Week_202030"><span class="tocnumber">21</span> <span class="toctext">Week 202030</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2020.html#Week_202029"><span class="tocnumber">22</span> <span class="toctext">Week 202029</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2020.html#Week_202028"><span class="tocnumber">23</span> <span class="toctext">Week 202028</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2020.html#Week_202027"><span class="tocnumber">24</span> <span class="toctext">Week 202027</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2020.html#Week_202026"><span class="tocnumber">25</span> <span class="toctext">Week 202026</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2020.html#Week_202025"><span class="tocnumber">26</span> <span class="toctext">Week 202025</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2020.html#Week_202024"><span class="tocnumber">27</span> <span class="toctext">Week 202024</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2020.html#Week_202023:_2020.2F06.2F08_-_2020.2F06.2F14"><span class="tocnumber">28</span> <span class="toctext">Week 202023: 2020/06/08 - 2020/06/14</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2020.html#Week_202022:_2020.2F06.2F01_-_2020.2F06.2F07"><span class="tocnumber">29</span> <span class="toctext">Week 202022: 2020/06/01 - 2020/06/07</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2020.html#Week_202021:_2020.2F05.2F25_-_2020.2F05.2F31"><span class="tocnumber">30</span> <span class="toctext">Week 202021: 2020/05/25 - 2020/05/31</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2020.html#Week_202020:_2020.2F05.2F18_-_2020.2F05.2F24"><span class="tocnumber">31</span> <span class="toctext">Week 202020: 2020/05/18 - 2020/05/24</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2020.html#Week_202019:_2020.2F05.2F11_-_2020.2F05.2F17"><span class="tocnumber">32</span> <span class="toctext">Week 202019: 2020/05/11 - 2020/05/17</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2020.html#Week_202018:_2020.2F05.2F04_-_2020.2F05.2F10"><span class="tocnumber">33</span> <span class="toctext">Week 202018: 2020/05/04 - 2020/05/10</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2020.html#Week_202017:_2020.2F04.2F27_-_2020.2F05.2F03"><span class="tocnumber">34</span> <span class="toctext">Week 202017: 2020/04/27 - 2020/05/03</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2020.html#Week_202016:_2020.2F04.2F20_-_2020.2F04.2F26"><span class="tocnumber">35</span> <span class="toctext">Week 202016: 2020/04/20 - 2020/04/26</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2020.html#Week_202015:_2020.2F04.2F13_-_2020.2F04.2F19"><span class="tocnumber">36</span> <span class="toctext">Week 202015: 2020/04/13 - 2020/04/19</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2020.html#Week_202014:_2020.2F04.2F06_-_2020.2F04.2F12"><span class="tocnumber">37</span> <span class="toctext">Week 202014: 2020/04/06 - 2020/04/12</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2020.html#Week_202013:_2020.2F03.2F30_-_2020.2F04.2F05"><span class="tocnumber">38</span> <span class="toctext">Week 202013: 2020/03/30 - 2020/04/05</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2020.html#Week_202012:_2020.2F03.2F23_-_2020.2F03.2F29"><span class="tocnumber">39</span> <span class="toctext">Week 202012: 2020/03/23 - 2020/03/29</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2020.html#Week_202011:_2020.2F03.2F16_-_2020.2F03.2F22"><span class="tocnumber">40</span> <span class="toctext">Week 202011: 2020/03/16 - 2020/03/22</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2020.html#Week_202010:_2020.2F03.2F09_-_2020.2F03.2F15"><span class="tocnumber">41</span> <span class="toctext">Week 202010: 2020/03/09 - 2020/03/15</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2020.html#Week_202009:_2020.2F03.2F02_-_2020.2F03.2F08"><span class="tocnumber">42</span> <span class="toctext">Week 202009: 2020/03/02 - 2020/03/08</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2020.html#Week_202008:_2020.2F02.2F24_-_2020.2F03.2F01"><span class="tocnumber">43</span> <span class="toctext">Week 202008: 2020/02/24 - 2020/03/01</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2020.html#Week_202007:_2020.2F02.2F17_-_2020.2F02.2F23"><span class="tocnumber">44</span> <span class="toctext">Week 202007: 2020/02/17 - 2020/02/23</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2020.html#Week_202006:_2020.2F02.2F10_-_2020.2F02.2F16"><span class="tocnumber">45</span> <span class="toctext">Week 202006: 2020/02/10 - 2020/02/16</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2020.html#Week_202005:_2020.2F02.2F03_-_2020.2F02.2F09"><span class="tocnumber">46</span> <span class="toctext">Week 202005: 2020/02/03 - 2020/02/09</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2020.html#Week_202005:_2020.2F01.2F27_-_2020.2F02.2F02"><span class="tocnumber">47</span> <span class="toctext">Week 202005: 2020/01/27 - 2020/02/02</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2020.html#Week_202004:_2020.2F01.2F20_-_2020.2F01.2F26"><span class="tocnumber">48</span> <span class="toctext">Week 202004: 2020/01/20 - 2020/01/26</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2020.html#Week_202003:_2020.2F01.2F13_-_2020.2F01.2F19"><span class="tocnumber">49</span> <span class="toctext">Week 202003: 2020/01/13 - 2020/01/19</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2020.html#Week_202002:_2020.2F01.2F06_-_2020.2F01.2F12"><span class="tocnumber">50</span> <span class="toctext">Week 202002: 2020/01/06 - 2020/01/12</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Jbakker/reports/2020</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Jbakker.html" title="User:Jbakker">User:Jbakker</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Week_202050">Week 202050</span></h2>
+<p><b>Render Passes</b>
+</p>
+<ul><li>Eevee: Add Volume Transmittance to Color Render Passes. [T81134]</li>
+<li>Cryptomatte: apply volume transmittance to Eevee. [6714b800d17]</li>
+<li>Migrated cryptomatte node to new data structure [f4df036bc497]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix 3D View is red when using stereo [D9845]</li>
+<li>Compositor: New Exposure Node [D9677]</li></ul>
+<p><b>Shot Builder</b>
+</p>
+<ul><li>Technical review session with Sybren</li></ul>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T82591: Performance regression when rendering at very high resolution.</li>
+<li>Fix T83625: Shading attribute names cause compilation error.</li>
+<li>Fix T83494: Eevee clamp node incorrect when min &gt; max.</li>
+<li>DrawManager: High quality normals for non mesh objects [D9896]</li>
+<li>Fix T83557: Alpha blend + emissive colors renders white artifacts</li>
+<li>UV Editor regression: stitching preview is gone [T83547]</li></ul>
+<p><b>Triaging</b>
+</p>
+<ul><li>T82337 Grid in rendered orthogonal views does not adapt to displacement</li></ul>
+<p><b>Geometric Nodes</b>
+</p>
+<ul><li>Sprint 5 demo + review</li></ul>
+<p><b>Cleanup</b>
+</p>
+<ul><li>Remove crop field from render result struct</li></ul>
+<h2><span class="mw-headline" id="Week_202049">Week 202049</span></h2>
+<p><b>Cryptomatte</b>
+</p>
+<ul><li>Cycles now share the same settings for cryptomatte as EEVEE [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9746">D9746</a>]</li>
+<li>Fix Cryptomatte panel not visible in EEVEE [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d2745f8b3bf">7d2745f8b3</a>]</li>
+<li>Storing Cryptomatte metadata in render result [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9553">D9553</a>]</li>
+<li>Updated the manual</li>
+<li>Revived Compositor: Redesign Cryptomatte node for better usability patch [D3959]</li></ul>
+<p><b>AOV</b>
+</p>
+<ul><li>Cycles EEVEE AOV unification [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9774">D9774</a>]</li>
+<li>Updated the manual</li>
+<li>Added render tests for AOV render passes.</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Sprint planning (Sprint 5)</li></ul>
+<p><b>Patch Review</b>
+</p>
+<ul><li>Workaround for Access Violation startup crash on deprecated Radeon GPUs on Windows [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9667">D9667</a>]</li></ul>
+<p><b>Platform Support</b>
+</p>
+<ul><li>Updated the platform support based on community feedback.</li></ul>
+<p><b>Blender 2.83 LTS</b>
+</p>
+<ul><li>Blender 2.83.10 release.</li></ul>
+<h2><span class="mw-headline" id="Week_202048">Week 202048</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Marked support level of some legacy GPUs and known drivers/GPU combinations.</li>
+<li>Fixed image overlay + meta data. [T83309]</li></ul>
+<p><b>Render Module</b>
+</p>
+<ul><li>EEVEE AOV: AOV names must be unique</li>
+<li>EEVEE AOV: Added test case for render passes.</li>
+<li>Fixed EEVEE AOV where the shader didn't know if it needed to output a color or a value.</li>
+<li>EEVEE Cryptomatte: Added support for motion blur to EEVEE Motion blur.</li>
+<li>EEVEE Cryptomatte: Store Mapping of hash names in render result</li>
+<li>Cycles: Use Blender Cryptomatte Structure.</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Performance of poison disk distribution</li>
+<li>Sprint Planning Meeting</li></ul>
+<p><b>Blender 2.83 LTS</b>
+</p>
+<ul><li>Prepared Blender LTS 2.83.10.</li></ul>
+<h2><span class="mw-headline" id="Week_202047">Week 202047</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T82884: Cycles Compilation Error OpenCL/NanoVDB [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9629">D9629</a>]</li>
+<li>Compositor: Ensure premult color when setting alpha [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9630">D9630</a>]</li>
+<li>We now have a compositor backdrop that is faster, matches render results (linear alpha and pure emissive colors). [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9451">D9451</a>]</li>
+<li>Did some enterprise level requests for snapcraft for the release tomorrow <a rel="nofollow" class="external autonumber" href="https://forum.snapcraft.io/t/track-request-for-blender/21286">[1]</a></li>
+<li>Fixed crash in lattice deform [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9638">D9638</a>]</li></ul>
+<p><b>Research</b>
+</p>
+<ul><li>Research how we could upgrade to OCIOv2</li></ul>
+<p><b>Blender 2.91 release</b>
+</p>
+<ul><li>Acted as release engineer</li></ul>
+<p><b>Meetings</b>
+</p>
+<ul><li>Planning EEVEE/Viewport meeting</li>
+<li>Render module meeting</li>
+<li>Geometry nodes sprint review</li></ul>
+<h2><span class="mw-headline" id="Week_202046">Week 202046</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T82042: Crash when rendering huge images [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9524">D9524</a>]</li>
+<li>Fix [<a rel="nofollow" class="external text" href="http://developer.blender.org/T82591">#82591</a>]: performance regression when rendering at very high resolution</li>
+<li>Fix T82770: Artifacts when painting on generated transparent image [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9585">D9585</a>]</li>
+<li>Fix T82810: UV Editor, Crash with switching between single image and UDIM tile [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/549a1cac88a12193faf2251edb1134270e8a1360">549a1cac88</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T82460: Color Management Curves do not update when Image/UV Editor is present [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9559">D9559</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202045">Week 202045</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T80748: Render Emissive Colors in Compositor [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9451">D9451</a>]</li>
+<li>Research limitations of GL_MAX_TEXTURE_SIZE [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9530">D9530</a>]</li>
+<li>Fix T82042: Crash when rendering huge images [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9524">D9524</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Add colormap compositor node [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9444">D9444</a>]</li>
+<li>UI: Adaptive HDRI preview resolution [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9382">D9382</a>]</li>
+<li>Adding 3D_POLYLINE_UNIFORM_COLOR to PyGPU shader API [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9518">D9518</a>]</li>
+<li>Measureit using uniform to send line width info [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9519">D9519</a>]</li>
+<li>Add An Opacity Slider to Overlay Wireframe [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7622">D7622</a>]</li>
+<li>Compositor automated testing [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6334">D6334</a>]</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Sprint planning</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Released Blender 2.83.9</li></ul>
+<p><b>EEVEE Viewport</b>
+</p>
+<ul><li>Updated the documentation of EEVEE Cryptomatte and send it in for review [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9165">D9165</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202044">Week 202044</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Texture Paint: Color picker picks up UI and Overlay colors [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81673">#81673</a>]</li>
+<li>Can't Sample the correct color from non-color images [<a rel="nofollow" class="external text" href="http://developer.blender.org/T82093">#82093</a>]</li>
+<li>Crash on Exiting Texture Paint With Multiresolution [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81775">#81775</a>]</li>
+<li>Fix T81775 (workaround): Object Disappears During Texture Painting [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9430">D9430</a>]</li>
+<li>Fix T81969: Sequencer Scene Strip turns UI whiteish [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9433">D9433</a>]</li>
+<li>Fix T67832: Camera Background Images View Transform [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7067">D7067</a>]</li>
+<li>Fix T80748: Render Emissive Colors in Compositor [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9451">D9451</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix CalculateStandardDeviationOperation incorrect results for R G B channels [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9384">D9384</a>]</li>
+<li>UI: Adaptive HDRI preview resolution [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9382">D9382</a>]</li>
+<li>Fix T82220 Missing viewport update after manual "HDRI Preview Size" input [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9452">D9452</a>]</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Sprint Demo</li>
+<li>Sprint retrospective</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>Documented <a href="../../Source/EEVEE_&amp;_Viewport/Color_Management_Drawing_Pipeline.html" title="Source/EEVEE &amp; Viewport/Color Management Drawing Pipeline">Color Management Drawing Pipeline</a></li></ul>
+<h2><span class="mw-headline" id="Week_202043">Week 202043</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T77909: Viewport Render EEVEE Colors Incorrect [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9348">D9348</a>]</li>
+<li>Research: Compositor backdrop handles alpha differently from image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80748">#80748</a>]</li>
+<li>Fix T82064: migrate clone tool to overlay engine [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9352">D9352</a>]</li>
+<li>Research: Can't Sample the correct color from non-color images [<a rel="nofollow" class="external text" href="http://developer.blender.org/T82093">#82093</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>OldNewMap handling of pointers in blenloader does not work correctly with FD_FLAGS_SWITCH_ENDIAN. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81226">#81226</a>]</li>
+<li>EEVEE: Scattering pass is also outputted as Transmittance Volume Renderpass. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81254">#81254</a>]</li>
+<li>Use of deprectated PyEval_ReleaseLock() causes crash when Blender built against Python 3.9.0. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81688">#81688</a>]</li>
+<li>Crash when choosing cycles device with python. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81520">#81520</a>]</li>
+<li>'Delimit' in 'Select Linked' works unexpectedly when editing multiple objects. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81288">#81288</a>]</li>
+<li>Crash in undoing switch from sculpt to edit mode and back. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81854">#81854</a>]</li>
+<li>"Saving As..." a blend file with a Script node file path filled with 1023 symbols crashes Blender. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81421">#81421</a>]</li>
+<li>Reflection Plane causing problems at certain clip distances. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81942">#81942</a>]</li>
+<li>Crash when calling bmesh.utils.vert_separate(). [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81939">#81939</a>]</li>
+<li>Fix (studio-reported) Armature: bug in handling of custom bone transform. [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05b4d8d13a9">05b4d8d13a</a>]</li>
+<li>Memory leak if both a shader and an AddonPreferences class are used. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T71362">#71362</a>]</li>
+<li>Both X-Ray and cavity enabled causes abnormal GPU load. [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81633">#81633</a>]</li></ul>
+<p><b>Pipeline</b>
+</p>
+<ul><li>Create initial design for a scene builder</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>EEVEE Cryptomatte [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81058">#81058</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202042">Week 202042</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Texture Painting with Paint mask enabled, (de)selecting faces causes a mess with texture slots [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9136">D9136</a>]</li>
+<li>Image: Export emissive colors in 3 channel PNG images [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/850944e6cda763f099652bf97d52d22f1deb5daa">850944e6cd</a>]</li>
+<li>Do not limit gl texture size in image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81206">#81206</a>]</li>
+<li>GPU: Memory leak when scaling buffers [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9280">D9280</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Materials: Add custom object properties as usable attributes [<a rel="nofollow" class="external text" href="http://developer.blender.org/D2057">D2057</a>]</li>
+<li>EEVEE: add support for material override [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9143">D9143</a>]</li>
+<li>EEVEE: new node to expose individual light info and shadow to shader [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9130">D9130</a>]</li>
+<li>Remove duplicate of map_mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9290">D9290</a>]</li>
+<li>Compositor automated testing [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6334">D6334</a>]</li>
+<li>Fix T81934: Painting/Sculpting in ortho fails to let strokes pass through clipped geometry [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9318">D9318</a>]</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Sprint planning session</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Release Blender 2.83.8 LTS</li>
+<li>BuildBot: Select CUDA 10.1 for Blender v2.83 releases [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5949b796f002">rB5949b796</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>EEVEE Cryptomatte: prototyping [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9165">D9165</a>]</li></ul>
+<p><b>Meetings</b>
+</p>
+<ul><li>Render + EEVEE Meeting</li>
+<li>Studio Pipeline meeting</li></ul>
+<h2><span class="mw-headline" id="Week_202041">Week 202041</span></h2>
+<p>Rest &amp; Recreation
+</p>
+<h2><span class="mw-headline" id="Week_202040">Week 202040</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Not freed memory blocks after using viewport shading type: "rendered" [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81459">#81459</a>]</li>
+<li>Research for threading issue [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79889">#79889</a>]</li>
+<li>Texture Painting with Paint mask enabled, (de)selecting faces causes a mess with texture slots [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9136">D9136</a>]</li></ul>
+<p><b>Geometry Nodes</b>
+</p>
+<ul><li>Written a framework for agile development <a href="../../Process/Agile.html" title="Process/Agile">Process/Agile</a></li>
+<li><a href="../../Projects/Geometry_Nodes.html" title="Projects/Geometry Nodes">Projects/Geometry_Nodes</a> contains project specifics.</li>
+<li>[<a rel="nofollow" class="external text" href="https://developer.blender.org/project/board/121/">Workboard</a>] for the project.</li>
+<li>Research on running cycles test cases on OpenCL</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix OpenCL render error in large scenes. [rB094addfe84c]</li>
+<li>GPencil: bones cannot be selected using Ctrl + LMB (with Left Selection Preference). [T80905]</li>
+<li>2.8x Crash when loading 2.79 file. [T81168]</li>
+<li>Fix invert vertex group weight miscalculation for modifiers. [rB3bdf921e824]</li>
+<li>NLA Bake action broken for bone following path. [T61985]</li>
+<li>Blender 2.90 Tris to Quads breaks UVs even with Compare UVs checked. [T80520]</li>
+<li>Re-ordering face maps messes up the names of other face maps. [T79973]</li>
+<li>Crash when deleting custom orientation. And gizmo points wrong way. [T80426]</li>
+<li>Blender 2.83 broken Depth of Field in Viewport (Mac OSX). [T78653]</li>
+<li>Access violation trying to access C.evaluated_get().view_layer_eval.depsgraph. [T62504]</li>
+<li>Use-after-free when rendering material previews. [T80630]</li>
+<li>Unpaired ED_image_undo_push_begin(..). [T80885]</li>
+<li>Crash in pose mode using a driver on bendy bone Segments. [T81218]</li>
+<li>Not freed memory blocks after using viewport shading type: "rendered". [T81459]</li>
+<li>Cycles: Fix usage of memory barriers in split kernel. [rB23bf3b09ddf]</li>
+<li>Windows 10 Start Menu and Taskbar Visual Appearance Issues for Microsoft Store Installations. [T79356]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>UV/Image Editor: Overlay Popover [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8890">D8890</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202039">Week 202039</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Store Emissive Colors when writing to sRGB 3 channel files [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81199">#81199</a>]</li>
+<li>Some Viewport Overlay is gone if you move the view in Cycles render view</li>
+<li>Checked and closed old image editor issues</li>
+<li>EEVEE: Scattering pass is also outputted as Transmittance Volume Renderpass</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Resolve Code Review - UV/Image Editor: Overlay Popover</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>CleanUp: SpaceNode naming conventions</li>
+<li>LatticeDeform: 50% Performance improvement [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9087">D9087</a>]</li></ul>
+<p><b>EEVEE Viewport</b>
+</p>
+<ul><li>EEVEE AOV  [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7010">D7010</a>]
+<ul><li>Added test cases</li>
+<li>Fixed AOV validation</li></ul></li>
+<li>Rendering &amp; Cycles/EEVEE &amp; Viewport meeting</li>
+<li>EEVEE: Add Volume Transmittance to Color Render Passes (make EEVEE and Cycles renderpasses more similar)</li>
+<li>Research EEVEE Cryptomatte [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81058">#81058</a>]</li>
+<li>Correct syncing of render passes when using draw manager</li>
+<li>DrawManager: Adding Custom Render Passes [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9088">D9088</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Release of Blender 2.83.7</li>
+<li>Reduce the amount of time spend in www.blender.org CMS [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9055">D9055</a>]
+<ul><li>Create the download urls <a rel="nofollow" class="external autonumber" href="https://developer.blender.org/P1667">[2]</a></li>
+<li>Create the release notes <a rel="nofollow" class="external autonumber" href="https://developer.blender.org/P1668">[3]</a></li></ul></li>
+<li>Proposal: Release Module Test Suites <a rel="nofollow" class="external autonumber" href="https://devtalk.blender.org/t/proposal-release-module-test-suites/15619">[4]</a></li></ul>
+<h2><span class="mw-headline" id="Week_202038">Week 202038</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>UV Editor proportional editing circle draws wrong [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80931">#80931</a>]</li>
+<li>Image Editor: Alpha (like Bloom) not showing properly [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81026">#81026</a>]</li>
+<li>Image editor only displays the first frame during 'Viewport render animation' [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80915">#80915</a>]</li>
+<li>Images drawn with the Python gpu module no longer draw on top in the Image Editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81002">#81002</a>]</li>
+<li>Eevee MotionBlur steps setting make ao pass darker [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81157">#81157</a>]</li>
+<li>Assert going to Texture Paint workspace without a UVMap [<a rel="nofollow" class="external text" href="http://developer.blender.org/T81126">#81126</a>]</li>
+<li>DDS Image files are not displayed correctly [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80925">#80925</a>]</li>
+<li>EEVEE: ShaderToRGB alpha inversed [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9010">D9010</a>]</li>
+<li>ShaderToRGB Node plugged to alpha does not work with Alpha Clip or Alpha Hashed mode in 2.90 [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80919">#80919</a>]</li>
+<li>Assert displaying Z-Buffer in image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79573">#79573</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Materials: Add custom object properties as usable attributes [<a rel="nofollow" class="external text" href="http://developer.blender.org/D2057">D2057</a>]</li>
+<li>T80899: Crash on editing multiple UVs of multiple different objects at the same time [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8967">D8967</a>]</li>
+<li>Fix T81013: Weight Paint Overlay XRay fails with clipping [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8970">D8970</a>]</li></ul>
+<p><b>Blender 2.90.1</b>
+</p>
+<ul><li>Backported patches</li>
+<li>Release Engineer for Blender 2.90.1</li></ul>
+<p><b>EEVEE Viewport</b>
+</p>
+<ul><li>Revived the EEVEE AOV patch [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7010">D7010</a>]</li>
+<li>UV/Image: Remove Legacy Drawing [<a rel="nofollow" class="external text" href="http://developer.blender.org/D9011">D9011</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202037">Week 202037</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix Assert in UV Image editor when displaying none tiled images [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6210f9bacdb3d8b7ba05f29136ac6f9c8f643d7">c6210f9bac</a>]</li>
+<li>Single Image Texture Painting Crash [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80705">#80705</a>]</li>
+<li>UV Image Editor: Display Texture Paint UVs not working [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80770">#80770</a>]</li>
+<li>Cannot switch between Slots of Render Result [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80776">#80776</a>]</li>
+<li>Image Editor Show Metadata Not Working [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80775">#80775</a>]</li>
+<li>Texture painting - Erase alpha creates dark halo around alpha [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80745">#80745</a>]</li>
+<li>Image blur in compositor creates halo from alpha [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80746">#80746</a>]</li>
+<li>UV editor do not show UDIM grid (UDIM) [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80825">#80825</a>]</li>
+<li>UVs are not drawn correctly after joining objects [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80800">#80800</a>]</li>
+<li>EEVEE Shader Compilation Error [<a rel="nofollow" class="external text" href="http://developer.blender.org/Dd26455c557b">Dd26455c557b</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Cleanup: silence [-Wmissing-braces] warning [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8873">D8873</a>]</li>
+<li>Build OPENCL kernels at build time [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8737">D8737</a>]</li>
+<li>Reduce ambiguity with GPU vertex buffer operations [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8664">D8664</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>UV Image Editor: Overlay Popover [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80767">#80767</a>]</li>
+<li>Make Show Repeat inactive for Tiled images [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49dbf1324dcc">49dbf1324d</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix T71012: Cycles baking crash with locked-UI &amp; background-mode</li>
+<li>Fix T80238: Crash adding properties to material node-trees</li>
+<li>Fix T80604: BLI_polyfill_calc exceeds stack size allocating points</li>
+<li>Fix T80457: Library Override - Custom Property to Drive Child Particles results</li>
+<li>Fix T78392: [2.83.5, 2.90, 2.91] Crash on undo/ redo after changing modes.</li>
+<li>Fix T77584: Edit Mode crash with shape keys created on blank mesh</li>
+<li>Fix T79737: ERROR ACCESS VIOLATION when switching to eevee rendered view</li>
+<li>Fix T80603 Workbench: Inverted alpha when rendering</li>
+<li>Fix T75061 Grease Pencil: MacOS: broken Gradient and Texture</li></ul>
+<h2><span class="mw-headline" id="Week_202036">Week 202036</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Displaying a large image impacts Image Editor and viewport modeling performance [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77812">#77812</a>]</li>
+<li>Alpha difference Viewport/F12 [<a rel="nofollow" class="external text" href="http://developer.blender.org/T52680">#52680</a>]</li>
+<li>Render result drawing performance in Image Editor is extremely poor compared to image texture drawing performance [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79518">#79518</a>]</li>
+<li>Incorrect RGB display in Image Viewer when not viewing alpha channel [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74709">#74709</a>]</li></ul>
+<p><b>Performance</b>
+</p>
+<ul><li>Lattice performance</li>
+<li>Preparing presentation for blender devs on performance</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Blender 2.83.6 release</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>New Image/UV editor is now in master. [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8234">D8234</a>]</li>
+<li>Researched how to add test cases for the GPU module. Result: low value, as most cases are already triggered when starting blender. The more variations we have, the more benefit it will get.</li>
+<li>Researched design issues when sharing overlays between 3d viewport and uv/image editor.</li>
+<li>High level Developers Documentation of the UV/Image editor <a href="../../Source/EEVEE_&amp;_Viewport/Draw_Engines/Image_Engine.html" title="Source/EEVEE &amp; Viewport/Draw Engines/Image Engine">Source/EEVEE &amp; Viewport/Draw Engines/Image Engine</a></li></ul>
+<h2><span class="mw-headline" id="Week_202035">Week 202035</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Documented limitation Shader to RGB when used with EEVEE render passes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79794">#79794</a>]</li>
+<li>EEVEE: Shader Compilation Error [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8778">D8778</a>]</li></ul>
+<p><b>Blender 2.90</b>
+</p>
+<ul><li>Blender 2.90 release</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>VR: SteamVR is now a supported OpenXR runtime! (Windows only)</li>
+<li>Add undo step to Alembic and Collada importers.</li>
+<li>Fix T80078: Overrides: Crash with animated IK control on linked armature.</li>
+<li>Fix T80104: Crash on making material local.</li>
+<li>Fix Outliner allowing to enter Pose Mode on linked armature</li>
+<li>Fix T77900: File Browser in macOS fullscreen crashes</li>
+<li>Fix crash accessing image space properties without an active window</li>
+<li>Fix T80159: Custom Normals Averaging crash after clearing</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Migrated EEVEE static shaders to eevee_shaders.</li>
+<li>Added test case for all EEVEE static shaders. [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8779">D8779</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D8763">D8763</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D8771">D8771</a>]</li>
+<li>UV Image editor
+<ul><li>Unavailability Grid Drawing</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_202034">Week 202034</span></h2>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T79970 EEVEE: Camera Animation Breaks Motion Blur (Two Steps or More) [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8676">D8676</a>]</li>
+<li>Overlay: Darken Inactive Geometry [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8679">D8679</a>]</li>
+<li>Crash: Adding UV's in edit-mode with linked duplicates [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77359">#77359</a>]</li></ul>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Crash when opening file [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79533">#79533</a>]</li>
+<li>Blender freezes on vertex paint on linked mesh data [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79038">#79038</a>]</li>
+<li>GPU: Fix Segmentation Fault Freeing Failed Shader [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8740">D8740</a>]</li>
+<li>Workbench: Fix Compiling Workbench Volume Shaders (Mesa 20.0.8) [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8741">D8741</a>]</li>
+<li>EEVEE: Fix Compiling Volume Shaders [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8742">D8742</a>]</li>
+<li>Fix T80160: Workbench shadows are broken [<a rel="nofollow" class="external text" href="http://developer.blender.org/T80160">#80160</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Use DrawManager for UV/Image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67530">#67530</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix T78038: Cycles crash rendering with volume object and motion blur</li>
+<li>VR: Properly support outputting sRGB swapchain buffers</li>
+<li>Fix/workaround graphics issues breaking SteamVR use with Blender</li>
+<li>Fix constant lighting change in VR view when rotating head</li>
+<li>Fix warning when compiling on Linux with WITH_XR_OPENXR enabled</li>
+<li>GPUTexture: Extend CUBE_MAP_ARRAY_ARB proxy workaround to all Apple gpus</li>
+<li>MEM_guardedalloc: allow freeing const arrays with MEM_SAFE_FREE</li>
+<li>Fix T79935: Inonsistent simplify behavior when linking collection with objects…</li>
+<li>Fix critical bug in foreach ID looper of Scene data-block.</li>
+<li>Fix T78186: Dyntopo panel error with tools that dont have a brush</li>
+<li>Fix T79111: Cycles: Image Sequence not rendering</li>
+<li>Fix T77359: Crash adding UV's in edit-mode with linked duplicates</li>
+<li>Fix T80012: Bevel Shader node Samples value has too low hardcoded limit</li>
+<li>Fix T79915: crash when changing to white noise texture</li>
+<li>BLI_math_matrix: add invert_m4_m4_safe_ortho (m3 version too)</li>
+<li>Fix T80077: Objects disappear when joining with a zero scaled axis</li>
+<li>Fix T80039: Do not subdivide with Multires is mesh has no faces</li>
+<li>BLI: fix memory leak in delaunay 2d</li>
+<li>Fix T77683: Cycles baking crash with motion blur enabled and no camera</li>
+<li>Fix T78065: OSL shader compilation fails on macOS</li></ul>
+<h2><span class="mw-headline" id="Week_202033">Week 202033</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Workbench Depth of field crash [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b5582c7f7b9f11b70d1d33bfd8e8de9429d75c3">6b5582c7f7</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Steam Release: Script creation of Steam build files [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8429">D8429</a>]</li>
+<li>Remove MeshBatchCache in MeshRenderData hack [<a rel="nofollow" class="external text" href="http://developer.blender.org/D864">D864</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Render EEVEE AO pass when AO disabled [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77267">#77267</a>]</li>
+<li>Use DrawManager for UV/Image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67530">#67530</a>]
+<ul><li>Support for pure emission colors</li>
+<li>Fixed multi layer/multi pass switch</li>
+<li>Fixed Compositor Viewer</li>
+<li>Merged overlay2d to overlay</li></ul></li>
+<li>Workbench: Shader Test Suite [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8667">D8667</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Released Blender 2.83.5</li></ul>
+<p><b>Other</b>
+</p>
+<ul><li>Themes: remove uv_others [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8668">D8668</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D8669">D8669</a>]</li></ul>
+<h2><span class="mw-headline" id="Week_202032">Week 202032</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Eevee: Procedural material very slow [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79522">#79522</a>]</li>
+<li>Sequencer window not updating whilst playing animation [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79619">#79619</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix T79254: FCurve editor crash when zooming out to limit</li>
+<li>Fix T79260: Crash displaying the same mesh in two windows</li>
+<li>Fix interface artifacts on Intel GPUs</li>
+<li>Fix T79187: Outliner "Make Single User" crash</li>
+<li>Fix T79158: Eevee cubemaps shows black</li>
+<li>Fix T79007: Smooth brushes crasing in dyntopo</li>
+<li>Fix T78537: too much memory usage rendering animation with persistent images</li>
+<li>Fix T78730: CLOG writes/reads outside allocated memory.</li>
+<li>Fix T79207: Crash converting curve to mesh</li>
+<li>Fix usercount not decrementing in <code>gpencil_stroke_separate_exec</code></li>
+<li>Fix T46568: UV select-linked failure to de-select</li>
+<li>Fix T78884: GPencil weight paint crash when painting over modifier generated…</li>
+<li>Workbench: Fix broken id pass</li>
+<li>Fix T79509 Workbench: Object color mode broken if more than 4096 objects</li>
+<li>Fix T79246 GPUShader: compile error on AWS Elastic Graphics</li>
+<li>Fix T78529: Blend file corrupted during save caused by high Cubemap Size</li>
+<li>EEVEE: LightCache: Add warning if the cache cannot be saved</li>
+<li>Fix T79575: Crash loading nested set-scenes</li>
+<li>Fix crash switching render slots when there is only one slot</li>
+<li>Fix T79482: Triangulate quads with 'Beauty' can make zero area faces</li>
+<li>Fix T77847: "Add plane &gt; align" causes crash when certain rigs are in the scene…</li>
+<li>Fix T79324: Crash when changing View Layer while VR session runs</li>
+<li>Fix T79676: Video Sequencer image sequence strip source path breaks when</li>
+<li>Fix T77885: crash rendering grease pencil from compositor with multiple scenes</li>
+<li>Fix T79703 EEVEE: Crash on Macos due to lightcache baking</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Use DrawManager for UV/Image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67530">#67530</a>]
+<ul><li>UDIM support</li>
+<li>Show modified wires</li>
+<li>Stereo images</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_202031">Week 202031</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T77346: GPU Workaround Always Render On Main Thread [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8410">D8410</a>]</li>
+<li>Fix T79493: EEVEE LightProbe Display [<a rel="nofollow" class="external text" href="http://developer.blender.org/T79493">#79493</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Released Blender 2.83.4</li></ul>
+<h2><span class="mw-headline" id="Week_202030">Week 202030</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T77346: GPU Workaround Always Render On Main Thread [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8410">D8410</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>EEVEE: GLSL refactor/cleanup [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8306">D8306</a>]</li>
+<li>Compositor: Fix calculation of preview resolution [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8263">D8263</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Use DrawManager for UV/Image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67530">#67530</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix T78999: Crash when adjusting sequencer property</li>
+<li>GPencil: Fix unreported missing strokes in interpolation</li>
+<li>Fix T78867: Crash related to viewing video files</li>
+<li>Fix T79264: Mantaflow Field weights cannot be animated</li>
+<li>Fix T79031: Batch Generate-Previews doesn't work anymore</li>
+<li>Fix T79272: Dimensions fail on negative scaled axis</li>
+<li>Fix T77609: Scale to Fit Text Box fails when text is too narrow</li>
+<li>Fix T77669: Copy-pasting strip twice crashes Blender</li>
+<li>Fix T78837: Prefetching can corrupt .blend files</li>
+<li>Fix T78358: random crash editing shader nodes with textures</li>
+<li>Fix T78920: missing depsgraph relation when using sound strips in VSE</li>
+<li>Fix View3D "Mirror" menu, both "Global" and "Local" items are GLOBAL</li>
+<li>Fix T78636: Crash displaying many aligned buttons</li>
+<li>Fix T68845: Follow Active Quads, divide by zero error</li>
+<li>Fix T78573: Crash when removing strips with prefetching</li>
+<li>Fix T78037: fresh install of blender 2.83.0 not able to save user startup file.</li>
+<li>Fix T78306: Weight Transfer Operator target mesh doesn't update when…</li>
+<li>Fix T78308: Weight Transfer Operator "Deform Pose Bones" destination setting…</li>
+<li>Fix T79180: Object disappears when scaled, set origin etc after applying smooth…</li></ul>
+<h2><span class="mw-headline" id="Week_202029">Week 202029</span></h2>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Blender 2.83.3 Release</li></ul>
+<h2><span class="mw-headline" id="Week_202028">Week 202028</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>RNA warning writes/reads outside allocated memory [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78730">#78730</a>]</li>
+<li>EEVEE RenderPass normals disapear when view isn't updated [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78704">#78704</a>]</li>
+<li>Fix T77867: Link Duplicate Object crashes during batch creation [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77867">#77867</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>EEVEE: GLSL refactor/cleanup [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8306">D8306</a>]</li>
+<li>Fix T78959: Remove check for locked interface before drawing overlays, add comment [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8313">D8313</a>]</li></ul>
+<p><b>Animation Playback Performance</b>
+</p>
+<ul><li>Proposal SIMD Wrappers [<a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/proposal-cpp-simd-wrappers/14361">devtalk</a>]</li>
+<li>DepGraph: Lookup drivers based on its index [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8330">D8330</a>]</li></ul>
+<p><br />
+<b>Blender LTS</b>
+</p>
+<ul><li>Fix alignment/size issue on ARM/RPi architecture</li>
+<li>Fix T75943 EEVEE: Cubemaps shows black</li>
+<li>Fix T77455: Blender Freezes when using the 3d Scale Gizmo</li>
+<li>GPU: Apple/Nvidia Proxy check</li>
+<li>Fix missing GPU image free in background mode</li>
+<li>Fix T77780 Overlay: Weight colors are not in render in the right colorspace</li>
+<li>Fix T77984: Cycles OpenCL error rendering empty scene</li>
+<li>Fix T77655 Overlay: Edit mode + wire drawtype + infront not transparent</li>
+<li>Fix T76229 Overlay: Sulpt overlay not working if object use in-front option</li>
+<li>Fix T77641 Sculpt mode performance regression in 2.83</li>
+<li>Fix T74024 Faces missing, weird faces added</li>
+<li>Fix error when filtering in Outliner "Blender File" mode with libraries</li>
+<li>Fix T78337: Fix crash when use GPencil merge without materials</li>
+<li>EEVEE: Fix undefined behavior when using BSDF nodes inside volume shaders</li>
+<li>Fix T78134: GPencil interpolation crash</li>
+<li>Fix T78042: GPencil: Strokes go missing after Interpolation from another layer</li>
+<li>Fix T77759	: Workbench: "Not enough texture slots!" Message being spammed and lags the entire computer</li></ul>
+<p><b>Next Week</b>
+</p><p>Next week I will be doing the Blender 2.83.3 LTS release and some automation
+</p>
+<h2><span class="mw-headline" id="Week_202027">Week 202027</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Remove local shaders workaround for Intel HD6xx [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77346">#77346</a>]</li>
+<li>Update mesh_cd_layers_type_ to support 8 bytes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78431">#78431</a>]</li>
+<li>Win/Intel GPU crashes material preview and final render [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77346">#77346</a>]</li>
+<li>Workbench Shadow effects XRay [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78481">#78481</a>]</li>
+<li>Scale gizmos cause complete freezes in Blender 2.83 on Intel graphics [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77455">#77455</a>]</li></ul>
+<p><b>EEVEE/Viewport</b>
+</p>
+<ul><li>Use DrawManager for UV/Image editor [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67530">#67530</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Blender 2.83.2 release</li></ul>
+<h2><span class="mw-headline" id="Week_202026">Week 202026</span></h2>
+<p><b>BugFixing</b>
+</p>
+<ul><li>Animation editors playhead not refreshing (maximized editor) [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78229">#78229</a>]</li>
+<li>Sequencer renders playhead line twice [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78176">#78176</a>]</li>
+<li>Blender crashes on many modeling operations [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78361">#78361</a>]</li>
+<li>Crash Editing Instanced Objects with Tangent Normals [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78054">#78054</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>Intel UHD 620: Blender crashes at modifying material properties [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77346">#77346</a>]</li></ul>
+<p><b>Blender 2.83 LTS</b>
+</p>
+<ul><li>Post mortem meeting <a rel="nofollow" class="external autonumber" href="https://devtalk.blender.org/t/2020-06-29-blender-2-83-1-post-mortem/14098">[5]</a></li>
+<li>Fix T77095: fix Cycles performance regression with AMD RX cards</li>
+<li>Fix T77734: random crash when rendering animation</li>
+<li>Fix T66934 Overlay: "Outline Selected" overlay doesnt affect armatures</li>
+<li>Fix: Crash when closing window while Outliner shows screens</li>
+<li>Fix T77328: Crash on undo Draw Face Sets stroke with dyntopo active</li>
+<li>Fix random crash in Cycles smoke volume loading</li>
+<li>UV Editor: Fix Vertex Overlay color not being color managed</li>
+<li>Fix T77754: Crash after any alembic import undo in an empty scene</li>
+<li>Fix T77712: Crash on proxied rig, custom bone shape, driver targeting rig</li>
+<li>Fix T77830: Crash in VR session when opening material preview</li>
+<li>Fix memory leak calculating deform modifiers in edit-mode</li>
+<li>Fix T77913: Incorrect handling of negative-scale bit in DRWResourceHandle</li>
+<li>Fix T78112: VSE Sequencer/Preview crash after fullscreen</li>
+<li>Fix T67358: Compositor Disabled Node Config -&gt; SegFault</li>
+<li>Automate build process</li></ul>
+<h2><span class="mw-headline" id="Week_202025">Week 202025</span></h2>
+<p><b>BugFixing</b>
+</p>
+<ul><li>customdata_typemap_is_valid crash [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77893">#77893</a>]</li>
+<li>Performance: Use GHash for key block lookup [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8092">D8092</a>]</li></ul>
+<p><b>Blender 2.83 LTS</b>
+</p>
+<ul><li>Fix T77774: New undo code broken by 'make local' behavior.</li>
+<li>Fix T66786: Audio SDL: Video editor Sound muted without muting it</li>
+<li>Fix T77803: IK Degrees of freedom drawing glitch,</li>
+<li>Fix (unreported) wrong size of UserPreferences' <code>dupflag</code> parameter.</li>
+<li>Cycles: Refactor microfacet BSDFs to remove separate anisotropy code</li>
+<li>GPencil: Fix unreported Vertex Opacity Overlay not working</li>
+<li>Fix T75414: Incorrect masking in Color Balance modifier</li>
+<li>Fix T76767: Cycles performance regression with CLI renders</li>
+<li>Fix T77853: Error reloading linked library.</li>
+<li>Fix missing hinting information in monospace font</li>
+<li>Fix missing hinting information in default font</li>
+<li>Release of Blender 2.83.1</li></ul>
+<p><b>Animation Playback Performance</b>
+</p>
+<ul><li>Draw play head as an overlay [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8066">D8066</a>]</li>
+<li>Use binary search for MDeformVert [<a rel="nofollow" class="external text" href="http://developer.blender.org/T78296">#78296</a>]</li>
+<li>Performance: Reuse last evaluated fcurve when evaluating a list of fcurves [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8131">D8131</a>]</li></ul>
+<p>Next week I want to automate part of the LTS release process, Make a final design for the RNA_path_resolve change. And fix some GPU related issues.
+</p>
+<h2><span class="mw-headline" id="Week_202024">Week 202024</span></h2>
+<p><b>BugFixing</b>
+</p>
+<ul><li>Glitch with several loose edges when changing Mask Modifier threshold [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77750">#77750</a>]</li>
+<li>Object's wires disappear when using split orthographic view [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77680">#77680</a>]</li>
+<li>Wired objects get rendered as solid using "Viewport render image" if the viewport's shading type is "Rendered" [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73892">#73892</a>]</li>
+<li>IK Degrees of freedom rendering glitch [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77803">#77803</a>]</li>
+<li>Fix T77686: EEVEE environment pass with film transparency [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77686">#77686</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>Unreported Grease Pencil rendering glitches splashscreen 2.82</li></ul>
+<p><b>Sculpt Texture &amp; Paint Module</b>
+</p>
+<ul><li>Technical meeting about 2.90 developments <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/meeting-notes-sculpt-texture-paint-module-202006/13877">Meeting Minutes</a></li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Fix T77657: NVIDIA Quadro FX4800 crash on startup</li>
+<li>GPencil: Improve viewlayer masking check</li>
+<li>Fix T77148: Crash changing multiple values for sequencer strips</li>
+<li>Fix T77047: Dyntopo Sample detail size on hidden mesh causes crash</li>
+<li>Fix T74101: File Browser in macOS fullscreen crashes or makes windows unusable</li>
+<li>Fix T77504: Operator search gives wrong results</li>
+<li>Fix T76894: Disable clipping region selection in material/rendered mode</li>
+<li>Fix T72936: Incorrect gizmo orientation with inherit rotation disabled</li>
+<li>Fix menu operator/search clipping the last character</li>
+<li>Fix T77603: OSL parser fails when script ends with comment without newline</li>
+<li>Fix crash running "Edit Voxel Size" operator outside of a main 3D View region</li></ul>
+<p><b>Animation Playback Performance</b>
+</p>
+<ul><li>Performance: Never draw channels region during playback [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8073">D8073</a>]</li>
+<li>Cleanup: Only update timeline header during playback [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8074">D8074</a>]</li>
+<li>Draw play head as an overlay [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8066">D8066</a>]</li>
+<li>View2DScrollers memory allocation [<a rel="nofollow" class="external text" href="http://developer.blender.org/D8076">D8076</a>]</li></ul>
+<p><b>Next week</b>
+</p><p>GPU Viewport issues, Doing a first round to release 2.83.1. and for RNA_path resolve handling.
+</p>
+<h2><span id="Week_202023:_2020/06/08_-_2020/06/14"></span><span class="mw-headline" id="Week_202023:_2020.2F06.2F08_-_2020.2F06.2F14">Week 202023: 2020/06/08 - 2020/06/14</span></h2>
+<p><b>BugFixing</b>
+</p>
+<ul><li>Mesh cage appears outside of Clipping Region in Edit mode in Material and Render preview [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76894">#76894</a>]</li>
+<li>Fix T77267: Render EEVEE AO pass when AO disabled [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77267">#77267</a>]</li>
+<li>Edit mesh fails to draw loose edges in 2.90x when working with high poly count objects [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77342">#77342</a>]</li>
+<li>Lose edges of objects used for bone visualization are sometimes invisible [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77496">#77496</a>]</li>
+<li>Invisible loose edges on objects used in bone visualization [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77496">#77496</a>]</li>
+<li>Fix T77657: NVIDIA Quadro FX4800 crash on startup [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77657">#77657</a>]</li>
+<li>Draw Manager Threading memory leak [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7969">D7969</a>]</li></ul>
+<p><b>Sculpt Texture Paint</b>
+</p>
+<ul><li>Planning session for Blender 2.90</li></ul>
+<p><b>LTS</b>
+</p>
+<ul><li>GPencil: Fix unreported error in Dots Strokes material initialization</li>
+<li>GPencil: Fix unreported Shift+F OPacity key not working</li>
+<li>Calculate epsilon values for interp_weights_poly to improve accuracy</li>
+<li>Fix T76273 Glitches caused by glCopyImageSubData on windows + intel gpu</li>
+<li>Fix T77358: Gpencil can't select geometry within transparent layers</li>
+<li>Fix T77520: GPencil viewlayer filter produce crash with masking layers</li>
+<li>Fix T77367: Blender's snap package ignores command line options</li>
+<li>Fix T77164: scaling/rotation fails for 3 selected NURB points</li>
+<li>Fix T77156: GPencil view layer filter by layer not working</li>
+<li>Fix T77456: Broken vertex paint undo on high-poly objects.</li>
+<li>Fix T77448: Camera Solver constraint can't be converted to f-curve</li></ul>
+<p><b>Next week</b>
+</p><p>Next week finxing threading bugs in Grease Pencil (Blender 2.90). Design session sculpt, paint and texture module. Continue working on Animation playback performance (rna path resolving)
+</p>
+<h2><span id="Week_202022:_2020/06/01_-_2020/06/07"></span><span class="mw-headline" id="Week_202022:_2020.2F06.2F01_-_2020.2F06.2F07">Week 202022: 2020/06/01 - 2020/06/07</span></h2>
+<p><b>Bug Fixing</b>
+</p><p><b>Investigation</b>
+</p>
+<ul><li>In orthogonal view, XYZ axis overlay toggle doesn't work [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77210">#77210</a>]</li>
+<li>Display modifier in Edit Mode doesn't work [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77184">#77184</a>]</li>
+<li>GPUShader: error: too many samplers in shader [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77240">#77240</a>]</li>
+<li>Cycles Slow on AMD Radeon VII [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77354">#77354</a>]</li>
+<li>Bone selection fails Crashes in release, assert in debug build [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77442">#77442</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T76196: Curve Display hides wires as soon as any part has faces [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7874">D7874</a>]</li></ul>
+<p><b>Animation Playback</b>
+</p>
+<ul><li>DrawManager: Graph Task Scheduling [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76298">#76298</a>]</li>
+<li>Research mapping rna_path to other ID blocks [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77124">#77124</a>]</li></ul>
+<p><b>Blender LTS</b>
+</p>
+<ul><li>Proposal how to manage Blender LTS.</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>Add <code>BKE_fcurve_create</code> method</li>
+<li>Rename fcurve functions to match code convention</li></ul>
+<p>Next week bug fixing, planning session for 2.90, LTS. Discuss FCurve rna_path evaluations to find a feasible solution for caching.
+</p>
+<h2><span id="Week_202021:_2020/05/25_-_2020/05/31"></span><span class="mw-headline" id="Week_202021:_2020.2F05.2F25_-_2020.2F05.2F31">Week 202021: 2020/05/25 - 2020/05/31</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Unneccessary update calls viewport [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76970">#76970</a>]</li>
+<li>Partially missing tooltip in tool shelf with industry compatible keymap [<a rel="nofollow" class="external text" href="http://developer.blender.org/T71423">#71423</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>Blender bug open 2.79 files to 2.80 [<a rel="nofollow" class="external text" href="http://developer.blender.org/T68209">#68209</a>]</li>
+<li>Compositor/Stereoscopy with view switch and file output generate extra files [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72171">#72171</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T76902: face sets checkbox broken [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7798">D7798</a>]</li>
+<li>EEVEE: Refactor of eevee_material.c [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7642">D7642</a>]</li>
+<li>Sculpt: Improve Multires Fast Navigate rendering [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7403">D7403</a>]</li>
+<li>Sculpt: Add pinch radial and perpendicular modes to Draw Sharp [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7646">D7646</a>]</li>
+<li>Sculpt: Trimming tool [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7306">D7306</a>]</li></ul>
+<p><b>Faster Animation Playback</b>
+</p>
+<ul><li>DrawManager: Use Task Graph for mesh extraction [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76298">#76298</a>]</li>
+<li>BVHCache: Performance [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7817">D7817</a>]</li>
+<li>Cache <code>RNA_path_resolve</code> in dependency graph [<a rel="nofollow" class="external text" href="http://developer.blender.org/T77124">#77124</a>]</li></ul>
+<p><b>Next week</b>
+</p><p>This week I spend a bit more time on project development as they stalled during the bug fixing sprint. Next week I want to fix bugs on the viewport and continue with code review back-log.
+</p>
+<h2><span id="Week_202020:_2020/05/18_-_2020/05/24"></span><span class="mw-headline" id="Week_202020:_2020.2F05.2F18_-_2020.2F05.2F24">Week 202020: 2020/05/18 - 2020/05/24</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Blender closing when clicking TAB after hiding object [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76837">#76837</a>]</li>
+<li>Vertex Handles (Black Dots) Not Showing Consistently On Front Orthographic (Depending On Zoom Level) [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73535">#73535</a>]</li>
+<li>In Front Drawing Bone Envelope Distance [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73115">#73115</a>]</li>
+<li>Mask Modifier Loose Edges Not Shown [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72729">#72729</a>]</li>
+<li>Wireframe In Front issues [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72502">#72502</a>]</li>
+<li>Freestyle pass for one scene not accessible in compositor in other scenes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76780">#76780</a>]</li>
+<li>UI shifts/shows artifacts in side-by-side stereoscopic 3D mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73169">#73169</a>]</li>
+<li>Intel IRS / Ice lake GPU slow viewport performance [<a rel="nofollow" class="external text" href="http://developer.blender.org/T70922">#70922</a>]</li>
+<li>UDIM Rectangular Tiled Image EEVEE freezes Blender [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76375">#76375</a>]</li>
+<li>UDIM "Edit externally" is capable of opening ONLY the first tile [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73730">#73730</a>]</li>
+<li>Ctrl_scroll on dropdowns scrolls wrong direction [<a rel="nofollow" class="external text" href="http://developer.blender.org/T64277">#64277</a>]</li>
+<li>Weight Paint Mode: wrong vertex selection with active xray and object with modifier [<a rel="nofollow" class="external text" href="http://developer.blender.org/T68352">#68352</a>]</li>
+<li>Artifacts appear on textures with 'Closest' interpolation set in Solid viewport renderer [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73726">#73726</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>Bad alpha value in VSE [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76437">#76437</a>]</li>
+<li>UDIM issue when switch from Tiled to Single and back to Tiled [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74777">#74777</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T75977: Lower the merge limit in the bisect/mirror operation in symmetrize [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7495">D7495</a>]</li>
+<li>Fix (unreported) UV shadow not drawing smooth, not respecting 'UV Opacity' setting [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7764">D7764</a>]</li></ul>
+<h2><span id="Week_202019:_2020/05/11_-_2020/05/17"></span><span class="mw-headline" id="Week_202019:_2020.2F05.2F11_-_2020.2F05.2F17">Week 202019: 2020/05/11 - 2020/05/17</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Fix T75556: Select Emitter Object via Hair [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75556">#75556</a>]</li>
+<li>Dragging in the timeline causes Blender to freeze [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76553">#76553</a>]</li>
+<li>Unreported threading issues in remesh modifier</li>
+<li>Multiobject editing linked mesh [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76609">#76609</a>]</li>
+<li>Rendering Glitches When Switching Shading During a SculptSession [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75908">#75908</a>]</li>
+<li>Sculpt Mask Influences Weight/Vertex Paint Drawing [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74694">#74694</a>]</li>
+<li>Decreasing Viewport Anti-Aliasing Samples Makes Scene Whiter [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76558">#76558</a>]</li>
+<li>Eevee assert in shader group sorting [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76730">#76730</a>]</li>
+<li>Particle Hair Get Occluded by Overlays [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76729">#76729</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T75347: Update cloth brushes in versioning with a valid mass value [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7698">D7698</a>]</li>
+<li>Sculpt: Render Face Sets always as flat shading [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7105">D7105</a>]</li>
+<li>Fix T75977: Lower the merge limit in the bisect/mirror operation in symmetrize [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7495">D7495</a>]</li>
+<li>Fix T76655: Change Edit Voxel Size shortcut to R [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76655">#76655</a>]</li>
+<li>Sculpt: Initial Topology Distances and Falloff support [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7059">D7059</a>]</li>
+<li>Fix T73226: Add defaults and versioning for uv_relax_method [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6753">D6753</a>]</li>
+<li>Fix T76397: Missing value property on Clear Mask pie menu [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7699">D7699</a>]</li>
+<li>Fix sculpt mask interpolation in subdivisions [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7640">D7640</a>]</li></ul>
+<h2><span id="Week_202018:_2020/05/04_-_2020/05/10"></span><span class="mw-headline" id="Week_202018:_2020.2F05.2F04_-_2020.2F05.2F10">Week 202018: 2020/05/04 - 2020/05/10</span></h2>
+<p><b>Code Review</b>
+</p>
+<ul><li>Tweak the pressure/size dynamic range of Clay Strips [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7524">D7524</a>]</li>
+<li>Fix T76488: fix mask extract poll function [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7645">D7645</a>]</li>
+<li>EEVEE: Refactor of eevee_material.c [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7642">D7642</a>]</li></ul>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>OpenCL 1.2 Compilation Error [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76469">#76469</a>]</li>
+<li>GPU: Set Default Buffer Size Immediate Mode [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37182c369aa6">37182c369a</a>]</li>
+<li>Fix T76427: Background Jobs Freeze When Running Single Threaded [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7659">D7659</a>]</li>
+<li>Fix T75556: Select Emitter Object via Hair [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75556">#75556</a>]</li>
+<li>Fix T73286: Projection Painting Dense Mesh Bleed [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73286">#73286</a>]</li>
+<li>Windows Quad View Tagging [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76216">#76216</a>]</li>
+<li>Fix Assert Wireframe Sculpting [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/470cdeeae037c85d3b302e2b1cb5868e02e2bb59">470cdeeae0</a>]</li></ul>
+<p><br />
+<b>Faster Animation Playback</b>
+</p>
+<ul><li>Task: Graph Flow Task Scheduling [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7578">D7578</a>]</li>
+<li>DrawManager: Use Task Graph for mesh extraction [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76298">#76298</a>]</li></ul>
+<h2><span id="Week_202017:_2020/04/27_-_2020/05/03"></span><span class="mw-headline" id="Week_202017:_2020.2F04.2F27_-_2020.2F05.2F03">Week 202017: 2020/04/27 - 2020/05/03</span></h2>
+<p><b>Code Review</b>
+</p>
+<ul><li>Workbench: Darken inactive objects [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7516">D7516</a>]</li>
+<li>Fix T75977: Lower the merge limit in the bisect/mirror operation in symmetrize [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7495">D7495</a>]</li>
+<li>Fix T75985: Texture paint brush gradients results in wrong color [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7501">D7501</a></li>
+<li>Fix T76150: Viewport Axes not toggling correctly when 'Floor' and 'Grid' are turned off [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7568">D7568</a>]</li>
+<li>Update the default Face Set when creating Face Sets from visible [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7530">D7530</a>]</li></ul>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>LLVM ERROR: Error while trying to spill SGPR4_SGPR5 from class SReg_64: Cannot scavenge register without an emergency spill slot! [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75895">#75895</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7574">D7574</a>]</li></ul>
+<p><b>Faster Animation Playback</b>
+</p>
+<ul><li>Task: Graph Flow Task Scheduling [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7578">D7578</a>]</li>
+<li>Marked the changes we want to do in the draw manager to improve threading [<a rel="nofollow" class="external text" href="http://developer.blender.org/T76298">#76298</a>]</li></ul>
+<p><b>Next Week</b>
+</p><p>For bugfixing Viewport/GPU related bugfixing; the specific issue will be selected at the time I work on this topic based on the priority. For Sculpt/Paint/Texture module reviewing the patches that have been send in. For Faster Animation Playback continue on the using TBB for task scheduling.
+</p>
+<h2><span id="Week_202016:_2020/04/20_-_2020/04/26"></span><span class="mw-headline" id="Week_202016:_2020.2F04.2F20_-_2020.2F04.2F26">Week 202016: 2020/04/20 - 2020/04/26</span></h2>
+<p><b>Bug Fixes</b>
+</p>
+<ul><li>Debug assert is triggered when using the Knife tool [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75914">#75914</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>[<a rel="nofollow" class="external text" href="http://developer.blender.org/D7442">D7442</a>]</li></ul>
+<p><b>Animation Playback</b>
+</p>
+<ul><li>Task: Use TBB as Task Scheduler [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7475">D7475</a>]</li></ul>
+<h2><span id="Week_202015:_2020/04/13_-_2020/04/19"></span><span class="mw-headline" id="Week_202015:_2020.2F04.2F13_-_2020.2F04.2F19">Week 202015: 2020/04/13 - 2020/04/19</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Intel 10th gen Ice lake cpu extremely slow [<a rel="nofollow" class="external text" href="http://developer.blender.org/T70922">#70922</a>]
+<ul><li>GPUImmediate: Use 2 Buffers For (Un)Strict [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7421">D7421</a>]</li></ul></li>
+<li>Paint Mask Selection wireframe is broken when the mesh is subdivided by either <code>Subdivision</code> or <code>Multires</code> modifiers [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75567">#75567</a>]</li>
+<li>High World Space Cavity Samples Crash: [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75455">#75455</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Fix T75104: Update Face Sets visibility when entering Sculpt Mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7249">D7249</a>]</li>
+<li>Sculpt: New Layer Brush [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7147">D7147</a>]</li>
+<li>Fix Randomize Face Sets Colors not working in Multires [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7312">D7312</a>]</li>
+<li>Fix automasking using the wrong active face set [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7362">D7362</a>]</li>
+<li>Fix Shift-Smooth mode using wrong parameters [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7354">D7354</a>]</li>
+<li>Fix Face Sets init breaking the sculpt symmetry [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7259">D7259</a>]</li>
+<li>Missing show_face_sets checks for Multires [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7444">D7444</a>]</li>
+<li>Smooth mask using mesh vert indices direclty [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7446">D7446</a>]</li>
+<li>Surface Smooth filter not checking face sets [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7443">D7443</a>]</li></ul>
+<p><b>Animation Playback</b>
+</p>
+<ul><li>Switch Blender task scheduler to use TBB [<a rel="nofollow" class="external text" href="http://developer.blender.org/T70709">#70709</a>]</li></ul>
+<p><b>Next Week</b>
+</p><p>For bugfixing Viewport/GPU related bugfixing; the specific issue will be selected at the time I work on this topic based on the priority. For Sculpt/Paint/Texture module reviewing the patches that have been send in. For Faster Animation Playback continue on the using TBB for task scheduling.
+</p>
+<h2><span id="Week_202014:_2020/04/06_-_2020/04/12"></span><span class="mw-headline" id="Week_202014:_2020.2F04.2F06_-_2020.2F04.2F12">Week 202014: 2020/04/06 - 2020/04/12</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Edit Vertex Group Weight Overlay Doesn't show Directly [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75311">#75311</a>]</li>
+<li>Edit Vertex Group Weight Overlay Renders Too Bright [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75310">#75310</a>]</li>
+<li>Intel 10th gen Ice lake cpu extremely slow [<a rel="nofollow" class="external text" href="http://developer.blender.org/T70922">#70922</a>]
+<ul><li>Panel Drag Widget Performance [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7345">D7345</a>]</li>
+<li>GPUViewport: Use GPUBatch for viewport drawing [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7357">D7357</a>]</li></ul></li></ul>
+<p><b>Development</b>
+</p>
+<ul><li>Reviving parts of temp-tbb-task-scheduler branch. [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7385">D7385</a>]</li></ul>
+<p><b>Next Week</b>
+</p><p>Next week I want to continue with high prio issues in the GPU module. I also want to sign off the plan for the Animation Playback Performance. 
+For development I want to rebase the map-reduce patch to latest master [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/61f49db843cf5">61f49db843</a>]
+</p>
+<h2><span id="Week_202013:_2020/03/30_-_2020/04/05"></span><span class="mw-headline" id="Week_202013:_2020.2F03.2F30_-_2020.2F04.2F05">Week 202013: 2020/03/30 - 2020/04/05</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Paint Overlay Show Modified Wires and Edges [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75053">#75053</a>]</li>
+<li>Loop normal overlay drawing when generative modifier present [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57d8bde0886f">57d8bde088</a>]</li>
+<li>Center face normal overlay drawing when generative modifier present [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2d19c1f7811">a2d19c1f78</a>]</li>
+<li>Multiresolution ghost after orbiting [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74898">#74898</a>]</li>
+<li>Facing Overlay Intervenes With Selection [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73513">#73513</a>]</li>
+<li>Vertex Group Weights in Edit Mode Occludes In Front Armatures [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72688">#72688</a>]</li>
+<li>Screw Modifier Crash [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75244">#75244</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Sculpt: Add global automasking option for all brushes [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7304">D7304</a>]</li>
+<li>Fix Face Sets painting and selection precision [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7303">D7303</a>]</li>
+<li>Fix mesh boundary automasking curve falloff [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7262">D7262</a>]</li>
+<li>Update Face Sets visibility when entering Sculpt mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7249">D7249</a>]</li>
+<li>Sculpt: Face Set Boundary Automasking [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7230">D7230</a>]</li>
+<li>Multires: Implementation edge boundary automasking [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7165">D7165</a>]</li>
+<li>Sculpt: New Layer Brush [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7147">D7147</a>]</li>
+<li>Sculpt: Initial Topology Distances and Falloff support [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7059">D7059</a>]</li>
+<li>Delay viewport updates [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6269">D6269</a>]</li>
+<li>Memory leak in surface smooth [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7254">D7254</a>]</li>
+<li>EEVEE: Object Motion Blur: Initial Implementation [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7297">D7297</a>]</li></ul>
+<p><b>Indepth Issue Analysis</b>
+</p>
+<ul><li>Linked Mesh Editing Doesn't Work As Expected When Using Data Transfer Modifier [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73895">#73895</a>]</li></ul>
+<p><b>Animation Playback Performance</b>
+</p>
+<ul><li>Updated the project with comments from Brecht</li>
+<li>Discussed the project with Sergey and finalized the plan</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>Introduce <code>GHOST_Bitmap</code> that remove an incorrect dependency from GHOST to IMBuf.</li></ul>
+<p><b>Next Week</b>
+</p><p>Bug fixing GPU issues (including Edit mode Weight Overlay) and Intel 10gen issues. For animation playback I want to discuss the project with Brecht and Dalai.
+</p>
+<h2><span id="Week_202012:_2020/03/23_-_2020/03/29"></span><span class="mw-headline" id="Week_202012:_2020.2F03.2F23_-_2020.2F03.2F29">Week 202012: 2020/03/23 - 2020/03/29</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Stereo 3D Anaglyph and Interlace rendering on Intel and NVIDIA [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74964">#74964</a>]</li>
+<li>Weight Painting Overlay Invisible for In Front Objects [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74923">#74923</a>]</li>
+<li>Image Editor Channel Selector [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74586">#74586</a>]</li>
+<li>Drawing in 3D viewport changes object colors [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74782">#74782</a>]</li>
+<li>GPencil: Strokes get darker while drawing in SOLID mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75050">#75050</a>]</li>
+<li>When Playback animation in Workbench the first frame flashes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75062">#75062</a>]</li>
+<li>SubDiv: Incorrect normals loose edges [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7127">D7127</a>]</li>
+<li>Incorrect Wireframe After Applying SubSurf/MultiRes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67888">#67888</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Sculpt: Use uchar to store the sculpt mask in the GPU [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7148">D7148</a>]</li>
+<li>Fix paint cursor lagging behind the OS cursor [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7174">D7174</a>]</li>
+<li>Fix T74808: Division by 0 in Cloth brush solver with overlapping vertices [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7184">D7184</a>]</li>
+<li>Rename Edge Automasking to Boundary Automasking [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7185">D7185</a>]</li>
+<li>Fix T74899: Add Draw Face Sets brush to versioning defaults [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7199">D7199</a>]</li>
+<li>Sculpt: Face Sets Init operator [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7209">D7209</a>]</li>
+<li>Sculpt: Create Face Set by Edit Mode Selection [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7211">D7211</a>]</li>
+<li>Scultp: Face Set boundary automasking [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7230">D7230</a>]</li>
+<li>Sculpt: Pose Brush Face Sets origin mode [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7235">D7235</a>]</li>
+<li>Missing pmap when using Face Sets in the mesh filter [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7236">D7236</a>]</li>
+<li>Face sets operators not aware of SCULPT_FACE_SET_NONE [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7188">D7188</a>]</li>
+<li>Reset face set data when disabling dyntopo [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7099">D7099</a>]</li></ul>
+<p><b>Animation Playback Performance</b>
+</p><p>Analyzed the collected data from last week and added design tasks for areas that are clear that they can be improvements
+</p>
+<ul><li>DrawManager: Improved Task Scheduler [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75120">#75120</a>]</li>
+<li>ActionEditor: Keyframes Drawing [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75124">#75124</a>]</li>
+<li>ActionEditor: Add callback function to ANIM_animdata_filter [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75127">#75127</a>]</li>
+<li>Workbench: Cull before batch creation [<a rel="nofollow" class="external text" href="http://developer.blender.org/T75130">#75130</a>]</li></ul>
+<p><b>Next Week</b>
+</p><p>Still want to focus on GPU viewport issues. This release has a couple of refactorings what increased the number of issues in this area.
+</p><p>This week I looked indepth to the Drawing side optimizations and create some design tasks. Brecht van Lommel added some comments related to DependencyGraph. Next week I want to do the same exercise for depgraph.
+</p>
+<h2><span id="Week_202011:_2020/03/16_-_2020/03/22"></span><span class="mw-headline" id="Week_202011:_2020.2F03.2F16_-_2020.2F03.2F22">Week 202011: 2020/03/16 - 2020/03/22</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Stereoscopy Composite Rendering Issues: [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73931">#73931</a>]</li>
+<li>GreasePencil Stereo Render renders to one eye only [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74811">#74811</a>]</li>
+<li>Object Outline outlines hidden faces in object mode with XRAY enabled [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74643">#74643</a>]</li>
+<li>OverlayEngine: crash when using hidden faces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8cb463f4ff24f05dde858f9706a2990c6c81d817">8cb463f4ff</a></li>
+<li>In editing mode, when "in Front" is on, Annotations are not drawn on the surface [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73929">#73929</a>]</li>
+<li>Incorrect Wireframe After Applying SubSurf [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67888">#67888</a>]</li>
+<li>Incorrect Display Of RGB images with color management [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2982c9ba0a9c">2982c9ba0a</a>]</li></ul>
+<p><b>Development</b>
+</p>
+<ul><li>WindowManager: Remove Stereo Offscreen [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7153">D7153</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Voxel Remesh: Edit Voxel Size operator [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6449">D6449</a>]</li>
+<li>Update viewport rotation origin when changing Face Set visibility [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7137">D7137</a>]</li></ul>
+<p><b>Animation Playback Performance</b>
+</p>
+<ul><li>Analysis performance several Spring production scenes <a href="../projects/FasterAnimationPlayback/Spring_Scene_Analysis.html" title="User:Jbakker/projects/FasterAnimationPlayback/Spring Scene Analysis"> Spring Scene Analysis</a></li></ul>
+<p><b>Next Week</b>
+</p><p>This week I saw some GPU/Drawing issues in the area of painting modes. And the stereo fix I did last week seems only to work on AMD GPUs. I want to focus on that during my bug tracking days.
+</p><p>For the animation playback performance project we should make a selection of files, check with the artists what files reflects what they need (I expect that some files are tailored to get them working, are smoke simulations important for animation). Create tasks what we found out during the analysis we did this week and go one level deeper and detect actual parts of the code we want to improve during the project.
+</p>
+<h2><span id="Week_202010:_2020/03/09_-_2020/03/15"></span><span class="mw-headline" id="Week_202010:_2020.2F03.2F09_-_2020.2F03.2F15">Week 202010: 2020/03/09 - 2020/03/15</span></h2>
+<p><b>Animation Playback Performance</b>
+</p><p>I did some research on areas where we could improve. And found some low hanging fruit.
+</p>
+<ul><li>Increased Performance Of the Cage Deform Modifier. In Daily Dweebs I measures an improvement of 25% of overall playback performance improvements [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7132">D7132</a>]</li>
+<li>Use a single taskpool for subsurf tasks. [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7128">D7128</a>]</li></ul>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>View transform for camera background images [<a rel="nofollow" class="external text" href="http://developer.blender.org/T67832">#67832</a>]</li>
+<li>Viewport Background Color visible in Material Preview Mode [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/982b498c22a3">982b498c22</a>]</li>
+<li>SubDiv: Incorrect normals loose edges [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7127">D7127</a>]</li></ul>
+<p><b>Development</b>
+</p>
+<ul><li>DrawManager: Pack Draw State Bits [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7088">D7088</a>]</li></ul>
+<p><br />
+<b>Code Review</b>
+</p>
+<ul><li>Workbench simplification refactor [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7060">D7060</a>]</li>
+<li>Replace octahedron reflection probe by cubemap array [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7066">D7066</a>]</li>
+<li>Many Smaller Tickets [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6449">D6449</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7117">D7117</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7111">D7111</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7109">D7109</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7097">D7097</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7123">D7123</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7126">D7126</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7125">D7125</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D7122">D7122</a>]</li></ul>
+<p>Next week I want to focus on GPU Viewport bugs. For animation playback performance I want get more familiar with the current OpenSubDiv implementation.
+</p>
+<h2><span id="Week_202009:_2020/03/02_-_2020/03/08"></span><span class="mw-headline" id="Week_202009:_2020.2F03.2F02_-_2020.2F03.2F08">Week 202009: 2020/03/02 - 2020/03/08</span></h2>
+<p><b>Bug Tracker</b>
+</p>
+<ul><li>Stereoscopy Composite Rendering Issues: [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73931">#73931</a>]</li>
+<li>Remove Assert With Look Dev Blurry background [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74362">#74362</a>]</li>
+<li>HDRI preview spheres appear in render passes and reflections [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74392">#74392</a>]</li>
+<li>GPUOffscreen Color Management [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74299">#74299</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>Slowdown on kaby lake intel processors</li></ul>
+<p><b>Regular Development</b>
+</p>
+<ul><li>EEVEE: Added support for Shader AOVs [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7010">D7010</a>]</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>Added enumerations to the code base [<a rel="nofollow" class="external text" href="http://developer.blender.org/D7046">D7046</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63bb2007d88b">63bb2007d8</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79558a581de7">79558a581d</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/297261eb906c">297261eb90</a>]</li>
+<li>Use struct assignment [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6aa349c6879">e6aa349c68</a>]</li></ul>
+<p>My plan for upcoming week is bug fixing high prio issues related to GPU drawing and code reviewing the projects that still need to land in Blender 2.83
+</p>
+<h2><span id="Week_202008:_2020/02/24_-_2020/03/01"></span><span class="mw-headline" id="Week_202008:_2020.2F02.2F24_-_2020.2F03.2F01">Week 202008: 2020/02/24 - 2020/03/01</span></h2>
+<p><b>Bug Tracker</b>
+</p>
+<ul><li>Stereoscopy Composite Rendering Issues: [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73931">#73931</a>]</li>
+<li>Preview render in Cycles becomes yellow tinted when cursor is on the file browser, [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74119">#74119</a>]</li>
+<li>Eevee Viewport Shading Render Passes have problems once the saturation of the material becomes 1 [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74063">#74063</a>]</li>
+<li>EEVEE: Switch To Combined Render Pass when a Render Pass isnt Available Anymore in the Viewport [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74254">#74254</a>]</li>
+<li>EEVEE: Film Transparency and Bloom [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74229">#74229</a>]</li></ul>
+<p><b>Investigation</b>
+</p>
+<ul><li>EEVEE: Shadow Pass Visible on Backsided geometry [<a rel="nofollow" class="external text" href="http://developer.blender.org/T74110">#74110</a>]</li>
+<li>Slowdown on kaby lake intel processors</li></ul>
+<p><b>Patch Review</b>
+</p>
+<ul><li>Lookdev: Add support for partially blurred background [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6895">D6895</a>]</li></ul>
+<h2><span id="Week_202007:_2020/02/17_-_2020/02/23"></span><span class="mw-headline" id="Week_202007:_2020.2F02.2F17_-_2020.2F02.2F23">Week 202007: 2020/02/17 - 2020/02/23</span></h2>
+<p><b>Investigation</b>
+</p>
+<ul><li>EEVEE: Screen Space Refraction Objects Not Rendering In Final Render when Subsurface Render Pass Enabled  [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73913">#73913</a>]</li></ul>
+<p><b>Code Cleanup</b>
+</p>
+<ul><li>EEVEE: RenderPasses Code Cleanup [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6875">D6875</a>]</li></ul>
+<p><b>Feature Development</b>
+</p>
+<ul><li>EEVEE: RenderPasses Finalized and merge to master [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72007">#72007</a>]</li>
+<li>Tests: Added render tests for render passes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73925">#73925</a>]</li></ul>
+<h2><span id="Week_202006:_2020/02/10_-_2020/02/16"></span><span class="mw-headline" id="Week_202006:_2020.2F02.2F10_-_2020.2F02.2F16">Week 202006: 2020/02/10 - 2020/02/16</span></h2>
+<p><b>Bug Fixing</b>
+</p>
+<ul><li>Normals Overlay Hidden Part Of Mesh [<a rel="nofollow" class="external text" href="http://developer.blender.org/T73518">#73518</a>]</li></ul>
+<p><b>Code Review</b>
+</p>
+<ul><li>Color management improvements in Draw Manager [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/804e90b42d72">804e90b42d</a>]</li></ul>
+<p><b>Investigations 2.82 release issues</b>
+</p>
+<ul><li>UDIM Zoom in/out shows different textures</li>
+<li>Alpha channel textures in workbench</li></ul>
+<p><b>Blender 2.83 Development</b>
+</p>
+<ul><li>EEVEE render passes [<a rel="nofollow" class="external text" href="http://developer.blender.org/T72007">#72007</a>]:
+<ul><li>Merge transmission pass into the diffuse pass</li>
+<li>Merge Refraction and reflection passes into the glossy pass</li>
+<li>Fixed issue where pricipled bsdf clear coating bled into multiple passes</li>
+<li>Using UBO to optimize the drawing performance</li>
+<li>Added support objects that have no node-based materials setup</li>
+<li>End user manual [<a rel="nofollow" class="external text" href="http://developer.blender.org/D6832">D6832</a>]</li>
+<li>Developer documentation</li></ul></li></ul>
+<h2><span id="Week_202005:_2020/02/03_-_2020/02/09"></span><span class="mw-headline" id="Week_202005:_2020.2F02.2F03_-_2020.2F02.2F09">Week 202005: 2020/02/03 - 2020/02/09</span></h2>
+<p><b>Bug Triaging &amp; Fixing</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/T73095">T73095</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/T73559">T73559</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/T73547">T73547</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/T72733">T72733</a></li></ul>
+<p><b>Blender 2.83 development</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/T72007">T72007</a>: First code review pass</li></ul>
+<h2><span id="Week_202005:_2020/01/27_-_2020/02/02"></span><span class="mw-headline" id="Week_202005:_2020.2F01.2F27_-_2020.2F02.2F02">Week 202005: 2020/01/27 - 2020/02/02</span></h2>
+<p>This week want to meet and create an initial plan for the Animation Playback Speed. For the rest tracker curfew.
+</p>
+<ul><li>EEVEE: Added a shadow pass <a rel="nofollow" class="external text" href="https://developer.blender.org/T72007">T72007</a></li>
+<li>Render Output can be used as camera background image <a rel="nofollow" class="external text" href="https://developer.blender.org/T73188">T73188</a></li>
+<li>Faster Animation Playback design <a rel="nofollow" class="external text" href="https://developer.blender.org/T68908">T68908</a></li>
+<li>Clean up API removed unused bpy parameters from invoke_popup and invoke_prop_dialog <a rel="nofollow" class="external text" href="https://developer.blender.org/T68749">T68749</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Week_202004:_2020/01/20_-_2020/01/26"></span><span class="mw-headline" id="Week_202004:_2020.2F01.2F20_-_2020.2F01.2F26">Week 202004: 2020/01/20 - 2020/01/26</span></h2>
+<ul><li>Color picker Image Editor Crash <a rel="nofollow" class="external text" href="https://developer.blender.org/T73233">T73233</a></li>
+<li>EEVEE Indirect Baking Crash <a rel="nofollow" class="external text" href="https://developer.blender.org/T73251">T73251</a></li>
+<li>UV Sculpt Operator Crash <a rel="nofollow" class="external text" href="https://developer.blender.org/T73224">T73224</a></li>
+<li>EEVEE Renderlayers <a rel="nofollow" class="external text" href="https://developer.blender.org/T72007">T72007</a>
+<ul><li>Added support for hair geometry</li>
+<li>Extract the light passes from the final component pass (similar to cycles)</li></ul></li></ul>
+<h2><span id="Week_202003:_2020/01/13_-_2020/01/19"></span><span class="mw-headline" id="Week_202003:_2020.2F01.2F13_-_2020.2F01.2F19">Week 202003: 2020/01/13 - 2020/01/19</span></h2>
+<ul><li>EEVEE Softshadows not rendering during Viewport Render <a rel="nofollow" class="external text" href="https://developer.blender.org/T71154">T71154</a></li>
+<li>EEVEE + UV Edit Unused Map <a rel="nofollow" class="external text" href="https://developer.blender.org/T72905">T72905</a></li>
+<li>Viewport Split Quad View Region Crash <a rel="nofollow" class="external text" href="https://developer.blender.org/T72200">T72200</a></li>
+<li>Viewport Workbench Render Direct from Sculpt Mode Crash <a rel="nofollow" class="external text" href="https://developer.blender.org/T72063">T72063</a></li>
+<li>Sculptmode Wireframe Coloring <a rel="nofollow" class="external text" href="https://developer.blender.org/T67305">T67305</a></li>
+<li>Select Boundary Loop <a rel="nofollow" class="external text" href="https://developer.blender.org/T72250">T72250</a></li>
+<li>Studiolights Specular were not visible until reload <a rel="nofollow" class="external text" href="https://developer.blender.org/T73069">T73069</a></li></ul>
+<ul><li>Fixed crash in Retopology Overlay <a rel="nofollow" class="external text" href="https://developer.blender.org/T70267">T70267</a></li>
+<li>EEVEE Renderlayers <a rel="nofollow" class="external text" href="https://developer.blender.org/T72007">T72007</a>
+<ul><li>Stability in the viewport</li>
+<li>Implemented renderpasses for the Specular Shader</li>
+<li>Added reflection pass</li></ul></li></ul>
+<p>Next week I will continue with fixing issues in Blender 2.82 and continue working on the EEVEE renderpasses for Blender 2.83
+</p>
+<h2><span id="Week_202002:_2020/01/06_-_2020/01/12"></span><span class="mw-headline" id="Week_202002:_2020.2F01.2F06_-_2020.2F01.2F12">Week 202002: 2020/01/06 - 2020/01/12</span></h2>
+<p>This week I will spend a most of my time in the bug tracker + Code review. Besides that I did some small tasks
+</p>
+<ul><li>Fixed Sculpt Brush Text Color <a rel="nofollow" class="external text" href="https://developer.blender.org/T71491">T71491</a></li>
+<li>Research how to do better color mangement in the window manager.</li>
+<li>Updated Retopology Overlay patch to overlay engine <a rel="nofollow" class="external text" href="https://developer.blender.org/T70267">T70267</a></li>
+<li>Added Volumetrics Renderpass for EEVEE <a rel="nofollow" class="external text" href="https://developer.blender.org/T72007">T72007</a></li></ul>
+<p>Next week I will spend most my time in the bug tracker fixing viewport related issues. If there is time left want to continue on the color management research
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112120607
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.442 seconds
+Real time usage: 0.449 seconds
+Preprocessor visited node count: 3837/1000000
+Preprocessor generated node count: 8713/1000000
+Post‐expand include size: 22312/2097152 bytes
+Template argument size: 6142/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  189.398      1 -total
+ 31.04%   58.780     21 Template:GitCommit
+ 18.15%   34.382    175 Template:BugReport
+ 17.76%   33.633    175 Template:PhabDiff
+  9.65%   18.281     22 Template:GitCommit/PhabricatorParse
+  7.52%   14.239     20 Template:GitCommit/PhabricatorParseDeprecated
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4892-0!canonical and timestamp 20240112120607 and revision id 21254
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;oldid=21254">https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;oldid=21254</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 18 December 2020, at 15:43.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Jbakker/reports/2020.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Jbakker/reports/2020" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Jbakker.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Jbakker.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Jbakker.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;oldid=21254" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Jbakker/reports/2020&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.442","walltime":"0.449","ppvisitednodes":{"value":3837,"limit":1000000},"ppgeneratednodes":{"value":8713,"limit":1000000},"postexpandincludesize":{"value":22312,"limit":2097152},"templateargumentsize":{"value":6142,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  189.398      1 -total"," 31.04%   58.780     21 Template:GitCommit"," 18.15%   34.382    175 Template:BugReport"," 17.76%   33.633    175 Template:PhabDiff","  9.65%   18.281     22 Template:GitCommit/PhabricatorParse","  7.52%   14.239     20 Template:GitCommit/PhabricatorParseDeprecated"]},"cachereport":{"timestamp":"20240112120607","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":501});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844545883a910bae","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

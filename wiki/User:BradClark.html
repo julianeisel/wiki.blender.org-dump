@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:BradClark - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:BradClark","wgTitle":"BradClark","wgCurRevisionId":36345,"wgRevisionId":36345,"wgArticleId":6797,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:BradClark","wgRelevantArticleId":6797,"wgRequestId":"3f719736b155770e6bcb284b","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"BradClark","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_BradClark rootpage-User_BradClark skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="./User:BradClark.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ABradClark" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="Contact.html">Communication</a></li><li id="n-Modules"><a href="Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="./Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="./User:BradClark.html#August_7th-11th"><span class="tocnumber">1</span> <span class="toctext">August 7th-11th</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="./User:BradClark.html#August_1st-4th"><span class="tocnumber">2</span> <span class="toctext">August 1st-4th</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="./User:BradClark.html#July_17th-19th"><span class="tocnumber">3</span> <span class="toctext">July 17th-19th</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="./User:BradClark.html#July_10th-14th"><span class="tocnumber">4</span> <span class="toctext">July 10th-14th</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="./User:BradClark.html#July_3rd-7th"><span class="tocnumber">5</span> <span class="toctext">July 3rd-7th</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="./User:BradClark.html#Jun_26th-30th"><span class="tocnumber">6</span> <span class="toctext">Jun 26th-30th</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="./User:BradClark.html#June_19th-23rd"><span class="tocnumber">7</span> <span class="toctext">June 19th-23rd</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="./User:BradClark.html#June_12th-16th"><span class="tocnumber">8</span> <span class="toctext">June 12th-16th</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="./User:BradClark.html#June_5th-9th"><span class="tocnumber">9</span> <span class="toctext">June 5th-9th</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="./User:BradClark.html#May_29_-_June_2nd"><span class="tocnumber">10</span> <span class="toctext">May 29 - June 2nd</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="./User:BradClark.html#May_22_-_26"><span class="tocnumber">11</span> <span class="toctext">May 22 - 26</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="./User:BradClark.html#May_11_-_19"><span class="tocnumber">12</span> <span class="toctext">May 11 - 19</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:BradClark</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="August_7th-11th">August 7th-11th</span></h2>
+<p>Work on wrapping up animation design document work for review and feedback
+add in wirframes and mock ups
+Meet with Nathan to review document first pass and have feedback notes to address on how to clean up the document flow to allow wider feedback and review.
+...Contract wrapping up for this push of the project but I am working on final deliverable the rest of this month with more open community input.
+</p>
+<h2><span class="mw-headline" id="August_1st-4th">August 1st-4th</span></h2>
+<p>Catch up with things I missed during vacation
+Continue on working on final document assembly for design goals for Animation 2025
+Plan meetings with Animation Module this week
+Check in /test exiting 4.0 targets for Animation tools and fixes for NLA
+</p><p>UI wireframe mockups for consolidated action editor and user story workflow process examples
+I had planed to get further but it was better time spent taking and moving my notes and rough documents and start organize them to a more public facing document for review. This took a large part of my time a the end of the week and to get ready to break down the tools more and wireframe up the things that need extra visulization.
+</p>
+<h2><span class="mw-headline" id="July_17th-19th">July 17th-19th</span></h2>
+<p>This week is a short week then I am pausing work until Aug. 1st.
+Monday was working extra to build out a wire and research what features we would need in a combined UI for dope sheet/action editor and NLA updgrade.
+Meeting with Nathan to go over status updates and talk about next steps about rig nodes and constraints
+"Work on documentation for core design documents, getting heads in place and notes to turn into more clear descriptions of areas of focus.
+</p>
+<ul><li>update mockup UI more layers. Step by step editor mockup breakdown.</li>
+<li>step by step mockup story flow</li>
+<li>Muli-strip summary when many strips are open/active</li>
+<li>Metastrip filtering and expansion with clean</li>
+<li>Layers/vs strips summary display</li>
+<li>Layer only</li>
+<li>Layer only + Strips</li>
+<li>Nates view:) on what he wants to see</li>
+<li>Core model outlined with user workflow examples</li>
+<li>One character no layers</li>
+<li>Animator with Mocap/Mix</li>
+<li>Cinematic animation..view</li>
+<li>Rig Nodes-constraints-</li>
+<li>Nates 2025 task “what the heck does this look”</li>
+<li>Animation level constraints</li>
+<li>Constraints defined in the animation block not scene “rigging level”</li>
+<li>Constraints as offsets-delta constraints on layers</li>
+<li>Or</li>
+<li>Constraints as interpolators, alone complicated</li>
+<li>Or</li>
+<li>Constraints as attributes of Strips****best of both?</li>
+<li>Strip parameter space, control rig nodes controlling animation over a section of time for the strip</li>
+<li>Strip S/E transition gaps</li>
+<li>Layer one regular animation</li>
+<li>Layer two, clip frame 10-20, for just one object, that says it is connected while pulling the values from the base layer</li>
+<li>Source filmmaker -constraint space rebake or update procedurally retargetale.</li>
+<li>What does a constraint system strip do when you retarget</li>
+<li>Simulation layers or strips</li>
+<li>Means binding tightly relationships instead of just simple curve in an action</li>
+<li>Tension between animation block fancy control vs. old simple action</li></ul>
+<p>"
+</p><p>Investigated speed issues with the current editors and found quite a few issues with the display and playback and interaction speed when the dopesheet is active and the more it displays the slower it gets but the graph editor doesn't have any slow down issues.
+</p>
+<h2><span class="mw-headline" id="July_10th-14th">July 10th-14th</span></h2>
+<ul><li>Working on organizing my Animation "Flow State" design document based on the workshop</li>
+<li>Working on formatting my work based on the Blender design guidelines</li>
+<li>Adding some quick reviews of the Unreal and Omniverse retarget system</li>
+<li>Design document work for the new streamline animation editor (Action editor + dopesheet)</li>
+<li>Review Blog post notes from the Animation Workshop</li>
+<li>Follow up with NLA fixes and test 4.0 animation features like butterworth filter</li>
+<li>Work on review and improve the documentation for the current tools and workflows that exist but are unknown like Time slide feature of translate tool in dopesheet</li>
+<li>Animation Module meeting and patch review.</li></ul>
+<h2><span class="mw-headline" id="July_3rd-7th">July 3rd-7th</span></h2>
+<ol><li>Back from Animation Workshop and spent time organizing and reviewing notes from the week.</li>
+<li>Starting to narrow down the focus and this week will apply the new animation system language to my notes on the 2025 system design doc.</li>
+<li>Going to try and get the main format of the document outlined and start breaking things into sections and in some areas build out deeper design proposals like for the Bake animation system as this is something that is important for 4.0 and beyond.</li>
+<li>Will setup a weekly meeting to go over everything with the Animation Module owners once the main outline is ready and stubbed in.</li>
+<li>I will be away from computer work on family vacation in a few weeks and I want to get this all set for when I come back I can get eyes on it.</li></ol>
+<p>Coming out of the workshop the goals feel achievable for a new foundation of the animation system that we can build on going forward providing a foundation for workflows and tool flexibility that is isolated into the armature that creates a lot of workarounds.
+</p><p>7-6
+</p>
+<ol><li>Animation Module Meeting</li></ol>
+<h2><span class="mw-headline" id="Jun_26th-30th">Jun 26th-30th</span></h2>
+<p>All day on site working through the animation mode details with use stories and workout out needs and use cases.
+Just going to note that due to the workshop I am not updating much here right now.
+</p>
+<h2><span class="mw-headline" id="June_19th-23rd">June 19th-23rd</span></h2>
+<ul><li>Start design document for Bake Animation and get feedback from addon creators that use Bake animation/action as a core tool or have had to work around it.</li>
+<li>Meeting with Nathan and Sybren about animation armature improvements and the Action data model as well as some other discussions around the timeline for features.</li>
+<li>Animation hands on testing to work out some ideas and testing the improvements we have been making in the Module.</li>
+<li>Animation Module meeting and follow up prep for Animation Module in person meeting</li>
+<li>Feedback and refinement of improved Bake animation proposal needs.</li>
+<li>get ready to fly to Animation work shop</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_12th-16th">June 12th-16th</span></h2>
+<p>Larger follow up meeting with Nate to work on more detailed plans about armatures, actions and user stories.
+</p><p>Deep dive into what we need Bake action to do that it doesn't do now and doesn't have control over.
+...continued reviewing and understanding more aspects of the past workflow including looking at the IPO editor and it's keymode and editable ghosts back in 2.3 
+</p><p>Benchmark goal for next gen animation tools
+How to Animate Your 3D Characters Fast
+CG Boost  (With 5 minutes of animation and 25 minutes of complex setups and workarounds on what we need to fix)
+If this isn't the best advertisement for having RigNodes as a core part of the rigging toolset I can't think of a better one,  video here <a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=sTOgDe3EmQ0">https://www.youtube.com/watch?v=sTOgDe3EmQ0</a>
+</p><p>Started working on refining ideas from a week of helping studio animators work in Blender and tying to look at core problems vs. one off tools but this is just a rough brain dump and some quick ordering of priorities that is still very much WIP
+</p><p>The higher level goals for the animation system
+</p>
+<ul><li>Faster animation creation speed. This will come from both from improved software performance around rigging and animation and speed and effortless posing of characters including interaction with self, others, props and environment through separating posing from interpolation and high level manipulators exposing direct access to hidden properties.</li>
+<li>A New Animation Data Model to support a flexible workflow when armatures, objects and make sure that control over reuse of the action data is in the animator's hands and supports scene level multi character and character to environment and vfx interactions.</li>
+<li>Create entry points to grow and expand art assistance systems like AI, Physics, Machine Learning and other sources of animation “solving” can be accessed and blended directly with hand keyframed animation.</li>
+<li>The last upgrade allowed Blender to have “everything is animateable” but the rest of the software has to support better clarity and control over it, allowing for controlling multiple things animating all at once. Better keyset control and less one at a time or hidden away keysets</li>
+<li>NLA and Action Node system to view and offer different types of control and visual representation of animation to the animator. Give them control to filter animation, replacing constraints and fcurve modifiers with flexible tools and faster systems  allowing motion to be explored and Inspire exploration with flexibility and powerful enough standard tools to allow animators to explore as Grease Pencil and Geometry nodes have inspired the community to create amazing work faster than ever before.</li>
+<li>Global animation track and layer system to allow an easy to use workflow that isn't clip/NLA dependent <a rel="nofollow" class="external free" href="Modules/Animation-Rigging.html">https://wiki.blender.org/wiki/Modules/Animation-Rigging</a></li></ul>
+<p>/Bigger_Projects#Animation_Layers
+</p>
+<ul><li>Also digging back into my own short film issues that I hit and still working on to identify workflow areas of interest</li>
+<li>Short film breakdown needs and issues:</li>
+<li>Shared working files between two remote artists working with synced online sharing folders **control over file paths for linking isn’t easy or clear</li>
+<li>2 Character rig files - linked</li>
+<li>Environment - linked</li>
+<li>Camera Layout animation file Camera rig animation across 3 scenes</li>
+<li>Scene 1</li>
+<li>Scene 2</li>
+<li>Scene 3</li>
+<li>NLA is being used to offset and manage animation in time across all scenes</li>
+<li>Character and Environment are overridden for animation</li>
+<li>Character 1 and 2 have hair, cloth, that needs physics animation</li>
+<li>Scene has physics snow/trees moving animation</li>
+<li>Characters interact with environment (Footprints in snow, pushing branches</li>
+<li>Characters interact with each other, including one character touching fur of the other</li>
+<li>Character 1 (snow man)</li>
+<li>Shape keys on face, face rig is separate armature animated at the same time as body. *I wanted to be able to upgrade the face rig without messing with the body rig and animation</li>
+<li>Cloth cache doesn’t always look right and I can’t edit or bake the mesh (*Animall? Geo nodes shapekeys workaround?)</li>
+<li>Face rig shapes aren’t final and wanting to work on shape keys in the scene without having to go back to the source file and possibly break something (I lost animation before doing this and didn’t know it)</li>
+<li>Character 2 (fox)</li>
+<li>Fur that needs to interact with environment and other character hands</li>
+<li>Feet need to push into snow and work with particles.</li>
+<li>Runcycle and other animations for the fox were done isolated and will be brought in to assemble and edit and polish</li>
+<li>NLA but NLA can’t offset when looping</li>
+<li>NLA and Actions are hard to create new for each scene, they live across all scenes depending on how you setup your characters.</li></ul>
+<p>Friday meeting review of the animation action system exploration with Nathan and Sybren and review Motion Graphics Needs for animation system.
+</p>
+<h2><span class="mw-headline" id="June_5th-9th">June 5th-9th</span></h2>
+<ul><li>Test some ideas and continue to refine my notes from last weeks meetings, working on slides and possible workflow ideas for animation nodes/NLA/hybrid systems</li>
+<li>Look over the current tools and improvements for dense data editing with new filters and timing tools</li>
+<li>Prep for meeting with Nate today on the 6th.</li></ul>
+<p>6th
+</p>
+<ul><li>Meet with Nate and Sybren to go over user case/animation system needs and requirements</li>
+<li>Homework for next meeting:</li></ul>
+<pre>   Moving capabilities from armatures to objects. And changes to armatures. "Why can't I use this on an object?"
+   User stories as requirements.
+   What stressors are we trying to solve?
+</pre>
+<ul><li>What this comes down to is, if everything can be animated in Blender, why are the animation tools only for pose mode character animators, why is everyone else using animation tools and doing work in Blender with Motion locked out of having copy/paste poses, animation blending tools for keyframes, pose libraries that work for a collection of objects/values/attributes setting etc..</li>
+<li>Vertical slice of moving just "blend to neighbor or layers" out of the armature into the scene level of Blender and what issues, questions, work does that create?</li></ul>
+<ol><li>If we move and allow the use of the blend slider from the pose mode to work on any animated node, what does this do to selection vs. active?</li>
+<li>What does this do to undo?</li>
+<li>What happens if we do copy /paste pose mirror for objects that don't have a left right? or a rest pose? We will need to mark "center" to mirror around and have copy/paste pose work for global values and be able to quickly define a pivot for them to all work.</li></ol>
+<p>7th-8th
+</p>
+<ul><li>Worked on and wrote up a Design vision plan outline to start putting my ideas into concrete actions required.</li>
+<li>Tested some animation module fixes, features and current workflow issues to help understand what we can focus on now as quick fixes vs. longer term goals.</li>
+<li>The pressure of 4.0 deadlines and moving quickly to tear out Armature layers.</li>
+<li>I have about 23 more blog posts to read and digest on Aligoriths Lair to understand the choices and thoughts that got us to the system we have now and to try not to throw out or misunderstand the current systems while also knowing that it will be required to remove and change what we need to to improve it.</li></ul>
+<p>Balance comes from understanding the past and to not throw out the massive amount of work that has gone into testing, using and improving the existing system..
+and I am learning about tools and features that I would have never discovered on my own or for a long time from now.
+</p><p>Animation Module meeting today- Two of my "babies" Parent space transformation tools and butterworth filtering making progress and fixes as well as more design information on single Actions that can contain and map more than one objects animation.
+</p>
+<h2><span class="mw-headline" id="May_29_-_June_2nd">May 29 - June 2nd</span></h2>
+<ul><li>Working on setting up user personas for animators to help guide features/workflow tools</li>
+<li>Created a small slide show example for meeting with Nathan V. in the morning to better show a unified animation editing workflow with the File level action/scene level track-object level animation filtering always being active so you are never outside a clip and it is easy to edit clip contents.</li>
+<li>Having animation be able to have an Animation Node modifer tree to process and procedualy adjust animation like Geo-nodes now and write back to the clip as output for blending and layering in the NLA.</li></ul>
+<p>30th
+</p>
+<ul><li>Meet with Nathan to review actionable items for Animation design.</li></ul>
+<p>Where does the animation data live and how do we manage/control what happens when a keyframe is created (what should get a key) and where that data live
+Lots of notes and some animation storage research and looking at other tools/systems for concepts.
+</p>
+<ul><li>Talked about user personas for animator types and larger goals with control over the entire process of importing, creating, exporting animation data.</li></ul>
+<p>June 1st
+</p>
+<ul><li>another Nate meeting to talk about animation use cases and keying sets as an existing way to map what gets keyed where</li>
+<li>Module meeting</li>
+<li>After module meeting to talk through pose library workflow issues and bugs</li>
+<li>UI discussion about interactive feedback needed in the NLA but using the VSE as the use case since it has more features currently.</li>
+<li>Short review of the <a rel="nofollow" class="external free" href="https://code.blender.org/2023/06/node-tools-interface-and-baking/#overview">https://code.blender.org/2023/06/node-tools-interface-and-baking/#overview</a> and a short discussion about what possible cross over having animation filter nodes be able to process animation data and from and export back to NLA clips for example like geo-node modifers.</li></ul>
+<h2><span class="mw-headline" id="May_22_-_26">May 22 - 26</span></h2>
+<p>22nd
+</p>
+<ul><li>Meet with Jason Schleifer to gather some animator feedback on blocking issues with current animation layer system/NLA</li>
+<li>Start rewriting/rough draft of animation system goals proposal to send to Ton.</li>
+<li>Continued reading and doing design sketches going over Aligoriths notes ( I have 12 tabs open on his site)</li>
+<li>Explore some addons and look over the Blender studio workflows as research</li>
+<li class="mw-empty-elt"></li></ul>
+<p>23rd
+</p>
+<ul><li>Meeting with Nathan V. and Dr. Sybren to pitch my overall direction and current rough draft vision for the animation system.</li>
+<li>Looking over IK systems and other interaction issues that stand in the way of faster posing.</li>
+<li>Still reading over and making notes on Aligoriths pose brush and ideas on how the NLA was supposed to work, keying sets, pose brush to replace the need /want for a 3d edit motion path and more</li></ul>
+<p><br />
+WIP: A way forward
+</p><p>What came from my meetings so far and the rough outline is a goal of clarity and consistency in the animation system and tools that build trust for the animators. 
+They want control and predictability from the tools and the features we build. Having a rig and tools that don't loose data, having UI that doesn't hide away where keyframes are stored and presetting up an Action system to allow for the ability to work sparse, bake dense data or add animation layers and modifiers and work in a non-linear view all is moved forward and is always clear where you are in the creative process.. allowing animators to feel like "I created this, not I ended up with this" 
+We talked about modeling and time topology and sub-division sculpting and re-topology along with code diff/merge control that is missing from animation...bringing us to the other Major part of the forward looking needs of the animation system! Visualization and editing tools that allow you to know and control the final pose (clarity) and being able to edit it in view and reverse solve back to all the places/layers/data buckets that need to be updated to fix the temporal issues. Just like the geometry nodes and code compare let you see what changed, what is influencing the final result our animation system and tools should also. 
+With a Non-linear action manager as the core and heart of the system where you are always in a clip to tools that let you extract and fit and change animation and merge it without loss of important hand edited work from animators to better in view feedback and manipulators to always being able to control the remap/retarget of actions to different rigs or manage rig changes without losing performances... we build trust through these tools and in that the animators can get predictable results that they control and speed up the amount of final animation.
+</p>
+<ul><li>3 hour meeting with Nate to talk over action storage and management, if clarity in the UI and having the core timeline /animation system be IN the NLA state the whole time and evaluate and talk through how other animation management systems seem to work and what we want to keep /what is good about the current action system. We have a follow up meeting to present more concrete examples of what we can start working on beyond just talking about what is need...time to show it.</li></ul>
+<ul><li>I am starting the documentation of the current issue and making am mock up of what it could be like.</li></ul>
+<h2><span class="mw-headline" id="May_11_-_19">May 11 - 19</span></h2>
+<p>Hi, Brad here,Not new, but new here. I am coming on part time  as an animation product designer
+Last week and this one, I have been exploring and getting setup.
+</p>
+<ul><li>On boarding: Getting accounts setup and reviewing process documents.</li>
+<li>Working on testing and finishing up Animation Module NLA tests and exploring some UI tests getting ready for 3.6 release and 4.0 work.</li>
+<li>Reading over the Action proposal from Nathan <a rel="nofollow" class="external free" href="https://perm.cessen.com/2023/animation_module/2023_05_04_animation_data_model/#/13">https://perm.cessen.com/2023/animation_module/2023_05_04_animation_data_model/#/13</a></li>
+<li>Watching Human Rigging from Nathan to review and confirm my current understanding of past workflow design</li>
+<li>Thinking/notes around rapid editing of dense animation data- Animation as Time Topology and the relationship between sculpt/retopo and Animation keyframe creation and editing as a concept that started while I was at the Blender Conference.</li></ul>
+<p>Reading through the Animation System roadmap 2015 and Aligoriths notes on all this 
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://code.blender.org/2015/03/animation-system-roadmap-2015-edition/">https://code.blender.org/2015/03/animation-system-roadmap-2015-edition/</a></li>
+<li><a rel="nofollow" class="external free" href="https://aligorith.blogspot.com/2018/03/thoughts-about-geometry-editing-ux.html">https://aligorith.blogspot.com/2018/03/thoughts-about-geometry-editing-ux.html</a></li>
+<li><a rel="nofollow" class="external free" href="https://aligorith.blogspot.com/2018/04/future-of-animation-tools-some-wip.html">https://aligorith.blogspot.com/2018/04/future-of-animation-tools-some-wip.html</a></li>
+<li><a rel="nofollow" class="external free" href="https://aligorith.blogspot.com/2015/03/animation-system-roadmap.html">https://aligorith.blogspot.com/2015/03/animation-system-roadmap.html</a></li>
+<li><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=kEJFAsbzcmk&amp;t=1306s4">https://www.youtube.com/watch?v=kEJFAsbzcmk&amp;t=1306s4</a></li></ul>
+<p>Overall these two weeks have been a deep dive to gather and understand the HOW/WHY things are the way they are and what I can learn from it as I shape my thinking and work to balance the reality of what we have to work with and what needs to be done with what would be nice some day and stay realistic in the goals and ideas for the future of Animation in Blender.
+More to do.
+</p><p>May 19th-
+</p>
+<ul><li>Meeting with Nathan Vegdahl to talk over ideas and understand more about the Action update proposal</li>
+<li>Talk through ideas and to get on the same page about how this impacts the rest of blender, Overrides, NLA and animation workflow and to help me get a grasp on how to start processing all the new information from the week into my own view/take/vision.</li>
+<li>More notes on moving upfront the NLA/Layer workflow/Mixing Animaide style animation offset with High level Curve editing and having it all be core to the timeline/animation process vs. a thing you move data in and out of.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120358
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.027 seconds
+Real time usage: 0.026 seconds
+Preprocessor visited node count: 46/1000000
+Preprocessor generated node count: 52/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6797-0!canonical and timestamp 20240112120358 and revision id 36345
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;oldid=36345">https://wiki.blender.org/w/index.php?title=User:BradClark&amp;oldid=36345</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 15 August 2023, at 02:52.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:BradClark" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:BradClark" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="./Special:Contributions/BradClark.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="./Special:Log/BradClark.html">Logs</a></li><li id="t-userrights"><a href="./Special:UserRights/BradClark.html">View user groups</a></li><li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;oldid=36345" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:BradClark&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="./Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.027","walltime":"0.026","ppvisitednodes":{"value":46,"limit":1000000},"ppgeneratednodes":{"value":52,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120358","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":72});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844542643e7bb7ac","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

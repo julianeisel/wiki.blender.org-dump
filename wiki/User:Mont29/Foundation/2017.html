@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Mont29/Foundation/2017 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Mont29/Foundation/2017","wgTitle":"Mont29/Foundation/2017","wgCurRevisionId":33698,"wgRevisionId":33698,"wgArticleId":6677,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Mont29/Foundation/2017","wgRelevantArticleId":6677,"wgRequestId":"93e7e5cd06e667301007e546","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Mont29","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Mont29_Foundation_2017 rootpage-User_Mont29 skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2017.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AMont29%2FFoundation%2F2017" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2017.html#Weekly_Reports_for_Year_2017"><span class="tocnumber">1</span> <span class="toctext">Weekly Reports for Year 2017</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2017.html#Week_224_-_12.2F23_to_12.2F29"><span class="tocnumber">1.1</span> <span class="toctext">Week 224 - 12/23 to 12/29</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2017.html#Week_223_-_12.2F16_to_12.2F22"><span class="tocnumber">1.2</span> <span class="toctext">Week 223 - 12/16 to 12/22</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2017.html#Week_222_-_12.2F09_to_12.2F15"><span class="tocnumber">1.3</span> <span class="toctext">Week 222 - 12/09 to 12/15</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2017.html#Week_221_-_12.2F02_to_12.2F08"><span class="tocnumber">1.4</span> <span class="toctext">Week 221 - 12/02 to 12/08</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2017.html#Week_220_-_11.2F25_to_12.2F01"><span class="tocnumber">1.5</span> <span class="toctext">Week 220 - 11/25 to 12/01</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2017.html#Week_219_-_11.2F18_to_11.2F24"><span class="tocnumber">1.6</span> <span class="toctext">Week 219 - 11/18 to 11/24</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2017.html#Week_218_-_11.2F11_to_11.2F17"><span class="tocnumber">1.7</span> <span class="toctext">Week 218 - 11/11 to 11/17</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2017.html#Week_217_-_11.2F04_to_11.2F10"><span class="tocnumber">1.8</span> <span class="toctext">Week 217 - 11/04 to 11/10</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2017.html#Week_215_.26_216_-_10.2F21_to_11.2F03"><span class="tocnumber">1.9</span> <span class="toctext">Week 215 &amp; 216 - 10/21 to 11/03</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2017.html#Week_214_-_10.2F14_to_10.2F20"><span class="tocnumber">1.10</span> <span class="toctext">Week 214 - 10/14 to 10/20</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2017.html#Week_213_-_10.2F07_to_10.2F13"><span class="tocnumber">1.11</span> <span class="toctext">Week 213 - 10/07 to 10/13</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2017.html#Week_212_-_09.2F30_to_10.2F06"><span class="tocnumber">1.12</span> <span class="toctext">Week 212 - 09/30 to 10/06</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2017.html#Week_211_-_09.2F23_to_09.2F29"><span class="tocnumber">1.13</span> <span class="toctext">Week 211 - 09/23 to 09/29</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2017.html#Week_210_-_09.2F16_to_09.2F22"><span class="tocnumber">1.14</span> <span class="toctext">Week 210 - 09/16 to 09/22</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2017.html#Week_209_-_09.2F09_to_09.2F15"><span class="tocnumber">1.15</span> <span class="toctext">Week 209 - 09/09 to 09/15</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2017.html#Week_208_-_09.2F02_to_09.2F08"><span class="tocnumber">1.16</span> <span class="toctext">Week 208 - 09/02 to 09/08</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2017.html#Week_207_-_08.2F26_to_09.2F01"><span class="tocnumber">1.17</span> <span class="toctext">Week 207 - 08/26 to 09/01</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2017.html#Week_206_-_08.2F19_to_08.2F25"><span class="tocnumber">1.18</span> <span class="toctext">Week 206 - 08/19 to 08/25</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2017.html#Week_205_-_08.2F12_to_08.2F18"><span class="tocnumber">1.19</span> <span class="toctext">Week 205 - 08/12 to 08/18</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2017.html#Week_204_-_08.2F05_to_08.2F11"><span class="tocnumber">1.20</span> <span class="toctext">Week 204 - 08/05 to 08/11</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2017.html#Week_203_-_07.2F29_to_08.2F04"><span class="tocnumber">1.21</span> <span class="toctext">Week 203 - 07/29 to 08/04</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2017.html#Week_202_-_07.2F22_to_07.2F28"><span class="tocnumber">1.22</span> <span class="toctext">Week 202 - 07/22 to 07/28</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2017.html#Week_201_-_07.2F15_to_07.2F21"><span class="tocnumber">1.23</span> <span class="toctext">Week 201 - 07/15 to 07/21</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2017.html#Week_200_-_07.2F08_to_07.2F14"><span class="tocnumber">1.24</span> <span class="toctext">Week 200 - 07/08 to 07/14</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2017.html#Week_199_-_07.2F01_to_07.2F07"><span class="tocnumber">1.25</span> <span class="toctext">Week 199 - 07/01 to 07/07</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2017.html#Week_198_-_06.2F24_to_06.2F30"><span class="tocnumber">1.26</span> <span class="toctext">Week 198 - 06/24 to 06/30</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2017.html#Week_197_-_06.2F17_to_06.2F23"><span class="tocnumber">1.27</span> <span class="toctext">Week 197 - 06/17 to 06/23</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2017.html#Week_196_-_06.2F10_to_06.2F16"><span class="tocnumber">1.28</span> <span class="toctext">Week 196 - 06/10 to 06/16</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2017.html#Week_195_-_06.2F03_to_06.2F09"><span class="tocnumber">1.29</span> <span class="toctext">Week 195 - 06/03 to 06/09</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2017.html#Week_194_-_05.2F27_to_06.2F02"><span class="tocnumber">1.30</span> <span class="toctext">Week 194 - 05/27 to 06/02</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2017.html#Week_193_-_05.2F20_to_05.2F26"><span class="tocnumber">1.31</span> <span class="toctext">Week 193 - 05/20 to 05/26</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2017.html#Week_192_-_05.2F13_to_05.2F19"><span class="tocnumber">1.32</span> <span class="toctext">Week 192 - 05/13 to 05/19</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2017.html#Week_191_-_05.2F06_to_05.2F12"><span class="tocnumber">1.33</span> <span class="toctext">Week 191 - 05/06 to 05/12</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2017.html#Week_190_-_04.2F29_to_05.2F05"><span class="tocnumber">1.34</span> <span class="toctext">Week 190 - 04/29 to 05/05</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2017.html#Week_189_-_04.2F22_to_04.2F28"><span class="tocnumber">1.35</span> <span class="toctext">Week 189 - 04/22 to 04/28</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2017.html#Week_188_-_04.2F15_to_04.2F21"><span class="tocnumber">1.36</span> <span class="toctext">Week 188 - 04/15 to 04/21</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2017.html#Week_187_-_04.2F08_to_04.2F14"><span class="tocnumber">1.37</span> <span class="toctext">Week 187 - 04/08 to 04/14</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2017.html#Week_186_-_04.2F01_to_04.2F07"><span class="tocnumber">1.38</span> <span class="toctext">Week 186 - 04/01 to 04/07</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2017.html#Week_185_-_03.2F25_to_03.2F31"><span class="tocnumber">1.39</span> <span class="toctext">Week 185 - 03/25 to 03/31</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2017.html#Week_184_-_03.2F18_to_03.2F24"><span class="tocnumber">1.40</span> <span class="toctext">Week 184 - 03/18 to 03/24</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2017.html#Week_183_-_03.2F11_to_03.2F17"><span class="tocnumber">1.41</span> <span class="toctext">Week 183 - 03/11 to 03/17</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2017.html#Week_182_-_03.2F04_to_03.2F10"><span class="tocnumber">1.42</span> <span class="toctext">Week 182 - 03/04 to 03/10</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2017.html#Week_181_-_02.2F25_to_03.2F03"><span class="tocnumber">1.43</span> <span class="toctext">Week 181 - 02/25 to 03/03</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2017.html#Week_180_-_02.2F18_to_02.2F24"><span class="tocnumber">1.44</span> <span class="toctext">Week 180 - 02/18 to 02/24</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2017.html#Week_179_-_02.2F11_to_02.2F17"><span class="tocnumber">1.45</span> <span class="toctext">Week 179 - 02/11 to 02/17</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2017.html#Week_178_-_02.2F04_to_02.2F10"><span class="tocnumber">1.46</span> <span class="toctext">Week 178 - 02/04 to 02/10</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2017.html#Week_177_-_01.2F28_to_02.2F03"><span class="tocnumber">1.47</span> <span class="toctext">Week 177 - 01/28 to 02/03</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2017.html#Week_176_-_01.2F21_to_01.2F27"><span class="tocnumber">1.48</span> <span class="toctext">Week 176 - 01/21 to 01/27</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="2017.html#Week_175_-_01.2F14_to_01.2F20"><span class="tocnumber">1.49</span> <span class="toctext">Week 175 - 01/14 to 01/20</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2017.html#Week_174_-_01.2F07_to_01.2F13"><span class="tocnumber">1.50</span> <span class="toctext">Week 174 - 01/07 to 01/13</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2017.html#Week_173_-_12.2F31_to_01.2F06"><span class="tocnumber">1.51</span> <span class="toctext">Week 173 - 12/31 to 01/06</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Mont29/Foundation/2017</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Mont29.html" title="User:Mont29">User:Mont29</a>&lrm; | <a href="../Foundation.html" title="User:Mont29/Foundation">Foundation</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Weekly_Reports_for_Year_2017">Weekly Reports for Year 2017</span></h1>
+<h2><span id="Week_224_-_12/23_to_12/29"></span><span class="mw-headline" id="Week_224_-_12.2F23_to_12.2F29">Week 224 - 12/23 to 12/29</span></h2>
+<p>Again half-speed week, and again spent essentially over 2.79a release tasks.
+</p>
+<ul><li>Misc:</li>
+<li>2.79a release: sent mail about list of slected commits we went over with Sergey, created branches and backported most of the commits, did some initial test rounds.</li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52977">#52977</a> Parent bone name disappeared in the UI in pose mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17f1ce4d4fdb">rB17f1ce4d</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53630">#53630</a> Effect strips not displaying Input data (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17f1ce4d4fdb">rB17f1ce4d</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2;</dd></dl>
+<h2><span id="Week_223_-_12/16_to_12/22"></span><span class="mw-headline" id="Week_223_-_12.2F16_to_12.2F22">Week 223 - 12/16 to 12/22</span></h2>
+<p>Half a week of work actually, spent essentially over 2.79a release tasks.
+</p>
+<ul><li>Misc:
+<ul><li>Worked on 2.79a release tasks.</li>
+<li>Fixed/enhanced threading in mesh normals computing code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d130c66db4">rBd130c66d</a>).</li></ul></li></ul>
+<ul><li>Assets/Override:
+<ul><li>Finalized refactor in RNA override code.</li>
+<li>Added some more 'user level' tools to handle static overrides (icon, better handling in ID template, etc.).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li></ul></li></ul>
+<dl><dd>Closed: 1;</dd></dl>
+<h2><span id="Week_222_-_12/09_to_12/15"></span><span class="mw-headline" id="Week_222_-_12.2F09_to_12.2F15">Week 222 - 12/09 to 12/15</span></h2>
+<p>Mostly worked on ID static override, in particular painfully solving some issues in RNA diffing/comparison code…
+</p>
+<ul><li>Misc:
+<ul><li>Some organizational talks.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Added some more ways to create a static override, did some more cleanup/fixes.</li>
+<li>Worked on some refactor in RNA override code, also working on the 'operator issue' (see <a rel="nofollow" class="external text" href="http://developer.blender.org/T5300">#5300</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li></ul></li></ul>
+<h2><span id="Week_221_-_12/02_to_12/08"></span><span class="mw-headline" id="Week_221_-_12.2F02_to_12.2F08">Week 221 - 12/02 to 12/08</span></h2>
+<p>Merged ID static override in blender2.8, and did some side-work regarding threading in Blender.
+</p>
+<ul><li>Misc:
+<ul><li>Spent some time reviewing/talking about some 2.8 projects.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Cleaned up some append/link related code.</li>
+<li>Worked on some kinks from blender2.8 merge...</li>
+<li>Moved Amber to be a 'real' add-on.</li>
+<li>Changed drag'n'drop of assets/data-blocks to append by default, and link when SHIFT is held.</li>
+<li>Tried to fix some filebrowser update issues since new message system was added, with limited (aka no) success.</li>
+<li>Updated design task for asset engine (<a rel="nofollow" class="external text" href="http://developer.blender.org/TT46049">#T46049</a>).</li>
+<li>Created design tasks for static override (actually mostly copied from the review, since that one has now been closed, <a rel="nofollow" class="external text" href="http://developer.blender.org/TT53500">#T53500</a> and <a rel="nofollow" class="external text" href="http://developer.blender.org/TT53501">#T53501</a>).</li>
+<li>Added some more ways to create a static override, did some more cleanup/fixes.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53463">#53463</a> Rotation numerical imput shows instable behaviour (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1802d14394c5">rB1802d143</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53476">#53476</a> File Browser: Selection Issue (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee120d6293fe">rBee120d62</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Closed: 2;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: Keep updating tech docs, decided to focus on getting static overrides usable first.</li></ul></li></ul>
+<h2><span id="Week_220_-_11/25_to_12/01"></span><span class="mw-headline" id="Week_220_-_11.2F25_to_12.2F01">Week 220 - 11/25 to 12/01</span></h2>
+<p>Merged ID static override in blender2.8, and did some side-work regarding threading in Blender.
+</p>
+<ul><li>Misc:
+<ul><li>Converted more code from OpenMP to our own BLI_task system.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Finalized and merged ID static override patch into blender2.8 (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2417">D2417</a>).</li>
+<li>Various post-merge cleanup and fixes for static override code.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53420">#53420</a> Vertex Groups: The "-" button gets a hidden function (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f1048481cd0">rB9f104848</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: Finalize asset-engine branch and put it in review, update related tech docs.</li></ul></li></ul>
+<h2><span id="Week_219_-_11/18_to_11/24"></span><span class="mw-headline" id="Week_219_-_11.2F18_to_11.2F24">Week 219 - 11/18 to 11/24</span></h2>
+<p>Worked on first review of ID static override, and did some side-work regarding threading in Blender.
+</p>
+<ul><li>Misc:
+<ul><li>Enhanced our bugfix-release log generator script (to hopefully reduce time needed to sort of fixes already cherry-picked in previous release) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-dev-tools/commit/7d02c7a4e631">rBDT7d02c7</a>).</li>
+<li>Worked on removing some more OMP code from Blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7770c2ef8712ce0f">rB7770c2ef</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f4058ddbcc">rB5f4058dd</a>).</li>
+<li>Painfully added more atomic primitives to our collection (mainly, signed integer ones, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/105b95835f4da7cf">rB105b9583</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/497e2b3dfade">rB497e2b3d</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/580b34e52">rB580b34e5</a>).</li>
+<li>Added non-gcc static assert macros (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d423e66d3">rBd423e66d</a>), and used it to cleanup our type size checks in atomic_ops (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff9eab7926">rBff9eab79</a>).</li>
+<li>Finalized and committed new BLI_task parallel iteration over mempool items (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2930">D2930</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b84e6dfee">rBb84e6dfe</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/efb86b712d5">rBefb86b71</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cf6e8edda5">rBcf6e8edd</a>), used it to add parallel iterators over basic BMesh items (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc3f0cfd14">rBbc3f0cfd</a>).</li>
+<li>Used new BMesh parallel iteration to replace OMP code in normal computing, gives nice 40% speedup as a bonus (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/43ddf0e9a7">rB43ddf0e9</a>).</li>
+<li>Converted more code from OpenMP to our own BLI_task system.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Updated ID static override patch (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2417">D2417</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53343">#53343</a> Custom Normal Data Transfer Crashes when some vertexes have no faces (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/784614655f55">rB78461465</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2883">D2883</a> RNA-property tagging using tags defined by struct (+ operator properties tagged 'BASIC').</li></ul></li></ul>
+<dl><dd>Fixed: 1; Reviewed:1; Closed: 3;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: hopefully get green light end merge static overrides in blender2.8.</li></ul></li></ul>
+<h2><span id="Week_218_-_11/11_to_11/17"></span><span class="mw-headline" id="Week_218_-_11.2F11_to_11.2F17">Week 218 - 11/11 to 11/17</span></h2>
+<p>Focused on finalizing ID static override for review &amp; merge into blender2.8.
+</p>
+<ul><li>Assets:
+<ul><li>Redesigned how id_override_static RNA new code handles overriding, to allow properties to define their own behavior when needed (especially for Pointer and Collection ones).</li>
+<li>Finalized id_override_static patch, and submitted it for review (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2417">D2417</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53309">#53309</a> Shift+Alt+G not working for [Remove Selected From Active Group] (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/556b13f03e56">rB556b13f0</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2917">D2917</a> Notifier system (event publish/subscribe), work-in-progress.</li></ul></li></ul>
+<dl><dd>Fixed: 1; Reviewed:1; Closed: 2;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: hopefully get green light end merge static overrides in blender2.8.</li></ul></li></ul>
+<h2><span id="Week_217_-_11/04_to_11/10"></span><span class="mw-headline" id="Week_217_-_11.2F04_to_11.2F10">Week 217 - 11/04 to 11/10</span></h2>
+<p>Kept working on Amber and ID static override, also spent some time on the Normals tools GSoC review.
+</p>
+<ul><li>Misc:
+<ul><li>Usual i18n update.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Finished porting static id override and asset engine branches on blender2.8 code.</li>
+<li>Worked on preparing id_override_static for blender2.8 merge (aka tackling loose ends).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53250">#53250</a> Crash when linking/appending a scene to a blend when another linked scene in this blend is currently open/active (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b28da9dbf815">rBb28da9db</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52254">#52254</a> Fbx import assertion error(unknown location -1) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/e00cbb80bc5">rBAe00cbb8</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2909">D2909</a> Simplify optimization for finding unique ID names.</li>
+<li>Reviewed/worked on soc-2017 Normal Tools (see also <a rel="nofollow" class="external text" href="http://developer.blender.org/D2897">D2897</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Reviewed:2; Closed: 0;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_215_&amp;_216_-_10/21_to_11/03"></span><span class="mw-headline" id="Week_215_.26_216_-_10.2F21_to_11.2F03">Week 215 &amp; 216 - 10/21 to 11/03</span></h2>
+<p>Mostly worked on Amber during those two weeks, was also the Blender Conference (and got sick in the end), so not that much of codework done…
+</p>
+<ul><li>Assets:
+<ul><li>Worked on developing Amber repository edition and preview features.</li>
+<li>First attempt to merge blender-2.8 into asset-engine, will need a bit of work first...</li>
+<li>Talked with the team about studio needs (about both asset engine and static overrides).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53207">#53207</a> FBX material export issues (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/3e29cb17a7a0">rBA3e29cb1</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53202">#53202</a> Complex armature with bone constraints - setting PoseBone matrix_basis may not influence another bone's matrix as expected as not calculated yet (possible bug, definite FBX export bug!) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/0b286650b3e9">rBA0b28665</a>).</li>
+<li>Reviewed/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2279">D2279</a> Added support for exporting FBX LodGroup (UE4) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/fde4fe14b77c">rBAfde4fe1</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Reviewed:1; Closed: 17;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_214_-_10/14_to_10/20"></span><span class="mw-headline" id="Week_214_-_10.2F14_to_10.2F20">Week 214 - 10/14 to 10/20</span></h2>
+<p>Mostly worked on Amber this week, fleshing out editing feature for Amber repositories, and did new months planning.
+</p>
+<ul><li>Misc:
+<ul><li>Added some 4k render presets (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4b5d0ba3a7">rBf4b5d0ba</a>).</li>
+<li>Spent (lost) time trying to implement 'multi-selection' of items in UIList (would be useful for asset engines UI). Turns out it’s more complicated than expected, will probably need more hacks in UIList UI &amp; event code, so not worth spending more time on it for now.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Finalized (with help from Dalai, thanks!) coming months' roadmap in Assets &amp; Static Override project (see <a rel="nofollow" class="external free" href="https://wiki.blender.org/index.php/Dev:2.8/Source/Assets_and_Static_Overrides/Roadmap_October_2017">https://wiki.blender.org/index.php/Dev:2.8/Source/Assets_and_Static_Overrides/Roadmap_October_2017</a>).</li>
+<li>Worked on developing Amber repository edition features.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53065">#53065</a>: fbx import fails in some cases with AttributeError when id_data.type is checked on None object (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/89285a88abbe">rBA89285a8</a>).</li>
+<li>Reviewed/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53103">#53103</a> diffuse_color material animation feature for fbx_import.py addon (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/b11acbaf482e">rBAb11acba</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Reviewed:1; Closed: 1;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_213_-_10/07_to_10/13"></span><span class="mw-headline" id="Week_213_-_10.2F07_to_10.2F13">Week 213 - 10/07 to 10/13</span></h2>
+<p>Did some pre-review cleanup/fixes of normals tools GSoC, and kept working on assets (adding initial drag-n-drop linking).
+</p>
+<ul><li>Assets:
+<ul><li>Added initial support for drag-n-drop linking (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/504287b9877a85be">rB504287b9</a>).</li>
+<li>Fixed several issues related to asset linking &amp; drag-n-drop (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b13024327ac4">rBb1302432</a>).</li></ul></li></ul>
+<ul><li>GSoc:
+<ul><li>Did some pre-review cleanup of normal tools branch.</li></ul></li></ul>
+<ul><li>GSoC:
+<ul><li>Updated/quick-fixed gsoc 2017 normals branch when building on Linux (annoying warnings).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52945">#52945</a> OBJ import - load_material_image - map_options not parsed correctly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/e8f09a8e0b28eb">rBAe8f09a8</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52999">#52999</a> invoke_props_dialog() window changes position on redraw if the window has sufficient vertical height (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3b4f6996a8fd">rB3b4f6996</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53052">#53052</a> ID decrement error when deleting a scene, either python or GUI (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a51688d0b066">rBa51688d0</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 3; Closed: 16;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_212_-_09/30_to_10/06"></span><span class="mw-headline" id="Week_212_-_09.2F30_to_10.2F06">Week 212 - 09/30 to 10/06</span></h2>
+<p>Did some tracker and various misc tasks.
+</p>
+<ul><li>General Development:
+<ul><li>Updated API docs.</li>
+<li>Updated i18n files.</li></ul></li></ul>
+<ul><li>GSoC:
+<ul><li>Updated/quick-fixed gsoc 2017 normals branch when building on Linux (annoying warnings).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52952">#52952</a> install_deps.sh - numpy build fails on linux (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/754f5d39c588d4">rB754f5d39</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T53002">#53002</a> Batch-Generate Previews generate empty or none image for large objects (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63482a5f2e2a">rB63482a5f</a>).</li>
+<li>Fixed (unreported) i18n messages extraction script after recent bpy changes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a22af1a84b3">rBa22af1a8</a>).</li>
+<li>Fixed (unreported) broken FBX import after adding forth alpha component to vcol (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/8f8fcfaad1f1306">rBA8f8fcfa</a>).</li>
+<li>Fixed (unreported) potential string buffer overruns (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ea2a7c02ddd8f">rB9ea2a7c0</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Unreported fixes: 3; Closed: 3;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_211_-_09/23_to_09/29"></span><span class="mw-headline" id="Week_211_-_09.2F23_to_09.2F29">Week 211 - 09/23 to 09/29</span></h2>
+<p>Small week, fully spent on finalizing core code changes in asset engine/management API.
+</p>
+<ul><li>Assets:
+<ul><li>Finalized adding Views to asset API, and brought back Amber online.</li>
+<li>Moved away from dirty 'virtually linked data-blocks considered local' hack to proper usage of static overrides for this case.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li></ul></li></ul>
+<dl><dd>Fixed: 0; Closed: 0;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_210_-_09/16_to_09/22"></span><span class="mw-headline" id="Week_210_-_09.2F16_to_09.2F22">Week 210 - 09/16 to 09/22</span></h2>
+<p>Spent more time than expected (as… expected&#160;:P) on squashing bugs, still did most of work in core code to add forth level 'Views' to our asset engine/management API.
+</p>
+<ul><li>Assets:
+<ul><li>Worked on adding forth Views level to core Blender asset API.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52816">#52816</a> regression can't open file in 2.79 (crash) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9591b5f6182f">rB9591b5f6</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52839">#52839</a> "Copy Render Settings" doesn't work (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/267662e07a73">rBA267662e</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52842">#52842</a> Incorrect description for bpy.types.MeshTextureFace.uv (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f54f680a2681">rBf54f680a</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52846">#52846</a> Wrong normals when importing FBX from Revit (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/b3c6d44409fe">rBAb3c6d44</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52852">#52852</a> Assert in looptri calculation after recent changes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25f28d348fe1">rB25f28d34</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52792">#52792</a> Spelling difference (<a rel="nofollow" class="external autonumber" href="https://projects.blender.org/blender/blender/commit/">[1]</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52875">#52875</a> install_deps.sh - numpy-1.13.1.tar.gz - 404 Not Found (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/925f2c8b9d2a">rB925f2c8b</a>).</li>
+<li>Fixed (irc-reported by @sergey) invalid precision value in a float RNA property (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/785e96a11d4">rB785e96a1</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb4a12914fa">rBbb4a1291</a>)).</li>
+<li>Fixed (mail-reported) missing ID remapping in Action editor callback (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98d797b67c07">rB98d797b6</a>.</li>
+<li>Fixed (unreported) rna_info.py module, broken by recent changes in bpy.types presumably (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4bbf1e4b0e0b">rBc4bbf1e4</a>).</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T52848">#52848</a> Linked groups get mixed up.</li></ul></li></ul>
+<dl><dd>Fixed: 9; Unreported fix: 1; Investigated: 1; Closed: 4;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_209_-_09/09_to_09/15"></span><span class="mw-headline" id="Week_209_-_09.2F09_to_09.2F15">Week 209 - 09/09 to 09/15</span></h2>
+<p>Most part of the week was spent on release tasks, found a bit of time to work on assets (Amber engine) though.
+</p>
+<ul><li>General Development:
+<ul><li>Finalized 2.79 release and did AHOY.</li>
+<li>Tagged 2.79 release.</li>
+<li>Updated API doc for 2.79 release.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Worked on bringing some edit features to Amber (being able to add/remove/etc. assets from an Amber repository…).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52682">#52682</a> When hair number=faces number, particles/face = 1 , actually some hair is overlap. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/35ee9ff7a000">rB35ee9ff7</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52729">#52729</a> Decimals not showing over 100m or 100 feet (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c1c3b64c532">rB3c1c3b64</a>).</li>
+<li>Fixed (reported in <a rel="nofollow" class="external text" href="http://developer.blender.org/T52735">#52735</a>) failure in our UI code that could allow search button without search callbacks, leading to crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c57636f06001">rBc57636f0</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Unreported fix: 1; Closed: 7;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_208_-_09/02_to_09/08"></span><span class="mw-headline" id="Week_208_-_09.2F02_to_09.2F08">Week 208 - 09/02 to 09/08</span></h2>
+<p>Most part of the week was spent on release tasks, found a bit of time to work on assets (Amber engine) though.
+</p>
+<ul><li>General Development:
+<ul><li>Checked commits to backport to 2.79.</li>
+<li>Backported commits.</li>
+<li>Did lots of testing of 2.79 branch.</li>
+<li>Updated i18n files for latest 2.79 branch.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Worked on bringing some edit features to Amber (being able to add/remove/etc. assets from an Amber repository…).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52649">#52649</a> Broken fbx exporter (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/a87b9998d806">rBAa87b999</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/68596950550d">rB68596950</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Closed: 8;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_207_-_08/26_to_09/01"></span><span class="mw-headline" id="Week_207_-_08.2F26_to_09.2F01">Week 207 - 08/26 to 09/01</span></h2>
+<p>Half a week of work again (due to lots of various unrelated issues here, hope Murphy is done we me now&#160;:| ), spent on tracker, since one has to do that work…&#160;;)
+</p>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52538">#52538</a> Outliner crash when displaying groups and using Show Active on editmode bone not in any groups (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c4fc93f67f4">rB5c4fc93f</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52478">#52478</a> Error report "Shrinkwrap: out of memory" on invisible target (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe71c86888fe">rBfe71c868</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52498">#52498</a> Deleting force field doesn't remove "Surface" from modifier stack (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dcebad773fd4">rBdcebad77</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52588">#52588</a> Shape key value driver variables of duplicated object sets refer to old objects (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/29b2a47a8a36">rB29b2a47a</a>).</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T52573">#52573</a> Cycles baking artifacts (found cause of the issue, how to fix it is another topic).</li></ul></li></ul>
+<dl><dd>Fixed: 4; Investigated: 1; Closed: 35;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_206_-_08/19_to_08/25"></span><span class="mw-headline" id="Week_206_-_08.2F19_to_08.2F25">Week 206 - 08/19 to 08/25</span></h2>
+<p>Half a week of work, spent on Assets Engine work (mostly, adding some editing features for Amber repositories, still WIP), and bug tracker a bit, that monster was going out of control again.
+</p>
+<ul><li>General Development:
+<ul><li>Updated bugfix list for 2.79 RC2.</li>
+<li>Updated API docs for 2.79 RC2.</li>
+<li>Updated API docs for master.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Worked on bringing some edit features to Amber (being able to add/remove/etc. assets from an Amber repository…).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52439">#52439</a> Crash after adjusting lenght of hair particles (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/146b0c6b0492">rB146b0c6b</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52481">#52481</a> Linked proxies "lost data" (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e2ffad7823ca">rBe2ffad78</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Closed: 10;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_205_-_08/12_to_08/18"></span><span class="mw-headline" id="Week_205_-_08.2F12_to_08.2F18">Week 205 - 08/12 to 08/18</span></h2>
+<p>Week spent nearly fully on Assets Engine work (mostly, rework of Amber code to make it possible to edit the repositories, still WIP).
+</p>
+<ul><li>General Development:
+<ul><li>Usual i18n updates.</li></ul></li></ul>
+<ul><li>Blender 2.8:
+<ul><li>Fixed several issues in new Scene &amp; Object copying code.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Worked on bringing some edit features to Amber (being able to add/remove/etc. assets from an Amber repository…).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52391">#52391</a> Crash on duplicating material (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cd51c037963">rB3cd51c03</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52414">#52414</a> Blender 2.79 crash on object duplication via menu (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f3724f7f4f6">rB1f3724f7</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Closed: 2;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_204_-_08/05_to_08/11"></span><span class="mw-headline" id="Week_204_-_08.2F05_to_08.2F11">Week 204 - 08/05 to 08/11</span></h2>
+<p>Big week spent mostly on tracker, also merged and fix a few issues in new ID copying code.
+</p>
+<ul><li>General Development:
+<ul><li>2.79 Release: Update API doc.</li>
+<li>Merged new ID copying code in master, and managed the aftermath...</li>
+<li>Did some cleanup in the LoopTri code, we had lots of redundant crap there (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e9cbc700ef">rBe9cbc700</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e324172d9ca66">rBe324172d</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c034193821ec7">rBc0341938</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52263">#52263</a> Crash When Splitting and Merging Areas with Header Text Set (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8a8589d4f1d">rBc8a8589d</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52260">#52260</a> Blender 2.79 Objects made duplicates real still refer armature proxy (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a78b59627271">rBa78b5962</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51701">#51701</a> Alembic cache screws up mesh (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6d7cdd3cee9">rBb6d7cdd3</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52313">#52313</a> Crash on duplicating Scene (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c488cb97f0c">rB8c488cb9</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52314">#52314</a> New ID copy code (rBrB9da7dfa1586d) Breaks node previews in compositor (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a152743ba31d">rBa152743b</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52324">#52324</a> Metaball disappears when deleting first metaball object (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b6ead05bd2e">rB5b6ead05</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52332">#52332</a> scene_to can be NULL and cause segfault (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ca3f601f9372">rBca3f601f</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52344">#52344</a> Softbody on Text (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31be0a6e52e1">rB31be0a6e</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52149">#52149</a> Crash on entering Edit Mode of high poly mesh used by Shrink Wrap (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00cb3527902b">rB00cb3527</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52050">#52050</a> Empty VSE preview for scene strips with OpenGL preview + Rendered settings (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4a1762f7698c">rB4a1762f7</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 10; Closed: 17;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work.</li></ul></li></ul>
+<h2><span id="Week_203_-_07/29_to_08/04"></span><span class="mw-headline" id="Week_203_-_07.2F29_to_08.2F04">Week 203 - 07/29 to 08/04</span></h2>
+<p>Basically half week, spent on release (2.79 RC1) tasks.
+</p>
+<ul><li>General Development:
+<ul><li>Usual i18n update.</li>
+<li>2.79 RC1 release!</li>
+<li>Tweaked/fixed further precision issue when 'rendering' raw float values to multi-units format (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c1e177ad29249">rBc1e177ad</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/636289b755f6c">rB636289b7</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/13d324f26b4">rB13d324f2</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52232">#52232</a> Crash in RNA_enum_from_value while inspecting compositor image node properties in outliner (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f815aa01ebdd">rBf815aa01</a>).</li>
+<li>Fixed potential error in case no strip would be to be exported, in Sequencer Tools add-on (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons-contrib/commit/89bfa619831">rBAC89bfa6</a>).</li>
+<li>Fixed two issues with recent changes to number display while editing them (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6cb7b2c92">rBb6cb7b2c</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Unreported fixes: 2; Closed: 15;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work, and design work over workspace/templates/etc.</li></ul></li></ul>
+<h2><span id="Week_202_-_07/22_to_07/28"></span><span class="mw-headline" id="Week_202_-_07.2F22_to_07.2F28">Week 202 - 07/22 to 07/28</span></h2>
+<p>Quite a small week, for various reasons…
+</p>
+<ul><li>General Development:
+<ul><li>2.79 release: finished initial listing of  the 'fix' commits since 2.78.</li>
+<li>Usual i18n update.</li>
+<li>Did second gsoc evaluation for custom normals editing project.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52176">#52176</a> Bevel doesn't correctly work with default empty Vgroup (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/66e28a2827ab">rB66e28a28</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52208">#52208</a> Using UI_BUT_REDALERT flag for UI_BTYPE_KEY_EVENT buttons crashes Blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/304e5541cb6d">rB304e5541</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52148">#52148</a> Point Density Texture ID User decrement error related to the Object field (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05f377805bec">rB05f37780</a>).</li>
+<li>Fixed (Coverity reported) potential 'divide-by-zero' in our UI fitting code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38eabcb858ac3">rB38eabcb8</a>).</li>
+<li>Investigated/closed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52187">#52187</a> normals_split_custom_set() seems to smooth out given input.</li></ul></li></ul>
+<dl><dd>Fixed: 3; Unreported fixes: 1; Investigated: 1; Closed: 8;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: assset work, and design work over workspace/templates/etc.</li></ul></li></ul>
+<h2><span id="Week_201_-_07/15_to_07/21"></span><span class="mw-headline" id="Week_201_-_07.2F15_to_07.2F21">Week 201 - 07/15 to 07/21</span></h2>
+<p>Did some 2.79 release tasks, bug triaging and fixing, worked on whole static override/asset management, and… talked to the guys at the studio about 2.8 projects etc!
+</p>
+<ul><li>General Development:
+<ul><li>2.79 release: went through half of 'fix' commits since 2.78, and started generating fix list for release notes.</li>
+<li>Usual i18n update.</li>
+<li>Updated Py API doc ( <a rel="nofollow" class="external free" href="https://docs.blender.org/api/master/">https://docs.blender.org/api/master/</a> ).</li>
+<li>Updated Coverity build ( <a rel="nofollow" class="external free" href="https://scan.coverity.com/projects/blender">https://scan.coverity.com/projects/blender</a> ).</li>
+<li>Worked on ID Copying patch.</li>
+<li>Worked on Static Override branch.</li>
+<li>Worked on Asset Engine branch.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T39925">#39925</a> Set Origin to Geometry on a new text object moves the origin away from the object (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06505c526453">rB06505c52</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52109">#52109</a> Folder search won't work when selecting animation output folder (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cfb248bb630">rB3cfb248b</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52136">#52136</a> Blender segfault (stack overflow most certainly) when converting to mesh (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8b17ec0c0004">rB8b17ec0c</a>).</li>
+<li>Fixed (reported by @LucaRood) bad loss of precision when manually editing values in numbuttons (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ecb5b55d7faac1">rBecb5b55d</a>).</li>
+<li>Fixed (unreported) seldom crash when using previews in filebrowser (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/73adf3e">rB73adf3e</a>).</li>
+<li>Fixed (unreported) FBX exporter: broken non-mesh geometry export (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/12ff437f3a623">rB12ff437f</a>).</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T51969">#51969</a> Filebrowser "Open File" button disappear when double-click thumbnail, not much luck so far.</li>
+<li>Investigated &amp; Closed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52039">#52039</a> Exporting bones to fbx with animated scale distorts transformations.</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T51214">#51214</a> Dynamic Paint Works Only in Viewport Render, no luck so far.</li></ul></li></ul>
+<dl><dd>Fixed: 4; Unreported fixes: 2; Investigated: 3; Closed: 29;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_200_-_07/08_to_07/14"></span><span class="mw-headline" id="Week_200_-_07.2F08_to_07.2F14">Week 200 - 07/08 to 07/14</span></h2>
+<p>Finished first version of new ID copying code. Then tried to tackle the Blender2.8 remaining bone drawing type (stick/line), with not much success so far...&#160;:/
+</p>
+<ul><li>General Development:
+<ul><li>Worked on new ID copy rework (finished first version of new copying code, updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D2714">D2714</a>).</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Worked on 'stick' bones armature drawing.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52029">#52029</a> Blender 2.78a doesn't import user properties from FBX file (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/4e25de776a09">rBA4e25de7</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52054">#52054</a> Regression: Wavefront OBJ Import Fails With Current Builds (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/6e8234a541d4">rBA6e8234a</a>).</li>
+<li>Fixed (unreported) Scene copying doing very stupid things with World and LineStyle usercounts (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/806bc4b433965b7">rB806bc4b4</a>).</li>
+<li>Fixed (unreported) Scene's copying toolsettings' clone and canvas, and particles' scene and object pointers (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/665288ccd7">rB665288cc</a>).</li>
+<li>Fixed (unreported) broken uvsculpt in Scene's toolsettings' copying (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8677c76f138e96c">rB8677c76f</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Unreported fixes: 3; Closed: 4;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_199_-_07/01_to_07/07"></span><span class="mw-headline" id="Week_199_-_07.2F01_to_07.2F07">Week 199 - 07/01 to 07/07</span></h2>
+<p>Spent start of the week on tracker, then resumed working on new ID copying code. That one turned out to be much more work than expected at start (as usual with ID management&#160;:/ ), but we are closing to first full/final version, ideally would like to move 'localize' functions (used for rendering some datablocks, mainly in shading area) to new code as well, but this should be doable in a later step.
+</p>
+<ul><li>General Development:
+<ul><li>Kept implementing rework of our ID copy code (needed for assets/override/DEG/CoW...). Initial work visible also in <a rel="nofollow" class="external text" href="http://developer.blender.org/D2714">D2714</a>.</li>
+<li>Added option to OpenImage operator not to detect sequences (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/28a9d7ec6ec02ee01">rB28a9d7ec</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51965">#51965</a> Custom Bone Shape Wireframe setting affects wireframe thickness (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f86b43e130cb">rBf86b43e1</a>.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51834">#51834</a> Active Object and Groups (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d124418b7e4">rB4d124418</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Closed: 18;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_198_-_06/24_to_06/30"></span><span class="mw-headline" id="Week_198_-_06.2F24_to_06.2F30">Week 198 - 06/24 to 06/30</span></h2>
+<p>Spent most of the week on tracker.
+</p>
+<ul><li>General Development:
+<ul><li>Kept implementing rework of our ID copy code (needed for assets/override/DEG/CoW...). Initial work visible also in <a rel="nofollow" class="external text" href="http://developer.blender.org/D2714">D2714</a>.</li>
+<li>Some gsoc mentoring work.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51902">#51902</a> Severe problem with relocating linked libraries (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d4ca2ec9d5bd">rBd4ca2ec9</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51900">#51900</a> Crash after pressing "F" multiple times (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c0ee61f6d3d">rB2c0ee61f</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51926">#51926</a> Selecting pose icon under expanded group in outliner causes crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a57a7975a162">rBa57a7975</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51890">#51890</a> Turning off viewport display for array modifier is blocking dupliface in final render (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0210c6b9de38">rB0210c6b9</a>).</li>
+<li>Fixed node UI not using translation context correctly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b5696f27991c">rBb5696f27</a>).</li>
+<li>Reviewed and committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2578">D2578</a> Enable optional jack in install_deps.sh (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c2f0466d806">rB3c2f0466</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2713">D2713</a> FBX import characters with bone weights exceeding 1.0.</li></ul></li></ul>
+<dl><dd>Fixed: 4; Unreported fixes: 1; Reviewed: 2; Closed: 14;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_197_-_06/17_to_06/23"></span><span class="mw-headline" id="Week_197_-_06.2F17_to_06.2F23">Week 197 - 06/17 to 06/23</span></h2>
+<p>Spent most of the week on rework of our ID copy system (which is a bit more work than hopped at first sight…).
+</p>
+<ul><li>General Development:
+<ul><li>Kept implementing rework of our ID copy code (needed for assets/override/DEG/CoW...). Initial work visible also in <a rel="nofollow" class="external text" href="http://developer.blender.org/D2714">D2714</a>.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51774">#51774</a> Children particles hair interpolation not correct with textures or dp (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3190eaf10942">rB3190eaf1</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51856">#51856</a> FBX: Apply Modifiers in the export settings causes mesh data block names to change for meshes with applied modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af3545591228">rBaf354559</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51867">#51867</a> I - L / I - R / I - S key combos are broken (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7abed4e4332e">rB7abed4e4</a>).</li>
+<li>Fixed (unreported) memory leak in Fluid modifier copying (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e9aaf5ed211d">rBe9aaf5ed</a>).</li>
+<li>Fixed (unreported) Dynamic Paint modifier not increasing ID usercount in copy function (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0d5c7e5e36b9">rB0d5c7e5e</a>).</li>
+<li>Fixed (unreported) bad copying code in Mesh Deform modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e917bc5ee0a19">rBe917bc5e</a>).</li>
+<li>Fixed (unreported) bad copying of Ocean modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1addac8e0c7087">rB1addac8e</a>).</li>
+<li>Fixed (unreported) bad copying code of Surface Deform modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/24486513d573a">rB24486513</a>).</li>
+<li>Fixed (unreported) missing Image usercount increase when copying UVProject modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3b1d562a77">rBe3b1d562</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 3; Unreported fixes: 6; Closed: 6;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_196_-_06/10_to_06/16"></span><span class="mw-headline" id="Week_196_-_06.2F10_to_06.2F16">Week 196 - 06/10 to 06/16</span></h2>
+<p>Spent most of the week on static override and rework of our ID copy system (turns out current limitations are not only a problem for static override/assets, but also for DEG/CoW work from Sergey).
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static override branch (implementing 'override template' idea).</li>
+<li>Designed (<a rel="nofollow" class="external text" href="http://developer.blender.org/T51804">#51804</a>) and started implementing rework of our ID copy code (needed for assets/override/DEG/CoW...). Initial work visible also in <a rel="nofollow" class="external text" href="http://developer.blender.org/D2714">D2714</a>.</li>
+<li>Usual i18n update.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50159">#50159</a> FBX Export Scaling Wrong (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/8b2a241baca09c9ae">rBA8b2a241</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51810">#51810</a> Create example for bpy.app.translations (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fc4154f857ba">rBfc4154f8</a>.</li>
+<li>Fixed (unreported) 'convert object' messing up linked data (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/880e96dd667">rB880e96dd</a>).</li>
+<li>Fixed (unreported) bunch of potential issues in datablock freeing (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b488988ab10a5f">rBb488988a</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7a80c34f52b694">rB7a80c34f</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25c0666b901d8a0">rB25c0666b</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7853ebc204238a660">rB7853ebc2</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bd51474a440aaa">rB2bd51474</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee5ed2ae26bd8">rBee5ed2ae</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e0a253ea161634">rB9e0a253e</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ddb8330571ac94">rBddb83305</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Unreported fixes: 2; Closed: 10;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on ID copying, hopefully override/assset work.</li></ul></li></ul>
+<h2><span id="Week_195_-_06/03_to_06/09"></span><span class="mw-headline" id="Week_195_-_06.2F03_to_06.2F09">Week 195 - 06/03 to 06/09</span></h2>
+<p>Ended up being a small week, something like three days of work, spent on tracker and a bit on gsoc mentoring.
+</p>
+<ul><li>General Development:
+<ul><li>Did another attempt to solve FBX scaling issues, in temp branch for now (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/0a03ed937b62">rBA0a03ed9</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51700">#51700</a> obj export error (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/473d074b34b6">rBA473d074</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51733">#51733</a> 3d print toolbox checks report false positives (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c71e160c022a">rBc71e160c</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51658">#51658</a> Exporting and Importing OBJ Files isn't working (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/84baf76f48e0">rBA84baf76</a>).</li>
+<li>Fixed (IRC reported) Crash when making local object+obdata with linked armature (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f097e73a2aa">rBf097e73a</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 3; Unreported fixes: 1; Closed: 15;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: keep working on override/assset work.</li></ul></li></ul>
+<h2><span id="Week_194_-_05/27_to_06/02"></span><span class="mw-headline" id="Week_194_-_05.2F27_to_06.2F02">Week 194 - 05/27 to 06/02</span></h2>
+<p>Heavy tracker week, also resumed a bit work on assets/static_overrides. And workspaces were finally made ready for master and merged!
+</p>
+<ul><li>General Development:
+<ul><li>Added minimal support for Cycles shader in OBJ importer (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/0ed2792d30d726">rBA0ed2792</a>).</li>
+<li>Usual i18n update.</li>
+<li>Submitted new build to Coverityscan.</li></ul></li></ul>
+<ul><li>Assets:
+<ul><li>Worked on static override towards proxy-like support for armatures + deformed objects.</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Workspace branch: Changed 'do not link WS data-blocks' check to something more limited, temporary in code.</li>
+<li>Finalized ultimate details of workspace review.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51637">#51637</a> Mesh Tools - Noise Button Crashes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/275e2fb0ff6e">rB275e2fb0</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51627">#51627</a> .mdd &amp; .pc2 export leave unfreed mesh data in memory killing Blender on larger animations (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/51ee36db6210">rBA51ee36d</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51624">#51624</a> Scene Full Copy ignores shader node links (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be31582e3d42">rBbe31582e</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51520">#51520</a> Broken vertex weights after two mesh joining (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fb56e715755">rB2fb56e71</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51625">#51625</a> Deleting an object doesn't always remove shader node links to it (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08b79554156e">rB08b79554</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51390">#51390</a> Blender 2 .78c will freeze or force close when adding particles at random (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06ca2c9d0320">rB06ca2c9d</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51657">#51657</a> ID user count error when deleting a newly created object with an assigned dupli_group (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f212bfa3cd57">rBf212bfa3</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50775">#50775</a> Missing parenthesis on fluid bake button (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/76c97aaff94c">rB76c97aaf</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51680">#51680</a> 'Delete Group' from Group view of Outliner does not work (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f783efd1279a">rBf783efd1</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51687">#51687</a> IntegerSocket+Material view crashes blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/528ae8885ebb">rB528ae888</a>).</li>
+<li>Fixed (unreported) bad handling of usercount at Group creation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8b0f968a312e429">rB8b0f968a</a>).</li>
+<li>Checked/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2528">D2528</a> Fix 50086 - Set Offset From Cursor crashing with wrong context (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b947810291b16d3f304e">rBb9478102</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 10; Unreported fixes: 1; reviews: 1; Closed: 30;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: bring workspace in branch, hopefully resume override/assset work.</li></ul></li></ul>
+<h2><span id="Week_193_-_05/20_to_05/26"></span><span class="mw-headline" id="Week_193_-_05.2F20_to_05.2F26">Week 193 - 05/20 to 05/26</span></h2>
+<p>Week spent mainly on tracker, especially some ugly modifier bug that ate over two days of work, yuck. Also spent some time with GSoC student.
+</p>
+<ul><li>General Development:
+<ul><li>Reviewed/cleaned up/committed PovRay syntax highlighting for our text editor, by Maurice Raybaud (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b2923380092c7">rB9b292338</a>).</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Finally finished hellish envelope bone drawing (mainly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c799ba8013405">rB3c799ba8</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0ceb1821bb20">rBd0ceb182</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/23f256b24bed34b">rB23f256b2</a>, see <a rel="nofollow" class="external text" href="http://developer.blender.org/T51363">#51363</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51336">#51336</a> Crash on file open (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/baf788d7cd1c">rBbaf788d7</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51520">#51520</a> Broken vertex weights after two mesh joining (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3d63215308f">rBe3d63215</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51318">#51318</a> Non-update of preview when switching from world to lamp panel (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/849e77b1f957">rB849e77b1</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50851">#50851</a> Specific scene multiple case crashes, but mostly on render (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d58080e235b8cde">rB4d58080e</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 4; Closed: 9;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work.</li>
+<li>Blender2.8: bring workspace in branch, hopefully resume override/assset work.</li></ul></li></ul>
+<h2><span id="Week_192_-_05/13_to_05/19"></span><span class="mw-headline" id="Week_192_-_05.2F13_to_05.2F19">Week 192 - 05/13 to 05/19</span></h2>
+<p>Finally won the fight with envelope bone drawing for new drawmanager, and a bit of bug tracker.
+</p>
+<ul><li>General Development:
+<ul><li>Updated python/OCIO/collada libs in install_deps' script (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6bf05ab2ca7f2">rB6bf05ab2</a>).</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Finally finished hellish envelope bone drawing (mainly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c799ba8013405">rB3c799ba8</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0ceb1821bb20">rBd0ceb182</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/23f256b24bed34b">rB23f256b2</a>, see <a rel="nofollow" class="external text" href="http://developer.blender.org/T51363">#51363</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51524">#51524</a> Instantiated Hair Object which has dupligroup children and hidden orig objects of group crash at render (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6f5e8d9a1aa">rBb6f5e8d9</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Closed: 5;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work (will try to bring tracker down a bit).</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_191_-_05/06_to_05/12"></span><span class="mw-headline" id="Week_191_-_05.2F06_to_05.2F12">Week 191 - 05/06 to 05/12</span></h2>
+<p>Very light week for various reasons, mostly spent on fixing some depsgraph issue and working on bone envelope drawing.
+</p>
+<ul><li>General Development:
+<ul><li>Investigated issue with some linked datablocks from Agent327 production files being incorrectly reported as directly used. Not much luck here, since this is not really crucial bug decided to stop wasting time on it for now.</li>
+<li>Investigated missing update when editing NodeTree of World with new depsgraph (fix committed in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42c346028f535968df">rB42c34602</a>).</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Worked on envelope bone drawing, not much done there.</li>
+<li>Reviewed workspace patch (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2451">D2451</a>).</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work (will try to bring tracker down a bit).</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_190_-_04/29_to_05/05"></span><span class="mw-headline" id="Week_190_-_04.2F29_to_05.2F05">Week 190 - 04/29 to 05/05</span></h2>
+<p>Heavy week, mostly spent on Blender2.8 OpenGL work, and investigating/fixing hairy issue with make local code in complex Agent327 scene.
+</p>
+<ul><li>General Development:
+<ul><li>Investigated/fixed crash and other issues related to MakeLocal in some Agent327 file.</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Finished main step of setlinestyle replacement for new core profile OpenGL in blender2.8 (only remaining place of concern is DrawManager context, drawobject.c and drawmesh.c can be ignored since they are to be removed at some point, being legacy draw code).</li>
+<li>Finished implementation of BBone/Wire Armature draw modes in DrawManager (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d116932f3a6cf0">rBd116932f</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>"Fixed" <a rel="nofollow" class="external text" href="http://developer.blender.org/T51260">#51260</a> Forward compatibility after D113 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15189baa5231">rB15189baa</a>), also added related warning and notes in <a href="../../Dev:Ref/Release_Notes/2.79.html" class="mw-redirect" title="Dev:Ref/Release Notes/2.79">release notes</a>.</li>
+<li>Fixed (unreported) memleak in Warp modifier copying (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b6838129f022102">rB5b683812</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Unreported fix: 1; Closed: 3;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_189_-_04/22_to_04/28"></span><span class="mw-headline" id="Week_189_-_04.2F22_to_04.2F28">Week 189 - 04/22 to 04/28</span></h2>
+<p>Spent whole week on OpenGL dashed line replacement, mostly done now.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on new GLSL dashed lines to replace deprecated setlinestyle() calls.</li>
+<li>Finalized/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2605">D2605</a> Add C internal version of msgfmt (similar to makesrna/dna binaries) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d67609697e7a">rBd6760969</a>).</li>
+<li>Investigated better handling of "max painting per stroke" effect in new PBVH vpaint code, see <a rel="nofollow" class="external text" href="http://developer.blender.org/D2150">D2150</a>.</li>
+<li>Usual i18n update.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li></ul></li></ul>
+<dl><dd>Closed: 1;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_188_-_04/15_to_04/21"></span><span class="mw-headline" id="Week_188_-_04.2F15_to_04.2F21">Week 188 - 04/15 to 04/21</span></h2>
+<p>Spent most of the week on OpenGL Dashed shader.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on new GLSL dashed lines to replace deprecated setlinestyle() calls.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51176">#51176</a> Cache file location can be blank and prevent fluid simulation from reading baked data (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4621392353c2">rB46213923</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51150">#51150</a> user_remap on itself changes users to 0 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d0d1b5936c5">rB4d0d1b59</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T51243">#51243</a> Delete Globally won't work with Datablock ID Properties (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1873ea337c24">rB1873ea33</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 3; Closed: 2;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_187_-_04/08_to_04/14"></span><span class="mw-headline" id="Week_187_-_04.2F08_to_04.2F14">Week 187 - 04/08 to 04/14</span></h2>
+<p>Was a rather small week for me, also first week of Blender2.8 OpenGL 'workforce', mainly tackling low hanging fruits and getting used to new OGL APIs...
+</p>
+<ul><li>General Development:
+<ul><li>Fixed keymaps registering issues for some addons (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1cd54ec225d9fd66">rB1cd54ec2</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/582a14ff6d1da5aa">rBA582a14f</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons-contrib/commit/4488335acef2a47">rBAC448833</a>).</li>
+<li>Reviewed some GSoC proposals.</li></ul></li></ul>
+<ul><li>Blender2.8:
+<ul><li>Removed last usages of deprecated QUAD primitives in our OpenGL code.</li>
+<li>Removed some deprecated OpenGL calls from new manipulator code.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More Blender2.8 OGL.</li></ul></li></ul>
+<h2><span id="Week_186_-_04/01_to_04/07"></span><span class="mw-headline" id="Week_186_-_04.2F01_to_04.2F07">Week 186 - 04/01 to 04/07</span></h2>
+<p>Finally finished ID pointers IDProperties patch review/finalization, also reviewed some GSoC proposals.
+</p>
+<ul><li>General Development:
+<ul><li>Finished review/work on <a rel="nofollow" class="external text" href="http://developer.blender.org/D113">D113</a> Datablock ID Properties, at last!</li>
+<li>Reviewed some GSoC proposals.</li>
+<li>Worked on static overrides (finished first rough version of UI interaction to define/clear overrides).</li>
+<li>Worked on moving our msgfmt.cc to C version (MSVC debug building is dead slow otherwise!, <a rel="nofollow" class="external text" href="http://developer.blender.org/D2605">D2605</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50976">#50976</a> Blender UI problems with certain theme files (blender2.8, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f6037c887863e6">rB1f6037c8</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>Start Blender2.8 OGL work to finalize that refactor.</li></ul></li></ul>
+<h2><span id="Week_185_-_03/25_to_03/31"></span><span class="mw-headline" id="Week_185_-_03.2F25_to_03.2F31">Week 185 - 03/25 to 03/31</span></h2>
+<p>Spent whole week over ID pointer IDProperties (fixing, adding missing things, etc.), see <a rel="nofollow" class="external text" href="http://developer.blender.org/D113">D113</a>.
+</p>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_184_-_03/18_to_03/24"></span><span class="mw-headline" id="Week_184_-_03.2F18_to_03.2F24">Week 184 - 03/18 to 03/24</span></h2>
+<p>Spent most of the week on ID static override, and reviewing some patches.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static override (adding some basic UI/UX control).</li>
+<li>Cleanup: removed soon-to-be-deprecated usage of (un)register_module() from addons I maintain.</li>
+<li>Usual i18n update.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D113">D113</a> Datablock ID Properties.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2565">D2565</a> Application Templates Pach.</li>
+<li>Fixed various i18n ambiguous issues reported in <a rel="nofollow" class="external text" href="http://developer.blender.org/T43295">#43295</a> (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a7f16c17c260">rBa7f16c17</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Reviewed: 2; Closed: 1;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_183_-_03/11_to_03/17"></span><span class="mw-headline" id="Week_183_-_03.2F11_to_03.2F17">Week 183 - 03/11 to 03/17</span></h2>
+<p>Electricity was back, so back to work!
+</p>
+<ul><li>General Development:
+<ul><li>Refactored writefile.c towards more generic handling of datablocks (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2510">D2510</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98b81493f3451f">rB98b81493</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50876">#50876</a> Cycles Crash - Cycles crashes before sampling when certain meshes have autosmooth enabled (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/521133682c6f5">rB52113368</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1410ea04788aa">rB1410ea04</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/284701e371fd10f">rB284701e3</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f3ff03b3c1a">rBf3ff03b3</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50926">#50926</a> python crashes with path containing utf8 characters (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/43f7d5643ff2">rB43f7d564</a>.</li>
+<li>Fixed (IRC reported) outliner contextual menu allowing to delete indirect libraries (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa9bd044833b">rBfa9bd044</a>).</li>
+<li>Fixed (IRC reported) missing undo pushes in outliner's new datablock management operations (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f65ab606bc">rB1f65ab60</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D113">D113</a> Datablock ID Properties.</li></ul></li></ul>
+<dl><dd>Fixed: 4; Reviewed: 1; Closed: 22;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_182_-_03/04_to_03/10"></span><span class="mw-headline" id="Week_182_-_03.2F04_to_03.2F10">Week 182 - 03/04 to 03/10</span></h2>
+<p>Blackout week thanks to Zeus, so mainly holidays one…
+</p>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50900">#50900</a> Text-Blocks created from "Edit Source" have zero users.</li>
+<li>Fixed (unreported) useless allocation of edge_vectors in threaded case of loop split generation.</li>
+<li>Worked on <a rel="nofollow" class="external text" href="http://developer.blender.org/T50876">#50876</a> Cycles Crash - Cycles crashes before sampling when certain meshes have autosmooth enabled.</li></ul></li></ul>
+<dl><dd>Fixed: 1; Unreported fix: 1; Investigated: 1; Closed: 6;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_181_-_02/25_to_03/03"></span><span class="mw-headline" id="Week_181_-_02.2F25_to_03.2F03">Week 181 - 02/25 to 03/03</span></h2>
+<p>Worked on static override mostly.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static override (reworked how diff override data is stored in .blend file, added some UI feedback).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T49655">#49655</a> Reloading library breaks animated proxy (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/df88d5428433">rBdf88d542</a>).</li>
+<li>Fixed (unreported) missing update when adding constraint from RNA (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d66d5790e9fa82">rBd66d5790</a>).</li>
+<li>Reviewed/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2523">D2523</a> When creating texture/image in Texture Paint mode, both datablocks should get the same name (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdfae957f247">rBcdfae957</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Unreported fix: 1; Reviewed: 1; Closed: 6;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_180_-_02/18_to_02/24"></span><span class="mw-headline" id="Week_180_-_02.2F18_to_02.2F24">Week 180 - 02/18 to 02/24</span></h2>
+<p>Implemented BMesh access for new (2.8) viewport draw code, and worked on some issue with sharp edge split code.
+</p>
+<ul><li>General Development:
+<ul><li>Finished refactored BKE_split_faces (and fixing issues, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae1c1cd8c0da0c4">rBae1c1cd8</a>).</li>
+<li>Committed to blender2.8 <a rel="nofollow" class="external text" href="http://developer.blender.org/D2521">D2521</a> Initial rework of BKE's mesh_render to support BMesh directly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef60979029">rBef609790</a>).</li>
+<li>Usual i18n update.</li>
+<li>Updated our API doc layout and generating scripts to match new names, as decide in <a rel="nofollow" class="external text" href="http://developer.blender.org/T50466">#50466</a> (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c7ad27fc07d9a">rBc7ad27fc</a>).</li>
+<li>Updated Py API doc.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50745">#50745</a> Shape key editing on bezier objects broken with Rendered Viewport Shading (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e1d4714fef7">rB5e1d4714</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50736">#50736</a> Zero streaks in Glare node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9dd194716b0f">rB9dd19471</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50676">#50676</a> Crash on closing while frameserver rendering (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9062c086b481">rB9062c086</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2524">D2524</a> Fix rows with fixed last item.</li></ul></li></ul>
+<dl><dd>Fixed: 3; Reviewed: 1; Closed: 18;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_179_-_02/11_to_02/17"></span><span class="mw-headline" id="Week_179_-_02.2F11_to_02.2F17">Week 179 - 02/11 to 02/17</span></h2>
+<p>Tracker week (triaging mostly, not even fixing&#160;:/ ).
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static override.</li>
+<li>Refactored writefile code to be more in line with other parts of blender, and make it easier to add generic ID pre/post writing process (<a rel="nofollow" class="external text" href="http://developer.blender.org/D2510">D2510</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50614">#50614</a> Curve doesn't restore initial form after deleting all its shapekeys (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f1493f68fe0">rB6f1493f6</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 1; Closed: 34;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_178_-_02/04_to_02/10"></span><span class="mw-headline" id="Week_178_-_02.2F04_to_02.2F10">Week 178 - 02/04 to 02/10</span></h2>
+<p>Mostly worked on override this week, trying to solve some performances/efficiency issues.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static override.</li>
+<li>Usual i18n update.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50590">#50590</a> BI lamp doesn't hold a texture in this case (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6663099810f5">rB66630998</a>).</li>
+<li>Fixed (IRC-reported) 'public' global 'g_atexit' var in Blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ac8348d033914">rBac8348d0</a>).</li>
+<li>Fixed (IRC reported) noisy assert when trying to read file linking non-existing libraries (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3ede515b5b3b">rB3ede515b</a>).</li>
+<li>Fixed (unreported) crash in new snap code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2c469edc2">rBa2c469ed</a>).</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T50587">#50587</a> Hair system, pick random from dupligroup leads to a huge viewport performance drop.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2505">D2505</a> Snap_System: Reduction of memory used by DerivedMesh.</li></ul></li></ul>
+<dl><dd>Fixed: 3; Unreported fix: 1; Investigated: 1; Reviewed: 1; Closed: 12;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/override related work.</li></ul></li></ul>
+<h2><span id="Week_177_-_01/28_to_02/03"></span><span class="mw-headline" id="Week_177_-_01.2F28_to_02.2F03">Week 177 - 01/28 to 02/03</span></h2>
+<p>Back on business, mostly on tracker this week.
+</p>
+<ul><li>General Development:
+<ul><li>Finalized initial work on enhancing efficiency of massive data-blocks relationships management (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4443bad30a">rB4443bad3</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fbd28d375a">rBfbd28d37</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eadfd901ad7c">rBeadfd901</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc4aeefe82205">rBbc4aeefe</a>).</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50566">#50566</a> FBX import fails to read file exported from Modo (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/1a0b479eda">rBA1a0b479</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50570">#50570</a> pressing pgup or pgdn in any scrollable area irreversably alters scrolling speed (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fb61711b1a9e">rBfb61711b</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50524">#50524</a> Basis shapekey editing while rendering bug (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e2dca933e3e">rB9e2dca93</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50084">#50084</a> Adding torus re-orders UV layers (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f67367f0aae">rB9f67367f</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T49860">#49860</a> Crash on Copy Vertex Group to Selected (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f3a7104adbe2">rBf3a7104a</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50125">#50125</a> Shortcut keys missing in menus for Clear Location, Rotation, and Scale (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/52696a0d3f8f">rB52696a0d</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2496">D2496</a> Remove <code>SNAP_OBJECT_USE_CACHE</code> flag from snap context.</li></ul></li></ul>
+<dl><dd>Fixed: 6; Reviewed: 1; Closed: 7;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/poselib related work.</li></ul></li></ul>
+<h2><span id="Week_176_-_01/21_to_01/27"></span><span class="mw-headline" id="Week_176_-_01.2F21_to_01.2F27">Week 176 - 01/21 to 01/27</span></h2>
+<p>Another half-time week, mostly spent of enhancing time issue from relations between IDs in data-block management (mainly, make all local feature).
+</p>
+<ul><li>General Development:
+<ul><li>Worked on enhancing efficiency of massive data-blocks relationships management.</li>
+<li>Usual i18n updates.</li>
+<li>Updated py API doc.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50491">#50491</a> Cycles UI breaks when pushing F8 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce8889175a55">rBce888917</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50534">#50534</a> exported normals do not correspond with normals shown in viewport (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fb2f95c91a36">rBfb2f95c9</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/11abb1348301">rB11abb134</a>).</li>
+<li>Fixed (IRC reported) DataTransfer modifier affecting base mesh in some cases (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e4e1900012">rBe4e19000</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2403">D2403</a> Compositor: Make HSV node inputs a real sockets.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2474">D2474</a> Snap Functions: Remove the use of the function 'BLI_bvhtree_find_nearest_to_ray'.</li></ul></li></ul>
+<dl><dd>Fixed: 3; Reviewed: 2; Closed: 4;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/poselib related work.</li></ul></li></ul>
+<h2><span id="Week_175_-_01/14_to_01/20"></span><span class="mw-headline" id="Week_175_-_01.2F14_to_01.2F20">Week 175 - 01/14 to 01/20</span></h2>
+<p>That week turned out to be half-time really, too much things outside of Blender…&#160;:/
+</p>
+<ul><li>General Development:
+<ul><li>Refactored some name handling code (uniquename, flip name..., <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b997988323">rBb9979883</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7ce833af5b">rB7ce833af</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0303d02974">rBe0303d02</a>).</li>
+<li>Updated Coverity scan build of Blender, and fixed some issues reported by it.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50393">#50393</a> Flip names working just on one side (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/702bc5ba26d5">rB702bc5ba</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50453">#50453</a> fbx exporter "apply modifier" misunderstand (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/18099be5f837a">rBA18099be</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/a746a84f8aaf3a">rBAa746a84</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2150">D2150</a> GSoC 2016: Added PBVH based vertex and weight painting to Blender.</li>
+<li>Post-commit review/cleanup of <a rel="nofollow" class="external text" href="http://developer.blender.org/D2239">D2239</a> Signifcant Refactor for the Images as Planes Addon (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/8f2efdb7590aac">rBA8f2efdb</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/21781083e41">rBA2178108</a>).</li></ul></li></ul>
+<dl><dd>Fixed: 2; Reviewed: 2; Closed: 6;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/poselib related work.</li></ul></li></ul>
+<h2><span id="Week_174_-_01/07_to_01/13"></span><span class="mw-headline" id="Week_174_-_01.2F07_to_01.2F13">Week 174 - 01/07 to 01/13</span></h2>
+<p>Lot of review work done again this week… Static override is really ready for first skim review on its design at least now.
+</p>
+<ul><li>General Development:
+<ul><li>Worked on static ID override.</li>
+<li>Usual i18n updates.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50385">#50385</a> Deadlock in BKE_libblock_remap_locked (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c756162aed5">rB9c756162</a>).</li>
+<li>Fixed (IRC reported) missing user when opening text from ID UI widget (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/646aa40cf">rB646aa40c</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2423">D2423</a> Layouts with fixed size.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2456">D2456</a> Fix T50393: Flipping bone names error.</li>
+<li>Reviewed/committed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2423">D2423</a> Layouts with fixed size (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/da026249abbe">rBda026249</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2409">D2409</a> Dynamic Paint: improve UV island border handling in effects.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2448">D2448</a> proposed fix for T50352.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2459">D2459</a> Add cent_poly_v3 function.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2461">D2461</a> Fix out of bounds memory access in interp_weights_face_v3.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2460">D2460</a> Add 3d to 2d plane mapping functions to math lib.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2150">D2150</a> GSoC 2016: Added PBVH based vertex and weight painting to Blender.</li></ul></li></ul>
+<dl><dd>Fixed: 2; Reviewed: 9; Closed: 13;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/poselib related work.</li></ul></li></ul>
+<h2><span id="Week_173_-_12/31_to_01/06"></span><span class="mw-headline" id="Week_173_-_12.2F31_to_01.2F06">Week 173 - 12/31 to 01/06</span></h2>
+<p>Mostly worked on some utf8 handling issues in our code, and static override.
+</p>
+<ul><li>General Development:
+<ul><li>Added some utf-8 gtests (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/acbb84b021">rBacbb84b0</a>).</li>
+<li>Worked on static ID override.</li></ul></li></ul>
+<ul><li>Bug Tracker:
+<ul><li>BT misc (general check, assign &amp; close work).</li>
+<li>Fixed (unreported) heavily broken 'utf-8 sanitizer' BLI code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/adadfaad880b2a">rBadadfaad</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50305">#50305</a> Blender truncates a long multibyte character object's name to an invalid utf-8 string (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7924c84c44c7">rB7924c84c</a>).</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T50369">#50369</a> Objects can't be deleted from scene when using "link group objects to scene" ({{GitCommit|rB351a9d084f59}).</li>
+<li>Fixed (IRC reported) bad handling of Text data-block user count (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a9163f7d222">rBa9163f7d</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D2449">D2449</a> proposed fix for T50373.</li></ul></li></ul>
+<dl><dd>Fixed: 4; Reviewed: 1; Closed: 10;</dd></dl>
+<ul><li>Next week:
+<ul><li>Usual BT &amp; patches work…</li>
+<li>More assets/poselib related work.</li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240111170532
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 2.076 seconds
+Real time usage: 2.072 seconds
+Preprocessor visited node count: 41666/1000000
+Preprocessor generated node count: 9189/1000000
+Post‐expand include size: 173414/2097152 bytes
+Template argument size: 58184/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1854.394      1 -total
+ 94.64% 1754.920    221 Template:GitCommit
+ 84.43% 1565.604    441 Template:GitCommit/PhabricatorParse
+  1.32%   24.441    129 Template:BugReport
+  0.50%    9.240     47 Template:PhabDiff
+  0.10%    1.806      1 Template:GitCommit/PhabricatorParseDeprecated
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6677-0!canonical and timestamp 20240111170530 and revision id 33698
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;oldid=33698">https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;oldid=33698</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 9 February 2023, at 09:22.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:Mont29/Foundation/2017" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Mont29/Foundation/2017" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Mont29.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Mont29.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Mont29.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;oldid=33698" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Mont29/Foundation/2017&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"2.076","walltime":"2.072","ppvisitednodes":{"value":41666,"limit":1000000},"ppgeneratednodes":{"value":9189,"limit":1000000},"postexpandincludesize":{"value":173414,"limit":2097152},"templateargumentsize":{"value":58184,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00% 1854.394      1 -total"," 94.64% 1754.920    221 Template:GitCommit"," 84.43% 1565.604    441 Template:GitCommit/PhabricatorParse","  1.32%   24.441    129 Template:BugReport","  0.50%    9.240     47 Template:PhabDiff","  0.10%    1.806      1 Template:GitCommit/PhabricatorParseDeprecated"]},"cachereport":{"timestamp":"20240111170532","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":45});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453fbd09d9b918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

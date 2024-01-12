@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:NathanVegdahl/WeeklyReports/2023 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:NathanVegdahl/WeeklyReports/2023","wgTitle":"NathanVegdahl/WeeklyReports/2023","wgCurRevisionId":37847,"wgRevisionId":37847,"wgArticleId":6775,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:NathanVegdahl/WeeklyReports/2023","wgRelevantArticleId":6775,"wgRequestId":"53d90e7c35ca849ee9119138","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"NathanVegdahl","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_NathanVegdahl_WeeklyReports_2023 rootpage-User_NathanVegdahl skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2023.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ANathanVegdahl%2FWeeklyReports%2F2023" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2023.html#2023"><span class="tocnumber">1</span> <span class="toctext">2023</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2023.html#December_11-15"><span class="tocnumber">1.1</span> <span class="toctext">December 11-15</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="2023.html#PR_and_Issue_review"><span class="tocnumber">1.1.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="2023.html#Development"><span class="tocnumber">1.1.2</span> <span class="toctext">Development</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="2023.html#December_04-08"><span class="tocnumber">1.2</span> <span class="toctext">December 04-08</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="2023.html#PR_and_Issue_review_2"><span class="tocnumber">1.2.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="2023.html#Development_2"><span class="tocnumber">1.2.2</span> <span class="toctext">Development</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="2023.html#November_27_-_December_01"><span class="tocnumber">1.3</span> <span class="toctext">November 27 - December 01</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="2023.html#PR_and_Issue_review_3"><span class="tocnumber">1.3.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="2023.html#Development_3"><span class="tocnumber">1.3.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="2023.html#Animation_2025"><span class="tocnumber">1.3.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="2023.html#November_20-24"><span class="tocnumber">1.4</span> <span class="toctext">November 20-24</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="2023.html#PR_and_Issue_review_4"><span class="tocnumber">1.4.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="2023.html#Development_4"><span class="tocnumber">1.4.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="2023.html#Misc"><span class="tocnumber">1.4.3</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="2023.html#November_13-17"><span class="tocnumber">1.5</span> <span class="toctext">November 13-17</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="2023.html#PR_and_Issue_review_5"><span class="tocnumber">1.5.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="2023.html#Development_5"><span class="tocnumber">1.5.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="2023.html#Misc_2"><span class="tocnumber">1.5.3</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="2023.html#November_06-10"><span class="tocnumber">1.6</span> <span class="toctext">November 06-10</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="2023.html#PR_and_Issue_review_6"><span class="tocnumber">1.6.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="2023.html#Development_6"><span class="tocnumber">1.6.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="2023.html#Animation_2025_2"><span class="tocnumber">1.6.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="2023.html#Misc_3"><span class="tocnumber">1.6.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="2023.html#October_30_-_November_03"><span class="tocnumber">1.7</span> <span class="toctext">October 30 - November 03</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="2023.html#PR_and_Issue_review_7"><span class="tocnumber">1.7.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="2023.html#Development_7"><span class="tocnumber">1.7.2</span> <span class="toctext">Development</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="2023.html#October_23-27"><span class="tocnumber">1.8</span> <span class="toctext">October 23-27</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2023.html#October_16-20"><span class="tocnumber">1.9</span> <span class="toctext">October 16-20</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="2023.html#PR_and_Issue_review_8"><span class="tocnumber">1.9.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="2023.html#Development_8"><span class="tocnumber">1.9.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="2023.html#Animation_2025_3"><span class="tocnumber">1.9.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="2023.html#Misc_4"><span class="tocnumber">1.9.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="2023.html#October_09-13"><span class="tocnumber">1.10</span> <span class="toctext">October 09-13</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="2023.html#PR_and_Issue_review_9"><span class="tocnumber">1.10.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="2023.html#Development_9"><span class="tocnumber">1.10.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="2023.html#Animation_2025_4"><span class="tocnumber">1.10.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="2023.html#Misc_5"><span class="tocnumber">1.10.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-39"><a href="2023.html#October_02-06"><span class="tocnumber">1.11</span> <span class="toctext">October 02-06</span></a>
+<ul>
+<li class="toclevel-3 tocsection-40"><a href="2023.html#PR_and_Issue_review_10"><span class="tocnumber">1.11.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="2023.html#Development_10"><span class="tocnumber">1.11.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="2023.html#Animation_2025_5"><span class="tocnumber">1.11.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="2023.html#Misc_6"><span class="tocnumber">1.11.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-44"><a href="2023.html#September_25-29"><span class="tocnumber">1.12</span> <span class="toctext">September 25-29</span></a>
+<ul>
+<li class="toclevel-3 tocsection-45"><a href="2023.html#PR_and_Issue_review_11"><span class="tocnumber">1.12.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="2023.html#Development_11"><span class="tocnumber">1.12.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="2023.html#Animation_2025_6"><span class="tocnumber">1.12.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-48"><a href="2023.html#September_18-22"><span class="tocnumber">1.13</span> <span class="toctext">September 18-22</span></a>
+<ul>
+<li class="toclevel-3 tocsection-49"><a href="2023.html#PR_and_Issue_review_12"><span class="tocnumber">1.13.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="2023.html#Development_12"><span class="tocnumber">1.13.2</span> <span class="toctext">Development</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-51"><a href="2023.html#September_11-15"><span class="tocnumber">1.14</span> <span class="toctext">September 11-15</span></a>
+<ul>
+<li class="toclevel-3 tocsection-52"><a href="2023.html#PR_and_Issue_review_13"><span class="tocnumber">1.14.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="2023.html#Development_13"><span class="tocnumber">1.14.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="2023.html#Animation_2025_7"><span class="tocnumber">1.14.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="2023.html#Misc_7"><span class="tocnumber">1.14.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-56"><a href="2023.html#September_04-08"><span class="tocnumber">1.15</span> <span class="toctext">September 04-08</span></a>
+<ul>
+<li class="toclevel-3 tocsection-57"><a href="2023.html#PR_and_Issue_review_14"><span class="tocnumber">1.15.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="2023.html#Development_14"><span class="tocnumber">1.15.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="2023.html#Animation_2025_8"><span class="tocnumber">1.15.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-60"><a href="2023.html#August_28_-_September_01"><span class="tocnumber">1.16</span> <span class="toctext">August 28 - September 01</span></a>
+<ul>
+<li class="toclevel-3 tocsection-61"><a href="2023.html#PR_and_Issue_review_15"><span class="tocnumber">1.16.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="2023.html#Development_15"><span class="tocnumber">1.16.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="2023.html#Animation_2025_9"><span class="tocnumber">1.16.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="2023.html#Misc_8"><span class="tocnumber">1.16.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-65"><a href="2023.html#August_21-25"><span class="tocnumber">1.17</span> <span class="toctext">August 21-25</span></a>
+<ul>
+<li class="toclevel-3 tocsection-66"><a href="2023.html#PR_and_Issue_review_16"><span class="tocnumber">1.17.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-67"><a href="2023.html#Development_16"><span class="tocnumber">1.17.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-68"><a href="2023.html#Animation_2025_10"><span class="tocnumber">1.17.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-69"><a href="2023.html#August_14-18"><span class="tocnumber">1.18</span> <span class="toctext">August 14-18</span></a>
+<ul>
+<li class="toclevel-3 tocsection-70"><a href="2023.html#PR_and_Issue_review_17"><span class="tocnumber">1.18.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-71"><a href="2023.html#Development_17"><span class="tocnumber">1.18.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-72"><a href="2023.html#Animation_2025_11"><span class="tocnumber">1.18.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-73"><a href="2023.html#Misc_9"><span class="tocnumber">1.18.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-74"><a href="2023.html#August_07-11"><span class="tocnumber">1.19</span> <span class="toctext">August 07-11</span></a>
+<ul>
+<li class="toclevel-3 tocsection-75"><a href="2023.html#PR_and_Issue_review_18"><span class="tocnumber">1.19.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-76"><a href="2023.html#Development_18"><span class="tocnumber">1.19.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-77"><a href="2023.html#Animation_2025_12"><span class="tocnumber">1.19.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-78"><a href="2023.html#July_31_-_August_04"><span class="tocnumber">1.20</span> <span class="toctext">July 31 - August 04</span></a>
+<ul>
+<li class="toclevel-3 tocsection-79"><a href="2023.html#PR_and_Issue_review_19"><span class="tocnumber">1.20.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-80"><a href="2023.html#Development_19"><span class="tocnumber">1.20.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-81"><a href="2023.html#Animation_2025_13"><span class="tocnumber">1.20.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-82"><a href="2023.html#Misc_10"><span class="tocnumber">1.20.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-83"><a href="2023.html#July_24-28"><span class="tocnumber">1.21</span> <span class="toctext">July 24-28</span></a>
+<ul>
+<li class="toclevel-3 tocsection-84"><a href="2023.html#PR_and_Issue_review_20"><span class="tocnumber">1.21.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-85"><a href="2023.html#Development_20"><span class="tocnumber">1.21.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-86"><a href="2023.html#Animation_2025_14"><span class="tocnumber">1.21.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-87"><a href="2023.html#July_17-21"><span class="tocnumber">1.22</span> <span class="toctext">July 17-21</span></a>
+<ul>
+<li class="toclevel-3 tocsection-88"><a href="2023.html#PR_and_Issue_review_21"><span class="tocnumber">1.22.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-89"><a href="2023.html#Development_21"><span class="tocnumber">1.22.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-90"><a href="2023.html#Animation_2025_15"><span class="tocnumber">1.22.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-91"><a href="2023.html#Misc_11"><span class="tocnumber">1.22.4</span> <span class="toctext">Misc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-92"><a href="2023.html#July_10-14"><span class="tocnumber">1.23</span> <span class="toctext">July 10-14</span></a>
+<ul>
+<li class="toclevel-3 tocsection-93"><a href="2023.html#PR_and_Issue_review_22"><span class="tocnumber">1.23.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-94"><a href="2023.html#Development_22"><span class="tocnumber">1.23.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-95"><a href="2023.html#Animation_2025_16"><span class="tocnumber">1.23.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-96"><a href="2023.html#July_03-07"><span class="tocnumber">1.24</span> <span class="toctext">July 03-07</span></a>
+<ul>
+<li class="toclevel-3 tocsection-97"><a href="2023.html#PR_and_Issue_review_23"><span class="tocnumber">1.24.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-98"><a href="2023.html#Development_23"><span class="tocnumber">1.24.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-99"><a href="2023.html#Animation_2025_17"><span class="tocnumber">1.24.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-100"><a href="2023.html#June_26-30"><span class="tocnumber">1.25</span> <span class="toctext">June 26-30</span></a>
+<ul>
+<li class="toclevel-3 tocsection-101"><a href="2023.html#Animation_2025_18"><span class="tocnumber">1.25.1</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-102"><a href="2023.html#June_19-23"><span class="tocnumber">1.26</span> <span class="toctext">June 19-23</span></a>
+<ul>
+<li class="toclevel-3 tocsection-103"><a href="2023.html#PR_and_Issue_review_24"><span class="tocnumber">1.26.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-104"><a href="2023.html#Development_24"><span class="tocnumber">1.26.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-105"><a href="2023.html#Animation_2025_19"><span class="tocnumber">1.26.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-106"><a href="2023.html#June_12-16"><span class="tocnumber">1.27</span> <span class="toctext">June 12-16</span></a>
+<ul>
+<li class="toclevel-3 tocsection-107"><a href="2023.html#Development_25"><span class="tocnumber">1.27.1</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-108"><a href="2023.html#Animation_2025_20"><span class="tocnumber">1.27.2</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-109"><a href="2023.html#Color"><span class="tocnumber">1.27.3</span> <span class="toctext">Color</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-110"><a href="2023.html#June_05-09"><span class="tocnumber">1.28</span> <span class="toctext">June 05-09</span></a>
+<ul>
+<li class="toclevel-3 tocsection-111"><a href="2023.html#PR_and_Issue_review_25"><span class="tocnumber">1.28.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-112"><a href="2023.html#Development_26"><span class="tocnumber">1.28.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-113"><a href="2023.html#Animation_2025_21"><span class="tocnumber">1.28.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-114"><a href="2023.html#May_29-June_02"><span class="tocnumber">1.29</span> <span class="toctext">May 29-June 02</span></a>
+<ul>
+<li class="toclevel-3 tocsection-115"><a href="2023.html#PR_and_Issue_review_26"><span class="tocnumber">1.29.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-116"><a href="2023.html#Development_27"><span class="tocnumber">1.29.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-117"><a href="2023.html#Animation_2025_22"><span class="tocnumber">1.29.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-118"><a href="2023.html#May_22-26"><span class="tocnumber">1.30</span> <span class="toctext">May 22-26</span></a>
+<ul>
+<li class="toclevel-3 tocsection-119"><a href="2023.html#PR_and_Issue_review_27"><span class="tocnumber">1.30.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-120"><a href="2023.html#Development_28"><span class="tocnumber">1.30.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-121"><a href="2023.html#Animation_2025_23"><span class="tocnumber">1.30.3</span> <span class="toctext">Animation 2025</span></a></li>
+<li class="toclevel-3 tocsection-122"><a href="2023.html#Color_Management"><span class="tocnumber">1.30.4</span> <span class="toctext">Color Management</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-123"><a href="2023.html#May_15-19"><span class="tocnumber">1.31</span> <span class="toctext">May 15-19</span></a>
+<ul>
+<li class="toclevel-3 tocsection-124"><a href="2023.html#PR_and_Issue_review_28"><span class="tocnumber">1.31.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-125"><a href="2023.html#Development_29"><span class="tocnumber">1.31.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-126"><a href="2023.html#Animation_2025_24"><span class="tocnumber">1.31.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-127"><a href="2023.html#May_8-12"><span class="tocnumber">1.32</span> <span class="toctext">May 8-12</span></a>
+<ul>
+<li class="toclevel-3 tocsection-128"><a href="2023.html#PR_and_Issue_review_29"><span class="tocnumber">1.32.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-129"><a href="2023.html#Development_30"><span class="tocnumber">1.32.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-130"><a href="2023.html#Animation_2025_25"><span class="tocnumber">1.32.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-131"><a href="2023.html#May_1-5"><span class="tocnumber">1.33</span> <span class="toctext">May 1-5</span></a>
+<ul>
+<li class="toclevel-3 tocsection-132"><a href="2023.html#PR_and_Issue_review_30"><span class="tocnumber">1.33.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-133"><a href="2023.html#Animation_2025_26"><span class="tocnumber">1.33.2</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-134"><a href="2023.html#April_24-28"><span class="tocnumber">1.34</span> <span class="toctext">April 24-28</span></a>
+<ul>
+<li class="toclevel-3 tocsection-135"><a href="2023.html#PR_and_Issue_review_31"><span class="tocnumber">1.34.1</span> <span class="toctext">PR and Issue review</span></a></li>
+<li class="toclevel-3 tocsection-136"><a href="2023.html#Development_31"><span class="tocnumber">1.34.2</span> <span class="toctext">Development</span></a></li>
+<li class="toclevel-3 tocsection-137"><a href="2023.html#Animation_2025_27"><span class="tocnumber">1.34.3</span> <span class="toctext">Animation 2025</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-138"><a href="2023.html#April_17-21"><span class="tocnumber">1.35</span> <span class="toctext">April 17-21</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:NathanVegdahl/WeeklyReports/2023</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:NathanVegdahl.html" title="User:NathanVegdahl">User:NathanVegdahl</a>&lrm; | <a href="../WeeklyReports.html" title="User:NathanVegdahl/WeeklyReports">WeeklyReports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="2023">2023</span></h1>
+<h2><span class="mw-headline" id="December_11-15">December 11-15</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review">PR and Issue review</span></h3>
+<ul><li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">Anim: Bake Channel operator #111263</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115522">Anim: Don't use keying sets when inserting keyframes during autokeying #115522</a>.</li>
+<li>Tested and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115807">Fix #114981&#160;: Add box, circle and lasso selection tools to weight paint + bone select mode #115807</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116163">Anim: Add falloff shape property to Weight Paint context menu #116163</a>.</li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115915">Very strange constraint jiggling not present in blender 3.6.3 #115915</a>.</li></ul>
+<h3><span class="mw-headline" id="Development">Development</span></h3>
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115931">Cleanup: rename bArmature.collections -&gt; bArmature.collections_legacy #115931</a>.</li></ul>
+<p>	* And subsequent fix of the resulting build break: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/274dc815eb35f6eb42dc2188eff0ebc447276f56">Fix: update collada export code to use the new bone collections array</a>.
+</p>
+<ul><li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115934">hierarchical bone collections</a> with Sybren.</li></ul>
+<h2><span class="mw-headline" id="December_04-08">December 04-08</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_2">PR and Issue review</span></h3>
+<ul><li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115663">Fix #115657: Bone's tail is still selected after invert selection #115663</a>.</li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113208">Anim: Action bake custom properties #113208</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">Anim: Bake Channel operator #111263</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115810">Fix #115330: Animation not updating when cancelling modal operators in the Graph Editor #115810</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_2">Development</span></h3>
+<ul><li>More work on and landing of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115354">Anim: store BoneCollections in a flat array #115354</a>.</li>
+<li>Pair programming with Sybren on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115945">hierarchical bone collections</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="November_27_-_December_01">November 27 - December 01</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_3">PR and Issue review</span></h3>
+<ul><li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114202">Anim: Add "Add/delete" track operations to NLA context menu #114202</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115517">Fix: FCurve colors on bones #115517</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115360">Anim: Change how Only Insert Needed works #115360</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113208">Anim: Action bake custom properties #113208</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115409">Fix #44834: Add bone selection icon next to face and vertex selection in weight paint mode #115409</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_3">Development</span></h3>
+<ul><li>Polished <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115354">Anim: store BoneCollections in a flat array #115354</a> and took it out of WIP status.</li>
+<li>Implemented and landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115477">Fix #115434: custom bone colors invisible in stick mode #115477</a>.</li>
+<li>Implemented and landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115534">Fix: allow overshoot numerical input in the Pose Breakdowner operator #115534</a>.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025">Animation 2025</span></h3>
+<ul><li>Started working on UX design for the MVP data model.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="November_20-24">November 20-24</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_4">PR and Issue review</span></h3>
+<ul><li>Another review of and approval of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">Anim: View FCurve of Property in the Graph Editor #114407</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114845">Fix #114828: Don't rebuild outliner tree when frame scrubbing #114845</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">Anim: Insert keyframes without keying sets #113504</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115064">Anim: Add basic autokey tests #115064</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114854">Anim: Restrict range of fcurve_to_keylist #114854</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115011">Cleanup: internally renaming NLA Channels to NLA Tracks #115011</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115297">Fix: Inserting keys no longer sets the FCurve channel color #115297</a>.</li>
+<li>Gave some minor feedback on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114805">WIP: Anim: Refactoring NLA menu into more sensible format #114805</a></li>
+<li>A bit of discussion on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">Anim: Align new bones with the world axes #113138</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_4">Development</span></h3>
+<ul><li>More work on hierarchical bone collections: finished changing BoneCollections to be stored in an array rather than a listbase.</li></ul>
+<h3><span class="mw-headline" id="Misc">Misc</span></h3>
+<ul><li>Gave feedback on <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gltf-i-o-feedback-on-bpy-and-technical-open-points/32000/5">glTF I/O feedback on bpy and technical open points</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="November_13-17">November 13-17</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_5">PR and Issue review</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">Anim: View FCurve of Property in the Graph Editor #114407</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_5">Development</span></h3>
+<ul><li>Worked on hierarchical bone collections.</li></ul>
+<h3><span class="mw-headline" id="Misc_2">Misc</span></h3>
+<ul><li>Helped translate for visitors from some Japanese studios.</li>
+<li>Then got sick again, and was out for the rest of the week.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="November_06-10">November 06-10</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_6">PR and Issue review</span></h3>
+<ul><li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114465">Anim: Unit tests for inserting keyframes #114465</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114607">Fix #114588: Graph Editor increment snap not working #114607</a></li></ul>
+<h3><span class="mw-headline" id="Development_6">Development</span></h3>
+<ul><li>Continued work on hierarchical Bone Collections.  Changed approaches after discussion with Sybren.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_2">Animation 2025</span></h3>
+<ul><li>Discussed layer mixing behavior with Sybren.  No hard conclusions yet.</li></ul>
+<h3><span class="mw-headline" id="Misc_3">Misc</span></h3>
+<ul><li>Filed issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114588">Regression: snapping in graph editor with ctrl hotkey no longer functions properly #114588</a> on behalf of Hjalti.</li>
+<li>Joined meeting with Jacques where he gave an overview of gizmo support in Geometry Nodes.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="October_30_-_November_03">October 30 - November 03</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_7">PR and Issue review</span></h3>
+<ul><li>One more review pass and tentative approval of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">Drivers: implement fallback values for RNA path based variables. #110135</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114325">Fix: NLA mapping not taken into account when framing FCurves #114325</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_7">Development</span></h3>
+<ul><li>Implemented a fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109430">Regression: Crash on deleting NLA strip in tweak mode #109430</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114331">#114331</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="October_23-27">October 23-27</span></h2>
+<ul><li>Helped prepare the animation presentation for Blender Conference 2023.</li>
+<li>Blender Conference 2023.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="October_16-20">October 16-20</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_8">PR and Issue review</span></h3>
+<ul><li>Additional review on and approval of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110121">Fix #113552: NLA Markers do not reset when length reaches 0.0 #110121</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">Drivers: implement fallback values for RNA path based variables. #110135</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_8">Development</span></h3>
+<ul><li>Started implementing hierarchical Bone Collections.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_3">Animation 2025</span></h3>
+<ul><li>Made a detailed schedule for phase 1 of Animation 2025.</li>
+<li>Worked with Sybren on the Animation 2025 talk for BConf 2023.</li></ul>
+<h3><span class="mw-headline" id="Misc_4">Misc</span></h3>
+<ul><li>Made comparison images of Filmic and AgX for the Blender 4.0 release notes.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="October_09-13">October 09-13</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_9">PR and Issue review</span></h3>
+<ul><li>Looked into more color model stuff for Bone Colors with Demeter.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110121">Fix #113552: NLA Markers do not reset when length reaches 0.0 #110121</a></li></ul>
+<h3><span class="mw-headline" id="Development_9">Development</span></h3>
+<ul><li>Hooked up the new <code>Animation</code> datablock to the dependency graph, to trigger animation evaluation.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_4">Animation 2025</span></h3>
+<ul><li>Finished the draft schedule.</li>
+<li>Meeting with Sybren and Fiona about the schedule.</li>
+<li>Meeting with the studio animators a keying workflows and other misc. topics.</li>
+<li>Started learning Blender's depsgraph, and figuring out how the new Animation system "MVP" should get hooked up there.</li></ul>
+<h3><span class="mw-headline" id="Misc_5">Misc</span></h3>
+<ul><li>Started writing up the findings about key framing workflows.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="October_02-06">October 02-06</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_10">PR and Issue review</span></h3>
+<ul><li>Read through and gave feedback on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112943">Proposal: Unify Active/Selected Bone Colors and set current Blender Theme Colors as Default #112943</a>.</li>
+<li>Suggested some tweaks to the approach proposed in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112635">Proposal: New Bone Color Presets #112635</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_10">Development</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112018">AgX has banding-like issues on hyper saturated gradients #112018</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113253">#113253</a>.</li>
+<li>Translated an implementation of OkHSL from C to Python for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112635">Proposal: New Bone Color Presets #112635</a></li></ul>
+<h3><span class="mw-headline" id="Animation_2025_5">Animation 2025</span></h3>
+<ul><li>Started putting together a draft development schedule for Animation 2025.</li>
+<li>Meeting with animators about selection sets, bones pickers, and keying sets.</li>
+<li>Meeting with Sybren to figure out how we can reliably dedicate more time to Animation 2025 work.</li></ul>
+<h3><span class="mw-headline" id="Misc_6">Misc</span></h3>
+<ul><li>Opened a <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/selection-of-overlapping-items-in-the-3d-viewport/31397">devtalk thread</a> for the issue brought up in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112654">WIP: Improved overlapped bone selection with a single click. #112654</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="September_25-29">September 25-29</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_11">PR and Issue review</span></h3>
+<ul><li>Did some investigation on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112850">Butterworth Filter is causing issues on geometry #112850</a>.</li>
+<li>Gave feedback on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112654">Improved overlapped bone selection with a single click. #112654</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_11">Development</span></h3>
+<ul><li>Finished fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107030">action.frame_range span always &gt;=1 when there's only 1 key frame in it. #107030 </a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112709">#112709</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/commit/119928906596eeb93e4b3313c95901ba2509051f">Added documentation</a> to the Blender manual for the new B-Bone vertex mapping option.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_6">Animation 2025</span></h3>
+<ul><li>Read through and gave feedback on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112758">Proposal: Object Parenting UX #112758</a></li>
+<li>Meeting with Blender Studio animators about bone colors.</li>
+<li>Meeting with Falk and Sybren about Grease Pencil integration in the new animation system.</li>
+<li>Meeting with Fiona and Sybren about Animation 2025 scheduling.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="September_18-22">September 18-22</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_12">PR and Issue review</span></h3>
+<ul><li>Continued review of and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">Bendy Bones: implement a new curve-aware vertex to segment mapping mode. #110758</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112388">Anim: Graph Editor Push/Pull operator #112388</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112670">Fix #97628: Clear and Keep Transformation not working when keyed #112670</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">Anim: Bake Channel operator #111263</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_12">Development</span></h3>
+<ul><li>Finished up and landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111143">Animation: Graph Editor Handle Selection #111143</a>.</li>
+<li>Started working on a fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107030">action.frame_range span always &gt;=1 when there's only 1 key frame in it. #107030</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112709">#112709</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="September_11-15">September 11-15</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_13">PR and Issue review</span></h3>
+<ul><li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">Animation: Time Offset Slider #110540</a>.</li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111510">Refactor: Rename functions and structs in keyframes_draw.cc #111510</a>.</li>
+<li>Gave opinion/feedback on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/91941">"Whole Character" keying set not working properly with autokey enabled #91941</a></li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112365">Fix: Graph Editor first key handles not drawn #112365</a></li>
+<li>Started reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">Bendy Bones: implement a new curve-aware vertex to segment mapping mode. #110758</a></li></ul>
+<h3><span class="mw-headline" id="Development_13">Development</span></h3>
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111965">Fix #111780: bone collections and undo don't work together #111965</a></li></ul>
+<h3><span class="mw-headline" id="Animation_2025_7">Animation 2025</span></h3>
+<ul><li>Had a UI/UX powow with Sybren about the animation editor, resulting in some rough draft designs.</li>
+<li>Met with the studio animator about those rough draft designs.</li>
+<li>Met with Sybren and Brad to share and compare the different draft UI/UX approaches we've come up with for the animation editor.</li></ul>
+<h3><span class="mw-headline" id="Misc_7">Misc</span></h3>
+<ul><li>Took some time to improve my development environment, particularly around quickly switching between different build configurations.</li>
+<li>New desk!</li>
+<li>Helped interview potential new hire.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="September_04-08">September 04-08</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_14">PR and Issue review</span></h3>
+<ul><li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111759">Armature: apply new DualQuat scale handling to constraints and crazyspace. #111759</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112088">Fix: Animation Editor snapping not working when using rotate or scale #112088</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111049">Animation: Rename "Bake Curve" to "Keys to Samples" #111049</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111744">Animation: Scale Average slider for Graph Editor #111744</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_14">Development</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111965">Fix #111780: bone collections and undo don't work together #111965</a></li></ul>
+<h3><span class="mw-headline" id="Animation_2025_8">Animation 2025</span></h3>
+<ul><li>Met with Hjalti to talk about the new animation system design.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="August_28_-_September_01">August 28 - September 01</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_15">PR and Issue review</span></h3>
+<ul><li>Merged improvements from Alexander into the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/10997">Bone Collections PR</a>.</li>
+<li>Landed the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/10997">Bone Collections PR</a>.</li>
+<li>Reviewed and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111730">Animation: remove UI code relating to bone layers #111730</a>.</li>
+<li>Reviewed and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111723">Fix: Bone collection renaming when empty string #111723</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111510">Refactor: Rename functions and structs in keyframes_draw.cc #111510</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111735">Animation: Shear operator for Graph Editor</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111745">Fix: Blend to Ease keyframes property name #111745</a>.</li>
+<li>Reviewed and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111733">Bone collection: Set first collection active #111733</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_15">Development</span></h3>
+<ul><li>Misc improvements and bug fixes for the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/10997">Bone Collections PR</a> before landing.</li>
+<li>Misc fixes after the Bone Collections PR landed, including <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6d2c7c509cc">Fix: failing keymap test for ARMATURE_OT_assign_to_collection</a></li></ul>
+<h3><span class="mw-headline" id="Animation_2025_9">Animation 2025</span></h3>
+<ul><li>Bone Collections are in!  Group effort along with Christoph and Alexander.</li></ul>
+<h3><span class="mw-headline" id="Misc_8">Misc</span></h3>
+<ul><li>Attended meeting with and presentation from <a rel="nofollow" class="external text" href="https://cgg.mff.cuni.cz/members/wilkie/">Alexander Wilkie</a> about spectral rendering.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="August_21-25">August 21-25</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_16">PR and Issue review</span></h3>
+<ul><li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">Animation: Graph Editor - Don't draw keys if they are too close to each other #110788</a>.</li>
+<li>Second functionality review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">Bendy Bones: implement a new curve-aware vertex to segment mapping mode. #110758</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110903">Animation: Add channel type options to the Bake Action operator #110903</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111464">Fix: Memory leak in Graph editor keyframe jump #111464</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109976">Replace Bone Layers+Groups with Bone Collections #109976</a></li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109182">Fix #100718: NLA Hold Forward Inconsistency #109182</a>, pending confirmation from Sybren to land.</li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111099">#111099 - AgX-Step5: Add AgX and its components</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_16">Development</span></h3>
+<ul><li>Sybren walked me through his <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109976">Bone Collections PR (Replace Bone Layers+Groups with Bone Collections #109976)</a>, in preparation for me hopefully landing it while he's away on vacation.</li>
+<li>Implemented custom property support for Bone Collections as an additional commit in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109976">Replace Bone Layers+Groups with Bone Collections #109976</a>.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_10">Animation 2025</span></h3>
+<ul><li>Finished writing up the <a rel="nofollow" class="external text" href="https://hackmd.io/IdzUWrG9RpmBwToVuwBCMw">rationale document</a> for why we decided on unidirectional pointers for connecting animation and IDs.</li>
+<li>Met with Sybren and Brad about Brad's ongoing work on the Animation 2025 design document.</li>
+<li>Met with Sybren and Dalai about object nodes.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="August_14-18">August 14-18</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_17">PR and Issue review</span></h3>
+<ul><li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">Animation: Match Slope slider #110567</a>.</li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111037">Refactor: resolution_scale in graph_draw.cc #111037</a>.</li>
+<li>Tested, re-reviewed, and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110900">LibOverride: keep some anim data from liboverride when it exists in both IDs. #110900</a>.</li>
+<li>Tested, approved, and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109980">Fix #109081: Ensure swap strips do not overlap each other</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">Animation: Graph Editor - Don't draw keys if they are too close to each other #110788</a>.</li>
+<li>Re-reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110912">USD: Skeleton and blend shape import #110912</a>.</li>
+<li>Created example file for new b-bone deform mode, demonstrating the discontinuity issue: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">Bendy Bones: implement a new curve-aware vertex to segment mapping mode. #110758</a></li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111269">Fix: Number input on slider #111269</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111099">#111099 - AgX-Step5: Add AgX and its components</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_17">Development</span></h3>
+<ul><li>Continued <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108142">Animation: Graph Editor Handle Selection #108142</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111143">#111143</a>, with code updated to latest main.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_11">Animation 2025</span></h3>
+<ul><li>Planned initial MVP for the animation system with Sybren.</li>
+<li>Meeting with Pablico about the proposed animation data model, to get feedback and ideas.  Very positive response, and some good insights about workflows we need to make sure to accommodate.</li></ul>
+<h3><span class="mw-headline" id="Misc_9">Misc</span></h3>
+<ul><li>Put together a test file for Amelie, for checking if her work on grease pencil layers in the dopesheet unexpectedly impact other things.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="August_07-11">August 07-11</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_18">PR and Issue review</span></h3>
+<ul><li>Further review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">Animation: Move Snapping to Scene #109015</a></li>
+<li>Reported back about the two possible fixes for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109081">Swap Strips can delete strips if there is not enough space #109081</a>.  The animation &amp; rigging module decided to go with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109980">#109980</a>.</li>
+<li>Suggested a stop-gap fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109790">Child object rotates after parenting with 'Keep Transform Without Inverse' #109790</a>.  The longer-term fix would be something along the lines of what's being discussed in the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/moving-transforms-and-matrices-to-double-precision/30329">devtalk thread about moving transforms to use doubles generally</a>.</li>
+<li>Did an initial functionality-level review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">Bendy Bones: implement a new curve-aware vertex to segment mapping mode #110758</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110912">USD: Skeleton and blend shape import #110912</a>.</li>
+<li>Did a cursory review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110900">LibOverride: keep some anim data from liboverride when it exists in both IDs. #110900</a>.</li>
+<li>Opened <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111043">Armature layers can be put into an invalid state via the Python API #111043</a> after some initial investigation of the addon-repo issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/issues/104535">#104535</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111037">Refactor: Rename variable in graph_draw.cc #111037</a></li></ul>
+<h3><span class="mw-headline" id="Development_18">Development</span></h3>
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110796">Fix #110169: nearly flat normalized fcurves jump around in editor</a>.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_12">Animation 2025</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/animation-level-constraints/30603">Moved the animation-level constraints document to devtalk</a>, since that's better for long-form discussion.</li>
+<li>Read through Brad's WIP animation system design document.</li>
+<li>Meeting with Brad about the design document so far.</li>
+<li>Finished the (super) basic <a rel="nofollow" class="external text" href="https://projects.blender.org/nathanvegdahl/animation-layers-prototype/src/branch/animation_level_constraints">animation-level-constraints prototype</a>, built on top of the <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/animation-layers-prototype">data model prototype</a> by Christoph and Sybren.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_31_-_August_04">July 31 - August 04</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_19">PR and Issue review</span></h3>
+<ul><li>Reported back about the module meeting discussion on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">Drivers: implement default fallback values for RNA path based variables. #110135</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">Animation: Blend to Infinity slider #110567</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110566">Animation: Blend To Ease Slider #110566</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110544">Animation: Blend Offset Slider #110544</a>.</li>
+<li>Looked at <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110074">NLA: Swap strips fixes #110074</a>.  The author has two PRs open to fix the same bug in two different ways.  Asked for clarification on the pros/cons of the two fixes.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">Animation: Move Snapping to Scene #109015</a></li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110605">Fix #110161: Crash on dragging a Speaker NLA strip #110605</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110301">Animation: Graph Editor curve drawing performance improvement #110301</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110764">Animation: Common curve drawing for FCurves #110764</a></li></ul>
+<h3><span class="mw-headline" id="Development_19">Development</span></h3>
+<ul><li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/110169">Broken FCurve rendering #110169</a> as a bug, and submitted a PR with a fix in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110796">#110796</a>.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_13">Animation 2025</span></h3>
+<ul><li>Started work on an "animation-level constraints" Python prototype, built on top of the existing data model Python prototype from Christoph and Sybren.  It immediately became clear that there are some likely prerequisites to a system like this working, and we'll need to consider the trade-offs involved with that.</li></ul>
+<h3><span class="mw-headline" id="Misc_10">Misc</span></h3>
+<ul><li>Continuing discussion about possibly moving transform matrices to doubles: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/moving-transforms-and-matrices-to-double-precision/30329">https://devtalk.blender.org/t/moving-transforms-and-matrices-to-double-precision/30329</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_24-28">July 24-28</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_20">PR and Issue review</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110301">Animation: Graph Editor curve drawing performance improvement #110301</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110424">Anim: Armature drawing code refactor, introduce UnifiedBonePtr, other small improvements #110424</a></li></ul>
+<h3><span class="mw-headline" id="Development_20">Development</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752Setting">an overlapping IK constraint to zero influence/disabled gives weird behavior #88752</a> with Brecht's help in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110417">#110417</a>.</li>
+<li>Tracked down the cause of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88482">Segfault pasting stale driver. #88482</a>.  Will work on a fix.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_14">Animation 2025</span></h3>
+<ul><li>A little more brainstorming about animation-level constraints, control rig, and simulation layers.</li>
+<li>Wrote up a summary of the brainstorming I've been doing about animation-level constraints: <a rel="nofollow" class="external free" href="https://hackmd.io/LwmMoFhqSRiKk3RWgIkhGA">https://hackmd.io/LwmMoFhqSRiKk3RWgIkhGA</a>  There's at least one promising direction, which would also potentially address other things in a unified way (switching control rigs, animation remapping, etc.).  But it remains to be seen if it would actually make sense / be feasible.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_17-21">July 17-21</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_21">PR and Issue review</span></h3>
+<ul><li>Summarized the discussion from the 9-year-old issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/43933">Graph Editor: (Auto-)Focusing Channels #43933</a>, so people can more easily get up-to-speed with it, and so that in turn we can move forward with addressing it.</li></ul>
+<h3><span class="mw-headline" id="Development_21">Development</span></h3>
+<ul><li>Started preparing a PR for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">Setting an overlapping IK constraint to zero influence/disabled gives weird behavior #88752</a>.  Will submit it first thing next week.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_15">Animation 2025</span></h3>
+<ul><li>Finished editing and published the <a rel="nofollow" class="external text" href="https://code.blender.org/2023/07/lessons-from-the-2023-animation-workshop/">Animation Workshop Lessons</a> blog post.</li>
+<li>More brainstorming about how control rig, animation-level constraints, and simulation layers could integrate into the new animation system design.</li></ul>
+<h3><span class="mw-headline" id="Misc_11">Misc</span></h3>
+<ul><li>Based on a <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109790">recent issue</a>, started a topic on devtalk about <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/moving-transforms-and-matrices-to-double-precision/30329">possibly moving transforms in Blender to use double-precision floats</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_10-14">July 10-14</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_22">PR and Issue review</span></h3>
+<ul><li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109790">Child object rotates after parenting with 'Keep Transform Without Inverse' #109790</a>.  It's due to floating point rounding error, so not exactly a bug.  But it may be worth discussing this in a larger context, regarding whether it's worth taking a bit of a performance hit for higher precision transforms or not.</li>
+<li>Opened <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109920">F-curve ghosting displays wrong values outside the initial view when ghosting was enabled #109920</a></li></ul>
+<h3><span class="mw-headline" id="Development_22">Development</span></h3>
+<ul><li>Started investigating what the appropriate fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">Setting an overlapping IK constraint to zero influence/disabled gives weird behavior #88752</a> is, after Brecht identified the root cause.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109920">F-curve ghosting displays wrong values outside the initial view when ghosting was enabled #109920</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109926">#109926</a></li></ul>
+<h3><span class="mw-headline" id="Animation_2025_16">Animation 2025</span></h3>
+<ul><li>Began exploring ways for control rig, animation-level constraints, and simulation strips/layers to fit into the proposed animation data model.</li>
+<li>Gave some feedback on Sybren's draft blog post about the Animation Workshop.</li>
+<li>More work on my blog post about lessons from the workshop.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_03-07">July 03-07</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_23">PR and Issue review</span></h3>
+<ul><li>Looked into <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109528">Bake actions operator converting F-curves to linear #109528</a>.  No bug, the new behavior is intentional.  Users can always set the keys back to bezier if they want, but linear is a more sensible default for bakes.
+<ul><li>Having said that, in the process of looking into this and speaking with Brad Clark about it, it became clear that there are some related issues:
+<ul><li>The fact that baking always bakes to linear curves now isn't documented. Not a bug, just a documentation thing.</li>
+<li>The "Overwrite Current Action" option for baking leaves existing keys in place on a baked fcurve if they aren't overwritten by a baked key. This isn't a bug, but seems like undesirable behavior.</li>
+<li>F-Curve ghosting seems buggy in certain ways. For example, it doesn't work properly for parts of the f-curve that extend before/after the view frame when turned on, among other things.</li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Development_23">Development</span></h3>
+<ul><li>I was spinning my wheels too much on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">Setting an overlapping IK constraint to zero influence/disabled gives weird behavior #88752</a>, so I documented the seemingly relevant parts of my investigation so far and poked Brecht about it.  He managed to identify the issue, but there seem to be trade-offs in how to resolve it.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_17">Animation 2025</span></h3>
+<ul><li>Wrote a "Workshop Lessons" blog post.  It's about ways we think we can make workshops more effective in the future, based on our experiences at the animation workshop last week.  The post isn't published yet, but is more-or-less "done", pending review.</li>
+<li>I did some thinking/investigation into pointer direction for hooking up IDs with Animation blocks in the new data model.  We basically have three broad options (although there are sub-variants of each): <code>Animation -&gt; ID</code>, <code>Animation &lt;- ID</code>, and "strict" bidirectional <code>Animation &lt;-&gt; ID</code>.  All-in-all, I think we just don't have enough information to make a good decision yet about which to go with.  Specifically, I think it's going to depend at least partly on how control rig, animation-level constraints, procedural animation, simulation layers, etc. fit into this.  And we haven't figured that out yet.  Fortunately, most of the design decisions in the data model aren't fundamentally impacted by this, so we should be able to move forward regardless, just with the knowledge that we may need to change this aspect of it in the future.</li>
+<li>Talked to Sergey about how the dependency graph might need to be impacted for some of the things we want in the new animation system (e.g. control rig, animation-level constraints, animation metastrips, etc.).  Main take-aways: control rig (perhaps surprisingly) might actually be the lowest-impact of these things, and things like animation-level constraints and metastrips might be the harder things to tackle.  Still needs more investigation, however, and it will of course depend on how we actually approach these features.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_26-30">June 26-30</span></h2>
+<h3><span class="mw-headline" id="Animation_2025_18">Animation 2025</span></h3>
+<ul><li>We had the animation workshop!
+<ul><li>Together with Sybren, Brad, Christoph, Demeter, Brecht, and a bunch of other people who popped in at various points, we have gotten *much* closer to a final data model for the new animation system.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_19-23">June 19-23</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_24">PR and Issue review</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109182">NLA Hold Forward Inconsistency #109182</a></li></ul>
+<h3><span class="mw-headline" id="Development_24">Development</span></h3>
+<ul><li>More work on tracking down and fixing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">Zero influence IK gives wired behavior when other IK moved the bone #88752</a>.  Eliminated a bunch of things that it's not, but still haven't figured out what it is.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_19">Animation 2025</span></h3>
+<ul><li>Had a meeting with <a rel="nofollow" class="external text" href="https://mantissa.xyz">Midge Sinnaeve</a> and Sybren about motion graphics and "weird" uses of Blender.</li>
+<li>Explored possibilities for how constraint/space/rig switching could work with the new data model proposal.</li>
+<li>Finals bits of workshop planning with Sybren for next week.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_12-16">June 12-16</span></h2>
+<h3><span class="mw-headline" id="Development_25">Development</span></h3>
+<ul><li>Worked on tracking down and fixing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">Zero influence IK gives wired behavior when other IK moved the bone #88752</a>.  Narrowed it down a little, but over-all no luck yet.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_20">Animation 2025</span></h3>
+<ul><li>Meeting with Brad about animation data model requirements, pain points, etc.</li>
+<li>Meeting with Sybren and Jason Schleifer about animation layers and NLA workflows.</li>
+<li>Meeting with Ian Hubert about using motion capture in indie VFX pipelines.</li>
+<li>Impromptu meeting with a visitor about their animation workflow: they made a 7-minute animation in about 1 day.</li>
+<li>Put together a second data model draft proposal (high level).</li>
+<li>Put together a presentation for that new draft proposal.</li>
+<li>Meeting with Brad and Sybren about the new draft data model proposal.</li></ul>
+<h3><span class="mw-headline" id="Color">Color</span></h3>
+<ul><li>More work on the tweakable tone mapper.  Experimented with a different approach for desaturating colors as they blow out.</li>
+<li>A bunch of time tweaking how the tone mapper gets exported to OCIO.  Lots of annoying fiddly stuff to avoid artifacts that aren't in the tone mapping operator itself, but rather are due to the lossy nature of trying to represent that operator in OCIO (OCIO is really limited in what it can represent analytically, so things are forced into LUTs, which is... fiddly).</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_05-09">June 05-09</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_25">PR and Issue review</span></h3>
+<ul><li>Further reviews and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108134">Armature modifier - Preserve volume + Scale #108134</a>.  The new updated solution from the author is really nice, and addresses the large majority of issues with DualQuat + scaling.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/87313">#87313</a> as still an issue, and marked as bug.  Also provided more details on proper reproduction.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88482">#88482</a> as still an issue, and marked as bug.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/87487">#87487</a> because it's the intended behavior.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/pulls/104673">#104673</a></li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88689">#88689</a> as a current limitation of the dependency graph, not a bug.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/88752">#88752</a> as still a bug.</li></ul>
+<h3><span class="mw-headline" id="Development_26">Development</span></h3>
+<ul><li>Addressed PR comments and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108548">#108548</a> (fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106801">#106801</a>)</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_21">Animation 2025</span></h3>
+<ul><li>Met with Brad and Sybren about requirements for the data model.</li>
+<li>Met with Falk, Amelie, and Sybren about Grease Pencil and how it and Animation 2025 fit together.</li>
+<li>Met with Sybren about an alternative direction for the data model that he came up with.  Really promising.</li>
+<li>Met with Dalai about dynamic overrides and how they might impact the direction we take Animation 2025's data model.</li>
+<li>Worked on thinking up and writing up use cases and user stories that will hopefully help us flesh out the requirements for the data model in a more grounded way.</li>
+<li>Looked into breaking changes we might want to make to Armatures for Blender 4.0 (e.g. bone layers -&gt; bone collections).</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="May_29-June_02">May 29-June 02</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_26">PR and Issue review</span></h3>
+<ul><li>Looked into <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/87160">"Clean Keyframes" in Dope Sheet only works if channels are selected #87160</a>.  Definitely feels like something needs to change (either naming or behavior).</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/87238">Blur brush(Weight Paint): Take edge distance into consideration when blurring weights #87238</a> as still an issue.  Not a bug, but an undesirable behavior.  Put on my todo list.</li></ul>
+<h3><span class="mw-headline" id="Development_27">Development</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106801">#106801</a> in PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108548">#108548</a>.  Pending review (particularly needed because it's an unfamiliar area of Blender's code for me).</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_22">Animation 2025</span></h3>
+<ul><li>Worked with Brad Clark on brainstorming UX options for "where do keys go" and "what data are you working with" in an NLA-like system.  This led to some promising new ideas for the animation data model.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="May_22-26">May 22-26</span></h2>
+<p>(A very meetings-heavy week.)
+</p>
+<h3><span class="mw-headline" id="PR_and_Issue_review_27">PR and Issue review</span></h3>
+<ul><li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/82831">Inclusive bounds for VertexWeightEdit? #82831</a> as still behaving the same way.  Brought it up with the module.  Seems like it makes sense to change the behavior as suggested.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108134">Fix Armature modifier - Preserve volume + Scale #108134</a>.  Doesn't fully resolve the issue, but maybe still worth merging as a stop gap.  To discuss with the animation &amp; rigging module.</li></ul>
+<h3><span class="mw-headline" id="Development_28">Development</span></h3>
+<ul><li>Added better code documentation for the Sobol sampler(s), describing best practices for using the different sample dimensions.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_23">Animation 2025</span></h3>
+<ul><li>Meeting with other Blender Institute developers to discuss the proposed animation data model.  Lots of good feedback.  The data model definitely isn't done yet!</li>
+<li>Meetings with Brad and Sybren about the animation data model and how it relates to animation system UX.</li></ul>
+<h3><span class="mw-headline" id="Color_Management">Color Management</span></h3>
+<ul><li>Several meetings with the visiting Gimp, Inkscape, and Wayland guys about color management and how we can make all our software play well together in that respect.  No concrete outcomes yet, but we definitely have general alignment on how things should be approached.</li>
+<li>Reviewed Wayland's WIP color management protocol.  Basically no complaints.  They've done an awesome job.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="May_15-19">May 15-19</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_28">PR and Issue review</span></h3>
+<ul><li>Narrowed down <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106801">#106801</a> to a minimal reproduction case.</li></ul>
+<h3><span class="mw-headline" id="Development_29">Development</span></h3>
+<ul><li>More work poking at heat diffusion weighting failures.</li>
+<li>Worked on tracking down <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106801">#106801</a>, to actually fix it.  No luck yet.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_24">Animation 2025</span></h3>
+<ul><li>Continued work on the performance prototype, adding a basic model of ID Blocks and the ability to query the animation system for a specific ID Block.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="May_8-12">May 8-12</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_29">PR and Issue review</span></h3>
+<ul><li>Proposed a <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/103802#issuecomment-936441">design for #103802</a>, based on the idea of simply respecting handle selection in the graph editor.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/76549">#76549</a> as still an issue, and marked as bug.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/85350">#85350</a> as not a bug, but with notes about why it is indeed confusing.</li>
+<li>Identified <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/86371">#86371</a> as already fixed in main, but still affecting the current LTS releases (which were referenced in the issue).  Left a comment asking if anyone needs a backport to one or both of the LTS releases.  Original reporter says they don't need a backport.  Also discussed with the animation module and decided to not backport, because the backport would likely be involved, and the bug is easily worked around.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/84609">#84609</a> as still an issue, and provided a partial explanation of what's happening and how (for now) users can work around it.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107869">#107869</a>.</li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107173">#107173</a> for Blender 4.0 (since it's a breaking change for the Python API).</li></ul>
+<h3><span class="mw-headline" id="Development_30">Development</span></h3>
+<ul><li>Investigated a quick fix for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/84609">#84609</a> (automatic weights failure), and although it fixed the reported issue, it also caused other problems.  So it's not a viable fix.  Following that, figured out (experimentally) a "fix" that allows automatic weights to succeed over-all, leaving only the problematic vertices unweighted.  Certainly a better behavior, but I want to better understand what's going on and hopefully figure out a better fix.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_25">Animation 2025</span></h3>
+<ul><li>Worked on animation data performance prototype.  Some promising results, but I'm not confident it models current Blender internals well enough yet.</li>
+<li>Talked to Falk David about whether the proposed animation data model would work/conflict with the new Grease Pencil design.  Conclusion: they'll work quite well together.</li>
+<li>Talked briefly with Rik about some of the ideas for Animation 2025.  Definitely want to talk more with the animators!  Great feedback and skepticism, which will help push the design to be really strong and useful.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="May_1-5">May 1-5</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_30">PR and Issue review</span></h3>
+<ul><li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106410">#106410</a> and marked as bug.</li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106542">#106542</a> and marked as bug.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106980">#106980</a> as not a bug.</li>
+<li>Looked into <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/103802">#103802</a>.  It's not a bug, but probably needs discussion as to what the desired behavior is.</li>
+<li>Finished <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107223">#107223</a> and got it merged.</li>
+<li>Identified <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106340">#106340</a> as a duplicate (already fixed).</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_26">Animation 2025</span></h3>
+<ul><li>Finished the draft animation data proposal, and gave a <a rel="nofollow" class="external text" href="https://perm.cessen.com/2023/animation_module/2023_05_04_animation_data_model/">presentation</a> at the animation module meeting.</li>
+<li>Started a "performance prototype" of the proposed animation data system.  One of the unknowns of the proposed system is how fast we can make it.  So this is just a quick-and-dirty outside-of-Blender skeleton to get a broad-strokes idea of what the performance might look like.  This is explicitly not to be the code of the actual system (e.g. it isn't even in the right programming language).</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="April_24-28">April 24-28</span></h2>
+<h3><span class="mw-headline" id="PR_and_Issue_review_31">PR and Issue review</span></h3>
+<ul><li>Final review on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107089">#107089</a>.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107281">#107281</a>.</li>
+<li>Communicated the tentative consensus on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107030">#107030</a>.</li>
+<li>Identified <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107286">#107286</a> as a duplicate.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107173">#107173</a>.</li></ul>
+<h3><span class="mw-headline" id="Development_31">Development</span></h3>
+<ul><li>Testing and more work on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107223">#107223</a>.</li></ul>
+<h3><span class="mw-headline" id="Animation_2025_27">Animation 2025</span></h3>
+<ul><li>Created an outline of a concrete animation system foundations proposal.  Still need to write/draw it up properly to share with the module.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="April_17-21">April 17-21</span></h2>
+<ul><li>Started work on a draft proposal for Animation 2025's foundations.</li>
+<li>Got blender building and debuggable on my workstation.</li>
+<li>Hosted the animation module meeting for the first time!</li>
+<li>Found and fixed a crash in Blender! <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107086">#107086</a></li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/95855">#95855 "Graph editor - when keys on two different curves overlap, and one curve is active, trying to select the key on the active curve sometimes results in the key on the non-active curve being selected."</a> in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107223">#107223</a> (pending review).</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112062905
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.157 seconds
+Real time usage: 0.157 seconds
+Preprocessor visited node count: 550/1000000
+Preprocessor generated node count: 556/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6775-0!canonical and timestamp 20240112062905 and revision id 37847
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;oldid=37847">https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;oldid=37847</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 15 December 2023, at 16:50.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:NathanVegdahl/WeeklyReports/2023.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:NathanVegdahl/WeeklyReports/2023" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/NathanVegdahl.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/NathanVegdahl.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/NathanVegdahl.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;oldid=37847" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:NathanVegdahl/WeeklyReports/2023&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.157","walltime":"0.157","ppvisitednodes":{"value":550,"limit":1000000},"ppgeneratednodes":{"value":556,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112062905","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":39});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84455bf469a40c71","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Filedescriptor/Reports/2021 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Filedescriptor/Reports/2021","wgTitle":"Filedescriptor/Reports/2021","wgCurRevisionId":24544,"wgRevisionId":24544,"wgArticleId":5554,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Filedescriptor/Reports/2021","wgRelevantArticleId":5554,"wgRequestId":"a1b8faaf283d85ed0d7147d3","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Filedescriptor","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Filedescriptor_Reports_2021 rootpage-User_Filedescriptor skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2021.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AFiledescriptor%2FReports%2F2021" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2021.html#Weekly_Reports_2021"><span class="tocnumber">1</span> <span class="toctext">Weekly Reports 2021</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2021.html#January_04_-_10_.28week_01.29"><span class="tocnumber">1.1</span> <span class="toctext">January 04 - 10 (week 01)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2021.html#January_11_-_17_.28week_02.29"><span class="tocnumber">1.2</span> <span class="toctext">January 11 - 17 (week 02)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2021.html#January_18_-_24_.28week_03.29"><span class="tocnumber">1.3</span> <span class="toctext">January 18 - 24 (week 03)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2021.html#January_25_-_31_.28week_04.29"><span class="tocnumber">1.4</span> <span class="toctext">January 25 - 31 (week 04)</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2021.html#February_01_-_07_.28week_05.29"><span class="tocnumber">1.5</span> <span class="toctext">February 01 - 07 (week 05)</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2021.html#February_08_-_14_.28week_06.29"><span class="tocnumber">1.6</span> <span class="toctext">February 08 - 14 (week 06)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2021.html#February_15_-_21_.28week_07.29"><span class="tocnumber">1.7</span> <span class="toctext">February 15 - 21 (week 07)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2021.html#February_22_-_28_.28week_08.29"><span class="tocnumber">1.8</span> <span class="toctext">February 22 - 28 (week 08)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2021.html#March_01_-_07_.28week_09.29"><span class="tocnumber">1.9</span> <span class="toctext">March 01 - 07 (week 09)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2021.html#March_08_-_14_.28week_10.29"><span class="tocnumber">1.10</span> <span class="toctext">March 08 - 14 (week 10)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2021.html#March_15_-_21_.28week_11.29"><span class="tocnumber">1.11</span> <span class="toctext">March 15 - 21 (week 11)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2021.html#March_22_-_28_.28week_13.29"><span class="tocnumber">1.12</span> <span class="toctext">March 22 - 28 (week 13)</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2021.html#March_29_-_April_04_.28week_14.29"><span class="tocnumber">1.13</span> <span class="toctext">March 29 - April 04 (week 14)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2021.html#April_05_-_April_11_.28week_15.29"><span class="tocnumber">1.14</span> <span class="toctext">April 05 - April 11 (week 15)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="2021.html#Bug_Tracker"><span class="tocnumber">1.14.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="2021.html#Grease_Pencil"><span class="tocnumber">1.14.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="2021.html#April_12_-_April_18_.28week_16.29"><span class="tocnumber">1.15</span> <span class="toctext">April 12 - April 18 (week 16)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="2021.html#Bug_Tracker_2"><span class="tocnumber">1.15.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="2021.html#Grease_Pencil_2"><span class="tocnumber">1.15.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="2021.html#April_19_-_April_25_.28week_17.29"><span class="tocnumber">1.16</span> <span class="toctext">April 19 - April 25 (week 17)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="2021.html#Bug_Tracker_3"><span class="tocnumber">1.16.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="2021.html#Grease_Pencil_3"><span class="tocnumber">1.16.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="2021.html#April_26_-_May_02_.28week_18.29"><span class="tocnumber">1.17</span> <span class="toctext">April 26 - May 02 (week 18)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="2021.html#Bug_Tracker_4"><span class="tocnumber">1.17.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="2021.html#Grease_Pencil_4"><span class="tocnumber">1.17.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="2021.html#May_03_-_May_09_.28week_19.29"><span class="tocnumber">1.18</span> <span class="toctext">May 03 - May 09 (week 19)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="2021.html#Bug_Tracker_5"><span class="tocnumber">1.18.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="2021.html#Grease_Pencil_5"><span class="tocnumber">1.18.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="2021.html#May_10_-_May_16_.28week_20.29"><span class="tocnumber">1.19</span> <span class="toctext">May 10 - May 16 (week 20)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="2021.html#Bug_Tracker_6"><span class="tocnumber">1.19.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="2021.html#Grease_Pencil_6"><span class="tocnumber">1.19.2</span> <span class="toctext">Grease Pencil</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="2021.html#May_17_-_May_23_.28week_21.29"><span class="tocnumber">1.20</span> <span class="toctext">May 17 - May 23 (week 21)</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2021.html#May_24_-_May_30_.28week_22.29"><span class="tocnumber">1.21</span> <span class="toctext">May 24 - May 30 (week 22)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="2021.html#Bug_Tracker_7"><span class="tocnumber">1.21.1</span> <span class="toctext">Bug Tracker</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="2021.html#Grease_Pencil_7"><span class="tocnumber">1.21.2</span> <span class="toctext">Grease Pencil</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="2021.html#Other"><span class="tocnumber">1.21.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Filedescriptor/Reports/2021</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Filedescriptor.html" title="User:Filedescriptor">User:Filedescriptor</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Weekly_Reports_2021">Weekly Reports 2021</span></h1>
+<h2><span id="January_04_-_10_(week_01)"></span><span class="mw-headline" id="January_04_-_10_.28week_01.29">January 04 - 10 (week 01)</span></h2>
+<p><b>Involved in 21 reports:</b>
+</p>
+<ul><li>Confirmed: 9</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84392">T84392</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T82793">T82793</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84399">T84399</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84370">T84370</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84335">T84335</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84428">T84428</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84326">T84326</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84373">T84373</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84453">T84453</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84260">T84260</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84420">T84420</a>
+</p>
+<ul><li>Closed as Invalid: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84392">T84392</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84395">T84395</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84331">T84331</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T79288">T79288</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T79250">T79250</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84385">T84385</a>
+</p>
+<ul><li>Closed as Duplicate: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84374">T84374</a>
+</p>
+<ul><li>Needs Info from User: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84407">T84407</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84412">T84412</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84421">T84421</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<p><b>Patches and commits</b>
+</p><p>1 patch needs review:
+</p>
+<ul><li>Extending hint in the collision section <a rel="nofollow" class="external text" href="http://developer.blender.org/D10044">D10044</a></li></ul>
+<p>2 Commits: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84420">T84420</a>: Linking regular materials to gpencil <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5cdf279ef46f">rB5cdf279e</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84260">T84260</a>: NURBS edit mode lines not showing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09c1cb8a17e4">rB09c1cb8a</a></li></ul>
+<h2><span id="January_11_-_17_(week_02)"></span><span class="mw-headline" id="January_11_-_17_.28week_02.29">January 11 - 17 (week 02)</span></h2>
+<p><b>Involved in 30 reports:</b>
+</p>
+<ul><li>Confirmed: 14</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84570">T84570</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84569">T84569</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84556">T84556</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84592">T84592</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84568">T84568</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84609">T84609</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84165">T84165</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84623">T84623</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84638">T84638</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84642">T84642</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84649">T84649</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84651">T84651</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84671">T84671</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84720">T84720</a>
+</p>
+<ul><li>Closed as Resolved: 0</li></ul>
+<ul><li>Closed as Invalid: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84580">T84580</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84547">T84547</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84546">T84546</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84563">T84563</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84597">T84597</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84626">T84626</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84644">T84644</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Info from User: 8</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84585">T84585</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84548">T84548</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84564">T84564</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84617">T84617</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84634">T84634</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84648">T84648</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84663">T84663</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84679">T84679</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84627">T84627</a>
+</p><p><b>Patches and commits</b>
+</p><p>2 patches need review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84638">T84638</a>: Wrong scale for primitives with radius <a rel="nofollow" class="external text" href="http://developer.blender.org/D10093">D10093</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84642">T84642</a>: Reassign effect-strip ignores animdata <a rel="nofollow" class="external text" href="http://developer.blender.org/D10096">D10096</a></li></ul>
+<p>0 Commits:
+</p>
+<h2><span id="January_18_-_24_(week_03)"></span><span class="mw-headline" id="January_18_-_24_.28week_03.29">January 18 - 24 (week 03)</span></h2>
+<p><b>Involved in 25 reports:</b>
+</p>
+<ul><li>Confirmed: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84808">T84808</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84815">T84815</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84830">T84830</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84848">T84848</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84859">T84859</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84732">T84732</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84899">T84899</a>
+</p>
+<ul><li>Closed as Resolved: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84719">T84719</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84824">T84824</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84642">T84642</a>
+</p>
+<ul><li>Closed as Invalid: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84851">T84851</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84870">T84870</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84884">T84884</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84856">T84856</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84145">T84145</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84929">T84929</a>
+</p>
+<ul><li>Closed as Duplicate: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84895">T84895</a>
+</p>
+<ul><li>Needs Info from User: 8</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84811">T84811</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84805">T84805</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T83576">T83576</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84178">T84178</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84837">T84837</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84871">T84871</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84873">T84873</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84892">T84892</a>, 
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<p><br />
+<b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p><p>4 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84719">T84719</a>: Doversion for grease-pencil curve edit settings <a rel="nofollow" class="external text" href="http://developer.blender.org/rB5e0ef4ef85e61d4714e1ee1b2c9714142067a664">rB5e0ef4ef85e61d4714e1ee1b2c9714142067a664</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84824">T84824</a>: Incorrect height using interactive add tool <a rel="nofollow" class="external text" href="http://developer.blender.org/rBd31dd1da805b28660c85145300957ba8028acaad">rBd31dd1da805b28660c85145300957ba8028acaad</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T84642">T84642</a>: VSE: Reassign effect-strip ignores animdata <a rel="nofollow" class="external text" href="http://developer.blender.org/rBa9203e25a2e1f1489b8a3705f8883cdd86f094c7">rBa9203e25a2e1f1489b8a3705f8883cdd86f094c7</a></li>
+<li>GPencil: Deactivate interpolation of gpencil curves <a rel="nofollow" class="external text" href="http://developer.blender.org/rBf24992d2ec76bae600879ee6222ffbcc98de3fe8">rBf24992d2ec76bae600879ee6222ffbcc98de3fe8</a></li></ul>
+<h2><span id="January_25_-_31_(week_04)"></span><span class="mw-headline" id="January_25_-_31_.28week_04.29">January 25 - 31 (week 04)</span></h2>
+<p><b>Involved in 43 reports:</b>
+</p>
+<ul><li>Confirmed: 10</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85011">T85011</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85035">T85035</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85014">T85014</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84551">T84551</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85051">T85051</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85067">T85067</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84609">T84609</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85113">T85113</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85152">T85152</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85178">T85178</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85054">T85054</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85082">T85082</a>
+</p>
+<ul><li>Closed as Invalid: 13</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84992">T84992</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85032">T85032</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85002">T85002</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84997">T84997</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85045">T85045</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85046">T85046</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85080">T85080</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85086">T85086</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84975">T84975</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84566">T84566</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85104">T85104</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85185">T85185</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85105">T85105</a>
+</p>
+<ul><li>Closed as Duplicate: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T84993">T84993</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T85052">T85052</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84909">T84909</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85125">T85125</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85123">T85123</a>
+</p>
+<ul><li>Needs Info from User: 11</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85020">T85020</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85055">T85055</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85070">T85070</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85076">T85076</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85096">T85096</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85026">T85026</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T81170">T81170</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85116">T85116</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85129">T85129</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85162">T85162</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85126">T85126</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85101">T85101</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84906">T84906</a>
+</p><p><b>Patches and commits</b>
+</p><p>2 patches need review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85051">T85051</a>: Too big bisect threshold <a rel="nofollow" class="external text" href="http://developer.blender.org/D10201">D10201</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85203">T85203</a>: GPencil: Drawing on locked axis plane <a rel="nofollow" class="external text" href="http://developer.blender.org/D10252">D10252</a></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85054">T85054</a>: Python API: undo/redo app handlers broken <a rel="nofollow" class="external text" href="http://developer.blender.org/rB6249995c5ebb65127daae6fa235b7db9d26c9950">rB6249995c5ebb65127daae6fa235b7db9d26c9950</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85082">T85082</a>: GPencil: Perspective distortion while drawing <a rel="nofollow" class="external text" href="http://developer.blender.org/rB23e108c5b608e58ae46f11a0f2badde6710b7495">rB23e108c5b608e58ae46f11a0f2badde6710b7495</a></li></ul>
+<h2><span id="February_01_-_07_(week_05)"></span><span class="mw-headline" id="February_01_-_07_.28week_05.29">February 01 - 07 (week 05)</span></h2>
+<p><b>Involved in 30 reports:</b>
+</p>
+<ul><li>Confirmed: 8</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85252">T85252</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85233">T85233</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85260">T85260</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85319">T85319</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85318">T85318</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85340">T85340</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85402">T85402</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85373">T85373</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85203">T85203</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85378">T85378</a>
+</p>
+<ul><li>Closed as Invalid: 10</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85238">T85238</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85237">T85237</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85273">T85273</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85290">T85290</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85313">T85313</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85061">T85061</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85331">T85331</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85330">T85330</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85360">T85360</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85351">T85351</a>
+</p>
+<ul><li>Closed as Duplicate: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85241">T85241</a>
+</p>
+<ul><li>Needs Info from User: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85302">T85302</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85345">T85345</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85400">T85400</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85229">T85229</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85217">T85217</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85304">T85304</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85300">T85300</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85358">T85358</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85349">T85349</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85203">T85203</a>: GPencil: Drawing on locked axis plane <a rel="nofollow" class="external text" href="http://developer.blender.org/rB006e70dbd7e29c105809eded93169754ade03de5">rB006e70dbd7e29c105809eded93169754ade03de5</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85378">T85378</a>: Shrink/Fatten display number units <a rel="nofollow" class="external text" href="http://developer.blender.org/rBeccc57aa5c791009634ffe8a1e41472ce02317f5">rBeccc57aa5c791009634ffe8a1e41472ce02317f5</a></li></ul>
+<h2><span id="February_08_-_14_(week_06)"></span><span class="mw-headline" id="February_08_-_14_.28week_06.29">February 08 - 14 (week 06)</span></h2>
+<p><b>Involved in 30 reports:</b>
+</p>
+<ul><li>Confirmed: 12</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85461">T85461</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85423">T85423</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85451">T85451</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85441">T85441</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85428">T85428</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85470">T85470</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85474">T85474</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85494">T85494</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85508">T85508</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85477">T85477</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85414">T85414</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85581">T85581</a>
+</p>
+<ul><li>Closed as Resolved: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85488">T85488</a>
+</p>
+<ul><li>Closed as Invalid: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85464">T85464</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85449">T85449</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85465">T85465</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85490">T85490</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85433">T85433</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85504">T85504</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85598">T85598</a>
+</p>
+<ul><li>Closed as Duplicate: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85408">T85408</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85472">T85472</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85507">T85507</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85549">T85549</a>
+</p>
+<ul><li>Needs Info from User: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85431">T85431</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85439">T85439</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85450">T85450</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85480">T85480</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85499">T85499</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85517">T85517</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85499">T85499</a>: Crash on switching to edit mode with uv editor open <a rel="nofollow" class="external text" href="http://developer.blender.org/D10369">D10369</a></li></ul>
+<p>1 Commit:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85488">T85488</a>: Display units inset operator <a rel="nofollow" class="external text" href="http://developer.blender.org/rB2d3b29de4fc72d5e293deccd2317c001ede703e3">rB2d3b29de4fc72d5e293deccd2317c001ede703e3</a></li></ul>
+<h2><span id="February_15_-_21_(week_07)"></span><span class="mw-headline" id="February_15_-_21_.28week_07.29">February 15 - 21 (week 07)</span></h2>
+<p><b>Involved in 29 reports:</b>
+</p>
+<ul><li>Confirmed: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85644">T85644</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85687">T85687</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85745">T85745</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85587">T85587</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85495">T85495</a>
+</p>
+<ul><li>Closed as Invalid: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85682">T85682</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85701">T85701</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85670">T85670</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85738">T85738</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85737">T85737</a>
+</p>
+<ul><li>Closed as Duplicate: 10</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85499">T85499</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85665">T85665</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85336">T85336</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85684">T85684</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85696">T85696</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85699">T85699</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T73179">T73179</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85740">T85740</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85727">T85727</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85788">T85788</a>
+</p>
+<ul><li>Needs Info from User: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85447">T85447</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T80953">T80953</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85466">T85466</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85530">T85530</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85595">T85595</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85673">T85673</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85681">T85681</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85680">T85680</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85733">T85733</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85758">T85758</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85787">T85787</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85587">T85587</a>: Crash on selecting multiple frames <a rel="nofollow" class="external text" href="http://developer.blender.org/rBc53022768b13831c38d2b687f99b7f9cbb919892">rBc53022768b13831c38d2b687f99b7f9cbb919892</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85499">T85499</a>: Crash on switching to edit mode with uv editor open <a rel="nofollow" class="external text" href="http://developer.blender.org/rB3e55d7d60542bd00fe0a200da66d99582cc387e0">rB3e55d7d60542bd00fe0a200da66d99582cc387e0</a></li></ul>
+<h2><span id="February_22_-_28_(week_08)"></span><span class="mw-headline" id="February_22_-_28_.28week_08.29">February 22 - 28 (week 08)</span></h2>
+<p><b>Involved in 31 reports:</b>
+</p>
+<ul><li>Confirmed: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85869">T85869</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85850">T85850</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85946">T85946</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85950">T85950</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85986">T85986</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86003">T86003</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86030">T86030</a>
+</p>
+<ul><li>Closed as Resolved: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85987">T85987</a>
+</p>
+<ul><li>Closed as Invalid: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85829">T85829</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85891">T85891</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85944">T85944</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85933">T85933</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85955">T85955</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86008">T86008</a>
+</p>
+<ul><li>Closed as Duplicate: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85813">T85813</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85832">T85832</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85894">T85894</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85917">T85917</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85918">T85918</a>
+</p>
+<ul><li>Needs Info from User: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85861">T85861</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85902">T85902</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85901">T85901</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85937">T85937</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85921">T85921</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T84169">T84169</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86044">T86044</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T85808">T85808</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85949">T85949</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85980">T85980</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85834">T85834</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85984">T85984</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>1 Commit:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85987">T85987</a>: Selection when GP is parented <a rel="nofollow" class="external text" href="http://developer.blender.org/rB4b16cb1e9aff">rB4b16cb1e9aff</a></li></ul>
+<h2><span id="March_01_-_07_(week_09)"></span><span class="mw-headline" id="March_01_-_07_.28week_09.29">March 01 - 07 (week 09)</span></h2>
+<p><b>Involved in 45 reports:</b>
+</p>
+<ul><li>Confirmed: 18</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86057">T86057</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86066">T86066</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86086">T86086</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86114">T86114</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86072">T86072</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86118">T86118</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86101">T86101</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86050">T86050</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86038">T86038</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86126">T86126</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86022">T86022</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86163">T86163</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86097">T86097</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86168">T86168</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86204">T86204</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86211">T86211</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86262">T86262</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86299">T86299</a>
+</p>
+<ul><li>Closed as Resolved: 0</li></ul>
+<ul><li>Closed as Invalid: 15</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86069">T86069</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86100">T86100</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86112">T86112</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86067">T86067</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86152">T86152</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86155">T86155</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86177">T86177</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86153">T86153</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86165">T86165</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85425">T85425</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86214">T86214</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86202">T86202</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86236">T86236</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86265">T86265</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86300">T86300</a>
+</p>
+<ul><li>Closed as Duplicate: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86105">T86105</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86104">T86104</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86047">T86047</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86241">T86241</a>
+</p>
+<ul><li>Needs Info from User: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86058">T86058</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86093">T86093</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86103">T86103</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86218">T86218</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86300">T86300</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86298">T86298</a>
+</p>
+<ul><li>Needs Developer to Reproduce: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86083">T86083</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86167">T86167</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10600">D10600</a> Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86211">T86211</a>: Allow geometry input in any position</li></ul>
+<p>0 Commits:
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<h2><span id="March_08_-_14_(week_10)"></span><span class="mw-headline" id="March_08_-_14_.28week_10.29">March 08 - 14 (week 10)</span></h2>
+<p><b>Involved in 46 reports:</b>
+</p>
+<ul><li>Confirmed: 9</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86274">T86274</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86335">T86335</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86390">T86390</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86428">T86428</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86200">T86200</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86427">T86427</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86462">T86462</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86506">T86506</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86533">T86533</a>
+</p>
+<ul><li>Closed as Resolved: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86370">T86370</a>
+</p>
+<ul><li>Closed as Archived: 13</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86310">T86310</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86383">T86383</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86359">T86359</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86336">T86336</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86350">T86350</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86362">T86362</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86433">T86433</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86441">T86441</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86461">T86461</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86470">T86470</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86474">T86474</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86520">T86520</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86513">T86513</a>
+</p>
+<ul><li>Closed as Duplicate: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86289">T86289</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86374">T86374</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86434">T86434</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86511">T86511</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86534">T86534</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86541">T86541</a>
+</p>
+<ul><li>Needs Information from User: 12</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86283">T86283</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86385">T86385</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86419">T86419</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86400">T86400</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86444">T86444</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86438">T86438</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86318">T86318</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86452">T86452</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86459">T86459</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86323">T86323</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86518">T86518</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86516">T86516</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86450">T86450</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86411">T86411</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86456">T86456</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86488">T86488</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86164">T86164</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85051">T85051</a>: Add bisect distance as a parameter to the mirror modifier <a rel="nofollow" class="external text" href="http://developer.blender.org/D10201">D10201</a></li></ul>
+<p>1 Commit:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86370">T86370</a>: GPencil: Select color for glow is inverted <a rel="nofollow" class="external text" href="http://developer.blender.org/rB2ca48b967894dc2be786e0db1b0ed1fa6abd5383">rB2ca48b967894dc2be786e0db1b0ed1fa6abd5383</a></li></ul>
+<h2><span id="March_15_-_21_(week_11)"></span><span class="mw-headline" id="March_15_-_21_.28week_11.29">March 15 - 21 (week 11)</span></h2>
+<p><b>Involved in 23 reports:</b>
+</p>
+<ul><li>Confirmed: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86603">T86603</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86602">T86602</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86676">T86676</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86692">T86692</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86666">T86666</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86403">T86403</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86761">T86761</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86745">T86745</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86746">T86746</a>
+</p>
+<ul><li>Closed as Archived: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86323">T86323</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86634">T86634</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86674">T86674</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85759">T85759</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86747">T86747</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86763">T86763</a>
+</p>
+<ul><li>Closed as Duplicate: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86649">T86649</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86731">T86731</a>
+</p>
+<ul><li>Needs Information from User: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86680">T86680</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86378">T86378</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85765">T85765</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86751">T86751</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86728">T86728</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86046">T86046</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86046">T86046</a>: transform_around_single_fallback_ex not working correctly <a rel="nofollow" class="external text" href="http://developer.blender.org/D10767">D10767</a></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86745">T86745</a>: trace sequence keyframe offset <a rel="nofollow" class="external text" href="http://developer.blender.org/rB95a2549d90bf63c5976356d6a45f52335845e546">rB95a2549d90bf63c5976356d6a45f52335845e546</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86746">T86746</a>: Description missing from Quick Liquid <a rel="nofollow" class="external text" href="http://developer.blender.org/rBb19bd3692d79f6b5ccffb87bc0833c01ead4061a">rBb19bd3692d79f6b5ccffb87bc0833c01ead4061a</a></li></ul>
+<h2><span id="March_22_-_28_(week_13)"></span><span class="mw-headline" id="March_22_-_28_.28week_13.29">March 22 - 28 (week 13)</span></h2>
+<p><b>Involved in 32 reports:</b>
+</p>
+<ul><li>Confirmed: 14</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86767">T86767</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86762">T86762</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86766">T86766</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86805">T86805</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86788">T86788</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86799">T86799</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86846">T86846</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86879">T86879</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86867">T86867</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86862">T86862</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86882">T86882</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86935">T86935</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86942">T86942</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86930">T86930</a>
+</p>
+<ul><li>Closed as Resolved: 0</li></ul>
+<ul><li>Closed as Archived: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86808">T86808</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86793">T86793</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86845">T86845</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86790">T86790</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86860">T86860</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86830">T86830</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86918">T86918</a>
+</p>
+<ul><li>Closed as Duplicate: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86855">T86855</a>
+</p>
+<ul><li>Needs Information from User: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86791">T86791</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86789">T86789</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86754">T86754</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86920">T86920</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86927">T86927</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86962">T86962</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86847">T86847</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86757">T86757</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85991">T85991</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86893">T86893</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>0 Commits:
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<h2><span id="March_29_-_April_04_(week_14)"></span><span class="mw-headline" id="March_29_-_April_04_.28week_14.29">March 29 - April 04 (week 14)</span></h2>
+<p><b>Involved in 30 reports:</b>
+</p>
+<ul><li>Confirmed: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87003">T87003</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86968">T86968</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87034">T87034</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86923">T86923</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87091">T87091</a>
+</p>
+<ul><li>Closed as Resolved: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87002">T87002</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86947">T86947</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87037">T87037</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87082">T87082</a>
+</p>
+<ul><li>Closed as Archived: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86862">T86862</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86998">T86998</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87023">T87023</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87047">T87047</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87052">T87052</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87075">T87075</a>
+</p>
+<ul><li>Closed as Duplicate: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87001">T87001</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87059">T87059</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87072">T87072</a>
+</p>
+<ul><li>Needs Information from User: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86976">T86976</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87070">T87070</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87086">T87086</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87094">T87094</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87110">T87110</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87006">T87006</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86999">T86999</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87010">T87010</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86986">T86986</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87033">T87033</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T43104">T43104</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T50103">T50103</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86968">T86968</a>: Last UV factor in cyclic strokes <a rel="nofollow" class="external text" href="http://developer.blender.org/D10850">D10850</a></li></ul>
+<p>5 Commits:
+</p>
+<ul><li>GPencil Cleanup: Remove legacy key to cancel drawing <a rel="nofollow" class="external text" href="http://developer.blender.org/rB10e05bb413947c16f61e0c429b2a3883ab95c983">rB10e05bb413947c16f61e0c429b2a3883ab95c983</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86947">T86947</a>: Drag &amp; Drop tooltip in Scene mode <a rel="nofollow" class="external text" href="http://developer.blender.org/rBd97dca510625169c469dc34a5d71720cf510f61f">rBd97dca510625169c469dc34a5d71720cf510f61f</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87037">T87037</a>: Add tooltip for "Paste Flipped" <a rel="nofollow" class="external text" href="http://developer.blender.org/rB546fa9a7593236cb6e387b15a2b7795ac0880271">rB546fa9a7593236cb6e387b15a2b7795ac0880271</a></li>
+<li>Add documentation for paste options <a rel="nofollow" class="external text" href="http://developer.blender.org/rBM7906">rBM7906</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87082">T87082</a>: Smooth thickness not working <a rel="nofollow" class="external text" href="http://developer.blender.org/rB8d45a9678955694cdd44aa709b5175308821dbba">rB8d45a9678955694cdd44aa709b5175308821dbba</a></li></ul>
+<h2><span id="April_05_-_April_11_(week_15)"></span><span class="mw-headline" id="April_05_-_April_11_.28week_15.29">April 05 - April 11 (week 15)</span></h2>
+<p><i>Note: Monday (April 05) was a national holiday</i>
+</p>
+<h3><span class="mw-headline" id="Bug_Tracker">Bug Tracker</span></h3>
+<p><b>Involved in 20 reports:</b>
+</p>
+<ul><li>Confirmed: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87232">T87232</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87257">T87257</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87174">T87174</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86768">T86768</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87151">T87151</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87313">T87313</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87349">T87349</a>
+</p>
+<ul><li>Closed as Resolved: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87157">T87157</a>
+</p>
+<ul><li>Closed as Archived: 8</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87225">T87225</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87255">T87255</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87266">T87266</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87145">T87145</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87296">T87296</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87329">T87329</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87336">T87336</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87376">T87376</a>
+</p>
+<ul><li>Closed as Duplicate: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87233">T87233</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87233">T87233</a>
+</p>
+<ul><li>Needs Information from User: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87147">T87147</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87319">T87319</a>
+</p><p><b>Patches and commits</b>
+</p><p>2 patches needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86968">T86968</a>: Last UV factor in cyclic strokes <a rel="nofollow" class="external text" href="http://developer.blender.org/D10850">D10850</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87174">T87174</a>: Inconsistensy skin root with extrude <a rel="nofollow" class="external text" href="http://developer.blender.org/D10908">D10908</a></li></ul>
+<p>1 Commit:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB09d7d88cc42a">rB09d7d88cc42a</a>: Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87157">T87157</a>: GPencil subdivide last segment</li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil">Grease Pencil</span></h3>
+<p>I did some cleanup and more work for the bézier stroke type project this week.
+Also spent a good amount of time preparing a devtalk thread including a few demos (bezier pen, curve sculpting, and armature modifier with bezier strokes).
+</p>
+<ul><li>GPencil: Cleanup armature deform code <a rel="nofollow" class="external text" href="http://developer.blender.org/rBefc03eaf5947">rBefc03eaf5947</a></li>
+<li>GPencil: Free poly weights when curve is updated <a rel="nofollow" class="external text" href="http://developer.blender.org/rB9ba1a842f22c">rB9ba1a842f22c</a></li>
+<li>GPencil cleanup: Fix compiler warning <a rel="nofollow" class="external text" href="http://developer.blender.org/rB79b8de937ea1">rB79b8de937ea1</a></li>
+<li>GPencil: Change UI name and icon for bezier pen <a rel="nofollow" class="external text" href="http://developer.blender.org/rBa361ba405e58">rBa361ba405e58</a></li>
+<li>GPencil: Set fixed resolution bezier pen <a rel="nofollow" class="external text" href="http://developer.blender.org/rB8e5d577f08bb">rB8e5d577f08bb</a></li>
+<li>GPencil: Allow bezier stroke sculpting <a rel="nofollow" class="external text" href="http://developer.blender.org/rB38aa49eb71ed">rB38aa49eb71ed</a></li></ul>
+<h2><span id="April_12_-_April_18_(week_16)"></span><span class="mw-headline" id="April_12_-_April_18_.28week_16.29">April 12 - April 18 (week 16)</span></h2>
+<h3><span class="mw-headline" id="Bug_Tracker_2">Bug Tracker</span></h3>
+<p><b>Involved in 14 reports:</b>
+</p>
+<ul><li>Confirmed: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87401">T87401</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87417">T87417</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87448">T87448</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86450">T86450</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87406">T87406</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87479">T87479</a>
+</p>
+<ul><li>Closed as Archived: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87375">T87375</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87397">T87397</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87371">T87371</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87461">T87461</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Information from User: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87412">T87412</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87410">T87410</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86888">T86888</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87415">T87415</a>
+</p><p><b>Patches and commits</b>
+</p><p>2 patches need review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T85051">T85051</a>: Add bisect distance as a parameter to the mirror modifier <a rel="nofollow" class="external text" href="http://developer.blender.org/D10201">D10201</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87448">T87448</a>: Avoid uiBut update if value was same <a rel="nofollow" class="external text" href="http://developer.blender.org/D10976">D10976</a></li></ul>
+<p>3 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87406">T87406</a>: Stroke color when using object color mode <a rel="nofollow" class="external text" href="http://developer.blender.org/7c18fb062d36">7c18fb062d36</a></li>
+<li>Fix compile error: Missing include paths <a rel="nofollow" class="external text" href="http://developer.blender.org/721ff6ad1226">721ff6ad1226</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87479">T87479</a>: GPencil SVG export outside of camera <a rel="nofollow" class="external text" href="http://developer.blender.org/9ca55b10b8cc">9ca55b10b8cc</a></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_2">Grease Pencil</span></h3>
+<p>This week, a few meetings were scheduled. Additionally, I finished the devtalk thread and published it:
+</p>
+<ul><li>Finished the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/grease-pencil-bezier-stroke-type/18370">devtalk thread on the bezier stroke type</a>.</li>
+<li>Meeting with the Grease Pencil team on Wednesday. Subjects were: Feedback on the state of the <code>temp-gpencil-bezier-stroke-type</code> branch, current priorities, patch review sprint, drawing issues (sparked discussion and creation of <a rel="nofollow" class="external text" href="http://developer.blender.org/T87499">T87499</a>).</li>
+<li>Meeting notes on the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2021-04-16-blender-lineart-meeting/18430">LineArt meeting</a> on Friday.</li></ul>
+<p>Work on the <code>temp-gpencil-bezier-stroke-type</code> was continued. The main focus this week was to introduce the geometry update flags and start working on weights. At the moment there are many issues regarding weights, e.g. no proper transfer when converting between stroke types, not handling weights in the edit mode operators for bezier strokes. and finally no support for weight painting. I began by making sure that weights were properly created when the polyline is created from the curve data.
+</p>
+<ul><li>GPencil: Remove update flags for stroke and curve (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB947d9e3b55b9">rB947d9e3b55b9</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rBc01215f2dcc2">rBc01215f2dcc2</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rBb8cdfea599c6">rBb8cdfea599c6</a>)</li>
+<li>GPencil: Hide handles in stroke mode (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBa58765031fd0">rBa58765031fd0</a>)</li>
+<li>GPencil: Add flags for polyline regeneration (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB928ad8e5b8cf">rB928ad8e5b8cf</a>)</li>
+<li>GPencil: Use geom update flags in update functions (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB17ec934756cc">rB17ec934756cc</a>)</li></ul>
+<h2><span id="April_19_-_April_25_(week_17)"></span><span class="mw-headline" id="April_19_-_April_25_.28week_17.29">April 19 - April 25 (week 17)</span></h2>
+<h3><span class="mw-headline" id="Bug_Tracker_3">Bug Tracker</span></h3>
+<p><b>Involved in 19 reports:</b>
+</p>
+<ul><li>Confirmed: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87622">T87622</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87602">T87602</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87635">T87635</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87592">T87592</a>
+</p>
+<ul><li>Closed as Resolved: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87448">T87448</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87637">T87637</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86968">T86968</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87688">T87688</a>
+</p>
+<ul><li>Closed as Archived: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87632">T87632</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87566">T87566</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87697">T87697</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87735">T87735</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87743">T87743</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Information from User: 5</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87575">T87575</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87560">T87560</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87649">T87649</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87645">T87645</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87527">T87527</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87415">T87415</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>4 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87448">T87448</a>: Avoid uiBut update if value was same. <a rel="nofollow" class="external text" href="http://developer.blender.org/rBeb06ccc32462">rBeb06ccc32462</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87637">T87637</a>: Dragging button value cancel not working. <a rel="nofollow" class="external text" href="http://developer.blender.org/rBe1a9ba94c599">rBe1a9ba94c599</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86968">T86968</a>: Last UV factor in cyclic strokes <a rel="nofollow" class="external text" href="http://developer.blender.org/rB183e3f6bb93e">rB183e3f6bb93e</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87688">T87688</a>: Crash entering valid text into number field <a rel="nofollow" class="external text" href="http://developer.blender.org/rBbbb52a462ef9">rBbbb52a462ef9</a></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_3">Grease Pencil</span></h3>
+<p>I spent two days working on the weight data transfer from curve to polyline. This part is mostly finished now (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBc2f77b90f8ad">rBc2f77b90f8ad</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rB3a978cc0ec00">rB3a978cc0ec00</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rB6e2cbeba9e82">rB6e2cbeba9e82</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rB73cd6eb982fa">rB73cd6eb982fa</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rBf11cce2fd5b7">rBf11cce2fd5b7</a>). For the rest of the week, I looked into a new approach to do curve fitting. At the moment, we do a multi-dimensional curve fitting by treating position, pressure, strength, and vertex color as different dimensions of the curve. The problem is that all of the attributes except the position are not affected by the curve handles. We do an interpolation between two control points to generate e.g. the pressure. Since the curve fitting returns a multi-dimensional curve that has handles for all the attributes, the resulting curve we get is not ideal. My new idea is to do separate curve fittings for the attributes. This has two advantages: 
+</p>
+<ul><li>We can choose what attributes we want to fit (e.g. there are cases where we know only specific attributes have changed so we only refit those)</li>
+<li>We can treat attributes differently depending on their function (e.g. position will affect handles, pressure will not).</li></ul>
+<p>I began by implementing a function to find stationary points in a bezier curve (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB3a3f90cef1b1">rB3a3f90cef1b1</a>). This will be one of the core functions of the new fitting implementation.
+</p>
+<h2><span id="April_26_-_May_02_(week_18)"></span><span class="mw-headline" id="April_26_-_May_02_.28week_18.29">April 26 - May 02 (week 18)</span></h2>
+<h3><span class="mw-headline" id="Bug_Tracker_4">Bug Tracker</span></h3>
+<p><b>Involved in 30 reports:</b>
+</p>
+<ul><li>Confirmed: 8</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87808">T87808</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87798">T87798</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87771">T87771</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87737">T87737</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87823">T87823</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87832">T87832</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87854">T87854</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87829">T87829</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T86881">T86881</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87718">T87718</a>
+</p>
+<ul><li>Closed as Archived: 11</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87811">T87811</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87813">T87813</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87769">T87769</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87763">T87763</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87834">T87834</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87846">T87846</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87861">T87861</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87862">T87862</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87869">T87869</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87877">T87877</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87893">T87893</a>
+</p>
+<ul><li>Closed as Duplicate: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87820">T87820</a>
+</p>
+<ul><li>Needs Information from User: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87833">T87833</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87858">T87858</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87778">T87778</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87840">T87840</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 4</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87527">T87527</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87841">T87841</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87843">T87843</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87795">T87795</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patches need review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T86881">T86881</a>: Curve Edit handle offset when snapping <a rel="nofollow" class="external text" href="http://developer.blender.org/e0fa295bc6f2">e0fa295bc6f2</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87718">T87718</a>: Fill triangles wrongly calculated <a rel="nofollow" class="external text" href="http://developer.blender.org/ba755ea677b3">ba755ea677b3</a></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_4">Grease Pencil</span></h3>
+<p>This week I took a bit of a break from implementing the new fitting algorithm and worked on various areas regarding the <code>temp-gpencil-bezier-stroke-type</code> branch.
+The most notable changes are:
+</p>
+<ul><li>Bézier Mode in Draw Mode: This change introduces a way to draw freehand curves. In the future, the plan is to have all drawing tools create bézier strokes in this mode. (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB327bf7442bce">rB327bf7442bce</a>)</li>
+<li>Curve smoothing algorithm: This was one of the remaining operators (<code>GPENCIL_OT_stroke_smooth</code>) that were unclear as to how they would work for bézier strokes. I came up with a solution that is fast as well as consistent with the poly stroke smoothing that we have already. (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBe70e618ce745">rBe70e618ce745</a>)</li>
+<li>Vertex paint for bézier strokes: Added initial support for vertex painting. At the moment this implements the <code>Tint</code> brush. (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB1ddc36d42d18">rB1ddc36d42d18</a>)</li>
+<li>Refactor of the dissolve operator: No functional changes. Introduces <code>BKE_gpencil_editcurve_dissolve</code> and moves all the logic into that function. This not only makes the code cleaner, but was also done in preparation for the <code>GPENCIL_OT_stroke_merge_by_distance</code> operator. (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB9a753fd70a92">rB9a753fd70a92</a>)</li></ul>
+<h2><span id="May_03_-_May_09_(week_19)"></span><span class="mw-headline" id="May_03_-_May_09_.28week_19.29">May 03 - May 09 (week 19)</span></h2>
+<h3><span class="mw-headline" id="Bug_Tracker_5">Bug Tracker</span></h3>
+<p><b>Involved in 20 reports:</b>
+</p>
+<ul><li>Confirmed: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87984">T87984</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88038">T88038</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88094">T88094</a>
+</p>
+<ul><li>Closed as Resolved: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87983">T87983</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88058">T88058</a>
+</p>
+<ul><li>Closed as Archived: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87889">T87889</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87963">T87963</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88019">T88019</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88017">T88017</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88043">T88043</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88061">T88061</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Information from User: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87840">T87840</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87999">T87999</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87986">T87986</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87901">T87901</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87950">T87950</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87967">T87967</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88121">T88121</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T87923">T87923</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88012">T88012</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87984">T87984</a>: GPencil pressure changes not handled <a rel="nofollow" class="external text" href="http://developer.blender.org/D11153">D11153</a></li></ul>
+<p>2 Commits:
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T87983">T87983</a>: Motion tracker button tooltips identical <a rel="nofollow" class="external text" href="http://developer.blender.org/rBb24b197cec04">rBb24b197cec04</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T88058">T88058</a>: Hover+return doesn't accept 0 as input <a rel="nofollow" class="external text" href="http://developer.blender.org/rBec30cf0b742f">rBec30cf0b742f</a></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_5">Grease Pencil</span></h3>
+<p>This week I did more work on the new fitting algorithm, although progress was slow and I ended up reverting some of the work I did. I worked on some of the other edit mode operators: 'Merge by Distance` was finished, the new smooth algorithm is now used in the smooth modifier, and I worked on the 'Sample' operator that will re-sample the bézier stroke to have curve points at the same distance. This last algorithm is not fully implemented yet.
+</p>
+<ul><li>Implement the smooth modifier for bézier strokes (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBe4c81a0a2b22">rBe4c81a0a2b22</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/rB06abb9d99c79">rB06abb9d99c79</a>)</li>
+<li>Implement 'Merge By Distance' for bézier strokes (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB87d5bd5fb063">rB87d5bd5fb063</a>)</li></ul>
+<h2><span id="May_10_-_May_16_(week_20)"></span><span class="mw-headline" id="May_10_-_May_16_.28week_20.29">May 10 - May 16 (week 20)</span></h2>
+<p>Note: Thursday this week was a national holiday.
+</p>
+<h3><span class="mw-headline" id="Bug_Tracker_6">Bug Tracker</span></h3>
+<p><b>Involved in 22 reports:</b>
+</p>
+<ul><li>Confirmed: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88164">T88164</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88160">T88160</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87947">T87947</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88125">T88125</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87768">T87768</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88202">T88202</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88277">T88277</a>
+</p>
+<ul><li>Closed as Resolved: 0</li></ul>
+<ul><li>Closed as Archived: 6</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88154">T88154</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88163">T88163</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88192">T88192</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88215">T88215</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88211">T88211</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88279">T88279</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Information from User: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88120">T88120</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88136">T88136</a>
+</p>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 7</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88130">T88130</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88141">T88141</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88128">T88128</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87973">T87973</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T71780">T71780</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87848">T87848</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86923">T86923</a>
+</p><p><b>Patches and commits</b>
+</p><p>0 patch needs review: 
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<p>0 Commits:
+</p>
+<ul><li class="mw-empty-elt"></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_6">Grease Pencil</span></h3>
+<p>This week I was working on the sample operator for curves as well as a bug report (<a rel="nofollow" class="external text" href="http://developer.blender.org/T88202">T88202</a>). I created a patch that allows disabling grease pencil masks on a layer during render. This is especially useful for when you need to do the compositing after and just want the layers as they are with no masking. 
+</p>
+<ul><li>GPencil: Add option to disable masks in view layer <a rel="nofollow" class="external text" href="http://developer.blender.org/D11234">D11234</a></li></ul>
+<h2><span id="May_17_-_May_23_(week_21)"></span><span class="mw-headline" id="May_17_-_May_23_.28week_21.29">May 17 - May 23 (week 21)</span></h2>
+<p>I was on holiday this week.
+</p>
+<h2><span id="May_24_-_May_30_(week_22)"></span><span class="mw-headline" id="May_24_-_May_30_.28week_22.29">May 24 - May 30 (week 22)</span></h2>
+<p>Note: Monday this week was a national holiday.
+</p>
+<h3><span class="mw-headline" id="Bug_Tracker_7">Bug Tracker</span></h3>
+<p><b>Involved in 9 reports:</b>
+</p>
+<ul><li>Confirmed: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88489">T88489</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88512">T88512</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88651">T88651</a>
+</p>
+<ul><li>Closed as Resolved: 1</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88202">T88202</a>
+</p>
+<ul><li>Closed as Archived: 3</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88493">T88493</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88619">T88619</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88657">T88657</a>
+</p>
+<ul><li>Closed as Duplicate: 0</li></ul>
+<ul><li>Needs Information from User: 0</li></ul>
+<ul><li>Needs Information from Developer: 0</li></ul>
+<ul><li>Helped/Investigated/Other: 2</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T88529">T88529</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T88664">T88664</a>
+</p><p><b>Patches and commits</b>
+</p><p>1 patch needs review: 
+</p>
+<ul><li>Fix T88651: svg rect not using id as name <a rel="nofollow" class="external text" href="http://developer.blender.org/D11429">D11429</a></li></ul>
+<p>1 Commit:
+</p>
+<ul><li>Fix: GPencil mask shows in view layer render <a rel="nofollow" class="external text" href="http://developer.blender.org/rBd5a5575685b6">rBd5a5575685b6</a></li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil_7">Grease Pencil</span></h3>
+<p>This week I looked into conversion between curve objects and grease pencil. With the new stroke type, it makes sense to convert curves into the bézier stroke type.
+Eventually I would like the code to handle the other way (so from grease pencil to curve) as well as import/export of SVG. I also worked on an issue (<a rel="nofollow" class="external text" href="http://developer.blender.org/T88202">T88202</a>) and added an option to disable masks during rendering of grease pencil layers in a view layer (see <a rel="nofollow" class="external free" href="../../Reference/Release_Notes/3.0/Grease_Pencil.html#Compositing">https://wiki.blender.org/wiki/Reference/Release_Notes/3.0/Grease_Pencil#Compositing</a> for the release note of this feature).
+</p>
+<ul><li>GPencil: Add option to disable masks in view layer (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBSe459a25e6cbe">rBSe459a25e6cbe</a>)</li>
+<li>GPencil: Convert curve objects to bezier strokes (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBe3547105dec4">rBe3547105dec4</a>)</li></ul>
+<h3><span class="mw-headline" id="Other">Other</span></h3>
+<p>I handled some reports on the bug tracker this week that ended up not being bugs, but rather small feature requests. I still worked on two that mades sense to me:
+</p>
+<ul><li>UI: Add light count to viewport statistics <a rel="nofollow" class="external text" href="http://developer.blender.org/D11387">D11387</a></li>
+<li>Python: Add init/cancel app handlers for save/load <a rel="nofollow" class="external text" href="http://developer.blender.org/D11422">D11422</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121426
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.513 seconds
+Real time usage: 0.513 seconds
+Preprocessor visited node count: 5257/1000000
+Preprocessor generated node count: 14082/1000000
+Post‐expand include size: 33208/2097152 bytes
+Template argument size: 10564/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  269.329      1 -total
+ 45.72%  123.129    677 Template:Phab
+  7.23%   19.481      2 Template:GitCommit
+  6.22%   16.764      4 Template:GitCommit/PhabricatorParse
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5554-0!canonical and timestamp 20240112121425 and revision id 24544
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;oldid=24544">https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;oldid=24544</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 31 May 2021, at 06:44.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Filedescriptor/Reports/2021.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Filedescriptor/Reports/2021" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Filedescriptor.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Filedescriptor.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Filedescriptor.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;oldid=24544" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2021&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.513","walltime":"0.513","ppvisitednodes":{"value":5257,"limit":1000000},"ppgeneratednodes":{"value":14082,"limit":1000000},"postexpandincludesize":{"value":33208,"limit":2097152},"templateargumentsize":{"value":10564,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  269.329      1 -total"," 45.72%  123.129    677 Template:Phab","  7.23%   19.481      2 Template:GitCommit","  6.22%   16.764      4 Template:GitCommit/PhabricatorParse"]},"cachereport":{"timestamp":"20240112121426","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":565});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844551b37da0b7e4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

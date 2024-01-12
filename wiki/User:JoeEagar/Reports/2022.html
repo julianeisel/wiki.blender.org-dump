@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:JoeEagar/Reports/2022 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:JoeEagar/Reports/2022","wgTitle":"JoeEagar/Reports/2022","wgCurRevisionId":33028,"wgRevisionId":33028,"wgArticleId":6245,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:JoeEagar/Reports/2022","wgRelevantArticleId":6245,"wgRequestId":"b5c3b43b4d29b04d0cee8b20","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"JoeEagar","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_JoeEagar_Reports_2022 rootpage-User_JoeEagar skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2022.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJoeEagar%2FReports%2F2022" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2022.html#January_3_to_January_9"><span class="tocnumber">1</span> <span class="toctext">January 3 to January 9</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2022.html#D12587_.28temp-sculpt-colors.29"><span class="tocnumber">1.1</span> <span class="toctext">D12587 (temp-sculpt-colors)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2022.html#sculpt-dev"><span class="tocnumber">1.2</span> <span class="toctext">sculpt-dev</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="2022.html#January_10_to_January_14"><span class="tocnumber">2</span> <span class="toctext">January 10 to January 14</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2022.html#January_15_to_January_21"><span class="tocnumber">3</span> <span class="toctext">January 15 to January 21</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2022.html#January_23_to_January_28"><span class="tocnumber">4</span> <span class="toctext">January 23 to January 28</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2022.html#February_1_to_February_5"><span class="tocnumber">5</span> <span class="toctext">February 1 to February 5</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2022.html#February_7_to_February_11"><span class="tocnumber">6</span> <span class="toctext">February 7 to February 11</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2022.html#February_21_to_February_25"><span class="tocnumber">7</span> <span class="toctext">February 21 to February 25</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2022.html#February_28_to_March_4"><span class="tocnumber">8</span> <span class="toctext">February 28 to March 4</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2022.html#March_7_to_March_11"><span class="tocnumber">9</span> <span class="toctext">March 7 to March 11</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2022.html#March_14_to_March_18"><span class="tocnumber">10</span> <span class="toctext">March 14 to March 18</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2022.html#March_21_to_March_25"><span class="tocnumber">11</span> <span class="toctext">March 21 to March 25</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2022.html#March_28th_to_April_1"><span class="tocnumber">12</span> <span class="toctext">March 28th to April 1</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2022.html#April_4_to_April_8"><span class="tocnumber">13</span> <span class="toctext">April 4 to April 8</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2022.html#April_11_to_April_15"><span class="tocnumber">14</span> <span class="toctext">April 11 to April 15</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2022.html#April_18_to_April_22"><span class="tocnumber">15</span> <span class="toctext">April 18 to April 22</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2022.html#May_2_to_May_6"><span class="tocnumber">16</span> <span class="toctext">May 2 to May 6</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2022.html#May_9_to_May_13"><span class="tocnumber">17</span> <span class="toctext">May 9 to May 13</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2022.html#May_16_to_May_20"><span class="tocnumber">18</span> <span class="toctext">May 16 to May 20</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2022.html#May_23_to_May_27"><span class="tocnumber">19</span> <span class="toctext">May 23 to May 27</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2022.html#May_30_to_June_3"><span class="tocnumber">20</span> <span class="toctext">May 30 to June 3</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2022.html#June_6_to_June_10"><span class="tocnumber">21</span> <span class="toctext">June 6 to June 10</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2022.html#June_13_to_June_17"><span class="tocnumber">22</span> <span class="toctext">June 13 to June 17</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2022.html#June_20_to_June_24"><span class="tocnumber">23</span> <span class="toctext">June 20 to June 24</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2022.html#June_27_to_July_1st"><span class="tocnumber">24</span> <span class="toctext">June 27 to July 1st</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2022.html#July_4_to_July_8"><span class="tocnumber">25</span> <span class="toctext">July 4 to July 8</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2022.html#July_11_to_July_15"><span class="tocnumber">26</span> <span class="toctext">July 11 to July 15</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2022.html#July_18_to_July_22"><span class="tocnumber">27</span> <span class="toctext">July 18 to July 22</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2022.html#July_25_to_July_29"><span class="tocnumber">28</span> <span class="toctext">July 25 to July 29</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2022.html#August_1_to_August_5"><span class="tocnumber">29</span> <span class="toctext">August 1 to August 5</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2022.html#August_8th_to_August_12"><span class="tocnumber">30</span> <span class="toctext">August 8th to August 12</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2022.html#August_15th_to_August_19th"><span class="tocnumber">31</span> <span class="toctext">August 15th to August 19th</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2022.html#August_22th_to_August_26th"><span class="tocnumber">32</span> <span class="toctext">August 22th to August 26th</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2022.html#August_29th_to_September_2nd"><span class="tocnumber">33</span> <span class="toctext">August 29th to September 2nd</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2022.html#September_5th_to_September_9th"><span class="tocnumber">34</span> <span class="toctext">September 5th to September 9th</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2022.html#September_12th_to_September_16th"><span class="tocnumber">35</span> <span class="toctext">September 12th to September 16th</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2022.html#September_19th_to_September_23rd"><span class="tocnumber">36</span> <span class="toctext">September 19th to September 23rd</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2022.html#September_26th_to_September_30th"><span class="tocnumber">37</span> <span class="toctext">September 26th to September 30th</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2022.html#October_3rd_to_October_7th"><span class="tocnumber">38</span> <span class="toctext">October 3rd to October 7th</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2022.html#October_10th_to_October_14th"><span class="tocnumber">39</span> <span class="toctext">October 10th to October 14th</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2022.html#October_17th_to_October_21st"><span class="tocnumber">40</span> <span class="toctext">October 17th to October 21st</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2022.html#October_24th_to_October_28th"><span class="tocnumber">41</span> <span class="toctext">October 24th to October 28th</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2022.html#October_31st_to_November_4th"><span class="tocnumber">42</span> <span class="toctext">October 31st to November 4th</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2022.html#November_7th_to_November_11th"><span class="tocnumber">43</span> <span class="toctext">November 7th to November 11th</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2022.html#November_14th_to_November_18th"><span class="tocnumber">44</span> <span class="toctext">November 14th to November 18th</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2022.html#November_21st_to_November_25th"><span class="tocnumber">45</span> <span class="toctext">November 21st to November 25th</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2022.html#November_28th_to_December_2nd"><span class="tocnumber">46</span> <span class="toctext">November 28th to December 2nd</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2022.html#December_5th_to_December_9th"><span class="tocnumber">47</span> <span class="toctext">December 5th to December 9th</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2022.html#December_12th_to_December_16th"><span class="tocnumber">48</span> <span class="toctext">December 12th to December 16th</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="2022.html#December_16th_to_December_20th"><span class="tocnumber">49</span> <span class="toctext">December 16th to December 20th</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="2022.html#December_23rd_to_December_27th"><span class="tocnumber">50</span> <span class="toctext">December 23rd to December 27th</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:JoeEagar/Reports/2022</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:JoeEagar.html" title="User:JoeEagar">User:JoeEagar</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="January_3_to_January_9">January 3 to January 9</span></h2>
+<h3><span id="D12587_(temp-sculpt-colors)"></span><span class="mw-headline" id="D12587_.28temp-sculpt-colors.29">D12587 (temp-sculpt-colors)</span></h3>
+<ul><li>Polished <a rel="nofollow" class="external text" href="https://developer.blender.org/D12587">D1258</a> to get ready for master:
+<ul><li>Fixed bugs</li>
+<li>Added back color picker panel</li>
+<li>Fixed icons</li>
+<li>Updated patch for latest master (including new GPU subsurf);</li>
+<li>Vertex color node now shows all color layers in its quick search list.</li></ul></li></ul>
+<h3><span class="mw-headline" id="sculpt-dev">sculpt-dev</span></h3>
+<ul><li>New automasking modes:
+<ul><li>Mask by view normal, works similarly to front face only but with a falloff.</li>
+<li>Mask by brush normal, compares normals with initial brush normal at start of stroke, see video.</li></ul></li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><video src="../../../w/images/1/14/Blender_2022-01-07_12-13-12_Trim.mp4" width="300" height="196" class="thumbimage" style="max-width: 100%; max-height: 100%; width: 300px; height: 196px;" controls=""><a href="../../File:Blender_2022-01-07_12-13-12_Trim.mp4.html">https://wiki.blender.org/wiki/File:Blender_2022-01-07_12-13-12_Trim.mp4</a></video>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Blender_2022-01-07_12-13-12_Trim.mp4.html" class="internal" title="Enlarge"></a></div>Demo of mask by brush normals</div></div></div>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+<h2><span class="mw-headline" id="January_10_to_January_14">January 10 to January 14</span></h2>
+<ol><li>Cleaned up sculpt temp attribute api. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e27ed5f0e7f6b7b1e2ca46facc9a472f1a1684e">5e27ed5f0e</a></li>
+<li>Fixed various bugs and crashes in sculpt-dev:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15cb3130c3448ccb5a10343e3f17d2ed06cf5a60">15cb3130c3</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fab69104da57922bae4a101c930ccda5d8795a7d">fab69104da</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf812abfcb7e8c978691512e3cf08cdbfe0987fd">bf812abfcb</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d54182159671aaf30479c3f568a790e73cff883">4d54182159</a></li></ol></li>
+<li>Merged master into sculpt-dev and temp-sculpt-colors.</li>
+<li>Further cleaned up temp-sculpt-colors (D12587).
+<ol><li>Fixed bug with sculpt undo system losing track of the active color attribute.</li>
+<li>Made various requested changes.</li></ol></li></ol>
+<h2><span class="mw-headline" id="January_15_to_January_21">January 15 to January 21</span></h2>
+<ol><li>Cleaned up doc comments for sculpt_intern.h.</li>
+<li>Merged master -&gt; sculpt-dev</li>
+<li>Fixed a few bugs in sculpt-dev</li>
+<li>Worked on blog post</li></ol>
+<h2><span class="mw-headline" id="January_23_to_January_28">January 23 to January 28</span></h2>
+<ol><li>Worked on sculpt colors patch.</li>
+<li>Refined draft of blog post.</li>
+<li>Roughed out C++ backend for new brush engine system as a proof of concept.</li>
+<li>Spent an inordinate amount of time merging branches.</li>
+<li>Attempted to debug Wintab.  I ended up having to upgrade my drivers;</li></ol>
+<pre> I think the stock OEM ones got broken by the upgrade to Windows 11.
+</pre>
+<h2><span class="mw-headline" id="February_1_to_February_5">February 1 to February 5</span></h2>
+<ol><li>Made DynTopo in sculpt-dev use a new, unified edge heap (a min-max heap). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a393db3c2376f6101ba6f6846dcaa3adb53ef3fe">a393db3c23</a></li>
+<li>Worked on sculpt colors patch.</li></ol>
+<h2><span class="mw-headline" id="February_7_to_February_11">February 7 to February 11</span></h2>
+<ol><li>Cleaned up some code in sculpt-dev.</li>
+<li>Worked on sculpt colors patch</li></ol>
+<p>== February 14 to February 18
+</p>
+<ol><li>Worked on sculpt colors patch</li>
+<li>Did research for texture paint project.</li></ol>
+<h2><span class="mw-headline" id="February_21_to_February_25">February 21 to February 25</span></h2>
+<ol><li>Worked on sculpt colors patch</li>
+<li>Started work on texture paint prototype.
+<ol><li>Got seams to work in JS prototype.</li></ol></li>
+<li>Ported vertex paint to C++
+<ol><li>Supports vertex and corner (float/byte) color layers.</li></ol></li>
+<li>Added corner colors support to sculpt undo</li></ol>
+<h2><span class="mw-headline" id="February_28_to_March_4">February 28 to March 4</span></h2>
+<ol><li>Continued work on texture paint prototype.</li></ol>
+<h2><span class="mw-headline" id="March_7_to_March_11">March 7 to March 11</span></h2>
+<ol><li>Got texture paint to work on a proof of concept level.</li>
+<li>Figured out how to build neighbor lists for texels across triangle seams. <a rel="nofollow" class="external text" href="https://joeedh.github.io/uv-pixel-neighbor/">JS prototype</a></li>
+<li>Worked on PBVH EEVEE patch <a rel="nofollow" class="external text" href="https://developer.blender.org/D13897">D13897</a></li></ol>
+<h2><span class="mw-headline" id="March_14_to_March_18">March 14 to March 18</span></h2>
+<ol><li>Submitted patch to add triangle iterators to PBVH (in texture paint branch). <a rel="nofollow" class="external text" href="https://developer.blender.org/D14339">D14339</a>.</li>
+<li>Fix minor sculpt-dev bugs:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b71693b5f0effc3cca04169dcb8e01a3324ea0aa">b71693b5f0</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/194ec7460c7731ae69979b7450e6ea7b3ddd02df">194ec7460c</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/389724c1ac495fe5b5f79babd7ecfd9d646ccd0a">389724c1ac</a></li></ol></li>
+<li>Dyntopo fixes in sculpt-dev:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8b719fee19335a6300658704677eea217c37cfa7">8b719fee19</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/371a6799c443e30dcff9fe3017453f198871c16b">371a6799c4</a></li></ol></li>
+<li>Roughed out PBVH caching (plan is to implement and test in sculpt-dev before making a patch against either master, the texture paint branch or both). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/307f13aee5773a60a3f9acca272599695c04b00a">307f13aee5</a></li></ol>
+<h2><span class="mw-headline" id="March_21_to_March_25">March 21 to March 25</span></h2>
+<ol><li>Fixed various issues in sculpt vertex colors patch:
+<ol><li>Data transfer modifier <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f42d3caecdde37bdc873a66fbdc5685bf7050fb1">f42d3caecd</a></li>
+<li>Reverse/rotate face colors in editmode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09eb086779b4349a4245fdcb74493204db856286">09eb086779</a></li>
+<li>Changed various UI strings from "vertex colors" to "color attributes." <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09eb086779b4349a4245fdcb74493204db856286">09eb086779</a></li>
+<li>Mask by color <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09eb086779b4349a4245fdcb74493204db856286">09eb086779</a></li>
+<li>Alpha getting mangled for byte colors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/51c3ce1353db33c7d78a2636e543c08f95a95e1d">51c3ce1353</a></li>
+<li>Layer auto creation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/19ea75f8cf367da7e44e26933892a973ab9725d4">19ea75f8cf</a></li>
+<li>Undo crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c7ea01cbdc3ed0c37c9ea8e5cc223ee2fa1926b">4c7ea01cbd</a></li></ol></li>
+<li>Improved smear brush in sculpt vertex colors patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e3e80780cc60e175a3a936bdf4838dcbe54a415">9e3e80780c</a></li>
+<li>Fixed various bugs in pbvh caching:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/711bcef7f4b3a6126f59c7609f3754a16c33dfc4">711bcef7f4</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34d8df4aba984eac71b6d5d54d9cd8a29d5fb06d">34d8df4aba</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/43af973cd9c6763d968a5e857ed9ca72df257f05">43af973cd9</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b53339edfacc26bf6d7763b4f69155d3cb732b78">b53339edfa</a></li></ol></li>
+<li>Fix pbvh cache crashes in sculpt-vev:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/711bcef7f4b3a6126f59c7609f3754a16c33dfc4">711bcef7f4</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/273040f84cc172be8186633ff40dac9f51d07388">273040f84c</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34d8df4aba984eac71b6d5d54d9cd8a29d5fb06d">34d8df4aba</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b53339edfacc26bf6d7763b4f69155d3cb732b78">b53339edfa</a></li></ol></li></ol>
+<h2><span class="mw-headline" id="March_28th_to_April_1">March 28th to April 1</span></h2>
+<ol><li>Sculpt vertex colors patch
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d6fc7221c83548a3d03baeed4104423bb2d1b553">d6fc7221c8</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7ec7fa03ea81814781e1b86113dd22d91bd087f8">7ec7fa03ea</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/76d40e26c4359a5adbaf125aa6c837561ad0ad3b">76d40e26c4</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6c5e738df3c3640afce28aedaf89e546423eaca">a6c5e738df</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79e471715f9d5a335d8ef68ae36bcdd3500b5636">79e471715f</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9200581afccb477031375c4d792ab51daac3b083">9200581afc</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b1e68a8e3ff1ccf2f812d2e70d799d0121d7a8b1">b1e68a8e3f</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c29a94531225fe4f8d77171647016e37261de31">2c29a94531</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/820a88e37b17a5a02f1ea42d57fe4ef7589414ed">820a88e37b</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e9d8858ed7a8797b619df57878e56db174b4febd">e9d8858ed7</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e331b0f1e99c187a1933a80eb9f95866f8c6741">0e331b0f1e</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7a463bc17a231d7d7a95d0596d1452fb03820c23">7a463bc17a</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b57037a037ef5358096e6c7d194a113e4ef69ec">9b57037a03</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4e794686a934cc5245bee652246ac3af2bd72cac">4e794686a9</a></li></ol></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a58f1f3bb641b3bec3613ae1e1b23b9320c1291">8a58f1f3bb</a></li></ol>
+<h2><span class="mw-headline" id="April_4_to_April_8">April 4 to April 8</span></h2>
+<ol><li>Land color attributes patch in master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eae36be372a6b16ee3e76eff0485a47da4f3c230">eae36be372</a></li>
+<li>Merge master into sculpt-dev.</li>
+<li>Worked on D13897, PBVH draw patch.</li></ol>
+<h2><span class="mw-headline" id="April_11_to_April_15">April 11 to April 15</span></h2>
+<ol><li>Fix color attribute bugs:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0329145712a1748431a4d6fed705af6a22ecd0e4">0329145712</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7163db99c4d8b908fb2c7c7768754b91cac0eb5e">7163db99c4</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a99639792b1628493139eb9943ae4befbdc6b613">a99639792b</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d683ea4862130b448077de08b2dcebc20418784e">d683ea4862</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fbca6aeb7c9393e9620a23f6d0915d5f58fb7930">fbca6aeb7c</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4a70561bbdc97aa40c5817a573bf3515e3f95769">4a70561bbd</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b191cd2b41b7eaa794ef8d7f702482ab3d1b6eb">2b191cd2b4</a></li></ol></li>
+<li>Fix cloth crash in sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/185ca2912f2ae3893eed924e9fe52cfdcc9d8d34">185ca2912f</a></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ecbf681e3180c999a8d26ca2ab03e7514cc61d15">ecbf681e31</a></li></ol>
+<h2><span class="mw-headline" id="April_18_to_April_22">April 18 to April 22</span></h2>
+<ol><li>Ported old vertex paint mode to C++ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/575ade22d4de472ccf9e7d2dc1ffca37416c58f6">575ade22d4</a></li>
+<li>Fix dyntopo crash with color attributes: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f190f7f43bb6c4a2c9dc52fdaae2dacf10f1d24">6f190f7f43</a></li>
+<li>Fix data transfer modifier bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b0c428c0636c6f2b5a4b08f776948b80dbe7d80f">b0c428c063</a></li>
+<li>Code cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/14f2d37ad13d9c014de97b16ec5239106e9bab87">14f2d37ad1</a></li>
+<li>Fix draw crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/01333cb47f83d19a62b5c96f2a69cb8a7c4ae7c3">01333cb47f</a></li>
+<li>Fix crash in sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d2dee8f482bda04ab90af33dd0c223c91b61b720">d2dee8f482</a></li>
+<li>Fix remesh crash in sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/afc86042b7df08af89e01c8c114a116609a31288">afc86042b7</a></li>
+<li>Fix mask slice in sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55740b7bee4e9ce1d1329e136533121669de8145">55740b7bee</a></li></ol>
+<p>== April 25 to April 29
+</p>
+<ol><li>Make sculpt mask filter operator show redo panel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/185d9627b3156d30596e19f611941c1ed0e88e5b">185d9627b3</a></li>
+<li>Change how defaults for mask filter are set so redo panel remembers more of them <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/296d734344139db6bc092082eaf6ee94458d5506">296d734344</a></li>
+<li>Fix crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38eed4ada363861abc6d44fee5816a2c384fea22">38eed4ada3</a></li>
+<li>Fix crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42878ffc268657a90c3344d27487588dc64bc85f">42878ffc26</a></li>
+<li>Fix trim lasso radius bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bc0e8d3049ec1b7c775717ec7aff6e9ab1c7726">2bc0e8d304</a></li>
+<li>Cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a8331d8c9df4d5fc861c381ea153d9e76c603fda">a8331d8c9d</a></li>
+<li>Fix color space error in vertex paint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c20b99b70c84f089277fa1615efea733b338cdd0">c20b99b70c</a></li>
+<li>Fix PBVH draw cache invalidation crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bfb4dcaa1a7ec5bfd2b25cf7aa5b6173d6c53358">bfb4dcaa1a</a></li></ol>
+<h2><span class="mw-headline" id="May_2_to_May_6">May 2 to May 6</span></h2>
+<ol><li>Implement PBVH texture node splitting:
+<ol><li>Initial implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d2fa1daea64f605fe6660675e293a1f09f885559">d2fa1daea6</a></li>
+<li>Debug visualization <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1c77f259fd3b5f1768dd37eb2c06f67e67004999">1c77f259fd</a></li></ol></li>
+<li>Fix merge bugs in sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/67fdff9d69fbf58ae49af8ff36439801fa847d74">67fdff9d69</a></li></ol>
+<h2><span class="mw-headline" id="May_9_to_May_13">May 9 to May 13</span></h2>
+<ol><li>PBVH texture node splitting:
+<ol><li>Fix bug in pixel row splitting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27fd506501bab6a0b9be51b291a7da38d1c9427a">27fd506501</a></li>
+<li>Multithreading <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/">6e4daa7d3c5f2a77f1c23f5a6333e24118a6519c 6e4daa7d3c</a></li></ol></li>
+<li>Fix broken vertex color node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0eb2244f0ae785aec08e608458804b780ea4957b">0eb2244f0a</a></li>
+<li>Sculpt-dev:
+<ol><li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd316eb6c614eb0630cd0bea46f5f3c7c03f0085">cd316eb6c6</a></li>
+<li>Fix merge errors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7677b2428ad7631d02de19f83dfd6f49f6d3c101">7677b2428a</a></li>
+<li>Fix large file sizes caused by brush settings system <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cfc46e43b2f4f653f2412ae564d3c6fb6638139a">cfc46e43b2</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5a111c6371d0807ba69af7361c4e63118f74839">e5a111c637</a></li></ol></li></ol>
+<h2><span class="mw-headline" id="May_16_to_May_20">May 16 to May 20</span></h2>
+<ol><li>Sculpt-dev:
+<ol><li>Fix brush stroke bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4b41114f674f6eb992c868ed605fbfbd5d69e1c7">4b41114f67</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3210924485e1503fab5e05aad8ef58b3e4079d08">3210924485</a></li>
+<li>Cleanup brush strength api so all sculpt brushes support square shapes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7217d1f3556d012de806ad779aebe9fbb8d7462f">7217d1f355</a></li></ol></li>
+<li>Dyntopo not initializing face set values correctly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b54abd7ede6ab1089f8733b1e35a290b7ad2f169">b54abd7ede</a></li>
+<li>Unprojected radius mode messes up sculpt texture radius <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f9751889df35c81501c60abd1af98252d80ea3fc">f9751889df</a></li>
+<li>Merge master into temp-pbvh-eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e61e8c9012c41e8b31f005cb5755dc7d8ae7bd8">2e61e8c901</a></li></ol>
+<h2><span class="mw-headline" id="May_23_to_May_27">May 23 to May 27</span></h2>
+<ol><li>temp-pbvh-eevee: Fix active uv layer having wrong alias <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/commit">f9fb9a20b941f2ebcb8cbaa78bcb5cb4932c1cfb commit f9f</a></li>
+<li>Merge master into sculpt-def <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c3d11c233286de7c71230f8fb08d590736c9aae">4c3d11c233</a></li></ol>
+<h2><span class="mw-headline" id="May_30_to_June_3">May 30 to June 3</span></h2>
+<ol><li>Shading artifacts on paint/mask anchored sculpt brushes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1c29b9bd3c8241b212d7d50b2d538b980a7d62e">f1c29b9bd3</a></li>
+<li>Remove improper OPTYPE_UNDO flags <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/511a08585d2934b38e7d3de447752686b5f0e15b">511a08585d</a></li>
+<li>Temporary fix for attribute convert undo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/75162ab8c23937fce64e7b2674cc706a008ded96">75162ab8c2</a></li>
+<li>GPU subdiv: Fix edit mode vertex color not being uploaded properly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6cee4049143abf692af6ffb78c109fb0760fe67d">6cee404914</a></li>
+<li>Sculpt-dev:
+<ol><li>Fix tip_roundness versioning bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7d6ad76d7ac901eaf3b5850ec32f110df677b03">d7d6ad76d7</a></li>
+<li>Pmap bugs: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c12e3ff183444a43d52ab47b0effabd5b255f4dc">c12e3ff183</a> <a rel="nofollow" class="external autonumber" href="https://projects.blender.org/blender/b60f298608742d23db2e0198784f516be5d48929/commit/">[1]</a></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d54416506a7ee5e00b08157bc8f05aff8943dd29">d54416506a</a></li></ol></li>
+<li>Fix zeroing of last position on stroke start <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e02b53ae755742c6c2192e4def58be55deb1f98">8e02b53ae7</a></li>
+<li>temp-pbvh-split: Use task api correctly. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6851971501470788fbf70cccf3fc116296377673">6851971501</a></li>
+<li>temp-sculpt-cavity-mask: Add caching <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/371708737a63a5e11a16e34ffed18da1afc74051">371708737a</a></li></ol>
+<h2><span class="mw-headline" id="June_6_to_June_10">June 6 to June 10</span></h2>
+<ol><li>Move sculpt_automasking.c to c++ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ca29376e002c5427513ee2ed6633dd82811ac1bd">ca29376e00</a></li>
+<li>Land pbvh EEVEE patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/285a68b7bbf2fa40e41d507991467387f5dd5264">285a68b7bb</a></li>
+<li>Fix image editor cursor disappearing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/371fc68678d51576809e4a2e4e70906ef32be69e">371fc68678</a></li>
+<li>Merge branch master into temp-pbvh-eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/59cdc4e7f6acbf9ee338fa241d69459f1c8a8000">59cdc4e7f6</a></li>
+<li>temp-sculpt-cavity-mask:  Add custom curve support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/527ad665afecdfe576839166f41c9a52662d1ef7">527ad665af</a></li>
+<li>Cleanup: Move sculpt_automasking.c to c++ <a rel="nofollow" class="external autonumber" href="https://projects.blender.org/blender/ca29376e002c5427513ee2ed6633dd82811ac1bd/commit/">[2]</a></li>
+<li>temp-sculpt-cavity-mask: Move cavity mask settings into toolsettings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7ea1cca4e7e924b293fed8706d5c9a63ab432e3">d7ea1cca4e</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f5203933f7edcb6a6b7f07ed567bb09dc05b180b">f5203933f7</a></li>
+<li>Anchored mode not working for sculpt smear brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c55dac9904d7f18189fa8335794696e49b2d3875">c55dac9904</a></li>
+<li>Sculpt-dev: fix bmesh python bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1cd88104f09d4b70b8c5bd49e0e0931673d5909c">1cd88104f0</a></li></ol>
+<h2><span class="mw-headline" id="June_13_to_June_17">June 13 to June 17</span></h2>
+<ol><li>sculpt-dev:
+<ol><li>Fix draw cache bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/47a14ef4adc53705aee722bb406c3f854791005f">47a14ef4ad</a></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e108318af8494cbb20c2b857887103ebd3369bb6">e108318af8</a></li>
+<li>Fix undo bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c73fc97d45fb5f9cbd2a565cb013dce62de21f66">c73fc97d45</a></li></ol></li>
+<li>PBVH active attrs only optimization is buggy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7a24fe372c2148bf28e3768d42c14192ed46c5d6">7a24fe372c</a></li></ol>
+<h2><span class="mw-headline" id="June_20_to_June_24">June 20 to June 24</span></h2>
+<ol><li>Fix crash when adding color attributes in editmode. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30273b86c7ffc79746d21952970fec25db523c1c">30273b86c7</a></li>
+<li>Fix sculpt undo ignoring gravity with paint tools. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c3b984b3daa58e25e77864fc430917d4448ce71">4c3b984b3d</a></li>
+<li>Add second blur mode to cavity mask patch. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/56e2f93a3c0caf52a93b3b174baf033069565527">56e2f93a3c</a></li>
+<li>Merge master into temp-pbvh-split.</li>
+<li>Looked at UV seam patch.</li>
+<li>Submitted normal automasking patch (<a rel="nofollow" class="external free" href="https://developer.blender.org/D15297">https://developer.blender.org/D15297</a>).</li>
+<li>Submitted automasking support for image paint patch (<a rel="nofollow" class="external free" href="https://developer.blender.org/D15298">https://developer.blender.org/D15298</a>).</li></ol>
+<h2><span class="mw-headline" id="June_27_to_July_1st">June 27 to July 1st</span></h2>
+<ol><li>Cavity mask patch: Add automask baking tool <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1e259426c62075307f881cbc2c2c729da50f91bc">1e259426c6</a></li>
+<li>Fix T98886: PBVH_GRIDS ignores face smooth flag on first gpu build <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cefa13770a1a76f223e3183c494edf533739a2e">3cefa13770</a></li>
+<li>Cleanup: Renamed SCULPT_TOOL_NEEDS_COLOR to SCULPT_tool_is_paint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f7c6d3705df8c182d70ca8ca12bb8ac160cdba8f">f7c6d3705d</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/21859432357a80d50eab71552350f6dd242abfb2">2185943235</a></li>
+<li>Fix T99196: sculpt_update_object calls paint updates for nonpaint tools <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c39e9326317442f6751fb0b2929c49b3512309d5">c39e932631</a></li>
+<li>Fix backwards normals in PBVH_GRIDS raycasting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eaec01cad573a240fe1dc99bbe4463c46e311508">eaec01cad5</a></li>
+<li>Fix T99231: Wrong anchored mode test for smear brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2d0877ed7efe4f18fd4ae628d69991246b3019d4">2d0877ed7e</a></li></ol>
+<h2><span class="mw-headline" id="July_4_to_July_8">July 4 to July 8</span></h2>
+<ol><li>Fix T98884: Fix edge case crashes in gpu subdiv cache code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f5073a8e298c474fac36f7193d291e6f9579277">3f5073a8e2</a></li>
+<li>Cleanup: use local variable in smear code instead of ss-&gt;cache-&gt;bstrength <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7be07a9d6e26fde833e24957e8263e5e07af8d2f">7be07a9d6e</a></li>
+<li>Fix T98698: Division by zero in smear code when strength is zero <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a720a4aabb44973a87d51e68037c0a694cdd0567">a720a4aabb</a></li>
+<li>Fix T94633: Sculpt mode missing check for hidden active object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb39058f2f31815279ac72fce08ead7cbc979517">cb39058f2f</a></li>
+<li>Submitted vertex color limit removal patch <a rel="nofollow" class="external text" href="https://developer.blender.org/D15368">D15368</a></li></ol>
+<h2><span class="mw-headline" id="July_11_to_July_15">July 11 to July 15</span></h2>
+<ol><li>Fix T99383: Wrong origdata type in color filter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7357176b5739ce9ea0d94d9ecdeaa0af7d64722e">7357176b57</a></li>
+<li>Cavity mask patch: Remove original blur mode. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d1104544b41afa6c064d1872f463f86a1e48c89c">d1104544b4</a></li>
+<li>Sculpt: Fix scene spacing mode (phase 1) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a1488790532b6a64dea66cbe696ac35c70e6793">9a14887905</a></li>
+<li>Fix T99644: Anchored brush mode fails for negative brushes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd1e4ae4483056157f238f56f19367ad98ae3f3d">cd1e4ae448</a></li>
+<li>Normal automasking patch:
+<ol><li>Support normals automasking for sculpt filters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a472ced73bed0500910467cf4919346ff2ba6e35">a472ced73b</a></li>
+<li>Give automasking access to original normals <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/10e909863777f506d209046b44b3efc4a3627a0b">10e9098637</a></li></ol></li>
+<li>SculptVertRef patch: Cleanup API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fbe2dcd2b8406f5bf754e965bce49ea9e3afef63">fbe2dcd2b8</a></li>
+<li>Submitted PBVH draw patch: <a rel="nofollow" class="external text" href="https://developer.blender.org/D15428">D15428</a></li>
+<li>Sculpt-dev: Cleanup sculpt temp attribute API before splitting into patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed8ffec61f88ab5970028b75aa0ad79fa088f1c2">ed8ffec61f</a></li></ol>
+<h2><span class="mw-headline" id="July_18_to_July_22">July 18 to July 22</span></h2>
+<ol><li>Fix T99687: Cloth filter crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f6836924739049384116d5b8054811b08bb0d97">9f68369247</a></li>
+<li>SculptVertRef patch: Make requested changes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e028d6d2d3f2fa0c75dc7d461f2f1b8f3be402f">2e028d6d2d</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b3d7112d326198acba2521a1e77474c31a9d5777">b3d7112d32</a></li>
+<li>Submitted sculpt attribute API patch: <a rel="nofollow" class="external text" href="https://developer.blender.org/D15496">D15496</a></li>
+<li>Updated Expose Face Sets In Python API patch: <a rel="nofollow" class="external text" href="https://developer.blender.org/D15025">D15025</a></li></ol>
+<h2><span class="mw-headline" id="July_25_to_July_29">July 25 to July 29</span></h2>
+<ol><li>Sculpt: Fix T99779, pbvh gets wrong active vertex for multires <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/462f99bf38648a08226b1fba423315aec2bc577b">462f99bf38</a></li>
+<li>Normal automasking patch:
+<ol><li>Implement new masking modes for factor cache <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7731690dba8cc7ac8a5b83d163ff27d3086f9736">7731690dba</a></li>
+<li>Add occlusion mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d77980256319e2c896e7949b745996b7dbe3e3bf">d779802563</a></li></ol></li>
+<li>Commit PBVHVertRef patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7cfb6ac71e4225a654487ab134c89051dad03ed">d7cfb6ac71</a></li>
+<li>Sculpt: fix name collision in DynTopo temp attributes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27a16abe81a63c4ac72c218bef19b1a85d2eec4b">27a16abe81</a></li>
+<li>Normal automasking patch:
+<ol><li>Make occlusion suboption of view normal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6bfbdc4bff8a54d8f9426c3e05d3a44aa09e434d">6bfbdc4bff</a></li>
+<li>Implement new masking modes for factor cache <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7731690dba8cc7ac8a5b83d163ff27d3086f9736">7731690dba</a></li>
+<li>Add occlusion mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d77980256319e2c896e7949b745996b7dbe3e3bf">d779802563</a></li></ol></li></ol>
+<h2><span class="mw-headline" id="August_1_to_August_5">August 1 to August 5</span></h2>
+<ol><li>Wrote prototype of new pbvh draw system.</li>
+<li>Sculpt: Fix T99294: Voxel Remesher text is resized based on object scale <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b65ab293105d3dfceee8f3bafa3936cfebad8200">b65ab29310</a></li>
+<li>Sculpt: fix broken triangle/vertex count for DynTopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6b1e97dd70d5cae9d6cf06256be77e0bafa6554">e6b1e97dd7</a></li>
+<li>Rebase sculpt attribute patch with master.</li>
+<li>Cavity mask patch update (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c692b93fcf00d95ec42554251433d684f7278358">c692b93fcf</a>):
+<ol><li>Merge master.</li>
+<li>Invert curve behavior in invert mode</li>
+<li>Invert and normal cavity mask are now seperate modes and mutually exclusive.</li>
+<li>Automask bake operator now has option to use scene defaults.</li>
+<li>The automask boolean properties are now defined in a EnumPropertyItem list to avoid three sets of duplicate code.</li>
+<li>Added a "Mask from cavity" menu operator.</li></ol></li>
+<li>Wrote rough code for experimental version of sculpt-dev's brush property refactor based on RNA. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ecf5f2b1186a1c05ddebb8e1287f7111de008bd7">ecf5f2b118</a></li></ol>
+<h2><span class="mw-headline" id="August_8th_to_August_12">August 8th to August 12</span></h2>
+<ol><li><a rel="nofollow" class="external text" href="https://developer.blender.org/T100137">Brush Properties refactor</a>
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b4cb9b9b9fbc52d5a216038c54352331f5905668">b4cb9b9b9f</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f913f0cb42f385a659e1599994451950de59846c">f913f0cb42</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1ef3c59beb86cc1f1957d97be416f3740314d752">1ef3c59beb</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c3cf3ad17e6238f2a349d4c2f9ded4280ad4768">4c3cf3ad17</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/efaade3b30f111227dd9ec9623093ce94f3ae529">efaade3b30</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0940b3575520b5d6ea84d374924e35efd76135cd">0940b35755</a></li></ol></li>
+<li>Register sculpt brush op so it clears last operator panel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/11bdc321a274712e5c5ae83ff2c199690f66ecf7">11bdc321a2</a></li>
+<li>Update cavity mask patch
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4624153af92301907bff3075b4ea67f9a3be4c32">4624153af9</a></li>
+<li>Use automask curve for use_automask_settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be26a3402c909c787df2de19228e4909028c9677">be26a3402c</a></li>
+<li>Code cleanups <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07530726fdcfe6844cb10b67d4b2a050cb4573d7">07530726fd</a></li>
+<li>Cleanup UI <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4b2c92f8e07fe23182dc1f4e775c1305dff6f260">4b2c92f8e0</a></li>
+<li>Cleanup bake cavity mask panel UI inside the properties editor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0caf6c598ca01d1ce689c7f27cd4320e6b63f8ac">0caf6c598c</a></li></ol></li></ol>
+<h2><span class="mw-headline" id="August_15th_to_August_19th">August 15th to August 19th</span></h2>
+<ol><li><a rel="nofollow" class="external text" href="https://developer.blender.org/T100137">Brush Properties refactor</a>
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5d508c3626918fea6da4014f6f270546a0681e5">c5d508c362</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/269adfdf23400ec91c0bb18e2c1618ca1aa6e1fa">269adfdf23</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8fff5d50b6de49cc3183acf18d3f320c5067e2a">c8fff5d50b</a></li></ol></li>
+<li>Sculpt attribute patch:
+<ol><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/67d1689f89b6fa68e114dbd8d63f8fd0254fc40d">67d1689f89</a></li></ol></li>
+<li>Fix anchored brush performance regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2d19038c6c2817fff4d8278adfa9d14020c9eea6">2d19038c6c</a></li>
+<li>Improve PBVH debug draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f3eb055dd0c708cb775332115be37dec0075e43">7f3eb055dd</a></li>
+<li>Write documentation in sculpt_undo.c <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5feb4e6fe27f013cc17b841729fb6c5097b4848">c5feb4e6fe</a></li>
+<li>Fix sculpt undo bug related to undo push name errors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f9299e45d39051f341fcc2d6415defcc01eca93">3f9299e45d</a></li>
+<li>Blank redo panel for stroke operator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b49b54bb13721b8fbe23acb6084af9280887778">6b49b54bb1</a></li>
+<li>Created redo panel bugfix patch <a rel="nofollow" class="external text" href="https://developer.blender.org/D15697">D15697</a>.</li>
+<li>temp-pbvh-vbos: Add support for solid-shaded multires <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/461c1deb63f842933c474144000452994a2bec58">461c1deb63</a></li></ol>
+<h2><span class="mw-headline" id="August_22th_to_August_26th">August 22th to August 26th</span></h2>
+<ol><li>Sick this week.</li></ol>
+<h2><span class="mw-headline" id="August_29th_to_September_2nd">August 29th to September 2nd</span></h2>
+<ol><li>Core: Remove color attribute limit from CustomData API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6ba8e5f38dbf62392088c3020aab549b7c80554">a6ba8e5f38</a></li>
+<li>Fix T100479: Memory corruption in sculpt_boundary_edit_data_init <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7b33cd8c881b9a4c13eef9b6bd6192a56710f78">d7b33cd8c8</a></li>
+<li>Cleanup: fix warnings from vcol limit commit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdc0be48c95c379b75143a60e935a416d99eb8bf">cdc0be48c9</a></li>
+<li>temp-pbvh-vbo: merge master <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f987d9b7583c1ce45c6c19eec054d023e12a0f57">f987d9b758</a></li></ol>
+<h2><span class="mw-headline" id="September_5th_to_September_9th">September 5th to September 9th</span></h2>
+<ol><li>Sick this week.</li></ol>
+<h2><span class="mw-headline" id="September_12th_to_September_16th">September 12th to September 16th</span></h2>
+<ol><li>Worked on sculpt attribute patch <a rel="nofollow" class="external autonumber" href="https://projects.blender.org/blender/38557d512216cc02fe44846f22a558456f166ac1/commit/">[3]</a></li>
+<li>Fix T100941: Draw cache invalidation loop <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/100fe61f7c5be981193a46776cef5ba4df64eb31">100fe61f7c</a></li>
+<li>Fix T100608: SCULPT_UNDO_FACE_SETS broken for redo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c1650ae8fd5ec1bdcb170a5f749d55f8bf61e62">2c1650ae8f</a></li>
+<li>Fix T101008: Missing CD_MDISPS layer: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d3c34f345c766daabb56a453f8c8ef7bead801b">3d3c34f345</a></li>
+<li>Finish initial implementation of PBVH draw cleanup patch: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6482e092d06ee1ab862f9e98ddccbe8c23fb2bb0">6482e092d0</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b2bdbeced6babd48c949e8064f4dbe2c9cbfbc55">b2bdbeced6</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/88e6cb1ec0821707a0d284fa718010476a226d60">88e6cb1ec0</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07e8bc306369eab2ac989551ab022bcce97ef7f2">07e8bc3063</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1acc730ba1aa33bba00cd36fbb0d53486dd6f7a4">1acc730ba1</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97d3a57edf7e0408626d1806424397a4f8f3a8e9">97d3a57edf</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97d3a57edf7e0408626d1806424397a4f8f3a8e9">97d3a57edf</a></li>
+<li>Landed sculpt attribute patch.</li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84342ed7b23ba7d1a4774a1ee9991034187b68dd">84342ed7b2</a></li></ol>
+<h2><span class="mw-headline" id="September_19th_to_September_23rd">September 19th to September 23rd</span></h2>
+<ol><li>Sculpt: Fix bug with allocating duplicate attribute layers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ff5d42cd3b41cc1412d4a896d8f9e8d2977686f">2ff5d42cd3</a></li>
+<li>Cavity mask patch: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b11f312629ff9d4c26ee72d3e38b18c88edc6616">b11f312629</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/200e3c8d559b">Fix T101430: Dyntopo undo crash6dded6229db62c43cdb7e28f01cd 200e3c8d55</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5ab67e8144fc40360a617d03a62a6e640c1eefc">c5ab67e814</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f5acd46761961799738c487a3465d89ade843f24">f5acd46761</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/432fa09d6f94645e8cf4c16ce46226c77f403519">432fa09d6f</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b11f312629ff9d4c26ee72d3e38b18c88edc6616">b11f312629</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b11f312629ff9d4c26ee72d3e38b18c88edc6616">b11f312629</a></li>
+<li>Sculpt: Fix T100479: Boundary expand crash 32b766223a1b2a562e657a729e7d9f2926d42417</li>
+<li>Sculpt: fix memory corruption in new attribute api <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2a21dfb7714bf25431291f6598f43109af46446">c2a21dfb77</a></li>
+<li>Normals automasking patch: Use a stroke id attribute for occlusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f803851188397e9697695e80bc8467ac839ec66">3f80385118</a></li>
+<li>Merge master into sculpt-dev.</li></ol>
+<h2><span class="mw-headline" id="September_26th_to_September_30th">September 26th to September 30th</span></h2>
+<ol><li>Fix T101467: Improper vertex count in pbvh draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/206dead86058d58f1e0f402efb2c37930aadc661">206dead860</a></li>
+<li>Fix sculpt face set undo creating duplicate face set layers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/81f15a51aa7891c16579d004eac446ec4e7866be">81f15a51aa</a></li>
+<li>Fix crash in relax face sets brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/991a35b844bc3b9366551ec23d3a38ee614c1048">991a35b844</a></li>
+<li>Fix T101430: Dyntopo undo crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b9f45c1d1bfafffe6fe251ac7330bc5e5ba8ec2">6b9f45c1d1</a></li>
+<li>Upload to gpu white for color attributes in multires in sculpt <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b0485fd7711494ecc927e97adbeb2655d940af6">5b0485fd77</a></li>
+<li>Fix T101503: Memory corruption in multires faceset drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1eba76d8eda60a0110460e6c880ae0875dd7fd5f">1eba76d8ed</a></li>
+<li>Fix T101430: Curve shown improperly in mask from cavity redo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4cbafba04b95a73900bec589375d7686b25624b1">4cbafba04b</a></li>
+<li>Fix stroke-only attributes not being freed at stroke end <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/688c4f7e5198c1ab7c14c01a1dc69ec08f3be073">688c4f7e51</a></li>
+<li>Fix T101465, crash in cloth filter with new automasking modes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b063cfa9cf9d5c5b486311ef5515a144f1ad36f4">b063cfa9cf</a></li>
+<li>Fix T101464: Crash in mask from cavity <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a9b45995d8a9a1b88f9fbac892a573e461db8f4">6a9b45995d</a></li>
+<li>Fix T101463: Don't initialize automask to zero in factor mode if topology or boundary modes are inactive <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f998fa2732a9b707645df902fdc943a6d3fad95d">f998fa2732</a></li>
+<li>Reset automask cache on non-color non-mask undo steps <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1494a22a900a91483c91cdb259523e3ce063f9c3">1494a22a90</a></li>
+<li>Fix draw face sets not updating on first stroke <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6d3da28676d704c992e54d796071b872e0aced14">6d3da28676</a></li>
+<li>Fix missing nullptr check in pbvh draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/039429faeb4160cc26b283c7309c9cb9d87ee7c0">039429faeb</a></li>
+<li>Commit normals automasking patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bbc69563d0704a8269318d8699e7c2bf4edc91c2">bbc69563d0</a></li>
+<li>Commit cavity mask patch: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0156a677c7d13106a1d049d74fca43b5311eb53e">0156a677c7</a></li>
+<li>Commit pbvh draw rewrite patch: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65900d88a8317c207885ae4a3993272112114f36">65900d88a8</a></li>
+<li>Merge master into sculpt-dev: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ae40de20b85b4e00632c0c85aebe5e8f7ebfaa9">9ae40de20b</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c619fd38186c41bf3a72cc75d6e137fdbf58052">9c619fd381</a></li>
+<li>temp-sculpt-cavity-mask: Make requested patch changes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c1bc8e45189e8242848cb2c5be5fe357e35b2d5">2c1bc8e451</a></li></ol>
+<h2><span class="mw-headline" id="October_3rd_to_October_7th">October 3rd to October 7th</span></h2>
+<ol><li>Bugfixes for sculpt-dev: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a5f53346a614ecee74cc772da40aa572713ce2ad">a5f53346a6</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c2d0354e725225bd3a4c4a7e86479c18d08c8ef">6c2d0354e7</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c3c67cf0c285bf82a6059bf22f8dcedd19fa03ec">c3c67cf0c2</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e2b2348559989866ac30c4f1f207cb784f0b8f3">5e2b234855</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42948e2389dfdbc575496ab109367fd6c8b06721">42948e2389</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/059fb4098f54d381bb2bc7a7f2c9054a78492663">059fb4098f</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5fcaa293a7346efedce0e4dfdbb6768c7534e43">e5fcaa293a</a></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2aa347b64e8c5fc39881e86aa066ac5385b3629f">2aa347b64e</a></li>
+<li>Sculpt: Fix crash in dyntopo draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38af785dba0989871b5c6c258c7e748a462e2f9a">38af785dba</a></li>
+<li>Viewport: Enable draw_debug.cc code when WITH_DRAW_DEBUG is on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af288a09a529dc802effe104f09870a4fb48802a">af288a09a5</a></li>
+<li>Sculpt: Raise pbvh-&gt;leaf_limit to 400 for dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53d937a1700021e0cb7a52aa0c45da0014974e81">53d937a170</a></li>
+<li>Sculpt: Fix T101502: GPU tris miscounted for dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dfa0eb298ed3fa08cc70a472eb9427b515040457">dfa0eb298e</a></li>
+<li>Sculpt: Fix bug in sculpt attribute api <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f58b5246695f1fc9b8545c84569566685a64c8cb">f58b524669</a></li>
+<li>Sculpt: Fix crash in face set init <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9d40b1cc3ec557b13e09f7989f9d7ccc624e091e">9d40b1cc3e</a></li>
+<li>Sculpt: Fix crash in dyntopo draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38af785dba0989871b5c6c258c7e748a462e2f9a">38af785dba</a></li>
+<li>Sculpt: Visibility bugfixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/22c3db72ca2f3d92852f463c184381ccf2998230">22c3db72ca</a></li>
+<li>Sculpt: implement Reveal All for PBVH_BMESH <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2cf21604c9130c56021525ed5af3f1fa59dcb19a">2cf21604c9</a></li>
+<li>Sculpt: Fix T101430: Blank stroke undo steps corrupt dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed7f5713f8f9d605e3cd4cce42e40fb5c6bf4bf5">ed7f5713f8</a></li>
+<li>Sculpt: Add debug code to print sculpt undo stack. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/416d1d039363fe7d93943ecd8936b386f9301749">416d1d0393</a></li></ol>
+<h2><span class="mw-headline" id="October_10th_to_October_14th">October 10th to October 14th</span></h2>
+<ol><li>temp-pbvh-split: Fix various crashes and memory corruption <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78b008d20d64bc564cd25564586781535d821925">78b008d20d</a></li>
+<li>Sculpt: Fix face set relax being too strong <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7ea79fde7b88eba37b57e897604574489aec43f">b7ea79fde7</a></li>
+<li>Sculpt: Fix draw artifacts when drawing multires mask <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c207571d44e6af7d52a3764f6a3794e9a884a56b">c207571d44</a></li>
+<li>Sculpt: Ensure faces are uniquely assigned to PBVHNodes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/010c10febe46c1c24ca3e32ee8b03e2da2eea4fe">010c10febe</a></li>
+<li>Sculpt: do not validate PBVH draw data in mesh_batch_cache_valid <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc06fcca47caa182cad0818de6ccb8cde9ea215e">bc06fcca47</a></li>
+<li>Sculpt: fix crash when instancing sculpt objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7a005e089daf068c6b400bfa96ac39d4240f3516">7a005e089d</a></li>
+<li>Sculpt: Fix mask from cavity not redrawing viewport with modifiers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/48fd4a01efd3a1d649a50b45184c91593219fb55">48fd4a01ef</a></li>
+<li>Sculpt: Fix T101595: sculpt_attribute_update_refs called in wrong place <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7119582b6686542f75858d48266a2a5a8664f8c0">7119582b66</a></li>
+<li>Sculpt: Fix T101718: Automasking crash with new texture paint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/188786f0b0ddcbeffe6f2e7d9a5f053cf67faf05">188786f0b0</a></li>
+<li>Sculpt: Clean up Dyntopo's original triangle api <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f133b7a38341a245ff4cfab0e18a271c021bd94">7f133b7a38</a></li>
+<li>Sculpt: Fix T101674: Passing null to GPU_batch_elembuf_set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc1418e5d91edba691b43eb7efd5d0ec9d5c1b10">dc1418e5d9</a></li>
+<li>Sculpt: T101699: Face set change visibility crashes on no face sets <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/da25006bc4c702597165309b170df12891b0f622">da25006bc4</a></li>
+<li>Sculpt: Fix T101729: Automasking crash in elastic deform brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/473df37134aa59339557fead150053c9b9ac97ef">473df37134</a></li>
+<li>Merge master into sculpt-dev. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92bc610c36b6e4f36838b23bf4b61ea6c4a64eec">92bc610c36</a></li>
+<li>Fix various sculpt-dev merge bugs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/87863770bbe3deb7fef6665d42366ed1242c965c">87863770bb</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57d5fc7352d6f2f406359b3f693b3e7189a98eee">57d5fc7352</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f133b7a38341a245ff4cfab0e18a271c021bd94">7f133b7a38</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc1418e5d91edba691b43eb7efd5d0ec9d5c1b10">dc1418e5d9</a> <a rel="nofollow" class="external autonumber" href="https://projects.blender.org/blender/blender/commit/">[4]</a></li>
+<li>Created PBVH face iterator patch.</li></ol>
+<h2><span class="mw-headline" id="October_17th_to_October_21st">October 17th to October 21st</span></h2>
+<ol><li>Sculpt: Fix T101864: Mask initialization not updating multires data <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25e84334f7d66b36ff962688c4c5b5818bd5db25">25e84334f7</a></li>
+<li>sculpt-dev: Fix stroke id error in smooth code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b8b99cf8a3ce5df591ab02b2a2e2a24cd288d8c">5b8b99cf8a</a></li>
+<li>sculpt-dev: Roll mapping fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/46839d1f4386f3639caaef6d6c00e9503c9ca396">46839d1f43</a></li>
+<li>sculpt-dev: Implement arc-length derivatives for BLI_arc_spline.hh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b7561f16ad9f440ca8a28413898eb40d5aecaf8">9b7561f16a</a></li>
+<li>sculpt-dev: More roll mapping fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/82a369623460e3e974a9f9fed9dddd0df2b8e4aa">82a3696234</a></li>
+<li>sculpt-dev: Write arc-length (evenly spaced) spline lib <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8786b5c0c0158fac0e6954977adeb64dca643b0e">8786b5c0c0</a></li></ol>
+<h2><span class="mw-headline" id="October_24th_to_October_28th">October 24th to October 28th</span></h2>
+<ol><li>Attended Blender conference.</li>
+<li>Sculpt: fix T102067: Set material properly in new pbvh draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc7de854c90dd45758e7ff59c88ed0121c8cccca">bc7de854c9</a></li></ol>
+<h2><span class="mw-headline" id="October_31st_to_November_4th">October 31st to November 4th</span></h2>
+<ol><li>Fix T102253: Missing call to SCULPT_automasking_node_update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db3bf3677085d64cca04f01e2004f556c75a4400">db3bf36770</a></li>
+<li>Texture roll mapping patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9980fd0b8e1f3a07060316f28469f55a3f2fc0cd">9980fd0b8e</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/D16414">D16414</a></li></ol>
+<h2><span class="mw-headline" id="November_7th_to_November_11th">November 7th to November 11th</span></h2>
+<ol><li>Update face iterator patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/848ca9db469818139e32084a41e48162995a9fe6">848ca9db46</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/afc13a273eab731915760ec74423ad136f2f5dbb">afc13a273e</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f96961a76bbd429c0e362e6d6a84a518900c4639">f96961a76b</a>.</li>
+<li>Sculpt: Fix T102209: Multiresolution levels greater than 6 crashes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b2000412f21dfa5da6a02c7b0922280f5049cc2a">b2000412f2</a></li>
+<li>Sculpt: Change symmetrize merge threshold and expose in workspace panel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/969aa7bbfcdc06e9998160bdcd18981aaffc833a">969aa7bbfc</a></li>
+<li>Sculpt: Fix T102379: Crash in dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2688d7200aa3766a60456f097c3e939ec80ebba8">2688d7200a</a></li>
+<li>temp-pbvh-face-iterators: Move initialization of static memory <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/abefe06309d7329fed3f30b5f0fcfec426af7524">abefe06309</a></li>
+<li>Merge master into temp-pbvh-face-iterators <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0d66d22c03eb093d89c013a0ec0ddca8e6e10883">0d66d22c03</a></li>
+<li>Merge master into temp-sculpt-brush-channel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/commit">e59ebfef3c583985553e78492cf8cd07bbe7648e commit e59</a></li></ol>
+<h2><span class="mw-headline" id="November_14th_to_November_18th">November 14th to November 18th</span></h2>
+<ol><li>Sculpt: Fix T102349: improperly aliased enum <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/03b7982301d082780fd0acef8159ea49f88ce6c3">03b7982301</a></li>
+<li>Land sculpt face iterator API patch <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b3cee25389d28bd863c02884383ab9c2c2dab0e">6b3cee2538</a></li>
+<li>Sculpt: Fix T102567 (again) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5097105b3c62d9ec086c6d5b25ac75a1759ddb5c">5097105b3c</a></li>
+<li>Sculpt: fix T102584 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/567ae90374dbe207b0cdf6b0fa1438e8bcf0a28d">567ae90374</a></li>
+<li>Sculpt: Fix mask from cavity settings issues <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2d251478bb8dd033d17805f887c64221317c8ca9">2d251478bb</a></li>
+<li>temp-sculpt-roll-mapping: Implement symmetry/tile/radial modes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/733a764b079fa9c97e02b3d741467fb530bc8da7">733a764b07</a></li>
+<li>temp-sculpt-roll-mapping: New strategy for spline tex mapping <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/33a1472d4e818b12d2efddcd089b97b9079b1e28">33a1472d4e</a></li>
+<li>temp-sculpt-roll-mapping: mirror symmetry fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a8c4aefb3b1fa214911145dc3790e8f0ea99d7b">9a8c4aefb3</a></li>
+<li>temp-sculpt-roll-mapping: Fix stroke points projection outside of the mesh<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af4048f2b8f3e75717a7f16de2a3d58bc27a04eb">af4048f2b8</a></li>
+<li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/11643ab8f754d9b114a4ef43ec8e99aadaf624ee">11643ab8f7</a></li></ol>
+<h2><span class="mw-headline" id="November_21st_to_November_25th">November 21st to November 25th</span></h2>
+<ol><li>Sculpt: fix T102436: missing null pointer check in automasking code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/959f3cd6450225a255839396029240f42817e61a">959f3cd645</a></li>
+<li>Land D16224  Standardize face set undo steps, optimize memory usage <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/df788ecfd95f6c741249923e45a7a00fe62cc9ec">df788ecfd9</a></li></ol>
+<pre> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f5e99abb60b4470e5a4d6c7659085d608699d805">f5e99abb60</a>   <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af8a449ca55358bbf84611da2ec9b82b5b5d6664">af8a449ca5</a>
+</pre>
+<ol><li>Sculpt: Fix box face sets not working for multires <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/acf8f6220d648fdd71a68722072ba989d38e5a2b">acf8f6220d</a></li>
+<li>Sculpt: Fix broken multires hidden undo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2a72d89b19545d49525d18f188522e33d28de65">a2a72d89b1</a></li></ol>
+<h2><span class="mw-headline" id="November_28th_to_December_2nd">November 28th to December 2nd</span></h2>
+<ol><li>Merge master into sculpt-dev <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e53a8f9c51d4b4d6e92652bdf371a6215ff1fe83">e53a8f9c51</a></li>
+<li>Sculpt: Fix broken pivots when entering paint modes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65393add5269f9b803691b2df67fcdf0152d0b40">65393add52</a></li>
+<li>Sculpt: Fix T102824: broken face primitive partitioning in pbvh nodes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4aac5b92c1bbef77edaa50f460cba8350c56eaea">4aac5b92c1</a></li>
+<li>Sculpt: fix crash when no brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/918282d391a4068102bbc4e25ab9c829bd1b41f3">918282d391</a></li>
+<li>Sculpt: Fix T102337: Null pointer error circle (tube) brush test code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ed4865fd030ea169ab700843b06b747b06382be">0ed4865fd0</a></li>
+<li>Sculpt: fix T102348: Don't fold area normal automasking into cache <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ad8f3ff585c9693bb0cc84108ced00e8e0e1771">0ad8f3ff58</a></li>
+<li>Sculpt: fix T102664: Broken multires solid shading <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1fc5dc3bf3827e0bec2fe70d557280497730dc5a">1fc5dc3bf3</a></li></ol>
+<h2><span class="mw-headline" id="December_5th_to_December_9th">December 5th to December 9th</span></h2>
+<ol><li>Worked on cleaning up sculpt-dev's DynTopo in preparation of porting to master. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb764e418aa2d92661812885e4b4343558005244">bb764e418a</a></li>
+<li>Fix T102336: dynamic topology crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31ccf79011bd537c2dfbe041a76267c7fe46d4c1">31ccf79011</a></li>
+<li>Sculpt: Fix crash when sculpting after disabling dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e46ef2fa5e63b145e1f448a77a1878d5f265d54">8e46ef2fa5</a></li></ol>
+<h2><span class="mw-headline" id="December_12th_to_December_16th">December 12th to December 16th</span></h2>
+<ol><li>Updated stroke texture mapping patch.</li>
+<li>Fix T103261: Undo after mask extract doesn't restore active object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8666791b2e7542913e824a34eed2e579381377b0">8666791b2e</a></li>
+<li>Cleanup: make paint_init_pivot an api method. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17e266cd55ea58bd82094c3874254748a6d199be">17e266cd55</a></li>
+<li>Fix T103198: Missing bounds check for material_index attr in texpaint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0beb358a69d0c9c5436995c2945eadbae95e8965">0beb358a69</a></li>
+<li>Fix more attribute bugs when switching PBVH modes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/939b63bcd6c2e2bb92c7d5feb466bb44f4427fc8">939b63bcd6</a></li>
+<li>Fix T102991: Multires fast navigate not implemented <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f9cfb037a8e5dbd8707877d0a9539ae8d358656">6f9cfb037a</a></li>
+<li>Fix crash in dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a5e8a63420de7efcf874370009831da8f19e215">0a5e8a6342</a></li>
+<li>Fix crash with unsupported attr types in pbvh draw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/246df68095835110a3e11eb3c7a9d2acb048332c">246df68095</a></li>
+<li>Worked on dyntopo a bit.</li></ol>
+<h2><span class="mw-headline" id="December_16th_to_December_20th">December 16th to December 20th</span></h2>
+<ol><li>Sculpt: Fix T103341: Move sculpt overlay flags to View3DOverlay.flag <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f803a0a95b6769145528914d21910c10ce24c861">f803a0a95b</a></li>
+<li>Sculpt: Fix T103261: Undo after mask extract doesn't restore active object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8666791b2e7542913e824a34eed2e579381377b0">8666791b2e</a></li>
+<li>Cleanup: make paint_init_pivot an api method. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17e266cd55ea58bd82094c3874254748a6d199be">17e266cd55</a></li>
+<li>Fix T103198: Missing bounds check for material_index attr in texpaint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0beb358a69d0c9c5436995c2945eadbae95e8965">0beb358a69</a></li></ol>
+<h2><span class="mw-headline" id="December_23rd_to_December_27th">December 23rd to December 27th</span></h2>
+<ol><li>Sculpt: fix bugs in inverted expand mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a9cb66b856e80d0542a9ad3fec0b0fb47d28f805">a9cb66b856</a></li>
+<li>Sculpt: fix T103156: Scale square brush uvs by sqrt2. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/204de8c6db646fd08b393a17a3b25a5de76611e4">204de8c6db</a></li>
+<li>temp-sculpt-roll-mapping: Visualization improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a238533550195a4260d5a10d1228a27a632dee6c">a238533550</a></li>
+<li>Merge branch 'master' into temp-pbvh-split <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98bdd08507b95e2e0cb4b9bac4fd0d3b28cbd207">98bdd08507</a></li></ol>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112122129
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.920 seconds
+Real time usage: 1.289 seconds
+Preprocessor visited node count: 15904/1000000
+Preprocessor generated node count: 7689/1000000
+Post‐expand include size: 138911/2097152 bytes
+Template argument size: 79756/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  757.686      1 -total
+ 93.34%  707.192    314 Template:GitCommit
+ 25.31%  191.737    314 Template:GitCommit/PhabricatorParseDeprecated
+ 18.71%  141.730    314 Template:GitCommit/PhabricatorParse
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6245-0!canonical and timestamp 20240112122128 and revision id 33028
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;oldid=33028">https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;oldid=33028</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 13 January 2023, at 03:43.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:JoeEagar/Reports/2022.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:JoeEagar/Reports/2022" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/JoeEagar.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/JoeEagar.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/JoeEagar.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;oldid=33028" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:JoeEagar/Reports/2022&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.920","walltime":"1.289","ppvisitednodes":{"value":15904,"limit":1000000},"ppgeneratednodes":{"value":7689,"limit":1000000},"postexpandincludesize":{"value":138911,"limit":2097152},"templateargumentsize":{"value":79756,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  757.686      1 -total"," 93.34%  707.192    314 Template:GitCommit"," 25.31%  191.737    314 Template:GitCommit/PhabricatorParseDeprecated"," 18.71%  141.730    314 Template:GitCommit/PhabricatorParse"]},"cachereport":{"timestamp":"20240112122129","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1340});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84455c03a81b0c71","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

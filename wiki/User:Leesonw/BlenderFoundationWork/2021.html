@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Leesonw/BlenderFoundationWork/2021 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Leesonw/BlenderFoundationWork/2021","wgTitle":"Leesonw/BlenderFoundationWork/2021","wgCurRevisionId":28570,"wgRevisionId":28570,"wgArticleId":6035,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Leesonw/BlenderFoundationWork/2021","wgRelevantArticleId":6035,"wgRequestId":"4e531c8f79f213ea0368674a","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Leesonw","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.page.gallery.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.page.gallery.styles|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Leesonw_BlenderFoundationWork_2021 rootpage-User_Leesonw skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2021.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ALeesonw%2FBlenderFoundationWork%2F2021" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2021.html#Blender_Foundation_Work_for_2021"><span class="tocnumber">1</span> <span class="toctext">Blender Foundation Work for 2021</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2021.html#2021"><span class="tocnumber">1.1</span> <span class="toctext">2021</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="2021.html#July_5th_-_9th"><span class="tocnumber">1.1.1</span> <span class="toctext">July 5th - 9th</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="2021.html#Aug_9th_-_13th"><span class="tocnumber">1.1.2</span> <span class="toctext">Aug 9th - 13th</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="2021.html#Aug_16th_-_20th"><span class="tocnumber">1.1.3</span> <span class="toctext">Aug 16th - 20th</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="2021.html#Aug_23rd_-_27th"><span class="tocnumber">1.1.4</span> <span class="toctext">Aug 23rd - 27th</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="2021.html#Aug_30th_-_Sept_3rd"><span class="tocnumber">1.1.5</span> <span class="toctext">Aug 30th - Sept 3rd</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="2021.html#Sept_6th_-_Sept_10th"><span class="tocnumber">1.1.6</span> <span class="toctext">Sept 6th - Sept 10th</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="2021.html#Sept_13th_-_Sept_17th"><span class="tocnumber">1.1.7</span> <span class="toctext">Sept 13th - Sept 17th</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="2021.html#Sept_20th_-_Sept_24th"><span class="tocnumber">1.1.8</span> <span class="toctext">Sept 20th - Sept 24th</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="2021.html#Sept_27th_-_Oct_1st"><span class="tocnumber">1.1.9</span> <span class="toctext">Sept 27th - Oct 1st</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="2021.html#Oct_4th_-_Oct_8th"><span class="tocnumber">1.1.10</span> <span class="toctext">Oct 4th - Oct 8th</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="2021.html#Oct_11th_-_Oct_15th"><span class="tocnumber">1.1.11</span> <span class="toctext">Oct 11th - Oct 15th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="2021.html#Bug_Fixes"><span class="tocnumber">1.1.11.1</span> <span class="toctext">Bug Fixes</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="2021.html#Reviews"><span class="tocnumber">1.1.11.2</span> <span class="toctext">Reviews</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="2021.html#Investigations"><span class="tocnumber">1.1.11.3</span> <span class="toctext">Investigations</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="2021.html#Work_in_progress"><span class="tocnumber">1.1.11.4</span> <span class="toctext">Work in progress</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-18"><a href="2021.html#Oct_18th_-_Oct_22nd"><span class="tocnumber">1.1.12</span> <span class="toctext">Oct 18th - Oct 22nd</span></a>
+<ul>
+<li class="toclevel-4 tocsection-19"><a href="2021.html#Bug_Fixes_2"><span class="tocnumber">1.1.12.1</span> <span class="toctext">Bug Fixes</span></a></li>
+<li class="toclevel-4 tocsection-20"><a href="2021.html#Reviews_2"><span class="tocnumber">1.1.12.2</span> <span class="toctext">Reviews</span></a></li>
+<li class="toclevel-4 tocsection-21"><a href="2021.html#Investigations_2"><span class="tocnumber">1.1.12.3</span> <span class="toctext">Investigations</span></a></li>
+<li class="toclevel-4 tocsection-22"><a href="2021.html#Work_in_Progress_2"><span class="tocnumber">1.1.12.4</span> <span class="toctext">Work in Progress</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-23"><a href="2021.html#Oct_25th_-_Oct_29th"><span class="tocnumber">1.1.13</span> <span class="toctext">Oct 25th - Oct 29th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="2021.html#Bug_Fixes_3"><span class="tocnumber">1.1.13.1</span> <span class="toctext">Bug Fixes</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="2021.html#Reviews_3"><span class="tocnumber">1.1.13.2</span> <span class="toctext">Reviews</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="2021.html#Investigations_3"><span class="tocnumber">1.1.13.3</span> <span class="toctext">Investigations</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="2021.html#Work_in_progress_3"><span class="tocnumber">1.1.13.4</span> <span class="toctext">Work in progress</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-28"><a href="2021.html#Nov_1st_-_Nov_5th"><span class="tocnumber">1.1.14</span> <span class="toctext">Nov 1st - Nov 5th</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="2021.html#Nov_8th_-_Nov_12th"><span class="tocnumber">1.1.15</span> <span class="toctext">Nov 8th - Nov 12th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-30"><a href="2021.html#Work_in_Progress_4"><span class="tocnumber">1.1.15.1</span> <span class="toctext">Work in Progress</span></a></li>
+<li class="toclevel-4 tocsection-31"><a href="2021.html#Reviews_4"><span class="tocnumber">1.1.15.2</span> <span class="toctext">Reviews</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-32"><a href="2021.html#Nov_15th_-_Nov_19th"><span class="tocnumber">1.1.16</span> <span class="toctext">Nov 15th - Nov 19th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-33"><a href="2021.html#Work_in_Progress_5"><span class="tocnumber">1.1.16.1</span> <span class="toctext">Work in Progress</span></a></li>
+<li class="toclevel-4 tocsection-34"><a href="2021.html#Work_Done"><span class="tocnumber">1.1.16.2</span> <span class="toctext">Work Done</span></a></li>
+<li class="toclevel-4 tocsection-35"><a href="2021.html#Reviews_5"><span class="tocnumber">1.1.16.3</span> <span class="toctext">Reviews</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-36"><a href="2021.html#Nov_22nd_-_Nov_26th"><span class="tocnumber">1.1.17</span> <span class="toctext">Nov 22nd - Nov 26th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-37"><a href="2021.html#Work_in_Progress_6"><span class="tocnumber">1.1.17.1</span> <span class="toctext">Work in Progress</span></a></li>
+<li class="toclevel-4 tocsection-38"><a href="2021.html#Work_Done_2"><span class="tocnumber">1.1.17.2</span> <span class="toctext">Work Done</span></a></li>
+<li class="toclevel-4 tocsection-39"><a href="2021.html#Reviews_6"><span class="tocnumber">1.1.17.3</span> <span class="toctext">Reviews</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-40"><a href="2021.html#Nov_29th_-_Dec_3rd"><span class="tocnumber">1.1.18</span> <span class="toctext">Nov 29th - Dec 3rd</span></a>
+<ul>
+<li class="toclevel-4 tocsection-41"><a href="2021.html#Work_in_Progress_7"><span class="tocnumber">1.1.18.1</span> <span class="toctext">Work in Progress</span></a></li>
+<li class="toclevel-4 tocsection-42"><a href="2021.html#Work_Done_3"><span class="tocnumber">1.1.18.2</span> <span class="toctext">Work Done</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="2021.html#Reviews_7"><span class="tocnumber">1.1.18.3</span> <span class="toctext">Reviews</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-44"><a href="2021.html#Dec_6th_-_Dec_10th"><span class="tocnumber">1.1.19</span> <span class="toctext">Dec 6th - Dec 10th</span></a>
+<ul>
+<li class="toclevel-4 tocsection-45"><a href="2021.html#Work_in_Progress_8"><span class="tocnumber">1.1.19.1</span> <span class="toctext">Work in Progress</span></a></li>
+<li class="toclevel-4 tocsection-46"><a href="2021.html#Work_Done_4"><span class="tocnumber">1.1.19.2</span> <span class="toctext">Work Done</span></a></li>
+<li class="toclevel-4 tocsection-47"><a href="2021.html#Reviews_8"><span class="tocnumber">1.1.19.3</span> <span class="toctext">Reviews</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-48"><a href="2021.html#Dec_13th_-_Dec_14th"><span class="tocnumber">1.2</span> <span class="toctext">Dec 13th - Dec 14th</span></a>
+<ul>
+<li class="toclevel-3 tocsection-49"><a href="2021.html#Work_in_progress_9"><span class="tocnumber">1.2.1</span> <span class="toctext">Work in progress</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="2021.html#Reviews_9"><span class="tocnumber">1.2.2</span> <span class="toctext">Reviews</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="2021.html#Work_Done_5"><span class="tocnumber">1.2.3</span> <span class="toctext">Work Done</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Leesonw/BlenderFoundationWork/2021</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Leesonw.html" title="User:Leesonw">User:Leesonw</a>&lrm; | <a href="../BlenderFoundationWork.html" title="User:Leesonw/BlenderFoundationWork">BlenderFoundationWork</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Blender_Foundation_Work_for_2021">Blender Foundation Work for 2021</span></h2>
+<h3><span class="mw-headline" id="2021">2021</span></h3>
+<h4><span class="mw-headline" id="July_5th_-_9th">July 5th - 9th</span></h4>
+<p>Worked on fixing the depth issues with PMJ sampling <a rel="nofollow" class="external text" href="https://developer.blender.org/T79190">T79190</a>. It appears the the samples used for each dimension are correlated. To help investigate these I added a number of different sampling methods
+</p>
+<ul><li>QMC Sobol with Xor scrambling</li>
+<li>QMC Sobol with Owen scrambling</li></ul>
+<p>Then to check the pixel hash was not causing issues I added 2 pixel hashes. Next I added Owen shuffling to add more variation to the sample set. So as to be able to experiment with these I add some extra items to the UI so as to be able to combine the various options. 
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Advanced_Cycles_UI.png.html" class="image"><img alt="" src="../../../w/images/thumb/e/ea/Advanced_Cycles_UI.png/300px-Advanced_Cycles_UI.png" width="300" height="115" class="thumbimage" srcset="../../../w/images/e/ea/Advanced_Cycles_UI.png 1.5x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Advanced_Cycles_UI.png.html" class="internal" title="Enlarge"></a></div>New Advanced Cycles Options</div></div></div>
+<p>These changes can be found in <a rel="nofollow" class="external text" href="https://developer.blender.org/D11869">D11869</a>
+Looked over upcoming patch for
+</p>
+<ul><li>Animation De-noising <a rel="nofollow" class="external text" href="https://developer.blender.org/D11442">D11442</a></li></ul>
+<p>And discussion and ideas regarding
+</p>
+<ul><li>Apple Metal support</li>
+<li>Path Guiding</li></ul>
+<h4><span class="mw-headline" id="Aug_9th_-_13th">Aug 9th - 13th</span></h4>
+<p>Back from vacation and worked to catch up with how things have developed over the previous weeks. Worked on cleaning up the PMJ sampling patch and also removing any experimental code. The change increases the number of samples that can be drawn from the PMJ sample sets, so that it takes longer to fall back to random sampling which should improve the convergence. Also, selected to use the Tong hash on the pixels so as to avoid any clashes with the same hash being used for other purposes. The PMJ sampling now uses an Owen shuffle along the x and y axes to vary the 2D samples which should provide a good deal of variation between the sample sets used with each pixel and dimension. 1D samples are drawn from the both the x and y dimensions of the sample sets to make better use of the sets.
+Started integrating these changes into the cycles x branch and working on extending the PMJ sampler to produce a much larger number of samples.
+</p>
+<h4><span class="mw-headline" id="Aug_16th_-_20th">Aug 16th - 20th</span></h4>
+<ul><li>Worked on adding infinite sample count to existing PMJ method for master and cycles-x branches</li>
+<li>Looked at the changes AMD have made in their Blender repo for HIP</li>
+<li>Went over HIP documentation to get a better understanding of it</li>
+<li>Attempted to setup up the HIP dev environment on my machine</li>
+<li>Analysed some pending commits (in preparation for accepting more changes) to get a feel for what is expected</li>
+<li>Analysed the changes in the cycles-x branch w.r.t. master branch</li></ul>
+<h4><span class="mw-headline" id="Aug_23rd_-_27th">Aug 23rd - 27th</span></h4>
+<ul><li>Analysed various methods of extending PMJ to an effectively infinite sample count using</li></ul>
+<ol><li>Owen shuffling</li>
+<li>XOR shuffling</li>
+<li>Cranley Pattersion Rotation (CPR)</li></ol>
+<ul><li>Created patches for master and cycles-x branches for the above PMJ changes</li>
+<li>Reduced the number sample patterns to use less memory than previous PMJ</li>
+<li>Examined the AMD hip repo and commits</li>
+<li>Reviewed some basic changes</li></ul>
+<h4><span class="mw-headline" id="Aug_30th_-_Sept_3rd">Aug 30th - Sept 3rd</span></h4>
+<ul><li>Further iterations on fixing the PMJ method working towards removing some of the noise by limiting the CPR displacement amounts to only be within the PMJ cells/intervals</li>
+<li>Investigated using <a rel="nofollow" class="external text" href="https://hal.inria.fr/hal-01325702/document">micro jittering</a> with PMJ to speed up GPU and possibly CPU rendering. This seemed to work to speed up rendering with relatively minor changes to the new PMJ algorithm. However, the pixels are highly correlated which does not produce a good image with a low number of samples.</li>
+<li>Looking into the Animation Denoising <a rel="nofollow" class="external text" href="https://developer.blender.org/D11442">D11442</a> but need to wait on other changes before this can be finished.</li>
+<li>Looked into a bug in the volumetric rendering that has been pointed out, but I don't have a solution yet.</li>
+<li>Reviewed and committed some changes for viewport navigation resolution selection.</li></ul>
+<h4><span class="mw-headline" id="Sept_6th_-_Sept_10th">Sept 6th - Sept 10th</span></h4>
+<ul><li>Started working on removing ray offsetting to remove artefacts when rendering instanced objects <a rel="nofollow" class="external text" href="https://developer.blender.org/D6250">D6250</a>.</li>
+<li>Further examination of volumetric rendering bug seems related to the ray intersection code.</li>
+<li>Reviewed some patches relating to cycles.</li>
+<li>Looked into updating the PMJ sampler to use scrambling distance.</li></ul>
+<h4><span class="mw-headline" id="Sept_13th_-_Sept_17th">Sept 13th - Sept 17th</span></h4>
+<ul><li>Continued working on removing ray offsetting to remove artefacts when rendering instanced objects <a rel="nofollow" class="external text" href="https://developer.blender.org/D6250">D6250</a></li></ul>
+<ol><li>The black likes are largely fixed on the test scenes</li>
+<li>Still getting some issues with shadow rays due to lack of offsetting</li></ol>
+<ul><li>Noticed crash bug when switching rendering devices and created a fix <a rel="nofollow" class="external text" href="https://developer.blender.org/D12498">D12498</a> but it was not used in the end</li>
+<li>Writing documentation for the sampling in Cycles in particular the new PMJ sampler mentioned above.</li>
+<li>Analysed some bugs: <a rel="nofollow" class="external text" href="https://developer.blender.org/T89353">T89353</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/T80267">T80267</a></li>
+<li>Reviewed cycles related patches such as <a rel="nofollow" class="external text" href="https://developer.blender.org/D12316">D12316</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/D12514">D12514</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/D12511">D12511</a></li></ul>
+<h4><span class="mw-headline" id="Sept_20th_-_Sept_24th">Sept 20th - Sept 24th</span></h4>
+<ul><li>Further work on removing ray offsetting the Dynamic BVH is now working but the static BVH ids don't appear to be working</li>
+<li>Fixed correlation issue with PMJ sampler <a rel="nofollow" class="external text" href="https://developer.blender.org/D12610">D12610</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="../../Source/Render/Cycles/SamplingPatterns.html#Progressive_Multi-Jittered">PMJ</a> docs</li>
+<li>Reviewed cycles diffs such as <a rel="nofollow" class="external text" href="https://developer.blender.org/D12578">D12578</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/D12318">D12318</a></li>
+<li>Further investigated Distance scrambling on PMJ w.r.t. the issues found in <a rel="nofollow" class="external text" href="https://developer.blender.org/D12610">D12610</a> which necessitates a differnt approach.</li></ul>
+<h4><span class="mw-headline" id="Sept_27th_-_Oct_1st">Sept 27th - Oct 1st</span></h4>
+<ul><li>Reviewed cycles diffs</li></ul>
+<ol><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D12593">D12593</a> PMJ02 Sample generation was generating PMJ samples instead of PMJ02 samples. Also noticed that the cmj random number generator has issues with filling out the pmj02 table. Sometimes it never completes, switching to use drand48() help improve this but it still occurs. The float precision may make it hard to generate samples in small gaps. We may need to alter the PMJ02 sample generation to produce a more balanced tree. Below are some convergence results of pmj02 versus the other methods.</li></ol>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:514px;"><a href="../../File:Conv.svg.html" class="image"><img alt="" src="../../../w/images/thumb/d/da/Conv.svg/512px-Conv.svg.png" width="512" height="385" class="thumbimage" srcset="../../../w/images/thumb/d/da/Conv.svg/768px-Conv.svg.png 1.5x, ../../../w/images/thumb/d/da/Conv.svg/1024px-Conv.svg.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Conv.svg.html" class="internal" title="Enlarge"></a></div>PMJ02 Convergence</div></div></div></div>
+<ol><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D12403">D12403</a> Black areas around the edges of object due to invalid normals</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D12724">D127724</a> Code clean up</li></ol>
+<ul><li>Continuing work on <a rel="nofollow" class="external text" href="https://developer.blender.org/D6250">D6250</a></li></ul>
+<ol><li>Static BVH currently has different prim or object ids than the dynamic which makes solution only work in the dynamic case.</li>
+<li>For the static BVH the object id is always 0, the object id can be retrieved via __prim_object. However, the rest of cycles expects this to be OBJECT_NONE or weird shading happens. So added code to handle this within the scene intersection tests.</li>
+<li>Performance has dropped due to these changes, the code need to be refactored a bit to reduce the amount of tests and memory access.</li>
+<li>Working on fixing all static BVH scenes</li></ol>
+<table class="wikitable">
+
+<tbody><tr>
+<th></th>
+<th>origin1e-3</th>
+<th>origin1e-5</th>
+<th>origin1e5</th>
+<th>Black Lines</th>
+<th>Glitch
+</th></tr>
+<tr>
+<td>original</td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-3.png.html" class="image"><img alt="Origin 1e-3.png" src="../../../w/images/thumb/6/6c/Origin_1e-3.png/256px-Origin_1e-3.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/6/6c/Origin_1e-3.png/384px-Origin_1e-3.png 1.5x, ../../../w/images/thumb/6/6c/Origin_1e-3.png/512px-Origin_1e-3.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-3.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-5.png.html" class="image"><img alt="Origin 1e-5.png" src="../../../w/images/thumb/d/dc/Origin_1e-5.png/256px-Origin_1e-5.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/d/dc/Origin_1e-5.png/384px-Origin_1e-5.png 1.5x, ../../../w/images/thumb/d/dc/Origin_1e-5.png/512px-Origin_1e-5.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-5.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Original_Origin_1e5.png.html" class="image"><img alt="Original Origin 1e5.png" src="../../../w/images/thumb/4/48/Original_Origin_1e5.png/256px-Original_Origin_1e5.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/4/48/Original_Origin_1e5.png/384px-Original_Origin_1e5.png 1.5x, ../../../w/images/thumb/4/48/Original_Origin_1e5.png/512px-Original_Origin_1e5.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Original_Origin_1e5.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Black_lines_Original.png.html" class="image"><img alt="Black lines Original.png" src="../../../w/images/thumb/9/93/Black_lines_Original.png/256px-Black_lines_Original.png" width="256" height="144" class="thumbimage" srcset="../../../w/images/thumb/9/93/Black_lines_Original.png/384px-Black_lines_Original.png 1.5x, ../../../w/images/thumb/9/93/Black_lines_Original.png/512px-Black_lines_Original.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Black_lines_Original.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Original_Glitch.png.html" class="image"><img alt="Original Glitch.png" src="../../../w/images/thumb/2/2d/Original_Glitch.png/256px-Original_Glitch.png" width="256" height="144" class="thumbimage" srcset="../../../w/images/thumb/2/2d/Original_Glitch.png/384px-Original_Glitch.png 1.5x, ../../../w/images/thumb/2/2d/Original_Glitch.png/512px-Original_Glitch.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Original_Glitch.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr>
+<tr>
+<td>CUDA static</td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-3_CUDA.png.html" class="image"><img alt="Origin 1e-3 CUDA.png" src="../../../w/images/thumb/d/d7/Origin_1e-3_CUDA.png/256px-Origin_1e-3_CUDA.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/d/d7/Origin_1e-3_CUDA.png/384px-Origin_1e-3_CUDA.png 1.5x, ../../../w/images/thumb/d/d7/Origin_1e-3_CUDA.png/512px-Origin_1e-3_CUDA.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-3_CUDA.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-5_CUDA.png.html" class="image"><img alt="Origin 1e-5 CUDA.png" src="../../../w/images/thumb/9/93/Origin_1e-5_CUDA.png/256px-Origin_1e-5_CUDA.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/9/93/Origin_1e-5_CUDA.png/384px-Origin_1e-5_CUDA.png 1.5x, ../../../w/images/thumb/9/93/Origin_1e-5_CUDA.png/512px-Origin_1e-5_CUDA.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-5_CUDA.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e5_CUDA.png.html" class="image"><img alt="Origin 1e5 CUDA.png" src="../../../w/images/thumb/9/93/Origin_1e5_CUDA.png/256px-Origin_1e5_CUDA.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/9/93/Origin_1e5_CUDA.png/384px-Origin_1e5_CUDA.png 1.5x, ../../../w/images/thumb/9/93/Origin_1e5_CUDA.png/512px-Origin_1e5_CUDA.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e5_CUDA.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Black_lines_CUDA.png.html" class="image"><img alt="Black lines CUDA.png" src="../../../w/images/thumb/a/a8/Black_lines_CUDA.png/256px-Black_lines_CUDA.png" width="256" height="144" class="thumbimage" srcset="../../../w/images/thumb/a/a8/Black_lines_CUDA.png/384px-Black_lines_CUDA.png 1.5x, ../../../w/images/thumb/a/a8/Black_lines_CUDA.png/512px-Black_lines_CUDA.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Black_lines_CUDA.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td>CUDA Error
+</td></tr>
+<tr>
+<td>Optix static</td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-3_optix.png.html" class="image"><img alt="Origin 1e-3 optix.png" src="../../../w/images/thumb/e/e4/Origin_1e-3_optix.png/256px-Origin_1e-3_optix.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/e/e4/Origin_1e-3_optix.png/384px-Origin_1e-3_optix.png 1.5x, ../../../w/images/thumb/e/e4/Origin_1e-3_optix.png/512px-Origin_1e-3_optix.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-3_optix.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e-5_optix.png.html" class="image"><img alt="Origin 1e-5 optix.png" src="../../../w/images/thumb/d/da/Origin_1e-5_optix.png/256px-Origin_1e-5_optix.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/d/da/Origin_1e-5_optix.png/384px-Origin_1e-5_optix.png 1.5x, ../../../w/images/thumb/d/da/Origin_1e-5_optix.png/512px-Origin_1e-5_optix.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e-5_optix.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Origin_1e5_optix.png.html" class="image"><img alt="Origin 1e5 optix.png" src="../../../w/images/thumb/b/b2/Origin_1e5_optix.png/256px-Origin_1e5_optix.png" width="256" height="256" class="thumbimage" srcset="../../../w/images/thumb/b/b2/Origin_1e5_optix.png/384px-Origin_1e5_optix.png 1.5x, ../../../w/images/thumb/b/b2/Origin_1e5_optix.png/512px-Origin_1e5_optix.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Origin_1e5_optix.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Black_lines_optix.png.html" class="image"><img alt="Black lines optix.png" src="../../../w/images/thumb/0/07/Black_lines_optix.png/256px-Black_lines_optix.png" width="256" height="144" class="thumbimage" srcset="../../../w/images/thumb/0/07/Black_lines_optix.png/384px-Black_lines_optix.png 1.5x, ../../../w/images/thumb/0/07/Black_lines_optix.png/512px-Black_lines_optix.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Black_lines_optix.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td>CUDA Error
+</td></tr>
+</tbody></table>
+<ol><li>There is now a CUDA Error when rendering static scenes with both Optix and CUDA the glitch scene seems to have this</li>
+<li>Adjacent triangles seem to cause and issue which is probably caused by the triangle intersection routine including all edges in the intersection</li>
+<li>There are precision issues in enlarged scenes I believe caused by issues handling the distance along the ray that needs investigation</li></ol>
+<h4><span class="mw-headline" id="Oct_4th_-_Oct_8th">Oct 4th - Oct 8th</span></h4>
+<ul><li>Trip to Blender HQ in Amsterdam to meet everyone and discuss working at Blender</li>
+<li>Patches reviewed and submitted</li></ul>
+<ol><li>Submitted <a rel="nofollow" class="external text" href="https://developer.blender.org/D12403">D12403</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D12385">D12385</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D12318">D12318</a></li></ol>
+<ul><li>Continued working on <a rel="nofollow" class="external text" href="https://developer.blender.org/D6250">D6250</a></li></ul>
+<ol><li>Optix has an issue with back facing surfaces</li></ol>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Front</th>
+<th>Back
+</th></tr>
+<tr>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Simple_planes_front.png.html" class="image"><img alt="Simple planes front.png" src="../../../w/images/thumb/a/ac/Simple_planes_front.png/256px-Simple_planes_front.png" width="256" height="131" class="thumbimage" srcset="../../../w/images/thumb/a/ac/Simple_planes_front.png/384px-Simple_planes_front.png 1.5x, ../../../w/images/thumb/a/ac/Simple_planes_front.png/512px-Simple_planes_front.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Simple_planes_front.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Simple_planes_back.png.html" class="image"><img alt="Simple planes back.png" src="../../../w/images/thumb/2/2a/Simple_planes_back.png/256px-Simple_planes_back.png" width="256" height="131" class="thumbimage" srcset="../../../w/images/thumb/2/2a/Simple_planes_back.png/384px-Simple_planes_back.png 1.5x, ../../../w/images/thumb/2/2a/Simple_planes_back.png/512px-Simple_planes_back.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Simple_planes_back.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></tbody></table>
+<ol><li>Working on mesh related issues due to close proximity caused by triangle mesh edges. This appears to be because the distance values are compared in camera world space and not the object world space. This is most obvious at really small scales see below for 1e-5 scale.</li></ol>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Seams.png.html" class="image"><img alt="" src="../../../w/images/thumb/2/23/Seams.png/300px-Seams.png" width="300" height="300" class="thumbimage" srcset="../../../w/images/thumb/2/23/Seams.png/450px-Seams.png 1.5x, ../../../w/images/thumb/2/23/Seams.png/600px-Seams.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Seams.png.html" class="internal" title="Enlarge"></a></div>Visible mesh seams at 1e-5</div></div></div></div>
+<ol><li>Setup AMD GPU on machine (trying a dual GPU setup with Nvidia and AMD GPUs)</li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://developer.blender.org/T92036">T92036</a> It seems the magic texture default input is producing NaNs on GPU but not on CPU causing blackness</li></ol>
+<table class="wikitable">
+
+<tbody><tr>
+<th>GPU</th>
+<th>CPU
+</th></tr>
+<tr>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Bg_object_rendered_on_GPU.png.html" class="image"><img alt="" src="../../../w/images/thumb/9/99/Bg_object_rendered_on_GPU.png/256px-Bg_object_rendered_on_GPU.png" width="256" height="94" class="thumbimage" srcset="../../../w/images/thumb/9/99/Bg_object_rendered_on_GPU.png/384px-Bg_object_rendered_on_GPU.png 1.5x, ../../../w/images/thumb/9/99/Bg_object_rendered_on_GPU.png/512px-Bg_object_rendered_on_GPU.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Bg_object_rendered_on_GPU.png.html" class="internal" title="Enlarge"></a></div>Background Object rendered on CPU</div></div></div></td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="../../File:Bg_object_with_GPU.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c5/Bg_object_with_GPU.png/256px-Bg_object_with_GPU.png" width="256" height="94" class="thumbimage" srcset="../../../w/images/thumb/c/c5/Bg_object_with_GPU.png/384px-Bg_object_with_GPU.png 1.5x, ../../../w/images/thumb/c/c5/Bg_object_with_GPU.png/512px-Bg_object_with_GPU.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Bg_object_with_GPU.png.html" class="internal" title="Enlarge"></a></div>Background Object rendered on GPU</div></div></div>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Oct_11th_-_Oct_15th">Oct 11th - Oct 15th</span></h4>
+<h5><span class="mw-headline" id="Bug_Fixes">Bug Fixes</span></h5>
+<ul><li>Fix for Black volume when using Magic Texture <a rel="nofollow" class="external text" href="https://developer.blender.org/T92036">T92036</a></li>
+<li>Fix for assert when baking with debug build <a rel="nofollow" class="external text" href="https://developer.blender.org/D12767">D12767</a></li>
+<li>Found and helped fix (mostly Sergeys' work) <a rel="nofollow" class="external text" href="https://developer.blender.org/D12853">D12853</a></li></ul>
+<h5><span class="mw-headline" id="Reviews">Reviews</span></h5>
+<ul><li>Reviewed E-Cycles speed-up <a rel="nofollow" class="external text" href="https://developer.blender.org/D12318">D12318</a></li>
+<li>Reviewed HIP Clean up <a rel="nofollow" class="external text" href="https://developer.blender.org/D12834">D12834</a></li></ul>
+<h5><span class="mw-headline" id="Investigations">Investigations</span></h5>
+<ul><li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T92212">T92212</a></li>
+<li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T91797">T91797</a></li>
+<li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T91990">T91990</a></li>
+<li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T92106">T92106</a></li>
+<li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T92128">T92128</a></li>
+<li>Analysed <a rel="nofollow" class="external text" href="https://developer.blender.org/T92158">T92158</a></li></ul>
+<h5><span class="mw-headline" id="Work_in_progress">Work in progress</span></h5>
+<p>Added <a rel="nofollow" class="external text" href="https://developer.blender.org/D12854">PMJ scrambling distance patch</a> which applies the distance scrambling to the PMJ sampler which is based on <a rel="nofollow" class="external text" href="https://hal.inria.fr/hal-01325702/document">Micro-Jittered sampling</a>. This basically works by using the same sample set for each pixel so there is a lot a coherency between the pixels. This coherency results in a speed increase especially on GPUs. To counteract this there is a user controlled random displacement that can be applied to decorrelate the samples. The results proved to be quite good.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:514px;"><a href="../../File:Speed_up_for_scrambling_distance.svg.html" class="image"><img alt="" src="../../../w/images/thumb/2/24/Speed_up_for_scrambling_distance.svg/512px-Speed_up_for_scrambling_distance.svg.png" width="512" height="386" class="thumbimage" srcset="../../../w/images/thumb/2/24/Speed_up_for_scrambling_distance.svg/768px-Speed_up_for_scrambling_distance.svg.png 1.5x, ../../../w/images/thumb/2/24/Speed_up_for_scrambling_distance.svg/1024px-Speed_up_for_scrambling_distance.svg.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Speed_up_for_scrambling_distance.svg.html" class="internal" title="Enlarge"></a></div>Speed increase for distance scrambling.</div></div></div></div>
+<p>The correlation is more obvious with lower samples and is also somewhat scene dependent. For instance the cobwebs in the barbershop really showed up the correlation even with high number of samples.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:203px;"><a href="../../File:Barbershop_cobweb.png.html" class="image"><img alt="" src="../../../w/images/1/14/Barbershop_cobweb.png" width="201" height="130" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Barbershop_cobweb.png.html" class="internal" title="Enlarge"></a></div>Cobwebs still show correlation at 4096 samples</div></div></div></div>
+<p>Some scenes worked really well such as the junk shop below is a table of increasing sample counts for PMJ and PMJ with distance scrambling
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Type</th>
+<th>64</th>
+<th>128</th>
+<th>256</th>
+<th>512</th>
+<th>1024
+</th></tr>
+<tr>
+<td>
+<p>Regular
+PMJ 
+</p>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_pmj_64.png.html" class="image"><img alt="" src="../../../w/images/thumb/2/24/Junk_shop_pmj_64.png/256px-Junk_shop_pmj_64.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/2/24/Junk_shop_pmj_64.png/384px-Junk_shop_pmj_64.png 1.5x, ../../../w/images/thumb/2/24/Junk_shop_pmj_64.png/512px-Junk_shop_pmj_64.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_pmj_64.png.html" class="internal" title="Enlarge"></a></div>PMJ 64</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_pmj_256.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/d9/Junk_shop_pmj_256.png/256px-Junk_shop_pmj_256.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/d/d9/Junk_shop_pmj_256.png/384px-Junk_shop_pmj_256.png 1.5x, ../../../w/images/thumb/d/d9/Junk_shop_pmj_256.png/512px-Junk_shop_pmj_256.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_pmj_256.png.html" class="internal" title="Enlarge"></a></div>PMJ 256</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_pmj_128.png.html" class="image"><img alt="" src="../../../w/images/thumb/8/8e/Junk_shop_pmj_128.png/256px-Junk_shop_pmj_128.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/8/8e/Junk_shop_pmj_128.png/384px-Junk_shop_pmj_128.png 1.5x, ../../../w/images/thumb/8/8e/Junk_shop_pmj_128.png/512px-Junk_shop_pmj_128.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_pmj_128.png.html" class="internal" title="Enlarge"></a></div>PMJ 128</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_pmj_512.png.html" class="image"><img alt="" src="../../../w/images/thumb/1/15/Junk_shop_pmj_512.png/256px-Junk_shop_pmj_512.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/1/15/Junk_shop_pmj_512.png/384px-Junk_shop_pmj_512.png 1.5x, ../../../w/images/thumb/1/15/Junk_shop_pmj_512.png/512px-Junk_shop_pmj_512.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_pmj_512.png.html" class="internal" title="Enlarge"></a></div>PMJ 512</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_pmj_1024.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/f2/Junk_shop_pmj_1024.png/256px-Junk_shop_pmj_1024.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/f/f2/Junk_shop_pmj_1024.png/384px-Junk_shop_pmj_1024.png 1.5x, ../../../w/images/thumb/f/f2/Junk_shop_pmj_1024.png/512px-Junk_shop_pmj_1024.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_pmj_1024.png.html" class="internal" title="Enlarge"></a></div>PMJ 1024</div></div></div></div>
+</td></tr>
+<tr>
+<td>
+<p>Distance
+Scrambled
+PMJ
+</p>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_sd_pmj_64.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/72/Junk_shop_sd_pmj_64.png/256px-Junk_shop_sd_pmj_64.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/7/72/Junk_shop_sd_pmj_64.png/384px-Junk_shop_sd_pmj_64.png 1.5x, ../../../w/images/thumb/7/72/Junk_shop_sd_pmj_64.png/512px-Junk_shop_sd_pmj_64.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_sd_pmj_64.png.html" class="internal" title="Enlarge"></a></div>PMJ SD 64</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_sd_pmj_128.png.html" class="image"><img alt="" src="../../../w/images/thumb/5/55/Junk_shop_sd_pmj_128.png/256px-Junk_shop_sd_pmj_128.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/5/55/Junk_shop_sd_pmj_128.png/384px-Junk_shop_sd_pmj_128.png 1.5x, ../../../w/images/thumb/5/55/Junk_shop_sd_pmj_128.png/512px-Junk_shop_sd_pmj_128.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_sd_pmj_128.png.html" class="internal" title="Enlarge"></a></div>PMJ SD 128</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_sd_pmj_256.png.html" class="image"><img alt="" src="../../../w/images/thumb/e/ed/Junk_shop_sd_pmj_256.png/256px-Junk_shop_sd_pmj_256.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/e/ed/Junk_shop_sd_pmj_256.png/384px-Junk_shop_sd_pmj_256.png 1.5x, ../../../w/images/thumb/e/ed/Junk_shop_sd_pmj_256.png/512px-Junk_shop_sd_pmj_256.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_sd_pmj_256.png.html" class="internal" title="Enlarge"></a></div>PMJ SD 256</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_sd_pmj_512.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/f3/Junk_shop_sd_pmj_512.png/256px-Junk_shop_sd_pmj_512.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/f/f3/Junk_shop_sd_pmj_512.png/384px-Junk_shop_sd_pmj_512.png 1.5x, ../../../w/images/thumb/f/f3/Junk_shop_sd_pmj_512.png/512px-Junk_shop_sd_pmj_512.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_sd_pmj_512.png.html" class="internal" title="Enlarge"></a></div>PMJ SD 512</div></div></div></div>
+</td>
+<td>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:258px;"><a href="../../File:Junk_shop_sd_pmj_1024.png.html" class="image"><img alt="" src="../../../w/images/thumb/3/39/Junk_shop_sd_pmj_1024.png/256px-Junk_shop_sd_pmj_1024.png" width="256" height="128" class="thumbimage" srcset="../../../w/images/thumb/3/39/Junk_shop_sd_pmj_1024.png/384px-Junk_shop_sd_pmj_1024.png 1.5x, ../../../w/images/thumb/3/39/Junk_shop_sd_pmj_1024.png/512px-Junk_shop_sd_pmj_1024.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junk_shop_sd_pmj_1024.png.html" class="internal" title="Enlarge"></a></div>PMJ SD 1024</div></div></div></div>
+</td></tr></tbody></table>
+<p>Continue working on removing ray offsetting
+</p>
+<ul><li>Reviewed some papers and books w.r.t. to ray tracing robustness</li></ul>
+<ol><li><a rel="nofollow" class="external text" href="https://www.realtimerendering.com/raytracinggems/rtg/index.html">Ray Tracing Gems I</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.realtimerendering.com/raytracinggems/rtg2/index.html">Ray Tracing Gems II</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/Papers/PrecisionRayTracing.pdf">Improving Ray Tracing Precision by Object Space Intersection Computation</a></li></ol>
+<ul><li>Trying using double instead of float to preserve the distance along the ray</li>
+<li>The Optix issue is now fixed&#160;:-) but I found another issue that seems to happen .</li></ul>
+<h4><span class="mw-headline" id="Oct_18th_-_Oct_22nd">Oct 18th - Oct 22nd</span></h4>
+<h5><span class="mw-headline" id="Bug_Fixes_2">Bug Fixes</span></h5>
+<h5><span class="mw-headline" id="Reviews_2">Reviews</span></h5>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D12880">D12880 Cycles:bake transparent shadows for hair</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D12888">D12888 Cycles:replace integrator state argument macros</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D12889">D12889 Cycles: decouple shadow paths from main path on GPU</a></li></ul>
+<h5><span class="mw-headline" id="Investigations_2">Investigations</span></h5>
+<h5><span class="mw-headline" id="Work_in_Progress_2">Work in Progress</span></h5>
+<ul><li>Worked on fixing Optix issue managed to isolate it to a single triangle it seems the rays are getting shot from the wrong side of the surface but only on Optix. This was down to 2 reasons</li></ul>
+<ol><li>Optix __anyhit__ function was disabled in certain scenarios</li>
+<li>prim variable was not always filled out due to being inside a #ifdef that for some reason I did not notice&#160;:-(</li>
+<li>Almost there now got volume rendering working again&#160;:-)</li></ol>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Wdas_cloud.png.html" class="image"><img alt="" src="../../../w/images/thumb/8/80/Wdas_cloud.png/300px-Wdas_cloud.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/8/80/Wdas_cloud.png/450px-Wdas_cloud.png 1.5x, ../../../w/images/thumb/8/80/Wdas_cloud.png/600px-Wdas_cloud.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Wdas_cloud.png.html" class="internal" title="Enlarge"></a></div>Clouds on a sunny day</div></div></div>
+<ol><li>Working on improving the precision of intersections</li>
+<li>Performance results for the barbershop scene</li></ol>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Platform</th>
+<th>Ray Offsetting</th>
+<th>No Ray Offsetting</th>
+<th>% Slower
+</th></tr>
+<tr>
+<td>Images</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:322px;"><a href="../../File:CPU_barbarshop.png.html" class="image"><img alt="CPU barbarshop.png" src="../../../w/images/thumb/7/76/CPU_barbarshop.png/320px-CPU_barbarshop.png" width="320" height="134" class="thumbimage" srcset="../../../w/images/thumb/7/76/CPU_barbarshop.png/480px-CPU_barbarshop.png 1.5x, ../../../w/images/thumb/7/76/CPU_barbarshop.png/640px-CPU_barbarshop.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:CPU_barbarshop.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:322px;"><a href="../../File:CPU_barbershop_no_offsetting.png.html" class="image"><img alt="CPU barbershop no offsetting.png" src="../../../w/images/thumb/a/af/CPU_barbershop_no_offsetting.png/320px-CPU_barbershop_no_offsetting.png" width="320" height="134" class="thumbimage" srcset="../../../w/images/thumb/a/af/CPU_barbershop_no_offsetting.png/480px-CPU_barbershop_no_offsetting.png 1.5x, ../../../w/images/thumb/a/af/CPU_barbershop_no_offsetting.png/640px-CPU_barbershop_no_offsetting.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:CPU_barbershop_no_offsetting.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>CPU</td>
+<td>869.16</td>
+<td>860.8</td>
+<td>1.0097%</td>
+<td>
+</td></tr>
+<tr>
+<td>Optix</td>
+<td>101.2</td>
+<td>99.03</td>
+<td>1.0219%</td>
+<td>
+</td></tr>
+<tr>
+<td>CUDA</td>
+<td>176.18</td>
+<td>175.44</td>
+<td>1.0042</td>
+<td>
+</td></tr></tbody></table>
+<ol><li>There are still some differences probably due to the curves in the scene as that does not correctly support no offsetting yet &#160;:-)</li></ol>
+<h4><span class="mw-headline" id="Oct_25th_-_Oct_29th">Oct 25th - Oct 29th</span></h4>
+<h5><span class="mw-headline" id="Bug_Fixes_3">Bug Fixes</span></h5>
+<h5><span class="mw-headline" id="Reviews_3">Reviews</span></h5>
+<ul><li>Reviewed Update UI for Scrambling Distance Settings <a rel="nofollow" class="external text" href="https://developer.blender.org/D12963">D12963</a></li>
+<li>Reviewed Separate Calculations for Adaptive Scrambling Distance for Viewport and Final Render <a rel="nofollow" class="external text" href="https://developer.blender.org/D13017">D13017</a></li>
+<li>Reviewed potential fix for Instancing in Cycles <a rel="nofollow" class="external text" href="https://developer.blender.org/T91986">T91986</a></li></ul>
+<h5><span class="mw-headline" id="Investigations_3">Investigations</span></h5>
+<h5><span class="mw-headline" id="Work_in_progress_3">Work in progress</span></h5>
+<ul><li>Worked on centring objects around the origin during BVH generation to improve floating point resolution helping small scenes appear less cracked</li>
+<li>Updated <a rel="nofollow" class="external free" href="https://developer.blender.org/D12318">https://developer.blender.org/D12318</a> so that is chooses a valid tile size</li>
+<li>Submitted PMJ Scrambling Distance <a rel="nofollow" class="external text" href="https://developer.blender.org/D12854">D12854</a></li></ul>
+<h4><span class="mw-headline" id="Nov_1st_-_Nov_5th">Nov 1st - Nov 5th</span></h4>
+<ul><li>Vacation</li></ul>
+<h4><span class="mw-headline" id="Nov_8th_-_Nov_12th">Nov 8th - Nov 12th</span></h4>
+<h5><span class="mw-headline" id="Work_in_Progress_4">Work in Progress</span></h5>
+<ul><li>Analyse results from <a rel="nofollow" class="external text" href="https://developer.blender.org/D13042">D13042</a> regarding performance decrease with CUDA when using Distance Scrambling.</li>
+<li>Investigate <a rel="nofollow" class="external text" href="https://developer.blender.org/T92601">T92601</a> performance issues with CPU rendering. I created 3 different patches (<a rel="nofollow" class="external text" href="https://developer.blender.org/D13187">D13187</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D13185">D13185</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D13190">D13190</a>) which gave some nice results.</li>
+<li>Investigated issues with HIP devices when rendering to viewport and with a full render causing green images <a rel="nofollow" class="external text" href="https://developer.blender.org/T92972">T92972</a>.</li>
+<li>Found bugs with latest master w.r.t. creating white/black pixel in the monster scene <a rel="nofollow" class="external text" href="https://developer.blender.org/T92991">T92991</a>.</li>
+<li>Working on creating test for the Sobol and PMJ samplers with and without distance scrambling.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:297px;"><a href="../../File:White_pixel.png.html" class="image"><img alt="" src="../../../w/images/0/0e/White_pixel.png" width="295" height="158" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:White_pixel.png.html" class="internal" title="Enlarge"></a></div>White Pixel</div></div></div>
+<h5><span class="mw-headline" id="Reviews_4">Reviews</span></h5>
+<ul><li>Closed Volume rendering bug <a rel="nofollow" class="external text" href="https://developer.blender.org/T90062">T90062</a> as it was already fixed</li>
+<li>Add sample offset <a rel="nofollow" class="external text" href="https://developer.blender.org/D13086">D13086</a></li>
+<li>Huge memory spike when saving tile to disk <a rel="nofollow" class="external text" href="https://developer.blender.org/D13186">D13186</a></li></ul>
+<h4><span class="mw-headline" id="Nov_15th_-_Nov_19th">Nov 15th - Nov 19th</span></h4>
+<h5><span class="mw-headline" id="Work_in_Progress_5">Work in Progress</span></h5>
+<ul><li>Looking into an issue with rendering a scene using Optix where it run out of memory <a rel="nofollow" class="external text" href="https://developer.blender.org/T93089">T93089</a></li>
+<li>Generated performance data for the automatic scrambling distance on HIP devices <a rel="nofollow" class="external text" href="https://developer.blender.org/D13042">D13042</a></li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:ScramblingDistanceOnHIP.png.html" class="image"><img alt="" src="../../../w/images/thumb/3/39/ScramblingDistanceOnHIP.png/300px-ScramblingDistanceOnHIP.png" width="300" height="188" class="thumbimage" srcset="../../../w/images/thumb/3/39/ScramblingDistanceOnHIP.png/450px-ScramblingDistanceOnHIP.png 1.5x, ../../../w/images/thumb/3/39/ScramblingDistanceOnHIP.png/600px-ScramblingDistanceOnHIP.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:ScramblingDistanceOnHIP.png.html" class="internal" title="Enlarge"></a></div>Scrambling distance perf using HIP</div></div></div>
+<ul><li>Looking into the while/black pixels <a rel="nofollow" class="external text" href="https://developer.blender.org/T92991">T92991</a></li>
+<li>Analysed patch to replace flattened vertex buffers with indexed one. This was supplied Feng Xie (Facebook) and could improve rendering performance x3.</li>
+<li>Looks like another subsurface issue for <a rel="nofollow" class="external text" href="https://developer.blender.org/T12954">T12954</a> causing the triangle mesh to appear and with simple cube some triangles are darker.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:130px;"><a href="../../File:Subsurface_random_walk_issue.png.html" class="image"><img alt="" src="../../../w/images/3/37/Subsurface_random_walk_issue.png" width="128" height="128" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Subsurface_random_walk_issue.png.html" class="internal" title="Enlarge"></a></div>Subsurface random walk issue</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Cube_sss_simple.png.html" class="image"><img alt="" src="../../../w/images/thumb/5/54/Cube_sss_simple.png/300px-Cube_sss_simple.png" width="300" height="127" class="thumbimage" srcset="../../../w/images/thumb/5/54/Cube_sss_simple.png/450px-Cube_sss_simple.png 1.5x, ../../../w/images/thumb/5/54/Cube_sss_simple.png/600px-Cube_sss_simple.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cube_sss_simple.png.html" class="internal" title="Enlarge"></a></div>Darker Triangles</div></div></div>
+<h5><span class="mw-headline" id="Work_Done">Work Done</span></h5>
+<ul><li>Created patch to detect accelerated ray tracing support for <a rel="nofollow" class="external text" href="https://developer.blender.org/D13042">D13042</a></li>
+<li>Created fix for principled hair shader (and wave texture) <a rel="nofollow" class="external text" href="https://developer.blender.org/D13262">D13262</a></li>
+<li>Subsurface scattering had an issue with the ray offsetting removal <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a>. This was due to missing the object and prim data for the subsurface ray.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Junkshop_subsurface_issue.png.html" class="image"><img alt="" src="../../../w/images/thumb/8/8c/Junkshop_subsurface_issue.png/300px-Junkshop_subsurface_issue.png" width="300" height="127" class="thumbimage" srcset="../../../w/images/thumb/8/8c/Junkshop_subsurface_issue.png/450px-Junkshop_subsurface_issue.png 1.5x, ../../../w/images/thumb/8/8c/Junkshop_subsurface_issue.png/600px-Junkshop_subsurface_issue.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Junkshop_subsurface_issue.png.html" class="internal" title="Enlarge"></a></div>Blotaches occur with removing ray offsetting and subsurface scattering.</div></div></div>
+<ul><li>Looking into volume rendering issue <a rel="nofollow" class="external text" href="https://developer.blender.org/T91797">T91797</a> (Fixed by Brechts commit)</li>
+<li>Monster scene has an artefact on the hand when using ray offsetting removal <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a></li></ul>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="../../File:Monster_hand_master.png.html" class="image"><img alt="" src="../../../w/images/thumb/4/44/Monster_hand_master.png/120px-Monster_hand_master.png" width="120" height="120" srcset="../../../w/images/thumb/4/44/Monster_hand_master.png/180px-Monster_hand_master.png 1.5x, ../../../w/images/thumb/4/44/Monster_hand_master.png/240px-Monster_hand_master.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Master
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="../../File:Monster_hand_D12954.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/d0/Monster_hand_D12954.png/120px-Monster_hand_D12954.png" width="120" height="120" srcset="../../../w/images/thumb/d/d0/Monster_hand_D12954.png/180px-Monster_hand_D12954.png 1.5x, ../../../w/images/thumb/d/d0/Monster_hand_D12954.png/240px-Monster_hand_D12954.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>D12954
+</p>
+			</div>
+		</div></li>
+</ul>
+<h5><span class="mw-headline" id="Reviews_5">Reviews</span></h5>
+<ul><li>Accepted "Adapt volumetric lambda functions to work on MSL" <a rel="nofollow" class="external text" href="https://developer.blender.org/D13234">D13234</a></li></ul>
+<h4><span class="mw-headline" id="Nov_22nd_-_Nov_26th">Nov 22nd - Nov 26th</span></h4>
+<h5><span class="mw-headline" id="Work_in_Progress_6">Work in Progress</span></h5>
+<ul><li>Optimizing the performance of ray offsetting removal <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a></li></ul>
+<h5><span class="mw-headline" id="Work_Done_2">Work Done</span></h5>
+<ul><li>Fixed: Cracks with SSS and offsetting removal <a rel="nofollow" class="external text" href="https://developer.blender.org/T12954">T12954</a>.</li>
+<li>Found weird instancing issue when rendering the hair_instancing_uv scene from the tests when using offsetting removal. This turned out to be  cause by the particle emitter generating particles at the same location which resulted in two object occupying the same position in space. Maybe particle emitters are not great for generating hair&#160;:-( NB: To fix this issue switch off random ordering&#160;:-)</li></ul>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Random ordering on</th>
+<th>Random ordering off
+</th></tr>
+<tr>
+<td><div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Hair_instancing_issue.png.html" class="image"><img alt="Hair instancing issue.png" src="../../../w/images/thumb/9/9a/Hair_instancing_issue.png/300px-Hair_instancing_issue.png" width="300" height="207" class="thumbimage" srcset="../../../w/images/thumb/9/9a/Hair_instancing_issue.png/450px-Hair_instancing_issue.png 1.5x, ../../../w/images/thumb/9/9a/Hair_instancing_issue.png/600px-Hair_instancing_issue.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Hair_instancing_issue.png.html" class="internal" title="Enlarge"></a></div></div></div></div></td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Hair_instancer_uv_fix.png.html" class="image"><img alt="Hair instancer uv fix.png" src="../../../w/images/thumb/6/6f/Hair_instancer_uv_fix.png/300px-Hair_instancer_uv_fix.png" width="300" height="207" class="thumbimage" srcset="../../../w/images/thumb/6/6f/Hair_instancer_uv_fix.png/450px-Hair_instancer_uv_fix.png 1.5x, ../../../w/images/thumb/6/6f/Hair_instancer_uv_fix.png/600px-Hair_instancer_uv_fix.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Hair_instancer_uv_fix.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></tbody></table>
+<ul><li>Fixed: The first primitive in the first object seems to have issues with ray offset removal <a rel="nofollow" class="external text" href="https://developer.blender.org/T12954">T12954</a>.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:First_triangle_in_first_object_with_SSS.png.html" class="image"><img alt="" src="../../../w/images/thumb/0/0b/First_triangle_in_first_object_with_SSS.png/300px-First_triangle_in_first_object_with_SSS.png" width="300" height="205" class="thumbimage" srcset="../../../w/images/thumb/0/0b/First_triangle_in_first_object_with_SSS.png/450px-First_triangle_in_first_object_with_SSS.png 1.5x, ../../../w/images/thumb/0/0b/First_triangle_in_first_object_with_SSS.png/600px-First_triangle_in_first_object_with_SSS.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:First_triangle_in_first_object_with_SSS.png.html" class="internal" title="Enlarge"></a></div>First triangle in the first object has strange intersection issue</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Cube_sss_simple_fixed.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c0/Cube_sss_simple_fixed.png/300px-Cube_sss_simple_fixed.png" width="300" height="127" class="thumbimage" srcset="../../../w/images/thumb/c/c0/Cube_sss_simple_fixed.png/450px-Cube_sss_simple_fixed.png 1.5x, ../../../w/images/thumb/c/c0/Cube_sss_simple_fixed.png/600px-Cube_sss_simple_fixed.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cube_sss_simple_fixed.png.html" class="internal" title="Enlarge"></a></div>Fixed SSS and ray offsetting</div></div></div>
+<h5><span class="mw-headline" id="Reviews_6">Reviews</span></h5>
+<ul><li>Analysed and committed <a rel="nofollow" class="external text" href="https://developer.blender.org/D13042">D13042</a>. The fix worked well for all currently supported platforms CPU, CUDA, HIP &amp; Optix.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Master_vs_D13042.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/ff/Master_vs_D13042.png/300px-Master_vs_D13042.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/f/ff/Master_vs_D13042.png/450px-Master_vs_D13042.png 1.5x, ../../../w/images/thumb/f/ff/Master_vs_D13042.png/600px-Master_vs_D13042.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Master_vs_D13042.png.html" class="internal" title="Enlarge"></a></div>HIP Performance with new tile size selection algorithm in D12954.</div></div></div>
+<h4><span class="mw-headline" id="Nov_29th_-_Dec_3rd">Nov 29th - Dec 3rd</span></h4>
+<h5><span class="mw-headline" id="Work_in_Progress_7">Work in Progress</span></h5>
+<ul><li>Analysing the performance and optimising <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a></li></ul>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41.5px auto;"><a href="../../File:CPU_Perf_D12954.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c4/CPU_Perf_D12954.png/120px-CPU_Perf_D12954.png" width="120" height="67" srcset="../../../w/images/thumb/c/c4/CPU_Perf_D12954.png/180px-CPU_Perf_D12954.png 1.5x, ../../../w/images/thumb/c/c4/CPU_Perf_D12954.png/240px-CPU_Perf_D12954.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>CPU
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41.5px auto;"><a href="../../File:CUDA_Perf_D12954.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/fe/CUDA_Perf_D12954.png/120px-CUDA_Perf_D12954.png" width="120" height="67" srcset="../../../w/images/thumb/f/fe/CUDA_Perf_D12954.png/180px-CUDA_Perf_D12954.png 1.5x, ../../../w/images/thumb/f/fe/CUDA_Perf_D12954.png/240px-CUDA_Perf_D12954.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>CUDA
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41.5px auto;"><a href="../../File:Optix_Perf_D12954.png.html" class="image"><img alt="" src="../../../w/images/thumb/0/04/Optix_Perf_D12954.png/120px-Optix_Perf_D12954.png" width="120" height="67" srcset="../../../w/images/thumb/0/04/Optix_Perf_D12954.png/180px-Optix_Perf_D12954.png 1.5x, ../../../w/images/thumb/0/04/Optix_Perf_D12954.png/240px-Optix_Perf_D12954.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>Optix
+</p>
+			</div>
+		</div></li>
+</ul>
+<ul><li>Trying to reduce the memory used by Rays in <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a> has caused Bevel and bake rendering to break. The idea was to store light and hit objects now in the isect structures instead of in the ray. This broke many things but most are working again. However, bevel and baking still have an issue.</li></ul>
+<h5><span class="mw-headline" id="Work_Done_3">Work Done</span></h5>
+<ul><li>Still noticed some lighting issues in <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a>. You would expect the lighting to be slightly different as the ray is not being offset. However, some details seem more different than that. In the Monster images below notice the lighting on the right side of the bed and on the right most eye of the monster. This was because light types were not behaving correctly and block each other.</li></ul>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="../../File:Monster1.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7a/Monster1.png/120px-Monster1.png" width="120" height="120" srcset="../../../w/images/thumb/7/7a/Monster1.png/180px-Monster1.png 1.5x, ../../../w/images/thumb/7/7a/Monster1.png/240px-Monster1.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>master
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="../../File:Monster_no_ray_offsetting.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7c/Monster_no_ray_offsetting.png/120px-Monster_no_ray_offsetting.png" width="120" height="120" srcset="../../../w/images/thumb/7/7c/Monster_no_ray_offsetting.png/180px-Monster_no_ray_offsetting.png 1.5x, ../../../w/images/thumb/7/7c/Monster_no_ray_offsetting.png/240px-Monster_no_ray_offsetting.png 2x" /></a></div></div>
+			<div class="gallerytext">
+<p>no ray offsetting
+</p>
+			</div>
+		</div></li>
+</ul>
+<h5><span class="mw-headline" id="Reviews_7">Reviews</span></h5>
+<h4><span class="mw-headline" id="Dec_6th_-_Dec_10th">Dec 6th - Dec 10th</span></h4>
+<h5><span class="mw-headline" id="Work_in_Progress_8">Work in Progress</span></h5>
+<ul><li>Working on improving the speed of ray offsetting <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a></li></ul>
+<h5><span class="mw-headline" id="Work_Done_4">Work Done</span></h5>
+<ul><li>Bevel and bake rendering are broken in <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a>.</li>
+<li>Speed improvements for Optix in <a rel="nofollow" class="external text" href="https://developer.blender.org/D12954">D12954</a>.</li></ul>
+<table class="wikitable">
+
+<tbody><tr>
+<th>CPU</th>
+<th>CUDA</th>
+<th>Optix
+</th></tr>
+<tr>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Cpu_speed.png.html" class="image"><img alt="Cpu speed.png" src="../../../w/images/thumb/7/78/Cpu_speed.png/300px-Cpu_speed.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/7/78/Cpu_speed.png/450px-Cpu_speed.png 1.5x, ../../../w/images/thumb/7/78/Cpu_speed.png/600px-Cpu_speed.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cpu_speed.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Cuda_speed2.png.html" class="image"><img alt="Cuda speed2.png" src="../../../w/images/thumb/9/96/Cuda_speed2.png/300px-Cuda_speed2.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/9/96/Cuda_speed2.png/450px-Cuda_speed2.png 1.5x, ../../../w/images/thumb/9/96/Cuda_speed2.png/600px-Cuda_speed2.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cuda_speed2.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td>
+<td>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Optix_speed.png.html" class="image"><img alt="Optix speed.png" src="../../../w/images/thumb/6/6b/Optix_speed.png/300px-Optix_speed.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/6/6b/Optix_speed.png/450px-Optix_speed.png 1.5x, ../../../w/images/thumb/6/6b/Optix_speed.png/600px-Optix_speed.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Optix_speed.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+</td></tr></tbody></table>
+<ul><li>Fixed precision issues with magic texture <a rel="nofollow" class="external free" href="https://developer.blender.org/D12821">https://developer.blender.org/D12821</a></li></ul>
+<h5><span class="mw-headline" id="Reviews_8">Reviews</span></h5>
+<ul><li>Reviewed and committed <a rel="nofollow" class="external text" href="https://developer.blender.org/D13042">D13042</a></li></ul>
+<h3><span class="mw-headline" id="Dec_13th_-_Dec_14th">Dec 13th - Dec 14th</span></h3>
+<h4><span class="mw-headline" id="Work_in_progress_9">Work in progress</span></h4>
+<h4><span class="mw-headline" id="Reviews_9">Reviews</span></h4>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D13325">D13325</a> and left some suggestions</li></ul>
+<h4><span class="mw-headline" id="Work_Done_5">Work Done</span></h4>
+<ul><li>Enable generating the PMJ02 sample set instead of just the PMJ one <a rel="nofollow" class="external free" href="https://developer.blender.org/D13557">https://developer.blender.org/D13557</a>. This produces a better sample set resulting in better convergence.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112122601
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.209 seconds
+Real time usage: 1.527 seconds
+Preprocessor visited node count: 236/1000000
+Preprocessor generated node count: 296/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4061/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6035-0!canonical and timestamp 20240112122600 and revision id 28570
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;oldid=28570">https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;oldid=28570</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 14 December 2021, at 11:57.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Leesonw/BlenderFoundationWork/2021.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Leesonw/BlenderFoundationWork/2021" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Leesonw.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Leesonw.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Leesonw.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;oldid=28570" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Leesonw/BlenderFoundationWork/2021&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.209","walltime":"1.527","ppvisitednodes":{"value":236,"limit":1000000},"ppgeneratednodes":{"value":296,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4061,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112122601","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1578});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844562a66b105c3a","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

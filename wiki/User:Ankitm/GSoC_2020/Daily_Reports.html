@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Ankitm/GSoC 2020/Daily Reports - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Ankitm/GSoC_2020/Daily_Reports","wgTitle":"Ankitm/GSoC 2020/Daily Reports","wgCurRevisionId":18980,"wgRevisionId":18980,"wgArticleId":5159,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Ankitm/GSoC_2020/Daily_Reports","wgRelevantArticleId":5159,"wgRequestId":"009f89c8ad442131e0d97b80","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Ankitm","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Ankitm_GSoC_2020_Daily_Reports rootpage-User_Ankitm skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="Daily_Reports.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AAnkitm%2FGSoC+2020%2FDaily+Reports" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Daily_Reports.html#Daily_Reports"><span class="tocnumber">1</span> <span class="toctext">Daily Reports</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Daily_Reports.html#Week_12"><span class="tocnumber">1.1</span> <span class="toctext">Week 12</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="Daily_Reports.html#August_23"><span class="tocnumber">1.1.1</span> <span class="toctext">August 23</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="Daily_Reports.html#August_22"><span class="tocnumber">1.1.2</span> <span class="toctext">August 22</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="Daily_Reports.html#August_21"><span class="tocnumber">1.1.3</span> <span class="toctext">August 21</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="Daily_Reports.html#August_19-20"><span class="tocnumber">1.1.4</span> <span class="toctext">August 19-20</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="Daily_Reports.html#August_18"><span class="tocnumber">1.1.5</span> <span class="toctext">August 18</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="Daily_Reports.html#August_17"><span class="tocnumber">1.1.6</span> <span class="toctext">August 17</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="Daily_Reports.html#Week_11"><span class="tocnumber">1.2</span> <span class="toctext">Week 11</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="Daily_Reports.html#14_August"><span class="tocnumber">1.2.1</span> <span class="toctext">14 August</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="Daily_Reports.html#13_August"><span class="tocnumber">1.2.2</span> <span class="toctext">13 August</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="Daily_Reports.html#12_August"><span class="tocnumber">1.2.3</span> <span class="toctext">12 August</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="Daily_Reports.html#11_August"><span class="tocnumber">1.2.4</span> <span class="toctext">11 August</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="Daily_Reports.html#10_August"><span class="tocnumber">1.2.5</span> <span class="toctext">10 August</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="Daily_Reports.html#Week_10"><span class="tocnumber">1.3</span> <span class="toctext">Week 10</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="Daily_Reports.html#August_7"><span class="tocnumber">1.3.1</span> <span class="toctext">August 7</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="Daily_Reports.html#August_6"><span class="tocnumber">1.3.2</span> <span class="toctext">August 6</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="Daily_Reports.html#August_5"><span class="tocnumber">1.3.3</span> <span class="toctext">August 5</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="Daily_Reports.html#August_4"><span class="tocnumber">1.3.4</span> <span class="toctext">August 4</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="Daily_Reports.html#August_3"><span class="tocnumber">1.3.5</span> <span class="toctext">August 3</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="Daily_Reports.html#Week_9"><span class="tocnumber">1.4</span> <span class="toctext">Week 9</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="Daily_Reports.html#July_30"><span class="tocnumber">1.4.1</span> <span class="toctext">July 30</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="Daily_Reports.html#July_29"><span class="tocnumber">1.4.2</span> <span class="toctext">July 29</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="Daily_Reports.html#July_28"><span class="tocnumber">1.4.3</span> <span class="toctext">July 28</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="Daily_Reports.html#July_27"><span class="tocnumber">1.4.4</span> <span class="toctext">July 27</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-26"><a href="Daily_Reports.html#Week_8"><span class="tocnumber">1.5</span> <span class="toctext">Week 8</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="Daily_Reports.html#July_24"><span class="tocnumber">1.5.1</span> <span class="toctext">July 24</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="Daily_Reports.html#July_23"><span class="tocnumber">1.5.2</span> <span class="toctext">July 23</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="Daily_Reports.html#July_22"><span class="tocnumber">1.5.3</span> <span class="toctext">July 22</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="Daily_Reports.html#July_21"><span class="tocnumber">1.5.4</span> <span class="toctext">July 21</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="Daily_Reports.html#July_20"><span class="tocnumber">1.5.5</span> <span class="toctext">July 20</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-32"><a href="Daily_Reports.html#Week_7"><span class="tocnumber">1.6</span> <span class="toctext">Week 7</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="Daily_Reports.html#July_17"><span class="tocnumber">1.6.1</span> <span class="toctext">July 17</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="Daily_Reports.html#July_16"><span class="tocnumber">1.6.2</span> <span class="toctext">July 16</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="Daily_Reports.html#July_15"><span class="tocnumber">1.6.3</span> <span class="toctext">July 15</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="Daily_Reports.html#July_14"><span class="tocnumber">1.6.4</span> <span class="toctext">July 14</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="Daily_Reports.html#July_13"><span class="tocnumber">1.6.5</span> <span class="toctext">July 13</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-38"><a href="Daily_Reports.html#Week_6"><span class="tocnumber">1.7</span> <span class="toctext">Week 6</span></a>
+<ul>
+<li class="toclevel-3 tocsection-39"><a href="Daily_Reports.html#July_8.2C_9.2C_10"><span class="tocnumber">1.7.1</span> <span class="toctext">July 8, 9, 10</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="Daily_Reports.html#July_7"><span class="tocnumber">1.7.2</span> <span class="toctext">July 7</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="Daily_Reports.html#July_6"><span class="tocnumber">1.7.3</span> <span class="toctext">July 6</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-42"><a href="Daily_Reports.html#Week_5"><span class="tocnumber">1.8</span> <span class="toctext">Week 5</span></a>
+<ul>
+<li class="toclevel-3 tocsection-43"><a href="Daily_Reports.html#July_3"><span class="tocnumber">1.8.1</span> <span class="toctext">July 3</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="Daily_Reports.html#July_2"><span class="tocnumber">1.8.2</span> <span class="toctext">July 2</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="Daily_Reports.html#July_1"><span class="tocnumber">1.8.3</span> <span class="toctext">July 1</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="Daily_Reports.html#June_30"><span class="tocnumber">1.8.4</span> <span class="toctext">June 30</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="Daily_Reports.html#June_29"><span class="tocnumber">1.8.5</span> <span class="toctext">June 29</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-48"><a href="Daily_Reports.html#Week_4"><span class="tocnumber">1.9</span> <span class="toctext">Week 4</span></a>
+<ul>
+<li class="toclevel-3 tocsection-49"><a href="Daily_Reports.html#June_25"><span class="tocnumber">1.9.1</span> <span class="toctext">June 25</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="Daily_Reports.html#June_24"><span class="tocnumber">1.9.2</span> <span class="toctext">June 24</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="Daily_Reports.html#June_23"><span class="tocnumber">1.9.3</span> <span class="toctext">June 23</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="Daily_Reports.html#June_22"><span class="tocnumber">1.9.4</span> <span class="toctext">June 22</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-53"><a href="Daily_Reports.html#Week_3"><span class="tocnumber">1.10</span> <span class="toctext">Week 3</span></a>
+<ul>
+<li class="toclevel-3 tocsection-54"><a href="Daily_Reports.html#June_19"><span class="tocnumber">1.10.1</span> <span class="toctext">June 19</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="Daily_Reports.html#June_18"><span class="tocnumber">1.10.2</span> <span class="toctext">June 18</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="Daily_Reports.html#June_17"><span class="tocnumber">1.10.3</span> <span class="toctext">June 17</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="Daily_Reports.html#June_16"><span class="tocnumber">1.10.4</span> <span class="toctext">June 16</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="Daily_Reports.html#June_15"><span class="tocnumber">1.10.5</span> <span class="toctext">June 15</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-59"><a href="Daily_Reports.html#Week_2"><span class="tocnumber">1.11</span> <span class="toctext">Week 2</span></a>
+<ul>
+<li class="toclevel-3 tocsection-60"><a href="Daily_Reports.html#June_12"><span class="tocnumber">1.11.1</span> <span class="toctext">June 12</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="Daily_Reports.html#June_11"><span class="tocnumber">1.11.2</span> <span class="toctext">June 11</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="Daily_Reports.html#June_10"><span class="tocnumber">1.11.3</span> <span class="toctext">June 10</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="Daily_Reports.html#June_9"><span class="tocnumber">1.11.4</span> <span class="toctext">June 9</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="Daily_Reports.html#June_8"><span class="tocnumber">1.11.5</span> <span class="toctext">June 8</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-65"><a href="Daily_Reports.html#Week_1"><span class="tocnumber">1.12</span> <span class="toctext">Week 1</span></a>
+<ul>
+<li class="toclevel-3 tocsection-66"><a href="Daily_Reports.html#June_5"><span class="tocnumber">1.12.1</span> <span class="toctext">June 5</span></a></li>
+<li class="toclevel-3 tocsection-67"><a href="Daily_Reports.html#June_4"><span class="tocnumber">1.12.2</span> <span class="toctext">June 4</span></a></li>
+<li class="toclevel-3 tocsection-68"><a href="Daily_Reports.html#June_3"><span class="tocnumber">1.12.3</span> <span class="toctext">June 3</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="Daily_Reports.html#June_2"><span class="tocnumber">1.12.4</span> <span class="toctext">June 2</span></a></li>
+<li class="toclevel-3 tocsection-70"><a href="Daily_Reports.html#June_1"><span class="tocnumber">1.12.5</span> <span class="toctext">June 1</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Ankitm/GSoC 2020/Daily Reports</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Ankitm.html" title="User:Ankitm">User:Ankitm</a>&lrm; | <a href="../GSoC_2020.html" title="User:Ankitm/GSoC 2020">GSoC 2020</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Daily_Reports">Daily Reports</span></h2>
+<h3><span class="mw-headline" id="Week_12">Week 12</span></h3>
+<p>Weekly Summary <a href="../GSoC_2020_Weekly_Reports.html#Week_12_August_17_-_21" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_12_August_17_-_21</a>
+</p>
+<h4><span class="mw-headline" id="August_23">August 23</span></h4>
+<ul><li>Read multiple lines with "\\n" line breaks. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a662ddd7">rBa662ddd7</a></li>
+<li>Cleanup: Mark unused variables. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c6a06e7">rB8c6a06e7</a></li>
+<li>Silence mesh_validate verbose warnings. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32fe2869">rB32fe2869</a></li></ul>
+<h4><span class="mw-headline" id="August_22">August 22</span></h4>
+<ul><li>Use <code>blender::StringRef</code> instead of <code>std::string_view</code>. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/73454388">rB73454388</a></li>
+<li>Use remove_prefix for easy transition to StringRef. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae122533">rBae122533</a></li></ul>
+<h4><span class="mw-headline" id="August_21">August 21</span></h4>
+<ul><li>For polygons with holes:
+<ul><li>Commit as it is ngon-tessellate. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/efab0bc7">rBefab0bc7</a></li>
+<li>Fix tessellate crash due to wrong Vector size. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b0cb5bb">rB5b0cb5bb</a></li>
+<li>Add newly creates faces to imported faces and dissolve edges. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e76ab124">rBe76ab124</a></li>
+<li>Edit FaceElem list outside polygon creation code. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/10e3f23b">rB10e3f23b</a></li></ul></li>
+<li>Move object creation code from constructor. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4777a6a5">rB4777a6a5</a></li>
+<li>Remove unused uv vertex index offset. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/edd5307e">rBedd5307e</a></li></ul>
+<h4><span class="mw-headline" id="August_19-20">August 19-20</span></h4>
+<ul><li>Kept working on <code>ngon_tessellate</code> and adding the new polygons to the mesh.</li></ul>
+<h4><span class="mw-headline" id="August_18">August 18</span></h4>
+<ul><li>Fix overlapping nodes in the nodetree. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c7801fa2b6">rB0c7801fa</a></li>
+<li>Silence normal being zero warnings in mesh validate's verbose mode. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f8a8d1757a">rB3f8a8d17</a></li>
+<li>Cleanup: use const, remove single use variables. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69270c7800c">rB69270c78</a></li></ul>
+<p>Working on writing <code>ngon_tessellate</code> and <code>tessellate_polygon</code> in C++ for ngon polygons with holes in them.
+</p>
+<h4><span class="mw-headline" id="August_17">August 17</span></h4>
+<ul><li>Parse vertex normals: vn lines. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c583afd60b3">rBc583afd6</a></li>
+<li>Decouple getting smooth groups from export parameters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0479dc410fd">rB0479dc41</a></li>
+<li>Export vertex normals if smooth shading is enabled. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4923087d253">rB4923087d</a></li>
+<li>Move file open errors to constructors. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/491bd8b8bbc">rB491bd8b8</a></li>
+<li>Add a public member function in MaterialWrap. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c815ba0a3c0">rBc815ba0a</a></li></ul>
+<h3><span class="mw-headline" id="Week_11">Week 11</span></h3>
+<p>Weekly summary: User:Ankitm/GSoC_2020_Weekly_Reports#Week_11_August_10_-_15
+</p>
+<h4><span class="mw-headline" id="14_August">14 August</span></h4>
+<ul><li>Apply axes transform to exportable Nurbs. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d882a63e981">rBd882a63e</a></li>
+<li>Work on separating material data collection and MTL writers. Fix bugs in MTL import too.</li></ul>
+<h4><span class="mw-headline" id="13_August">13 August</span></h4>
+<ul><li>Fix usemtl line not being written. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69f70829d2c">rB69f70829</a></li>
+<li>Use function pointer; remove redundant variables. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba0d376e260">rBba0d376e</a></li>
+<li>Export packed image file names as if they're in current directory. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d9cdfba21e5">rBd9cdfba2</a></li>
+<li>Use const; move constructors to implementation file. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a725b6f7ac6">rBa725b6f7</a></li>
+<li>Fix several material import bugs, remove wrong assert. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/606b0d7da34">rB606b0d7d</a></li></ul>
+<h4><span class="mw-headline" id="12_August">12 August</span></h4>
+<ul><li>Fix several material import bugs, remove wrong assert. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/606b0d7da34">rB606b0d7d</a>.</li></ul>
+<h4><span class="mw-headline" id="11_August">11 August</span></h4>
+<ul><li>Fix loose edge export &amp; import, and offsets. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c010cf58147">rBc010cf58</a>.</li>
+<li>Fix vertex offsets for MEdges and MLoops. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0c0b8ffd17">rBe0c0b8ff</a>.</li></ul>
+<h4><span class="mw-headline" id="10_August">10 August</span></h4>
+<ul><li>Catch out of range exceptions for stoi/stof. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb2eca07a68">rBbb2eca07</a>.</li>
+<li>Add vertex offset due to Curves' vertices also. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b378f84f7c5">rBb378f84f</a>.</li>
+<li>Fix new Geometry creation with empty initial object. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/009b37719dd">rB009b3771</a>.</li>
+<li>Use const&amp; instead of pointers in Mesh class. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/82eff7a0255">rB82eff7a0</a>.</li>
+<li>Correct geometry creation code with Curves. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d062c712e20">rBd062c712</a>.</li>
+<li>Accept 3D UV vertex coordinates <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6ee696e5bfb">rB6ee696e5</a>.</li>
+<li>Create new Geometry instance at the start. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b37f943246">rB9b37f943</a>.</li></ul>
+<h3><span class="mw-headline" id="Week_10">Week 10</span></h3>
+<p>Weekly Summary <a href="../GSoC_2020_Weekly_Reports.html#Week_10_August_4_-_7" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_10_August_4_-_7</a>
+</p>
+<h4><span class="mw-headline" id="August_7">August 7</span></h4>
+<p>Minor cleanups
+</p>
+<ul><li>Remove deleted header from CMakeLists.txt. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e419e95e77">rB6e419e95</a>.</li>
+<li>Use pragma once as per style guide. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a339bb5e7b">rB0a339bb5</a>.</li>
+<li>Fix crash due to OBJ files with no <code>o name</code> line. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cff0de4359">rB3cff0de4</a>.</li></ul>
+<h4><span class="mw-headline" id="August_6">August 6</span></h4>
+<ul><li>Don't add null Image* to the p-BSDF node. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c20b379f90">rB2c20b379</a>.</li>
+<li>Avoid .data() while creating a std::string from StringRef. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/befe950f186">rBbefe950f</a>.</li>
+<li>Replace std::string_view with StringRef. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8339dd66477">rB8339dd66</a>.</li>
+<li>Remove OBJ prefix from containers. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b1727ea6a7">rB1b1727ea</a>.</li>
+<li>Cleanup: Renaming, comments. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d6604558823">rBd6604558</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06336941b30">rB06336941</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d081bf97df9">rBd081bf97</a>.</li></ul>
+<h4><span class="mw-headline" id="August_5">August 5</span></h4>
+<ul><li>Cleanup: clang-tidy warnings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8e4d4c6dad">rBb8e4d4c6</a></li>
+<li>Load image and add it to image texture node. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f9348be84f2">rBf9348be8</a></li>
+<li>Add created material to the object. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b8f2042b0d">rB9b8f2042</a></li>
+<li>Replace enum and its functions with Map for maps <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/928736b173b">rB928736b1</a></li></ul>
+<h4><span class="mw-headline" id="August_4">August 4</span></h4>
+<p>Committed material creation prototype &amp; fixed several issues later on.
+</p>
+<ul><li>Cleanup: Use MutableSpan, add asserts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/48d3582196f">rB48d35821</a>.</li>
+<li>Initial material creation support. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c401d8a0ae3">rBc401d8a0</a>.</li>
+<li>MTL: release shader_output_ node instead of bsdf_. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e58bd0996d">rB8e58bd09</a>.</li>
+<li>MTL: use mtllib for importing MTL files. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/722a793b748">rB722a793b</a>.</li>
+<li>Use Map's lookup instead of direct pointer to MTLMaterial <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/64ff38a7a7c">rB64ff38a7</a>.</li>
+<li>Fix bsdf_ being null; asserts for SOCK_RGBA <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5ad01edf3e">rBd5ad01ed</a>.</li></ul>
+<h4><span class="mw-headline" id="August_3">August 3</span></h4>
+<p>Holiday
+</p>
+<h3><span class="mw-headline" id="Week_9">Week 9</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_9_July_27_-_31" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_9_July_27_-_31</a>
+</p>
+<h4><span class="mw-headline" id="July_30">July 30</span></h4>
+<ul><li>Add MTL parser. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/19145856ba7">rB19145856</a></li>
+<li>Off-topic (Master) Enable header auto-complete suggestions in Xcode. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27d50d6f67a">rB27d50d6f</a> This turned into a standardised way of dealing with Xcode's include file paths.</li>
+<li>Off-topic Respond to a new developer on <a rel="nofollow" class="external text" href="https://developer.blender.org/D8342">a bug fix</a> and the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/bug-fix-help-object-visibility-out-of-sync-with-the-outliner/14388/16">devtalk thread</a></li></ul>
+<h4><span class="mw-headline" id="July_29">July 29</span></h4>
+<ul><li>Add fallback value in string to number conversions. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5bd1631f60">rBc5bd1631</a></li>
+<li>Tested some Xcode attributes used for header search paths with a final goal of enabling auto-complete suggestions,</li></ul>
+<h4><span class="mw-headline" id="July_28">July 28</span></h4>
+<ul><li>Updated design doc: <a rel="nofollow" class="external free" href="https://docs.google.com/document/d/17Uzl47OljjoKgaMbukiLHUVGQP220lPTmPS-atb65mw/edit">https://docs.google.com/document/d/17Uzl47OljjoKgaMbukiLHUVGQP220lPTmPS-atb65mw/edit</a></li></ul>
+<h4><span class="mw-headline" id="July_27">July 27</span></h4>
+<ul><li>Discussed naming conventions with mentors.</li>
+<li>Worked on MTL parser.</li>
+<li>Off-topic: checked out <a rel="nofollow" class="external text" href="https://github.com/aras-p/ClangBuildAnalyzer">ClangBuildAnalyzer</a> on Blender (lite build).</li></ul>
+<h3><span class="mw-headline" id="Week_8">Week 8</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_8:_July_20_-_25" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_8:_July_20_-_25</a>
+</p>
+<h4><span class="mw-headline" id="July_24">July 24</span></h4>
+<ul><li>Support importing vertex deform groups. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25526821a4b">rB25526821</a>.</li>
+<li>Keep vertex deform group names and def_nr in sync <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37467ec5e9a">rB37467ec5</a>. To handle the same deform groups appearing in the file multiple times, a deduplication is required and order of occurrence of deform groups is also important. So use <code>std::vector&lt;std::string&gt;</code> instead of <code>Map&lt;std::string, int&gt;</code>.</li>
+<li>Use VectorSet instead of vector for def_group. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b33a4592a38">rBb33a4592</a>. The commit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37467ec5e9a">rB37467ec5</a> used <code>std::vector&lt;std::string&gt;</code> which is slow due to linear searching. Jacques Lucke suggested using <code>VectorSet</code> for faster lookups. Also <code>StringRef</code> is used to avoid copying.</li>
+<li>Fix curve not being visible in Object mode. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af278ce58bc">rBaf278ce5</a>. Thanks to Howard Trickey for debugging this!</li>
+<li>Cleanup: silence clang-tidy warnings; comments. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ffaa1df4397">rBffaa1df4</a>.</li></ul>
+<h4><span class="mw-headline" id="July_23">July 23</span></h4>
+<ul><li>Move Object creation code in Mesh creation class. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bb56c83faa">rB2bb56c83</a>. This helps adding deform groups and materials to the <code>Object</code> in one place and away from the code that adds that <code>Object</code> to a Collection.</li>
+<li>Rename exportable_meshes to exportable_as_mesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/47166605915">rB47166605</a>. (This was long due.)</li>
+<li>Refactor: Conform to style guide, add documentation. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97aa9d44fa0">rB97aa9d44</a>.</li></ul>
+<h4><span class="mw-headline" id="July_22">July 22</span></h4>
+<ul><li>Worked on Refactor: Conform to style guide, add documentation,  which got committed on July 23rd. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97aa9d44fa0">97aa9d44fa</a>.</li>
+<li>Set active NURBS of a curve; set object group. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cab598f2b2c">cab598f2b2</a>.</li>
+<li>The NURBS bug mentioned yesterday is still there.</li></ul>
+<h4><span class="mw-headline" id="July_21">July 21</span></h4>
+<ul><li>Support NURBS curve import <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e21f8c20da">rB6e21f8c2</a>. BUT the vertices are visible in edit mode, but the black spline is not visible in edit mode. Committed the rest of the code since it was working to some extent. Will try to fix it next day.</li>
+<li>Fix build errors: avoid <code>uint</code> with Vector's <code>size()</code> function. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7bd38c27761">rB7bd38c27</a>. Style guide was updated to discourage <code>uint</code> usage and <code>{}</code> initialisation doesn't allow narrowing conversions. There's still a lot of code in OBJ exporter that uses <code>uint</code>, that's for a Friday. This commit was only for removing <code>uint</code> with <code>Vector.size()</code>.</li></ul>
+<h4><span class="mw-headline" id="July_20">July 20</span></h4>
+<ul><li>Move vertex (and UV vertex) list outside <code>OBJRawObject</code> so that objects that are defined (<code>o curvename</code>) after the list of vertices is written can access them using relative indices.  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71eadb4b628">rB71eadb4b</a></li>
+<li>Kept working on importing NURBS curve.</li></ul>
+<h3><span class="mw-headline" id="Week_7">Week 7</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_7:_July_13_-_17" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_7:_July_13_-_17</a>
+</p>
+<h4><span class="mw-headline" id="July_17">July 17</span></h4>
+<ul><li>Use MutableSpan instead of raw pointers in string to float converter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65fd3be1fa2">65fd3be1fa</a></li>
+<li>Support meshes with edges with or without polygons. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5a9b983263c">5a9b983263</a></li>
+<li>Cleanup: Rename variables, use {} initialisation. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37d59dbc8cf">37d59dbc8c</a></li></ul>
+<h4><span class="mw-headline" id="July_16">July 16</span></h4>
+<ul><li>Importer: Support smooth shading for polygons. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/031c4732f45">rB031c4732</a></li>
+<li>Importer: Fix misaligned UV vertices of a mesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe4c5350c46">rBfe4c5350</a></li>
+<li>Move stoi into a function; Add exception handling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef5941f31aa">rBef5941f3</a></li>
+<li>Fix UV crashes and redundant loops in v1//vn1 case. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92be92befea">rB92be92be</a></li>
+<li>Exporter: fix vertex normals not being exported when smooth shading is enabled. Calculating smooth groups before exporting normals was the solution. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/501ead4bbc8">rB501ead4b</a></li>
+<li>Exporter: Fix freeing invalid pointer in ~OBJMesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c275b2784b7">rBc275b278</a></li>
+<li>Exporter: Fix UV indices being edited by the writer. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/151e8825122">rB151e8825</a></li></ul>
+<h4><span class="mw-headline" id="July_15">July 15</span></h4>
+<ul><li>Add UV vertices to the mesh. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4a1184ecea">a4a1184ece</a>. This needs some corrections though: the coordinates are correct, but UV edges are not matched to edges in the mesh. Also spent some time trying to find the problem of the assert: <code>(uniform), function GPU_batch_uniform_4fv,</code> it was present in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8a62e4f50290f560bc09160">rBc8a62e4f</a> has been fixed before <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/065a00ee3e6">rB065a00ee</a>.</li>
+<li>Exporter: Fix UV vertex indices off by one. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d68899e99a0">d68899e99a</a></li>
+<li>Cleanup single use variable, comments, formatting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aa9e4b23e5a">aa9e4b23e5</a></li>
+<li>Responded to some build error and a bug fix help post on Devtalk.</li></ul>
+<h4><span class="mw-headline" id="July_14">July 14</span></h4>
+<ul><li>Use stoi and stof instead of &gt;&gt;  for faster parsing. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aacb1f4756a">aacb1f4756</a>. Time taken in string to float conversion is less now as compared to <code>&gt;&gt;</code> operator. But the cost is in splitting the string and allocations made for several substrings. Overall this is faster. <div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:OBJ_file_import_using_stoi.png.html" class="image"><img alt="" src="../../../w/images/thumb/b/b3/OBJ_file_import_using_stoi.png/300px-OBJ_file_import_using_stoi.png" width="300" height="188" class="thumbimage" srcset="../../../w/images/thumb/b/b3/OBJ_file_import_using_stoi.png/450px-OBJ_file_import_using_stoi.png 1.5x, ../../../w/images/thumb/b/b3/OBJ_file_import_using_stoi.png/600px-OBJ_file_import_using_stoi.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:OBJ_file_import_using_stoi.png.html" class="internal" title="Enlarge"></a></div>OBJ import the same file as yesterday using <code>stoi</code>. cube subd 8; 23.3MB file.</div></div></div></li>
+<li>Parse UV coordinates and normals. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e9196ed11e">5e9196ed11</a></li>
+<li>Directly create Mesh without using intermediate BMesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ec04edfe5c3">ec04edfe5c</a>. It lowered the peak memory usage by half. Also made mesh creation faster.</li>
+<li>Refactor: Keep mesh_from_raw_object in a class <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cfcf37ceaf">3cfcf37cea</a></li></ul>
+<h4><span class="mw-headline" id="July_13">July 13</span></h4>
+<ul><li>Refactor: Keep mesh_from_raw_object in a class <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cfcf37ceaf">rB3cfcf37c</a></li>
+<li>Rename files: exporter -&gt; ex, importer -&gt; im. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/582bf4397cf">rB582bf439</a>. It will be reverted and files moved into folders though.</li>
+<li>Break code into mesh, objects, and reader files. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7582bbd5740">rB7582bbd5</a></li></ul>
+<h3><span class="mw-headline" id="Week_6">Week 6</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week6:_July_6_-_10" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week6:_July_6_-_10</a>
+</p>
+<h4><span id="July_8,_9,_10"></span><span class="mw-headline" id="July_8.2C_9.2C_10">July 8, 9, 10</span></h4>
+<ul><li>Parsed and stored the file contents in a temporary, OBJ-local <code>OBJRawObject</code> structure. It is not the Blender object, rather an OBJ object with the data from the OBJ file.</li>
+<li>Successfully created a mesh in the viewport and added it to an Blender object. Also added the new Blender object to a collection in viewport.
+<ul><li>So far the mesh has vertex data only. Texture coordinates and normals are not there yet.</li></ul></li>
+<li>Initial profiling shows ~70% time being spent in parsing and storing the data in <code>OBJRawObject</code>. Rest ~30% is spent in making a Blender object from a Raw one. So there's a huge room for optimization. See attached image.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:OBJ_C++_Importer_preliminary_import_profile._.png.html" class="image"><img alt="" src="../../../w/images/thumb/4/42/OBJ_C++_Importer_preliminary_import_profile._.png/300px-OBJ_C++_Importer_preliminary_import_profile._.png" width="300" height="188" class="thumbimage" srcset="../../../w/images/thumb/4/42/OBJ_C++_Importer_preliminary_import_profile._.png/450px-OBJ_C++_Importer_preliminary_import_profile._.png 1.5x, ../../../w/images/thumb/4/42/OBJ_C++_Importer_preliminary_import_profile._.png/600px-OBJ_C++_Importer_preliminary_import_profile._.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:OBJ_C++_Importer_preliminary_import_profile._.png.html" class="internal" title="Enlarge"></a></div>Imported a level 8 subdivided cube back using new C++ importer. OBJ File size: 23.3 MB. Corresponds to the commit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f8d64b396dff">rBf8d64b39</a></div></div></div>
+<ul><li>Also set up clang-11 and its leak detector since clang-10 in Xcode and in <code>/Library/Developer/Command Line Tools</code> doesn't have the lsan library. Needed to edit and enable @rpath.</li></ul>
+<h4><span class="mw-headline" id="July_7">July 7</span></h4>
+<ul><li>Started working on the importer. UI is already there, worked on file IO and looked at Jacques Lucke's code for the same. <a rel="nofollow" class="external free" href="https://github.com/JacquesLucke/blender/compare/master...obj-import-experiments">https://github.com/JacquesLucke/blender/compare/master...obj-import-experiments</a></li></ul>
+<h4><span class="mw-headline" id="July_6">July 6</span></h4>
+<ul><li>Set up clang-tidy on macOS. Had to build llvm from source, and remove extra executables from PATH to avoid conflicts with other compilers.</li>
+<li>Got carried away a little bit and experimented a little bit to get clang-tidy to work with Xcode, using a compilation database (JSON) with clang-tidy etc. Finally settled with using Ninja as the generator in a new folder, solely for checking clang-tidy warnings.</li></ul>
+<h3><span class="mw-headline" id="Week_5">Week 5</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_5:_June_29_-_July_4" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_5:_June_29_-_July_4</a>
+</p>
+<h4><span class="mw-headline" id="July_3">July 3</span></h4>
+<ul><li>Lots of tiny changes: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2eb16f66249">rBc2eb16f6</a>
+<ul><li>Adhering to recently updated style guide <a href="../../Style_Guide/C_Cpp.html#C.2B.2B_Namespaces" title="Style Guide/C Cpp">Style_Guide/C_Cpp#C.2B.2B_Namespaces</a>. Specifically, <code>_</code> in the end of private class members, combined namespace, reorder class members, use <code>const</code> wherever suitable.</li>
+<li>Remove documentation comments from headers and keep only at implementation. Reduces duplication, and reading a class easier.</li>
+<li>Break functions doing different things into smaller ones.</li>
+<li>Better comments.</li></ul></li></ul>
+<p>(It was like a code quality day for me.)
+</p>
+<h4><span class="mw-headline" id="July_2">July 2</span></h4>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T78533">#78533</a>: Skip writing image texture in MTL (<code>map_Kd</code> ) if image filepath is empty.</li>
+<li>Support exporting smooth groups for smooth shaded meshes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d85c2620b81">rBd85c2620</a>.</li>
+<li>Worked on feedback received by mentors for evaluation. <a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1rWd1nfEuiSRS_8ELvRT4ENtIBXqs2DhxSbW_OYwJRzk/edit#">Google Doc</a>. Since the comments were on commits not posted for review, and I don't receive comments on my branch commits, the doc was made.</li></ul>
+<h4><span class="mw-headline" id="July_1">July 1</span></h4>
+<ul><li>Support vertex group to which a face element belongs.	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/012175f8437">rB012175f8</a>. It took some followup commits to make it working properly.</li></ul>
+<h4><span class="mw-headline" id="June_30">June 30</span></h4>
+<ul><li>Build error: Replace nodes_with_idname with nodes_by_type <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71c6d384c1d">71c6d384c1</a>, namespace BKE &gt; bke <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3e5ae5da8f">e3e5ae5da8</a></li>
+<li>Cleanup: simplified conditionals, remove warnings on linux	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2585882973d">2585882973</a></li>
+<li>Use unique_ptr to avoid early destruction of new meshes.	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9279377f4b2">9279377f4b</a></li>
+<li>Remove axis transform defines and use existing enums	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2e43ca99a2">c2e43ca99a</a></li>
+<li>Working on exporting vertex groups.</li></ul>
+<h4><span class="mw-headline" id="June_29">June 29</span></h4>
+<ul><li>Null checks
+<ul><li>Check if there is any material to write.	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/35dc587fd6f">rB35dc587f</a></li>
+<li>no image is present in the texture node	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/469398155d4">rB46939815</a></li>
+<li>uv vertices with no UV map.	<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02fa1f0bba2">rB02fa1f0b</a></li></ul></li></ul>
+<h3><span class="mw-headline" id="Week_4">Week 4</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_4:_June_22-27" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_4:_June_22-27</a>
+</p>
+<h4><span class="mw-headline" id="June_25">June 25</span></h4>
+<ul><li>Refactored to separate <code>OBJMesh</code> and <code>OBJNurbs</code> classes in separate files. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c98925d5ad82238c8cd28d20f3">rB6c98925d</a></li>
+<li>Trying to keep MTL writer in C++ itself: wrote object's material name and material library filename in OBJ file, create MTL file.
+<ul><li>Need to extract required properties from the Principled-BSDF node. If it is not present, default hardcoded values are being written.</li></ul></li></ul>
+<h4><span class="mw-headline" id="June_24">June 24</span></h4>
+<ul><li>Clean up OBJNurbs to be consistent with OBJMesh. Also, Nurbs surfaces are exported after being converted to mesh. Nurbs curves are exported in form of control points if "export curves as nurbs" is checked. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31d480174a8caebeeacac14902b02a">rB31d48017</a></li>
+<li>Fixed a bug: duplicated UV vertices and indices. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef0eff0b8a42bac8515b">rBef0eff0b</a></li>
+<li>To reuse the MTL writer in <a rel="nofollow" class="external text" href="https://developer.blender.org/diffusion/BA/browse/master/io_scene_obj/export_obj.py$49">export_obj.py</a>&#160;: Testing with registering an  operator in Python and calling it from C++, and also sending some strings to be operator upon.</li></ul>
+<h4><span class="mw-headline" id="June_23">June 23</span></h4>
+<ul><li>Update <a rel="nofollow" class="external text" href="http://developer.blender.org/D8089">D8089</a> in response to the review. Goal was to move more variables to private access in OBJMesh &amp; OBJWriter and expose functions only.</li>
+<li>Finished Nurbs support. Now just need to refactor it like OBJMesh.</li></ul>
+<h4><span class="mw-headline" id="June_22">June 22</span></h4>
+<ul><li>Cleaned up and put <a rel="nofollow" class="external text" href="http://developer.blender.org/D8089">D8089</a> up for review.</li>
+<li>Worked on exporting curves as nurbs.</li>
+<li>Replaced <code>std::vector</code> with <code>blender::Vector</code> proposed in <a rel="nofollow" class="external text" href="http://developer.blender.org/D7931">D7931</a></li></ul>
+<h3><span class="mw-headline" id="Week_3">Week 3</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_3:_June_15-19" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_3:_June_15-19</a>
+</p>
+<h4><span class="mw-headline" id="June_19">June 19</span></h4>
+<ul><li>Worked on exporting curves as meshes.</li>
+<li>Started working on refactor to reduce memory allocation and copying the mesh data into it. Rather at the time of writing, relevant info should be obtained on-the-fly.</li></ul>
+<h4><span class="mw-headline" id="June_18">June 18</span></h4>
+<ul><li>Committed mesh triangulation feature. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c3f8e9550c1e">rBc3f8e955</a></li>
+<li>Renamed occurrences of <code>objects</code> with <code>ob_mesh</code> or similar to indicate that mesh objects are being handled. It is necessary to differentiate it from curve objects.</li>
+<li>Made changes in response to the review in <a rel="nofollow" class="external text" href="http://developer.blender.org/D7959">D7959</a></li></ul>
+<h4><span class="mw-headline" id="June_17">June 17</span></h4>
+<ul><li>Made writing UV coordinates optional (default true). By extension, the faces are now written as <code>f v1//vn1 ...</code></li>
+<li>Face normals are optional too (default true). Faces are written as <code>f v1/vt1 ...</code> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/41f47cd8d6a4699bafa4f6a">rB41f47cd8</a></li>
+<li>Added scaling factor. (default 1.000) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d47318fb4537277e3013b362f8">rBd47318fb</a></li>
+<li>Worked on triangulation of meshes. Need to fix a memory leak though.</li></ul>
+<h4><span class="mw-headline" id="June_16">June 16</span></h4>
+<ul><li>Slow day today. Worked on axes transform (up/forward) and exposing it in the exporter preferences UI.</li></ul>
+<h4><span class="mw-headline" id="June_15">June 15</span></h4>
+<ul><li>Allowed all frames to be exported, instead of 0-1000. Added animation checkbox to make single frame export intuitive.</li>
+<li>Destination filename is edited only when multiple frames are being exported.  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/454610123787a7b">rB45461012</a></li>
+<li>Found and installed <a rel="nofollow" class="external text" href="https://github.com/mapbox/XcodeClangFormat">XcodeClangFormat</a> for easy formatting inside the IDE itself. (Off-topic: Plugins were deprecated in Xcode 8 and extensions are now the way to go.)</li></ul>
+<h3><span class="mw-headline" id="Week_2">Week 2</span></h3>
+<p>Weekly Summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_2:_June_8-13" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_2:_June_8-13</a>
+</p>
+<h4><span class="mw-headline" id="June_12">June 12</span></h4>
+<ul><li>Finished work on multiple objects to be exported in the same file.</li>
+<li>Need to test its accuracy. Will commit tomorrow.</li></ul>
+<h4><span class="mw-headline" id="June_11">June 11</span></h4>
+<ul><li>Not a lot of work today unfortunately.</li>
+<li>Tested <a rel="nofollow" class="external text" href="https://fmt.dev">{fmt::fprintf}</a> library as compared to <code>fprintf</code>. Saw only 10-15% speed up.</li>
+<li>Pushed work upto UV coordinates. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f01a7d508d">rBf01a7d50</a>.</li>
+<li>Fixed a out of bounds crash on windows in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2fbfb421ba">rBc2fbfb42</a>.</li></ul>
+<h4><span class="mw-headline" id="June_10">June 10</span></h4>
+<ul><li>Finished exporting non-duplicate and exhaustive list of UV coordinates and also stored their correct indices in <code>Polygon</code>s.</li>
+<li>Tested it by exporting with C++ exporter and importing it back with python importer and comparing the texture map with that of original object.</li>
+<li>Minor review update in <a rel="nofollow" class="external text" href="http://developer.blender.org/D7959">D7959</a>.</li></ul>
+<p>Todo
+</p>
+<ul><li>Export multiple objects in the same file, multiple frames (different files).</li>
+<li>Axes transform.</li></ul>
+<h4><span class="mw-headline" id="June_9">June 9</span></h4>
+<ul><li>My initial attempt at UV coords was wrong. The list was incomplete, since it was not iterating over the whole <code>me_eval-&gt;mloopuv</code> list; there were duplicates since a mesh vertex can be in multiple places in the texture map.</li>
+<li>Asked about it in chat and found <code>BKE_mesh_uv_vert_map_create</code>. Took me a lot of time to adapt it to my requirements.</li>
+<li>Ended the day at merely listing non-duplicated list of vertices.</li></ul>
+<p>Todo Next day
+</p>
+<ul><li>Now that we have a list of all UV vertex coordinates, we need to match every 3D vertex of all polygons with that list.  So todo is to add correct indices, <code>vt1</code>, <code>vt2</code>.. and store it in every <code>Polygon</code> member to export it like:</li></ul>
+<p><code>vt1 u v</code> <br />
+<code>vt2 u v</code> <br />
+<code>f */vt1/* */vt2/*</code>  <br />
+</p>
+<h4><span class="mw-headline" id="June_8">June 8</span></h4>
+<ul><li>Updated soc-2020-io-performance to improve readability inside loops using iteration variables. Minor namespace cleanup. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7af1ec516f94">7af1ec516f</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/86845ea907f8">86845ea907</a></li>
+<li>Merged those changes in review branch &amp; created <a rel="nofollow" class="external text" href="http://developer.blender.org/D7959">D7959</a>.</li>
+<li>Searched for averaging function, to replace <code>face_normal_axis_component</code>, but only found some functions in cycles utilities. However calculating face normals using vertex position can be done using cross product of two edges. That function is there. Downside is wasted memory in <code>data_to_export-&gt;mvert[i].no</code>.</li>
+<li>Worked on UV coordinates. Testing for correctness at the end of the day.</li></ul>
+<h3><span class="mw-headline" id="Week_1">Week 1</span></h3>
+<p>Weekly summary: <a href="../GSoC_2020_Weekly_Reports.html#Week_1:_June_1_to_June_6" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">User:Ankitm/GSoC_2020_Weekly_Reports#Week_1:_June_1_to_June_6 </a>
+</p>
+<h4><span class="mw-headline" id="June_5">June 5</span></h4>
+<ul><li>Correctly transformed vertex normals according to object's transformation matrix. Still need to incorporate axes transformation matrix.</li>
+<li>Also calculated face normal from its vertices' normals inlined while writing them to the file. It's a dirty averaging function.
+<ul><li>This removed the need of <code>BLI::Vector&lt;uint&gt; face_normal_index;</code>. Since <code>vn</code> and <code>f</code> lines are written by looping over the same <code>polygon</code>s, their indices would be the same.</li>
+<li>This also ensures that the memory allocated in <code>MVert *mvert</code> is used better. We were discarding all <code>data_to_export-&gt;mvert[i].no</code> arrays. Now we don't. They're used to calculate face normals on the fly.</li>
+<li>It'll be more clear when I'll send it for review.</li></ul></li>
+<li>Added object's name in the file.</li>
+<li>Encountered non-freed memory while testing both of these exporters^. Since that has been fixed in master, most probably with the commits between 25th May &amp; 28th May, I'll merge master once.</li>
+<li>Did a comparison between the old &amp; new exporters. Release configuration, lite build + opensubdiv, default cube with 6+3 subsurf. See images: <a rel="nofollow" class="external text" href="https://developer.blender.org/F8586987">F8586987</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/F8586984">F8586984</a></li></ul>
+<p>In the table below, we're checking the time taken by <code>wm_handler_fileselect_do</code> function. Release build. 
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Object
+</th>
+<th>File Size (note that <code>vt</code> are not there in C++ yet so C++ file size is smaller.)<br /> (C++/ Python + MTL)
+</th>
+<th>Export Time (<code>fstream</code>/<code>fprintf</code>)<br />(s)
+</th>
+<th>Export time Python <br />(s)
+</th></tr>
+<tr>
+<td>Default cube + 8 subdivision surface levels
+</td>
+<td>48 MB / 63 MB
+</td>
+<td>2.4 / 1.47 s
+</td>
+<td>20 s
+</td></tr>
+<tr>
+<td>Default cube + 9 subdivision surface levels
+</td>
+<td>186 MB / 262 MB + 229 bytes MTL
+</td>
+<td>7.6 / 4.6 s
+</td>
+<td>82 s
+</td></tr>
+<tr>
+<td>Ico-sphere + 8 subdivision surface levels
+</td>
+<td>478 MB / 674 MB + 124 bytes MTL
+</td>
+<td>22 / 13 s
+</td>
+<td>210 s
+</td></tr>
+</tbody></table>
+<p><br />
+Todo on Weekend:
+</p>
+<ul><li>Texture coordinates.</li>
+<li>Try to add multiple objects. An object can be a made a class instance with <code>data_to_export</code> its struct. But we'll discuss.</li></ul>
+<h4><span class="mw-headline" id="June_4">June 4</span></h4>
+<ul><li>Review update on <a rel="nofollow" class="external text" href="http://developer.blender.org/D7918">D7918</a> and <a rel="nofollow" class="external text" href="http://developer.blender.org/D7917">D7917</a>:
+<ul><li>Renamed obj to wavefront_obj in filenames to remove confusion with blender's data types. Also renamed C++ headers to <code>.hh</code>. moved the code to <code>wavefront_obj/intern/</code> leaving only <code>wavefront_obj/IO_wavefront_obj.h</code> externally.</li>
+<li>Improved comments in structs &amp; functions.</li>
+<li>arc diff wasn't the best tool for getting two sequential commits reviewed. So there was some branch juggling, diff files creation &amp; resets. Now onwards, I'll stick to getting one change reviewed at a time → Merge it to soc branch &amp; repeat.</li></ul></li>
+<li>Got familiar with <a rel="nofollow" class="external text" href="https://help.apple.com/xcode/mac/current/#/devcef23c572">Xcode's Address sanitizer</a>. (also fixed a small heap buffer overflow).</li>
+<li>Tomorrow: I'll be working on transforming vertex normals, _obtaining_ face normals from vertex normals, write object name to the file. _Writing_ face normals to file is a on halt waiting for <a rel="nofollow" class="external text" href="http://developer.blender.org/D7931">D7931</a></li></ul>
+<h4><span class="mw-headline" id="June_3">June 3</span></h4>
+<ul><li>Finished major changes in <code>io/obj/*.cc</code> files.</li>
+<li>Uploaded <a rel="nofollow" class="external text" href="http://developer.blender.org/D7918">D7918</a> and <a rel="nofollow" class="external text" href="http://developer.blender.org/D7917">D7917</a> which will be committed to the soc-2020-io-performance branch after review.</li>
+<li>Experimenting with "multiplying obmat and mvert.co while writing to the file" vs "multiplying earlier &amp; keeping its copies" as per Howard's comment <a rel="nofollow" class="external text" href="https://developer.blender.org/D7917#191581">D7917#191581</a>. But first I need to find appropriate method to transform normals. After data structure for polygons is finalised, I'd be able to fix its issue with wrong vertex_index.</li>
+<li>Also updated <a href="../GSoC_2020_Proposal_IO_Perf.html#Project_Schedule" class="mw-redirect" title="User:Ankitm/GSoC 2020 Proposal IO Perf">project plan</a> to give more time and spread to such refactoring and bug fixing. Squeezing PLY and STL.</li></ul>
+<h4><span class="mw-headline" id="June_2">June 2</span></h4>
+<ul><li>Received review from mentors on the commit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/485cc4330aff5f38c8af7874">rB485cc433</a>.</li>
+<li>Worked on resolving the straightforward bits, renaming files (.h → .hh), writing comments &amp; proper naming.</li>
+<li>Will finish the changes on the next day for review before committing it. That involves finding how to transform face normals according to global transform, using <code>BLI_*</code> instead of STL, breaking up functions into smaller, specific ones.</li></ul>
+<h4><span class="mw-headline" id="June_1">June 1</span></h4>
+<ul><li>Cleaned and prepared a commit for the work done in the past 4 days. See <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/485cc4330aff5f38c8af7874">rB485cc433</a>.</li>
+<li>The UI blocks and dummy files were added in <a href="../GSoC_2020_Weekly_Reports.html" class="mw-redirect" title="User:Ankitm/GSoC 2020 Weekly Reports">week 0</a>. After that, OBJ Exporter now exports a single, selected object's, vertices, vertex normals, and faces. Need to verify it with complex geometries. The axes transformation (<code>Z_up</code>, <code>Y_forward</code>) is not there yet.</li>
+<li>Tried to get ASan to work on macOS, but failed. It's not supported, see <a rel="nofollow" class="external text" href="http://clang.llvm.org/docs/AddressSanitizer.html#supported-platforms">the docs</a>. gperftools' heap-profiler &amp; heap-checker work on simple standalone scripts, not in Blender. Instruments.app's <a rel="nofollow" class="external text" href="https://help.apple.com/instruments/mac/current/#/dev022f987b">leak detector</a> crashes after detecting a leak that happens without even doing anything.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240111224447
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 1.030 seconds
+Real time usage: 1.098 seconds
+Preprocessor visited node count: 20110/1000000
+Preprocessor generated node count: 4473/1000000
+Post‐expand include size: 79506/2097152 bytes
+Template argument size: 26524/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  900.755      1 -total
+ 97.12%  874.815    119 Template:GitCommit
+ 83.50%  752.109    219 Template:GitCommit/PhabricatorParse
+  1.47%   13.227     19 Template:GitCommit/PhabricatorParseDeprecated
+  0.32%    2.892     11 Template:PhabDiff
+  0.14%    1.285      1 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5159-0!canonical and timestamp 20240111224446 and revision id 18980
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;oldid=18980">https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;oldid=18980</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 28 August 2020, at 11:50.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Ankitm/GSoC_2020/Daily_Reports.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Ankitm/GSoC_2020/Daily_Reports" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Ankitm.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Ankitm.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Ankitm.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;oldid=18980" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/GSoC_2020/Daily_Reports&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.030","walltime":"1.098","ppvisitednodes":{"value":20110,"limit":1000000},"ppgeneratednodes":{"value":4473,"limit":1000000},"postexpandincludesize":{"value":79506,"limit":2097152},"templateargumentsize":{"value":26524,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  900.755      1 -total"," 97.12%  874.815    119 Template:GitCommit"," 83.50%  752.109    219 Template:GitCommit/PhabricatorParse","  1.47%   13.227     19 Template:GitCommit/PhabricatorParseDeprecated","  0.32%    2.892     11 Template:PhabDiff","  0.14%    1.285      1 Template:BugReport"]},"cachereport":{"timestamp":"20240111224447","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":38});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844545bd1d380bae","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:ThomasDinges/WeeklyReports/2022 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:ThomasDinges/WeeklyReports/2022","wgTitle":"ThomasDinges/WeeklyReports/2022","wgCurRevisionId":32798,"wgRevisionId":32798,"wgArticleId":6230,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:ThomasDinges/WeeklyReports/2022","wgRelevantArticleId":6230,"wgRequestId":"56bf32f3caca9dd3cd1215fc","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"ThomasDinges","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_ThomasDinges_WeeklyReports_2022 rootpage-User_ThomasDinges skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2022.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AThomasDinges%2FWeeklyReports%2F2022" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2022.html#2022"><span class="tocnumber">1</span> <span class="toctext">2022</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2022.html#Calendar_Week_1"><span class="tocnumber">1.1</span> <span class="toctext">Calendar Week 1</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2022.html#Calendar_Week_2"><span class="tocnumber">1.2</span> <span class="toctext">Calendar Week 2</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2022.html#Calendar_Week_3"><span class="tocnumber">1.3</span> <span class="toctext">Calendar Week 3</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2022.html#Calendar_Week_4"><span class="tocnumber">1.4</span> <span class="toctext">Calendar Week 4</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2022.html#Calendar_Week_5"><span class="tocnumber">1.5</span> <span class="toctext">Calendar Week 5</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2022.html#Calendar_Week_6"><span class="tocnumber">1.6</span> <span class="toctext">Calendar Week 6</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2022.html#Calendar_Week_7"><span class="tocnumber">1.7</span> <span class="toctext">Calendar Week 7</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2022.html#Calendar_Week_8"><span class="tocnumber">1.8</span> <span class="toctext">Calendar Week 8</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2022.html#Calendar_Week_9"><span class="tocnumber">1.9</span> <span class="toctext">Calendar Week 9</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2022.html#Calendar_Week_10"><span class="tocnumber">1.10</span> <span class="toctext">Calendar Week 10</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2022.html#Calendar_Week_11"><span class="tocnumber">1.11</span> <span class="toctext">Calendar Week 11</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2022.html#Calendar_Week_12"><span class="tocnumber">1.12</span> <span class="toctext">Calendar Week 12</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2022.html#Calendar_Week_13"><span class="tocnumber">1.13</span> <span class="toctext">Calendar Week 13</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2022.html#Calendar_Week_14"><span class="tocnumber">1.14</span> <span class="toctext">Calendar Week 14</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2022.html#Calendar_Week_15"><span class="tocnumber">1.15</span> <span class="toctext">Calendar Week 15</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2022.html#Calendar_Week_16"><span class="tocnumber">1.16</span> <span class="toctext">Calendar Week 16</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2022.html#Calendar_Week_17"><span class="tocnumber">1.17</span> <span class="toctext">Calendar Week 17</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2022.html#Calendar_Week_18"><span class="tocnumber">1.18</span> <span class="toctext">Calendar Week 18</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2022.html#Calendar_Week_19"><span class="tocnumber">1.19</span> <span class="toctext">Calendar Week 19</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2022.html#Calendar_Week_20"><span class="tocnumber">1.20</span> <span class="toctext">Calendar Week 20</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2022.html#Calendar_Week_21"><span class="tocnumber">1.21</span> <span class="toctext">Calendar Week 21</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2022.html#Calendar_Week_22"><span class="tocnumber">1.22</span> <span class="toctext">Calendar Week 22</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2022.html#Calendar_Week_23"><span class="tocnumber">1.23</span> <span class="toctext">Calendar Week 23</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2022.html#Calendar_Week_24"><span class="tocnumber">1.24</span> <span class="toctext">Calendar Week 24</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2022.html#Calendar_Week_25"><span class="tocnumber">1.25</span> <span class="toctext">Calendar Week 25</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2022.html#Calendar_Week_26"><span class="tocnumber">1.26</span> <span class="toctext">Calendar Week 26</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2022.html#Calendar_Week_27"><span class="tocnumber">1.27</span> <span class="toctext">Calendar Week 27</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2022.html#Calendar_Week_28"><span class="tocnumber">1.28</span> <span class="toctext">Calendar Week 28</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2022.html#Calendar_Week_29"><span class="tocnumber">1.29</span> <span class="toctext">Calendar Week 29</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2022.html#Calendar_Week_30"><span class="tocnumber">1.30</span> <span class="toctext">Calendar Week 30</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2022.html#Calendar_Week_31"><span class="tocnumber">1.31</span> <span class="toctext">Calendar Week 31</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2022.html#Calendar_Week_32"><span class="tocnumber">1.32</span> <span class="toctext">Calendar Week 32</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2022.html#Calendar_Week_33"><span class="tocnumber">1.33</span> <span class="toctext">Calendar Week 33</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2022.html#Calendar_Week_34"><span class="tocnumber">1.34</span> <span class="toctext">Calendar Week 34</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2022.html#Calendar_Week_35"><span class="tocnumber">1.35</span> <span class="toctext">Calendar Week 35</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2022.html#Calendar_Week_36"><span class="tocnumber">1.36</span> <span class="toctext">Calendar Week 36</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2022.html#Calendar_Week_37"><span class="tocnumber">1.37</span> <span class="toctext">Calendar Week 37</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2022.html#Calendar_Week_38"><span class="tocnumber">1.38</span> <span class="toctext">Calendar Week 38</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2022.html#Calendar_Week_39"><span class="tocnumber">1.39</span> <span class="toctext">Calendar Week 39</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2022.html#Calendar_Week_40"><span class="tocnumber">1.40</span> <span class="toctext">Calendar Week 40</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2022.html#Calendar_Week_41"><span class="tocnumber">1.41</span> <span class="toctext">Calendar Week 41</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2022.html#Calendar_Week_42"><span class="tocnumber">1.42</span> <span class="toctext">Calendar Week 42</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2022.html#Calendar_Week_43"><span class="tocnumber">1.43</span> <span class="toctext">Calendar Week 43</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2022.html#Calendar_Week_44"><span class="tocnumber">1.44</span> <span class="toctext">Calendar Week 44</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2022.html#Calendar_Week_45"><span class="tocnumber">1.45</span> <span class="toctext">Calendar Week 45</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2022.html#Calendar_Week_46"><span class="tocnumber">1.46</span> <span class="toctext">Calendar Week 46</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2022.html#Calendar_Week_47"><span class="tocnumber">1.47</span> <span class="toctext">Calendar Week 47</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2022.html#Calendar_Week_48"><span class="tocnumber">1.48</span> <span class="toctext">Calendar Week 48</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="2022.html#Calendar_Week_49"><span class="tocnumber">1.49</span> <span class="toctext">Calendar Week 49</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2022.html#Calendar_Week_50"><span class="tocnumber">1.50</span> <span class="toctext">Calendar Week 50</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2022.html#Calendar_Week_51"><span class="tocnumber">1.51</span> <span class="toctext">Calendar Week 51</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="2022.html#Calendar_Week_52"><span class="tocnumber">1.52</span> <span class="toctext">Calendar Week 52</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:ThomasDinges/WeeklyReports/2022</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:ThomasDinges.html" title="User:ThomasDinges">User:ThomasDinges</a>&lrm; | <a href="../WeeklyReports.html" title="User:ThomasDinges/WeeklyReports">WeeklyReports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="2022">2022</span></h1>
+<h2><span class="mw-headline" id="Calendar_Week_1">Calendar Week 1</span></h2>
+<p>Jan 3 - Jan 9
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>Further worked on the <a href="../ModuleImprovements.html" title="User:ThomasDinges/ModuleImprovements">Module proposal</a>, simplified the status and add additional info. Next steps:
+<ul><li>Agree on a common (basic) template for the landing pages. I created an <a rel="nofollow" class="external text" href="https://developer.blender.org/project/profile/139/">example page</a>, which can be used to tinker. Every module can of course add additional information and links, but the basics should ideally look the same for all modules to improve consistency.</li>
+<li>Announce the implementation of this and give every module a time frame of 1-2 weeks to update their pages. Modules that miss that deadline will be set to inactive.</li></ul></li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Postponed Bcon2 until 5th January, due to holidays and some pending features. <a rel="nofollow" class="external free" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051224.html">https://lists.blender.org/pipermail/bf-committers/2022-January/051224.html</a></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T94546">#94546</a>: Remove soft limit for the Clamp Node value socket (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/070948b5f1cf">rB070948b5</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_2">Calendar Week 2</span></h2>
+<p>Jan 10 - Jan 16
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>Called for a project tag clean-up on Phabricator. <a rel="nofollow" class="external free" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051229.html">https://lists.blender.org/pipermail/bf-committers/2022-January/051229.html</a></li>
+<li>Polished up the <a href="../ModuleImprovements.html" title="User:ThomasDinges/ModuleImprovements">module proposal</a> for the landing page, and discussed with BF admins. Sent out a <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051233.html">mail</a> and will call for implementation next week, if no objections are made.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Fix Cycles compilation with Optix on Windows. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/76d69bbb0864">rB76d69bbb</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_3">Calendar Week 3</span></h2>
+<p>Jan 17 - Jan 23
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>The landing pages proposal is accepted and is being implemented now. <a rel="nofollow" class="external free" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051249.html">https://lists.blender.org/pipermail/bf-committers/2022-January/051249.html</a></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Further work on <a rel="nofollow" class="external text" href="http://developer.blender.org/D13592">D13592</a>, make Embree compact BVH optional in Cycles.</li>
+<li>Cleanup: Remove unused python helper function. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/264fe10ddde9">rB264fe10d</a>).</li>
+<li>Cleanup: Remove OpenCL workaround in volume_sample_channel(). (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/19622ffc5b84">rB19622ffc</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_4">Calendar Week 4</span></h2>
+<p>Jan 24 - Jan 30
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>The landing pages have been updated (thanks module teams!), I updated the <a href="../../Modules.html" title="Modules">Modules wiki page</a> now, which is now an overview of the modules with links.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051268.html">Sent a reminder</a> for BCon3 out to the mailing list. It was postponed <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051277.html">a bit to Friday</a>, giving time for pending patches and library updates.</li>
+<li>Created the blender-v3.1-release branch and svn tags, updated git with new splash and announced <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-January/051279.html">3.1 Bcon3 (and 3.2 Bcon1)</a>.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Cycles: Make Embree compact BVH optional (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e2a36a6e459f">rBe2a36a6e</a>).</li>
+<li>Cycles: Reorganize Acceleration Structure UI panel. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97a023a0d5db">rB97a023a0</a>).</li>
+<li>Cleanup: Remove leftover hair fade code in Cycles. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1687903fb813">rB1687903f</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_5">Calendar Week 5</span></h2>
+<p>Jan 31 - Feb 6
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Organized the new weekly kick-off meetings for the remote working dev grant Blender developers.</li>
+<li>Triage reports / patches. Especially went over already accepted (yet not commited) patches.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>There are still various add-ons that don't follow the new key-requirements. Mailed the <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-February/051282.html">mailing list</a> and created a task to track these. <a rel="nofollow" class="external text" href="http://developer.blender.org/T95442">T95442</a></li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>Discussed the <a href="../ModuleImprovements.html#2.29_Chat" title="User:ThomasDinges/ModuleImprovements">second part of my proposal</a> with module owners, having consistent names for module channels and basic info in the header.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Fix wrong function call in Cycles acceleration UI poll. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c379223053e7">rBc3792230</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_6">Calendar Week 6</span></h2>
+<p>Feb 7 - Feb 13
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Monday.</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Module Improvements </b>
+</p>
+<ul><li>Chat rename: Made a list mapping current -&gt; new channel name, to setup a redirect once the names change.</li></ul>
+<p><b> Add-ons </b>
+</p>
+<ul><li>Further coordination work, to ensure add-on requirements are taken into account for Blender 3.1. <a rel="nofollow" class="external text" href="http://developer.blender.org/T95442">T95442</a></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_7">Calendar Week 7</span></h2>
+<p>Feb 14 - Feb 20
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Spent some time checking various test blend files with the blender-v3.1-release branch, to find issues.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Updated wiki pages for <a href="../../GSoC.html" title="GSoC">GSoC 2022</a> and coordinated with potential mentors to update the <a href="../../GSoC/Ideas_Suggestions.html" title="GSoC/Ideas Suggestions">ideas page</a>.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T95778">T95778</a>, the macOS minimum versions have been increased for Metal. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a5edff4b73ba">rBa5edff4b</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_8">Calendar Week 8</span></h2>
+<p>Feb 21 - Feb 27
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Release coordination</b>
+</p>
+<ul><li>More coordination work on add-on requirements. <a rel="nofollow" class="external text" href="http://developer.blender.org/T95442">T95442</a></li>
+<li>Checking on high priority bugs and assign them to Blender 3.1 on Phabricator.</li>
+<li>Checking on missing docs in the manual, collecting more content for the release notes.</li></ul>
+<p><b> Module improvements</b>
+</p>
+<ul><li>Added back some information to the <a href="../../Modules.html" title="Modules">wiki module list</a>, to have information on module scope on one page.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_9">Calendar Week 9</span></h2>
+<p>Feb 28 - Mar 6
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Release coordination</b>
+</p>
+<ul><li>More coordination work on add-on requirements. <a rel="nofollow" class="external text" href="http://developer.blender.org/T95442">T95442</a></li>
+<li>Checking on high priority bugs, poking devs, checking release notes and status.</li>
+<li>Moved to bcon4 on Wednesday. Mail to <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-March/051292.html">bf-commiters</a>.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_10">Calendar Week 10</span></h2>
+<p>Mar 7 - Mar 13
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Blender has been accepted again to participate in GSoC 2022. Posted information for interested contributors on <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/blender-has-been-accepted-for-gsoc-2022/23291">devtalk</a> and sent out a <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-March/051297.html">call for mentors</a>.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Checked on bug tracker, release notes and status this week for the 3.1 release and coordinated the release on Wednesday.</li>
+<li>bcon5 on Tuesday evening. Mail to <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-March/051294.html">bf-commiters</a>.</li>
+<li>Release version bump and updated freedesktop xml file. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7add8163e4b6">rB7add8163</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c305b88aacb1">rBc305b88a</a>)</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_11">Calendar Week 11</span></h2>
+<p>Mar 14 - Mar 20
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Checked on post release issues and on <a rel="nofollow" class="external text" href="https://developer.blender.org/T96241">potential candidates for a corrective release</a>.</li></ul>
+<p><b> World Blender Meetup Day </b>
+</p>
+<ul><li>Prepared a presentation for this weeks <a rel="nofollow" class="external text" href="https://www.worldblendermeetupday.org/">World Blender Meetup Day</a>.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_12">Calendar Week 12</span></h2>
+<p>Mar 21 - Mar 27
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Some work on wiki docs, onboarding interested contributors and inviting mentors to the summerofcode site.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Blender 3.1.1 corrective release is planned for Wednesday, 30th March. Bumped the branch to RC. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dd1112abe6f3">rBdd1112ab</a></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Setup Blender development environment on a new laptop.</li>
+<li>Review of <a rel="nofollow" class="external text" href="http://developer.blender.org/D14450">D14450</a>, the current quick liquid has several issues.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_13">Calendar Week 13</span></h2>
+<p>Mar 28 - April 3
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Onboarding for interested contributors, reading proposals, inviting more mentors to the GSoC website...</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-March/051313.html">Moved Bcon2 to Monday</a> to give everyone a few more days to merge pending patches to master.</li>
+<li>Helped with the 3.1.1 corrective release (tagging git repositories, updating wiki pages..)</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_14">Calendar Week 14</span></h2>
+<p>April 4 - April 10
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Invited more mentors to the GSoC website.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Switched to Bcon2 (Blender 3.2) on Tuesday, updated Wiki, Phabricator, Chat...</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_15">Calendar Week 15</span></h2>
+<p>April 11 - April 17
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>More coordination work (inviting mentors, Wiki page, Chat...)</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T97280">T97280</a>, Typo in tooltip of image texture node. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05a1770ab069">rB05a1770a</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_16">Calendar Week 16</span></h2>
+<p>April 18 - April 24
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li>
+<li>Updating and sending out the weekly dev notes.</li>
+<li>Triage reports / patches.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Created a GSoC mentors chat channel and put all submitted proposals into an online doc for review.</li></ul>
+<p><b> Release Management </b>
+</p>
+<ul><li>Checked with Philipp on LTS release and got an insight into store delivery, buildbot, website...</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_17">Calendar Week 17</span></h2>
+<p>April 25 - May 1
+</p><p><b> Travel to Amsterdam </b>
+</p><p>I was at the Blender HQ in Amsterdam this week and had many fruitful discussions with Ton, the developers and artists. We talked about my role, checked how it's going and where I can help more to ensure the module teams are empowered to work on Blender. We also discussed several ideas for future projects. It was great to be there again, thanks a lot!
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Coordination for Bcon3
+<ul><li>Postponed Bcon3 due to public holiday on Wednesday and then again due to pending library updates.</li>
+<li>Version bump in master (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37ede15e639c">rB37ede15e</a>)</li></ul></li>
+<li>Checked on high priority bugs on the tracker, to get an idea of the most important ones.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Cleanup: Remove old filter property in Cycles. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/62eb190d4e4e">rB62eb190d</a>)</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_18">Calendar Week 18</span></h2>
+<p>May 2 - May 8
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Switched to Bcon3 on Monday (create branch, update files, commit splash, update websites...)
+<ul><li>Blender 3.3 bcon1 - alpha (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/46b32c9d7b42">rB46b32c9d</a>)</li>
+<li>Blender 3.2 splashscreen (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d1cbfc81bb90">rBd1cbfc81</a>)</li>
+<li>Blender 3.2 - Beta (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/da46ed9116cd">rBda46ed91</a>)</li></ul></li>
+<li>Keep an eye on high priority bugs and post reminders / statistics to the chat every few days. Also wrote a little <a rel="nofollow" class="external text" href="https://github.com/DingTo/BlenderHelpers/blob/main/get_high_prio_bugs.py">Python script</a> to create these. Thanks to Eitan, they are now automatically send to the chat once a day.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_19">Calendar Week 19</span></h2>
+<p>May 9 - May 15
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Module meetings </b>
+</p>
+<ul><li>Participated in the GPU module meeting on Monday and the Cycles meeting on Tuesday.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Kept an eye on high priority bugs and run some tests on the 3.2 release branch.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Coordination with mentors and assigning and ranking the finalist proposals on the GSoC platform.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_20">Calendar Week 20</span></h2>
+<p>May 16 - May 22
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Triage reports / patches</li></ul>
+<p>Short week, mostly time off. 
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_21">Calendar Week 21</span></h2>
+<p>May 23 - May 29
+</p><p>Time off.
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_22">Calendar Week 22</span></h2>
+<p>May 30 - June 5
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and sending out the weekly dev notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Catching up with mail, chat...</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Spend some time testing the blender-v3.2-release branch for last minute issues</li>
+<li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-June/051359.html">Moved to Bcon4</a> on Wednesday, Release Candidate.</li></ul>
+<p><b> Meetings </b>
+</p>
+<ul><li>Meeting with Arnd to discuss latest updates on the phabricator migration to its successor.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_23">Calendar Week 23</span></h2>
+<p>June 6 - June 12
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Created branches, wiki accounts and set commit access for all students</li>
+<li>Helped them out with questions on the chat</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Coordination for the Blender 3.2 release.
+<ul><li>Commited version bump and freedesktop log. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2161a892519e">rB2161a892</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8938cff8ac30">rB8938cff8</a>)</li>
+<li>Created task for potential corrective release <a rel="nofollow" class="external text" href="http://developer.blender.org/T98661">T98661</a></li>
+<li>Created announcements and published Blender 3.2 on the stores (Steam, Snap, Microsoft)</li>
+<li>Updated wiki, d.b.o, chat...</li></ul></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_24">Calendar Week 24</span></h2>
+<p>June 13 - June 19
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Updated the GSoC <a href="../../GSoC/2022.html" title="GSoC/2022">overview page</a> with links to student proposals and weekly reports.</li>
+<li>Helped them out with questions on the chat</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Kept an eye on the bugtracker and possible candidates for the corrective release.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_25">Calendar Week 25</span></h2>
+<p>June 20 - June 26
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Triaged reports and helped to confirm issues.</li></ul>
+<p><b> Module meetings </b>
+</p>
+<ul><li>Participated in the Cycles meeting on Tuesday.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Bumped the version to 3.2.1 for the upcoming corrective release. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a50528243e1">rB0a505282</a></li>
+<li>Backported some fixes to the 3.2 branch.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Helped testing and benchmarking Cycles patches. <a rel="nofollow" class="external text" href="http://developer.blender.org/D15273">D15273</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D15276">D15276</a></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_26">Calendar Week 26</span></h2>
+<p>June 27 - July 3
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported several fixes to the 3.2 branch.</li>
+<li>Created a <a href="../../Reference/Release_Notes/3.2/Corrective_Releases.html" title="Reference/Release Notes/3.2/Corrective Releases">wiki page</a> with all 3.2.1 bugfixes</li>
+<li>Send out an e-mail to schedule 3.2.1 and inform about Bcon2 for 3.3 LTS: <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-June/051380.html">Mail to bf-commiters</a></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Tested <a rel="nofollow" class="external text" href="http://developer.blender.org/D15286">D15286</a>, Cycles integration of Intel's Open Path Guiding Library.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_27">Calendar Week 27</span></h2>
+<p>July 4 - July 10
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li>
+<li>Triaged reports / patches.</li></ul>
+<p><b> Module meetings </b>
+</p>
+<ul><li>Participated in the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2022-07-07-animation-rigging-module-meeting/25001">Animation &amp; Rigging meeting</a> on Thursday.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported several fixes to the 3.2 branch.</li>
+<li>Release of Blender 3.2.1 on wednesday, testing builds, publishing it on the stores (Steam, Microsoft, Snap), updating wiki / phabricator...</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_28">Calendar Week 28</span></h2>
+<p>July 11 - July 17
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li>
+<li>Triaged reports / patches.</li>
+<li>Given out discount codes for the Blender conference.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported several fixes to the 3.2 branch for another corrective release, 3.2.2.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D15446">D15446</a>, Cycles: add presets to the Performance panel</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_29">Calendar Week 29</span></h2>
+<p>July 18 - July 24
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and handling the weekly report.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li>
+<li>Triaged reports / patches.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported another batch of fixes to the 3.2 branch for the upcoming corrective release, 3.2.2.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D15482">D15482</a>, Update Embree to 3.13.4</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_30">Calendar Week 30</span></h2>
+<p>July 25 - July 31
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li>
+<li>Setup commit access and did onboarding for new developers from the Animation &amp; Rigging module.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Midterm evaluations had to be submitted this week, checked that all are properly filled out by mentors.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported another batch of fixes to the 3.2 branch for the upcoming corrective release, 3.2.2.</li></ul>
+<ul><li>Switched to Bcon3 on Wednesday (create branch, update files, commit splash, update websites...)
+<ul><li>Blender 3.3: Finalizing version bump. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83362f87bb3b">rB83362f87</a>)</li>
+<li>Blender 3.4 Alpha: Start of new release cycle. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9015952c9c00">rB9015952c</a>)</li>
+<li>Blender 3.3 - Beta (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32a9aac3b84f">rB32a9aac3</a>)</li>
+<li>Fix build include for rna_curves.c (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b2dd1f8f013e">rBb2dd1f8f</a>)</li>
+<li>Blender 3.3 splashscreen (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d61ab45385eb">rBd61ab453</a>)</li></ul></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_31">Calendar Week 31</span></h2>
+<p>August 1 - August 7
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Triage reports / patches</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Backported another batch of fixes to the 3.2 and 2.93 branches for the corrective releases, 3.2.2 and 2.93.10.</li>
+<li>Bumped version for the releases, 3.2.2 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bcfdb14560e7">rBbcfdb145</a>) and 2.93.10 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a65e1a8e7a9">rB0a65e1a8</a>)</li>
+<li>Wrote release notes, updated website and stores (Steam, Windows, Snap).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_32">Calendar Week 32</span></h2>
+<p>August 8 - August 14
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Triage reports / patches</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Checked on Steam and the tracks that we have there, discussed possible cleanup with Philipp.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_33">Calendar Week 33</span></h2>
+<p>August 15 - August 21
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Triage reports / patches</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Tuesday.</li></ul>
+<p>Shorter week, Friday off. 
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_34">Calendar Week 34</span></h2>
+<p>August 22 - August 28
+</p><p>Time off.
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_35">Calendar Week 35</span></h2>
+<p>August 29 - September 4
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li>
+<li>Triaged some bug reports</li>
+<li>Updating and posting the weekly notes.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Blender 3.3 branch entered Bcon4 on Wednesday, commited BKE bump, freedesktop feature list and updated wiki, phab, chat...</li>
+<li>Spent some time testing the 3.3 branch and checked on the bug tracker. Poked module teams to fix high priority bugs.</li></ul>
+<p>Shorter week, Monday off.
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_36">Calendar Week 36</span></h2>
+<p>September 5 - September 11
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Triaged some bug reports</li></ul>
+<p><b> Module meetings </b>
+</p>
+<ul><li>Participated in the Cycles &amp; Rendering meeting on Tuesday.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Final project week, reminded students for their final report and mentor evaulation.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li>Kept an eye on the bug tracker, checked on reports and tested the Blender 3.3 branch.</li>
+<li>Blender 3.3 release on Wednesday, worked on the stores with Philipp, tested builds, tagged git, updated blender.org (Credits section), wiki, phab, chat...</li></ul>
+<p>Shorter week, Friday off. 
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_37">Calendar Week 37</span></h2>
+<p>September 12 - September 18
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li></ul>
+<p><b> Google Summer of Code </b>
+</p>
+<ul><li>Reminded mentors to submit their final evaluation.</li></ul>
+<p><b> Release coordination </b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-September/051419.html">Sent out a reminder for Bcon2</a> in two weeks and collected information about bigger features and branches that are planned to merge for Blender 3.4.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_38">Calendar Week 38</span></h2>
+<p>September 19 - September 25
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Triaged some bug reports</li></ul>
+<p><b> Module meetings </b>
+</p>
+<ul><li>Participated in the Cycles &amp; Rendering meeting on Tuesday.</li></ul>
+<p><b> Docs </b>
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T101242">#101242</a>: Typo in Shrink/Fatten manual page. (<a rel="nofollow" class="external text" href="https://projects.blender.org/UNSUPPORTED/blender-manual-translations-svn/commit/9579">rBM9579</a>).</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_39">Calendar Week 39</span></h2>
+<p>September 26 - October 2
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Setup commit access for new developers.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, closed already fixed ones and old ones without response.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Switched to Bcon2 for Blender 3.4 on Wednesday, made sure all pending patches were commited in time.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Tested the new Cycles Path Guiding after merge and read code.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_40">Calendar Week 40</span></h2>
+<p>October 3 - October 9
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Setup commit access for new developers.</li></ul>
+<p><b> Module work</b>
+</p>
+<ul><li>Participated in the Cycles &amp; Rendering meeting on Tuesday.</li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/images-and-videos-for-3-4-release-notes/26061">Created a topic on devtalk</a> to collect material for the Cycles release notes for 3.4.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Blender 3.3.1 and 2.93.11 release on Wednesday, worked on the stores with Philipp, tested builds, tagged git, updated wiki, phab...</li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/blenders-release-cycle-feedback-and-improvements/26068">Created a topic on devtalk</a> to discuss and get feedback on the Bcon release schedule.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_41">Calendar Week 41</span></h2>
+<p>October 10 - October 16
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Wednesday.</li></ul>
+<p><b> Module work</b>
+</p>
+<ul><li>Participated in the Admin meeting on Tuesday.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_42">Calendar Week 42</span></h2>
+<p>October 17 - October 23
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, asked for updates and closed old ones without response.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_43">Calendar Week 43</span></h2>
+<p>October 24 - October 30
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Bcon3 has been <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-October/051428.html">postponed by one week</a> so people can focus on and enjoy the conference this week.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, asked for updates and closed old ones without response.</li></ul>
+<p><b> Blender Conference </b>
+</p>
+<ul><li>Unfortunately couldn't be at the conference this year, so watched the <a rel="nofollow" class="external text" href="https://www.youtube.com/c/BlenderFoundation/videos">online videos</a> on Thursday and Friday.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_44">Calendar Week 44</span></h2>
+<p>October 31 - November 6
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li></ul>
+<p><b> Module work</b>
+</p>
+<ul><li>Participated in the Cycles &amp; Rendering meeting on Tuesday.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, asked for updates and closed old ones without response.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Bcon3 and Bcon1 on Thursday, created release branches and commited updates for it, updated wiki, phabricator, chat and announced the start of the new release cycle on <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-November/051433.html">bf-commiters</a>.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_45">Calendar Week 45</span></h2>
+<p>November 7 - November 13
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li></ul>
+<p><b> Meetings</b>
+</p>
+<ul><li>Admin meeting on Tuesday.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, asked for updates and closed old ones without response.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Worked on updated release checklist docs. Still needs more work.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_46">Calendar Week 46</span></h2>
+<p>November 14 - November 20
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Thursday.</li></ul>
+<p><b> Meetings</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2022-11-15-render-cycles-meeting/26586">Cycles module meeting</a> on Tuesday.</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Triaged bug reports, asked for updates and closed old ones without response.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Further work on release checklist docs. Like to check on wiki templates still to improve branch names etc.</li>
+<li>Spend some time with Philipp to fix Steam to use the Blender launcher. <a rel="nofollow" class="external text" href="http://developer.blender.org/T88613">#88613</a>. Tested a patch to fix Steam time logging for Blender. <a rel="nofollow" class="external text" href="http://developer.blender.org/D16527">D16527</a></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_47">Calendar Week 47</span></h2>
+<p>November 21 - November 27
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Checked on high priority bug reports and poked developers to prioritize bug fixing.</li>
+<li>Remaining work on <a rel="nofollow" class="external text" href="http://developer.blender.org/T88613">#88613</a>, commited a change to default the .msix for the Windows store to use blender-launcher.exe (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/460f7ec7aacf">rB460f7ec7</a>)</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Revied code for <a rel="nofollow" class="external text" href="http://developer.blender.org/D16443">D16443</a>, Cycles: switch from pretabulated 2D PMJ02 to pretabulated 4D Sobol.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T101020">#101020</a>: Cycles Add Performance Preset is broken</li>
+<li>Went over old Cycles reports (before 3.0) and closed / updated reports:</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/T55765">#55765</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T61290">#61290</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T63085">#63085</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T69843">#69843</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T71392">#71392</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T73163">#73163</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T73353">#73353</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T74624">#74624</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T80856">#80856</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T75685">#75685</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T77805">#77805</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T77858">#77858</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T56939">#56939</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T52360">#52360</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T62437">#62437</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T78107">#78107</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T78781">#78781</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T81354">#81354</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T81524">#81524</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T82036">#82036</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T79996">#79996</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85078">#85078</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T86329">#86329</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T85840">#85840</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T87868">#87868</a>
+</p>
+<h2><span class="mw-headline" id="Calendar_Week_48">Calendar Week 48</span></h2>
+<p>November 28 - December 4
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Offered the <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/developer-community-coordinator-weekly-open-chat/21578">Open Chat</a> again, this week on Friday.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Checked on high priority bug reports and poked developers to prioritize bug fixing.</li>
+<li>Switch to Bcon4 on Wednesday, updated websites and send mail to <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-November/051444.html">bf-commiters</a>.</li>
+<li>Spend some time to setup Docker and updated the THIRD-PARTY-LICENSES.txt. (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f95768d1e07b">rBf95768d1</a>)</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_49">Calendar Week 49</span></h2>
+<p>December 5 - December 11
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/proposal-bump-minimum-cpu-requirements-for-blender/26855">Proposal: Bump minimum CPU requirements for Blender</a> (thread on devtalk).</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Checked on high priority bug reports, marked showstoppers and poked devs to fix them.</li>
+<li>Blender 3.4.0 and 3.3.2 release on Wednesday
+<ul><li>Updated freedesktop file (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/212b054bb360">rB212b054b</a>), commited version bump and new splash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a95bf1ac01be">rBa95bf1ac</a>).</li>
+<li>Bcon5, send out mail to <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-December/051446.html">bf-commiters</a>.</li>
+<li>Helped release Blender to the stores (Steam and Microsoft), updated wiki, phabricator, chat, updated <a rel="nofollow" class="external text" href="https://www.blender.org/about/credits/">credits</a> on blender.org.</li>
+<li>Updated release docs in the wiki to incorporate <a rel="nofollow" class="external text" href="http://developer.blender.org/T100882">T100882</a> and tagged both releases accordingly.</li></ul></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3124241256bf">rB31242412</a>: Fix Cycles SSE4 define for fast math rint function.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons-contrib/commit/bdcfdd47ec">rBACbdcfdd</a>: Addons: Remove storypencil from contrib, this has been moved to official.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16729">D16729</a>: Add-ons: Exclude contrib for beta, rc and release builds</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16741">D16741</a>: Cleanup: Various Cycles code</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16742">D16742</a>: WIP: Cycles: Use popcount intrinsic on Windows</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_50">Calendar Week 50</span></h2>
+<p>December 12 - December 18
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Backported fixes for 3.4.1 release to the branch. (<a rel="nofollow" class="external text" href="http://developer.blender.org/T102967">T102967</a>)</li></ul>
+<p><b> Triaging </b>
+</p>
+<ul><li>Closed more than 70 reports, that were in state "Needs information from users" and no reply for &lt; 14 days.</li></ul>
+<p><b> Development </b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54aec4629ecd">rB54aec462</a>: Cleanup: Remove unused code in Cycles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8c7866608bb">rBe8c78666</a>: Add-ons: Exclude contrib for beta, rc and release builds.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69d1ddd4c640">rB69d1ddd4</a>: Fix Cycles Light Tree UI after recent changes.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba347d7c9e4a">rBba347d7c</a>: Fix Cycles UI for Scrambling Distance, only works with Tabulated Sobol.</li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_51">Calendar Week 51</span></h2>
+<p>December 19 - December 25
+</p><p><b> General </b>
+</p>
+<ul><li>Moderation and helping people on platforms (devtalk, developer, chat...)</li>
+<li>Weekly virtual kickoff meeting coordination and posting the weekly notes.</li>
+<li>Worked on a blog post for the end of the year (top commiters).</li></ul>
+<p><b> Release Coordination </b>
+</p>
+<ul><li>Backported further fixes for 3.4.1 release to the branch. (<a rel="nofollow" class="external text" href="http://developer.blender.org/T102967">T102967</a>)</li>
+<li>Blender 3.4.1 and 2.93.12 release on Tuesday
+<ul><li>Version bump, tagging git, updating websites, uploading to stores.</li>
+<li>Unfortunately 2.93.12 introduced a regression, acted promtply to do a 2.93.13 hotfix release on Wednesday: <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2022-December/051450.html">Mail to bf-commiters</a>.</li></ul></li></ul>
+<p><b> Development </b>
+</p>
+<ul><li>Updated credits_git_gen.py lookup table to unify names for the commit credits on blender.org. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-dev-tools/commit/a28f09834a">rBDTa28f09</a></li>
+<li>Support optional sorting by commit in credits_git_gen.py <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-dev-tools/commit/e1744b9bd8">rBDTe1744b</a></li></ul>
+<h2><span class="mw-headline" id="Calendar_Week_52">Calendar Week 52</span></h2>
+<p>December 26 - January 1
+</p><p>Time off.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112120218
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.490 seconds
+Real time usage: 0.488 seconds
+Preprocessor visited node count: 8000/1000000
+Preprocessor generated node count: 3616/1000000
+Post‐expand include size: 32833/2097152 bytes
+Template argument size: 10598/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  356.712      1 -total
+ 92.69%  330.633     41 Template:GitCommit
+ 82.64%  294.777     82 Template:GitCommit/PhabricatorParse
+  1.86%    6.642     30 Template:BugReport
+  1.40%    4.983     22 Template:Phab
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6230-0!canonical and timestamp 20240112120217 and revision id 32798
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;oldid=32798">https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;oldid=32798</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 22 December 2022, at 11:11.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:ThomasDinges/WeeklyReports/2022.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:ThomasDinges/WeeklyReports/2022" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/ThomasDinges.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/ThomasDinges.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/ThomasDinges.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;oldid=32798" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:ThomasDinges/WeeklyReports/2022&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.490","walltime":"0.488","ppvisitednodes":{"value":8000,"limit":1000000},"ppgeneratednodes":{"value":3616,"limit":1000000},"postexpandincludesize":{"value":32833,"limit":2097152},"templateargumentsize":{"value":10598,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  356.712      1 -total"," 92.69%  330.633     41 Template:GitCommit"," 82.64%  294.777     82 Template:GitCommit/PhabricatorParse","  1.86%    6.642     30 Template:BugReport","  1.40%    4.983     22 Template:Phab"]},"cachereport":{"timestamp":"20240112120218","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":536});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453fed2932b918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

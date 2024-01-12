@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:ChristophLendenfeld/WeeklyReports - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:ChristophLendenfeld/WeeklyReports","wgTitle":"ChristophLendenfeld/WeeklyReports","wgCurRevisionId":37939,"wgRevisionId":37939,"wgArticleId":6561,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:ChristophLendenfeld/WeeklyReports","wgRelevantArticleId":6561,"wgRequestId":"0818dea433e966a987da2f96","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"ChristophLendenfeld","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_ChristophLendenfeld_WeeklyReports rootpage-User_ChristophLendenfeld skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="WeeklyReports.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AChristophLendenfeld%2FWeeklyReports" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="WeeklyReports.html#January_2_-_5"><span class="tocnumber">1</span> <span class="toctext">January 2 - 5</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="WeeklyReports.html#December_19_-_22"><span class="tocnumber">2</span> <span class="toctext">December 19 - 22</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="WeeklyReports.html#December_12_-_15"><span class="tocnumber">3</span> <span class="toctext">December 12 - 15</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="WeeklyReports.html#December_5_-_8"><span class="tocnumber">4</span> <span class="toctext">December 5 - 8</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="WeeklyReports.html#November_28_-_December_1"><span class="tocnumber">5</span> <span class="toctext">November 28 - December 1</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="WeeklyReports.html#November_21_-_24"><span class="tocnumber">6</span> <span class="toctext">November 21 - 24</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="WeeklyReports.html#November_14_-_17"><span class="tocnumber">7</span> <span class="toctext">November 14 - 17</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="WeeklyReports.html#November_7_-_10"><span class="tocnumber">8</span> <span class="toctext">November 7 - 10</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="WeeklyReports.html#October_31_-_November_3"><span class="tocnumber">9</span> <span class="toctext">October 31 - November 3</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="WeeklyReports.html#October_24_-_27"><span class="tocnumber">10</span> <span class="toctext">October 24 - 27</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="WeeklyReports.html#October_17_-_20"><span class="tocnumber">11</span> <span class="toctext">October 17 - 20</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="WeeklyReports.html#October_10_-_13"><span class="tocnumber">12</span> <span class="toctext">October 10 - 13</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="WeeklyReports.html#October_3_-_6"><span class="tocnumber">13</span> <span class="toctext">October 3 - 6</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="WeeklyReports.html#September_26_-_29"><span class="tocnumber">14</span> <span class="toctext">September 26 - 29</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="WeeklyReports.html#September_19_-_22"><span class="tocnumber">15</span> <span class="toctext">September 19 - 22</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="WeeklyReports.html#September_12_-_15"><span class="tocnumber">16</span> <span class="toctext">September 12 - 15</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="WeeklyReports.html#September_5_-_8"><span class="tocnumber">17</span> <span class="toctext">September 5 - 8</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="WeeklyReports.html#August_31_-_September_1"><span class="tocnumber">18</span> <span class="toctext">August 31 - September 1</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="WeeklyReports.html#August_24-25"><span class="tocnumber">19</span> <span class="toctext">August 24-25</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="WeeklyReports.html#August_17-18"><span class="tocnumber">20</span> <span class="toctext">August 17-18</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="WeeklyReports.html#August_10-11"><span class="tocnumber">21</span> <span class="toctext">August 10-11</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="WeeklyReports.html#August_03-04"><span class="tocnumber">22</span> <span class="toctext">August 03-04</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="WeeklyReports.html#July_27-28"><span class="tocnumber">23</span> <span class="toctext">July 27-28</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="WeeklyReports.html#July_20-21"><span class="tocnumber">24</span> <span class="toctext">July 20-21</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="WeeklyReports.html#July_13-14"><span class="tocnumber">25</span> <span class="toctext">July 13-14</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="WeeklyReports.html#July_6-7_2023"><span class="tocnumber">26</span> <span class="toctext">July 6-7 2023</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="WeeklyReports.html#June_26-30_2023"><span class="tocnumber">27</span> <span class="toctext">June 26-30 2023</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="WeeklyReports.html#June_22-23_2023"><span class="tocnumber">28</span> <span class="toctext">June 22-23 2023</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="WeeklyReports.html#June_15-16_2023"><span class="tocnumber">29</span> <span class="toctext">June 15-16 2023</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="WeeklyReports.html#June_08-09_2023"><span class="tocnumber">30</span> <span class="toctext">June 08-09 2023</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="WeeklyReports.html#June_01-02_2023"><span class="tocnumber">31</span> <span class="toctext">June 01-02 2023</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="WeeklyReports.html#May_25-26_2023"><span class="tocnumber">32</span> <span class="toctext">May 25-26 2023</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="WeeklyReports.html#May_18-19_2023"><span class="tocnumber">33</span> <span class="toctext">May 18-19 2023</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="WeeklyReports.html#May_11-12_2023"><span class="tocnumber">34</span> <span class="toctext">May 11-12 2023</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="WeeklyReports.html#May_04-05_2023"><span class="tocnumber">35</span> <span class="toctext">May 04-05 2023</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="WeeklyReports.html#April_27-28_2023"><span class="tocnumber">36</span> <span class="toctext">April 27-28 2023</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="WeeklyReports.html#April_20-21_2023"><span class="tocnumber">37</span> <span class="toctext">April 20-21 2023</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="WeeklyReports.html#April_13-14_2023"><span class="tocnumber">38</span> <span class="toctext">April 13-14 2023</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="WeeklyReports.html#April_06-07_2023"><span class="tocnumber">39</span> <span class="toctext">April 06-07 2023</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="WeeklyReports.html#Mar_30-31_2023"><span class="tocnumber">40</span> <span class="toctext">Mar 30-31 2023</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="WeeklyReports.html#Mar_23-24_2023"><span class="tocnumber">41</span> <span class="toctext">Mar 23-24 2023</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="WeeklyReports.html#Mar_16-17_2023"><span class="tocnumber">42</span> <span class="toctext">Mar 16-17 2023</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="WeeklyReports.html#Mar_09-10_2023"><span class="tocnumber">43</span> <span class="toctext">Mar 09-10 2023</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="WeeklyReports.html#Mar_02-03_2023"><span class="tocnumber">44</span> <span class="toctext">Mar 02-03 2023</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="WeeklyReports.html#Feb_23-24_2023"><span class="tocnumber">45</span> <span class="toctext">Feb 23-24 2023</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="WeeklyReports.html#Feb_16-17_2023"><span class="tocnumber">46</span> <span class="toctext">Feb 16-17 2023</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="WeeklyReports.html#Feb_09-10_2023"><span class="tocnumber">47</span> <span class="toctext">Feb 09-10 2023</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="WeeklyReports.html#Feb_02-03_2023"><span class="tocnumber">48</span> <span class="toctext">Feb 02-03 2023</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="WeeklyReports.html#Jan_26-27_2023"><span class="tocnumber">49</span> <span class="toctext">Jan 26-27 2023</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="WeeklyReports.html#Jan_19-20_2023"><span class="tocnumber">50</span> <span class="toctext">Jan 19-20 2023</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="WeeklyReports.html#Jan_12-13_2023"><span class="tocnumber">51</span> <span class="toctext">Jan 12-13 2023</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="WeeklyReports.html#Jan_5-6_2023"><span class="tocnumber">52</span> <span class="toctext">Jan 5-6 2023</span></a></li>
+<li class="toclevel-1 tocsection-53"><a href="WeeklyReports.html#Dez_29-30_2022"><span class="tocnumber">53</span> <span class="toctext">Dez 29-30 2022</span></a></li>
+<li class="toclevel-1 tocsection-54"><a href="WeeklyReports.html#Dez_21-22_2022"><span class="tocnumber">54</span> <span class="toctext">Dez 21-22 2022</span></a></li>
+<li class="toclevel-1 tocsection-55"><a href="WeeklyReports.html#Dez_14-15_2022"><span class="tocnumber">55</span> <span class="toctext">Dez 14-15 2022</span></a></li>
+<li class="toclevel-1 tocsection-56"><a href="WeeklyReports.html#Dez_7-8_2022"><span class="tocnumber">56</span> <span class="toctext">Dez 7-8 2022</span></a></li>
+<li class="toclevel-1 tocsection-57"><a href="WeeklyReports.html#Nov_30-31_2022"><span class="tocnumber">57</span> <span class="toctext">Nov 30-31 2022</span></a></li>
+<li class="toclevel-1 tocsection-58"><a href="WeeklyReports.html#Nov_23-24_2022"><span class="tocnumber">58</span> <span class="toctext">Nov 23-24 2022</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:ChristophLendenfeld/WeeklyReports</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../User:ChristophLendenfeld.html" title="User:ChristophLendenfeld">User:ChristophLendenfeld</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="January_2_-_5">January 2 - 5</span></h2>
+<p>I had Tuesday the 2nd off.
+</p><p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116542">PR #116542</a> Animation: fix frame snapping for the time extend transformation mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116784">PR #116784</a> Anim: hierarchical visibility for bone collections</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116781">PR #116781</a> Fix #116367: Scaling not working in Graph Editor (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116815">PR #116815</a> Fix #115183: Show errors only shows errors when channels have been expanded</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116816">PR #116816</a> Refactor: keyframing unit tests</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116189">PR #116189</a> Fix: Set active keying set menu showing wrong label</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116419">PR #116419</a> Anim: Unit tests for "Insert Needed"</li></ul>
+<h2><span class="mw-headline" id="December_19_-_22">December 19 - 22</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116327">PR #116327</a> Anim: Unit Tests for "Insert Available" (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116356">PR #116356</a> Fix: Cycle aware keying inserting first key (closed because misunderstood the intended behavior)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116419">PR #116419</a> Anim: Unit tests for "Insert Needed"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116332">PR #116332</a> Refactor: extract code from ANIM_keying_sets_enum_itemf (already landed)</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112387">PR #112387</a> Anim: Graph Editor Scale From Neighbor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116219">PR #116219</a> Fix: Autokeyframe with Insert Needed with no keyframes</li></ul>
+<h2><span class="mw-headline" id="December_12_-_15">December 12 - 15</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116100">PR #116100</a> Refactor: Remove dependencies on Editor code from animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116101">PR #116101</a> Refactor: Move ED_id_action_ensure to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116180">PR #116180</a> Fix: Keying Channel Defaults (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116189">PR #116189</a> Fix: Set active keying set menu showing wrong label</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116192">PR #116192</a> Fix: Applying active keying set from menu not working</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116219">PR #116219</a> Fix: Autokeyframe with Insert Needed with no keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116224">PR #116224</a> Refactor: extract code from ANIM_apply_keyingset (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116227">PR #116227</a> WIP: Anim: Respect channels locks when inserting keyframes</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115522">PR #115522</a> Anim: Don't use keying sets when inserting keyframes during autokeying</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115798">PR #115798</a> Anim: Add hotkey for keying set operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Anim: Bake Channel operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112387">PR #112387</a> Animation: Graph Editor Scale From Neighbor</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115522">PR #115522</a> Anim: Don't use keying sets when inserting keyframes during autokeying</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Anim: Bake Channel operator</li></ul>
+<h2><span class="mw-headline" id="December_5_-_8">December 5 - 8</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115792">PR #115792</a> Fix #115678: Padding not applied correctly when framing keyframes (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115788">PR #115788</a> Fix #115683: Crash with IK constraint (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115798">PR #115798</a> WIP: Anim: Add pie menu for adding keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115886">PR #115886</a> Refactor: combine x and y for insert_vert_fcurve into float2 (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115898">PR #115898</a> Refactor: Pass Keyframe settings as arguments (already landed)</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Anim: Bake Channel operator</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114845">PR #114845</a> Fix #114828: Don't rebuild outliner tree when frame scrubbing</li></ul>
+<h2><span class="mw-headline" id="November_28_-_December_1">November 28 - December 1</span></h2>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115354">PR #115354</a> Anim: store BoneCollections in a flat array</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114805">PR #114805</a> Anim: Refactoring NLA menu into more sensible format</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115409">PR #115409</a> Fix #44834: Add bone selection icon next to face and vertex selection in weight paint mode</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115517">PR #115517</a> Fix: FCurve colors on bones (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115525">PR #115525</a> WIP: Anim: Separate keying flags</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115522">PR #115522</a> Anim: Don't use keying sets when inserting keyframes during autokeying</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115675">PR #115675</a> WIP: world space copy/paste prototype</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115360">PR #115360</a> Anim: Change how Only Insert Needed works</li></ul>
+<h2><span class="mw-headline" id="November_21_-_24">November 21 - 24</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115295">PR #115295</a> Refactor: Rename eAutokey_Flag enum (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115297">PR #115297</a> Fix: Inserting keys no longer sets the FCurve channel color (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115349">PR #115349</a> Refactor: Move insert_key_rna from editors to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115360">PR #115360</a> Anim: Change how Only Insert Needed works</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">PR #114407</a> Anim: View FCurve of Property in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">PR #113504</a> Anim: Insert keyframes without keying sets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115064">PR #115064</a> Anim: Add basic autokey tests</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114854">PR #114854</a> Anim: Restrict range of fcurve_to_keylist</li></ul>
+<p>Updated Wiki
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104642">PR #104642</a> Anim: Change description for inserting keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104643">PR #104643</a> Anim: Add tip for the "View in Graph Editor" operator</li></ul>
+<h2><span class="mw-headline" id="November_14_-_17">November 14 - 17</span></h2>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">PR #114407</a> Anim: View FCurve of Property in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Anim: Bake Channel operator</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114845">PR #114845</a> Fix #114828: Don't rebuild outliner tree when frame scrubbing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114851">PR #114851</a> Refactor: code style in keyframes_keylist.cc (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114854">PR #114854</a> WIP: Anim: Restrict range of fcurve_to_keylist</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115039">PR #115039</a> Refactor: Extract function to initialize a BezTriple (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115051">PR #115051</a> Refactor: move autokeyframe_pose (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115064">PR #115064</a> Anim: Add basic autokey tests</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114724">PR #114724</a> BLI: Two digit ms precision for SCOPED_TIMER macro</li></ul>
+<h2><span class="mw-headline" id="November_7_-_10">November 7 - 10</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114568">PR #114568</a> Refactor: fcurve.cc (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114575">PR #114575</a> Refactor: Move code for actions into its own file (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114570">PR #114570</a> Refactor: move code related to fcurve keyframe insertion (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114581">PR #114581</a> Refactor: Move code related to animdata to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114584">PR #114584</a> Refactor: Rename functions in ANIM_animdata.hh (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114586">PR #114586</a> Cleanup: comment style in animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114607">PR #114607</a> Fix #114588: Graph Editor increment snap not working (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114676">PR #114676</a> Refactor: More specific arguments for ANIM_get_normalization_flags</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114465">PR #114465</a> Anim: Unit tests for inserting keyframes</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">PR #114407</a> WIP: Anim: View FCurve of Property in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">PR #113504</a> WIP: Anim: Insert keyframes without keying sets</li></ul>
+<h2><span class="mw-headline" id="October_31_-_November_3">October 31 - November 3</span></h2>
+<p>Spent time on the bugtracker
+</p><p>Categorised as "Known Issue"
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/97886">#97886</a> Keying sets other than Whole Character (or keyframing in general) do not respect channel locks</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104055">#104055</a> Action Editor: Animations no longer work after renaming bones</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109481">#109481</a> There can be infinite camera markers on one keyframe, active camera can't be uniquely determined.</li></ul>
+<p>Closed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114317">#114317</a> crach when adding animation (disabled in the viewport, disabled during rendering)</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114325">PR #114325</a> Fix: NLA mapping not taken into account when framing FCurves (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114407">PR #114407</a> WIP: Anim: Frame FCurve of Property in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114444">PR #114444</a> Refactor: move ANIM_setting_get_rna_values to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114445">PR #114445</a> Refactor: Move fcurve functions to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114448">PR #114448</a> Cleanup: Comments in animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114450">PR #114450</a> Refactor: Rename functions in animrig to remove prefix (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114465">PR #114465</a> Anim: Unit tests for inserting keyframes</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">PR #113504</a> WIP: Anim: Insert keyframes without keying sets</li></ul>
+<h2><span class="mw-headline" id="October_24_-_27">October 24 - 27</span></h2>
+<p>Prepared the presentation for Bcon23 on Tuesday
+</p><p>Thursday and Friday I was at Bcon23
+</p>
+<h2><span class="mw-headline" id="October_17_-_20">October 17 - 20</span></h2>
+<p>Prepared the presentation with Sybren and Nathan for Bcon23
+</p><p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113817">PR #113817</a> Refactor: Remove nla_cache parameter from insert_keyframe (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113931">PR #113931</a> Refactor: ANIM_setting_get_rna_values to return a Vector (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113940">PR #113940</a> Fix: autokeyframing when pasting poses no longer worked (already landed)</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">PR #113504</a> WIP: Anim: Insert keyframes without keying sets</li></ul>
+<p>Documentation
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104595">PR #104595</a> Anim: Update paint select mode shortcuts</li></ul>
+<h2><span class="mw-headline" id="October_10_-_13">October 10 - 13</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113504">PR #113504</a> WIP: ANIM: Insert keyframes without keying sets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113503">PR #113503</a> Refactor: Move keyframing code to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113588">PR #113588</a> Refactor: remove bAction* parameter from ANIM_apply_keyingset (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113595">PR #113595</a> Refactor: keyframing.cc (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113607">PR #113607</a> Refactor: Move autokeyframing functions to animrig (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113610">PR #113610</a> Refactor: Replace autokey macros with functions (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113612">PR #113612</a> Refactor: remove ED_ prefix from autokeying functions (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113617">PR #113617</a> Refactor: keyframing_auto.cc code cleanup (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113666">PR #113666</a> Refactor: keyingsets.cc (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113675">PR #113675</a> Refactor: convert ListBase of tRKS_DSource to Vector (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113677">PR #113677</a> Refactor: remove argument from ANIM_builtin_keyingset_get_named</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113056">PR #113056</a> Fix #111553: Double IK constraint not working</li></ul>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113363">PR #113363</a> Fix #87219: 'affect transform' not working for Pose Space</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113554">PR #113554</a> Fix #113505: Scale strips in nla with snap active seems broken</li></ul>
+<h2><span class="mw-headline" id="October_3_-_6">October 3 - 6</span></h2>
+<p>Worked on designs for 4.1, specifically for snapping and keying sets.
+And worked on the bugtracker to fix bugs/close issues that have been solved.
+</p><p><br />
+Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112601">PR #112601</a> Fix #112580: Limit Constraint with 'Affect Transform' not working properly in 'World Space'</li></ul>
+<p><br />
+New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113278">#113278</a> Keying Sets Rework</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113335">PR #113335</a> Fix #87160: Clean Keyframes only works if channels are selected</li></ul>
+<p><br />
+Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/91973">#91973</a> Design: More frame snapping options</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113056">PR #113056</a> Fix #111553: Double IK constraint not working</li></ul>
+<p><br />
+Closed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/97485">#97485</a> Broken curve drawing in normalized view in graph editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/95364">#95364</a> Autokey function hinders execution of drivers</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/37512">#37512</a> Design Required: How can users choose what datablock/level to edit in the Action Editor?</li></ul>
+<p><br />
+Worked on the Manual
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104580">PR #104580</a> Asset Shelf: Add manual entry</li></ul>
+<h2><span class="mw-headline" id="September_26_-_29">September 26 - 29</span></h2>
+<p>Only worked half a day on the 26th due to sickness. Also off sick on the 28th
+</p><p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112861">PR #112861</a> Anim: Improve readability of channel colors in channel list</li></ul>
+<p>Worked on Bug reports
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112850">#112850</a> Butterworth Filter is causing issues on geometry</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113056">PR #113056</a> Fix #111553: Double IK constraint not working</li></ul>
+<h2><span class="mw-headline" id="September_19_-_22">September 19 - 22</span></h2>
+<p><b>I was on holiday on the 19th.</b>
+</p><p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112670">PR #112670</a> Fix #97628: Clear and Keep Transformation not working when keyed (already landed)</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Anim: Bake Channel operator</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112419">PR #112419</a> Anim: Multi Editing for FCurve modifiers</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">PR #110540</a> Anim: Time Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112388">PR #112388</a> Anim: Graph Editor Push/Pull operator</li></ul>
+<h2><span class="mw-headline" id="September_12_-_15">September 12 - 15</span></h2>
+<p>Updated the manual to reflect operator renames
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104549">PR #104549</a> Animation: Operator Renames</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112365">PR #112365</a> Fix: Graph Editor first key handles not drawn</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112387">PR #112387</a> WIP: Animation: Graph Editor Scale From Neighbor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112419">PR #112419</a> Anim: Multi Editing for FCurve modifiers</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112388">PR #112388</a> Anim: Graph Editor Push/Pull operator</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112131">PR #112131</a> WIP: Fix #112085: Not able to insert keys on subframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">PR #110540</a> Animation: Time Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Animation: Bake Channel operator</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112148">PR #112148</a> Animation: Rename Graph_OT_sample</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112151">PR #112151</a> Animation: Rename ACTION_OT_sample</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111510">PR #111510</a> Refactor: Rename functions and structs in keyframes_draw.cc</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112131">PR #112131</a> Fix #112085: Not able to insert keys on subframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111986">PR #111986</a> Animation: Graph Editor locked key drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111984">PR #111984</a> Fix #110108: NLA absolute snapping</li></ul>
+<h2><span class="mw-headline" id="September_5_-_8">September 5 - 8</span></h2>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">PR #110788</a> Animation: Graph Editor - Don't draw curve points if they are too close to each other</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108518">PR #108518</a> Animation: Keep icons aligned when curves are baked</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111744">PR #111744</a> Animation: Scale Average slider for Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111049">PR #111049</a> Animation: Rename "Bake Curve" to "Keys to Samples"</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111968">PR #111968</a> Refactor: Code indentation in transform_convert_nla.cc (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111984">PR #111984</a> Fix #110108: NLA absolute snapping</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112072">PR #112072</a> Fix: Graph Editor extrapolation line drawing issue (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112088">PR #112088</a> Fix: Animation Editor snapping not working when using rotate or scale (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112126">PR #112126</a> Animation: Graph Editor optimize handle drawing (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112151">PR #112151</a> Animation: Rename ACTION_OT_sample</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112148">PR #112148</a> Animation: Rename Graph_OT_sample</li></ul>
+<h2><span class="mw-headline" id="August_31_-_September_1">August 31 - September 1</span></h2>
+<p>Manual
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104539">PR #104539</a> Animation: Add latest Graph Editor operators</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111735">PR #111735</a> Animation: Shear operator for Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111745">PR #111745</a> Fix: Blend to Ease keyframes property name (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111744">PR #111744</a> Animation: Scale Average slider for Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111785">PR #111785</a> Fix: Cursor wrapping in Graph Editor slider operators (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111793">PR #111793</a> Fix #111776: Bone Collections with linked file from 3.6</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111510">PR #111510</a> Refactor: Rename functions and structs in keyframes_draw.cc</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> Animation: Bake Channel operator</li></ul>
+<h2><span class="mw-headline" id="August_24-25">August 24-25</span></h2>
+<p>Reviewed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109976">PR #109976</a> Replace Bone Layers+Groups with Bone Collections</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111464">PR #111464</a> Fix: Memory leak in Graph editor keyframe jump (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111510">PR #111510</a> Refactor: Rename functions and structs in keyframes_draw.cc</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111254">PR #111254</a> Fix #111212: Crash when running search while cursor is outside Blender window</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">PR #110540</a> Animation: Time Offset Slider</li></ul>
+<h2><span class="mw-headline" id="August_17-18">August 17-18</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111254">PR #111254</a> Fix #111212: Crash when running search while cursor is outside Blender window</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111269">PR #111269</a> Fix: Number input on slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111263">PR #111263</a> WIP: Animation: Bake Channel operator</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">PR #110567</a> Animation: Match Slope slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110795">PR #110795</a> Fix #110053: Crash on linked animation data with drivers</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111037">PR #111037</a> Refactor: resolution_scale in graph_draw.cc</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">PR #110788</a> Animation: Graph Editor - Don't draw keys if they are too close to each other</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">PR #110540</a> Animation: Time Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110795">PR #110795</a> Fix #110053: Crash on linked animation data with drivers</li></ul>
+<h2><span class="mw-headline" id="August_10-11">August 10-11</span></h2>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110764">PR #110764</a> Animation: Common curve drawing for FCurves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110544">PR #110544</a> Animation: Blend Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">PR #110567</a> Animation: Blend to Infinity slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">PR #110567</a> Animation: Blend to Infinity slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">PR #110788</a> Animation: Graph Editor - Don't draw keys if they are too close to each other</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110790">PR #110790</a> Fix #110789: Apply NLA mapping when jumping to keys in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110586">PR #110586</a> Animation: Right align slider unit text</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110764">PR #110764</a> Animation: Common curve drawing for FCurves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110544">PR #110544</a> Animation: Blend Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110566">PR #110566</a> Animation: Blend To Ease Slider</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111049">PR #111049</a> Animation: Rename "Bake Curve" to "Keys to Samples"</li></ul>
+<h2><span class="mw-headline" id="August_03-04">August 03-04</span></h2>
+<p>New proposal to remove the Bake FCurve feature: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/removing-baked-fcurves/30553">https://devtalk.blender.org/t/removing-baked-fcurves/30553</a>
+</p><p>New 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110764">PR #110764</a> Animation: Common curve drawing for FCurves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">PR #110788</a> WIP: Animation: Graph Editor - Don't draw keys if they are too close to each other</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110790">PR #110790</a> Fix #110789: Apply NLA mapping when jumping to keys in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110795">PR #110795</a> WIP: Fix #110053: Crash on linked animation data with drivers</li></ul>
+<p>Updated:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li></ul>
+<p>Landed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110569">PR #110569</a> Fix #108961: Wrong Label and Tooltip for Timeline</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110301">PR #110301</a> Animation: Graph Editor curve drawing performance improvement</li></ul>
+<h2><span class="mw-headline" id="July_27-28">July 27-28</span></h2>
+<p>Had a look at dope sheet drawing and if it can be improved. The bottleneck is the keylist system, and I don't see how this can be easily improved.
+Probably best to wait for the new animation system to be established
+</p><p>Taken over abandoned patches:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110544">PR #110544</a> Animation: Blend Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110540">PR #110540</a> WIP: Animation: Time Offset Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110566">PR #110566</a> Animation: Blend To Ease Slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110567">PR #110567</a> Animation: Blend to Infinity slider</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110569">PR #110569</a> Fix #108961: Wrong Label and Tooltip for Timeline</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110586">PR #110586</a> Animation: Right align slider unit text</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110306">PR #110306</a> Animation: Disable NLA mapping if no NLA tracks are present</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110290">PR #110290</a> Refactor: extract code from dopesheet draw function</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110301">PR #110301</a> Animation: Graph Editor curve drawing performance improvement</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li></ul>
+<h2><span class="mw-headline" id="July_20-21">July 20-21</span></h2>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110290">PR #110290</a> Refactor: extract code from dopsheet draw function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110306">PR #110306</a> Animation: Disable NLA mapping if no NLA tracks are present</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110301">PR #110301</a> Animation: Graph Editor curve drawing performance improvement</li></ul>
+<h2><span class="mw-headline" id="July_13-14">July 13-14</span></h2>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109813">PR #109813</a> Fix #109781: Linked datablocks are keyable</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li></ul>
+<p>New
+</p>
+<ul><li>(Blender-Manual) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104511">PR #104511</a> Animation: Added Butterworth Filter (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110059">PR #110059</a> Fix #109799: Smooth (Gaussian) introduces stepping (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110060">PR #110060</a> Fix: Stepping issue with Butterworth filter (already landed)</li></ul>
+<h2><span class="mw-headline" id="July_6-7_2023">July 6-7 2023</span></h2>
+<p>Was looking into allowing to add user pref properties to the quick favourites menu
+</p><p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109768">PR #109768</a> Animation: Allow setting the slider unit and mode (split off from #106952)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109813">PR #109813</a> Fix #109781: Linked datablocks are keyable</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106052">PR #106052</a> Animation: Improve drawing of locked FCurves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> WIP: Animation: Snapping options new GUI</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106052">PR #106052</a> Animation: Improve drawing of locked FCurves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109768">PR #109768</a> Animation: Allow setting the slider unit and mode</li></ul>
+<h2><span class="mw-headline" id="June_26-30_2023">June 26-30 2023</span></h2>
+<p>Animation Workshop
+</p>
+<h2><span class="mw-headline" id="June_22-23_2023">June 22-23 2023</span></h2>
+<p>Moved the days to the following week for the animation workshop
+</p>
+<h2><span class="mw-headline" id="June_15-16_2023">June 15-16 2023</span></h2>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108142">PR #108142</a> Animation: Graph Editor Handle Selection</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108748">PR #108748</a> Refactor: draw fcurve bezt function</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Snapping options new GUI</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108518">PR #108518</a> Animation: Draw lock icon on baked curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/102217">#102217</a> Design: Onion Skinning for Blender</li></ul>
+<h2><span class="mw-headline" id="June_08-09_2023">June 08-09 2023</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108748">PR #108748</a> Refactor: draw fcurve bezt function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108753">PR #108753</a> Fix: Face loop select toggle behaviour in paint mode (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108759">PR #108759</a> Fix: Crash when using loop select on edge that has only 1 face (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108770">PR #108770</a> WIP: Paint: Vertex loop select</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108809">PR #108809</a> Fix: Paint loop select to use distance to edge</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108549">PR #108549</a> Fix #102737: Keyframe jump operator includes hidden curves in Graph Editor</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators</li></ul>
+<h2><span class="mw-headline" id="June_01-02_2023">June 01-02 2023</span></h2>
+<p>Updated the VS-Code documentation for Clang-Format
+<a rel="nofollow" class="external free" href="../Developer_Intro/Environment/Portable_CMake_VSCode.html">https://wiki.blender.org/wiki/Developer_Intro/Environment/Portable_CMake_VSCode</a>
+</p><p>Went through bug tracker
+</p>
+<ul><li>closed because already fixed: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/102709">#102709</a> Selection of channels in Timeline inconsistent or not working in comparison to View Layer</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108549">PR #108549</a> Fix #102737: Keyframe jump operator includes hidden curves in Graph Editor</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107653">PR #107653</a> Paint: Add loop select for faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107173">PR #107173</a> Refactor: Bidirectionality on Graph Editor Sliders</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107653">PR #107653</a> Paint: Add loop select for faces #107653</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators #108309</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106052">PR #106052</a> Animation: Improve drawing of locked FCurves</li></ul>
+<h2><span class="mw-headline" id="May_25-26_2023">May 25-26 2023</span></h2>
+<p>Continued work on the onion skinning prototype
+</p><p>Updated release notes for 3.6 and 4.0
+</p><p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107866">PR #107866</a> Animation: change Slider Popup menu hotkeys</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105120">PR #105120</a> Animation: Remove collection hotkeys from pose mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107887">PR #107887</a> Fix: Channel select keys doesn't add undo step</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107653">PR #107653</a> Paint: Add loop select for faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li></ul>
+<h2><span class="mw-headline" id="May_18-19_2023">May 18-19 2023</span></h2>
+<p>Holiday week
+</p>
+<h2><span class="mw-headline" id="May_11-12_2023">May 11-12 2023</span></h2>
+<p>Added more screenshots and videos to the release notes <a rel="nofollow" class="external free" href="../Reference/Release_Notes/3.6/Animation_Rigging.html#Graph_Editor">https://wiki.blender.org/wiki/Reference/Release_Notes/3.6/Animation_Rigging#Graph_Editor</a>
+</p><p>worked on the manual: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/issues/104439">#104439</a> Updates to Graph Editor manual
+</p><p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107866">PR #107866</a> Animation: change Slider Popup menu hotkeys</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107887">PR #107887</a> Fix: Channel select keys doesn't add undo step</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107173">PR #107173</a> Refactor: Bidirectionality on Graph Editor Sliders</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107653">PR #107653</a> Paint: Add loop select for faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li></ul>
+<h2><span class="mw-headline" id="May_04-05_2023">May 04-05 2023</span></h2>
+<p>New:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107610">PR #107610</a> Refactor: pose_slide.c (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107641">PR #107641</a> WIP: Onion Skinning Prototype</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107653">PR #107653</a> WIP: Paint: Add face loop select</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107435">PR #107435</a> Fix: Graph Editor - add operator flags for cursor wrapping</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107402">PR #107402</a> Refactor: Replace move_key with BKE_fcurve_keyframe_move_value_with_handles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">PR #106113</a> Animation: Clean up "Key" menu in Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107406">PR #107406</a> Refactor: Allow to explicitly set the range on the slider UI element</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107406">PR #107406</a> Refactor: Allow to explicitly set the range on the slider UI element</li></ul>
+<h2><span class="mw-headline" id="April_27-28_2023">April 27-28 2023</span></h2>
+<p>Started cleaning up the release notes: <a rel="nofollow" class="external free" href="../Reference/Release_Notes/3.6/Animation_Rigging.html">https://wiki.blender.org/wiki/Reference/Release_Notes/3.6/Animation_Rigging</a>
+</p><p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107397">PR #107397</a> Fix: Slider bidirectionality in pose_slide.c</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107402">PR #107402</a> Refactor: Replace move_key with BKE_fcurve_keyframe_move_value_with_handles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107406">PR #107406</a> Refactor: Allow to explicitly set the range on the slider UI element</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107435">PR #107435</a> Fix: Graph Editor - add operator flags for cursor wrapping</li></ul>
+<p>Landed 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107170">PR #107170</a> Refactor: Deduplicate code in graph_slider_ops.c</li></ul>
+<p>Updated 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">PR #106113</a> Animation: Clean up "Key" menu in Graph Editor</li></ul>
+<h2><span class="mw-headline" id="April_20-21_2023">April 20-21 2023</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107170">PR #107170</a> Refactor: Deduplicate code in graph_slider_ops.c</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107173">PR #107173</a> Fix: Bidirectionality on Graph Editor Sliders</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106959">PR #106959</a> Animation: make properties from motion path library overrideable</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106890">PR #106890</a> Fix: Normalization with baked curves and preview range</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106904">PR #106904</a> Fix #106771: Selection offset in timeline when NLA track is offset</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li></ul>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106520">PR #106520</a> Animation: time offset slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106519">PR #106519</a> Animation: blend to ease slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106518">PR #106518</a> Animation: blend offset slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106517">PR #106517</a> Animation: blend to infinity slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106521">PR #106521</a> Animation: shear left slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104565">PR #104565</a> Allow select range in animation editor</li></ul>
+<h2><span class="mw-headline" id="April_13-14_2023">April 13-14 2023</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106888">PR #106888</a> FIx: Respect preview range when auto normalizing in Graph Editor (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106890">PR #106890</a> Fix: Normalization with baked curves and preview range</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106904">PR #106904</a> Fix #106771: Selection offset in timeline when NLA track is offset</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106952">PR #106952</a> Animation: Butterworth Smoothing filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106959">PR #106959</a> Animation: make properties from motion path library overrideable</li></ul>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106517">PR #106517</a> Animation: blend to infinity slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106519">PR #106519</a> Animation: blend to ease slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106518">PR #106518</a> Animation: blend offset slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106520">PR #106520</a> Animation: time offset slider</li></ul>
+<h2><span class="mw-headline" id="April_06-07_2023">April 06-07 2023</span></h2>
+<p>Holiday week
+</p>
+<h2><span class="mw-headline" id="Mar_30-31_2023">Mar 30-31 2023</span></h2>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105857">PR #105857</a> Animation: Auto frame curves Y extents when hitting normalize</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105633">PR #105633</a> Animation: Weight Paint select more/less for vertices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105607">PR #105607</a> Animation: Weight Paint select more/less for faces</li></ul>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106302">PR #106302</a> Animation: Graph Editor - grey out area outside of normalization range (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106307">PR #106307</a> Animation: Insert Keyframe only on active FCurve (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106365">PR #106365</a> WIP: Animation: Smoothing without Shrinkage</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">PR #106113</a> Animation: Clean up "Key" menu in Graph Editor</li></ul>
+<h2><span class="mw-headline" id="Mar_23-24_2023">Mar 23-24 2023</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106100">PR #106100</a> Fix #106095: FCurves not drawn when Extrapolation is disabled (already fixed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106102">PR #106102</a> Fix: Crash when trying to get FCurve segments of baked curve (already landed)</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">PR #106113</a> Animation: Clean up "Key" menu in Graph Editor</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104882">PR #104882</a> Animation: Add duration display to frame range settings</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105635">PR #105635</a> Animation: Gaussian Smooth operator for Graph Editor</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105633">PR #105633</a> Animation: Weight Paint select more/less for vertices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105607">PR #105607</a> Animation: Weight Paint select more/less for faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105857">PR #105857</a> Animation: Auto frame curves Y extents when hitting normalize</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105635">PR #105635</a> Animation: Gaussian Smooth operator for Graph Editor</li></ul>
+<h2><span class="mw-headline" id="Mar_16-17_2023">Mar 16-17 2023</span></h2>
+<p>New
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105635">PR #105635</a> Animation: Gauss Smooth operator for Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105857">PR #105857</a> Animation: Auto frame curves Y extents when hitting normalize</li></ul>
+<p>Updated
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105633">PR #105633</a> Animation: Weight Paint select more/less for vertices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105607">PR #105607</a> Animation: Weight Paint select more/less for faces</li></ul>
+<p>Reviewed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105427">PR #105427</a> Bone relation lines: draw between axis points</li></ul>
+<h2><span class="mw-headline" id="Mar_09-10_2023">Mar 09-10 2023</span></h2>
+<p>New PRs:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105607">PR #105607</a> Animation: Weight Paint select more/less for faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105633">PR #105633</a> Animation: Weight Paint select more/less for vertices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105635">PR #105635</a> Wip: Animation: Gauss Smooth operator for Graph Editor</li></ul>
+<p>Updated PRs
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104882">PR #104882</a> Animation: Add duration display to frame range settings</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104532">PR #104532</a> Animation: Move Graph Editor settings to User Preferences</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105177">PR #105177</a> Refactor: fcurve bounds functions</li></ul>
+<p>Landed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104532">PR #104532</a> Animation: Move Graph Editor settings to User Preferences</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105177">PR #105177</a> Refactor: fcurve bounds functions</li></ul>
+<h2><span class="mw-headline" id="Mar_02-03_2023">Mar 02-03 2023</span></h2>
+<p>Sybren and Nathan and I started building a map of Blenders function calls focused on the animation side.
+</p><p>New PRs
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105401">PR #105401</a> Fix #105329: Keyframe handles staying in place when using slider operators (already landed)</li></ul>
+<p>Updated PRs
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105177">PR #105177</a> Refactor: fcurve bounds functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104882">PR #104882</a> Animation: Add duration display to frame range settings</li></ul>
+<p>Landed PRs
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105179">PR #105179</a> Fix: Frame Channels fails when no keys in range</li></ul>
+<h2><span class="mw-headline" id="Feb_23-24_2023">Feb 23-24 2023</span></h2>
+<p>looked at implementing a solution for <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/issues/79024">https://projects.blender.org/blender/blender/issues/79024</a> but need help on that one
+</p><p>updated the proposal for changing the look of FCurves <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/issues/104867">https://projects.blender.org/blender/blender/issues/104867</a>
+</p><p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104512">PR #104512</a> Animation: Paste Keys in Graph Editor with value offset</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104530">PR #104530</a> Animation: Add Slider operators to hotkey menu</li></ul>
+<p>New Pull Requests
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105120">PR #105120</a> Animation: Remove collection hotkeys from pose mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105123">PR #105123</a> Fix: Using "Frame Channel" in Dope sheet resets view to top</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105121">PR #105121</a> Fix: Frame Channel when using normalized view</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105177">PR #105177</a> Refactor: fcurve bounds functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105179">PR #105179</a> Fix: Frame Channels fails when no keys in range</li></ul>
+<h2><span class="mw-headline" id="Feb_16-17_2023">Feb 16-17 2023</span></h2>
+<p>Making sure the Release Notes for A&amp;R are up to date
+</p><p>New Design Task
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104867">#104867</a> Design: Graph Editor Curve Display</li></ul>
+<p>Landed
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104516">PR #104516</a> Animation: Clamp V2D so keyframes cannot go offscreen</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104523">PR #104523</a> Animation: Add "Frame Channel" operators</li></ul>
+<p>New PRs
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104858">PR #104858</a> Fix #95400: Crash when running Euler Filter on baked Curves (already merged)</li></ul>
+<p>Updated Pull Requests
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104577">PR #104577</a> Refactor: Weight Paint Select Linked Faces</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104532">PR #104532</a> Animation: Move Graph Editor settings to User Preferences</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104530">PR #104530</a> Animation: Add Slider operators to hotkey menu</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104523">PR #104523</a> Animation: Add "Frame Channel" operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104516">PR #104516</a> Animation: Clamp V2D so keyframes cannot go offscreen</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104512">PR #104512</a> Animation: Paste Keys in Graph Editor with value offset</li></ul>
+<h2><span class="mw-headline" id="Feb_09-10_2023">Feb 09-10 2023</span></h2>
+<p>New Pull Requests
+</p>
+<ul><li>Remove drawing of keyframes on locked FCurves (WIP): <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104561">https://projects.blender.org/blender/blender/pulls/104561</a></li>
+<li>Refactor selecting linked faces in weight paint mode: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104577">https://projects.blender.org/blender/blender/pulls/104577</a></li></ul>
+<p>Migrating things to Gitea
+</p>
+<ul><li>yscale refactor for dope sheet: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104500">https://projects.blender.org/blender/blender/pulls/104500</a></li>
+<li>fix for dope sheet channel box select: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104505">https://projects.blender.org/blender/blender/pulls/104505</a></li>
+<li>paste keyframes with a value offset: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104512">https://projects.blender.org/blender/blender/pulls/104512</a></li>
+<li>clamp v2d so keyframes cannot go offscreen: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104516">https://projects.blender.org/blender/blender/pulls/104516</a></li>
+<li>add frame channels operator: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104523">https://projects.blender.org/blender/blender/pulls/104523</a></li>
+<li>popup menu for graph editor sliders: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104530">https://projects.blender.org/blender/blender/pulls/104530</a></li>
+<li>move graph editor settings to preferences: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/104532">https://projects.blender.org/blender/blender/pulls/104532</a></li></ul>
+<h2><span class="mw-headline" id="Feb_02-03_2023">Feb 02-03 2023</span></h2>
+<p>Submitted Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17182">https://developer.blender.org/D17182</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17192">https://developer.blender.org/D17192</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17197">https://developer.blender.org/D17197</a></li></ul>
+<p>Landed Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17061">https://developer.blender.org/D17061</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16848">https://developer.blender.org/D16848</a></li></ul>
+<h2><span class="mw-headline" id="Jan_26-27_2023">Jan 26-27 2023</span></h2>
+<p>Submitted Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17126">https://developer.blender.org/D17126</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17130">https://developer.blender.org/D17130</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17138">https://developer.blender.org/D17138</a></li></ul>
+<p>Updated Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17065">https://developer.blender.org/D17065</a></li></ul>
+<h2><span class="mw-headline" id="Jan_19-20_2023">Jan 19-20 2023</span></h2>
+<p>I spent my 2 days mostly working on battling papercuts with the animation editors as listed in this design doc: <a rel="nofollow" class="external free" href="https://developer.blender.org/T103855">https://developer.blender.org/T103855</a>
+</p><p>Updated Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17005">https://developer.blender.org/D17005</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16848">https://developer.blender.org/D16848</a></li></ul>
+<p>Submitted Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17061">https://developer.blender.org/D17061</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17065">https://developer.blender.org/D17065</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D17066">https://developer.blender.org/D17066</a></li></ul>
+<p>Landed Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16987">https://developer.blender.org/D16987</a></li></ul>
+<h2><span class="mw-headline" id="Jan_12-13_2023">Jan 12-13 2023</span></h2>
+<p>Added recent changes/additions to the Release Notes: <a rel="nofollow" class="external free" href="../Reference/Release_Notes/3.5/Animation_Rigging.html">https://wiki.blender.org/wiki/Reference/Release_Notes/3.5/Animation_Rigging</a>
+</p><p>Added a design task for animation editors paper cuts: <a rel="nofollow" class="external free" href="https://developer.blender.org/T103855">https://developer.blender.org/T103855</a>
+</p><p>Updated Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16848">https://developer.blender.org/D16848</a></li></ul>
+<p>Submitted Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16987">https://developer.blender.org/D16987</a></li></ul>
+<p>Landed Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16937">https://developer.blender.org/D16937</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16982">https://developer.blender.org/D16982</a></li></ul>
+<h2><span class="mw-headline" id="Jan_5-6_2023">Jan 5-6 2023</span></h2>
+<p>Working Thursday and Friday from now on.
+</p><p>Abandoned Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D9477">https://developer.blender.org/D9477</a> (other user has taken over)</li></ul>
+<p>Submitted Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16925">https://developer.blender.org/D16925</a></li></ul>
+<p>Updated Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16848">https://developer.blender.org/D16848</a></li></ul>
+<p>Landed Patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16654">https://developer.blender.org/D16654</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D9479">https://developer.blender.org/D9479</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16771">https://developer.blender.org/D16771</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16651">https://developer.blender.org/D16651</a></li></ul>
+<h2><span class="mw-headline" id="Dez_29-30_2022">Dez 29-30 2022</span></h2>
+<p>Holiday week
+</p>
+<h2><span class="mw-headline" id="Dez_21-22_2022">Dez 21-22 2022</span></h2>
+<p>Todo:
+</p>
+<ul><li>based on Sybren's feedback on D9479 implement functions for the slider GUI to set min and max</li></ul>
+<p>Submitted Patches:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16848">https://developer.blender.org/D16848</a></li></ul>
+<p>Updated Patches
+</p>
+<ul><li>-</li></ul>
+<p>Landed Patches
+</p>
+<ul><li><i><a rel="nofollow" class="external free" href="https://developer.blender.org/D9479">https://developer.blender.org/D9479</a></i> (actually landed in January)</li></ul>
+<h2><span class="mw-headline" id="Dez_14-15_2022">Dez 14-15 2022</span></h2>
+<p>Looked at <a rel="nofollow" class="external free" href="https://web.archive.org/web/20190222092630id_/http://pdfs.semanticscholar.org/346b/fa0b3cdc11b3a6f1ef4e6a296b1edbd0c215.pdf">https://web.archive.org/web/20190222092630id_/http://pdfs.semanticscholar.org/346b/fa0b3cdc11b3a6f1ef4e6a296b1edbd0c215.pdf</a> for more curve filtering algorithms.
+Submitted Patches:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16771">https://developer.blender.org/D16771</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16780">https://developer.blender.org/D16780</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16778">https://developer.blender.org/D16778</a> - new Gauss based FCurve smoothing operator</li></ul>
+<p>Updated Patches:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16654">https://developer.blender.org/D16654</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16651">https://developer.blender.org/D16651</a></li></ul>
+<p>TODO:
+</p>
+<ul><li>DONE - Remove "While Held" option from <code>Pose Propagate</code> operator</li>
+<li>DONE - Finish D16654</li>
+<li>get D16671 into a reviewable state</li></ul>
+<h2><span class="mw-headline" id="Dez_7-8_2022">Dez 7-8 2022</span></h2>
+<p>Looked into why <code>ED_keylist_find_next</code> does sometimes not return the next keyframe and how the use of <code>BEZT_BINARYSEARCH_THRESH</code> can be reduced.
+</p><p>Submitted patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16723">https://developer.blender.org/D16723</a></li></ul>
+<p>Updated patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16654">https://developer.blender.org/D16654</a></li></ul>
+<h2><span class="mw-headline" id="Nov_30-31_2022">Nov 30-31 2022</span></h2>
+<p>Worked on a new smoothing filter for FCurves using the Butterworth algorithm.
+The result will be discussed during the A&amp;R module.
+I have my doubts about it because the impulse response of the filter has ripples, which makes it sub-optimal for filtering out sudden changes in key values
+The patch can be found here: <a rel="nofollow" class="external free" href="https://developer.blender.org/D16671">https://developer.blender.org/D16671</a>
+</p><p>Submitted patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16654">https://developer.blender.org/D16654</a></li>
+<li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16651">https://developer.blender.org/D16651</a></li></ul>
+<p>Updated patches
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D9479">https://developer.blender.org/D9479</a></li></ul>
+<p>Landed:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://developer.blender.org/D16593">https://developer.blender.org/D16593</a></li></ul>
+<h2><span class="mw-headline" id="Nov_23-24_2022">Nov 23-24 2022</span></h2>
+<p>Working through the bug reports on the Animation&amp;Rigging board to:
+</p>
+<ul><li>remove duplicates</li>
+<li>check if they are still valid</li>
+<li>evaluate if they would be fixed by the planned changes for the Animation 2025 project</li></ul>
+<p>Submitted 2 patches:
+<a rel="nofollow" class="external free" href="https://developer.blender.org/D16593">https://developer.blender.org/D16593</a>
+<a rel="nofollow" class="external free" href="https://developer.blender.org/D16595">https://developer.blender.org/D16595</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240111151849
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.390 seconds
+Real time usage: 0.389 seconds
+Preprocessor visited node count: 4575/1000000
+Preprocessor generated node count: 6454/1000000
+Post‐expand include size: 28046/2097152 bytes
+Template argument size: 4210/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  208.791      1 -total
+ 71.14%  148.532    319 Template:PullRequest
+  3.49%    7.295     14 Template:Issue
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6561-0!canonical and timestamp 20240111151849 and revision id 37939
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;oldid=37939">https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;oldid=37939</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 5 January 2024, at 11:17.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:ChristophLendenfeld/WeeklyReports" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:ChristophLendenfeld/WeeklyReports" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../Special:Contributions/ChristophLendenfeld.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../Special:Log/ChristophLendenfeld.html">Logs</a></li><li id="t-userrights"><a href="../Special:UserRights/ChristophLendenfeld.html">View user groups</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;oldid=37939" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:ChristophLendenfeld/WeeklyReports&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.390","walltime":"0.389","ppvisitednodes":{"value":4575,"limit":1000000},"ppgeneratednodes":{"value":6454,"limit":1000000},"postexpandincludesize":{"value":28046,"limit":2097152},"templateargumentsize":{"value":4210,"limit":2097152},"expansiondepth":{"value":3,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  208.791      1 -total"," 71.14%  148.532    319 Template:PullRequest","  3.49%    7.295     14 Template:Issue"]},"cachereport":{"timestamp":"20240111151849","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":42});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844543e5cf15b7ac","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

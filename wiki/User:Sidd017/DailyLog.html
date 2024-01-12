@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Sidd017/DailyLog - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Sidd017/DailyLog","wgTitle":"Sidd017/DailyLog","wgCurRevisionId":26607,"wgRevisionId":26607,"wgArticleId":5856,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Sidd017/DailyLog","wgRelevantArticleId":5856,"wgRequestId":"6c3512049d029b01d960186b","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Sidd017","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Sidd017_DailyLog rootpage-User_Sidd017 skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="DailyLog.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ASidd017%2FDailyLog" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="DailyLog.html#Daily_Reports"><span class="tocnumber">1</span> <span class="toctext">Daily Reports</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="DailyLog.html#Results_announced"><span class="tocnumber">1.1</span> <span class="toctext">Results announced</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="DailyLog.html#Final_evaluations_week"><span class="tocnumber">1.2</span> <span class="toctext">Final evaluations week</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="DailyLog.html#Final_Week"><span class="tocnumber">1.3</span> <span class="toctext">Final Week</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="DailyLog.html#Rest_of_the_week"><span class="tocnumber">1.3.1</span> <span class="toctext">Rest of the week</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="DailyLog.html#August_17"><span class="tocnumber">1.3.2</span> <span class="toctext">August 17</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="DailyLog.html#August_16"><span class="tocnumber">1.3.3</span> <span class="toctext">August 16</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="DailyLog.html#Week_10"><span class="tocnumber">1.4</span> <span class="toctext">Week 10</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="DailyLog.html#August_15"><span class="tocnumber">1.4.1</span> <span class="toctext">August 15</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="DailyLog.html#August_14"><span class="tocnumber">1.4.2</span> <span class="toctext">August 14</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="DailyLog.html#August_13"><span class="tocnumber">1.4.3</span> <span class="toctext">August 13</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="DailyLog.html#August_10.2C_11.2C_12"><span class="tocnumber">1.4.4</span> <span class="toctext">August 10, 11, 12</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="DailyLog.html#August_9"><span class="tocnumber">1.4.5</span> <span class="toctext">August 9</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="DailyLog.html#Week_9"><span class="tocnumber">1.5</span> <span class="toctext">Week 9</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="DailyLog.html#August_8"><span class="tocnumber">1.5.1</span> <span class="toctext">August 8</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="DailyLog.html#August_3.2C_4.2C_5.2C_6.2C_7"><span class="tocnumber">1.5.2</span> <span class="toctext">August 3, 4, 5, 6, 7</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="DailyLog.html#August_2"><span class="tocnumber">1.5.3</span> <span class="toctext">August 2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="DailyLog.html#Week_8"><span class="tocnumber">1.6</span> <span class="toctext">Week 8</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="DailyLog.html#July_30.2C_31_and_August_1"><span class="tocnumber">1.6.1</span> <span class="toctext">July 30, 31 and August 1</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="DailyLog.html#July_29"><span class="tocnumber">1.6.2</span> <span class="toctext">July 29</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="DailyLog.html#July_26.2C_27_and_28"><span class="tocnumber">1.6.3</span> <span class="toctext">July 26, 27 and 28</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="DailyLog.html#Week_7"><span class="tocnumber">1.7</span> <span class="toctext">Week 7</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="DailyLog.html#July_23_and_24"><span class="tocnumber">1.7.1</span> <span class="toctext">July 23 and 24</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="DailyLog.html#July_22"><span class="tocnumber">1.7.2</span> <span class="toctext">July 22</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="DailyLog.html#July_21"><span class="tocnumber">1.7.3</span> <span class="toctext">July 21</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="DailyLog.html#July_20"><span class="tocnumber">1.7.4</span> <span class="toctext">July 20</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="DailyLog.html#July_19"><span class="tocnumber">1.7.5</span> <span class="toctext">July 19</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="DailyLog.html#Week_6"><span class="tocnumber">1.8</span> <span class="toctext">Week 6</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="DailyLog.html#July_18"><span class="tocnumber">1.8.1</span> <span class="toctext">July 18</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="DailyLog.html#July_17"><span class="tocnumber">1.8.2</span> <span class="toctext">July 17</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="DailyLog.html#July_16"><span class="tocnumber">1.8.3</span> <span class="toctext">July 16</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="DailyLog.html#July_15"><span class="tocnumber">1.8.4</span> <span class="toctext">July 15</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="DailyLog.html#July_14"><span class="tocnumber">1.8.5</span> <span class="toctext">July 14</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="DailyLog.html#July_13"><span class="tocnumber">1.8.6</span> <span class="toctext">July 13</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="DailyLog.html#July_12"><span class="tocnumber">1.8.7</span> <span class="toctext">July 12</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-36"><a href="DailyLog.html#Week_5"><span class="tocnumber">1.9</span> <span class="toctext">Week 5</span></a>
+<ul>
+<li class="toclevel-3 tocsection-37"><a href="DailyLog.html#July_11"><span class="tocnumber">1.9.1</span> <span class="toctext">July 11</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="DailyLog.html#July_10"><span class="tocnumber">1.9.2</span> <span class="toctext">July 10</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="DailyLog.html#July_9"><span class="tocnumber">1.9.3</span> <span class="toctext">July 9</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="DailyLog.html#July_8"><span class="tocnumber">1.9.4</span> <span class="toctext">July 8</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="DailyLog.html#July_7"><span class="tocnumber">1.9.5</span> <span class="toctext">July 7</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="DailyLog.html#July_5_and_6"><span class="tocnumber">1.9.6</span> <span class="toctext">July 5 and 6</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-43"><a href="DailyLog.html#Week_4"><span class="tocnumber">1.10</span> <span class="toctext">Week 4</span></a>
+<ul>
+<li class="toclevel-3 tocsection-44"><a href="DailyLog.html#July_4"><span class="tocnumber">1.10.1</span> <span class="toctext">July 4</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="DailyLog.html#July_3"><span class="tocnumber">1.10.2</span> <span class="toctext">July 3</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="DailyLog.html#July_2"><span class="tocnumber">1.10.3</span> <span class="toctext">July 2</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="DailyLog.html#July_1"><span class="tocnumber">1.10.4</span> <span class="toctext">July 1</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="DailyLog.html#June_30"><span class="tocnumber">1.10.5</span> <span class="toctext">June 30</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="DailyLog.html#June_29"><span class="tocnumber">1.10.6</span> <span class="toctext">June 29</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="DailyLog.html#June_28"><span class="tocnumber">1.10.7</span> <span class="toctext">June 28</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-51"><a href="DailyLog.html#Week_3"><span class="tocnumber">1.11</span> <span class="toctext">Week 3</span></a>
+<ul>
+<li class="toclevel-3 tocsection-52"><a href="DailyLog.html#June_27"><span class="tocnumber">1.11.1</span> <span class="toctext">June 27</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="DailyLog.html#June_26"><span class="tocnumber">1.11.2</span> <span class="toctext">June 26</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="DailyLog.html#June_25"><span class="tocnumber">1.11.3</span> <span class="toctext">June 25</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="DailyLog.html#June_24"><span class="tocnumber">1.11.4</span> <span class="toctext">June 24</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="DailyLog.html#June_23"><span class="tocnumber">1.11.5</span> <span class="toctext">June 23</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="DailyLog.html#June_22"><span class="tocnumber">1.11.6</span> <span class="toctext">June 22</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="DailyLog.html#June_21"><span class="tocnumber">1.11.7</span> <span class="toctext">June 21</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-59"><a href="DailyLog.html#Week_2"><span class="tocnumber">1.12</span> <span class="toctext">Week 2</span></a>
+<ul>
+<li class="toclevel-3 tocsection-60"><a href="DailyLog.html#June_20"><span class="tocnumber">1.12.1</span> <span class="toctext">June 20</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="DailyLog.html#June_19"><span class="tocnumber">1.12.2</span> <span class="toctext">June 19</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="DailyLog.html#June_18"><span class="tocnumber">1.12.3</span> <span class="toctext">June 18</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="DailyLog.html#June_17"><span class="tocnumber">1.12.4</span> <span class="toctext">June 17</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="DailyLog.html#June_16"><span class="tocnumber">1.12.5</span> <span class="toctext">June 16</span></a></li>
+<li class="toclevel-3 tocsection-65"><a href="DailyLog.html#June_15"><span class="tocnumber">1.12.6</span> <span class="toctext">June 15</span></a></li>
+<li class="toclevel-3 tocsection-66"><a href="DailyLog.html#June_14"><span class="tocnumber">1.12.7</span> <span class="toctext">June 14</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-67"><a href="DailyLog.html#Week_1"><span class="tocnumber">1.13</span> <span class="toctext">Week 1</span></a>
+<ul>
+<li class="toclevel-3 tocsection-68"><a href="DailyLog.html#June_12_and_June_13_.28weekend.29"><span class="tocnumber">1.13.1</span> <span class="toctext">June 12 and June 13 (weekend)</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="DailyLog.html#June_11"><span class="tocnumber">1.13.2</span> <span class="toctext">June 11</span></a></li>
+<li class="toclevel-3 tocsection-70"><a href="DailyLog.html#June_10"><span class="tocnumber">1.13.3</span> <span class="toctext">June 10</span></a></li>
+<li class="toclevel-3 tocsection-71"><a href="DailyLog.html#June_9"><span class="tocnumber">1.13.4</span> <span class="toctext">June 9</span></a></li>
+<li class="toclevel-3 tocsection-72"><a href="DailyLog.html#June_8"><span class="tocnumber">1.13.5</span> <span class="toctext">June 8</span></a></li>
+<li class="toclevel-3 tocsection-73"><a href="DailyLog.html#June_7"><span class="tocnumber">1.13.6</span> <span class="toctext">June 7</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Sidd017/DailyLog</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../User:Sidd017.html" title="User:Sidd017">User:Sidd017</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Daily_Reports">Daily Reports</span></h2>
+<p>I plan on writing daily reports throughout the course of my GSoC project. While it is not required to do so, I would like to maintain this to keep track of my daily progress and make sure that I'm able to keep up with approaching deadlines.
+</p>
+<h3><span class="mw-headline" id="Results_announced">Results announced</span></h3>
+<p>I've successfully passed GSoC 2021. While GSoC is over, there's still some work left for me to do before I can start working on getting my code merged. In his GSoC review, my mentor did mention that progress slowed down during the final weeks. I really hope that I can speed things up ASAP, and improve the code quality that I produce. 
+</p><p>For the first week of September (at least), I will be busy with some internship assignments, but once that's done I hope to come back and finish my patch for adding edge selection support for the UV editor. The current goal for me now is to get my code merged before 3.0 release.
+</p>
+<h3><span class="mw-headline" id="Final_evaluations_week">Final evaluations week</span></h3>
+<p>I've completed my final evaluations and submitted my final report that details everything I worked on during this summer. This week mentors complete their final review and evaluations, and on 31st August I will get to know if I have successfully passed GSoC or not.
+</p>
+<h3><span class="mw-headline" id="Final_Week">Final Week</span></h3>
+<p>Summary of work done from August 9 to August 15 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/24?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="Rest_of_the_week">Rest of the week</span></h4>
+<p>For the rest of this week I mostly focused on writing my final report and completing final evaluations. There was some college work that again kept me occupied for the most part, but I hope that once I'm free from the upcoming college exams I can solely focus on creating proper patches of my GSoC branches and set them up for review.
+</p>
+<h4><span class="mw-headline" id="August_17">August 17</span></h4>
+<ul><li>Had a final meeting with my mentor today. Did a progress review and discussed a few things that needed work/could be improved.</li>
+<li>Also had an informal conversation with my mentor today which really nice. This was probably our last meeting today before GSoC ends.</li>
+<li>Started with a first draft for my final report.</li>
+<li>I have been working on clean ups for both my soc branches, but haven't been satisfied with it no matter how much time I put into it. I guess I will clean it up as best as I can and then get feedback from during code review. This is mostly because I need developers to criticize my work, else I am just running around in circles with my not so professional coding skills/knowledge.</li></ul>
+<h4><span class="mw-headline" id="August_16">August 16</span></h4>
+<ul><li>Wrote my weekly report</li>
+<li>Didn't do much today since I had to work for another meeting (college work)</li></ul>
+<h3><span class="mw-headline" id="Week_10">Week 10</span></h3>
+<p>Summary of work done from August 2 to August 8 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/23?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="August_15">August 15</span></h4>
+<ul><li>Committed changes made to the subdividing grid</li>
+<li>Updated experimental builds, although it seems no users are interested in testing and providing feedback for it.</li>
+<li>Updated the patch for edge selection support</li></ul>
+<h4><span class="mw-headline" id="August_14">August 14</span></h4>
+<ul><li>Refactored the code for subdividing grid. The grid dimensions can now be adjusted to any desirable value.</li>
+<li>Did some code review, mostly deciding on what to clean up and what needs refactoring</li>
+<li>Started working on the final report. For user documentation I will be writing a simple document that explains all the implemented features to the end user on by utilizing simple use cases.</li>
+<li>For code submission, I will have to talk with my mentor about this, but I think simple patch using arc diff on the soc branches would suffice.</li></ul>
+<h4><span class="mw-headline" id="August_13">August 13</span></h4>
+<ul><li>Revisited the code written in <code>soc-uv-editor-improvements branch</code></li>
+<li>Cleaned up some code in the soc-uv-edge-select-support branch</li></ul>
+<h4><span id="August_10,_11,_12"></span><span class="mw-headline" id="August_10.2C_11.2C_12">August 10, 11, 12</span></h4>
+<p>Didn't work much since I had some urgent college work that needed my complete attention.
+</p>
+<h4><span class="mw-headline" id="August_9">August 9</span></h4>
+<ul><li>Finally got the buildbot working for windows. Turns out long branch names don't work well when packaging</li>
+<li>Fell sick today so I couldn't work much</li>
+<li>For next few days (till thursday) I will be occupied with some mandatory college work. This will definitely affect the time I will spend working on code cleanups and fixes.</li>
+<li>Since this is the last week of GSoC I will try my best to clean code on both soc branches. Especially address these issues&#160;:
+<ul><li>Is subdividing grid required for UV editor? If yes, then clean up the code and use proper logic in code/shaders that can be easily changed based on the desired grid dimensions (NxN).</li>
+<li>Make a final call on the new RectBoxPack algorithm. While it works, the heuristic for rotating islands used currently, is incorrect.</li>
+<li>The mess made in DNA structs needs to be cleaned up</li>
+<li>Ask Campbell about versioning code.</li>
+<li>Should the final code submission be done as separate patches or git branches will suffice?</li></ul></li></ul>
+<h3><span class="mw-headline" id="Week_9">Week 9</span></h3>
+<p>Summary of work done from July 26 to August 1 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/21?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="August_8">August 8</span></h4>
+<ul><li>Added edge selection support for UV operators&#160;:
+<ul><li>UV edge ring select</li>
+<li>UV loop select</li></ul></li>
+<li>Tested both edge ring and loop select operators to ensure that they work as intended in all permutations of UV select modes.</li>
+<li>Tried pushing for new builds again, but it seems that the edge selection branch always fails on windows.</li>
+<li>Started looking into how final code submission should be done for GSoC final evalautions. For now I am thinking about creating 3 separate patches&#160;:
+<ul><li>Separate patch for all improvements/changes to packing UV islands and offsetting selected UVs</li>
+<li>Separate patch for all improvements/changes to UV grid and snapping</li>
+<li>Separate patch for all improvements/changes to UV edge selection.</li></ul></li></ul>
+<h4><span id="August_3,_4,_5,_6,_7"></span><span class="mw-headline" id="August_3.2C_4.2C_5.2C_6.2C_7">August 3, 4, 5, 6, 7</span></h4>
+<ul><li>Changed the edge selection branch to <code>soc-2021-uv-editor-improvements-edge-selection</code> and pushed to remote repository</li>
+<li>Created test builds for both soc branches using buildbot. For some reason the first builds were crashing and the second builds are failing on windows platform. Will try again this weekend.</li>
+<li>Added edge selection support for a few more operators&#160;:
+<ul><li>Select split</li>
+<li>Select pinned</li></ul></li>
+<li>Fix for select invert operator. The operator now supports UV face select mode as well. This overrides the previous behavior where it used vertex select mode logic as a fallback.</li>
+<li>Fixed a bug with edge selection when used with sticky location enabled</li>
+<li>Fixed the logic/bug for select invert operator when using edge select and sticky select mode.</li>
+<li>Apparently edge loop and edge ring select operators for the UV editor seemed to be fixed from the previous commits I made. I will still look into the code and see if it needs refactoring</li></ul>
+<h4><span class="mw-headline" id="August_2">August 2</span></h4>
+<ul><li>Updated the diff on d.b.o with the changes I made last week</li>
+<li>Since I haven't reviewed my soc branch in the past 2 weeks, I'm a bit skeptical about pushing builds for users to test. I'll do an first pass review tomorrow and check with my mentor to see if I should create builds for user testing or not</li>
+<li>Semester workload is getting heavier and more difficult to manage with every passing day.</li>
+<li>After a quick review, I feel that there are probably a lot more areas that require edge selection support than I earlier anticipated.</li></ul>
+<h3><span class="mw-headline" id="Week_8">Week 8</span></h3>
+<p>Summary of work done from July 19 to July 25 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/20?u=sidd017">Weekly Report</a>
+</p>
+<h4><span id="July_30,_31_and_August_1"></span><span class="mw-headline" id="July_30.2C_31_and_August_1">July 30, 31 and August 1</span></h4>
+<ul><li>Worked on adding edge selection support for a bunch of UV selection operators&#160;:
+<ul><li>Mouse select</li>
+<li>Box select</li>
+<li>Circle select</li>
+<li>Lasso select</li>
+<li>Select/deselect all</li>
+<li>Invert selection</li>
+<li>Select more/less</li></ul></li>
+<li>Added 2 function for flushing selection between UV verts and edges</li></ul>
+<h4><span class="mw-headline" id="July_29">July 29</span></h4>
+<ul><li>Committed a fix to the bug&#160;: deselecting UV faces would deselect neighboring faces as well.</li>
+<li>Worked on refactoring the <code>uv_select_flush_from_tag_face()</code> and <code>uv_select_flush_from_tag_loop()</code> functions, but got stuck while trying to understand the <code>UvVertMap</code> and <code>UvMapVert</code> structs. From a initial study I think they create a mapping from the UV vertices to the 3D mesh elements which would simplify accessing the connected mesh elements for a corresponding UV vertex without having to iterate over the entire mesh over and over again.</li>
+<li>I decided to take a step back and study the selection code for 3D viewport. The changes I have made in the UV selection code have become extremely messy and I need to organize it a bit better for reusability and maintenance.</li>
+<li>Hopefully I can get started with cleanups tomorrow so that the code on my branch can be reviewed before the final week of GSoC.</li></ul>
+<h4><span id="July_26,_27_and_28"></span><span class="mw-headline" id="July_26.2C_27_and_28">July 26, 27 and 28</span></h4>
+<ul><li>With the heavy workload for my current semester, things have been falling off-schedule this week.</li>
+<li>I tried refactoring the existing box select and select more/less operator to work with the edge selection flag. Got a general solution working, but in retrospect the code became a bigger mess to keep track of.</li>
+<li>Discovered a bug while trying to deselect faces in face + sticky loc/vertex selection mode. Neighbouring faces would get deselected since the new solution would deselect the shred edges between the 2 faces.</li></ul>
+<h3><span class="mw-headline" id="Week_7">Week 7</span></h3>
+<p>Summary of work done from July 12 to July 18 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/19?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="July_23_and_24">July 23 and 24</span></h4>
+<ul><li>Spent time working on refactoring the existing selection code and testing to ensure that the new design works as intended.</li>
+<li>A few inconsistencies due to the present drawing code for UV edges.</li>
+<li>From an initial analysis, it seems that the changes in UV selection design will impact a lot of Blender addons. Will discuss this with my mentor next week.</li>
+<li>Also, since I expect to spend most of the time working on cleanups for the soc branch next week, I'll start looking into versioning code tomorrow (hopefully).</li>
+<li>Started working on refactoring the selection operators</li></ul>
+<h4><span class="mw-headline" id="July_22">July 22</span></h4>
+<ul><li>Had a meeting with my mentor to discuss some design decisions for UV selection involving sticky modes.</li>
+<li>Tried to look through the drawing code for UV edges again. Couldn't get a temporary solution working, but I was able to get a better understanding of how the shaders work.</li>
+<li>Turns out all the shaders collectively draw half an UV edge which consists of 4 vertices. Each vertex is assigned a color (orange or white) based on the selection state. I'll look into the drawing code again once I have completed refactoring the UV selection part</li></ul>
+<h4><span class="mw-headline" id="July_21">July 21</span></h4>
+<ul><li>Got the UV edge selection code for sticky modes working. Did some minor testing and this seems to work perfectly and as expected. This took about 5-6 hours to finally get working correctly.</li>
+<li>I couldn't find time to work on the UV face selection code for sticky modes. I had some other work that needed to be completed (approaching deadline).</li>
+<li>Finally understood how BMesh radial and disk cycles work. The iterating part is still a bit fuzzy, but I got the general idea of how to do it.</li>
+<li>Tomorrow I plan on completing the UV face selection code for sticky modes and then start looking through the rest of the UV selection operators.</li></ul>
+<h4><span class="mw-headline" id="July_20">July 20</span></h4>
+<ul><li>Experimenting with the drawing code didn't go so well. I lost an entire night's sleep trying to find the relevant code and trying to make sense of the logic used in the shaders. At most I was able to disable drawing edges, which didn't really help any use case for testing. For now I have abandoned looking through the drawing code since I had spent hours looking through the code and getting no where.</li>
+<li>I started looking through the UV select all operator and rewrote the logic to use the edge selection flag. The select and deselect all parts were easy to do, but the real challenge was working on invert selection.</li>
+<li>I got the invert all part for the vertex and edge selection working. Since the primary logic for face and island selection is not that well defined, I decided to have the invert all functionality for these selection modes fallback to the logic used by vertex selection.</li>
+<li>Also looked into the selection functions for sticky modes and realized that the edge and face selection ones need to be rewritten. For now I have to go back and read the bmesh documentation to understand what a radial structure is and how to iterate through the loops associated with a radial structure for a given edge.</li></ul>
+<h4><span class="mw-headline" id="July_19">July 19</span></h4>
+<ul><li>Looked through the UV lasso select operator code, mostly making minor changes to incorporate the edge selection flag. It didn't work so well.</li>
+<li>I'm having trouble trying to manage time for working on my GSoC project and managing my current semester workload. Not sure how I'll make it through the coming days/weeks.</li>
+<li>The code responsible for drawing the selections in the UV editor is a bit annoying to be honest. Example - In case I have 2 continuous vertices selected, but their corresponding edge isn't selected, then the edge is still marked orange which visually indicates that the edge is selected (while in reality it's not). So I decided to look into the drawing code and find a temporary solution so that I can visually identify unselected edges.</li></ul>
+<h3><span class="mw-headline" id="Week_6">Week 6</span></h3>
+<p>Summary of work done from July 5 to July 11 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/18?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="July_18">July 18</span></h4>
+<ul><li>Made some changes to the primary selection functions for vertices, edges and faces in <code>uvedit_select.c</code>. Mostly ensuring that the edge selection flag for all edge cases was properly addressed</li>
+<li>Spent time testing and refining those changes since selection code for UV editor has many edge cases. Not everything works correctly and I still have to do a lot more testing, but this seems like a good start. Primary tests that I focused on were simple permutations of&#160;:
+<ul><li>Element selection - Vertex, Edge, Face and Island</li>
+<li>Sticky selection - Disabled, location and vertex</li>
+<li>UV sync selection (this part was mostly untouched since that directly uses BMesh information)</li></ul></li></ul>
+<h4><span class="mw-headline" id="July_17">July 17</span></h4>
+<ul><li>Passed first GSoC evaluation.</li>
+<li>Pushed the code for <code>T78405</code> to the soc branch. For now I haven't added any constraints for checking available UDIM space or if dynamic grid is enabled or not.</li>
+<li>There's a bug where the operator doesn't work in certain use cases when UV Sync selection is enabled.</li>
+<li>I finally started to look into the task for adding edge selection support to the UV editor. Added the deprecated flag back and started studying the code in <code>uvedit_select.c</code>. From a quick look I'll first have to understand the cases involving Sync selection, sticky selection modes and flushing trough UV selections.</li></ul>
+<h4><span class="mw-headline" id="July_16">July 16</span></h4>
+<ul><li>Final day for filling the GSoC evaluation form.</li>
+<li>I tried getting some work done, but most of my time was taken up by work for my current semester and a series of meetings.</li>
+<li>Finally I decided upon a working solution for edge select. The idea is to associate each MLoopUV with a UV vertex and an UV edge, since number of loops in a mesh face are equal to number of edges in corresponding UV face.</li></ul>
+<h4><span class="mw-headline" id="July_15">July 15</span></h4>
+<ul><li>After a brainstorming session for new tasks, I decided to move forward with adding edge selection support for UV editor. Active element still requires a design task and would be best to work on once edge selection is fully supported in the UV editor.</li>
+<li>Worked on a new operator for <code>T78405</code> - UV offset operator. I don't see many use cases for this and frankly I'm not even sure if it's a good addition to the UV editor. But since it's listed in my GSoC proposal, I'll complete it anyways.</li></ul>
+<h4><span class="mw-headline" id="July_14">July 14</span></h4>
+<ul><li>I had a meeting with my mentor where we did a short recap on the progress so far and what tasks I should work on next. 2 tasks that really stood out and would make great improvements to the UV editor were&#160;: Active element support and Edge selection support for the UV editor. He also gave some guidance on tackling a few issues I had with the code on my branch.</li>
+<li>Figured out how to add keymaps for operators and in general how to map RNA props for those keymaps.</li>
+<li>Also filled out the GSoC evaluation form today.</li></ul>
+<h4><span class="mw-headline" id="July_13">July 13</span></h4>
+<ul><li>Instead of using BMesh functionality for storing selection history in UV editor, I thought of coming up with a workaround that stores MLoopUV references in a stack or ListBase. This data structure can be used as a container for storing UV selection history, where the last entry always denotes the current active UV element.</li>
+<li>Since the past week has not been very productive, I've decided to complete the one final task left on my proposal this week. Though it's not a much requested feature and personally I don't see much use of it, I'll just complete it for the sake of completing all the tasks on my proposal. Once that's done I can move on to working on Active element task.</li>
+<li>Created a new operator for the final task, currently looking into how keymaps are added in Blender.</li></ul>
+<h4><span class="mw-headline" id="July_12">July 12</span></h4>
+<ul><li>Mostly looked into implementation of active element in the 3D viewport.</li>
+<li>Decided to create a small solution for active element pivot option in the UV editor that can act as a proof of concept. Might be far fetched since this means using the BMesh functionality which is currently lacking in the UV editor.</li>
+<li>Honestly I'm a bit stuck, since I cannot decide what to work on next. I could always do clean ups on my branch but that is something that I'll have to deo towards the end eventually. With evaluations approaching I need to pick up the pace again and start committing work soon</li></ul>
+<h3><span class="mw-headline" id="Week_5">Week 5</span></h3>
+<p>Summary of work done from June 28 to July 4 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/17?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="July_11">July 11</span></h4>
+<ul><li>Updated progress on the design task and added missing subtasks</li>
+<li>With most of the deliverables from my proposal finished, I started planning on what tasks to tackle next. Possible candidates&#160;:
+<ul><li>Add missing pivot option to UV editor - Active Element</li>
+<li>Fix the issue with 2D cursor not being reset to UV space origin when using keymap - Shift+C</li>
+<li>Fix the issue with all editors using the same snapping flag (<code>SCE_SNAP</code>)</li></ul></li>
+<li>Started planning on clean ups and refactoring the code on soc branch for review</li></ul>
+<h4><span class="mw-headline" id="July_10">July 10</span></h4>
+<ul><li>Tested the implementation for absolute grid snap and seems to work as expected (comparing with 3D viewport).</li>
+<li>Pushed the implementation to the soc branch.</li>
+<li>Since first evalution (GSoC) is on Monday, I plane on doing code cleanup and fixes. If possible I will also create patches for reviews and upload them to phabricator so that my mentor can review them easily rather than looking through my entire branch for a single feature.</li>
+<li>Started looking through the changes on soc branch and planning clean up. Will begin refactoring and fixes tomorrow.</li>
+<li>Since I am nearly halfway done with the tasks I had listed in my proposal, I'll probably schedule a meet with my mentor for further planning on what to do next.</li></ul>
+<h4><span class="mw-headline" id="July_9">July 9</span></h4>
+<ul><li>Completed a rough implementation for grid snapping (absolute grid snap) in UV editor, but there is still a lot of testing to be done since I'm pretty confident I have missed many edge cases.</li>
+<li>One thing that is bothering me is that there is no pivot option for active element in the UV editor. This actually defeats the whole purpose of having grid snapping for UV editor</li>
+<li>Currently there are many pending design decisions that are holding back progress. I'll have to sort them out this weekend and schedule a proper meeting with my mentor/Daniel to resolve them.</li>
+<li>So far this week has not been as productive as I hoped it would be. I'll have to compensate for lost time this weekend.</li>
+<li>Discovered 2 possible issues&#160;:
+<ul><li>Shift+C doesn't reset the 2D cursor to it's original position</li>
+<li><code>SCE_SNAP</code> flag is used by many editors in Blender. So if it is enabled in one editor, then it is automatically enabled in other editors as well.</li></ul></li></ul>
+<h4><span class="mw-headline" id="July_8">July 8</span></h4>
+<ul><li>Clarified the design decision with my mentor. For now grid snapping shouldn't affect rotate and scale, if required then this can be added later. Also a toggle for absolute grid snap in the UV editor makes more sense.</li>
+<li>I tried testing a basic implementation but got stuck due to a build error. Mostly spent time trying to fix it, but finally asked for help on blender-builds channel. The issue was resolved but I already lost about 5-6 hours on this, so I'll probably test the implementation tomorrow.</li></ul>
+<h4><span class="mw-headline" id="July_7">July 7</span></h4>
+<ul><li>Mostly experimented with the code in <code>transform_snap.c</code> and <code>transform_mode_translate</code></li>
+<li>There's a design decision which I'm stuck with. Currently absolute grid snap works with translation but isn't intended to work with rotation and scaling. As per the UI mockup given in <a rel="nofollow" class="external text" href="https://developer.blender.org/T78391">T78391</a> grid snapping must be added as a new option in the snapping panel, but I feel that a toggle similar to the 3D viewport makes more sense in this case.</li></ul>
+<h4><span class="mw-headline" id="July_5_and_6">July 5 and 6</span></h4>
+<p>I fell sick and unfortunately my college semester started early (on Monday), so I couldn't work much.
+I mostly spent time debugging and trying trying to trace the call stack for Absolute grid snap used in 3D viewport. So far I have a rough overview of how translation works.
+</p>
+<h3><span class="mw-headline" id="Week_4">Week 4</span></h3>
+<p>Summary of work done from June 21 to June 27 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/16?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="July_4">July 4</span></h4>
+<ul><li>Did some cleanup and refactoring&#160;:
+<ul><li>Replace struct variables with pointers</li>
+<li>Refactor reusable code to separate functions</li></ul></li>
+<li>Since the default UV editor grid is now replaced by a subdividing grid and an option for dynamic grid has also been added, the default increment snapping value (0.0625) also needs to be changed. Today I implemented a solution which changes the increment snapping value based on the number of divisions present in the UV editor grid</li>
+<li>Studied the code related to increment snapping in the UV editor. Still struggling with understanding how everything works in the bigger picture. I'll look into how absolute grid snap works in the 3D viewport, that'll probably give me a better idea of how I should implement grid snapping in UV editor.</li></ul>
+<h4><span class="mw-headline" id="July_3">July 3</span></h4>
+<ul><li>Pushed the fix to soc branch</li>
+<li>Tried doing some cleanup by removing the RectSizeBoxPack struct and using the existing BoxPack struct instead. This approach actually failed since BoxPack isn't compatible for use with ListBase. Spent most of the day trying to come up with a better solution but had to stop since I had to work on grid snapping as well</li>
+<li>Decided to continue working on cleanup after implementing grid snapping, since I only have a week left as per my proposal schedule to finish snapping.</li>
+<li>Studied how increment snapping works in the UV editor and how absolute grid snap works in 3D viewport</li></ul>
+<h4><span class="mw-headline" id="July_2">July 2</span></h4>
+<ul><li>Fixed the pending issues with pack islands to area operator&#160;:
+<ul><li>When scale islands is disabled for packing, the islands that cannot fit into the packing area area packed at the bottom left corner of the packing area.</li>
+<li>RNA property for displaying packing area coordinates is not clamped properly. Maximum coordinates can be set to values lower than the minimum coordinates.</li></ul></li>
+<li>Added new option for grid snapping in the UV editor, though no functionality is tied to it yet.</li></ul>
+<h4><span class="mw-headline" id="July_1">July 1</span></h4>
+<p>Couldn't work much today. Was busy with some college work.
+</p>
+<ul><li>Daniel Bystedt tested my branch and provided some very valuable feedback. In general all implemented features seem to work as expected/required, with a small exception of dynamic grid which is understandable since the task is only half done. Once I complete grid snapping, both features can be expected to work as described in their design tasks.</li>
+<li>Pushed a small change for size factor of dynamic grid. This was done based on feedback received from Daniel Bystedt.</li>
+<li>Tomorrow I plan on studying how absolute grid snap works in the 3D viewport and increment snapping in the UV editor. Also work on refactoring and fixing parts of the UV packing code.</li></ul>
+<h4><span class="mw-headline" id="June_30">June 30</span></h4>
+<ul><li>Committed and pushed code for subdividing grid to the soc branch - <a rel="nofollow" class="external text" href="https://developer.blender.org/rB39aa0062605635be64d5422e54fad2a4ec08d708">commit link</a></li>
+<li>Tried uploading a patch for getting the grid code reviewed, accidentally uploaded a diff of the entire soc branch against master.</li>
+<li>Since I think my mentor is busy, I'll hold off getting code reviewed for sometime. Tomorrow I plan to spend time refactoring the UV packing code and doing cleanup and minor bug fixing.</li></ul>
+<h4><span class="mw-headline" id="June_29">June 29</span></h4>
+<ul><li>Completed implementation of dynamically subdividing grid</li></ul>
+<h4><span class="mw-headline" id="June_28">June 28</span></h4>
+<ul><li>Investigated how the unit system used affects the Grid in the 3D viewport. Since UVs are scaled and packed in 0-1 UV space the concept of unit system is irrelevant in the UV editor (only preserving aspect ratio of islands is important here). Hence, I decided to proceed with using zoomFactor as a control variable.</li>
+<li>Experimented with different values for zoomfactor to see which one makes the grid feel more intuitive to work with. This is mostly hit and trial, and will likely result in hardcoded grid divisions but at this point this is the best solution I could come up with. Also I might use linear interpolation for blend factor in case the default cubic interpolation doesn't work well.</li>
+<li>Looked over the relevant code for increment snapping in the UV editor. Will work on adding an option for Grid snapping to the UI panel tomorrow.</li></ul>
+<h3><span class="mw-headline" id="Week_3">Week 3</span></h3>
+<p>Summary of work done from June 14 to June 20 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/7?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="June_27">June 27</span></h4>
+<ul><li>Finally figured it out. The blend factor in the fragment shader is always set to 1 when in the UV/Image Editor. This is caused by grid_res which gets initialized to zero.</li>
+<li>Using a custom control variable (zoomFactor) I was able to replicate the fading in and out of the subdivided grid in the UV/Image editor similar to the 3D viewport. This is mostly hit and trial so a better control variable is required. Writing a patch for this and will discuss with my mentor tomorrow</li>
+<li>Tough part of understanding the overlay engine code is the fact that I can't debug glsl shaders.</li></ul>
+<h4><span class="mw-headline" id="June_26">June 26</span></h4>
+<ul><li>Committed and pushed the Dynamic Grid implementation to the soc branch.</li>
+<li>Spent the entire day trying to understand how the Grid overlay is drawn in the 3D viewport. Investigated <code>overlay_grid.c</code>, <code>grid_vert.glsl</code> and <code>grid_frag.glsl</code> and found the related draw calls, but still unable to replicate the behavior inside the UV/Image Editor. Might have to ask my mentor for guidance here.</li></ul>
+<h4><span class="mw-headline" id="June_25">June 25</span></h4>
+<ul><li>Completed a rough implementation of Dynamic Grid based on the description given in the phabricator design task. Reply from Daniel Bystedt confirmed that my initial understanding of the task was indeed correct.</li></ul>
+<h4><span class="mw-headline" id="June_24">June 24</span></h4>
+<ul><li>Messaged Daniel Bystedt for clarification on task description for Dynamic grid.</li>
+<li>Couldn't work much since I was facing memory issues with windows. Trying to run VSCode or debug Blender would cause both programs to crash. The issue resolved itself before I could narrow down the apparent reason for this.</li>
+<li>Implemented a rough version of the dynamic grid based on my understanding of the task. I expect this to change based on Daniel Bystedt's reply.</li></ul>
+<h4><span class="mw-headline" id="June_23">June 23</span></h4>
+<ul><li>Did some minor cleanup and fixed an issue of unreleased memory in the pack islands to area operator</li>
+<li>Added operator properties for displaying packing area coordinates</li>
+<li>Committed and pushed changes to the soc branch</li>
+<li>Continued studying the code in the overlay_grid.c</li>
+<li>Learned how to change the parameters for RNA properties inside an operator</li></ul>
+<h4><span class="mw-headline" id="June_22">June 22</span></h4>
+<ul><li>Worked on some initial user feedback - expose packing area coordinates and lock proportions for the packing area</li>
+<li>Couldn't work much today since I was busy elsewhere.</li></ul>
+<h4><span class="mw-headline" id="June_21">June 21</span></h4>
+<ul><li>Short meeting with mentor to discuss progress so far.</li>
+<li>Looked into the task description for Dynamic grid. My initial assumption of the task functionality might have been invalid. Will contact Daniel Bystedt for clarification. Mentor suggested that I could replicate the grid behavior from the graph editor, which seems like a nice replacement for the current grid in the UV editor.</li>
+<li>Created a new devtalk post for feedback.</li></ul>
+<h3><span class="mw-headline" id="Week_2">Week 2</span></h3>
+<p>Summary of work done from June 7 to June 13 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060/3?u=sidd017">Weekly Report</a>
+</p>
+<h4><span class="mw-headline" id="June_20">June 20</span></h4>
+<p>Took a day off. Had some college work to take care off.
+</p>
+<h4><span class="mw-headline" id="June_19">June 19</span></h4>
+<ul><li>Finally gave up and decided that I'll discuss this with my mentor for a final call since packing without scaling wasn't even a part of the initial design task. Also I've spent an entire week's worth of time trying to figure this out.</li>
+<li>Did some code clean up, committed and pushed the code for pack islands to box area - <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe5ab28d3921e77bac464c717610e2bf1b5c58b5c">commit link</a>. Work is still required on this but for now I think I'll just take a break to work on dynamic grid and clear my head.</li></ul>
+<h4><span class="mw-headline" id="June_18">June 18</span></h4>
+<ul><li>Did some more testing, seems like packing with scaling enabled works without any issues. Problems start to arise when scaling is disabled. Islands that don't fit in the packing area get placed in the bottom left corner and overlap with other islands. One solution to this would be to set up a callback that cancels the operator when such a case arises, but I still feel that a new algorithm could be used instead.</li></ul>
+<h4><span class="mw-headline" id="June_17">June 17</span></h4>
+<ul><li>Finalized the use cases for the box packing and rectPack2D algorithms
+<ul><li>The regular box packing algorithm is useful when packing islands that can be scaled. This comes with an added bonus that rotating islands is already implemented in code.</li>
+<li>RectBox2D algorithm is useful when packing islands that can't be scaled (user-preference). An additional heuristic is required for rotating islands but that can be probably dealt with later.</li></ul></li>
+<li>Completed a rough implementation of pack islands to box area operator, although it needs to be tested extensively to make sure it covers maximum use cases.</li>
+<li>The code currently looks like a mess. Will do some cleanup and probably commit tomorrow.</li></ul>
+<h4><span class="mw-headline" id="June_16">June 16</span></h4>
+<ul><li>Got the operator UI working as required. Now focusing on implementing the packing algorithm given <a rel="nofollow" class="external text" href="https://github.com/TeamHypersomnia/rectpack2D">here</a>.</li>
+<li>Had to spend sometime trying to figure out the API for getting the screen coordinates for box select area defined by the user. The solution was simply using <code>UI_view2d_region_to_view_rctf()</code>.</li>
+<li>Tried implementing a rough version of the rectPack2D algorithm similar to <code>BLI_box_pack_2d_fixedarea()</code>. Still requires some work but packing without scaling and rotating islands seems to work ok provided the area defined for packing is large enough.</li></ul>
+<h4><span class="mw-headline" id="June_15">June 15</span></h4>
+<ul><li>Got the box select UI working for defining area and since I'm using <code>WM_gesture_box_modal()</code>, the screen coordinates for the defined rectangular area get stored in an instance of rctf struct. The available API makes it easier since I don't have to code the part for getting screen-space coordinates.</li>
+<li>Instead of directly using <code>WM_gesture_box_invoke()</code>, I created a separate invoke callback. This cancels the operator if no islands were selected in the UV editor. If selected then it calls WM_gesture_box_invoke().</li></ul>
+<h4><span class="mw-headline" id="June_14">June 14</span></h4>
+<ul><li>Mostly investigated and studied modal operators that use <code>WM_gesture_box_invoke()</code> and <code>WM_gesture_box_modal()</code> callbacks. The initial goal here is to get the box select part working so that it can be used to define the area for packing.</li>
+<li>Created a new operator <code>Pack islands to area</code>, though it's mostly a placeholder that is an exact copy of the original pack islands code.</li>
+<li><b>Also decided that I'll try to get a basic implementation of my tasks working first. </b> Work on cleanup and refactoring code once my mentor reviews it. That would save me the trouble of spending too much time on tasks without ever getting the satisfaction that it's finally done.</li></ul>
+<h3><span class="mw-headline" id="Week_1">Week 1</span></h3>
+<p>Summary of work done from May 17 to June 6 - <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2021-uv-editor-improvements-weekly-reports/19060?u=sidd017">Weekly Report</a>
+</p>
+<h4><span id="June_12_and_June_13_(weekend)"></span><span class="mw-headline" id="June_12_and_June_13_.28weekend.29">June 12 and June 13 (weekend)</span></h4>
+<p>I got vaccinated on Saturday (12 June) and was down with fever that kept swinging between 100°F and 102°F. Tried getting some work done but was mostly resting due to soreness and body ache.
+</p>
+<h4><span class="mw-headline" id="June_11">June 11</span></h4>
+<ul><li>Submitted a minor bug fix&#160;: <a rel="nofollow" class="external text" href="https://developer.blender.org/D11582">D11582</a> . Also committed and pushed this to the <code>soc-2021-uv-editor-improvements</code> branch.</li>
+<li>Did some code cleanup, fixed some issues and committed the code for task 1 (pack islands to correct/specified UDIM)</li>
+<li>Started working on task 2 - pack islands to box area</li></ul>
+<h4><span class="mw-headline" id="June_10">June 10</span></h4>
+<ul><li>Completed the implementation of the first task - pack islands to correct/specified UDIM. Will do a code cleanup, fix a minor bug related to the DNA default not being assigned, move reusable code to utility functions and commit the changes tomorrow</li>
+<li>Created a new remote repo on GitHub based on Campbell's advice. The concept of working with 2 remote repos is still a bit confusing so I'll probably spend sometime on weekend trying to figure it out.</li>
+<li>Rewrote the logic for finding the center of selected UVs in my implementation. Previous logic simply took the average of all islands' location (weighted average of all faces would have been better). New implementation works by considering the bounding box center of all selected UVs together.</li></ul>
+<h4><span class="mw-headline" id="June_9">June 9</span></h4>
+<ul><li>Created a new design task to keep track of my progress&#160;: <a rel="nofollow" class="external text" href="https://developer.blender.org/T88990">T88990</a></li>
+<li>Talked to my mentor (Campbell) and he suggested that I create a remote backup of my repo on GitHub. This could have all my temporary branches, I could experiment and regularly push changes/work to this remote that shouldn't be committed to the soc-2021-uv-editor-improvements branch . Will look into this tomorrow.</li>
+<li>Implementation for the first task (pack islands to correct/specified UDIM) is half done. Packing to closest UDIM works, while packing to specified UDIM still needs work -  logic for handling cases of specified UDIM not being defined within the current context.</li>
+<li>I've created a new variable inside the ToolSettings struct, but for some reason Blender doesn't assign the DNA default I've specified. Needs to be investigated.</li></ul>
+<h4><span class="mw-headline" id="June_8">June 8</span></h4>
+<ul><li>Created a new local branch&#160;: <code>soc-2021-uv-editor-improvements</code> and pushed a test commit to remote. Got the branch verified by my mentor (Campbell Barton) and seems to be set up correctly.</li>
+<li>Ran into a bunch of struct alignment errors when trying to add a new int variable to <code>Toolsettings</code> struct. Found the solution for this in <code>dna_genfile.c</code> and discovered that I could add a dummy variable (_pad#[]) to fill the memory gap I created when I added the new int variable.</li>
+<li>Cleaned up a bunch of comments I had left when I was studying the pack islands code. Mostly ensured they followed the code style guide.</li>
+<li>Created a draft for the GSoC design task. Will create the final task on phabricator by tomorrow.</li></ul>
+<h4><span class="mw-headline" id="June_7">June 7</span></h4>
+<p>Not much activity today since I had some college work to take care off.
+</p>
+<ul><li>Submitted my weekly report for 31 May to 6 June</li>
+<li>Continued studying the overlay engine code. Figured out how to adjust the density of the UDIM grid in the UV editor.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112122208
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.081 seconds
+Real time usage: 0.081 seconds
+Preprocessor visited node count: 290/1000000
+Preprocessor generated node count: 296/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5856-0!canonical and timestamp 20240112122208 and revision id 26607
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;oldid=26607">https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;oldid=26607</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 2 September 2021, at 06:46.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../Special:WhatLinksHere/User:Sidd017/DailyLog.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Sidd017/DailyLog" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../Special:Contributions/Sidd017.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../Special:Log/Sidd017.html">Logs</a></li><li id="t-userrights"><a href="../Special:UserRights/Sidd017.html">View user groups</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;oldid=26607" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Sidd017/DailyLog&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.081","walltime":"0.081","ppvisitednodes":{"value":290,"limit":1000000},"ppgeneratednodes":{"value":296,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112122208","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":143});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84455cfc493cb73d","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

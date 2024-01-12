@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Lukasstockner97/Weekly Reports - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Lukasstockner97/Weekly_Reports","wgTitle":"Lukasstockner97/Weekly Reports","wgCurRevisionId":36782,"wgRevisionId":36782,"wgArticleId":6303,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Lukasstockner97/Weekly_Reports","wgRelevantArticleId":6303,"wgRequestId":"ffe05c225ca3741955a80f09","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Lukasstockner97","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Lukasstockner97_Weekly_Reports rootpage-User_Lukasstockner97 skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="Weekly_Reports.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ALukasstockner97%2FWeekly+Reports" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Weekly_Reports.html#2023"><span class="tocnumber">1</span> <span class="toctext">2023</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Weekly_Reports.html#Week_30_to_37_.282023-07-25_to_2023-09-18.29"><span class="tocnumber">1.1</span> <span class="toctext">Week 30 to 37 (2023-07-25 to 2023-09-18)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Weekly_Reports.html#Week_28_and_29_.282023-07-11_to_2023-07-24.29"><span class="tocnumber">1.2</span> <span class="toctext">Week 28 and 29 (2023-07-11 to 2023-07-24)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Weekly_Reports.html#Week_25_to_27_.282023-06-20_to_2023-07-10.29"><span class="tocnumber">1.3</span> <span class="toctext">Week 25 to 27 (2023-06-20 to 2023-07-10)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Weekly_Reports.html#Week_24_.282023-06-13_to_2023-06-19.29"><span class="tocnumber">1.4</span> <span class="toctext">Week 24 (2023-06-13 to 2023-06-19)</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="Weekly_Reports.html#Week_22_and_23_.282023-05-29_to_2023-06-12.29"><span class="tocnumber">1.5</span> <span class="toctext">Week 22 and 23 (2023-05-29 to 2023-06-12)</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Weekly_Reports.html#Week_20_and_21_.282023-05-16_to_2023-05-28.29"><span class="tocnumber">1.6</span> <span class="toctext">Week 20 and 21 (2023-05-16 to 2023-05-28)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Weekly_Reports.html#Week_19_.282023-05-08_to_2023-05-15.29"><span class="tocnumber">1.7</span> <span class="toctext">Week 19 (2023-05-08 to 2023-05-15)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Weekly_Reports.html#Week_18_.282023-05-01_to_2023-05-07.29"><span class="tocnumber">1.8</span> <span class="toctext">Week 18 (2023-05-01 to 2023-05-07)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Weekly_Reports.html#Week_4_and_5_.282023-01-23_to_2023-02-05.29"><span class="tocnumber">1.9</span> <span class="toctext">Week 4 and 5 (2023-01-23 to 2023-02-05)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="Weekly_Reports.html#2022"><span class="tocnumber">2</span> <span class="toctext">2022</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="Weekly_Reports.html#Week_48_to_3_.282022-11-28_to_2023-01-22.29"><span class="tocnumber">2.1</span> <span class="toctext">Week 48 to 3 (2022-11-28 to 2023-01-22)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Weekly_Reports.html#Week_43_to_47_.282022-10-24_to_2022-11-27.29"><span class="tocnumber">2.2</span> <span class="toctext">Week 43 to 47 (2022-10-24 to 2022-11-27)</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="Weekly_Reports.html#Week_41_and_42_.282022-10-09_to_2022-10-23.29"><span class="tocnumber">2.3</span> <span class="toctext">Week 41 and 42 (2022-10-09 to 2022-10-23)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Weekly_Reports.html#Week_40_.282022-10-02_to_2022-10-08.29"><span class="tocnumber">2.4</span> <span class="toctext">Week 40 (2022-10-02 to 2022-10-08)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Weekly_Reports.html#Week_31_to_33_.282022-07-25_to_2022-08-21.29"><span class="tocnumber">2.5</span> <span class="toctext">Week 31 to 33 (2022-07-25 to 2022-08-21)</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="Weekly_Reports.html#Week_29_and_30_.282022-07-11_to_2022-07-24.29"><span class="tocnumber">2.6</span> <span class="toctext">Week 29 and 30 (2022-07-11 to 2022-07-24)</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="Weekly_Reports.html#Week_27_and_28_.282022-06-28_to_2022-07-10.29"><span class="tocnumber">2.7</span> <span class="toctext">Week 27 and 28 (2022-06-28 to 2022-07-10)</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="Weekly_Reports.html#Week_26_.282022-06-20_to_2022-06-27.29"><span class="tocnumber">2.8</span> <span class="toctext">Week 26 (2022-06-20 to 2022-06-27)</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="Weekly_Reports.html#Week_25_.282022-06-13_to_2022-06-19.29"><span class="tocnumber">2.9</span> <span class="toctext">Week 25 (2022-06-13 to 2022-06-19)</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="Weekly_Reports.html#Week_24_.282022-06-06_to_2022-06-12.29"><span class="tocnumber">2.10</span> <span class="toctext">Week 24 (2022-06-06 to 2022-06-12)</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="Weekly_Reports.html#Week_22_and_23_.282022-05-23_to_2022-06-05.29"><span class="tocnumber">2.11</span> <span class="toctext">Week 22 and 23 (2022-05-23 to 2022-06-05)</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="Weekly_Reports.html#Week_21_.282022-05-16_to_2022-05-22.29"><span class="tocnumber">2.12</span> <span class="toctext">Week 21 (2022-05-16 to 2022-05-22)</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Weekly_Reports.html#Week_20_.282022-05-09_to_2022-05-15.29"><span class="tocnumber">2.13</span> <span class="toctext">Week 20 (2022-05-09 to 2022-05-15)</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="Weekly_Reports.html#Week_19_.282022-05-02_to_2022-05-08.29"><span class="tocnumber">2.14</span> <span class="toctext">Week 19 (2022-05-02 to 2022-05-08)</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="Weekly_Reports.html#Week_18_.282022-04-25_to_2022-05-01.29"><span class="tocnumber">2.15</span> <span class="toctext">Week 18 (2022-04-25 to 2022-05-01)</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="Weekly_Reports.html#Week_17_.282022-04-18_to_2022-04-24.29"><span class="tocnumber">2.16</span> <span class="toctext">Week 17 (2022-04-18 to 2022-04-24)</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="Weekly_Reports.html#Week_16_.282022-04-11_to_2022-04-17.29"><span class="tocnumber">2.17</span> <span class="toctext">Week 16 (2022-04-11 to 2022-04-17)</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="Weekly_Reports.html#Week_15_.282022-04-04_to_2022-04-10.29"><span class="tocnumber">2.18</span> <span class="toctext">Week 15 (2022-04-04 to 2022-04-10)</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="Weekly_Reports.html#Week_14_.282022-03-28_to_2022-04-03.29"><span class="tocnumber">2.19</span> <span class="toctext">Week 14 (2022-03-28 to 2022-04-03)</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="Weekly_Reports.html#Week_13_.282022-03-21_to_2022-03-27.29"><span class="tocnumber">2.20</span> <span class="toctext">Week 13 (2022-03-21 to 2022-03-27)</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="Weekly_Reports.html#Week_12_.282022-03-14_to_2022-03-20.29"><span class="tocnumber">2.21</span> <span class="toctext">Week 12 (2022-03-14 to 2022-03-20)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Lukasstockner97/Weekly Reports</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="2023">2023</span></h2>
+<h3><span id="Week_30_to_37_(2023-07-25_to_2023-09-18)"></span><span class="mw-headline" id="Week_30_to_37_.282023-07-25_to_2023-09-18.29">Week 30 to 37 (2023-07-25 to 2023-09-18)</span></h3>
+<ul><li>Was at SIGGRAPH and then on vacation</li>
+<li>Principled v2:
+<ul><li>Updated and merged Principled Sheen rework PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109949">PR #109949</a>)</li>
+<li>Created, updated and merged Principled layering rework PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110864">PR #110864</a>)</li>
+<li>Created, updated and merged Principled Subsurface rework PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110989">PR #110989</a>)</li>
+<li>Created, updated and merged Principled Clearcoat rework PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110993">PR #110993</a>)</li>
+<li>Created, updated and merged Principled Emission rework PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111155">PR #111155</a>)</li>
+<li>Created OSL closure layering bug fix PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112213">PR #112213</a>)</li>
+<li>Created Principled Metallic improvement PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112551">PR #112551</a>)</li></ul></li>
+<li>Fixes for OSL vs. SVM differences:
+<ul><li>Backfacing IOR in generalized_schlick_bsdf (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65d56143ab67fcbf3b1db3aacca1a58c488a354f">65d56143ab</a>)</li>
+<li>Subsurface roughness (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c082e43f1e210c056675c509c80eaf5424db92d4">c082e43f1e</a>)</li>
+<li>Layering of Principled Emission (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26ed11704989e8c32a4bcbfb48d55abab2463401">26ed117049</a>)</li>
+<li>Reflection Normal adjustment on curves (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02ace97df7aa5993e1029ba153aea1df2269f453">02ace97df7</a>)</li>
+<li>Geometry Node Tangent output on curves (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c963e22a0cf5f22b71a76a05a5acb48bb6d98290">c963e22a0c</a>)</li></ul></li>
+<li>Various fixes:
+<ul><li>Build error after ShaderData change (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b19011e2dbe16aee2ca934b7c183f27ae993fde8">b19011e2db</a>)</li>
+<li>Tests error after Sheen change (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4bd8f24b8123077cb2d86d0476cc873dde51f420">4bd8f24b81</a>)</li>
+<li>Unused argument in Microfacet BSDF code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/825cc14e74dcb9871f4c73f4ea48c07f2eee4d48">825cc14e74</a>)</li>
+<li>Wasteful reflection normal calculation when not using Coat (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6296acdba44636e3a749f573c7e9a0a488a333e">e6296acdba</a>)</li>
+<li>Unused Normal input on Hair BSDF (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5939810b3c7954f13ac4c0c8cc32b1e924767f4f">5939810b3c</a>)</li>
+<li>Wasteful Closure Extra allocation for Chiang Hair BSDF (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b92284f863b69adf8292ff4bd4a12f2387d16bf">1b92284f86</a>)</li></ul></li>
+<li>Reviews:
+<ul><li>Reviewed (and made minor changes to) Microfacet Hair BSDF PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105600">PR #105600</a>)</li>
+<li>Reviewed Multiscatter GGX default PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111267">PR #111267</a>)</li>
+<li>Reviewed Microfacet Fresnel calculation refactor PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112158">PR #112158</a>)</li>
+<li>Reviewed Principled BSDF node panel PR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112314">PR #112314</a>)</li></ul></li>
+<li>Various Pull requests:
+<ul><li>Opened PR for SVM cleanup (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110443">PR #110443</a>)</li>
+<li>Opened WIP PR for Layer BSDF node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110444">PR #110444</a>)</li></ul></li></ul>
+<h3><span id="Week_28_and_29_(2023-07-11_to_2023-07-24)"></span><span class="mw-headline" id="Week_28_and_29_.282023-07-11_to_2023-07-24.29">Week 28 and 29 (2023-07-11 to 2023-07-24)</span></h3>
+<ul><li>Merged Sheen BSDF (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108869">PR #108869</a>)</li>
+<li>Created and merged cleanup to shrink ShaderData (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110366">PR #110366</a>)</li>
+<li>Rebased Principled Sheen rework (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109949">PR #109949</a>)</li>
+<li>Merged OSL Clearcoat cleanup (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109951">PR #109951</a>)</li>
+<li>Merged Transmission Roughness removal (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109950">PR #109950</a>)</li>
+<li>Fixed Fresnel handling in MNEE caustics code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8639bf013cdc93ee13fb6eec3f49203625a13e01">8639bf013c</a>)</li>
+<li>Continued to work on upcoming Principled changes (Specular changes, Subsurface changes)</li>
+<li>Implemented BSDF layering for GPU OSL and SVN</li>
+<li>University exam today, so no PR for the last two points yet</li></ul>
+<h3><span id="Week_25_to_27_(2023-06-20_to_2023-07-10)"></span><span class="mw-headline" id="Week_25_to_27_.282023-06-20_to_2023-07-10.29">Week 25 to 27 (2023-06-20 to 2023-07-10)</span></h3>
+<ul><li>Reworked the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108869">Sheen BSDF PR</a> to no longer be WIP. Now it implements the LTC-based model, with versioning code etc., so it's in a state where it could be merged.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109949">a WIP PR</a> for replacing the Sheen component of the Principled BSDF, is waiting for the first Sheen PR to be merged.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109950">a PR</a> for removing the transmission roughness option from the Principled BSDF. Later found an issue with the MNEE caustics code, still needs a fix before merging.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109951">a PR</a> for simplifying the OSL implementation of the clearcoat component.</li>
+<li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/LukasStockner/blender/src/branch/principled">a branch to my repo</a> that combines all the PRs above, plus some commits that still need to be finished and split up into PRs:
+<ul><li>Replacing the Principled Diffuse component with a regular lambertian Diffuse component</li>
+<li>Removing the Principled Diffuse code, since it's now unused</li>
+<li>Implementing layering support in OSL
+<ul><li>This one still needs some work to support it on GPUs as well, the current code is CPU-only</li></ul></li>
+<li>Reworking the Principled BSDF to use layer stacking to enforce energy conservation</li>
+<li>Using precomputed tables for accurately estimating specular layer albedo for correct layering
+<ul><li>We should eventually have tables for all layerable closures, but for Principled this one and Clearcoat are the two that matter</li></ul></li></ul></li>
+<li>Started working on the Principled BSDF Specular input rework (change Specular Tint to color input, change Specular to non-physical multiplier)</li>
+<li>Started working on Principled BSDF Subsurface rework (removing SSS Color, changing Subsurface input to scale, adding entry refraction)</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109902">Sharp Distribution cleanup PR</a></li></ul>
+<h3><span id="Week_24_(2023-06-13_to_2023-06-19)"></span><span class="mw-headline" id="Week_24_.282023-06-13_to_2023-06-19.29">Week 24 (2023-06-13 to 2023-06-19)</span></h3>
+<ul><li>Merged the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108211">#108211 (Glass BSDF glossy/transmission channel split)</a> fix from last week.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105555">#105555</a> (a longstanding bug related to baking indirect light).</li>
+<li>Created and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108955">PR #108955</a> to fix an unreported bug that caused some direct light (especially from the background) leaking into indirect-only baking.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108996">PR #108996</a> to change how the sun lamp (aka distant lamp) in Cycles works, in order to fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108957">#108957</a>. With this change, the brightness of the sun lamp is constant across its full extent, while previous versions would have a darker center at high angles.</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108869">the Sheen BSDF PR #108869</a> to also have OSL support. Test builds are available <a rel="nofollow" class="external text" href="https://builder.blender.org/download/patch/PR108869/">here</a>.</li></ul>
+<h3><span id="Week_22_and_23_(2023-05-29_to_2023-06-12)"></span><span class="mw-headline" id="Week_22_and_23_.282023-05-29_to_2023-06-12.29">Week 22 and 23 (2023-05-29 to 2023-06-12)</span></h3>
+<ul><li>Created WIP patch for new sheen models (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108869">#108869</a>). One of those will be used for Principled v2, but for now I'm adding both as options to the Velvet BSDF to get feedback on which one is better.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108560">#108560</a> by adding support for setting light groups for instanced objects (meshes and lamps) through the collection instance. If the original object already has a light group assigned, it continues to use it for its instances.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/LukasStockner/blender/src/branch/glass-albedo-fix">a branch</a> to fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108211">#108211</a>. This changes the diffuse/glossy/transmission split logic to be able to have both glossy and transmission contributions from a single closure.</li>
+<li>Fixed asserts in the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3b4182f272790eb6746a8cf49b0d163c94470db8">Principled BSDF</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/801897ed4eb219ab226be7cc8a8dbebc0cb508c6">Velvet BSDF</a> test cases.</li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107958">the MultiGGX removal</a>.</li></ul>
+<h3><span id="Week_20_and_21_(2023-05-16_to_2023-05-28)"></span><span class="mw-headline" id="Week_20_and_21_.282023-05-16_to_2023-05-28.29">Week 20 and 21 (2023-05-16 to 2023-05-28)</span></h3>
+<p>In week 20, I implemented two missing parts of the MultiGGX removal patch: On the one hand, I had forgotten OSL support. Turns out that the OSL microfacet handling could be simplified a lot in general, so in addition to making it work the patch now also removes 10 or so legacy closure types from the OSL interface. On the other hand, the albedo passes (Diffuse/Glossy/Transmission Color) had not worked correctly. The fix is not as elegant as I'd like, but it works and it's the best option to minimize memory requirements that I can see.
+The patch is ready to be merged now.
+</p><p>Between week 21 and 22, I'm on vacation, so I didn't merge it yet. I did work on the sheen BSDFs before I left, and will post the patch (and merge the MultiGGX patch) in a few days.
+</p>
+<h3><span id="Week_19_(2023-05-08_to_2023-05-15)"></span><span class="mw-headline" id="Week_19_.282023-05-08_to_2023-05-15.29">Week 19 (2023-05-08 to 2023-05-15)</span></h3>
+<p><b>Finally</b> finished the MultiGGX removal and albedo scaling patch after spending waay too much time getting lost in trying to find an accurate solution for the multibounce Fresnel for the generalized Schlick model. Finally decided that it makes no sense to try and account for the tint factors, which simplifies the whole thing a lot.
+This was the main thing blocking Principled v2.
+</p>
+<h3><span id="Week_18_(2023-05-01_to_2023-05-07)"></span><span class="mw-headline" id="Week_18_.282023-05-01_to_2023-05-07.29">Week 18 (2023-05-01 to 2023-05-07)</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/72011">#72011</a> (Quantization artifacts when baking bevel normals to 8-bit image)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107577">#107577</a> (Crash when using denoising with Ashikhmin-Shirley BSDF)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107580">#107580</a> (Report about the Glossy Color change in 3.6)</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104445">#104445</a> (Merging Glossy and Anisotropic BSDF)</li></ul>
+<h3><span id="Week_4_and_5_(2023-01-23_to_2023-02-05)"></span><span class="mw-headline" id="Week_4_and_5_.282023-01-23_to_2023-02-05.29">Week 4 and 5 (2023-01-23 to 2023-02-05)</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103888">T103888</a> (Side-by-side stereoscopic renders in 3.3.1 ignore color management)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T104041">T104041</a> (Incorrect diffuse color pass for Sheen)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T103876">T103876</a> (AO node is not supported for direct lighting transparency)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T103795">T103795</a> (Emissive meshes and shadowcatcher)</li>
+<li>Started submitting pieces of the Principled v2 work:
+<ul><li>Created and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D17099">D17099</a> (Switching to non-separable shadowing-masking term for Microfacet BSDFs)</li>
+<li>Created and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D17100">D17100</a> (Using a faster and exact GGX VNDF sampling algorithm)</li>
+<li>Created and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D17101">D17101</a> (Reorganizing Fresnel handling in the Microfacet BSDFs)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D17123">D17123</a> (Merge Anisotropic BSDF node into Glossy BSDF node)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D17149">D17149</a> (Use per-microfacet Fresnel term for Glass closures)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D17211">D17211</a> (Reorganizing Fresnel handling further, implement OSL MaterialX closures)</li>
+<li>Working on splitting out the next step: Removing the MultiGGX code</li></ul></li>
+<li>Created and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D17107">D17107</a> (Cycles tests comparison helper option)</li>
+<li>Committed <a rel="nofollow" class="external text" href="http://developer.blender.org/rB329eeacc66d13c9007e22f200304ebe902737abb">rB329eeacc66d13c9007e22f200304ebe902737abb</a> (Small Cycles closure cleanup)</li></ul>
+<h2><span class="mw-headline" id="2022">2022</span></h2>
+<h3><span id="Week_48_to_3_(2022-11-28_to_2023-01-22)"></span><span class="mw-headline" id="Week_48_to_3_.282022-11-28_to_2023-01-22.29">Week 48 to 3 (2022-11-28 to 2023-01-22)</span></h3>
+<ul><li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T72011">T72011</a> (artifacts when baking Bevel normals in Cycles)
+<ul><li>Created and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D16727">D16727</a> to fix one of the two issues with Bevel baking</li></ul></li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103067">T103067</a> (Workbench render crash in 3.4)</li>
+<li>Looked into and closed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103255">T103255</a> (Unexpected behavior when combining Color Attributes with White Noise Texture)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T98951">T98951</a> (Incorrect Depth Pass rendering for Shadow Catcher Objects)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T103327">T103327</a>, was already fixed</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103507">T103507</a> (World background contributing to wrong lightgroup)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103403">T103403</a> (Lightgroups receiving light on shadowcatcher objects)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103408">T103408</a> (Cycles viewport deadlock)</li>
+<li>Looked into and closed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103491">T103491</a> (Black areas in Refraction BSDF)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T94698">T94698</a> (Incorrect light passes with volumetric scattering)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T95244">T95244</a> (AO pass broken for shadow catcher objects)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T94752">T94752</a> (Incorrect stereoscopic panoramas)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T89037">T89037</a> (Several Cycles issues with objects with negative scale)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T88849">T88849</a> (Slightly incorrect handling of motion blur shutter curve)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T103786">T103786</a> (Missing viewport update for shadowcatcher self-shadowing)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T102761">T102761</a> (New particles aren't rendered when Vector pass is enabled)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T102920">T102920</a> (Incorrect handling of muted nodes in Cycles)</li>
+<li>Started creating additional Cycles tests to cover some of the bugs above</li>
+<li>Looked into updating the Node socket Panel patch, still need to discuss data layout further</li>
+<li>Started splitting some of the parts of Principled v2 out into separate patches can be reviewed, first up are Microfacet changes and removal of MultiGGX code</li>
+<li>Working on finishing several changes to Principled v2 so they can be pushed (thin sheet mode, metallic thin film, new sheen model, artistic controls)</li>
+<li>Christmas break&#160;:)</li></ul>
+<h3><span id="Week_43_to_47_(2022-10-24_to_2022-11-27)"></span><span class="mw-headline" id="Week_43_to_47_.282022-10-24_to_2022-11-27.29">Week 43 to 47 (2022-10-24 to 2022-11-27)</span></h3>
+<ul><li>Blender Conference!</li>
+<li>Continued work on Principled v2
+<ul><li>Implemented thin film option for iridescence effects (<a rel="nofollow" class="external text" href="http://developer.blender.org/rBa8869c97646b6cc253cd23088f52149de0f87c4b">rBa8869c97646b6cc253cd23088f52149de0f87c4b</a>)</li>
+<li>Implemented node sections to keep large nodes manageable (<a rel="nofollow" class="external text" href="http://developer.blender.org/D16633">D16633</a>)</li>
+<li>Added Wavelength unit for thin film and wavelength node (<a rel="nofollow" class="external text" href="http://developer.blender.org/rB45cd4c9c829c903c2596c6c2054ebda5e31f7c44">rB45cd4c9c829c903c2596c6c2054ebda5e31f7c44</a>)</li>
+<li>Various small fixes and improvements</li>
+<li>Worked on the following topics, not yet finished:
+<ul><li>Fixing SSS on GPUs</li>
+<li>Nested dielectrics</li>
+<li>Thin Sheet mode</li>
+<li>Artistic controls</li>
+<li>Thin Film support for metals</li>
+<li>Improved sheen model: <a rel="nofollow" class="external free" href="https://tizianzeltner.com/projects/Zeltner2022Practical/">https://tizianzeltner.com/projects/Zeltner2022Practical/</a></li></ul></li></ul></li>
+<li>Merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D16317">D16317</a> (Parallel ImBuf conversion to float)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T92416">T92416</a> (First render with unknown image colorspace looks different) with <a rel="nofollow" class="external text" href="http://developer.blender.org/D16427">D16427</a></li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D16627">D16627</a> to fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T98951">T98951</a> (Shadow catcher objects are double-counting data passes)</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T101726">T101726</a> (Cycles does not generate the exact same images when a scene is rendered twice)</li></ul>
+<h3><span id="Week_41_and_42_(2022-10-09_to_2022-10-23)"></span><span class="mw-headline" id="Week_41_and_42_.282022-10-09_to_2022-10-23.29">Week 41 and 42 (2022-10-09 to 2022-10-23)</span></h3>
+<ul><li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T101270">T101270</a> (Random Object Info not working on instanced curves)</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T101263">T101263</a> (Vector pass not being saved correctly when using the File Output node)
+<ul><li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D16257">D16257</a> to fix it</li></ul></li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T99450">T99450</a> (Animated Holdout not updating on frame change)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T98672">T98672</a> (Noise texture shows incorrect behaviour for large scale values)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T99151">T99151</a> (Regression: cycles not updated when off object types in "View object Types" menu)</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T92028">T92028</a> (Cycles: not updating for homogeneous to heterogeneous volume change in viewport render), was fixed already</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T92416">T92416</a> (First render of barbershop appears different)</li>
+<li>Investigated <a rel="nofollow" class="external text" href="http://developer.blender.org/T93187">T93187</a> (Problem mixing Hair shader using color ramp and Hair Info Intercept value), was fixed already</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T93382">T93382</a> (Blender still generates subsurface render passes)
+<ul><li>Ended up being a overall change to the way Blender handles render passes, see <a rel="nofollow" class="external text" href="http://developer.blender.org/D16295">D16295</a></li></ul></li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T94136">T94136</a> (Cycles: No Hair Shadows with Transparent BSDF)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T101969">T101969</a> (Crash when using large texture with nonstandard colorspace)
+<ul><li>Also created <a rel="nofollow" class="external text" href="http://developer.blender.org/D16317">D16317</a> to speed up the image loading here</li></ul></li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T101329">T101329</a> (Regression: EXR 'JPG Preview' doesn't use color space anymore)</li></ul>
+<h3><span id="Week_40_(2022-10-02_to_2022-10-08)"></span><span class="mw-headline" id="Week_40_.282022-10-02_to_2022-10-08.29">Week 40 (2022-10-02 to 2022-10-08)</span></h3>
+<p>Finally back and able to spend time on Blender properly again!
+</p>
+<ul><li>Merged latest master changes (e.g. Spectral data type preparation, ray differentials change) into Principled v2 branch</li>
+<li>Unified old and new Principled clearcoat BSDFs</li>
+<li>Started working on more general Fresnel control for Principled v2 (to allow e.g. compatibility with glTF and Spec/Gloss workflow)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T101185">T101185</a> (Crash in the new Mikktspace code for meshes consisting only of invalid triangles)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T101651">T101651</a> (Cycles crash when device initialization fails)</li>
+<li>Fixed Cycles side of <a rel="nofollow" class="external text" href="http://developer.blender.org/T101702">T101702</a> (Crash when using a boolean input in an OSL script)</li></ul>
+<h3><span id="Week_31_to_33_(2022-07-25_to_2022-08-21)"></span><span class="mw-headline" id="Week_31_to_33_.282022-07-25_to_2022-08-21.29">Week 31 to 33 (2022-07-25 to 2022-08-21)</span></h3>
+<ul><li>Vacation! I was away for most of the time, but I did manage to get some stuff in.</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D15589">D15589</a> (Mikktspace C++ port for more performance)
+<ul><li>Most of the time I had was spent on the initial port as well as tons of cleanup and optimization</li>
+<li>Also created <a rel="nofollow" class="external text" href="http://developer.blender.org/D15636">D15636</a> for moving the relevant BKE files to C++</li></ul></li>
+<li>Looked into bugs <a rel="nofollow" class="external text" href="http://developer.blender.org/T99450">T99450</a> and <a rel="nofollow" class="external text" href="http://developer.blender.org/T99565">T99565</a></li>
+<li>Continued working on Principled v2
+<ul><li>Not a lot though, most of the time went into Mikktspace</li></ul></li></ul>
+<h3><span id="Week_29_and_30_(2022-07-11_to_2022-07-24)"></span><span class="mw-headline" id="Week_29_and_30_.282022-07-11_to_2022-07-24.29">Week 29 and 30 (2022-07-11 to 2022-07-24)</span></h3>
+<ul><li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D13522">D13522</a> (Nishita Sky support in Eevee), should be ready for merging now</li>
+<li>Merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D14740">D14740</a> (Render: Update lightgroup membership in objects and world if lightgroup is renamed)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T98113">T98113</a> (Black dots in Shadow Catcher)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T98367">T98367</a> (Light group passes do not work when shadow catcher is used)</li>
+<li>Continued working on Principled v2
+<ul><li>Looked through user feedback, especially regarding Fresnel term</li>
+<li>Spent more time looking into how others are doing Fresnel controls to ensure broad compatibility</li>
+<li>Replaced Generalized Schlick Fresnel for the metallic component with <a rel="nofollow" class="external text" href="https://substance3d.adobe.com/documentation/s3d/files/225969599/225969601/1/1647019577092/Adobe+Standard+Material+-+Technical+Documentation.pdf">Adobe's F82 model</a>
+<ul><li>Provides more realistic look (darkening at near-grazing angles, full reflection at grazing angles)</li>
+<li>Compatible with Principled v1 at default (edge color white)</li></ul></li>
+<li>Created script for fitting the F82 metallic model to real-world metal measurements
+<ul><li>Provided values and example renders for several metals in <a rel="nofollow" class="external text" href="http://developer.blender.org/T99447">T99447</a></li></ul></li></ul></li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D15485">D15485</a>, the sampling patch from the last weeks</li></ul>
+<h3><span id="Week_27_and_28_(2022-06-28_to_2022-07-10)"></span><span class="mw-headline" id="Week_27_and_28_.282022-06-28_to_2022-07-10.29">Week 27 and 28 (2022-06-28 to 2022-07-10)</span></h3>
+<ul><li>Continued working on Principled v2
+<ul><li>Published first version of the branch (<a rel="nofollow" class="external free" href="https://developer.blender.org/diffusion/B/history/principled-v2/">https://developer.blender.org/diffusion/B/history/principled-v2/</a>)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/T99447">T99447</a>, a task for tracking development progress</li>
+<li>Fixed several bugs (e.g. incorrect glass reflection/transmission pick, black glass at zero roughness)</li>
+<li>Started working on Iridescence component</li>
+<li>Looked closer into what others in the field are doing for compatibility</li></ul></li>
+<li>Went to EGSR 2022, saw many great papers and talked to many great people</li>
+<li>Revisited the sampling work from week 22/23, WIP version of the patch will go up soon
+<ul><li>Significantly reduces noise in some cases
+<ul><li>The improved stratification helps when individual dimensions are causing the noise (e.g. time dimension for strong motion blur, lens dimensions for DoF, light picking dimension for direct lighting)</li>
+<li>When the noise comes from the overall light transport (e.g. indirect lighting), the effect is not really noticeable</li></ul></li>
+<li>Some details still need to be worked out (e.g. jittering distance controls)</li></ul></li></ul>
+<h3><span id="Week_26_(2022-06-20_to_2022-06-27)"></span><span class="mw-headline" id="Week_26_.282022-06-20_to_2022-06-27.29">Week 26 (2022-06-20 to 2022-06-27)</span></h3>
+<ul><li>Continued working on Principled v2
+<ul><li>Fixed incorrect clearcoat tint logic
+<ul><li>Spent too much time trying to get an analytical and later numerical approximation to the average exit bounce extinction, ended up just leaving a comment for now</li></ul></li>
+<li>Replaced GTR1 distribution for clearcoat with GGX</li>
+<li>Implemented proper energy conservation for diffuse/SSS and clearcoat layers</li></ul></li>
+<li>Started reviewing <a rel="nofollow" class="external text" href="http://developer.blender.org/D15286">D15286</a> (path guiding)</li>
+<li>Started reviewing current state of <a rel="nofollow" class="external text" href="http://developer.blender.org/D14664">D14664</a>) (GSoC multi light sampling)</li>
+<li>Started reading EGSR 2022 papers</li></ul>
+<h3><span id="Week_25_(2022-06-13_to_2022-06-19)"></span><span class="mw-headline" id="Week_25_.282022-06-13_to_2022-06-19.29">Week 25 (2022-06-13 to 2022-06-19)</span></h3>
+<ul><li>Continued working on Principled v2
+<ul><li>Basic components are all working now</li>
+<li>Cleanup is still needed, but probably good enough to publish as a branch</li>
+<li>Spent a lot of time on trying to avoid or shrink albedo LUTs, unfortunately with mixed results</li></ul></li></ul>
+<h3><span id="Week_24_(2022-06-06_to_2022-06-12)"></span><span class="mw-headline" id="Week_24_.282022-06-06_to_2022-06-12.29">Week 24 (2022-06-06 to 2022-06-12)</span></h3>
+<ul><li>Continuing work on Principled, Sampling and Mikktspace</li>
+<li>Created Wiki page with notes regarding Principled: <a rel="nofollow" class="external free" href="Principled_v2.html">https://wiki.blender.org/wiki/User:Lukasstockner97/Principled_v2</a></li></ul>
+<h3><span id="Week_22_and_23_(2022-05-23_to_2022-06-05)"></span><span class="mw-headline" id="Week_22_and_23_.282022-05-23_to_2022-06-05.29">Week 22 and 23 (2022-05-23 to 2022-06-05)</span></h3>
+<ul><li>Worked on "Principled v2"
+<ul><li>Refactored SVM implementation of Principled node to clean up input passing</li>
+<li>Split SVM implementation of old Principled BSDF into components (diffuse+SSS, specular, glass etc.)</li>
+<li>Started implementing components of new Principled BSDF</li></ul></li>
+<li>Spent some time looking into Cycles sampling improvements
+<ul><li>Better hash function for reordering samples, preserving 2D stratification for PMJ during reordering, proper hash-based Owen scrambling, padding Sobol sequence to avoid higher dimension vectors...</li>
+<li>Got some promising results but needs further investigation</li>
+<li>Will also look into screen-space blue noise</li></ul></li>
+<li>Ported Mikktspace tangent code to C++
+<ul><li>Allows to simplify code considerably</li>
+<li>Currently ~30% faster</li>
+<li>New code opens up parallelization opportunities</li>
+<li>Many additional small optimizations possible (e.g. SIMDify vector operations, use saved memory to cache normals, ...)</li>
+<li>Should also look into parallelizing tangent computation across meshes in Cycles since this step does not make use of the Blender API</li></ul></li></ul>
+<h3><span id="Week_21_(2022-05-16_to_2022-05-22)"></span><span class="mw-headline" id="Week_21_.282022-05-16_to_2022-05-22.29">Week 21 (2022-05-16 to 2022-05-22)</span></h3>
+<ul><li>Spent the entire week on-site in Amsterdam</li>
+<li>Cleaned up the Microfacet code further to improve maintainability</li>
+<li>Replaced Multi-scattering GGX with a albedo-scaling factor on top of the regular GGX closures</li>
+<li>Worked on design for "Principled v2" (placeholder name) and started implementation</li>
+<li>Still need to create a design task and branch</li></ul>
+<h3><span id="Week_20_(2022-05-09_to_2022-05-15)"></span><span class="mw-headline" id="Week_20_.282022-05-09_to_2022-05-15.29">Week 20 (2022-05-09 to 2022-05-15)</span></h3>
+<ul><li>Not a lot happened this week, I spent more time on university so I can spend the entire next week on Blender while I'm in Amsterdam.</li>
+<li>Mostly researched options for the Principled BSDF work
+<ul><li>The entire thing might be growing from a few small fixes into a Principled v2 at this point</li>
+<li>Goal would be to "catch up" to improvements in the physically-based shading space over the last few years</li>
+<li>Tricky part will be balancing flexibility and power vs. ease of use (avoid having 50 inputs...)</li></ul></li></ul>
+<h3><span id="Week_19_(2022-05-02_to_2022-05-08)"></span><span class="mw-headline" id="Week_19_.282022-05-02_to_2022-05-08.29">Week 19 (2022-05-02 to 2022-05-08)</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T97169">T97169</a>, then realized that a commit with the same fix (for a different bug) had already been committed a few days ago and I hadn't updated my checkout&#160;:(</li>
+<li>Looked into some other open bugs (<a rel="nofollow" class="external text" href="http://developer.blender.org/T96606">T96606</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T96719">T96719</a>, and a bunch of others related to Multiscattering GGX)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14889">D14889</a> (GGX Microfacet refactor)
+<ul><li>Not much changes from the user perspective, just slightly brighter reflections at grazing angles due to a more accurate shadowing-masking function</li>
+<li>Also basically no impact on performance or noise, but makes the code easier to understand and maintain</li>
+<li>Finally produces expected results for approximate multiscattering precomputation (see Week 17)</li></ul></li>
+<li>Got initial version of the two approximate multiscattering approaches working, will compare further
+<ul><li>Still needs glass version and color handling to properly replace the current multiscattering code</li>
+<li>Will create test build when it's ready for user feedback</li></ul></li></ul>
+<h3><span id="Week_18_(2022-04-25_to_2022-05-01)"></span><span class="mw-headline" id="Week_18_.282022-04-25_to_2022-05-01.29">Week 18 (2022-04-25 to 2022-05-01)</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14754">D14754</a> (LRU cache for dynamic Cycles kernels)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T96576">T96576</a> (Light leaks with Multiscatter GGX and normal maps)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14815">D14815</a> to fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T95644">T95644</a> (Object Attributes not updating when rendering on GPU)</li>
+<li>Started to fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T96718">T96718</a>, currently tracked it down to an uninitialized stack read in the SVM code of a shader</li>
+<li>Looked into the GGX issue mentioned last week a bit more, nothing solid yet. Might be related to different versions of the Smith shadowing term?</li>
+<li>More planning regarding Principled BSDF improvements, will write proper description soon.</li></ul>
+<h3><span id="Week_17_(2022-04-18_to_2022-04-24)"></span><span class="mw-headline" id="Week_17_.282022-04-18_to_2022-04-24.29">Week 17 (2022-04-18 to 2022-04-24)</span></h3>
+<ul><li>Merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D14675">D14675</a> (Speeing up tangent space computation)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14735">D14735</a>, fixes <a rel="nofollow" class="external text" href="http://developer.blender.org/T97386">T97386</a> (Nodes not draggable when clicking on labels since the tooltip change)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14740">D14740</a> (Updating lightgroup membership of objects and world when renaming lightgroups)</li>
+<li>Started to work on Principled BSDF improvements:
+<ul><li>Created precomputation code for the approximate multiscattering code, noticed discrepancy between Cycles' GGX and other renderers at grazing angles. Need to investigate further.</li>
+<li>Implemented improved GGX VNDF importance sampling code, doesn't make much difference for noise or render time but is simpler.</li></ul></li></ul>
+<h3><span id="Week_16_(2022-04-11_to_2022-04-17)"></span><span class="mw-headline" id="Week_16_.282022-04-11_to_2022-04-17.29">Week 16 (2022-04-11 to 2022-04-17)</span></h3>
+<ul><li>Merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D9967">D9967</a> (Node socket tooltip support), Blender is ready for adding socket descriptions now</li>
+<li>Fixed small unreported issue <a rel="nofollow" class="external text" href="http://developer.blender.org/rB6f1ad5f5e77c">rB6f1ad5f5e77c</a> (Same Material selection in grease pencil used the wrong hash type)</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14667">D14667</a> (Fix for UDIM texture detection)</li>
+<li>Looked into <a rel="nofollow" class="external text" href="http://developer.blender.org/T97378">T97378</a> (Slow initialization of viewport rendering when adding an unconnected Normal Map node)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14675">D14675</a> (Speeding up tangent space computation), also spent a lot of time on additional optimization that didn't really work out yet.</li>
+<li>Started to look into Principled BSDF improvements:
+<ul><li>Current ideas:
+<ul><li>Replacing the Monte-Carlo-based Multiscattering GGX with an approximate approach
+<ul><li>Would solve the same problem (darkening at high roughness) but reduce noise, render times and code complexity</li>
+<li>Two approaches to correction terms are known (Kelemen-style or Turquin-style), would prefer the latter currently</li></ul></li>
+<li>Add support for metallic Fresnel term using an artist-friendly parametrization (e.g. "edge color" input)
+<ul><li>Could maybe expose physical parameters in e.g. the Glossy BSDF</li></ul></li>
+<li>Fix current ad-hoc (and sometimes questionable) mixing of BSDF lobes by defining (and documenting!) a consistent and physically plausible model
+<ul><li>Includes reformulating the sheen and clearcoat parts as coatings (see SPI slides below)</li></ul></li>
+<li>Replacing diffuse entry into random-walk SSS by refraction, would improve the bright edges at low albedo</li>
+<li>Adding a thin sheet BSDF, possibly as a separate node?</li></ul></li>
+<li>Would need to remain close to the current BSDF of course to avoid notable changes in existing scenes</li>
+<li>Relevant material:
+<ul><li><a rel="nofollow" class="external text" href="https://blog.selfshadow.com/publications/s2015-shading-course/burley/s2015_pbs_disney_bsdf_notes.pdf">"Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering" by Brent Burley, main reference for the model used in the Principled BSDF</a></li>
+<li><a rel="nofollow" class="external text" href="https://blog.selfshadow.com/2018/05/13/multi-faceted-part-1/">"A Multi-Faceted Exploration" by Stephen Hill, great blog series about multiscattering corrections</a></li>
+<li><a rel="nofollow" class="external text" href="https://blog.selfshadow.com/publications/turquin/ms_comp_final.pdf">"Practical multiple scattering compensation for microfacet models" by Emmanuel Turquin, technical report about multiscattering correction</a></li>
+<li><a rel="nofollow" class="external text" href="https://blog.selfshadow.com/publications/s2017-shading-course/imageworks/s2017_pbs_imageworks_slides_v2.pdf">"Revisiting Physically Based Shading at Imageworks" by Christopher Kulla and Alejandro Conty, fantastic reference for physically-based BSDF models</a></li></ul></li></ul></li></ul>
+<h3><span id="Week_15_(2022-04-04_to_2022-04-10)"></span><span class="mw-headline" id="Week_15_.282022-04-04_to_2022-04-10.29">Week 15 (2022-04-04 to 2022-04-10)</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14395">D14395</a> (UDIM packing), ready for merge now.</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/T78008">T78008</a> (Light group improvement collection)</li>
+<li>Merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D14540">D14540</a> (Light Group UI improvement: Adding light groups from object/world properties)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T97159">T97159</a> (Color AOV passes missing their alpha pass since Blender 3.0)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14596">D14596</a> (Light group improvement: Operators for adding all used or removing all unused lightgroups)</li>
+<li>Started working on showing lightgroups in viewport rendering</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D9967">D9967</a> (Node socket tooltip support), much cleaner implementation now.</li></ul>
+<h3><span id="Week_14_(2022-03-28_to_2022-04-03)"></span><span class="mw-headline" id="Week_14_.282022-03-28_to_2022-04-03.29">Week 14 (2022-03-28 to 2022-04-03)</span></h3>
+<ul><li>Reviewed, polished and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D12871">D12871</a> (Cycles Light Groups)</li>
+<li>Reviewed and merged <a rel="nofollow" class="external text" href="http://developer.blender.org/D14527">D14527</a> (Fix for Light Groups on lamps)</li>
+<li>Fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T96978">T96978</a> (Emitters themselves not showing up in Light Groups)</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14395">D14395</a> (UDIM packing)</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D14540">D14540</a> (Light Group UI improvement: Adding light groups from object/world properties)</li></ul>
+<h3><span id="Week_13_(2022-03-21_to_2022-03-27)"></span><span class="mw-headline" id="Week_13_.282022-03-21_to_2022-03-27.29">Week 13 (2022-03-21 to 2022-03-27)</span></h3>
+<ul><li>Continued to catch up on code changes (e.g. C++ification of the core)</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D13522">D13522</a> (Nishita Sky support in Eevee) to address review comments.</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D9967">D9967</a> (Tooltip support for node sockets) to address review comments
+<ul><li>Uses a different approach now to reduce hackiness and also supports tooltips in the Material Properties tab</li>
+<li>Also spent way too much time digging through the UI code trying yet another approach that went nowhere...</li></ul></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14327">D14327</a> (Preparation for UDIM packing)</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D14395">D14395</a> (UDIM packing)</li>
+<li>Started reviewing <a rel="nofollow" class="external text" href="http://developer.blender.org/D12871">D12871</a> (Cycles Light Groups)</li></ul>
+<h3><span id="Week_12_(2022-03-14_to_2022-03-20)"></span><span class="mw-headline" id="Week_12_.282022-03-14_to_2022-03-20.29">Week 12 (2022-03-14 to 2022-03-20)</span></h3>
+<ul><li>Went through the onboarding process</li>
+<li>Set up my local development setup properly again</li>
+<li>Caught up on the development process changes and the Cycles-X architecture (not fully happy with my understanding yet, will continue, probably by fixing bugs)</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D13522">D13522</a> (Nishita Sky support in Eevee) and prepared compatibility with rewrite branch</li>
+<li>Updated <a rel="nofollow" class="external text" href="http://developer.blender.org/D9967">D9967</a> (Tooltip support for node sockets) and integrated the existing work on Geometry Node introspection. The actual tooltip content and showing them in the Material Properties tab is still TODO.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121625
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.167 seconds
+Real time usage: 0.167 seconds
+Preprocessor visited node count: 1698/1000000
+Preprocessor generated node count: 4465/1000000
+Post‐expand include size: 11760/2097152 bytes
+Template argument size: 4804/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   78.863      1 -total
+ 38.22%   30.143     12 Template:GitCommit
+ 24.78%   19.542    106 Template:Phab
+ 12.02%    9.482     18 Template:PullRequest
+ 10.56%    8.327     12 Template:GitCommit/PhabricatorParseDeprecated
+  8.60%    6.781     12 Template:GitCommit/PhabricatorParse
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6303-0!canonical and timestamp 20240112121625 and revision id 36782
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;oldid=36782">https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;oldid=36782</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 19 September 2023, at 01:22.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:Lukasstockner97/Weekly_Reports" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Lukasstockner97/Weekly_Reports" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../Special:Contributions/Lukasstockner97.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../Special:Log/Lukasstockner97.html">Logs</a></li><li id="t-userrights"><a href="../Special:UserRights/Lukasstockner97.html">View user groups</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;oldid=36782" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Lukasstockner97/Weekly_Reports&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.167","walltime":"0.167","ppvisitednodes":{"value":1698,"limit":1000000},"ppgeneratednodes":{"value":4465,"limit":1000000},"postexpandincludesize":{"value":11760,"limit":2097152},"templateargumentsize":{"value":4804,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   78.863      1 -total"," 38.22%   30.143     12 Template:GitCommit"," 24.78%   19.542    106 Template:Phab"," 12.02%    9.482     18 Template:PullRequest"," 10.56%    8.327     12 Template:GitCommit/PhabricatorParseDeprecated","  8.60%    6.781     12 Template:GitCommit/PhabricatorParse"]},"cachereport":{"timestamp":"20240112121625","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":214});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8445549e5964b8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

@@ -1,0 +1,3646 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:KevinDietrich/CyclesNodes - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:KevinDietrich/CyclesNodes","wgTitle":"KevinDietrich/CyclesNodes","wgCurRevisionId":24539,"wgRevisionId":24539,"wgArticleId":5808,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:KevinDietrich/CyclesNodes","wgRelevantArticleId":5808,"wgRequestId":"fc5f8ab3f0f16c2dc617672f","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"KevinDietrich","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_KevinDietrich_CyclesNodes rootpage-User_KevinDietrich skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="CyclesNodes.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AKevinDietrich%2FCyclesNodes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="CyclesNodes.html#Cycles_Nodes"><span class="tocnumber">1</span> <span class="toctext">Cycles Nodes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="CyclesNodes.html#Top_Level_Nodes"><span class="tocnumber">1.1</span> <span class="toctext">Top Level Nodes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="CyclesNodes.html#Alembic"><span class="tocnumber">1.1.1</span> <span class="toctext">Alembic</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="CyclesNodes.html#Alembic_Object"><span class="tocnumber">1.1.2</span> <span class="toctext">Alembic Object</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="CyclesNodes.html#Background"><span class="tocnumber">1.1.3</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="CyclesNodes.html#Camera"><span class="tocnumber">1.1.4</span> <span class="toctext">Camera</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="CyclesNodes.html#Film"><span class="tocnumber">1.1.5</span> <span class="toctext">Film</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="CyclesNodes.html#Geometry_Base"><span class="tocnumber">1.1.6</span> <span class="toctext">Geometry Base</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="CyclesNodes.html#Hair"><span class="tocnumber">1.1.7</span> <span class="toctext">Hair</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="CyclesNodes.html#Integrator"><span class="tocnumber">1.1.8</span> <span class="toctext">Integrator</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="CyclesNodes.html#Light"><span class="tocnumber">1.1.9</span> <span class="toctext">Light</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="CyclesNodes.html#Mesh"><span class="tocnumber">1.1.10</span> <span class="toctext">Mesh</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="CyclesNodes.html#Object"><span class="tocnumber">1.1.11</span> <span class="toctext">Object</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="CyclesNodes.html#Particle_System"><span class="tocnumber">1.1.12</span> <span class="toctext">Particle System</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="CyclesNodes.html#Pass"><span class="tocnumber">1.1.13</span> <span class="toctext">Pass</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="CyclesNodes.html#Shader"><span class="tocnumber">1.1.14</span> <span class="toctext">Shader</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="CyclesNodes.html#Volume"><span class="tocnumber">1.1.15</span> <span class="toctext">Volume</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="CyclesNodes.html#Shader_Graph_Nodes"><span class="tocnumber">1.2</span> <span class="toctext">Shader Graph Nodes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="CyclesNodes.html#Absorption_Volume"><span class="tocnumber">1.2.1</span> <span class="toctext">Absorption Volume</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="CyclesNodes.html#Add_Closure"><span class="tocnumber">1.2.2</span> <span class="toctext">Add Closure</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="CyclesNodes.html#Ambient_Occlusion"><span class="tocnumber">1.2.3</span> <span class="toctext">Ambient Occlusion</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="CyclesNodes.html#Anisotropic_Bsdf"><span class="tocnumber">1.2.4</span> <span class="toctext">Anisotropic Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="CyclesNodes.html#Aov_Output"><span class="tocnumber">1.2.5</span> <span class="toctext">Aov Output</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="CyclesNodes.html#Attribute"><span class="tocnumber">1.2.6</span> <span class="toctext">Attribute</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="CyclesNodes.html#Background_Shader"><span class="tocnumber">1.2.7</span> <span class="toctext">Background Shader</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="CyclesNodes.html#Bevel"><span class="tocnumber">1.2.8</span> <span class="toctext">Bevel</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="CyclesNodes.html#Blackbody"><span class="tocnumber">1.2.9</span> <span class="toctext">Blackbody</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="CyclesNodes.html#Brick_Texture"><span class="tocnumber">1.2.10</span> <span class="toctext">Brick Texture</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="CyclesNodes.html#Brightness_Contrast"><span class="tocnumber">1.2.11</span> <span class="toctext">Brightness Contrast</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="CyclesNodes.html#Bump"><span class="tocnumber">1.2.12</span> <span class="toctext">Bump</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="CyclesNodes.html#Camera_Info"><span class="tocnumber">1.2.13</span> <span class="toctext">Camera Info</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="CyclesNodes.html#Checker_Texture"><span class="tocnumber">1.2.14</span> <span class="toctext">Checker Texture</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="CyclesNodes.html#Clamp"><span class="tocnumber">1.2.15</span> <span class="toctext">Clamp</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="CyclesNodes.html#Color"><span class="tocnumber">1.2.16</span> <span class="toctext">Color</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="CyclesNodes.html#Combine_Hsv"><span class="tocnumber">1.2.17</span> <span class="toctext">Combine Hsv</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="CyclesNodes.html#Combine_Rgb"><span class="tocnumber">1.2.18</span> <span class="toctext">Combine Rgb</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="CyclesNodes.html#Combine_Xyz"><span class="tocnumber">1.2.19</span> <span class="toctext">Combine Xyz</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="CyclesNodes.html#Convert_Closure_To_Closure"><span class="tocnumber">1.2.20</span> <span class="toctext">Convert Closure To Closure</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="CyclesNodes.html#Convert_Closure_To_Color"><span class="tocnumber">1.2.21</span> <span class="toctext">Convert Closure To Color</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="CyclesNodes.html#Convert_Closure_To_Float"><span class="tocnumber">1.2.22</span> <span class="toctext">Convert Closure To Float</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="CyclesNodes.html#Convert_Closure_To_Int"><span class="tocnumber">1.2.23</span> <span class="toctext">Convert Closure To Int</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="CyclesNodes.html#Convert_Closure_To_Normal"><span class="tocnumber">1.2.24</span> <span class="toctext">Convert Closure To Normal</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="CyclesNodes.html#Convert_Closure_To_Point"><span class="tocnumber">1.2.25</span> <span class="toctext">Convert Closure To Point</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="CyclesNodes.html#Convert_Closure_To_String"><span class="tocnumber">1.2.26</span> <span class="toctext">Convert Closure To String</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="CyclesNodes.html#Convert_Closure_To_Vector"><span class="tocnumber">1.2.27</span> <span class="toctext">Convert Closure To Vector</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="CyclesNodes.html#Convert_Color_To_Closure"><span class="tocnumber">1.2.28</span> <span class="toctext">Convert Color To Closure</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="CyclesNodes.html#Convert_Color_To_Color"><span class="tocnumber">1.2.29</span> <span class="toctext">Convert Color To Color</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="CyclesNodes.html#Convert_Color_To_Float"><span class="tocnumber">1.2.30</span> <span class="toctext">Convert Color To Float</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="CyclesNodes.html#Convert_Color_To_Int"><span class="tocnumber">1.2.31</span> <span class="toctext">Convert Color To Int</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="CyclesNodes.html#Convert_Color_To_Normal"><span class="tocnumber">1.2.32</span> <span class="toctext">Convert Color To Normal</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="CyclesNodes.html#Convert_Color_To_Point"><span class="tocnumber">1.2.33</span> <span class="toctext">Convert Color To Point</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="CyclesNodes.html#Convert_Color_To_String"><span class="tocnumber">1.2.34</span> <span class="toctext">Convert Color To String</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="CyclesNodes.html#Convert_Color_To_Vector"><span class="tocnumber">1.2.35</span> <span class="toctext">Convert Color To Vector</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="CyclesNodes.html#Convert_Float_To_Closure"><span class="tocnumber">1.2.36</span> <span class="toctext">Convert Float To Closure</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="CyclesNodes.html#Convert_Float_To_Color"><span class="tocnumber">1.2.37</span> <span class="toctext">Convert Float To Color</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="CyclesNodes.html#Convert_Float_To_Float"><span class="tocnumber">1.2.38</span> <span class="toctext">Convert Float To Float</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="CyclesNodes.html#Convert_Float_To_Int"><span class="tocnumber">1.2.39</span> <span class="toctext">Convert Float To Int</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="CyclesNodes.html#Convert_Float_To_Normal"><span class="tocnumber">1.2.40</span> <span class="toctext">Convert Float To Normal</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="CyclesNodes.html#Convert_Float_To_Point"><span class="tocnumber">1.2.41</span> <span class="toctext">Convert Float To Point</span></a></li>
+<li class="toclevel-3 tocsection-60"><a href="CyclesNodes.html#Convert_Float_To_String"><span class="tocnumber">1.2.42</span> <span class="toctext">Convert Float To String</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="CyclesNodes.html#Convert_Float_To_Vector"><span class="tocnumber">1.2.43</span> <span class="toctext">Convert Float To Vector</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="CyclesNodes.html#Convert_Int_To_Closure"><span class="tocnumber">1.2.44</span> <span class="toctext">Convert Int To Closure</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="CyclesNodes.html#Convert_Int_To_Color"><span class="tocnumber">1.2.45</span> <span class="toctext">Convert Int To Color</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="CyclesNodes.html#Convert_Int_To_Float"><span class="tocnumber">1.2.46</span> <span class="toctext">Convert Int To Float</span></a></li>
+<li class="toclevel-3 tocsection-65"><a href="CyclesNodes.html#Convert_Int_To_Int"><span class="tocnumber">1.2.47</span> <span class="toctext">Convert Int To Int</span></a></li>
+<li class="toclevel-3 tocsection-66"><a href="CyclesNodes.html#Convert_Int_To_Normal"><span class="tocnumber">1.2.48</span> <span class="toctext">Convert Int To Normal</span></a></li>
+<li class="toclevel-3 tocsection-67"><a href="CyclesNodes.html#Convert_Int_To_Point"><span class="tocnumber">1.2.49</span> <span class="toctext">Convert Int To Point</span></a></li>
+<li class="toclevel-3 tocsection-68"><a href="CyclesNodes.html#Convert_Int_To_String"><span class="tocnumber">1.2.50</span> <span class="toctext">Convert Int To String</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="CyclesNodes.html#Convert_Int_To_Vector"><span class="tocnumber">1.2.51</span> <span class="toctext">Convert Int To Vector</span></a></li>
+<li class="toclevel-3 tocsection-70"><a href="CyclesNodes.html#Convert_Normal_To_Closure"><span class="tocnumber">1.2.52</span> <span class="toctext">Convert Normal To Closure</span></a></li>
+<li class="toclevel-3 tocsection-71"><a href="CyclesNodes.html#Convert_Normal_To_Color"><span class="tocnumber">1.2.53</span> <span class="toctext">Convert Normal To Color</span></a></li>
+<li class="toclevel-3 tocsection-72"><a href="CyclesNodes.html#Convert_Normal_To_Float"><span class="tocnumber">1.2.54</span> <span class="toctext">Convert Normal To Float</span></a></li>
+<li class="toclevel-3 tocsection-73"><a href="CyclesNodes.html#Convert_Normal_To_Int"><span class="tocnumber">1.2.55</span> <span class="toctext">Convert Normal To Int</span></a></li>
+<li class="toclevel-3 tocsection-74"><a href="CyclesNodes.html#Convert_Normal_To_Normal"><span class="tocnumber">1.2.56</span> <span class="toctext">Convert Normal To Normal</span></a></li>
+<li class="toclevel-3 tocsection-75"><a href="CyclesNodes.html#Convert_Normal_To_Point"><span class="tocnumber">1.2.57</span> <span class="toctext">Convert Normal To Point</span></a></li>
+<li class="toclevel-3 tocsection-76"><a href="CyclesNodes.html#Convert_Normal_To_String"><span class="tocnumber">1.2.58</span> <span class="toctext">Convert Normal To String</span></a></li>
+<li class="toclevel-3 tocsection-77"><a href="CyclesNodes.html#Convert_Normal_To_Vector"><span class="tocnumber">1.2.59</span> <span class="toctext">Convert Normal To Vector</span></a></li>
+<li class="toclevel-3 tocsection-78"><a href="CyclesNodes.html#Convert_Point_To_Closure"><span class="tocnumber">1.2.60</span> <span class="toctext">Convert Point To Closure</span></a></li>
+<li class="toclevel-3 tocsection-79"><a href="CyclesNodes.html#Convert_Point_To_Color"><span class="tocnumber">1.2.61</span> <span class="toctext">Convert Point To Color</span></a></li>
+<li class="toclevel-3 tocsection-80"><a href="CyclesNodes.html#Convert_Point_To_Float"><span class="tocnumber">1.2.62</span> <span class="toctext">Convert Point To Float</span></a></li>
+<li class="toclevel-3 tocsection-81"><a href="CyclesNodes.html#Convert_Point_To_Int"><span class="tocnumber">1.2.63</span> <span class="toctext">Convert Point To Int</span></a></li>
+<li class="toclevel-3 tocsection-82"><a href="CyclesNodes.html#Convert_Point_To_Normal"><span class="tocnumber">1.2.64</span> <span class="toctext">Convert Point To Normal</span></a></li>
+<li class="toclevel-3 tocsection-83"><a href="CyclesNodes.html#Convert_Point_To_Point"><span class="tocnumber">1.2.65</span> <span class="toctext">Convert Point To Point</span></a></li>
+<li class="toclevel-3 tocsection-84"><a href="CyclesNodes.html#Convert_Point_To_String"><span class="tocnumber">1.2.66</span> <span class="toctext">Convert Point To String</span></a></li>
+<li class="toclevel-3 tocsection-85"><a href="CyclesNodes.html#Convert_Point_To_Vector"><span class="tocnumber">1.2.67</span> <span class="toctext">Convert Point To Vector</span></a></li>
+<li class="toclevel-3 tocsection-86"><a href="CyclesNodes.html#Convert_String_To_Closure"><span class="tocnumber">1.2.68</span> <span class="toctext">Convert String To Closure</span></a></li>
+<li class="toclevel-3 tocsection-87"><a href="CyclesNodes.html#Convert_String_To_Color"><span class="tocnumber">1.2.69</span> <span class="toctext">Convert String To Color</span></a></li>
+<li class="toclevel-3 tocsection-88"><a href="CyclesNodes.html#Convert_String_To_Float"><span class="tocnumber">1.2.70</span> <span class="toctext">Convert String To Float</span></a></li>
+<li class="toclevel-3 tocsection-89"><a href="CyclesNodes.html#Convert_String_To_Int"><span class="tocnumber">1.2.71</span> <span class="toctext">Convert String To Int</span></a></li>
+<li class="toclevel-3 tocsection-90"><a href="CyclesNodes.html#Convert_String_To_Normal"><span class="tocnumber">1.2.72</span> <span class="toctext">Convert String To Normal</span></a></li>
+<li class="toclevel-3 tocsection-91"><a href="CyclesNodes.html#Convert_String_To_Point"><span class="tocnumber">1.2.73</span> <span class="toctext">Convert String To Point</span></a></li>
+<li class="toclevel-3 tocsection-92"><a href="CyclesNodes.html#Convert_String_To_String"><span class="tocnumber">1.2.74</span> <span class="toctext">Convert String To String</span></a></li>
+<li class="toclevel-3 tocsection-93"><a href="CyclesNodes.html#Convert_String_To_Vector"><span class="tocnumber">1.2.75</span> <span class="toctext">Convert String To Vector</span></a></li>
+<li class="toclevel-3 tocsection-94"><a href="CyclesNodes.html#Convert_Vector_To_Closure"><span class="tocnumber">1.2.76</span> <span class="toctext">Convert Vector To Closure</span></a></li>
+<li class="toclevel-3 tocsection-95"><a href="CyclesNodes.html#Convert_Vector_To_Color"><span class="tocnumber">1.2.77</span> <span class="toctext">Convert Vector To Color</span></a></li>
+<li class="toclevel-3 tocsection-96"><a href="CyclesNodes.html#Convert_Vector_To_Float"><span class="tocnumber">1.2.78</span> <span class="toctext">Convert Vector To Float</span></a></li>
+<li class="toclevel-3 tocsection-97"><a href="CyclesNodes.html#Convert_Vector_To_Int"><span class="tocnumber">1.2.79</span> <span class="toctext">Convert Vector To Int</span></a></li>
+<li class="toclevel-3 tocsection-98"><a href="CyclesNodes.html#Convert_Vector_To_Normal"><span class="tocnumber">1.2.80</span> <span class="toctext">Convert Vector To Normal</span></a></li>
+<li class="toclevel-3 tocsection-99"><a href="CyclesNodes.html#Convert_Vector_To_Point"><span class="tocnumber">1.2.81</span> <span class="toctext">Convert Vector To Point</span></a></li>
+<li class="toclevel-3 tocsection-100"><a href="CyclesNodes.html#Convert_Vector_To_String"><span class="tocnumber">1.2.82</span> <span class="toctext">Convert Vector To String</span></a></li>
+<li class="toclevel-3 tocsection-101"><a href="CyclesNodes.html#Convert_Vector_To_Vector"><span class="tocnumber">1.2.83</span> <span class="toctext">Convert Vector To Vector</span></a></li>
+<li class="toclevel-3 tocsection-102"><a href="CyclesNodes.html#Diffuse_Bsdf"><span class="tocnumber">1.2.84</span> <span class="toctext">Diffuse Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-103"><a href="CyclesNodes.html#Displacement"><span class="tocnumber">1.2.85</span> <span class="toctext">Displacement</span></a></li>
+<li class="toclevel-3 tocsection-104"><a href="CyclesNodes.html#Emission"><span class="tocnumber">1.2.86</span> <span class="toctext">Emission</span></a></li>
+<li class="toclevel-3 tocsection-105"><a href="CyclesNodes.html#Environment_Texture"><span class="tocnumber">1.2.87</span> <span class="toctext">Environment Texture</span></a></li>
+<li class="toclevel-3 tocsection-106"><a href="CyclesNodes.html#Fresnel"><span class="tocnumber">1.2.88</span> <span class="toctext">Fresnel</span></a></li>
+<li class="toclevel-3 tocsection-107"><a href="CyclesNodes.html#Gamma"><span class="tocnumber">1.2.89</span> <span class="toctext">Gamma</span></a></li>
+<li class="toclevel-3 tocsection-108"><a href="CyclesNodes.html#Geometry"><span class="tocnumber">1.2.90</span> <span class="toctext">Geometry</span></a></li>
+<li class="toclevel-3 tocsection-109"><a href="CyclesNodes.html#Glass_Bsdf"><span class="tocnumber">1.2.91</span> <span class="toctext">Glass Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-110"><a href="CyclesNodes.html#Glossy_Bsdf"><span class="tocnumber">1.2.92</span> <span class="toctext">Glossy Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-111"><a href="CyclesNodes.html#Gradient_Texture"><span class="tocnumber">1.2.93</span> <span class="toctext">Gradient Texture</span></a></li>
+<li class="toclevel-3 tocsection-112"><a href="CyclesNodes.html#Hair_Bsdf"><span class="tocnumber">1.2.94</span> <span class="toctext">Hair Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-113"><a href="CyclesNodes.html#Hair_Info"><span class="tocnumber">1.2.95</span> <span class="toctext">Hair Info</span></a></li>
+<li class="toclevel-3 tocsection-114"><a href="CyclesNodes.html#Holdout"><span class="tocnumber">1.2.96</span> <span class="toctext">Holdout</span></a></li>
+<li class="toclevel-3 tocsection-115"><a href="CyclesNodes.html#Hsv"><span class="tocnumber">1.2.97</span> <span class="toctext">Hsv</span></a></li>
+<li class="toclevel-3 tocsection-116"><a href="CyclesNodes.html#Ies_Light"><span class="tocnumber">1.2.98</span> <span class="toctext">Ies Light</span></a></li>
+<li class="toclevel-3 tocsection-117"><a href="CyclesNodes.html#Image_Texture"><span class="tocnumber">1.2.99</span> <span class="toctext">Image Texture</span></a></li>
+<li class="toclevel-3 tocsection-118"><a href="CyclesNodes.html#Invert"><span class="tocnumber">1.2.100</span> <span class="toctext">Invert</span></a></li>
+<li class="toclevel-3 tocsection-119"><a href="CyclesNodes.html#Layer_Weight"><span class="tocnumber">1.2.101</span> <span class="toctext">Layer Weight</span></a></li>
+<li class="toclevel-3 tocsection-120"><a href="CyclesNodes.html#Light_Falloff"><span class="tocnumber">1.2.102</span> <span class="toctext">Light Falloff</span></a></li>
+<li class="toclevel-3 tocsection-121"><a href="CyclesNodes.html#Light_Path"><span class="tocnumber">1.2.103</span> <span class="toctext">Light Path</span></a></li>
+<li class="toclevel-3 tocsection-122"><a href="CyclesNodes.html#Magic_Texture"><span class="tocnumber">1.2.104</span> <span class="toctext">Magic Texture</span></a></li>
+<li class="toclevel-3 tocsection-123"><a href="CyclesNodes.html#Map_Range"><span class="tocnumber">1.2.105</span> <span class="toctext">Map Range</span></a></li>
+<li class="toclevel-3 tocsection-124"><a href="CyclesNodes.html#Mapping"><span class="tocnumber">1.2.106</span> <span class="toctext">Mapping</span></a></li>
+<li class="toclevel-3 tocsection-125"><a href="CyclesNodes.html#Math"><span class="tocnumber">1.2.107</span> <span class="toctext">Math</span></a></li>
+<li class="toclevel-3 tocsection-126"><a href="CyclesNodes.html#Mix"><span class="tocnumber">1.2.108</span> <span class="toctext">Mix</span></a></li>
+<li class="toclevel-3 tocsection-127"><a href="CyclesNodes.html#Mix_Closure"><span class="tocnumber">1.2.109</span> <span class="toctext">Mix Closure</span></a></li>
+<li class="toclevel-3 tocsection-128"><a href="CyclesNodes.html#Mix_Closure_Weight"><span class="tocnumber">1.2.110</span> <span class="toctext">Mix Closure Weight</span></a></li>
+<li class="toclevel-3 tocsection-129"><a href="CyclesNodes.html#Musgrave_Texture"><span class="tocnumber">1.2.111</span> <span class="toctext">Musgrave Texture</span></a></li>
+<li class="toclevel-3 tocsection-130"><a href="CyclesNodes.html#Noise_Texture"><span class="tocnumber">1.2.112</span> <span class="toctext">Noise Texture</span></a></li>
+<li class="toclevel-3 tocsection-131"><a href="CyclesNodes.html#Normal"><span class="tocnumber">1.2.113</span> <span class="toctext">Normal</span></a></li>
+<li class="toclevel-3 tocsection-132"><a href="CyclesNodes.html#Normal_Map"><span class="tocnumber">1.2.114</span> <span class="toctext">Normal Map</span></a></li>
+<li class="toclevel-3 tocsection-133"><a href="CyclesNodes.html#Object_Info"><span class="tocnumber">1.2.115</span> <span class="toctext">Object Info</span></a></li>
+<li class="toclevel-3 tocsection-134"><a href="CyclesNodes.html#Output"><span class="tocnumber">1.2.116</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-3 tocsection-135"><a href="CyclesNodes.html#Particle_Info"><span class="tocnumber">1.2.117</span> <span class="toctext">Particle Info</span></a></li>
+<li class="toclevel-3 tocsection-136"><a href="CyclesNodes.html#Point_Density_Texture"><span class="tocnumber">1.2.118</span> <span class="toctext">Point Density Texture</span></a></li>
+<li class="toclevel-3 tocsection-137"><a href="CyclesNodes.html#Principled_Bsdf"><span class="tocnumber">1.2.119</span> <span class="toctext">Principled Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-138"><a href="CyclesNodes.html#Principled_Hair_Bsdf"><span class="tocnumber">1.2.120</span> <span class="toctext">Principled Hair Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-139"><a href="CyclesNodes.html#Principled_Volume"><span class="tocnumber">1.2.121</span> <span class="toctext">Principled Volume</span></a></li>
+<li class="toclevel-3 tocsection-140"><a href="CyclesNodes.html#Refraction_Bsdf"><span class="tocnumber">1.2.122</span> <span class="toctext">Refraction Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-141"><a href="CyclesNodes.html#Rgb_Curves"><span class="tocnumber">1.2.123</span> <span class="toctext">Rgb Curves</span></a></li>
+<li class="toclevel-3 tocsection-142"><a href="CyclesNodes.html#Rgb_Ramp"><span class="tocnumber">1.2.124</span> <span class="toctext">Rgb Ramp</span></a></li>
+<li class="toclevel-3 tocsection-143"><a href="CyclesNodes.html#Rgb_To_Bw"><span class="tocnumber">1.2.125</span> <span class="toctext">Rgb To Bw</span></a></li>
+<li class="toclevel-3 tocsection-144"><a href="CyclesNodes.html#Scatter_Volume"><span class="tocnumber">1.2.126</span> <span class="toctext">Scatter Volume</span></a></li>
+<li class="toclevel-3 tocsection-145"><a href="CyclesNodes.html#Separate_Hsv"><span class="tocnumber">1.2.127</span> <span class="toctext">Separate Hsv</span></a></li>
+<li class="toclevel-3 tocsection-146"><a href="CyclesNodes.html#Separate_Rgb"><span class="tocnumber">1.2.128</span> <span class="toctext">Separate Rgb</span></a></li>
+<li class="toclevel-3 tocsection-147"><a href="CyclesNodes.html#Separate_Xyz"><span class="tocnumber">1.2.129</span> <span class="toctext">Separate Xyz</span></a></li>
+<li class="toclevel-3 tocsection-148"><a href="CyclesNodes.html#Set_Normal"><span class="tocnumber">1.2.130</span> <span class="toctext">Set Normal</span></a></li>
+<li class="toclevel-3 tocsection-149"><a href="CyclesNodes.html#Sky_Texture"><span class="tocnumber">1.2.131</span> <span class="toctext">Sky Texture</span></a></li>
+<li class="toclevel-3 tocsection-150"><a href="CyclesNodes.html#Subsurface_Scattering"><span class="tocnumber">1.2.132</span> <span class="toctext">Subsurface Scattering</span></a></li>
+<li class="toclevel-3 tocsection-151"><a href="CyclesNodes.html#Tangent"><span class="tocnumber">1.2.133</span> <span class="toctext">Tangent</span></a></li>
+<li class="toclevel-3 tocsection-152"><a href="CyclesNodes.html#Texture_Coordinate"><span class="tocnumber">1.2.134</span> <span class="toctext">Texture Coordinate</span></a></li>
+<li class="toclevel-3 tocsection-153"><a href="CyclesNodes.html#Toon_Bsdf"><span class="tocnumber">1.2.135</span> <span class="toctext">Toon Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-154"><a href="CyclesNodes.html#Translucent_Bsdf"><span class="tocnumber">1.2.136</span> <span class="toctext">Translucent Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-155"><a href="CyclesNodes.html#Transparent_Bsdf"><span class="tocnumber">1.2.137</span> <span class="toctext">Transparent Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-156"><a href="CyclesNodes.html#Uvmap"><span class="tocnumber">1.2.138</span> <span class="toctext">Uvmap</span></a></li>
+<li class="toclevel-3 tocsection-157"><a href="CyclesNodes.html#Value"><span class="tocnumber">1.2.139</span> <span class="toctext">Value</span></a></li>
+<li class="toclevel-3 tocsection-158"><a href="CyclesNodes.html#Vector_Curves"><span class="tocnumber">1.2.140</span> <span class="toctext">Vector Curves</span></a></li>
+<li class="toclevel-3 tocsection-159"><a href="CyclesNodes.html#Vector_Displacement"><span class="tocnumber">1.2.141</span> <span class="toctext">Vector Displacement</span></a></li>
+<li class="toclevel-3 tocsection-160"><a href="CyclesNodes.html#Vector_Math"><span class="tocnumber">1.2.142</span> <span class="toctext">Vector Math</span></a></li>
+<li class="toclevel-3 tocsection-161"><a href="CyclesNodes.html#Vector_Rotate"><span class="tocnumber">1.2.143</span> <span class="toctext">Vector Rotate</span></a></li>
+<li class="toclevel-3 tocsection-162"><a href="CyclesNodes.html#Vector_Transform"><span class="tocnumber">1.2.144</span> <span class="toctext">Vector Transform</span></a></li>
+<li class="toclevel-3 tocsection-163"><a href="CyclesNodes.html#Velvet_Bsdf"><span class="tocnumber">1.2.145</span> <span class="toctext">Velvet Bsdf</span></a></li>
+<li class="toclevel-3 tocsection-164"><a href="CyclesNodes.html#Vertex_Color"><span class="tocnumber">1.2.146</span> <span class="toctext">Vertex Color</span></a></li>
+<li class="toclevel-3 tocsection-165"><a href="CyclesNodes.html#Volume_Info"><span class="tocnumber">1.2.147</span> <span class="toctext">Volume Info</span></a></li>
+<li class="toclevel-3 tocsection-166"><a href="CyclesNodes.html#Voronoi_Texture"><span class="tocnumber">1.2.148</span> <span class="toctext">Voronoi Texture</span></a></li>
+<li class="toclevel-3 tocsection-167"><a href="CyclesNodes.html#Wave_Texture"><span class="tocnumber">1.2.149</span> <span class="toctext">Wave Texture</span></a></li>
+<li class="toclevel-3 tocsection-168"><a href="CyclesNodes.html#Wavelength"><span class="tocnumber">1.2.150</span> <span class="toctext">Wavelength</span></a></li>
+<li class="toclevel-3 tocsection-169"><a href="CyclesNodes.html#White_Noise_Texture"><span class="tocnumber">1.2.151</span> <span class="toctext">White Noise Texture</span></a></li>
+<li class="toclevel-3 tocsection-170"><a href="CyclesNodes.html#Wireframe"><span class="tocnumber">1.2.152</span> <span class="toctext">Wireframe</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:KevinDietrich/CyclesNodes</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../User:KevinDietrich.html" title="User:KevinDietrich">User:KevinDietrich</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Cycles_Nodes">Cycles Nodes</span></h2>
+<p>This page references the various nodes which can be used in Cycles. There are two categories of Nodes, the "top level" ones, which define the content of the Scene, and the "shader graph" ones, which describe a Shader network.
+</p>
+<h3><span class="mw-headline" id="Top_Level_Nodes">Top Level Nodes</span></h3>
+<p>Those are the nodes that make up a Cycles Scene.
+</p>
+<h4><span class="mw-headline" id="Alembic">Alembic</span></h4>
+<ul><li>Sockets
+<ul><li>Filename
+<ul><li>filepath <i>string</i></li></ul></li>
+<li>Frame
+<ul><li>frame <i>float</i></li></ul></li>
+<li>Start Frame
+<ul><li>start_frame <i>float</i></li></ul></li>
+<li>End Frame
+<ul><li>end_frame <i>float</i></li></ul></li>
+<li>Frame Rate
+<ul><li>frame_rate <i>float</i></li></ul></li>
+<li>Frame Offset
+<ul><li>frame_offset <i>float</i></li></ul></li>
+<li>Default Radius
+<ul><li>default_radius <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Objects
+<ul><li>objects <i>array_node</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Alembic_Object">Alembic Object</span></h4>
+<ul><li>Sockets
+<ul><li>Alembic Path
+<ul><li>path <i>string</i></li></ul></li>
+<li>Used Shaders
+<ul><li>used_shaders <i>array_node</i></li></ul></li>
+<li>Max Subdivision Level
+<ul><li>subd_max_level <i>int</i></li></ul></li>
+<li>Subdivision Dicing Rate
+<ul><li>subd_dicing_rate <i>float</i></li></ul></li>
+<li>Radius Scale
+<ul><li>radius_scale <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Background">Background</span></h4>
+<ul><li>Sockets
+<ul><li>AO Factor
+<ul><li>ao_factor <i>float</i></li></ul></li>
+<li>AO Distance
+<ul><li>ao_distance <i>float</i></li></ul></li>
+<li>Use Shader
+<ul><li>use_shader <i>boolean</i></li></ul></li>
+<li>Use AO
+<ul><li>use_ao <i>boolean</i></li></ul></li>
+<li>Visibility
+<ul><li>visibility <i>uint</i></li></ul></li>
+<li>Transparent
+<ul><li>transparent <i>boolean</i></li></ul></li>
+<li>Transparent Glass
+<ul><li>transparent_glass <i>boolean</i></li></ul></li>
+<li>Transparent Roughness Threshold
+<ul><li>transparent_roughness_threshold <i>float</i></li></ul></li>
+<li>Volume Step Size
+<ul><li>volume_step_size <i>float</i></li></ul></li>
+<li>Shader
+<ul><li>shader <i>node</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Camera">Camera</span></h4>
+<ul><li>Sockets
+<ul><li>Shutter Time
+<ul><li>shuttertime <i>float</i></li></ul></li>
+<li>Motion Position
+<ul><li>motion_position <i>enum</i></li></ul></li>
+<li>Rolling Shutter Type
+<ul><li>rolling_shutter_type <i>enum</i></li></ul></li>
+<li>Rolling Shutter Duration
+<ul><li>rolling_shutter_duration <i>float</i></li></ul></li>
+<li>Shutter Curve
+<ul><li>shutter_curve <i>array_float</i></li></ul></li>
+<li>Aperture Size
+<ul><li>aperturesize <i>float</i></li></ul></li>
+<li>Focal Distance
+<ul><li>focaldistance <i>float</i></li></ul></li>
+<li>Blades
+<ul><li>blades <i>uint</i></li></ul></li>
+<li>Blades Rotation
+<ul><li>bladesrotation <i>float</i></li></ul></li>
+<li>Matrix
+<ul><li>matrix <i>transform</i></li></ul></li>
+<li>Motion
+<ul><li>motion <i>array_transform</i></li></ul></li>
+<li>Aperture Ratio
+<ul><li>aperture_ratio <i>float</i></li></ul></li>
+<li>Type
+<ul><li>camera_type <i>enum</i></li></ul></li>
+<li>Panorama Type
+<ul><li>panorama_type <i>enum</i></li></ul></li>
+<li>Fisheye FOV
+<ul><li>fisheye_fov <i>float</i></li></ul></li>
+<li>Fisheye Lens
+<ul><li>fisheye_lens <i>float</i></li></ul></li>
+<li>Latitude Min
+<ul><li>latitude_min <i>float</i></li></ul></li>
+<li>Latitude Max
+<ul><li>latitude_max <i>float</i></li></ul></li>
+<li>Longitude Min
+<ul><li>longitude_min <i>float</i></li></ul></li>
+<li>Longitude Max
+<ul><li>longitude_max <i>float</i></li></ul></li>
+<li>FOV
+<ul><li>fov <i>float</i></li></ul></li>
+<li>FOV Pre
+<ul><li>fov_pre <i>float</i></li></ul></li>
+<li>FOV Post
+<ul><li>fov_post <i>float</i></li></ul></li>
+<li>Stereo Eye
+<ul><li>stereo_eye <i>enum</i></li></ul></li>
+<li>Use Spherical Stereo
+<ul><li>use_spherical_stereo <i>boolean</i></li></ul></li>
+<li>Interocular Distance
+<ul><li>interocular_distance <i>float</i></li></ul></li>
+<li>Convergence Distance
+<ul><li>convergence_distance <i>float</i></li></ul></li>
+<li>Use Pole Merge
+<ul><li>use_pole_merge <i>boolean</i></li></ul></li>
+<li>Pole Merge Angle From
+<ul><li>pole_merge_angle_from <i>float</i></li></ul></li>
+<li>Pole Merge Angle To
+<ul><li>pole_merge_angle_to <i>float</i></li></ul></li>
+<li>Sensor Width
+<ul><li>sensorwidth <i>float</i></li></ul></li>
+<li>Sensor Height
+<ul><li>sensorheight <i>float</i></li></ul></li>
+<li>Near Clip
+<ul><li>nearclip <i>float</i></li></ul></li>
+<li>Far Clip
+<ul><li>farclip <i>float</i></li></ul></li>
+<li>Viewplane Left
+<ul><li>viewplane.left <i>float</i></li></ul></li>
+<li>Viewplane Right
+<ul><li>viewplane.right <i>float</i></li></ul></li>
+<li>Viewplane Bottom
+<ul><li>viewplane.bottom <i>float</i></li></ul></li>
+<li>Viewplane Top
+<ul><li>viewplane.top <i>float</i></li></ul></li>
+<li>Border Left
+<ul><li>border.left <i>float</i></li></ul></li>
+<li>Border Right
+<ul><li>border.right <i>float</i></li></ul></li>
+<li>Border Bottom
+<ul><li>border.bottom <i>float</i></li></ul></li>
+<li>Border Top
+<ul><li>border.top <i>float</i></li></ul></li>
+<li>Viewport Border Left
+<ul><li>viewport_camera_border.left <i>float</i></li></ul></li>
+<li>Viewport Border Right
+<ul><li>viewport_camera_border.right <i>float</i></li></ul></li>
+<li>Viewport Border Bottom
+<ul><li>viewport_camera_border.bottom <i>float</i></li></ul></li>
+<li>Viewport Border Top
+<ul><li>viewport_camera_border.top <i>float</i></li></ul></li>
+<li>Offscreen Dicing Scale
+<ul><li>offscreen_dicing_scale <i>float</i></li></ul></li>
+<li>Full Width
+<ul><li>full_width <i>int</i></li></ul></li>
+<li>Full Height
+<ul><li>full_height <i>int</i></li></ul></li>
+<li>Use Perspective Motion
+<ul><li>use_perspective_motion <i>boolean</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Film">Film</span></h4>
+<ul><li>Sockets
+<ul><li>Exposure
+<ul><li>exposure <i>float</i></li></ul></li>
+<li>Pass Alpha Threshold
+<ul><li>pass_alpha_threshold <i>float</i></li></ul></li>
+<li>Filter Type
+<ul><li>filter_type <i>enum</i></li></ul></li>
+<li>Filter Width
+<ul><li>filter_width <i>float</i></li></ul></li>
+<li>Mist Start
+<ul><li>mist_start <i>float</i></li></ul></li>
+<li>Mist Depth
+<ul><li>mist_depth <i>float</i></li></ul></li>
+<li>Mist Falloff
+<ul><li>mist_falloff <i>float</i></li></ul></li>
+<li>Generate Denoising Data Pass
+<ul><li>denoising_data_pass <i>boolean</i></li></ul></li>
+<li>Generate Denoising Clean Pass
+<ul><li>denoising_clean_pass <i>boolean</i></li></ul></li>
+<li>Generate Denoising Prefiltered Pass
+<ul><li>denoising_prefiltered_pass <i>boolean</i></li></ul></li>
+<li>Denoising Flags
+<ul><li>denoising_flags <i>int</i></li></ul></li>
+<li>Use Adaptive Sampling
+<ul><li>use_adaptive_sampling <i>boolean</i></li></ul></li>
+<li>Use Light Visibility
+<ul><li>use_light_visibility <i>boolean</i></li></ul></li>
+<li>Display Pass
+<ul><li>display_pass <i>enum</i></li></ul></li>
+<li>Cryptomatte Passes
+<ul><li>cryptomatte_passes <i>enum</i></li></ul></li>
+<li>Cryptomatte Depth
+<ul><li>cryptomatte_depth <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Geometry_Base">Geometry Base</span></h4>
+<ul><li>Sockets
+<ul><li>Motion Steps
+<ul><li>motion_steps <i>uint</i></li></ul></li>
+<li>Use Motion Blur
+<ul><li>use_motion_blur <i>boolean</i></li></ul></li>
+<li>Shaders
+<ul><li>used_shaders <i>array_node</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Hair">Hair</span></h4>
+<ul><li>Base&#160;: geometry_base</li>
+<li>Sockets
+<ul><li>Motion Steps
+<ul><li>motion_steps <i>uint</i></li></ul></li>
+<li>Use Motion Blur
+<ul><li>use_motion_blur <i>boolean</i></li></ul></li>
+<li>Shaders
+<ul><li>used_shaders <i>array_node</i></li></ul></li>
+<li>Curve Keys
+<ul><li>curve_keys <i>array_point</i></li></ul></li>
+<li>Curve Radius
+<ul><li>curve_radius <i>array_float</i></li></ul></li>
+<li>Curve First Key
+<ul><li>curve_first_key <i>array_int</i></li></ul></li>
+<li>Curve Shader
+<ul><li>curve_shader <i>array_int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Integrator">Integrator</span></h4>
+<ul><li>Sockets
+<ul><li>Min Bounce
+<ul><li>min_bounce <i>int</i></li></ul></li>
+<li>Max Bounce
+<ul><li>max_bounce <i>int</i></li></ul></li>
+<li>Max Diffuse Bounce
+<ul><li>max_diffuse_bounce <i>int</i></li></ul></li>
+<li>Max Glossy Bounce
+<ul><li>max_glossy_bounce <i>int</i></li></ul></li>
+<li>Max Transmission Bounce
+<ul><li>max_transmission_bounce <i>int</i></li></ul></li>
+<li>Max Volume Bounce
+<ul><li>max_volume_bounce <i>int</i></li></ul></li>
+<li>Transparent Min Bounce
+<ul><li>transparent_min_bounce <i>int</i></li></ul></li>
+<li>Transparent Max Bounce
+<ul><li>transparent_max_bounce <i>int</i></li></ul></li>
+<li>AO Bounces
+<ul><li>ao_bounces <i>int</i></li></ul></li>
+<li>Volume Max Steps
+<ul><li>volume_max_steps <i>int</i></li></ul></li>
+<li>Volume Step Rate
+<ul><li>volume_step_rate <i>float</i></li></ul></li>
+<li>Reflective Caustics
+<ul><li>caustics_reflective <i>boolean</i></li></ul></li>
+<li>Refractive Caustics
+<ul><li>caustics_refractive <i>boolean</i></li></ul></li>
+<li>Filter Glossy
+<ul><li>filter_glossy <i>float</i></li></ul></li>
+<li>Seed
+<ul><li>seed <i>int</i></li></ul></li>
+<li>Sample Clamp Direct
+<ul><li>sample_clamp_direct <i>float</i></li></ul></li>
+<li>Sample Clamp Indirect
+<ul><li>sample_clamp_indirect <i>float</i></li></ul></li>
+<li>Motion Blur
+<ul><li>motion_blur <i>boolean</i></li></ul></li>
+<li>AA Samples
+<ul><li>aa_samples <i>int</i></li></ul></li>
+<li>Diffuse Samples
+<ul><li>diffuse_samples <i>int</i></li></ul></li>
+<li>Glossy Samples
+<ul><li>glossy_samples <i>int</i></li></ul></li>
+<li>Transmission Samples
+<ul><li>transmission_samples <i>int</i></li></ul></li>
+<li>AO Samples
+<ul><li>ao_samples <i>int</i></li></ul></li>
+<li>Mesh Light Samples
+<ul><li>mesh_light_samples <i>int</i></li></ul></li>
+<li>Subsurface Samples
+<ul><li>subsurface_samples <i>int</i></li></ul></li>
+<li>Volume Samples
+<ul><li>volume_samples <i>int</i></li></ul></li>
+<li>Start Sample
+<ul><li>start_sample <i>int</i></li></ul></li>
+<li>Adaptive Threshold
+<ul><li>adaptive_threshold <i>float</i></li></ul></li>
+<li>Adaptive Min Samples
+<ul><li>adaptive_min_samples <i>int</i></li></ul></li>
+<li>Sample All Lights Direct
+<ul><li>sample_all_lights_direct <i>boolean</i></li></ul></li>
+<li>Sample All Lights Indirect
+<ul><li>sample_all_lights_indirect <i>boolean</i></li></ul></li>
+<li>Light Sampling Threshold
+<ul><li>light_sampling_threshold <i>float</i></li></ul></li>
+<li>Method
+<ul><li>method <i>enum</i></li></ul></li>
+<li>Sampling Pattern
+<ul><li>sampling_pattern <i>enum</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Light">Light</span></h4>
+<ul><li>Sockets
+<ul><li>Type
+<ul><li>light_type <i>enum</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>color</i></li></ul></li>
+<li>Co
+<ul><li>co <i>point</i></li></ul></li>
+<li>Dir
+<ul><li>dir <i>vector</i></li></ul></li>
+<li>Size
+<ul><li>size <i>float</i></li></ul></li>
+<li>Angle
+<ul><li>angle <i>float</i></li></ul></li>
+<li>Axis U
+<ul><li>axisu <i>vector</i></li></ul></li>
+<li>Size U
+<ul><li>sizeu <i>float</i></li></ul></li>
+<li>Axis V
+<ul><li>axisv <i>vector</i></li></ul></li>
+<li>Size V
+<ul><li>sizev <i>float</i></li></ul></li>
+<li>Round
+<ul><li>round <i>boolean</i></li></ul></li>
+<li>Spread
+<ul><li>spread <i>float</i></li></ul></li>
+<li>Map Resolution
+<ul><li>map_resolution <i>int</i></li></ul></li>
+<li>Spot Angle
+<ul><li>spot_angle <i>float</i></li></ul></li>
+<li>Spot Smooth
+<ul><li>spot_smooth <i>float</i></li></ul></li>
+<li>Transform
+<ul><li>tfm <i>transform</i></li></ul></li>
+<li>Cast Shadow
+<ul><li>cast_shadow <i>boolean</i></li></ul></li>
+<li>Use Mis
+<ul><li>use_mis <i>boolean</i></li></ul></li>
+<li>Use Diffuse
+<ul><li>use_diffuse <i>boolean</i></li></ul></li>
+<li>Use Glossy
+<ul><li>use_glossy <i>boolean</i></li></ul></li>
+<li>Use Transmission
+<ul><li>use_transmission <i>boolean</i></li></ul></li>
+<li>Use Scatter
+<ul><li>use_scatter <i>boolean</i></li></ul></li>
+<li>Samples
+<ul><li>samples <i>int</i></li></ul></li>
+<li>Max Bounces
+<ul><li>max_bounces <i>int</i></li></ul></li>
+<li>Random ID
+<ul><li>random_id <i>uint</i></li></ul></li>
+<li>Is Portal
+<ul><li>is_portal <i>boolean</i></li></ul></li>
+<li>Is Enabled
+<ul><li>is_enabled <i>boolean</i></li></ul></li>
+<li>Shader
+<ul><li>shader <i>node</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Mesh">Mesh</span></h4>
+<ul><li>Base&#160;: geometry_base</li>
+<li>Sockets
+<ul><li>Motion Steps
+<ul><li>motion_steps <i>uint</i></li></ul></li>
+<li>Use Motion Blur
+<ul><li>use_motion_blur <i>boolean</i></li></ul></li>
+<li>Shaders
+<ul><li>used_shaders <i>array_node</i></li></ul></li>
+<li>Triangles
+<ul><li>triangles <i>array_int</i></li></ul></li>
+<li>Vertices
+<ul><li>verts <i>array_point</i></li></ul></li>
+<li>Shader
+<ul><li>shader <i>array_int</i></li></ul></li>
+<li>Smooth
+<ul><li>smooth <i>array_boolean</i></li></ul></li>
+<li>Triangle Patch
+<ul><li>triangle_patch <i>array_int</i></li></ul></li>
+<li>Patch UVs
+<ul><li>vert_patch_uv <i>array_point2</i></li></ul></li>
+<li>Subdivision Type
+<ul><li>subdivision_type <i>enum</i></li></ul></li>
+<li>Subdivision Crease Edges
+<ul><li>subd_creases_edge <i>array_int</i></li></ul></li>
+<li>Subdivision Crease Weights
+<ul><li>subd_creases_weight <i>array_float</i></li></ul></li>
+<li>Subdivision Face Corners
+<ul><li>subd_face_corners <i>array_int</i></li></ul></li>
+<li>Subdivision Face Start Corner
+<ul><li>subd_start_corner <i>array_int</i></li></ul></li>
+<li>Subdivision Face Corner Count
+<ul><li>subd_num_corners <i>array_int</i></li></ul></li>
+<li>Subdivision Face Shader
+<ul><li>subd_shader <i>array_int</i></li></ul></li>
+<li>Subdivision Face Smooth
+<ul><li>subd_smooth <i>array_boolean</i></li></ul></li>
+<li>Subdivision Face PTex Offset
+<ul><li>subd_ptex_offset <i>array_int</i></li></ul></li>
+<li>NGons Number
+<ul><li>num_ngons <i>int</i></li></ul></li>
+<li>Subdivision Dicing Rate
+<ul><li>subd_dicing_rate <i>float</i></li></ul></li>
+<li>Subdivision Dicing Rate
+<ul><li>subd_max_level <i>int</i></li></ul></li>
+<li>Subdivision Object Transform
+<ul><li>subd_objecttoworld <i>transform</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Object">Object</span></h4>
+<ul><li>Sockets
+<ul><li>Geometry
+<ul><li>geometry <i>node</i></li></ul></li>
+<li>Transform
+<ul><li>tfm <i>transform</i></li></ul></li>
+<li>Visibility
+<ul><li>visibility <i>uint</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Random ID
+<ul><li>random_id <i>uint</i></li></ul></li>
+<li>Pass ID
+<ul><li>pass_id <i>int</i></li></ul></li>
+<li>Use Holdout
+<ul><li>use_holdout <i>boolean</i></li></ul></li>
+<li>Hide on Missing Motion
+<ul><li>hide_on_missing_motion <i>boolean</i></li></ul></li>
+<li>Dupli Generated
+<ul><li>dupli_generated <i>point</i></li></ul></li>
+<li>Dupli UV
+<ul><li>dupli_uv <i>point2</i></li></ul></li>
+<li>Motion
+<ul><li>motion <i>array_transform</i></li></ul></li>
+<li>Terminator Offset
+<ul><li>shadow_terminator_offset <i>float</i></li></ul></li>
+<li>Asset Name
+<ul><li>asset_name <i>string</i></li></ul></li>
+<li>Shadow Catcher
+<ul><li>is_shadow_catcher <i>boolean</i></li></ul></li>
+<li>Particle System
+<ul><li>particle_system <i>node</i></li></ul></li>
+<li>Particle Index
+<ul><li>particle_index <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Particle_System">Particle System</span></h4>
+<ul><li>Sockets</li></ul>
+<h4><span class="mw-headline" id="Pass">Pass</span></h4>
+<ul><li>Sockets
+<ul><li>Type
+<ul><li>type <i>enum</i></li></ul></li>
+<li>Name
+<ul><li>name <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Shader">Shader</span></h4>
+<ul><li>Sockets
+<ul><li>Use MIS
+<ul><li>use_mis <i>boolean</i></li></ul></li>
+<li>Use Transparent Shadow
+<ul><li>use_transparent_shadow <i>boolean</i></li></ul></li>
+<li>Heterogeneous Volume
+<ul><li>heterogeneous_volume <i>boolean</i></li></ul></li>
+<li>Volume Sampling Method
+<ul><li>volume_sampling_method <i>enum</i></li></ul></li>
+<li>Volume Interpolation Method
+<ul><li>volume_interpolation_method <i>enum</i></li></ul></li>
+<li>Volume Step Rate
+<ul><li>volume_step_rate <i>float</i></li></ul></li>
+<li>Displacement Method
+<ul><li>displacement_method <i>enum</i></li></ul></li>
+<li>Pass ID
+<ul><li>pass_id <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Volume">Volume</span></h4>
+<ul><li>Base&#160;: mesh</li>
+<li>Sockets
+<ul><li>Motion Steps
+<ul><li>motion_steps <i>uint</i></li></ul></li>
+<li>Use Motion Blur
+<ul><li>use_motion_blur <i>boolean</i></li></ul></li>
+<li>Shaders
+<ul><li>used_shaders <i>array_node</i></li></ul></li>
+<li>Triangles
+<ul><li>triangles <i>array_int</i></li></ul></li>
+<li>Vertices
+<ul><li>verts <i>array_point</i></li></ul></li>
+<li>Shader
+<ul><li>shader <i>array_int</i></li></ul></li>
+<li>Smooth
+<ul><li>smooth <i>array_boolean</i></li></ul></li>
+<li>Triangle Patch
+<ul><li>triangle_patch <i>array_int</i></li></ul></li>
+<li>Patch UVs
+<ul><li>vert_patch_uv <i>array_point2</i></li></ul></li>
+<li>Subdivision Type
+<ul><li>subdivision_type <i>enum</i></li></ul></li>
+<li>Subdivision Crease Edges
+<ul><li>subd_creases_edge <i>array_int</i></li></ul></li>
+<li>Subdivision Crease Weights
+<ul><li>subd_creases_weight <i>array_float</i></li></ul></li>
+<li>Subdivision Face Corners
+<ul><li>subd_face_corners <i>array_int</i></li></ul></li>
+<li>Subdivision Face Start Corner
+<ul><li>subd_start_corner <i>array_int</i></li></ul></li>
+<li>Subdivision Face Corner Count
+<ul><li>subd_num_corners <i>array_int</i></li></ul></li>
+<li>Subdivision Face Shader
+<ul><li>subd_shader <i>array_int</i></li></ul></li>
+<li>Subdivision Face Smooth
+<ul><li>subd_smooth <i>array_boolean</i></li></ul></li>
+<li>Subdivision Face PTex Offset
+<ul><li>subd_ptex_offset <i>array_int</i></li></ul></li>
+<li>NGons Number
+<ul><li>num_ngons <i>int</i></li></ul></li>
+<li>Subdivision Dicing Rate
+<ul><li>subd_dicing_rate <i>float</i></li></ul></li>
+<li>Subdivision Dicing Rate
+<ul><li>subd_max_level <i>int</i></li></ul></li>
+<li>Subdivision Object Transform
+<ul><li>subd_objecttoworld <i>transform</i></li></ul></li>
+<li>Clipping
+<ul><li>clipping <i>float</i></li></ul></li>
+<li>Step Size
+<ul><li>step_size <i>float</i></li></ul></li>
+<li>Object Space
+<ul><li>object_space <i>boolean</i></li></ul></li></ul></li></ul>
+<h3><span class="mw-headline" id="Shader_Graph_Nodes">Shader Graph Nodes</span></h3>
+<p>Those are the nodes that make up a Cycles Shader graph.
+</p>
+<h4><span class="mw-headline" id="Absorption_Volume">Absorption Volume</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Density
+<ul><li>density <i>float</i></li></ul></li>
+<li>VolumeMixWeight
+<ul><li>volume_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Volume
+<ul><li>volume <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Add_Closure">Add Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>Closure1
+<ul><li>closure1 <i>closure</i></li></ul></li>
+<li>Closure2
+<ul><li>closure2 <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Closure
+<ul><li>closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Ambient_Occlusion">Ambient Occlusion</span></h4>
+<ul><li>Input Sockets
+<ul><li>Samples
+<ul><li>samples <i>int</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Distance
+<ul><li>distance <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Inside
+<ul><li>inside <i>boolean</i></li></ul></li>
+<li>Only Local
+<ul><li>only_local <i>boolean</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>AO
+<ul><li>ao <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Anisotropic_Bsdf">Anisotropic Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Distribution
+<ul><li>distribution <i>enum</i></li></ul></li>
+<li>Tangent
+<ul><li>tangent <i>vector</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>Anisotropy
+<ul><li>anisotropy <i>float</i></li></ul></li>
+<li>Rotation
+<ul><li>rotation <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Aov_Output">Aov Output</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>AOV Name
+<ul><li>name <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Attribute">Attribute</span></h4>
+<ul><li>Input Sockets
+<ul><li>Attribute
+<ul><li>attribute <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>vector</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Background_Shader">Background Shader</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Background
+<ul><li>background <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Bevel">Bevel</span></h4>
+<ul><li>Input Sockets
+<ul><li>Samples
+<ul><li>samples <i>int</i></li></ul></li>
+<li>Radius
+<ul><li>radius <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Normal
+<ul><li>bevel <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Blackbody">Blackbody</span></h4>
+<ul><li>Input Sockets
+<ul><li>Temperature
+<ul><li>temperature <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Brick_Texture">Brick Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Offset
+<ul><li>offset <i>float</i></li></ul></li>
+<li>Offset Frequency
+<ul><li>offset_frequency <i>int</i></li></ul></li>
+<li>Squash
+<ul><li>squash <i>float</i></li></ul></li>
+<li>Squash Frequency
+<ul><li>squash_frequency <i>int</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>Color1
+<ul><li>color1 <i>color</i></li></ul></li>
+<li>Color2
+<ul><li>color2 <i>color</i></li></ul></li>
+<li>Mortar
+<ul><li>mortar <i>color</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Mortar Size
+<ul><li>mortar_size <i>float</i></li></ul></li>
+<li>Mortar Smooth
+<ul><li>mortar_smooth <i>float</i></li></ul></li>
+<li>Bias
+<ul><li>bias <i>float</i></li></ul></li>
+<li>Brick Width
+<ul><li>brick_width <i>float</i></li></ul></li>
+<li>Row Height
+<ul><li>row_height <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Brightness_Contrast">Brightness Contrast</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Bright
+<ul><li>bright <i>float</i></li></ul></li>
+<li>Contrast
+<ul><li>contrast <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Bump">Bump</span></h4>
+<ul><li>Input Sockets
+<ul><li>Invert
+<ul><li>invert <i>boolean</i></li></ul></li>
+<li>UseObjectSpace
+<ul><li>use_object_space <i>boolean</i></li></ul></li>
+<li>Height
+<ul><li>height <i>float</i></li></ul></li>
+<li>SampleCenter
+<ul><li>sample_center <i>float</i></li></ul></li>
+<li>SampleX
+<ul><li>sample_x <i>float</i></li></ul></li>
+<li>SampleY
+<ul><li>sample_y <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>Distance
+<ul><li>distance <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Camera_Info">Camera Info</span></h4>
+<ul><li>Output Sockets
+<ul><li>View Vector
+<ul><li>view_vector <i>vector</i></li></ul></li>
+<li>View Z Depth
+<ul><li>view_z_depth <i>float</i></li></ul></li>
+<li>View Distance
+<ul><li>view_distance <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Checker_Texture">Checker Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>Color1
+<ul><li>color1 <i>color</i></li></ul></li>
+<li>Color2
+<ul><li>color2 <i>color</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Clamp">Clamp</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>clamp_type <i>enum</i></li></ul></li>
+<li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>Min
+<ul><li>min <i>float</i></li></ul></li>
+<li>Max
+<ul><li>max <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Result
+<ul><li>result <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Color">Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>Value
+<ul><li>value <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Combine_Hsv">Combine Hsv</span></h4>
+<ul><li>Input Sockets
+<ul><li>H
+<ul><li>h <i>float</i></li></ul></li>
+<li>S
+<ul><li>s <i>float</i></li></ul></li>
+<li>V
+<ul><li>v <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Combine_Rgb">Combine Rgb</span></h4>
+<ul><li>Input Sockets
+<ul><li>R
+<ul><li>r <i>float</i></li></ul></li>
+<li>G
+<ul><li>g <i>float</i></li></ul></li>
+<li>B
+<ul><li>b <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Image
+<ul><li>image <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Combine_Xyz">Combine Xyz</span></h4>
+<ul><li>Input Sockets
+<ul><li>X
+<ul><li>x <i>float</i></li></ul></li>
+<li>Y
+<ul><li>y <i>float</i></li></ul></li>
+<li>Z
+<ul><li>z <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Vector
+<ul><li>vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Closure">Convert Closure To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Color">Convert Closure To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Float">Convert Closure To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Int">Convert Closure To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Normal">Convert Closure To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Point">Convert Closure To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_String">Convert Closure To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Closure_To_Vector">Convert Closure To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Closure">Convert Color To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Color">Convert Color To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Float">Convert Color To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Int">Convert Color To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Normal">Convert Color To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Point">Convert Color To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_String">Convert Color To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Color_To_Vector">Convert Color To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Closure">Convert Float To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Color">Convert Float To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Float">Convert Float To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Int">Convert Float To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Normal">Convert Float To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Point">Convert Float To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_String">Convert Float To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Float_To_Vector">Convert Float To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Closure">Convert Int To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Color">Convert Int To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Float">Convert Int To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Int">Convert Int To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Normal">Convert Int To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Point">Convert Int To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_String">Convert Int To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Int_To_Vector">Convert Int To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Closure">Convert Normal To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Color">Convert Normal To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Float">Convert Normal To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Int">Convert Normal To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Normal">Convert Normal To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Point">Convert Normal To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_String">Convert Normal To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Normal_To_Vector">Convert Normal To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Closure">Convert Point To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Color">Convert Point To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Float">Convert Point To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Int">Convert Point To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Normal">Convert Point To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Point">Convert Point To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_String">Convert Point To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Point_To_Vector">Convert Point To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Closure">Convert String To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Color">Convert String To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Float">Convert String To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Int">Convert String To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Normal">Convert String To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Point">Convert String To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_String">Convert String To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_String_To_Vector">Convert String To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Closure">Convert Vector To Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_closure
+<ul><li>value_closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Color">Convert Vector To Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_color
+<ul><li>value_color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Float">Convert Vector To Float</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_float
+<ul><li>value_float <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Int">Convert Vector To Int</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_int
+<ul><li>value_int <i>int</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Normal">Convert Vector To Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_normal
+<ul><li>value_normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Point">Convert Vector To Point</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_point
+<ul><li>value_point <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_String">Convert Vector To String</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_string
+<ul><li>value_string <i>string</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Convert_Vector_To_Vector">Convert Vector To Vector</span></h4>
+<ul><li>Input Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>value_vector
+<ul><li>value_vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Diffuse_Bsdf">Diffuse Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Displacement">Displacement</span></h4>
+<ul><li>Input Sockets
+<ul><li>Space
+<ul><li>space <i>enum</i></li></ul></li>
+<li>Height
+<ul><li>height <i>float</i></li></ul></li>
+<li>Midlevel
+<ul><li>midlevel <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Displacement
+<ul><li>displacement <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Emission">Emission</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Emission
+<ul><li>emission <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Environment_Texture">Environment Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Filename
+<ul><li>filename <i>string</i></li></ul></li>
+<li>Colorspace
+<ul><li>colorspace <i>string</i></li></ul></li>
+<li>Alpha Type
+<ul><li>alpha_type <i>enum</i></li></ul></li>
+<li>Interpolation
+<ul><li>interpolation <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>projection <i>enum</i></li></ul></li>
+<li>Animated
+<ul><li>animated <i>boolean</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Fresnel">Fresnel</span></h4>
+<ul><li>Input Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>IOR
+<ul><li>IOR <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Gamma">Gamma</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Gamma
+<ul><li>gamma <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Geometry">Geometry</span></h4>
+<ul><li>Input Sockets
+<ul><li>NormalIn
+<ul><li>normal_osl <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Position
+<ul><li>position <i>point</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Tangent
+<ul><li>tangent <i>normal</i></li></ul></li>
+<li>True Normal
+<ul><li>true_normal <i>normal</i></li></ul></li>
+<li>Incoming
+<ul><li>incoming <i>vector</i></li></ul></li>
+<li>Parametric
+<ul><li>parametric <i>point</i></li></ul></li>
+<li>Backfacing
+<ul><li>backfacing <i>float</i></li></ul></li>
+<li>Pointiness
+<ul><li>pointiness <i>float</i></li></ul></li>
+<li>Random Per Island
+<ul><li>random_per_island <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Glass_Bsdf">Glass Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Distribution
+<ul><li>distribution <i>enum</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>IOR
+<ul><li>IOR <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Glossy_Bsdf">Glossy Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Distribution
+<ul><li>distribution <i>enum</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Gradient_Texture">Gradient Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>gradient_type <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Hair_Bsdf">Hair Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Component
+<ul><li>component <i>enum</i></li></ul></li>
+<li>Offset
+<ul><li>offset <i>float</i></li></ul></li>
+<li>RoughnessU
+<ul><li>roughness_u <i>float</i></li></ul></li>
+<li>RoughnessV
+<ul><li>roughness_v <i>float</i></li></ul></li>
+<li>Tangent
+<ul><li>tangent <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Hair_Info">Hair Info</span></h4>
+<ul><li>Output Sockets
+<ul><li>Is Strand
+<ul><li>is_strand <i>float</i></li></ul></li>
+<li>Intercept
+<ul><li>intercept <i>float</i></li></ul></li>
+<li>Thickness
+<ul><li>thickness <i>float</i></li></ul></li>
+<li>Tangent Normal
+<ul><li>tangent_normal <i>normal</i></li></ul></li>
+<li>Random
+<ul><li>index <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Holdout">Holdout</span></h4>
+<ul><li>Input Sockets
+<ul><li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>VolumeMixWeight
+<ul><li>volume_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Holdout
+<ul><li>holdout <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Hsv">Hsv</span></h4>
+<ul><li>Input Sockets
+<ul><li>Hue
+<ul><li>hue <i>float</i></li></ul></li>
+<li>Saturation
+<ul><li>saturation <i>float</i></li></ul></li>
+<li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Ies_Light">Ies Light</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>IES
+<ul><li>ies <i>string</i></li></ul></li>
+<li>File Name
+<ul><li>filename <i>string</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Image_Texture">Image Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Filename
+<ul><li>filename <i>string</i></li></ul></li>
+<li>Colorspace
+<ul><li>colorspace <i>string</i></li></ul></li>
+<li>Alpha Type
+<ul><li>alpha_type <i>enum</i></li></ul></li>
+<li>Interpolation
+<ul><li>interpolation <i>enum</i></li></ul></li>
+<li>Extension
+<ul><li>extension <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>projection <i>enum</i></li></ul></li>
+<li>Projection Blend
+<ul><li>projection_blend <i>float</i></li></ul></li>
+<li>Tiles
+<ul><li>tiles <i>array_int</i></li></ul></li>
+<li>Animated
+<ul><li>animated <i>boolean</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Invert">Invert</span></h4>
+<ul><li>Input Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Layer_Weight">Layer Weight</span></h4>
+<ul><li>Input Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Blend
+<ul><li>blend <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fresnel
+<ul><li>fresnel <i>float</i></li></ul></li>
+<li>Facing
+<ul><li>facing <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Light_Falloff">Light Falloff</span></h4>
+<ul><li>Input Sockets
+<ul><li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>Smooth
+<ul><li>smooth <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Quadratic
+<ul><li>quadratic <i>float</i></li></ul></li>
+<li>Linear
+<ul><li>linear <i>float</i></li></ul></li>
+<li>Constant
+<ul><li>constant <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Light_Path">Light Path</span></h4>
+<ul><li>Output Sockets
+<ul><li>Is Camera Ray
+<ul><li>is_camera_ray <i>float</i></li></ul></li>
+<li>Is Shadow Ray
+<ul><li>is_shadow_ray <i>float</i></li></ul></li>
+<li>Is Diffuse Ray
+<ul><li>is_diffuse_ray <i>float</i></li></ul></li>
+<li>Is Glossy Ray
+<ul><li>is_glossy_ray <i>float</i></li></ul></li>
+<li>Is Singular Ray
+<ul><li>is_singular_ray <i>float</i></li></ul></li>
+<li>Is Reflection Ray
+<ul><li>is_reflection_ray <i>float</i></li></ul></li>
+<li>Is Transmission Ray
+<ul><li>is_transmission_ray <i>float</i></li></ul></li>
+<li>Is Volume Scatter Ray
+<ul><li>is_volume_scatter_ray <i>float</i></li></ul></li>
+<li>Ray Length
+<ul><li>ray_length <i>float</i></li></ul></li>
+<li>Ray Depth
+<ul><li>ray_depth <i>float</i></li></ul></li>
+<li>Diffuse Depth
+<ul><li>diffuse_depth <i>float</i></li></ul></li>
+<li>Glossy Depth
+<ul><li>glossy_depth <i>float</i></li></ul></li>
+<li>Transparent Depth
+<ul><li>transparent_depth <i>float</i></li></ul></li>
+<li>Transmission Depth
+<ul><li>transmission_depth <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Magic_Texture">Magic Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Depth
+<ul><li>depth <i>int</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Distortion
+<ul><li>distortion <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Map_Range">Map Range</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>range_type <i>enum</i></li></ul></li>
+<li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>From Min
+<ul><li>from_min <i>float</i></li></ul></li>
+<li>From Max
+<ul><li>from_max <i>float</i></li></ul></li>
+<li>To Min
+<ul><li>to_min <i>float</i></li></ul></li>
+<li>To Max
+<ul><li>to_max <i>float</i></li></ul></li>
+<li>Steps
+<ul><li>steps <i>float</i></li></ul></li>
+<li>Clamp
+<ul><li>clamp <i>boolean</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Result
+<ul><li>result <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Mapping">Mapping</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>mapping_type <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>Location
+<ul><li>location <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>rotation <i>point</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Math">Math</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>math_type <i>enum</i></li></ul></li>
+<li>Use Clamp
+<ul><li>use_clamp <i>boolean</i></li></ul></li>
+<li>Value1
+<ul><li>value1 <i>float</i></li></ul></li>
+<li>Value2
+<ul><li>value2 <i>float</i></li></ul></li>
+<li>Value3
+<ul><li>value3 <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Value
+<ul><li>value <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Mix">Mix</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>mix_type <i>enum</i></li></ul></li>
+<li>Use Clamp
+<ul><li>use_clamp <i>boolean</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Color1
+<ul><li>color1 <i>color</i></li></ul></li>
+<li>Color2
+<ul><li>color2 <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Mix_Closure">Mix Closure</span></h4>
+<ul><li>Input Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Closure1
+<ul><li>closure1 <i>closure</i></li></ul></li>
+<li>Closure2
+<ul><li>closure2 <i>closure</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Closure
+<ul><li>closure <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Mix_Closure_Weight">Mix Closure Weight</span></h4>
+<ul><li>Input Sockets
+<ul><li>Weight
+<ul><li>weight <i>float</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Weight1
+<ul><li>weight1 <i>float</i></li></ul></li>
+<li>Weight2
+<ul><li>weight2 <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Musgrave_Texture">Musgrave Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Dimensions
+<ul><li>dimensions <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>musgrave_type <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>W
+<ul><li>w <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Detail
+<ul><li>detail <i>float</i></li></ul></li>
+<li>Dimension
+<ul><li>dimension <i>float</i></li></ul></li>
+<li>Lacunarity
+<ul><li>lacunarity <i>float</i></li></ul></li>
+<li>Offset
+<ul><li>offset <i>float</i></li></ul></li>
+<li>Gain
+<ul><li>gain <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Noise_Texture">Noise Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Dimensions
+<ul><li>dimensions <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>W
+<ul><li>w <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Detail
+<ul><li>detail <i>float</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>Distortion
+<ul><li>distortion <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Normal">Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>direction
+<ul><li>direction <i>vector</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Dot
+<ul><li>dot <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Normal_Map">Normal Map</span></h4>
+<ul><li>Input Sockets
+<ul><li>Space
+<ul><li>space <i>enum</i></li></ul></li>
+<li>Attribute
+<ul><li>attribute <i>string</i></li></ul></li>
+<li>NormalIn
+<ul><li>normal_osl <i>normal</i></li></ul></li>
+<li>Strength
+<ul><li>strength <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Object_Info">Object Info</span></h4>
+<ul><li>Output Sockets
+<ul><li>Location
+<ul><li>location <i>vector</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Object Index
+<ul><li>object_index <i>float</i></li></ul></li>
+<li>Material Index
+<ul><li>material_index <i>float</i></li></ul></li>
+<li>Random
+<ul><li>random <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Output">Output</span></h4>
+<ul><li>Input Sockets
+<ul><li>Surface
+<ul><li>surface <i>closure</i></li></ul></li>
+<li>Volume
+<ul><li>volume <i>closure</i></li></ul></li>
+<li>Displacement
+<ul><li>displacement <i>vector</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Particle_Info">Particle Info</span></h4>
+<ul><li>Output Sockets
+<ul><li>Index
+<ul><li>index <i>float</i></li></ul></li>
+<li>Random
+<ul><li>random <i>float</i></li></ul></li>
+<li>Age
+<ul><li>age <i>float</i></li></ul></li>
+<li>Lifetime
+<ul><li>lifetime <i>float</i></li></ul></li>
+<li>Location
+<ul><li>location <i>point</i></li></ul></li>
+<li>Size
+<ul><li>size <i>float</i></li></ul></li>
+<li>Velocity
+<ul><li>velocity <i>vector</i></li></ul></li>
+<li>Angular Velocity
+<ul><li>angular_velocity <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Point_Density_Texture">Point Density Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Filename
+<ul><li>filename <i>string</i></li></ul></li>
+<li>Space
+<ul><li>space <i>enum</i></li></ul></li>
+<li>Interpolation
+<ul><li>interpolation <i>enum</i></li></ul></li>
+<li>Transform
+<ul><li>tfm <i>transform</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Density
+<ul><li>density <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Principled_Bsdf">Principled Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Distribution
+<ul><li>distribution <i>enum</i></li></ul></li>
+<li>Subsurface Method
+<ul><li>subsurface_method <i>enum</i></li></ul></li>
+<li>Base Color
+<ul><li>base_color <i>color</i></li></ul></li>
+<li>Subsurface Color
+<ul><li>subsurface_color <i>color</i></li></ul></li>
+<li>Metallic
+<ul><li>metallic <i>float</i></li></ul></li>
+<li>Subsurface
+<ul><li>subsurface <i>float</i></li></ul></li>
+<li>Subsurface Radius
+<ul><li>subsurface_radius <i>vector</i></li></ul></li>
+<li>Specular
+<ul><li>specular <i>float</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>Specular Tint
+<ul><li>specular_tint <i>float</i></li></ul></li>
+<li>Anisotropic
+<ul><li>anisotropic <i>float</i></li></ul></li>
+<li>Sheen
+<ul><li>sheen <i>float</i></li></ul></li>
+<li>Sheen Tint
+<ul><li>sheen_tint <i>float</i></li></ul></li>
+<li>Clearcoat
+<ul><li>clearcoat <i>float</i></li></ul></li>
+<li>Clearcoat Roughness
+<ul><li>clearcoat_roughness <i>float</i></li></ul></li>
+<li>IOR
+<ul><li>ior <i>float</i></li></ul></li>
+<li>Transmission
+<ul><li>transmission <i>float</i></li></ul></li>
+<li>Transmission Roughness
+<ul><li>transmission_roughness <i>float</i></li></ul></li>
+<li>Anisotropic Rotation
+<ul><li>anisotropic_rotation <i>float</i></li></ul></li>
+<li>Emission
+<ul><li>emission <i>color</i></li></ul></li>
+<li>Emission Strength
+<ul><li>emission_strength <i>float</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>Clearcoat Normal
+<ul><li>clearcoat_normal <i>normal</i></li></ul></li>
+<li>Tangent
+<ul><li>tangent <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Principled_Hair_Bsdf">Principled Hair Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Parametrization
+<ul><li>parametrization <i>enum</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Melanin
+<ul><li>melanin <i>float</i></li></ul></li>
+<li>Melanin Redness
+<ul><li>melanin_redness <i>float</i></li></ul></li>
+<li>Tint
+<ul><li>tint <i>color</i></li></ul></li>
+<li>Absorption Coefficient
+<ul><li>absorption_coefficient <i>vector</i></li></ul></li>
+<li>Offset
+<ul><li>offset <i>float</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>Radial Roughness
+<ul><li>radial_roughness <i>float</i></li></ul></li>
+<li>Coat
+<ul><li>coat <i>float</i></li></ul></li>
+<li>IOR
+<ul><li>ior <i>float</i></li></ul></li>
+<li>Random Roughness
+<ul><li>random_roughness <i>float</i></li></ul></li>
+<li>Random Color
+<ul><li>random_color <i>float</i></li></ul></li>
+<li>Random
+<ul><li>random <i>float</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Principled_Volume">Principled Volume</span></h4>
+<ul><li>Input Sockets
+<ul><li>Density Attribute
+<ul><li>density_attribute <i>string</i></li></ul></li>
+<li>Color Attribute
+<ul><li>color_attribute <i>string</i></li></ul></li>
+<li>Temperature Attribute
+<ul><li>temperature_attribute <i>string</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Density
+<ul><li>density <i>float</i></li></ul></li>
+<li>Anisotropy
+<ul><li>anisotropy <i>float</i></li></ul></li>
+<li>Absorption Color
+<ul><li>absorption_color <i>color</i></li></ul></li>
+<li>Emission Strength
+<ul><li>emission_strength <i>float</i></li></ul></li>
+<li>Emission Color
+<ul><li>emission_color <i>color</i></li></ul></li>
+<li>Blackbody Intensity
+<ul><li>blackbody_intensity <i>float</i></li></ul></li>
+<li>Blackbody Tint
+<ul><li>blackbody_tint <i>color</i></li></ul></li>
+<li>Temperature
+<ul><li>temperature <i>float</i></li></ul></li>
+<li>VolumeMixWeight
+<ul><li>volume_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Volume
+<ul><li>volume <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Refraction_Bsdf">Refraction Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Distribution
+<ul><li>distribution <i>enum</i></li></ul></li>
+<li>Roughness
+<ul><li>roughness <i>float</i></li></ul></li>
+<li>IOR
+<ul><li>IOR <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Rgb_Curves">Rgb Curves</span></h4>
+<ul><li>Input Sockets
+<ul><li>Curves
+<ul><li>curves <i>array_color</i></li></ul></li>
+<li>Min X
+<ul><li>min_x <i>float</i></li></ul></li>
+<li>Max X
+<ul><li>max_x <i>float</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Color
+<ul><li>value <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>value <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Rgb_Ramp">Rgb Ramp</span></h4>
+<ul><li>Input Sockets
+<ul><li>Ramp
+<ul><li>ramp <i>array_color</i></li></ul></li>
+<li>Ramp Alpha
+<ul><li>ramp_alpha <i>array_float</i></li></ul></li>
+<li>Interpolate
+<ul><li>interpolate <i>boolean</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Rgb_To_Bw">Rgb To Bw</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Val
+<ul><li>val <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Scatter_Volume">Scatter Volume</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Density
+<ul><li>density <i>float</i></li></ul></li>
+<li>Anisotropy
+<ul><li>anisotropy <i>float</i></li></ul></li>
+<li>VolumeMixWeight
+<ul><li>volume_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Volume
+<ul><li>volume <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Separate_Hsv">Separate Hsv</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>H
+<ul><li>h <i>float</i></li></ul></li>
+<li>S
+<ul><li>s <i>float</i></li></ul></li>
+<li>V
+<ul><li>v <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Separate_Rgb">Separate Rgb</span></h4>
+<ul><li>Input Sockets
+<ul><li>Image
+<ul><li>color <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>R
+<ul><li>r <i>float</i></li></ul></li>
+<li>G
+<ul><li>g <i>float</i></li></ul></li>
+<li>B
+<ul><li>b <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Separate_Xyz">Separate Xyz</span></h4>
+<ul><li>Input Sockets
+<ul><li>Vector
+<ul><li>vector <i>color</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>X
+<ul><li>x <i>float</i></li></ul></li>
+<li>Y
+<ul><li>y <i>float</i></li></ul></li>
+<li>Z
+<ul><li>z <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Set_Normal">Set Normal</span></h4>
+<ul><li>Input Sockets
+<ul><li>Direction
+<ul><li>direction <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Normal
+<ul><li>normal <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Sky_Texture">Sky Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>sky_type <i>enum</i></li></ul></li>
+<li>Sun Direction
+<ul><li>sun_direction <i>vector</i></li></ul></li>
+<li>Turbidity
+<ul><li>turbidity <i>float</i></li></ul></li>
+<li>Ground Albedo
+<ul><li>ground_albedo <i>float</i></li></ul></li>
+<li>Sun Disc
+<ul><li>sun_disc <i>boolean</i></li></ul></li>
+<li>Sun Size
+<ul><li>sun_size <i>float</i></li></ul></li>
+<li>Sun Intensity
+<ul><li>sun_intensity <i>float</i></li></ul></li>
+<li>Sun Elevation
+<ul><li>sun_elevation <i>float</i></li></ul></li>
+<li>Sun Rotation
+<ul><li>sun_rotation <i>float</i></li></ul></li>
+<li>Altitude
+<ul><li>altitude <i>float</i></li></ul></li>
+<li>Air
+<ul><li>air_density <i>float</i></li></ul></li>
+<li>Dust
+<ul><li>dust_density <i>float</i></li></ul></li>
+<li>Ozone
+<ul><li>ozone_density <i>float</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Subsurface_Scattering">Subsurface Scattering</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Falloff
+<ul><li>falloff <i>enum</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Radius
+<ul><li>radius <i>vector</i></li></ul></li>
+<li>Sharpness
+<ul><li>sharpness <i>float</i></li></ul></li>
+<li>Texture Blur
+<ul><li>texture_blur <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSSRDF
+<ul><li>BSSRDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Tangent">Tangent</span></h4>
+<ul><li>Input Sockets
+<ul><li>Direction Type
+<ul><li>direction_type <i>enum</i></li></ul></li>
+<li>Axis
+<ul><li>axis <i>enum</i></li></ul></li>
+<li>Attribute
+<ul><li>attribute <i>string</i></li></ul></li>
+<li>NormalIn
+<ul><li>normal_osl <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Tangent
+<ul><li>tangent <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Texture_Coordinate">Texture Coordinate</span></h4>
+<ul><li>Input Sockets
+<ul><li>From Dupli
+<ul><li>from_dupli <i>boolean</i></li></ul></li>
+<li>Use Transform
+<ul><li>use_transform <i>boolean</i></li></ul></li>
+<li>Object Transform
+<ul><li>ob_tfm <i>transform</i></li></ul></li>
+<li>NormalIn
+<ul><li>normal_osl <i>normal</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Generated
+<ul><li>generated <i>point</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>UV
+<ul><li>UV <i>point</i></li></ul></li>
+<li>Object
+<ul><li>object <i>point</i></li></ul></li>
+<li>Camera
+<ul><li>camera <i>point</i></li></ul></li>
+<li>Window
+<ul><li>window <i>point</i></li></ul></li>
+<li>Reflection
+<ul><li>reflection <i>normal</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Toon_Bsdf">Toon Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Component
+<ul><li>component <i>enum</i></li></ul></li>
+<li>Size
+<ul><li>size <i>float</i></li></ul></li>
+<li>Smooth
+<ul><li>smooth <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Translucent_Bsdf">Translucent Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Transparent_Bsdf">Transparent Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Uvmap">Uvmap</span></h4>
+<ul><li>Input Sockets
+<ul><li>attribute
+<ul><li>attribute <i>string</i></li></ul></li>
+<li>from dupli
+<ul><li>from_dupli <i>boolean</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>UV
+<ul><li>UV <i>point</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Value">Value</span></h4>
+<ul><li>Input Sockets
+<ul><li>Value
+<ul><li>value <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Value
+<ul><li>value <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vector_Curves">Vector Curves</span></h4>
+<ul><li>Input Sockets
+<ul><li>Curves
+<ul><li>curves <i>array_vector</i></li></ul></li>
+<li>Min X
+<ul><li>min_x <i>float</i></li></ul></li>
+<li>Max X
+<ul><li>max_x <i>float</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li>
+<li>Vector
+<ul><li>value <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Vector
+<ul><li>value <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vector_Displacement">Vector Displacement</span></h4>
+<ul><li>Input Sockets
+<ul><li>Space
+<ul><li>space <i>enum</i></li></ul></li>
+<li>Attribute
+<ul><li>attribute <i>string</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>color</i></li></ul></li>
+<li>Midlevel
+<ul><li>midlevel <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Displacement
+<ul><li>displacement <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vector_Math">Vector Math</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>math_type <i>enum</i></li></ul></li>
+<li>Vector1
+<ul><li>vector1 <i>vector</i></li></ul></li>
+<li>Vector2
+<ul><li>vector2 <i>vector</i></li></ul></li>
+<li>Vector3
+<ul><li>vector3 <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vector_Rotate">Vector Rotate</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>rotate_type <i>enum</i></li></ul></li>
+<li>Invert
+<ul><li>invert <i>boolean</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>vector</i></li></ul></li>
+<li>Rotation
+<ul><li>rotation <i>point</i></li></ul></li>
+<li>Center
+<ul><li>center <i>point</i></li></ul></li>
+<li>Axis
+<ul><li>axis <i>vector</i></li></ul></li>
+<li>Angle
+<ul><li>angle <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Vector
+<ul><li>vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vector_Transform">Vector Transform</span></h4>
+<ul><li>Input Sockets
+<ul><li>Type
+<ul><li>transform_type <i>enum</i></li></ul></li>
+<li>Convert From
+<ul><li>convert_from <i>enum</i></li></ul></li>
+<li>Convert To
+<ul><li>convert_to <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>vector</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Vector
+<ul><li>vector <i>vector</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Velvet_Bsdf">Velvet Bsdf</span></h4>
+<ul><li>Input Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Normal
+<ul><li>normal <i>normal</i></li></ul></li>
+<li>SurfaceMixWeight
+<ul><li>surface_mix_weight <i>float</i></li></ul></li>
+<li>Sigma
+<ul><li>sigma <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>BSDF
+<ul><li>BSDF <i>closure</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Vertex_Color">Vertex Color</span></h4>
+<ul><li>Input Sockets
+<ul><li>Layer Name
+<ul><li>layer_name <i>string</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Alpha
+<ul><li>alpha <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Volume_Info">Volume Info</span></h4>
+<ul><li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Density
+<ul><li>density <i>float</i></li></ul></li>
+<li>Flame
+<ul><li>flame <i>float</i></li></ul></li>
+<li>Temperature
+<ul><li>temperature <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Voronoi_Texture">Voronoi Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Dimensions
+<ul><li>dimensions <i>enum</i></li></ul></li>
+<li>Distance Metric
+<ul><li>metric <i>enum</i></li></ul></li>
+<li>Feature
+<ul><li>feature <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>W
+<ul><li>w <i>float</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Smoothness
+<ul><li>smoothness <i>float</i></li></ul></li>
+<li>Exponent
+<ul><li>exponent <i>float</i></li></ul></li>
+<li>Randomness
+<ul><li>randomness <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Distance
+<ul><li>distance <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Position
+<ul><li>position <i>point</i></li></ul></li>
+<li>W
+<ul><li>w <i>float</i></li></ul></li>
+<li>Radius
+<ul><li>radius <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Wave_Texture">Wave Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Translation
+<ul><li>tex_mapping.translation <i>point</i></li></ul></li>
+<li>Rotation
+<ul><li>tex_mapping.rotation <i>vector</i></li></ul></li>
+<li>Scale
+<ul><li>tex_mapping.scale <i>vector</i></li></ul></li>
+<li>Min
+<ul><li>tex_mapping.min <i>vector</i></li></ul></li>
+<li>Max
+<ul><li>tex_mapping.max <i>vector</i></li></ul></li>
+<li>Use Min Max
+<ul><li>tex_mapping.use_minmax <i>boolean</i></li></ul></li>
+<li>x_mapping
+<ul><li>tex_mapping.x_mapping <i>enum</i></li></ul></li>
+<li>y_mapping
+<ul><li>tex_mapping.y_mapping <i>enum</i></li></ul></li>
+<li>z_mapping
+<ul><li>tex_mapping.z_mapping <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>tex_mapping.type <i>enum</i></li></ul></li>
+<li>Projection
+<ul><li>tex_mapping.projection <i>enum</i></li></ul></li>
+<li>Type
+<ul><li>wave_type <i>enum</i></li></ul></li>
+<li>Bands Direction
+<ul><li>bands_direction <i>enum</i></li></ul></li>
+<li>Rings Direction
+<ul><li>rings_direction <i>enum</i></li></ul></li>
+<li>Profile
+<ul><li>profile <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>Scale
+<ul><li>scale <i>float</i></li></ul></li>
+<li>Distortion
+<ul><li>distortion <i>float</i></li></ul></li>
+<li>Detail
+<ul><li>detail <i>float</i></li></ul></li>
+<li>Detail Scale
+<ul><li>detail_scale <i>float</i></li></ul></li>
+<li>Detail Roughness
+<ul><li>detail_roughness <i>float</i></li></ul></li>
+<li>Phase Offset
+<ul><li>phase <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li>
+<li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Wavelength">Wavelength</span></h4>
+<ul><li>Input Sockets
+<ul><li>Wavelength
+<ul><li>wavelength <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="White_Noise_Texture">White Noise Texture</span></h4>
+<ul><li>Input Sockets
+<ul><li>Dimensions
+<ul><li>dimensions <i>enum</i></li></ul></li>
+<li>Vector
+<ul><li>vector <i>point</i></li></ul></li>
+<li>W
+<ul><li>w <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Value
+<ul><li>value <i>float</i></li></ul></li>
+<li>Color
+<ul><li>color <i>color</i></li></ul></li></ul></li></ul>
+<h4><span class="mw-headline" id="Wireframe">Wireframe</span></h4>
+<ul><li>Input Sockets
+<ul><li>Use Pixel Size
+<ul><li>use_pixel_size <i>boolean</i></li></ul></li>
+<li>Size
+<ul><li>size <i>float</i></li></ul></li></ul></li>
+<li>Output Sockets
+<ul><li>Fac
+<ul><li>fac <i>float</i></li></ul></li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112122550
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.414 seconds
+Real time usage: 0.416 seconds
+Preprocessor visited node count: 678/1000000
+Preprocessor generated node count: 684/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5808-0!canonical and timestamp 20240112122550 and revision id 24539
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;oldid=24539">https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;oldid=24539</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 30 May 2021, at 20:06.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:KevinDietrich/CyclesNodes" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:KevinDietrich/CyclesNodes" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../Special:Contributions/KevinDietrich.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../Special:Log/KevinDietrich.html">Logs</a></li><li id="t-userrights"><a href="../Special:UserRights/KevinDietrich.html">View user groups</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;oldid=24539" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:KevinDietrich/CyclesNodes&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.414","walltime":"0.416","ppvisitednodes":{"value":678,"limit":1000000},"ppgeneratednodes":{"value":684,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112122550","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":474});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844562688d335c3a","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

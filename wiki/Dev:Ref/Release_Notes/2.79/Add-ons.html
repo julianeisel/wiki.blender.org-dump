@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Reference/Release Notes/2.79/Add-ons - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Reference/Release_Notes/2.79/Add-ons","wgTitle":"Reference/Release Notes/2.79/Add-ons","wgCurRevisionId":34613,"wgRevisionId":34613,"wgArticleId":196,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Reference/Release_Notes/2.79/Add-ons","wgRelevantArticleId":196,"wgRequestId":"43fe2f3d4d2a42e59d281e3c","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Dev:Ref/Release_Notes/2.79/Add-ons","wgWikiEditorEnabledModules":[],"wgInternalRedirectTargetUrl":"/wiki/Reference/Release_Notes/2.79/Add-ons"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="../../../Reference/Release_Notes/2.79/Add-ons.html"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Reference_Release_Notes_2_79_Add-ons rootpage-Reference skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="../../../Reference/Release_Notes/2.79/Add-ons.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=Reference%2FRelease+Notes%2F2.79%2FAdd-ons" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Add-ons.html#Blender_2.79:_Add-ons"><span class="tocnumber">1</span> <span class="toctext">Blender 2.79: Add-ons</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Add-ons.html#New_Add-ons"><span class="tocnumber">1.1</span> <span class="toctext">New Add-ons</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="Add-ons.html#Dynamic_Sky"><span class="tocnumber">1.1.1</span> <span class="toctext">Dynamic Sky</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="Add-ons.html#Archipack"><span class="tocnumber">1.1.2</span> <span class="toctext">Archipack</span></a>
+<ul>
+<li class="toclevel-4 tocsection-5"><a href="Add-ons.html#Available_objects"><span class="tocnumber">1.1.2.1</span> <span class="toctext">Available objects</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="Add-ons.html#Main_Features"><span class="tocnumber">1.1.2.2</span> <span class="toctext">Main Features</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-7"><a href="Add-ons.html#Magic_UV"><span class="tocnumber">1.1.3</span> <span class="toctext">Magic UV</span></a>
+<ul>
+<li class="toclevel-4 tocsection-8"><a href="Add-ons.html#New_Features:"><span class="tocnumber">1.1.3.1</span> <span class="toctext">New Features:</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="Add-ons.html#Bug_fixes:"><span class="tocnumber">1.1.3.2</span> <span class="toctext">Bug fixes:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="Add-ons.html#Mesh_Edit_Tools"><span class="tocnumber">1.1.4</span> <span class="toctext">Mesh Edit Tools</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="Add-ons.html#Skinify"><span class="tocnumber">1.1.5</span> <span class="toctext">Skinify</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="Add-ons.html#Display_Tools"><span class="tocnumber">1.1.6</span> <span class="toctext">Display Tools</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="Add-ons.html#Brush_Menus"><span class="tocnumber">1.1.7</span> <span class="toctext">Brush Menus</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="Add-ons.html#Btrace"><span class="tocnumber">1.1.8</span> <span class="toctext">Btrace</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="Add-ons.html#Is_Key_Free"><span class="tocnumber">1.1.9</span> <span class="toctext">Is Key Free</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="Add-ons.html#Turnaround_Camera"><span class="tocnumber">1.1.10</span> <span class="toctext">Turnaround Camera</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="Add-ons.html#Auto_Mirror"><span class="tocnumber">1.1.11</span> <span class="toctext">Auto Mirror</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="Add-ons.html#Camera_Rigs"><span class="tocnumber">1.1.12</span> <span class="toctext">Camera Rigs</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="Add-ons.html#Snap_Utils_Line"><span class="tocnumber">1.1.13</span> <span class="toctext">Snap Utils Line</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="Add-ons.html#Add_Advanced_Objects"><span class="tocnumber">1.1.14</span> <span class="toctext">Add Advanced Objects</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="Add-ons.html#Export_Paper_Model"><span class="tocnumber">1.1.15</span> <span class="toctext">Export Paper Model</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="Add-ons.html#Kinoraw_Tools"><span class="tocnumber">1.1.16</span> <span class="toctext">Kinoraw Tools</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="Add-ons.html#Stored_Views"><span class="tocnumber">1.1.17</span> <span class="toctext">Stored Views</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="Add-ons.html#Render_Clay"><span class="tocnumber">1.1.18</span> <span class="toctext">Render Clay</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="Add-ons.html#Auto_Tracker"><span class="tocnumber">1.1.19</span> <span class="toctext">Auto Tracker</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="Add-ons.html#Refine_Tracking_Solution"><span class="tocnumber">1.1.20</span> <span class="toctext">Refine Tracking Solution</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="Add-ons.html#Materials_Library_VX"><span class="tocnumber">1.1.21</span> <span class="toctext">Materials Library VX</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="Add-ons.html#Mesh_Tissue"><span class="tocnumber">1.1.22</span> <span class="toctext">Mesh Tissue</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="Add-ons.html#Cell_Fracture_Crack_It"><span class="tocnumber">1.1.23</span> <span class="toctext">Cell Fracture Crack It</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="Add-ons.html#Updated_Add-ons"><span class="tocnumber">1.2</span> <span class="toctext">Updated Add-ons</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="Add-ons.html#Collada"><span class="tocnumber">1.2.1</span> <span class="toctext">Collada</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="Add-ons.html#POV-Ray"><span class="tocnumber">1.2.2</span> <span class="toctext">POV-Ray</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="Add-ons.html#OBJ_.28Wavefront.29"><span class="tocnumber">1.2.3</span> <span class="toctext">OBJ (Wavefront)</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="Add-ons.html#FBX_I.2FO_.fbx"><span class="tocnumber">1.2.4</span> <span class="toctext">FBX I/O .fbx</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="Add-ons.html#Rigify"><span class="tocnumber">1.2.5</span> <span class="toctext">Rigify</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="Add-ons.html#Ant_Landscape"><span class="tocnumber">1.2.6</span> <span class="toctext">Ant Landscape</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="Add-ons.html#Add_Curve_Extra_Objects"><span class="tocnumber">1.2.7</span> <span class="toctext">Add Curve Extra Objects</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="Add-ons.html#Viewport_Pie_Menus"><span class="tocnumber">1.2.8</span> <span class="toctext">Viewport Pie Menus</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="Add-ons.html#Blender_ID"><span class="tocnumber">1.2.9</span> <span class="toctext">Blender ID</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="Add-ons.html#Node_Wrangler:"><span class="tocnumber">1.2.10</span> <span class="toctext">Node Wrangler:</span></a>
+<ul>
+<li class="toclevel-4 tocsection-41"><a href="Add-ons.html#Supported_sockets"><span class="tocnumber">1.2.10.1</span> <span class="toctext">Supported sockets</span></a></li>
+<li class="toclevel-4 tocsection-42"><a href="Add-ons.html#Displacement_maps"><span class="tocnumber">1.2.10.2</span> <span class="toctext">Displacement maps</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="Add-ons.html#User_Preferences"><span class="tocnumber">1.2.10.3</span> <span class="toctext">User Preferences</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-44"><a href="Add-ons.html#MeasureIt"><span class="tocnumber">1.2.11</span> <span class="toctext">MeasureIt</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="Add-ons.html#Themes"><span class="tocnumber">1.2.12</span> <span class="toctext">Themes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-46"><a href="Add-ons.html#Addons_Contrib"><span class="tocnumber">1.3</span> <span class="toctext">Addons Contrib</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="Add-ons.html#New_Behaviors"><span class="tocnumber">1.4</span> <span class="toctext">New Behaviors</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="Add-ons.html#Special_Mentions"><span class="tocnumber">1.5</span> <span class="toctext">Special Mentions</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">Reference/Release Notes/2.79/Add-ons</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../../Reference.html" title="Reference">Reference</a>&lrm; | <a href="../../../Reference/Release_Notes.html" title="Reference/Release Notes">Release Notes</a>&lrm; | <a href="../../../Reference/Release_Notes/2.79.html" title="Reference/Release Notes/2.79">2.79</a></span><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.blender.org/w/index.php?title=Dev:Ref/Release_Notes/2.79/Add-ons&amp;redirect=no" class="mw-redirect" title="Dev:Ref/Release Notes/2.79/Add-ons">Dev:Ref/Release Notes/2.79/Add-ons</a>)</span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Blender_2.79:_Add-ons">Blender 2.79: Add-ons</span></h1>
+<h2><span class="mw-headline" id="New_Add-ons">New Add-ons</span></h2>
+<hr />
+<h3><span class="mw-headline" id="Dynamic_Sky">Dynamic Sky</span></h3>
+<div class="floatright"><a href="../../../File:Addons_dynamic_sky.jpg.html" class="image"><img alt="Addons dynamic sky.jpg" src="../../../../w/images/thumb/6/60/Addons_dynamic_sky.jpg/600px-Addons_dynamic_sky.jpg" width="600" height="338" srcset="../../../../w/images/thumb/6/60/Addons_dynamic_sky.jpg/900px-Addons_dynamic_sky.jpg 1.5x, ../../../../w/images/thumb/6/60/Addons_dynamic_sky.jpg/1200px-Addons_dynamic_sky.jpg 2x" /></a></div>
+<ul><li>This add-on is in the Toolshelf &gt; Tools Tab</li>
+<li>Dynamic sky is an add-on to create Procedural Sun and sky with lots of additional options to tweak</li>
+<li>For Cycles Worlds</li>
+<li>Authors: Draguu (Pratik Solanki)</li>
+<li>Maintainer: Draguu (Pratik Solanki)</li>
+<li><a rel="nofollow" class="external text" href="http://www.dragoneex.com/downloads/dynamic-skyadd-on">Wiki Page</a> (dragoneex.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Archipack">Archipack</span></h3>
+<div class="floatright"><a href="../../../File:Addon_Archipack.png.html" class="image"><img alt="Addon Archipack.png" src="../../../../w/images/thumb/5/5c/Addon_Archipack.png/600px-Addon_Archipack.png" width="600" height="338" srcset="../../../../w/images/thumb/5/5c/Addon_Archipack.png/900px-Addon_Archipack.png 1.5x, ../../../../w/images/5/5c/Addon_Archipack.png 2x" /></a></div>
+<p>Provide a set of parametric objects made to boost CAD users productivity.<br />
+Author: Stephen Leger (stephen-l)<br />
+Maintainer: stephen-l<br />
+This addon is in the Toolshelf &gt; Create Tab
+</p>
+<h4><span class="mw-headline" id="Available_objects">Available objects</span></h4>
+<ul><li>Door</li>
+<li>Window</li>
+<li>Wall</li>
+<li>Stair</li>
+<li>Fence</li>
+<li>Slab</li>
+<li>Floor</li>
+<li>Truss</li>
+<li>Roof</li></ul>
+<h4><span class="mw-headline" id="Main_Features">Main Features</span></h4>
+<ul><li>Realtime on-screen manipulation</li>
+<li>Automatic interactive boolean</li>
+<li>Customizable presets graphical menu</li>
+<li>Draw a wall / window / door create tools</li></ul>
+<p><a rel="nofollow" class="external text" href="https://github.com/s-leger/archipack/wiki">Wiki Page</a> (github.com)<br />
+<a rel="nofollow" class="external text" href="https://github.com/s-leger/archipack/issues">Issue tracker</a> (github.com)<br />
+<a rel="nofollow" class="external text" href="https://blenderartists.org/forum/showthread.php?417856-Addon-Archipack">Blender Artists Thread</a>
+<br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Magic_UV">Magic UV</span></h3>
+<div class="floatright"><a href="../../../File:Addon_MagicUV.png.html" class="image"><img alt="Addon MagicUV.png" src="../../../../w/images/thumb/e/eb/Addon_MagicUV.png/250px-Addon_MagicUV.png" width="250" height="250" srcset="../../../../w/images/thumb/e/eb/Addon_MagicUV.png/375px-Addon_MagicUV.png 1.5x, ../../../../w/images/e/eb/Addon_MagicUV.png 2x" /></a></div>
+<p>Magic UV (a.k.a. Copy/Paste UVs) was available only for the <a rel="nofollow" class="external text" href="https://builder.blender.org/download/">buildbot builds</a> until 2.78.<br />From 2.79, Magic UV is included to the <b>official release</b>.
+</p><p>Author: Nutti, Mifth, Jace Priester, kgeogeo, mem, Keith (Wahooney) Boshoff, McBuff, MaxRobinot<br />Task Tracker: <a rel="nofollow" class="external free" href="https://github.com/nutti/Magic-UV/issues">https://github.com/nutti/Magic-UV/issues</a><br />Wiki Page: <a rel="nofollow" class="external free" href="https://github.com/nutti/Magic-UV/wiki">https://github.com/nutti/Magic-UV/wiki</a><br />GitHub Page(For Development):<a rel="nofollow" class="external free" href="https://github.com/nutti/Magic-UV">https://github.com/nutti/Magic-UV</a><br /><a rel="nofollow" class="external text" href="https://blenderartists.org/forum/showthread.php?391573-Add-on-Magic-UV-v4-1-(Copy-Paste-UV-Preserve-UVs-UV-Bounding-Box-and-so-on)">Blender Artist Thread</a>
+</p>
+<h4><span class="mw-headline" id="New_Features:">New Features:</span></h4>
+<p>Newly added features since <a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.76/Add-ons">2.76</a>) are as follows.
+</p><p><a rel="nofollow" class="external text" href="https://www.youtube.com/playlist?list=PLxU3dbBpsS3flku3NlSigLVltSokGBg-R">Tutorial Video List (All features)</a><br />
+<a rel="nofollow" class="external text" href="https://www.youtube.com/playlist?list=PLxU3dbBpsS3c_jY3Fd7Ogqr9Lr7w-0h0U">Tutorial Video List (New features since 2.76)</a>
+</p>
+<ul><li><b>Bounding-Box Manipulator in Image/UV Editor</b><br />Edit UV with the Bounding-Box Manipulator.<br />Translation, rotation and scaling operations are supported.</li>
+<li><b>Move UV from 3D View</b><br />Edit UV with the mouse from 3D View.</li>
+<li><b>Texture Projection</b><br />Project the texture to the mesh from 3D View while displaying the texture.</li>
+<li><b>Pack UV Extenstion (with same UV island packing)</b><br />"Pack UV" and merge the similar UV islands.</li>
+<li><b>Texture Lock</b><br />Preserve UV coordinates while editing the meshes.</li>
+<li><b>Mirror UV</b><br />Copy/Paste UV with Mirror-inverted</li>
+<li><b>World Scale UV</b><br />Scale UV along to the mesh's size.</li>
+<li><b>Unwrap Constraint</b><br />Keep U or V coordinate during "Unwrap UV" operation.</li>
+<li><b>Preserve UV Aspect</b><br />Restrain changing UV coordinate when the different sized texture will be attached to the mesh.</li></ul>
+<h4><span class="mw-headline" id="Bug_fixes:">Bug fixes:</span></h4>
+<ul><li>User reported bugs are fixed</li>
+<li>Refactor and Adopt style guide.<br style="clear:both;" /></li></ul>
+<hr />
+<h3><span class="mw-headline" id="Mesh_Edit_Tools">Mesh Edit Tools</span></h3>
+<div class="floatright"><a href="../../../File:Addon_multiextrude_glam.jpg.html" class="image"><img alt="Addon multiextrude glam.jpg" src="../../../../w/images/thumb/7/76/Addon_multiextrude_glam.jpg/600px-Addon_multiextrude_glam.jpg" width="600" height="386" srcset="../../../../w/images/7/76/Addon_multiextrude_glam.jpg 1.5x" /></a></div>
+<div class="floatright"><a href="../../../File:Extrude_Reshape.jpg.html" class="image"><img alt="Extrude Reshape.jpg" src="../../../../w/images/thumb/7/73/Extrude_Reshape.jpg/600px-Extrude_Reshape.jpg" width="600" height="482" srcset="../../../../w/images/7/73/Extrude_Reshape.jpg 1.5x" /></a></div>
+<ul><li><b>Face Inset Fillet:</b> based completely on add-on by zmj100</li>
+<li><b>Vertex Align:</b> by zmj100</li>
+<li><b>Edge Fillet Plus:</b> by Gert De Roost - original by zmj100</li>
+<li><b>Split Solidify:</b> by zmj100, updated by zeffii to BMesh</li>
+<li><b>Pen Tool:</b> by zmj100</li>
+<li><b>Mesh Cut Faces:</b> by Stanislav Blinov (Stan Pancakes)</li>
+<li><b>V/E/F Context Menu:</b> by Stanislav Blinov (Stan Pancakes)</li>
+<li><b>Edge Roundifier:</b> by Piotr Komisarczyk (komi3D), PKHG</li>
+<li><b>PKHG Face Extrude:</b> by PKHG, based of geodesic domes add-on "faces function"</li>
+<li><b>Set Edges Length:</b> by "Giuseppe De Marco [BlenderLab] inspired by NirenYang"</li>
+<li><b>Edge Tools:</b> by Paul Marshall (brikbot)</li>
+<li><b>Extrude and Reshape:</b> by Germano Cavalcante (mano-wii)</li>
+<li><b>Fast Loop:</b> by Andy Davies (metalliandy)</li>
+<li><b>Multi Extrude:</b> by Liero, Jimmy Hazevoet</li>
+<li><b>Offset Edges:</b> by Hidesato Ikeya</li>
+<li><b>Edge Floor Plan:</b> by lijenstina</li>
+<li><b>Vertex Chamfer:</b> by Andrew Hale (TrumanBlending)</li>
+<li><b>Random Vertices:</b> by Oscurart</li>
+<li><b>Select Tools:</b> by dustractor</li>
+<li>Thanks to Macouno &amp; CoDEmanX</li></ul>
+<ul><li>Mesh Edit Tool adds several tools to Blender that are not available in the built in tools or provide different methods for similar tasks</li>
+<li>Each Menu: Vert, Edge, Face &amp; Utils is a sub panel that is closed by default in the Toolshelf Edit Mode Tools</li>
+<li>The Icons in the closed panel headers contain some new/different selection tools &amp; edit mode v/e/f Selection Modes for quick access to some tools, before opening the sub panels</li>
+<li>In the ui there's a variety of tools in each category, most tools have a small box to the right to provide some usage information to help users understand each tools basic requirements.</li>
+<li><b>Hotkeys:</b> most significant is in edit mode double right click brings up the Blender Vert/Edge/Face menus depending on v/e/f selection mode</li>
+<li>Menu Integration is main tools into the 'w' key edit mode specials, selection tools into the edit mode select menu</li>
+<li>Maintainer: meta-androcto, lijenstina</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Modeling/Extra_Tools">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Skinify">Skinify</span></h3>
+<div class="floatleft"><a href="../../../File:Addon_skinify_rigify2.jpg.html" class="image"><img alt="Addon skinify rigify2.jpg" src="../../../../w/images/thumb/7/72/Addon_skinify_rigify2.jpg/520px-Addon_skinify_rigify2.jpg" width="520" height="336" srcset="../../../../w/images/thumb/7/72/Addon_skinify_rigify2.jpg/780px-Addon_skinify_rigify2.jpg 1.5x, ../../../../w/images/thumb/7/72/Addon_skinify_rigify2.jpg/1040px-Addon_skinify_rigify2.jpg 2x" /></a></div>
+<div class="floatright"><a href="../../../File:Addon_skinify_ui.jpg.html" class="image"><img alt="Addon skinify ui.jpg" src="../../../../w/images/thumb/8/84/Addon_skinify_ui.jpg/425px-Addon_skinify_ui.jpg" width="425" height="338" srcset="../../../../w/images/thumb/8/84/Addon_skinify_ui.jpg/638px-Addon_skinify_ui.jpg 1.5x, ../../../../w/images/8/84/Addon_skinify_ui.jpg 2x" /></a></div>
+<p><br style="clear:both;" />
+</p>
+<ul><li>This add-on Skins an armature with a mesh</li>
+<li>Supports rigify with hands</li>
+<li>Supports BVH</li>
+<li>Easy to use &amp; set up quick proxy mesh for animation testing</li>
+<li>Fast results for testing poses</li>
+<li>Quad mesh created, sculpting is possible.</li>
+<li>Author: karab44</li>
+<li>Maintainer: karab44</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Object/Skinify">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Display_Tools">Display Tools</span></h3>
+<div class="floatright"><a href="../../../File:Addon_display_tools.jpg.html" class="image"><img alt="Addon display tools.jpg" src="../../../../w/images/thumb/9/93/Addon_display_tools.jpg/250px-Addon_display_tools.jpg" width="250" height="445" srcset="../../../../w/images/9/93/Addon_display_tools.jpg 1.5x" /></a></div>
+<ul><li>This Addon is in the Toolshelf &gt; Display Tab</li>
+<li>Display Tools is designed to provide several tools to speed your workflow in viewport display related tasks and interaction with multiple objects.</li>
+<li>Mostly concerned with wire overlays &amp; viewport display</li>
+<li>Including new tools Fast Nav, (unselected objects are displayed in wireframe when moving objects</li>
+<li>The add-on works in two ways:</li>
+<li>Apply on selected objects.</li>
+<li>Apply on all objects if none are selected.</li>
+<li>Authors: Jordi Vall-llovera Medina, Jhon Wallace, Jasperge, Pixaal, Meta-androcto</li>
+<li>Maintainer: meta-androcto, lijenstina</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/3D_interaction/Display_Tools">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Brush_Menus">Brush Menus</span></h3>
+<div class="floatright"><a href="../../../File:Addon_brush_tools.jpg.html" class="image"><img alt="Addon brush tools.jpg" src="../../../../w/images/f/f8/Addon_brush_tools.jpg" width="597" height="304" /></a></div>
+<ul><li>Based off Advanced UI Menus from Imaginer</li>
+<li><b>Hotkey</b> Alt/V</li>
+<li>This addon provides fast access to the Brush Menus &amp; settings in the 3dview.</li>
+<li>Featuring Small or Large Brush Icons</li>
+<li>This menu is not designed to set up your entire sculpt session,</li>
+<li>The aim of the addons in to make fast changes to settings whilst you sculpt without opening the toolshelf.</li>
+<li>Supports Custom Brushes</li>
+<li>Authors: Ryan Inch (Imaginer), meta-androcto</li>
+<li>Maintainer: meta-androcto, Ryan Inch (Imaginer),</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/3D_interaction/Advanced_UI_Menus">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Btrace">Btrace</span></h3>
+<div class="floatright"><a href="../../../File:Addons_btrace_1_1.jpg.html" class="image"><img alt="Addons btrace 1 1.jpg" src="../../../../w/images/b/b4/Addons_btrace_1_1.jpg" width="350" height="311" /></a></div>
+<ul><li>This addon is in the Toolshelf &gt; Create Tab</li>
+<li>Features Object &amp; Particle Trace &amp; Animated curve follow</li>
+<li>Authors: liero, crazycourier, Atom, Meta-Androcto, MacKracken</li>
+<li>Maintainer: meta-androcto, crazycourier</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Curve/Btrace">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Is_Key_Free">Is Key Free</span></h3>
+<ul><li>This addon is in the Text Editor Toolshelf</li>
+<li>Primarily a tool for addons developers to check the availability &amp; mapping of selected hotkeys also showing editor types they apply to</li>
+<li>Secondary use for end users who set up their own keymaps &amp; would like to check again the availability of hotkeys</li>
+<li>Author @Antonio Vazquez (antoniov)</li>
+<li>Maintainer: Antoniov</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Turnaround_Camera">Turnaround Camera</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../../File:Addon_turnaround_camera_UI.jpg.html" class="image"><img alt="" src="../../../../w/images/thumb/4/4a/Addon_turnaround_camera_UI.jpg/300px-Addon_turnaround_camera_UI.jpg" width="300" height="350" class="thumbimage" srcset="../../../../w/images/4/4a/Addon_turnaround_camera_UI.jpg 1.5x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../../File:Addon_turnaround_camera_UI.jpg.html" class="internal" title="Enlarge"></a></div>Camera Turnaround User Inteface</div></div></div>
+<ul><li>This add-on is in the Toolshelf &gt; Animation Tab</li>
+<li>Quite Simply, it creates a 360 degree animation around the selected Object</li>
+<li>Useful for a product turnaround animation setup</li>
+<li>Author @Antonio Vazquez (antoniov)</li>
+<li>Maintainer: Antoniov</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Animation/TurnaroundCamera">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Auto_Mirror">Auto Mirror</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:452px;"><a href="../../../File:Addon_auto_mirror_suzanne.jpg.html" class="image"><img alt="" src="../../../../w/images/thumb/0/0d/Addon_auto_mirror_suzanne.jpg/450px-Addon_auto_mirror_suzanne.jpg" width="450" height="236" class="thumbimage" srcset="../../../../w/images/0/0d/Addon_auto_mirror_suzanne.jpg 1.5x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../../File:Addon_auto_mirror_suzanne.jpg.html" class="internal" title="Enlarge"></a></div>Automatically mirror an object on the Z axis</div></div></div>
+<ul><li>This add-on is in the Toolshelf &gt; Tools Tab</li>
+<li>Automatically add the mirror modifier on the selected axis and optionally enter edit mode ready for editing</li>
+<li>Author @Lapineige</li>
+<li>Maintainer: @Lapineige</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Modeling/AutoMirror">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Camera_Rigs">Camera Rigs</span></h3>
+<div class="floatright"><a href="../../../File:Addon_camera_rigs.jpg.html" class="image"><img alt="Addon camera rigs.jpg" src="../../../../w/images/2/29/Addon_camera_rigs.jpg" width="516" height="387" /></a></div>
+<ul><li>This Addon is in the 3d View header &gt; Add menu &gt; Camera menu</li>
+<li>Creating either a Dolly or Crane rig</li>
+<li><b>Note:</b> You need to enable Auto Run Python Scripts in the User Preferences &gt; File Menu</li>
+<li>Authors: Wayne Dixon, Kris Wittig</li>
+<li>Maintainer: Wayne Dixon, Kris Wittig</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Rigging/Add_Camera_Rigs">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Snap_Utils_Line">Snap Utils Line</span></h3>
+<ul><li>Advanced vertex snap to object &amp; create faces tool</li>
+<li>Author: Mano-Wii</li>
+<li>Maintainer: Mano-Wii</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/Mano-Wii/Addon-Snap-Utilities-Line/wiki">Wiki Page</a> (github.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Add_Advanced_Objects">Add Advanced Objects</span></h3>
+<div class="floatright"><a href="../../../File:Addons_cubester.jpg.html" class="image"><img alt="Addons cubester.jpg" src="../../../../w/images/thumb/d/df/Addons_cubester.jpg/500px-Addons_cubester.jpg" width="500" height="229" srcset="../../../../w/images/thumb/d/df/Addons_cubester.jpg/750px-Addons_cubester.jpg 1.5x, ../../../../w/images/thumb/d/df/Addons_cubester.jpg/1000px-Addons_cubester.jpg 2x" /></a></div>
+<ul><li>Advanced Scene &amp; Object creation suite</li>
+<li><b>Delaunay Voronoi:</b> by Domlysz, Points cloud Delaunay triangulation in 2.5D &amp; cross-sections</li>
+<li><b>Constellation:</b> by Oscurart, Point to Point Constellation pattern generation</li>
+<li><b>Add Light Template:</b> by Rebellion, 3 point light set</li>
+<li><b>Aggregate mesh:</b> by Liero, updated by Jimmy Hazevoet, Object particle arrays</li>
+<li><b>Arrange on Curve:</b> by Mano-Wii, Array objects along a curve</li>
+<li><b>Circle Array:</b> by Antonis Karvelas, Array controlled by an empty</li>
+<li><b>Copy2 vertices:</b> edges or faces: by Eleanor Howick, Copy Any object to the selected verts/edges/faces of a mesh</li>
+<li><b>CubeSter:</b> by Jacob Morris, Takes image, image sequence, or audio file and converts it into a height map based on pixel color and alpha values</li>
+<li><b>Drop to Ground1:</b> by Unnikrishnan(kodemax), Florian Meyer(testscreenings), drop selected or all objects to 'Ground' plane</li>
+<li><b>Strut Generator:</b> by Bill Currie (taniwha), Add struts meshes based on selected truss meshes</li>
+<li><b>Easy Lattice Object:</b> by Kursad Karatas, Quick Lattice for shape editing</li>
+<li><b>Object Add Chain:</b> by Brian Hinton (Nichod), Add Chain Link to &amp; curve path</li>
+<li><b>Laplacian Lightning:</b> by teldredge, Creates Laplace Lightning strikes between objects</li>
+<li><b>Mangle Tools:</b> by Phil Cote, displace the verts on your mesh</li>
+<li><b>Oscurart Chain Maker:</b> by Oscurart, create chain links parented to existing armature</li>
+<li><b>3D Pixelate:</b> by liero, Create a blocky version of your mesh (dupliverts)</li>
+<li><b>Add Random Box Structure:</b> by Dannyboy, random blocks from mesh</li>
+<li><b>Rope Creator:</b> by Jorge Hernandez - Melenedez, Dynamic rope (with cloth) creator</li>
+<li><b>Test Scenes:</b> by meta-androcto, fast test scene creation</li>
+<li><b>Tri-Lighting Creator:</b> by Daniel Schalla</li>
+<li><b>Unfold transition by liero, atom, Animated flipping faces or build</b></li></ul>
+<ul><li>Special mention Authors: Rebellion, lijenstina, Unnikrishnan(kodemax), Florian Meyer, Omar ahmed,</li>
+<li>Maintainer: meta-androcto, lijenstina</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Object/Add_Advanced">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Export_Paper_Model">Export Paper Model</span></h3>
+<div class="floatright"><a href="../../../File:Addons_paper_model.png.html" class="image"><img alt="Addons paper model.png" src="../../../../w/images/thumb/9/9b/Addons_paper_model.png/600px-Addons_paper_model.png" width="600" height="160" srcset="../../../../w/images/9/9b/Addons_paper_model.png 1.5x" /></a></div>
+<ul><li>Export the active mesh into PDF or SVG, including baked textures</li>
+<li>Print on paper or cut from plywood, aluminium etc.</li>
+<li>Preview and customize the layout, all within Blender</li>
+<li>Maintainer: Adam Dominec (emu)</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Import-Export/Paper_Model">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Kinoraw_Tools">Kinoraw Tools</span></h3>
+<ul><li>Extensive VSE toolkit</li>
+<li>Author: Carlos Padial</li>
+<li>Maintainer: Carlos Padial</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kinoraw/kinoraw_tools/blob/master/README.md">Wiki Page</a> (github.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Stored_Views">Stored Views</span></h3>
+<div class="floatright"><a href="../../../File:Addon_stored_views.jpg.html" class="image"><img alt="Addon stored views.jpg" src="../../../../w/images/4/4a/Addon_stored_views.jpg" width="250" height="262" /></a></div>
+<ul><li>Save &amp; store Views &amp; cameras, create cameras to views, saves view settings per .blend</li>
+<li>Add camera markers for animated camera switching</li>
+<li>Authors: nfloyd, fsiddi, meta-androcto</li>
+<li>Maintainer: meta-androcto</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/3D_interaction/stored_views">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Render_Clay">Render Clay</span></h3>
+<div class="floatright"><a href="../../../File:Addons_clay_bmw.jpg.html" class="image"><img alt="Addons clay bmw.jpg" src="../../../../w/images/thumb/2/22/Addons_clay_bmw.jpg/500px-Addons_clay_bmw.jpg" width="500" height="281" srcset="../../../../w/images/thumb/2/22/Addons_clay_bmw.jpg/750px-Addons_clay_bmw.jpg 1.5x, ../../../../w/images/2/22/Addons_clay_bmw.jpg 2x" /></a></div>
+<ul><li>Simple checkbox to overwrite materials in BI or Cycles to Render clay with choice of diffuse color.</li>
+<li>Author: ruesp83 (Fabio Russo)</li>
+<li>Maintainer: meta-androcto</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Render/Clay_Render">Wiki Page</a> (blender.org)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Auto_Tracker">Auto Tracker</span></h3>
+<div class="floatright"><a href="../../../File:Addons_autotracker.jpeg.html" class="image"><img alt="Addons autotracker.jpeg" src="../../../../w/images/thumb/2/29/Addons_autotracker.jpeg/350px-Addons_autotracker.jpeg" width="350" height="193" srcset="../../../../w/images/2/29/Addons_autotracker.jpeg 1.5x" /></a></div>
+<ul><li>addon which introduces autotracking for Blender motion tracking.</li>
+<li>Author: Miika Puustinen, Matti Kaihola, Stephen Leger</li>
+<li>Maintainer: Miika Puustinen, Stephen Leger</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/miikapuustinen/blender_autotracker">Wiki Page</a> (github.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Refine_Tracking_Solution">Refine Tracking Solution</span></h3>
+<ul><li>automatically set weight of all tracks according error in a single click.</li>
+<li>Author: Stephen Leger</li>
+<li>Maintainer: Stephen Leger</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/s-leger/blenderTracking/wiki">Wiki Page</a> (github.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Materials_Library_VX">Materials Library VX</span></h3>
+<div class="floatright"><a href="../../../File:Addon_matlibvx1.jpg.html" class="image"><img alt="Addon matlibvx1.jpg" src="../../../../w/images/thumb/f/f0/Addon_matlibvx1.jpg/250px-Addon_matlibvx1.jpg" width="250" height="260" srcset="../../../../w/images/f/f0/Addon_matlibvx1.jpg 1.5x" /></a></div>
+<ul><li>materials library for blender 2.79</li>
+<li>Author: Alfonso Serra "Mackraken"</li>
+<li>Maintainer: Alfonso Serra "Mackraken"</li>
+<li><a rel="nofollow" class="external text" href="https://sites.google.com/site/aleonserra/home/scripts/matlib-vx-5-6">Wiki Page</a> (google.com)</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Mesh_Tissue">Mesh Tissue</span></h3>
+<p>&lt;br\&gt;
+</p>
+<div class="center"><div class="floatnone"><a href="../../../File:Tissue_v02_cover.jpg.html" class="image"><img alt="Tissue v02 cover.jpg" src="../../../../w/images/thumb/c/cf/Tissue_v02_cover.jpg/900px-Tissue_v02_cover.jpg" width="900" height="506" srcset="../../../../w/images/thumb/c/cf/Tissue_v02_cover.jpg/1350px-Tissue_v02_cover.jpg 1.5x, ../../../../w/images/thumb/c/cf/Tissue_v02_cover.jpg/1800px-Tissue_v02_cover.jpg 2x" /></a></div></div>
+<p><br style="clear:both;" />
+</p>
+<ul><li>Object Tesselation, Duel Mesh, auto weights</li>
+<li>Author: Alessandro-Zomparelli</li>
+<li>Maintainer: Alessandro-Zomparelli</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Mesh/Tissue">Wiki Page</a> (blender.org)</li></ul>
+<p><b>Tessellate</b>
+</p><p>Tessellate tool allows you to copy a selected object (Component) on the faces of the active object (Generator), adapting its bounding box to the shape of quad-faces. Once the Tessellate button was pressed, then more options will appear in the Operator parameters. Update allows you to update the active the Tessellated mesh according to Component and Generator changes. You can also change the parameters of tessellation.
+</p><p><b>Colors-Weight Exchanger</b>
+</p><p>Colors from Weight create a new Vertex Colors channel reading data from Vertex Weight Weight from Colors create a new Vertex Weight channel reading data from Vertex Colors
+</p><p><b>Dual Mesh</b>
+</p><p>Dual Mesh modify the selected meshes creating dual meshes.
+<br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Cell_Fracture_Crack_It">Cell Fracture Crack It</span></h3>
+<div class="floatright"><a href="../../../File:Addon_crackit.jpg.html" class="image"><img alt="Addon crackit.jpg" src="../../../../w/images/5/5b/Addon_crackit.jpg" width="420" height="522" /></a></div>
+<ul><li>Helper addon for Cell Fracture Displace &amp; materials</li>
+<li>Author: Nobuyuki Hirakata</li>
+<li>Maintainer: Nobuyuki Hirakata</li>
+<li><a rel="nofollow" class="external text" href="http://gappyfacets.com/2016/08/11/blender-crack-addon-basic-tutorial/">Wiki Page</a> (gappyfacets.com)</li>
+<li>Image by YAFU</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h2><span class="mw-headline" id="Updated_Add-ons">Updated Add-ons</span></h2>
+<h3><span class="mw-headline" id="Collada">Collada</span></h3>
+<ul><li><b>New features</b></li></ul>
+<ul><li><b>Keep Bind Info</b><br /><div class="floatright"><a href="../../../File:Ref_release_notes_2.79_add-ons_collada_keep_bindpose.png.html" class="image"><img alt="Ref release notes 2.79 add-ons collada keep bindpose.png" src="../../../../w/images/7/72/Ref_release_notes_2.79_add-ons_collada_keep_bindpose.png" width="247" height="357" /></a></div>The Collada Importer replaces the original Restpose of imported armatures by their Bindpose. This actually destroys information in the bone matrices. This works when all you want is to get an armature into Blender but never export it again.<p> However there is one scenario where you want to use Blender in the middle of a pipeline. In that case it may be important to keep the original Bindpose and Restpose information. See <a rel="nofollow" class="external free" href="https://developer.blender.org/T50412">https://developer.blender.org/T50412</a> for more detailed info. This information is now preserved</p>The Collada module now has a new Import/Export option:
+<ul><li><b>Import:</b> <i>Keep Bind Info</i>&#160;: Store the original Restpose and the original Bindpose into the bone custom properties <i>bind_mat</i> and <i>rest_mat</i> (both are 4*4 matrices)</li>
+<li><b>Export:</b> <i>Keep Bind Info</i>&#160;: When the matrices <i>bind_mat</i> and <i>rest_mat</i> are found in the bone custom properties then those matrices are exported instead of the matrices used in Blender.<p>Important: When you edit the Armature after import, then you might need to adjust bind_mat and rest_mat, or disable <i>Keep Bind Info</i> during export.</p></li></ul></li>
+<li><b>Limit Precision</b> (only available for export)<br />When exporting then especially the Matrix data often contains floating point values which are exposed in badly readable format like 0.9999999 or even worse like -5.45049e-9 While this is not harmful at all it becomes much harder to spot issues in the data during debugging and comparing collada files. The <i>limit precision</i> option takes care that the exported data is sanitized by reducing the precision to 6 digits.</li></ul>
+<ul><li><b>Bug Fixes</b></li></ul>
+<ul><li><b>Display of connected Bones</b><br />Connected Bones have been given wrong locations for the bone tails. The imported Armatures look odd until you edit them. Then the connected bones snap into place. There was no report for this bug.</li></ul>
+<ul><li><b>Export of multiple Armatures</b><br />When multiple armatures are exported which use same bone names, the exported Collada file became invalid. This fix is related to <a rel="nofollow" class="external free" href="https://developer.blender.org/T50807">https://developer.blender.org/T50807</a></li></ul>
+<ul><li><b>Blender Crash during export</b><br />When exporting while editing an armature, blender crashes. The fix is related to <a rel="nofollow" class="external free" href="https://developer.blender.org/D2489">https://developer.blender.org/D2489</a></li></ul>
+<ul><li><b>Export of UV Face Textures</b><br />In previous releases UV Face textures have been exported only when the mesh object also used Materials. Then the textures had been added silently to the material diffuse channel. To be clear: the exported materials have been modified!. But this resulted in total mix up when a material is reused by other objects. In that case the UV face textures would erroneously be also used in all objects using the same material. Of course the error only appears after you import back the Collada file into Blender or any other application.<br />In Blender 2.79 we have changed the behavior significantly. Now you can decide to either export textures that are related to materials, or you can export UV Face textures. In the latter case there is no longer the need to have materials defined in the objects. However, we then generate materials on the fly. So when you import back your objects, you see they now have got materials (one material per UV texture).<br />This topic is related to <a rel="nofollow" class="external free" href="https://developer.blender.org/T51288">https://developer.blender.org/T51288</a></li></ul>
+<ul><li><b>Exporting triangulated Meshes</b><br />Blender now uses &lt;triangle&gt; lists when meshes are triangulated upon export, or when they only contain triangles. Previously meshes have always been exported as &lt;polylist&gt;. This topic is related to <a rel="nofollow" class="external free" href="https://developer.blender.org/T51622">https://developer.blender.org/T51622</a></li></ul>
+<ul><li><b>Export of Meshes with multiple UV Maps</b><br />The export failed when more than 1 UV map was assigned to a mesh object. This bug is related to <a rel="nofollow" class="external free" href="https://developer.blender.org/T51288">https://developer.blender.org/T51288</a></li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="POV-Ray">POV-Ray</span></h3>
+<p><b>New features</b>
+</p>
+<div class="floatright"><a href="../../../File:PovNormalPerturbation.png.html" class="image"><img alt="PovNormalPerturbation.png" src="../../../../w/images/thumb/f/f5/PovNormalPerturbation.png/300px-PovNormalPerturbation.png" width="300" height="169" srcset="../../../../w/images/thumb/f/f5/PovNormalPerturbation.png/450px-PovNormalPerturbation.png 1.5x, ../../../../w/images/thumb/f/f5/PovNormalPerturbation.png/600px-PovNormalPerturbation.png 2x" /></a></div>
+<ul><li>Camera normal perturbation</li>
+<li>Photon map save/load</li>
+<li>charset option available to choose text encoding between:
+<ul><li>SYS</li>
+<li>ASCII</li>
+<li>UTF-8</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<div class="floatright"><a href="../../../File:PovTemplatesMenu.png.html" class="image"><img alt="PovTemplatesMenu.png" src="../../../../w/images/thumb/2/25/PovTemplatesMenu.png/300px-PovTemplatesMenu.png" width="300" height="232" srcset="../../../../w/images/thumb/2/25/PovTemplatesMenu.png/450px-PovTemplatesMenu.png 1.5x, ../../../../w/images/2/25/PovTemplatesMenu.png 2x" /></a></div>
+<ul><li>Some complete POV-Ray scenes are available to Templates menu from the text header.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<div class="floatright"><a href="../../../File:PovSyntaxHighlight.png.html" class="image"><img alt="PovSyntaxHighlight.png" src="../../../../w/images/thumb/4/48/PovSyntaxHighlight.png/300px-PovSyntaxHighlight.png" width="300" height="181" srcset="../../../../w/images/thumb/4/48/PovSyntaxHighlight.png/450px-PovSyntaxHighlight.png 1.5x, ../../../../w/images/thumb/4/48/PovSyntaxHighlight.png/600px-PovSyntaxHighlight.png 2x" /></a></div>
+<ul><li>Colored Syntax Highlight</li></ul>
+<p>Activating syntax highlights in the text editor now also supports POV-Ray files.
+If you load an ini file, you will notice its syntax is different, but all the other three formats are pov sdl with different file names for different uses
+</p>
+<ul><li>pov</li>
+<li>inc</li>
+<li>mcr</li>
+<li>ini</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<div class="floatright"><a href="../../../File:PovInsertMenu.png.html" class="image"><img alt="PovInsertMenu.png" src="../../../../w/images/thumb/8/8c/PovInsertMenu.png/300px-PovInsertMenu.png" width="300" height="445" srcset="../../../../w/images/8/8c/PovInsertMenu.png 1.5x" /></a></div>
+<ul><li>An Insert Menu to add some pov code snippets at cursor's location has been added.</li></ul>
+<ul><li>added an operator to render from text editor 3 modes: 3dview, pov text only or both. this property replaces the custompov code (with "both" option) known problem is that some scenes get their rendered image passed to render results while others don't. Still useable for preview anyway.</li></ul>
+<ul><li>Added support of empty curves and metaballs represented by empty spheres of zero radius</li></ul>
+<ul><li>All Meta elements were no longer export to mesh but as POV-Ray blobs</li>
+<li>Added the following pov keywords to object properties tab:
+<ul><li>hollow</li>
+<li>double_illuminate</li>
+<li>sturm (for Metaballs and lathe)</li>
+<li>no_shadow</li>
+<li>no_image</li>
+<li>no_reflection</li>
+<li>no_radiosity</li>
+<li>inverse</li>
+<li>hierarchy</li></ul></li></ul>
+<div class="floatright"><a href="../../../File:BlenderToPovrayHair.png.html" class="image"><img alt="BlenderToPovrayHair.png" src="../../../../w/images/thumb/4/4b/BlenderToPovrayHair.png/300px-BlenderToPovrayHair.png" width="300" height="300" srcset="../../../../w/images/thumb/4/4b/BlenderToPovrayHair.png/450px-BlenderToPovrayHair.png 1.5x, ../../../../w/images/4/4b/BlenderToPovrayHair.png 2x" /></a></div>
+<p><b>Bugfixes</b>
+</p>
+<ul><li>fixed hair location bug</li>
+<li>Fixed texture normal_factor regression</li>
+<li>Fixed lighting attenuation for a closer match with Blender Internal</li>
+<li>Merging different metaball objects is now possible</li>
+<li>Removed automatic activation of Add Mesh: extra objects used for 3d function surface (exported as pov parametric object)</li>
+<li>Replaced by a message and easy menu for user to activate it himself to avoid conflicts with other scripts</li>
+<li>Use 2D curve for lathe</li>
+<li>Fixed an error accessing photon variables</li>
+<li>Depth Of Field focal point by specifying dof_object in properties ui input is now possible</li>
+<li>Converted some rgb keywords to srgb to better match Blender Internal shading</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span id="OBJ_(Wavefront)"></span><span class="mw-headline" id="OBJ_.28Wavefront.29">OBJ (Wavefront)</span></h3>
+<ul><li><b>New features</b>
+<ul><li>Importer can now generate basic Cycles shaders in addition to classical BI materials, when Cycles render is active.</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span id="FBX_I/O_.fbx"></span><span class="mw-headline" id="FBX_I.2FO_.fbx">FBX I/O .fbx</span></h3>
+<ul><li><b>New features</b>
+<ul><li>new menu item: drop down selector titled: Apply Scalings.</li>
+<li>various bug fixes</li>
+<li>FBX exporter: Fix broken non-mesh geometry export.</li>
+<li>Fix Blender 2.78a doesn't import user properties from FBX file.</li></ul></li></ul>
+<p><br />
+<br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Rigify">Rigify</span></h3>
+<ul><li><b>Code Refactor</b><br />Old rigify types and meta-rigs were merged with the pitchipoy ones. Due to this change all the "pitchipoy" names were removed.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Legacy Mode</b><br />In order to keep backward compatibility during the transition to the new feature set a "Legacy Mode" option was added in the add-on preference pane. When enabled rigfy will run with the old 2.77 feature-set.
+<ul><li><b>Legacy Switcher</b> <br />When the system detects an old/unsupported Meta-Rig will ask the user to switch to legacy mode.</li>
+<li><b>Upgrade Meta-Rig</b><br />When a old but supported Meta-Rig is detected the system will give the user an option to upgrade the Meta-Rig types to the current version. When this is done the user can upgrade the rig too by clicking on generate rig again.</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Updated rig-types</b><br />All rig types now use the formerly known as "pitchipoy.type" as base. New feature were ported from the original rigify code and merged or updated as listed below:
+<ul><li><b>super_limb</b> <br />Formerly known as 'pitchipoy.super_limb' is the new base type to create Arms, Legs and Paws. All the types now support standard 'pole vector' as an option in the ui after rig generation. All the FK/IK snapping functions were updated to work seamlessly indipendently from the pole type (standard or rotational). Bone rolls are automatically calculated during the rig generation process, so no more eyeballing on the metarig's limbs bone rolls!</li>
+<li><b>super_spine</b><br />Formerly known as 'pitchipoy.super_torso_turbo' is the new base type to create spines. This new type support the creation of stretchy spines complete systems splitting "head/neck" and "Tail" generation as an user defined option. This sample can generate a full bendy-bones spine (from tail to head). If the distance from head to neck is more than 3 bones will automatically generate an ik-stretchy neck useful for animals rigs. The spine system features rotation isolation modes for head, neck and even the new tail.</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Rigify Layers Redesign</b><br /> <div class="floatright"><a href="../../../File:Addon_Rigify_0.5_BG.png.html" class="image"><img alt="Addon Rigify 0.5 BG.png" src="../../../../w/images/thumb/e/e7/Addon_Rigify_0.5_BG.png/300px-Addon_Rigify_0.5_BG.png" width="300" height="212" srcset="../../../../w/images/thumb/e/e7/Addon_Rigify_0.5_BG.png/450px-Addon_Rigify_0.5_BG.png 1.5x, ../../../../w/images/thumb/e/e7/Addon_Rigify_0.5_BG.png/600px-Addon_Rigify_0.5_BG.png 2x" /></a></div><div class="floatright"><a href="../../../File:Addon_Rigify_0.5_Layers.png.html" class="image"><img alt="Addon Rigify 0.5 Layers.png" src="../../../../w/images/thumb/8/8c/Addon_Rigify_0.5_Layers.png/300px-Addon_Rigify_0.5_Layers.png" width="300" height="629" srcset="../../../../w/images/thumb/8/8c/Addon_Rigify_0.5_Layers.png/450px-Addon_Rigify_0.5_Layers.png 1.5x, ../../../../w/images/thumb/8/8c/Addon_Rigify_0.5_Layers.png/600px-Addon_Rigify_0.5_Layers.png 2x" /></a></div> Rigify Layers - formerly used to define names in the UI - are now updated to support per-layer automatic creation of user defined bone groups and selection sets on the final rig.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Rig_UI automatic linking</b> <br />The generated rig_ui.py script is now automatically set as python controller for the armature rig forcing the script to be imported along with the armature when a rigify rig is linked into another blend file.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Advanced Generation Options</b><br /><div class="floatright"><a href="../../../File:Addon_Rigify_0.5_AdvGen.png.html" class="image"><img alt="Addon Rigify 0.5 AdvGen.png" src="../../../../w/images/thumb/1/1d/Addon_Rigify_0.5_AdvGen.png/300px-Addon_Rigify_0.5_AdvGen.png" width="300" height="148" srcset="../../../../w/images/thumb/1/1d/Addon_Rigify_0.5_AdvGen.png/450px-Addon_Rigify_0.5_AdvGen.png 1.5x, ../../../../w/images/thumb/1/1d/Addon_Rigify_0.5_AdvGen.png/600px-Addon_Rigify_0.5_AdvGen.png 2x" /></a></div> Rigify can now handle more than 1 rig generation per scene. Users can now select a specific target rig and python ui to be updated from the metarig generate panel. This feature also addresses the patch proposed in <a rel="nofollow" class="external free" href="https://developer.blender.org/T51094">https://developer.blender.org/T51094</a>.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Rigify Animation Tools</b><br /> When the add-on is enabled rigify rigs will benefit of a new animation tool panel that will allow the user to easily manage animation properties and switches on the whole animation or on a specific frame range. Rigify Animation Tools features are:<br /><br /><div class="floatright"><a href="../../../File:Addon_Rigify_0.5_AnimTools.png.html" class="image"><img alt="Addon Rigify 0.5 AnimTools.png" src="../../../../w/images/thumb/c/ce/Addon_Rigify_0.5_AnimTools.png/300px-Addon_Rigify_0.5_AnimTools.png" width="300" height="323" srcset="../../../../w/images/thumb/c/ce/Addon_Rigify_0.5_AnimTools.png/450px-Addon_Rigify_0.5_AnimTools.png 1.5x, ../../../../w/images/c/ce/Addon_Rigify_0.5_AnimTools.png 2x" /></a></div>
+<ul><li><b>ik2fk pose</b> <br /> Snaps the current IK pose to the FK pose and insert automatically a keyframe.</li>
+<li><b>ik2fk action</b> <br /> Snaps the current IK pose to the FK pose and insert automatically a keyframe on each keyed frame within the selected frame range.</li>
+<li><b>fk2ik pose</b> <br /> Snaps the current FK pose to the IK pose and insert automatically a keyframe.</li>
+<li><b>fk2ik action</b> <br /> Snaps the current FK pose to the IK pose and insert automatically a keyframe on each keyed frame within the selected frame range.</li>
+<li><b>clear IK action</b> <br /> Deletes all the inserted keyframes for the IK chain within the selected frame range.</li>
+<li><b>clear FK action</b> <br /> Deletes all the inserted keyframes for the FK chain within the selected frame range.</li>
+<li><b>switch to pole</b> <br /> Converts the keyframes animation from the rotational pole to the standard pole vector within the selected frame range.</li>
+<li><b>switch to rotation</b> <br /> Converts the keyframes animation from the standard pole vector to the rotational pole within the selected frame range.</li>
+<li><b>Quaternion/Euler converter</b><br /> Converts any rotation order f-curves to the desired one (i.e. Quaternion &gt; XYZ Euler).</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p><p><br />
+</p>
+<ul><li><b>New Metarigs</b><br />Along with the 0.5 featureset a bunch of new metarigs are added to the armatures list:<br /><br /><div class="floatright"><a href="../../../File:Addon_Rigify_0.5_Animals.png.html" class="image"><img alt="Addon Rigify 0.5 Animals.png" src="../../../../w/images/thumb/e/ed/Addon_Rigify_0.5_Animals.png/300px-Addon_Rigify_0.5_Animals.png" width="300" height="600" srcset="../../../../w/images/thumb/e/ed/Addon_Rigify_0.5_Animals.png/450px-Addon_Rigify_0.5_Animals.png 1.5x, ../../../../w/images/e/ed/Addon_Rigify_0.5_Animals.png 2x" /></a></div>
+<ul><li><b>Basic Human</b> <br /> A generic Human Meta-Rig, no fingers, no face.</li>
+<li><b>Basic Quadruped</b> <br /> A generic Quadruped Meta-Rig including the new tail option in the spine.</li>
+<li><b>Cat</b> <br /> A complete Cat Meta-Rig including claws, face bones and the new tail option in the spine.</li>
+<li><b>Wolf</b> <br /> A complete Wolf/Dog Meta-Rig including claws, face bones and the new tail option in the spine.</li>
+<li><b>Horse</b> <br /> A Horse Meta-Rig including the new tail option in the spine, hairs, tails and the bend&amp;stretch ik neck option.</li>
+<li><b>Bird</b> <br /> A basic Bird Meta-Rig including wings, feathers, claws, beak and the new tail option in the spine</li>
+<li><b>Shark</b> <br /> A basic Shark Meta-Rig including fins, jaws, and the new tail option in the spine.<br /><br /></li></ul></li></ul>
+<div class="center"><div class="floatnone"><a href="../../../File:Addon_Rigify_0.5_Armatures.png.html" class="image"><img alt="Addon Rigify 0.5 Armatures.png" src="../../../../w/images/thumb/5/50/Addon_Rigify_0.5_Armatures.png/300px-Addon_Rigify_0.5_Armatures.png" width="300" height="233" srcset="../../../../w/images/thumb/5/50/Addon_Rigify_0.5_Armatures.png/450px-Addon_Rigify_0.5_Armatures.png 1.5x, ../../../../w/images/thumb/5/50/Addon_Rigify_0.5_Armatures.png/600px-Addon_Rigify_0.5_Armatures.png 2x" /></a></div></div>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>Bug Fixes</b>
+<ul><li>fixed typo errors in various part of the old pitchipoy code</li>
+<li>fixed eyes bones/widgets size</li>
+<li>upgraded limb types to avoid the errors in legs generation when bones were not aligned <a rel="nofollow" class="external free" href="https://developer.blender.org/T50500">https://developer.blender.org/T50500</a></li>
+<li>upgraded limb types to correctly show all animated properties in the graph editor as requested in <a rel="nofollow" class="external free" href="https://developer.blender.org/T50511">https://developer.blender.org/T50511</a></li>
+<li>upgraded limb types to allow user defined foot orientation as requested in <a rel="nofollow" class="external free" href="https://developer.blender.org/T50502">https://developer.blender.org/T50502</a></li>
+<li>All bone widgets shapes are now created as child of the 'WGTS' empty.</li></ul></li></ul>
+<p><br /> <br />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Ant_Landscape">Ant Landscape</span></h3>
+<div class="thumb tleft"><div class="thumbinner" style="width:522px;"><a href="../../../File:Addon_ant_landscape.jpg.html" class="image"><img alt="" src="../../../../w/images/thumb/6/64/Addon_ant_landscape.jpg/520px-Addon_ant_landscape.jpg" width="520" height="445" class="thumbimage" srcset="../../../../w/images/thumb/6/64/Addon_ant_landscape.jpg/780px-Addon_ant_landscape.jpg 1.5x, ../../../../w/images/6/64/Addon_ant_landscape.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../../File:Addon_ant_landscape.jpg.html" class="internal" title="Enlarge"></a></div>Overview of the User Interface</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:352px;"><a href="../../../File:Addon_ant_ui_presets.jpg.html" class="image"><img alt="" src="../../../../w/images/thumb/7/7f/Addon_ant_ui_presets.jpg/350px-Addon_ant_ui_presets.jpg" width="350" height="193" class="thumbimage" srcset="../../../../w/images/thumb/7/7f/Addon_ant_ui_presets.jpg/525px-Addon_ant_ui_presets.jpg 1.5x, ../../../../w/images/thumb/7/7f/Addon_ant_ui_presets.jpg/700px-Addon_ant_ui_presets.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../../File:Addon_ant_ui_presets.jpg.html" class="internal" title="Enlarge"></a></div>Presets Overview</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:352px;"><a href="../../../File:Addon_ant_screen.png.html" class="image"><img alt="" src="../../../../w/images/thumb/d/db/Addon_ant_screen.png/350px-Addon_ant_screen.png" width="350" height="193" class="thumbimage" srcset="../../../../w/images/thumb/d/db/Addon_ant_screen.png/525px-Addon_ant_screen.png 1.5x, ../../../../w/images/thumb/d/db/Addon_ant_screen.png/700px-Addon_ant_screen.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../../File:Addon_ant_screen.png.html" class="internal" title="Enlarge"></a></div>Vertex Groups and Weights</div></div></div>
+<p><br style="clear:both;" />
+</p>
+<ul><li><b>New in A.N.T.Landscape v.1.8</b><br />
+<ul><li><b>Landscape settings</b> and refresh button are now available <b>in the Properties shelf</b> (View 3D &gt; N).</li>
+<li><b>Presets</b> for fast start creating various landscape/noise mesh.</li>
+<li>Use <b>Blender Internal Texture Data Block - Texture Nodes</b> as source for displacement.</li>
+<li>New <b>Noise</b> types/variations.</li></ul></li></ul>
+<ul><li><b>Landscape Tools</b> in Toolshelf (View 3D &gt; T):<br />
+<ul><li><b>Mesh Displace</b>: Displace selected mesh vertices along normal or x, y, z direction.</li>
+<li><b>Weight from Slope</b>: Generate vertex weight slope map from z normal value.</li>
+<li><b>Landscape Eroder</b>: Apply various kinds of erosion to a landscape mesh.</li>
+<li>Eroder also available in Weight Paint mode &gt; Weights menu.</li>
+<li>ErosionR by: Michel Anders and Ian Huish</li></ul></li></ul>
+<ul><li>Author: Jimmy Hazevoet</li>
+<li>Maintainer: Jimmy Hazevoet</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Add_Curve_Extra_Objects">Add Curve Extra Objects</span></h3>
+<div class="floatright"><a href="../../../File:Addon_spline.jpg.html" class="image"><img alt="Addon spline.jpg" src="../../../../w/images/thumb/0/0f/Addon_spline.jpg/600px-Addon_spline.jpg" width="600" height="149" srcset="../../../../w/images/thumb/0/0f/Addon_spline.jpg/900px-Addon_spline.jpg 1.5x, ../../../../w/images/0/0f/Addon_spline.jpg 2x" /></a></div>
+<ul><li><b>New features</b></li>
+<li>Update Curves Galore &gt; 2d Curve Profiles By Jimmy Hazevoet</li>
+<li>Redesign UI by meta-androcto</li>
+<li>Catenary by Jimmy Hazevoet</li>
+<li>Spirofit by Antonio Osprite, Jimmy Hazevoet</li>
+<li>Bounce Spline by Liero, Atom, Jimmy Hazevoet</li>
+<li>Celtic links by Adam Newgas</li>
+<li>Braid Knot by Jared Forsyth</li>
+<li>2d Curve objects by Spivak Vladimir</li>
+<li>Curly Curve by Cmomoney</li>
+<li>Bevel Taper Curve by Cmomoney</li></ul>
+<p><br />
+<br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Viewport_Pie_Menus">Viewport Pie Menus</span></h3>
+<ul><li><b>New features</b></li>
+<li>General Clean up</li>
+<li>New split Snap/Origin pies to individual addons</li>
+<li>Fix for edit mode select menu usability</li>
+<li>Author: meta-androcto</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Blender_ID">Blender ID</span></h3>
+<p>The Blender ID add-on was upgraded to version 1.3.0:
+</p>
+<ul><li>Show a message after logging out.</li>
+<li>Store token expiry date in profile JSON.</li>
+<li>Show "validate" button when the token expiration is unknown.</li>
+<li>Urge the user to log out &amp; back in again to refresh the auth token if it expires within 2 weeks.</li>
+<li>Added a method <code>validate_token()</code> to the public Blender ID Add-on API.</li>
+<li>Author: <a href="../../../User:Sybren.html" title="User:Sybren">User:Sybren</a></li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Node_Wrangler:">Node Wrangler:</span></h3>
+<div class="floatright"><a href="../../../File:Nodewrangler_principled_1.jpg.html" class="image"><img alt="Nodewrangler principled 1.jpg" src="../../../../w/images/thumb/3/30/Nodewrangler_principled_1.jpg/600px-Nodewrangler_principled_1.jpg" width="600" height="505" srcset="../../../../w/images/thumb/3/30/Nodewrangler_principled_1.jpg/900px-Nodewrangler_principled_1.jpg 1.5x, ../../../../w/images/thumb/3/30/Nodewrangler_principled_1.jpg/1200px-Nodewrangler_principled_1.jpg 2x" /></a></div>
+<div class="floatright"><a href="../../../File:Nw_principled_prefs.jpg.html" class="image"><img alt="Nw principled prefs.jpg" src="../../../../w/images/thumb/4/4c/Nw_principled_prefs.jpg/600px-Nw_principled_prefs.jpg" width="600" height="162" srcset="../../../../w/images/4/4c/Nw_principled_prefs.jpg 1.5x" /></a></div>
+<p>The Node Wrangler add-on was updated to 3.35
+</p><p>An Operator for batch image import and auto texture setup for the new Principled BSDF was added.
+</p><p>Shortcut: ctrl-shift-T
+</p>
+<h5><span class="mw-headline" id="Supported_sockets">Supported sockets</span></h5>
+<p>If the image files are sensibly named the following slots will be connected:
+</p>
+<ul><li>Base Color</li>
+<li>Subsurface Color</li>
+<li>Metallic</li>
+<li>Specular</li>
+<li>Roughness</li>
+<li>Normal</li></ul>
+<p>For the roughness slot an invert node is added if the image is a glossy map (according to image name).
+The normal slot will either add a normal node or a bump node according to image name.
+</p>
+<h5><span class="mw-headline" id="Displacement_maps">Displacement maps</span></h5>
+<p>In addition if a displacement image is added a displacement setup is also added.
+</p>
+<h5><span class="mw-headline" id="User_Preferences">User Preferences</span></h5>
+<p>The tags for assigning textures are editable in the add-on preferences
+</p><p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="MeasureIt">MeasureIt</span></h3>
+<div class="floatright"><a href="../../../File:MeasureIt_170_screenshot.png.html" class="image"><img alt="MeasureIt 170 screenshot.png" src="../../../../w/images/thumb/b/be/MeasureIt_170_screenshot.png/250px-MeasureIt_170_screenshot.png" width="250" height="208" srcset="../../../../w/images/thumb/b/be/MeasureIt_170_screenshot.png/375px-MeasureIt_170_screenshot.png 1.5x, ../../../../w/images/thumb/b/be/MeasureIt_170_screenshot.png/500px-MeasureIt_170_screenshot.png 2x" /></a></div>
+<p>MeasureIt 1.70 update
+</p>
+<ul><li>Redesign of Mesh Debug, Configuration, and N-panel settings layouts</li>
+<li>Added option to rotate text and measurements by angles specified in degrees</li>
+<li>Added option to horizontally align text to left, center, or right</li>
+<li>Added option to expand or collapse all Number panel measure settings</li>
+<li>Added options to Mesh Debug to display indexes of scene objects and mesh edges</li>
+<li>Added options to Mesh Debug to display object and vertex global locations</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h3><span class="mw-headline" id="Themes">Themes</span></h3>
+<div class="floatright"><a href="../../../File:Themes_north.jpg.html" class="image"><img alt="Themes north.jpg" src="../../../../w/images/thumb/5/57/Themes_north.jpg/800px-Themes_north.jpg" width="800" height="440" srcset="../../../../w/images/thumb/5/57/Themes_north.jpg/1200px-Themes_north.jpg 1.5x, ../../../../w/images/thumb/5/57/Themes_north.jpg/1600px-Themes_north.jpg 2x" /></a></div>
+<ul><li>new themes committed:</li>
+<li>North theme by TimoShch</li>
+<li>24x_blues by meta-androcto</li>
+<li>Dark Blue Gradient by olson</li>
+<li>Modern Minimalist by JonathanLampel</li>
+<li>SandySlate by Vicki</li>
+<li>True Blue Menu by meta-androcto</li>
+<li>Default++ by aermartin</li></ul>
+<ul><li>renamed softimage to Softblend (needs more work)</li>
+<li>removed ubuntu ambience to contrib &amp; nightly builds.</li></ul>
+<ul><li>Thanks to participants here:</li>
+<li><a rel="nofollow" class="external free" href="https://blenderartists.org/forum/showthread.php?416156-2-79-Final-Themes-competition">https://blenderartists.org/forum/showthread.php?416156-2-79-Final-Themes-competition</a>!</li></ul>
+<ul><li>Result is 4 lightish themes, 4 darkish themes, 4 color themed themes &amp; 4 loud or high contrast themes</li></ul>
+<p>Thanks. 
+<br style="clear:both;" />
+</p>
+<hr />
+<h2><span class="mw-headline" id="Addons_Contrib">Addons Contrib</span></h2>
+<ul><li>Addons contrib is the addons section in Blender nightly builds for developing addons.</li>
+<li>Most of the addons are very stable and several are being developed with the aim of including in Blender 2.8</li>
+<li>You can download a snapshot of all addons contrib addons here:</li>
+<li><a rel="nofollow" class="external text" href="http://git.blender.org/gitweb/gitweb.cgi/blender-addons-contrib.git/snapshot/HEAD.tar.gz">Download Snapshot (Add-ons Contrib)</a></li>
+<li>You can manually install the addons by copy paste the addons_contrib folder to your Blender/2.79/scripts folder directory (the same folder as the Addons folder)</li>
+<li>This will install all of contrib at next startup.</li>
+<li>If you wish to install individual addons:</li>
+<li>The folder addons can be individually zipped &amp; then use install from file button.</li>
+<li>The .py addons can use install from file button.</li>
+<li>there's some really good &amp; new addons in addons contrib, it's well worth the effort of checking out.</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h2><span class="mw-headline" id="New_Behaviors">New Behaviors</span></h2>
+<ul><li>Panel &amp; Tab Cleanup:</li>
+<li>Since 2.78 release, the Add-ons panels &amp; Tabs have had a clean up</li>
+<li>Add-ons in 2.79 that use panels &amp; create their own tabs now have better grouping &amp; context sensitivity</li>
+<li>Panels are now only visible in the the correct contexts</li>
+<li>Add-ons that use Panels all have a function to change the panel location in the Add-ons preferences</li>
+<li>Add-ons that use Tabs have been restricted to use built in Tab names or to use similar ones as other add-ons</li>
+<li>A clear example of this is the "Display Tab" is activated by Measureit, Display Tools &amp; 3d Navigation add-ons</li>
+<li>This has greatly reduced UI clutter with regards to Panels &amp; Tabs with built in add-ons</li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+<h2><span class="mw-headline" id="Special_Mentions">Special Mentions</span></h2>
+<ul><li>Several addons did not make it to Blender 2.79 release that deserve a special mention.</li>
+<li>These addons have been developed outside Blender addons but are significant and the developers have been active participants in Blender Addons Development.</li></ul>
+<ul><li><b>Ctools by Chromoly</b>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/chromoly/ctools">https://github.com/chromoly/ctools</a></li>
+<li>Includes Screencast keys addon</li></ul></li>
+<li><b>Scripts by Dairin0d</b>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/dairin0d/blender-scripts">https://github.com/dairin0d/blender-scripts</a></li></ul></li>
+<li><b>Sverchok</b>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/nortikin/sverchok">https://github.com/nortikin/sverchok</a></li></ul></li>
+<li><b>Animation Nodes</b>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/JacquesLucke/animation_nodes">https://github.com/JacquesLucke/animation_nodes</a></li></ul></li>
+<li><b>Manuel Bastioni Lab</b>
+<ul><li><a rel="nofollow" class="external free" href="https://blenderartists.org/forum/showthread.php?391401-Addon-Manuel-Bastioni-Lab-turns-Blender-in-a-laboratory-for-3d-humanoids-creation">https://blenderartists.org/forum/showthread.php?391401-Addon-Manuel-Bastioni-Lab-turns-Blender-in-a-laboratory-for-3d-humanoids-creation</a></li></ul></li>
+<li><b>Mifth Tools</b>
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/mifth/mifthtools">https://github.com/mifth/mifthtools</a></li></ul></li>
+<li><b>Asset Management</b> by  pitiwazou: <a rel="nofollow" class="external free" href="http://www.pitiwazou.com">http://www.pitiwazou.com</a>
+<ul><li><a rel="nofollow" class="external free" href="https://blenderartists.org/forum/showthread.php?391114-Addon-Asset-Management">https://blenderartists.org/forum/showthread.php?391114-Addon-Asset-Management</a></li></ul></li>
+<li><b>Hard Ops</b>
+<ul><li><a rel="nofollow" class="external free" href="https://blenderartists.org/forum/showthread.php?387735-Hard-Ops-Thread">https://blenderartists.org/forum/showthread.php?387735-Hard-Ops-Thread</a></li></ul></li>
+<li>These addons have been actively developed for several years &amp; full credits to the authors for providing such inspirational works &amp; tools.</li></ul>
+<ul><li><b>Special thanks to the Blender devs that made all this possible</b>
+<ul><li>meta-androcto</li>
+<li>lijenstina</li>
+<li>mont29</li>
+<li>ideasman42</li>
+<li>italic</li>
+<li>the irc regulars</li></ul></li></ul>
+<p><br style="clear:both;" />
+</p>
+<hr />
+
+<!-- 
+NewPP limit report
+Cached time: 20240112002158
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.207 seconds
+Real time usage: 0.212 seconds
+Preprocessor visited node count: 393/1000000
+Preprocessor generated node count: 716/1000000
+Post‐expand include size: 1224/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   10.244      1 -total
+ 22.05%    2.259     51 Template:Clr
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:196-0!canonical and timestamp 20240112002158 and revision id 34613
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;oldid=34613">https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;oldid=34613</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 31 March 2023, at 15:24.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../../Special:WhatLinksHere/Reference/Release_Notes/2.79/Add-ons.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/Reference/Release_Notes/2.79/Add-ons" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="../../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;oldid=34613" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/Add-ons&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.207","walltime":"0.212","ppvisitednodes":{"value":393,"limit":1000000},"ppgeneratednodes":{"value":716,"limit":1000000},"postexpandincludesize":{"value":1224,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   10.244      1 -total"," 22.05%    2.259     51 Template:Clr"]},"cachereport":{"timestamp":"20240112002158","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":39});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453f644a3eb918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

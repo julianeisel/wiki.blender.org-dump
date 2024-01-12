@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Jon Denning/Reports/2022 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Jon_Denning/Reports/2022","wgTitle":"Jon Denning/Reports/2022","wgCurRevisionId":31387,"wgRevisionId":31387,"wgArticleId":6261,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Jon_Denning/Reports/2022","wgRelevantArticleId":6261,"wgRequestId":"74b3c6819589837c35435c0f","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Jon Denning","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Jon_Denning_Reports_2022 rootpage-User_Jon_Denning skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2022.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJon+Denning%2FReports%2F2022" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2022.html#Links_to_My_Work"><span class="tocnumber">1</span> <span class="toctext">Links to My Work</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2022.html#Notes"><span class="tocnumber">1.1</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2022.html#Diffs"><span class="tocnumber">1.2</span> <span class="toctext">Diffs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="2022.html#Useful_links"><span class="tocnumber">2</span> <span class="toctext">Useful links</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2022.html#post_dev_grant.2C_week_31:_aug_1.E2.80.93aug_7"><span class="tocnumber">3</span> <span class="toctext">post dev grant, week 31: aug 1–aug 7</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2022.html#week_30:_jul_25.E2.80.93jul_31"><span class="tocnumber">4</span> <span class="toctext">week 30: jul 25–jul 31</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2022.html#week_29:_jul_18.E2.80.93jul_24"><span class="tocnumber">5</span> <span class="toctext">week 29: jul 18–jul 24</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2022.html#week_28:_jul_11.E2.80.93jul_17"><span class="tocnumber">6</span> <span class="toctext">week 28: jul 11–jul 17</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2022.html#week_27:_jul_4.E2.80.93jul_10"><span class="tocnumber">7</span> <span class="toctext">week 27: jul 4–jul 10</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2022.html#week_26:_jun_27.E2.80.93jul_3"><span class="tocnumber">8</span> <span class="toctext">week 26: jun 27–jul 3</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2022.html#week_25:_jun_20.E2.80.93jun_26"><span class="tocnumber">9</span> <span class="toctext">week 25: jun 20–jun 26</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2022.html#week_24:_jun_13.E2.80.93jun_19"><span class="tocnumber">10</span> <span class="toctext">week 24: jun 13–jun 19</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2022.html#week_23:_jun_6.E2.80.93jun_12"><span class="tocnumber">11</span> <span class="toctext">week 23: jun 6–jun 12</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="2022.html#the_first_hitch_with_snapping_methods"><span class="tocnumber">11.1</span> <span class="toctext">the first hitch with snapping methods</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2022.html#the_second_hitch_with_snapping_methods"><span class="tocnumber">11.2</span> <span class="toctext">the second hitch with snapping methods</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="2022.html#week_22:_may_30.E2.80.93jun_5"><span class="tocnumber">12</span> <span class="toctext">week 22: may 30–jun 5</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2022.html#week_21:_may_23.E2.80.93may_29"><span class="tocnumber">13</span> <span class="toctext">week 21: may 23–may 29</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2022.html#week_20:_may_16.E2.80.93may_22"><span class="tocnumber">14</span> <span class="toctext">week 20: may 16–may 22</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2022.html#week_19:_may_9.E2.80.93may_15"><span class="tocnumber">15</span> <span class="toctext">week 19: may 9–may 15</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2022.html#week_18:_may_2.E2.80.93may_8"><span class="tocnumber">16</span> <span class="toctext">week 18: may 2–may 8</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2022.html#week_17:_apr_25.E2.80.93may_1"><span class="tocnumber">17</span> <span class="toctext">week 17: apr 25–may 1</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2022.html#week_16:_apr_18.E2.80.93apr_24"><span class="tocnumber">18</span> <span class="toctext">week 16: apr 18–apr 24</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2022.html#week_15:_apr_11.E2.80.93apr_17"><span class="tocnumber">19</span> <span class="toctext">week 15: apr 11–apr 17</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2022.html#week_14:_apr_4.E2.80.93apr_10"><span class="tocnumber">20</span> <span class="toctext">week 14: apr 4–apr 10</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2022.html#week_13:_mar_28.E2.80.93apr_3"><span class="tocnumber">21</span> <span class="toctext">week 13: mar 28–apr 3</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2022.html#week_12:_mar_21.E2.80.93mar_27"><span class="tocnumber">22</span> <span class="toctext">week 12: mar 21–mar 27</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2022.html#week_11:_mar_14.E2.80.93mar_20"><span class="tocnumber">23</span> <span class="toctext">week 11: mar 14–mar 20</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2022.html#week_10:_mar_7.E2.80.93mar_13"><span class="tocnumber">24</span> <span class="toctext">week 10: mar 7–mar 13</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2022.html#week_9:_feb_28.E2.80.93mar_6"><span class="tocnumber">25</span> <span class="toctext">week 9: feb 28–mar 6</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2022.html#week_8:_feb_21.E2.80.9327"><span class="tocnumber">26</span> <span class="toctext">week 8: feb 21–27</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2022.html#week_7:_feb_14.E2.80.9320"><span class="tocnumber">27</span> <span class="toctext">week 7: feb 14–20</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2022.html#week_6:_feb_7.E2.80.9313"><span class="tocnumber">28</span> <span class="toctext">week 6: feb 7–13</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2022.html#week_5:_jan_31.E2.80.93feb_6"><span class="tocnumber">29</span> <span class="toctext">week 5: jan 31–feb 6</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2022.html#week_4:_jan_24.E2.80.9330"><span class="tocnumber">30</span> <span class="toctext">week 4: jan 24–30</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2022.html#week_3:_jan_17.E2.80.9323"><span class="tocnumber">31</span> <span class="toctext">week 3: jan 17–23</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2022.html#week_2:_jan_10.E2.80.9316"><span class="tocnumber">32</span> <span class="toctext">week 2: jan 10–16</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2022.html#week_1:_jan_3.E2.80.939"><span class="tocnumber">33</span> <span class="toctext">week 1: jan 3–9</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Jon Denning/Reports/2022</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Jon_Denning.html" title="User:Jon Denning">User:Jon Denning</a>&lrm; | <a href="../Reports.html" title="User:Jon Denning/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Note: this document is broken up by week with a short update at the top and more details at the bottom of each week section.  The updates are commit-like, while the details are more "talking out loud".
+</p>
+
+
+<h2><span class="mw-headline" id="Links_to_My_Work">Links to My Work</span></h2>
+<h3><span class="mw-headline" id="Notes">Notes</span></h3>
+<ul><li><a href="../Projects/Retopology_Mode.html" title="User:Jon Denning/Projects/Retopology Mode">Retopology Mode</a> design doc</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/T95584">Retopo Mode (T95584)</a> design task</li>
+<li><a href="../Projects/Function_Naming.html" title="User:Jon Denning/Projects/Function Naming">Function Naming doc</a></li>
+<li><a href="2022/Experiments.html" title="User:Jon Denning/Reports/2022/Experiments">Experiments doc</a></li>
+<li><a href="2022/TransformSnapCallTree.html" title="User:Jon Denning/Reports/2022/TransformSnapCallTree">Transformation Snapping Call Tree</a></li>
+<li><a href="2022/Feedback.html" title="User:Jon Denning/Reports/2022/Feedback">Feedback Document</a></li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Diffs">Diffs</span></h3>
+<ul><li>landed!
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14370">D14370: Clarify BMesh operator documentation: normal_update</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591: Transform Snap: added nearest face snap mode, added snapping options, lightly refactored snapping code.</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14707">D14707: Text Editor: add Python 3.10 soft keywords to builtinfunc list</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14834">D14834: Documentation: Update Docs for Gizmo</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037: Refactor: Snap-related. Clarified attribute names and refactored #defines into enums</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15154">D15154: Expose option to support fallback tools keymap in GizmoGroup type</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15366">D15366: Fix T99334: Ignore edit-related snap options in Object mode</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15398">D15398: Expose snap options in transform operators</a></li></ul></li></ul>
+<ul><li>ready for review / under review
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14739">D14739: Text Editor: update syntax highlighting for different Python strings</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14860">D14860: Docs: added missing documentation for <code>WindowManager</code> methods</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15153">D15153: Expose <code>cursor_warp_relative</code> through Python API</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15406">D15406: Add Retopology Mode as Snapping Option</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15546">D15546: Added <code>Window</code> method to determine if an operator is actively modal</a></li></ul></li></ul>
+<ul><li>still wip
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14399">D14399: Retopology Add-ons</a></li></ul></li></ul>
+<ul><li>abandoned
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14035">D14035: Retopology Mode and Overlay</a> -- abandoned for D14591, D15037 ...</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D14498">D14498: started retopo mode</a> -- mostly abandoned</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D15080">D15080: Added guards around similiar definitions</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Useful_links">Useful links</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5919">Retopo Overlay (D5919)</a> diff</li>
+<li>Blender Dev Wiki
+<ul><li><a href="../../Source/Architecture/Transform.html" title="Source/Architecture/Transform">Transforms</a></li>
+<li><a href="../../Source/Interface/Operators.html" title="Source/Interface/Operators">Operators</a></li>
+<li><a href="../../Style_Guide.html" title="Style Guide">Style Guide</a>: <a href="../../Style_Guide/C_Cpp.html" title="Style Guide/C Cpp">C/C++</a>, <a href="../../Style_Guide/Python.html" title="Style Guide/Python">Python</a>, <a href="../../Style_Guide/Commit_Messages.html" title="Style Guide/Commit Messages">Commit Messages</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=X2GNyEUvpD4">Retopology in Blender</a> video by Zach Reinhardt (CG Boost)
+<ul><li>F2, LoopTools, Bsurfaces</li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://archive.blender.org/wiki/index.php/User:Julianeisel/Custom_Manipulators/">Custom Manipulators</a> (archived)</li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/c/blender/weekly-updates/14">Blender Weekly Reports</a> for adding links to here</li>
+<li>commits, reviewing, pushing
+<ul><li><a rel="nofollow" class="external text" href="../../Developer_Intro.html">developer intro</a>
+<ul><li><a rel="nofollow" class="external text" href="../../Developer_Intro/Committer.html">commit access</a></li>
+<li><a rel="nofollow" class="external text" href="../../Infrastructure/BuildBot.html#Branch_Builds">BuildBot Branch Builds</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="../../Tools/CodeReview.html">code review</a></li>
+<li><a rel="nofollow" class="external text" href="../../Process/Contributing_Code.html">contributing code</a></li>
+<li><a rel="nofollow" class="external text" href="../../Style_Guide/Commit_Messages.html">commit messages</a></li>
+<li><a rel="nofollow" class="external text" href="../../Process/Addons.html">add-ons</a></li></ul></li>
+<li>create UI icons
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/diffusion/B/browse/master/release/datafiles/blender_icons_geom.py">blender_icons_geom.py</a></li>
+<li><a rel="nofollow" class="external text" href="https://blender.stackexchange.com/questions/124614/how-to-edit-ui-icons">notes on blender stack exchange</a></li>
+<li><a rel="nofollow" class="external text" href="https://blenderartists.org/t/creating-new-dat-toolbar-icons-for-addon-blender-2-8/1167475/2">notes on blender artists</a></li></ul></li></ul>
+<h2><span id="post_dev_grant,_week_31:_aug_1–aug_7"></span><span class="mw-headline" id="post_dev_grant.2C_week_31:_aug_1.E2.80.93aug_7">post dev grant, week 31: aug 1–aug 7</span></h2>
+<p>At this point, I'm officially done with my Blender dev grant.  I do have a few more things I'd like to wrap up with the project, so I'll keep posting here as I work.
+</p>
+<ul><li>added quad only insert mode</li>
+<li>some events are passed through to blender</li></ul>
+<p>the quad only insert mode follows this construction on <a rel="nofollow" class="external text" href="https://www.desmos.com/geometry/vtizctydty">desmos</a>.  some events (view changes, undo/redo, some selection) now pass through to blender when in sticky (modal) mode.
+</p>
+<h2><span id="week_30:_jul_25–jul_31"></span><span class="mw-headline" id="week_30:_jul_25.E2.80.93jul_31">week 30: jul 25–jul 31</span></h2>
+<p>WRAP UP WORK!
+</p>
+<ul><li>polishing retopology mode and geopen tool</li>
+<li>created <a rel="nofollow" class="external text" href="https://developer.blender.org/D15546">D15546</a></li>
+<li>iterated over design with stakeholders</li></ul>
+<p>below is a summary of my takeaway from this project.  <b>(still wip!)</b>
+</p><p>I ran into many road blocks while polishing and wrapping up the geopen tool.  some of these road blocks are due to a few design decision in blender, but the vast majority is due to lack of documentation.  some seem to be unknown by anyone I asked and required poking deep into blender code.
+</p>
+<ul><li>as of right now, add-ons cannot define modal keymaps (see <code>rna_keymap_new</code>).  this means that either:
+<ul><li>the add-on defines Blender keymap items for actions in modal.  these keymaps could "bleed" into the rest of the ui (Blender doesn't know that certain actions are only handled when running modal, so the keymap item can show in statusbar), and that the user is required to keep the keymaps in sync (if pressing a modifier starts modal mode, the modal actions must either enable <code>any</code> or set the appropriate modifiers).  furthermore, the add-on must then perform conversions of <code>Event</code> info into <code>KeyMapItem</code> info (or vice versa), and implement the logic to process the user's actions.  Note: these modal keymaps can be hidden by attaching to a nop operator (<code>poll</code> always returns <code>False</code>).</li>
+<li>the add-on implements its own keymap within the <code>modal</code> method.  this effectively "hides" the keymap details from Blender's UI, but this also hides the details from the user, as it no longer shows up in keymap editor!  (workaround: the add-on <i>could</i> create a keymap editor in the preferences or some other way, but that's an ad-hoc approach)  this approach is taken by the modal operators that I surveyed within blender's scripts (ex: <code>curvetools.fillet</code>, <code>node.nw_lazy_mix</code>, <code>gp.latticedeform</code>, etc.).</li>
+<li>workaround?: the modal operator <i>could</i> return <code>{'PASS_THROUGH'}</code> to allow Blender to process event+keymaps and then re-call the add-on with appropriate properties set, but this might lead to unintended issues (ex: knife modal is started).</li></ul></li></ul>
+<ul><li>it is impossible to control undo for invoked modal operators. operators can take an optional positional <code>undo</code> argument.  this arg is <a rel="nofollow" class="external text" href="https://docs.blender.org/api/current/bpy.ops.html#:~:text=str%20(enum).-,undo%20%2D%20bool%20type.,-Each%20of%20these">undocumented</a>, but C++ comments imply that it is possible (see <code>wm_operator_finished</code>).  the implications are:
+<ul><li>any invoked modal operator (ex: <code>bpy.ops.transform.translate</code>) will <i>always</i> push to undo, which means there is no way to create an operator that does two things in one undo step, making the operator always feel 2nd class.  for example, the built-in extrude operator (<code>E</code>) will create geometry based on selection and then grab it.  after committing the grab, undo will undo <i>BOTH</i> actions (create, grab).  however, the python F2 add-on (<code>F</code>) will create geometry based on selection and then grab it (if autograb is enabled). However, this single action creates two different undo steps (must press undo 2x).</li>
+<li>the only way to avoid having an undo state pushed is to duplicate the operator in C++ but without the <code>OPTYPE_UNDO</code> flag set in <code>op-&gt;type-&gt;flag</code>.</li></ul></li></ul>
+<ul><li>working with blender ui is cumbersome, which makes refactoring UI (exposing options, rearranging or reformatting ui, etc.) very slow.  additionally, there are many "tricks" hidden throughout blender's own python, but documentation is way too scarce to really understand how to work with these tricks.</li></ul>
+<ul><li>keymaps, <code>WorkSpaceTool</code>, gizmo and gizmogroups, properties, and ui are all still black boxes.  the mysteriousness is mostly due to lack of documentation, but even the built-in templates are opaque.</li></ul>
+<p><br />
+other issues involve standard issue bugs.
+</p>
+<ul><li><code>bpy.context.edit_object</code> will sometimes not reference the current edited object.  this will happen right after calling undo, but sometimes it happens when an undo state is pushed.  most of the time, the result is blender crashing.</li></ul>
+<p><br />
+many of my patches still remain without review.  the devs that could review them are also core developers, so they are naturally busy.  this means that any useful feedback typically takes 1--2wks, but often it takes longer because the issues i have run into are too complex for a single response.
+</p><p>the work I was tasked to do (bring retopology to Blender) required either expanding snapping features and <code>bpy</code> or duplicating code.  clearly, the former adds complexity to an already complex product, and the latter is not great practice in general.  as a developer, i understand both of these sides, and so i try to avoid unnecessary complication as much as possible.  However, I also understand that new things cannot be done without picking one of these two directions.
+</p>
+<h2><span id="week_29:_jul_18–jul_24"></span><span class="mw-headline" id="week_29:_jul_18.E2.80.93jul_24">week 29: jul 18–jul 24</span></h2>
+<p>START WORK WRAP UP!
+</p>
+<ul><li>copy-pasted <code>mesh.relax</code> into <code>mesh.relax_snap</code></li>
+<li>refactor and clean up retopotools add-on</li>
+<li>reviewed feedback from Julien Kaspar and Daniel Bystedt</li>
+<li>met with Daniel Bystedt</li></ul>
+<p>the relax operator seems like a useful tool for retopology work, so I copy-pasted it and added a call to <code>bpy.ops.retopology.translate_facesnap</code> right after it relaxes.
+</p><p>Started a <a href="2022/Feedback.html" title="User:Jon Denning/Reports/2022/Feedback">Feedback doc</a> to record feedback and responses.
+</p>
+<h2><span id="week_28:_jul_11–jul_17"></span><span class="mw-headline" id="week_28:_jul_11.E2.80.93jul_17">week 28: jul 11–jul 17</span></h2>
+<ul><li>committed <a rel="nofollow" class="external text" href="https://developer.blender.org/D15398">D15398</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D15154">D15154</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D14834">D14834</a></li></ul>
+<p>discussed work with stakeholders and devs.
+</p><p>created a <a rel="nofollow" class="external text" href="https://youtu.be/pJMNPpXmso8">youtube video</a> demonstrating the new retopo snapping options and tool.  refactored the retopology tools add-on, getting it ready for publishing.
+</p>
+<h2><span id="week_27:_jul_4–jul_10"></span><span class="mw-headline" id="week_27:_jul_4.E2.80.93jul_10">week 27: jul 4–jul 10</span></h2>
+<ul><li>July 4 is a national holiday!</li>
+<li>landed <a rel="nofollow" class="external text" href="https://developer.blender.org/D15366">D15366</a> as a fix for <a rel="nofollow" class="external text" href="https://developer.blender.org/T99334">T99334</a></li>
+<li>created <a rel="nofollow" class="external text" href="https://developer.blender.org/D15398">D15398</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/D15406">D15406</a></li></ul>
+<p>started the process of splitting many retopo-related changes into separate patches (<a rel="nofollow" class="external text" href="https://developer.blender.org/D15398">D15398</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D15406">D15406</a>, ...) that are (hopefully) easier to review.
+</p>
+<h2><span id="week_26:_jun_27–jul_3"></span><span class="mw-headline" id="week_26:_jun_27.E2.80.93jul_3">week 26: jun 27–jul 3</span></h2>
+<ul><li>landed <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591</a> as <a rel="nofollow" class="external text" href="https://developer.blender.org/rB011327224ecec1312e0780865a1fb0dc83830a30">rB011327224ece</a></li>
+<li>started updating manual on <a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/latest/editors/3dview/controls/snapping.html">Snapping</a></li></ul>
+<p>nearest face snapping is now in master!!
+</p>
+<h2><span id="week_25:_jun_20–jun_26"></span><span class="mw-headline" id="week_25:_jun_20.E2.80.93jun_26">week 25: jun 20–jun 26</span></h2>
+<ul><li>working retopo mode!</li>
+<li>geopen: vertex and edge snapping is based on auto merge and auto split, respectively</li></ul>
+<p>now, snapping targets and methods are different when retopo mode is enabled!  specifically, Vertex and Edge snapping only applies to Active and Edit source meshes (but only if the corresponding snapping method is enabled), and Face Raycast and Face Nearest snapping only applies to Non-Edit target meshes (again, only if corresponding snapping method is enabled).  this works quite well (although Blender did crash on me once... still need to debug this).
+</p><p>the only con to this setup is if the artist wished to have the source verts snap to the target verts/edges (ex: when retopo'ing a hard surface model).  but, they can always use the normal grab operator with the appropriate settings set, or a better implementation might be to allow vert/edge snapping if it is "sharp enough".  meaning, target edge snapping is allowed if the edge is between two faces where their normals dotted is below some threshold (angle between normals is greater than some threshold angle).  (the angle / dot product threshold will be adjustable)  however, this then requires masking the target edges... a problem that is outside the scope of my project.
+</p><p>When using Geometry Pen, Vertex snapping is enabled whenever auto merge is enabled, and Edge snapping is enabled whenever auto split is enabled.
+</p><p>remaining issues:
+</p>
+<ul><li>there seems to be no way to prevent Invoked ops from pushing to undo stack.  this is an issue as calling a single operator that wraps multiple operator calls will create multiple undo steps</li>
+<li>calling operator that wraps another operator can have the redo menu show for a brief moment</li>
+<li>sometimes auto merge will perform an edge split instead, even though visually and intuitively the snapped vert should merge with hovered vert.  this issue happens very intermittently</li>
+<li>using align argument will draw an extra normal vis when still grabbing a vertex.</li>
+<li>face raycast should use mouse projected onto world rather than current offset position projected onto world.  otherwise, verts will jump across the screen once mouse hovers another vertex</li></ul>
+<h2><span id="week_24:_jun_13–jun_19"></span><span class="mw-headline" id="week_24:_jun_13.E2.80.93jun_19">week 24: jun 13–jun 19</span></h2>
+<ul><li>opened tasks: <a rel="nofollow" class="external text" href="https://developer.blender.org/T98971">T98971</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/T98973">T98973</a></li>
+<li>updated call tree transformation snapping diagram: <a rel="nofollow" class="external text" href="../../File:User-Jon_Denning-Reports-2022-XformSnapCallTree.pdf.html">diagram</a></li></ul>
+<p>i started in on working through the hitches i ran into last week by implementing a retopo mode argument for transformation ops.  however, while working in there, i realized that some of the refactoring/new features i had done in <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591</a> is not quite correct.  in particular, the face nearest wasn't acting as expected with different settings.  i took a few days off to allow myself to time to rest and forget in order approach it with fresh ideas.
+</p>
+<h2><span id="week_23:_jun_6–jun_12"></span><span class="mw-headline" id="week_23:_jun_6.E2.80.93jun_12">week 23: jun 6–jun 12</span></h2>
+<ul><li>diffs
+<ul><li>landed: <a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037</a>!</li>
+<li>updated: <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591</a></li>
+<li>created: <a rel="nofollow" class="external text" href="https://developer.blender.org/D15153">D15153</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D15154">D15154</a></li></ul></li>
+<li>continued testing and polishing geometry pen tool (it's very close)</li></ul>
+<p><br />
+Some questions / points to dig further:
+</p>
+<ul><li>should retopo tools have their own settings that override scene settings (ex: merge threshold, auto merge, etc.), or should they simply use scene settings?
+<ul><li>if shared, what if it makes sense to have different settings for different tools?  should the tool automatically change the scene settings to defaults (or user specified) when the tool becomes active?</li>
+<li>if individual, how do we handle shortcut tool?  ex: geometry pen uses face raycast and nearest snapping and sometimes vertex, and the user can press <code>F</code> at any time (calling F2 for example) which creates a face and grabs the inserted vertex.  should we have an extensive keymap and operators that overload all reasonably useful operators?  yuck.</li></ul></li>
+<li>should there be separate options for auto merging and auto splitting?</li>
+<li>normals for vertices are read only for MeshVertex (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB891268aa824f0f">891268aa824f</a>), but they seemed to be ignored for BMVert too...?  snapping is not setting the vertex's normal, which means new geometry can sometimes become flipped.  this isn't much of an issue, unless displacement modifier is enabled.</li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="the_first_hitch_with_snapping_methods">the first hitch with snapping methods</span></h3>
+<p>I ran into a hitch with transform snapping.  there currently is no way to use different methods against different snapping targets, but I have a couple of potential ways to solve this.
+</p><p>here is an example of why this is an issue: when creating new geometry or moving geometry with geometry pen, we want the grabbed geometry to snap to the target's surface with Face Raycast / Nearest, but we also want to allow the geometry to snap+merge with source geometry using Vertex snapping.  If Face snapping and Vertex snapping are both enabled, and if the target geometry is highly tessellated, the grabbed geometry will snap to vertices of target very discretely rather than smoothly snapping to the faces of target.  But without Vertex snapping, there is no feedback for when the grabbed geometry is going to merge into existing geometry.
+</p><p>below are a couple of ways to potentially solve this.
+</p><p>rather than using Vertex snapping and Auto Merge to cause grabbed geometry to snap+merge to existing geometry, i'll use a retopo flag (or maybe just simply use auto merge, but this starts to hijack and change existing behavior).  if the retopo flag is enabled during invocation of transform op, then Vertex and Edge snapping applies only to self (not active, but actual self) while Face snapping applies to target (non-edit objects).  This option could take away the option to snap grabbed geometry to target vertices and edges, but I don't know if that's really an issue.
+</p><p>another solution is to add options for Vertex and Edge snapping methods (similar to Face Raycast's option to project vertices individually or to treat as a group) that controls the objects to which snapping happens.  I think this overly complicates the options.
+</p><p>both of these possible solutions complicate transform ops (tool settings are affected if we overload the auto merge), but i cannot think of another way to handle this without reworking the transform snapping code or reimplementing it.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="the_second_hitch_with_snapping_methods">the second hitch with snapping methods</span></h3>
+<p>There are some geometry pen edits that don't fit the current snapping methods approach.  specifically, snapping happens only on the vertices.  but as an example, one edit that would be ideal for geometry pen is the ability to snap a grabbed edge to a hovered edge (even if the two edges are oriented differently so both pairs of vertices don't overlap at the same time).
+</p><p>possibility: add a merge edge option to handle this special case?
+</p>
+<h2><span id="week_22:_may_30–jun_5"></span><span class="mw-headline" id="week_22:_may_30.E2.80.93jun_5">week 22: may 30–jun 5</span></h2>
+<ul><li>continued work on <a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037</a></li>
+<li>continued work on geometry pen</li></ul>
+<p>I pinged Campbell about how to proceed with submitting patches.  most of the work i've done on Blender's side involves quite a large amount of change. breaking it into smaller patches is a lot of work, but also some of the changes don't make sense except in the context of the larger change.  this has been a big learning point for me.
+</p><p><a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037</a> is ready!  now, I will rework the nearest face snapping option based off this.
+</p><p>I continued working on geometry pen.  I've found quite a lot of limitations, some of which I've been able to work around (to be submitted as patch(es)), but some I'm not so sure about.  I've asked #python channel, but no one there seems to have an answer.  will ping Campbell.
+</p><p><br />
+</p>
+<h2><span id="week_21:_may_23–may_29"></span><span class="mw-headline" id="week_21:_may_23.E2.80.93may_29">week 21: may 23–may 29</span></h2>
+<ul><li>created <a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037</a> as a (mostly) subset of <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591</a></li>
+<li>added issues/bugs and limitations to <a href="2022/Experiments.html#To_Do" title="User:Jon Denning/Reports/2022/Experiments">To-Do</a></li></ul>
+<p>while Campbell was mostly positive of <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">D14591</a>, Germano had reasonable reservations about the size of the work.  so, I took time to create <a rel="nofollow" class="external text" href="https://developer.blender.org/D15037">D15037</a> as a (mostly) subset of D14591.  i did notice and fix a few missing elements.  next week, i will finalize D15037 and apply the create a new patch of D14591.
+</p><p>as i polished geopen, i discovered issues/bugs and limitations in current Blender code / API.  these were added to a growing <a href="2022/Experiments.html#To_Do" title="User:Jon Denning/Reports/2022/Experiments">To-Do</a>.  i plan either to address these myself as patches (if reasonable for me to do) or to create some tasks.
+</p><p>my next tool is going to be a contours-like tool.
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span id="week_20:_may_16–may_22"></span><span class="mw-headline" id="week_20:_may_16.E2.80.93may_22">week 20: may 16–may 22</span></h2>
+<ul><li>geometry pen prototype is working!</li>
+<li>continued work on understanding gizmo-related classes (strengths, limitations)</li>
+<li>started working on visual settings for retopology work</li></ul>
+<p>Earlier last week, I had a working prototype geometry pen (<a rel="nofollow" class="external text" href="https://twitter.com/gfxcoder/status/1526658835179520000">initial tweet</a>).  later in the week and over weekend I polished it quite a bit (<a rel="nofollow" class="external text" href="https://twitter.com/gfxcoder/status/1528730093299851265">update tweet</a>), both on UX side and dev side.  The tool is quite functional, but there are a few "hiccups" in the way it works.  see <a href="2022/Experiments.html#geopen_hiccups" title="User:Jon Denning/Reports/2022/Experiments">experiments page</a> for details.
+</p><p>I started adding options to modify 3D view settings to be friendlier to retopology work.  so far the only options are to hide the 3D cursor and to hide the object origins.  both of these options are temporary, meaning that switching into the retopology tool will adjust/override current view settings, but switching away from retopology tool will revert the view settings back to their original settings (before overriding).  note: this work is just a workaround until we have an actual retopo mode in Blender.
+</p>
+<h2><span id="week_19:_may_9–may_15"></span><span class="mw-headline" id="week_19:_may_9.E2.80.93may_15">week 19: may 9–may 15</span></h2>
+<ul><li>continued experimenting with new geometry pen retopology tool</li>
+<li>working to understand gizmo-related classes; started document</li></ul>
+<p>I continued working on different ways to create operators, and i have a very basic tool now for creating new geometry quickly.  I tried to understand how to best handle <code>Gizmo</code>, <code>GizmoGroup</code>, and <code>WorkSpaceTool</code>, but documentation was scarce and examples are light, so i chatted with several on #blender-coders and searched through source.  I plan to create a proper document with some examples later.  in the end, i found many limitations to the various ways to accomplish this geometry pen tool.  this work is outlined at <a href="2022/Experiments.html" title="User:Jon Denning/Reports/2022/Experiments">Experiments</a> doc.  note: the doc is getting quite large, and it's a little unclear what was done when, but the details are organized by category rather than date (like this doc), so it's easier to see how things relate.
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span id="week_18:_may_2–may_8"></span><span class="mw-headline" id="week_18:_may_2.E2.80.93may_8">week 18: may 2–may 8</span></h2>
+<ul><li>submitted other patches: <a rel="nofollow" class="external text" href="https://developer.blender.org/D14834">Documentation: Update Docs for Gizmo (D14834)</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D14860">Docs: added missing documentation for <code>WindowManager</code> methods (D14860)</a></li>
+<li>committed: <a rel="nofollow" class="external text" href="https://developer.blender.org/rB26cda38985f98b8ddf57cf7f65b9f08793873765">Docs: Clarify docs for BMesh methods</a> (<a rel="nofollow" class="external text" href="https://developer.blender.org/D14370">D14370</a>)</li>
+<li>explored several ways to implement new retopo tools</li></ul>
+<p>i explored several ways to create new retopo tools.  i started with an equivalent to <code>bpy.ops.transform.translate</code>.  i wanted to temporarily set the snapping settings based on the selected tool, to have the tool do its thing, then reset snapping settings back.  (using <code>snap=True</code> argument enables snapping for the entire scene!)  there are several ways to create new operators/tools in Python that are based on current operators.  each of these are discussed in <a href="2022/Experiments.html#Retopo_Translate" title="User:Jon Denning/Reports/2022/Experiments">Experiment</a>.
+</p><p>i plan to make public my work next week.
+</p><p><br />
+</p>
+<h2><span id="week_17:_apr_25–may_1"></span><span class="mw-headline" id="week_17:_apr_25.E2.80.93may_1">week 17: apr 25–may 1</span></h2>
+<ul><li>limiting the scope of change for the <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">surface snap patch (D14591)</a></li>
+<li>worked with operator, gizmo, etc.</li></ul>
+<p><br />
+</p>
+<h2><span id="week_16:_apr_18–apr_24"></span><span class="mw-headline" id="week_16:_apr_18.E2.80.93apr_24">week 16: apr 18–apr 24</span></h2>
+<ul><li>created patches for syntax highlighting in the text editor: <a rel="nofollow" class="external text" href="https://developer.blender.org/D14739">include string prefixes (D14739)</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/D14707">include soft keywords (D14707)</a></li>
+<li>discussed revisions for <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">surface snap patch (D14591)</a></li></ul>
+<p>This was a much slower week for development due to the traveling and patch review.
+</p><p><br />
+</p>
+<h2><span id="week_15:_apr_11–apr_17"></span><span class="mw-headline" id="week_15:_apr_11.E2.80.93apr_17">week 15: apr 11–apr 17</span></h2>
+<ul><li>fixed bug when transforming objects with surface snap</li>
+<li>continued working on custom operators</li>
+<li>cleaned up <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">Surface Snap and New Snap Options (D14591)</a> patch (to be uploaded soon)</li></ul>
+<p><br />
+</p>
+<h2><span id="week_14:_apr_4–apr_10"></span><span class="mw-headline" id="week_14:_apr_4.E2.80.93apr_10">week 14: apr 4–apr 10</span></h2>
+<ul><li>met with Campbell and Dalai to discuss next steps</li>
+<li>cherry-picked the surface snap and new snap options</li>
+<li>studying custom widgets and operators</li>
+<li>fixed api docs (patch to be submitted)</li></ul>
+<p>the second half of this work will focus on the retopo tools.  Campbell would like to take a different approach with custom / derived modes, and the retopo mode will be one use case example of this.  the hope is that custom modes will be definable from Python, which means that retopo mode could be totally (or mostly) in Python!  so, future dev on the mode is currently paused.
+</p><p>as the surface snapping and snap options are critical for retopo work, i pulled this out into its own diff (see <a rel="nofollow" class="external text" href="https://developer.blender.org/D14591">Surface Snap and New Snap Options (D14591)</a>).
+</p><p>started digging into creating custom widgets and operators.  i fixed some of the api docs that were incorrect or basically empty.  i plan to post a patch soon.
+</p><p><br />
+</p><p><br />
+</p>
+<h2><span id="week_13:_mar_28–apr_3"></span><span class="mw-headline" id="week_13:_mar_28.E2.80.93apr_3">week 13: mar 28–apr 3</span></h2>
+<ul><li>added a surface snap steps feature (experiment)</li>
+<li>added a keep on same object feature</li>
+<li>refactored/deduplicated edit/retopo mode code</li></ul>
+<p>when the surface snap steps is enabled, the surface snap action will be done iteratively over the specified number of steps rather than over a single step.  setting to 1 step is equivalent to disabling this feature.  this experimental feature tries to push surface snapping toward a geodesic snapping by solving the following two problems: prevent vertices from snapping to surfaces that are near in euclidean space but distant in geodesic space; prevent awkward snapping behavior when moving near the middle of U-shaped volumes.  note: the issues could possibly be solved by labeling the geometry near the initial vertex position (alternative: only build BVH using geodesically nearby geometry), or somehow warping the mesh so euclidean distance approximates geodesic distance, but this could become expensive.  overall, i'm not satisfied with this feature, yet.
+</p><p>when keep on same object feature is enabled, surface snapping will use only the closest object to the vertex's initial position for snapping.  this feature solves the issue of changing which object a vertex snaps to when different objects intersect or are nearby in euclidean space.  this feature works quite well.
+</p><p>when i started this project, i duplicated the edit mode toggle/enter/exit code for retopo mode, as both modes use similar data structures.  this made it difficult to rebase or merge in master, as any change needed to be done to both sets.  i have gone through the code and deduplicated that by adding a <code>submode</code> parameter to the low level functions.
+</p><p>This week, I will be working on a proposal for the future of this project.
+Campbell Barton gave a quick review, and he thought that this might be a good use case for custom / derived modes.
+</p><p><br />
+</p>
+<h2><span id="week_12:_mar_21–mar_27"></span><span class="mw-headline" id="week_12:_mar_21.E2.80.93mar_27">week 12: mar 21–mar 27</span></h2>
+<ul><li>updated F2 add-on to work in retopo mode</li>
+<li>update retopo mode toolbar</li>
+<li>retopo icon now renders in outliner</li></ul>
+<p>Many of the edit mode toolbar menus are now available in retopo mode.
+Otherwise, this was a slower week.
+</p><p><br />
+</p>
+<h2><span id="week_11:_mar_14–mar_20"></span><span class="mw-headline" id="week_11:_mar_14.E2.80.93mar_20">week 11: mar 14–mar 20</span></h2>
+<ul><li>fixed merge conflicts and updated the <a rel="nofollow" class="external text" href="https://developer.blender.org/D14035">diff</a>.</li>
+<li>3d snapping now respects target object's matrix and targets edit mesh and text objects</li>
+<li>Hooray!  Edit tools now work in Retopo Mode!</li>
+<li>tab toggles between retopo and edit modes</li>
+<li>transforming and snapping work in retopo mode</li></ul>
+<p>Some recent changes in the <code>master</code> branch overlapped with a lot of my work from the past few weeks.  I'm hoping that I was able to merge in these changes successfully, but I haven't fully tested it.
+</p><p>I was finally able to get Edit Tools to work in Retopo Mode!  Since the object's mode is a flag rather than a setting, I'm <code>or</code>ing on an additional edit mode flag to signal that it is editing retopology.  now, as long as the operators just test with <code>(mode &amp; OB_MODE_EDIT)</code>, then that operator can work in either Edit Mode or Retopo Mode.  This needs more testing, especially with other edit modes (Curve, Text, etc.).  To test that we're only in Edit Mode and not Retopo Mode, need to use <code>mode == OB_MODE_EDIT</code>.  To test that we're in retopo mode and not just Edit Mode, need to use <code>mode == OB_MODE_RETOPO</code>, since the <code>OB_MODE_EDIT</code> flag will still make <code>(mode &amp; OB_MODE_RETOPO)</code> true.
+</p><p>Question: does it make sense to be in retopo mode and another? (similar to edit + pose?)
+</p><p>Tabbing while in Retopo Mode will now toggle to Edit Mode, and another tab gets us back to Retopo Mode.  This is similar to tabbing from in Sculpt Mode.
+</p><p>Translations and snapping now work correctly in Retopo Mode.  Note: rotation and resize xforms was written to snap as a group only, not individual vertices... might need to change this.
+</p><p>Next week, I plan to take a look at LoopTools, F2, and Bsurfaces as retopo tools.
+</p><p><br />
+</p>
+<h2><span id="week_10:_mar_7–mar_13"></span><span class="mw-headline" id="week_10:_mar_7.E2.80.93mar_13">week 10: mar 7–mar 13</span></h2>
+<ul><li>Hooray!  I successfully implemented a 3d snapping!</li>
+<li>refactored transformation snapping fn names</li></ul>
+<p>I was finally able to get 3d surface snapping working.  i posted a video on <a rel="nofollow" class="external text" href="https://twitter.com/gfxcoder/status/1502403512524759041">twitter</a>.  There are still issues (does not account for target xforms, sometimes movement isn't very intuitive, ...), but it's functioning.
+</p><p>The biggest breakthrough come from realizing that some of the snapping functions had names that detailed what they were <i>currently</i> doing instead of what they were <i>intended</i> to be doing.  The current names made it tricky to follow the flow or know how to modify, so I refactored the names and some of the code to be clearer.
+</p><p>I'm still fixing conflicts from rebasing off master, so I haven't yet updated my diff.
+</p><p><br />
+</p>
+<h2><span id="week_9:_feb_28–mar_6"></span><span class="mw-headline" id="week_9:_feb_28.E2.80.93mar_6">week 9: feb 28–mar 6</span></h2>
+<ul><li>met with Thomas Dinges and co.</li>
+<li>continued working on 3d snapping</li>
+<li>met and chatted with Campbell Barton to review the Transformation and Transformation Snapping code</li>
+<li>diagrammed the call tree for transformation snapping.
+<ul><li><a href="../../File:User-Jon_Denning-Reports-2022-XformSnapCallTree.pdf.html" title="File:User-Jon Denning-Reports-2022-XformSnapCallTree.pdf">File:User-Jon Denning-Reports-2022-XformSnapCallTree.pdf</a></li></ul></li></ul>
+<p><br />
+questions:
+</p>
+<ul><li>do <code>BLI_ghash_*</code> fns consider edits?  i.e., if an edit mesh is operated on, does it's hash change?
+<ul><li>is there anything that would act like that?  to know if a mesh/edit mesh/bmesh changed?</li></ul></li></ul>
+<p>I got stuck on a few functions around transformation snapping, where the code I copied/modified was segfaulting.  Plus, the area was quite confusing in general.  So I met with Campbell to try to get a high level view of that area of code.  We discussed a few possible general ways to solve the snapping problem.  I ended up diagramming the call tree of that area (see document linked above).
+</p>
+<h2><span id="week_8:_feb_21–27"></span><span class="mw-headline" id="week_8:_feb_21.E2.80.9327">week 8: feb 21–27</span></h2>
+<ul><li>met with Thomas Dinges and co.</li>
+<li>continued work on snap/projection tool settings</li>
+<li>refactored snap defines as an enum, cleaned up types around this</li>
+<li>continued working on <a href="../Projects/Function_Naming.html" title="User:Jon Denning/Projects/Function Naming">Function Naming</a> doc</li></ul>
+<p>This week felt way less productive, as most of the time was spent trying to understand how the Translation Snap code worked.  In that effort, I refactored a bunch of <code>#define</code>s related to snapping to an <code>enum</code>.  Somewhere in the code, a <code>char</code> was used where <code>short</code> was used elsewhere, and therefore a new snap mode with value over 255 was getting truncated.  I copied code over (with minor modification) from the <code>calculate_mesh_proximity</code> fn into snap, but Blender kept segfaulting.  I believe it's due to creating a BVH tree of the original mesh in different threads, but I'm not entirely certain.  It seems the needed BVH trees are already created (or at least the code to do so is available), so my next step is to try using that.  I will ask Campbell to give me a walkthrough of the Translation Snap code, just to give me more context.  My hope is that once this is working, new tools should be fairly quick to implement, even if they're written in Python, as the time consuming part (snapping/projecting) will be done automatically in Blender core.
+</p><p>Important Note: the snap code is critical for certain retopology tools.  Without it, the retopo tools will be limited to screen space snapping only.  This is why I chose to spend a significant amount of time here.  I definitely underestimated the complexity of this code... but I'm not convinced that it needs to be so complex.  It could just need a good clean-up pass.  (switching from <code>#define</code> to <code>enum</code>, I touched 12+ files, and some of those touches required a lot of thread pulling to find)
+</p><p><br />
+</p>
+<h2><span id="week_7:_feb_14–20"></span><span class="mw-headline" id="week_7:_feb_14.E2.80.9320">week 7: feb 14–20</span></h2>
+<p>plan: continue implementing retopo tools into edit mode, update design document
+</p>
+<ul><li>updated <a href="../Projects/Retopology_Mode.html" title="User:Jon Denning/Projects/Retopology Mode"> Retopology Mode design doc</a></li>
+<li>updated <a rel="nofollow" class="external text" href="https://developer.blender.org/D14035">Retopo Mode and Overlay diff (D14035)</a></li>
+<li>continued work on snap/projection tool settings</li>
+<li>switched to C++</li>
+<li>looked at Shrinkwrap Modifier and <code>calculate_mesh_proximity</code> code</li>
+<li>started <a href="../Projects/Function_Naming.html" title="User:Jon Denning/Projects/Function Naming">Function Naming doc</a></li></ul>
+<p>The updated snap/projection tool settings code is working well, but it is still lacks the ability to snap to surface in 3D space or follow topology of another mesh.  Presently it's not clear in tool settings that Face and Volume snapping use different code paths (with different behaviors) from the other snapping options (Vertex, Edge, Edge Center, Edge Perpendicular).  Technically, Face and Volume "snapping" is really a projection.  As it is, this is likely not an issue for the artist (except perhaps Volume snapping), but adding any additional snapping settings will require some better labels, descriptions, icons, etc.
+</p><p>Attempted to add a snap to surface option, which uses shrinkwrap code to snap vertices to the nearest surface point (not project).  After chatting with Hans Goudey, started looking more at <code>calculate_mesh_proximity</code> instead.
+</p><p>In trying to understand function call hierarchy and general architecture, I created a document to capture function name prefix and suffix meanings.  I posted this to #blender-coders to get some feedback and updated the document accordingly.
+</p><p><br />
+</p>
+<h2><span id="week_6:_feb_7–13"></span><span class="mw-headline" id="week_6:_feb_7.E2.80.9313">week 6: feb 7–13</span></h2>
+<p>plan: implement retopo tools into edit mode
+</p>
+<ul><li>weekly meeting with thomas dinges and other devs</li>
+<li>started <a href="../Projects/Retopology_Mode.html" title="User:Jon Denning/Projects/Retopology Mode"> Retopology Mode</a> design doc (to be filled out further from Google Doc...)</li>
+<li>started <a rel="nofollow" class="external text" href="https://developer.blender.org/T95584">Retopo Mode (T95584)</a> design task</li>
+<li>started <a rel="nofollow" class="external text" href="https://developer.blender.org/D14035">Retopo Mode and Overlay (D14035)</a> diff</li>
+<li>created test macro operator</li>
+<li>added additional snapping constraints</li>
+<li>created retopo-related files for organization</li></ul>
+<p>This week the plan is to switch gears to work on the retopo tools instead.  My hope is to gain some progress in this area, then revisit retopo mode and overlay later.  To simplify my efforts, I will implement them into edit mode for the time being.  This week I also plan to update the design doc and the retopo mode diff.  So far, I have only copied the Rip-Move operator macro, but doing so gave me some insight into how to create new operator macros.  I had thought that I would need to create a project operator and a snap operator, but it might be simpler to add these "clean up" operations as tool settings instead, because a lot of the code already flows touches the tool settings.
+</p><p>I ended up creating two new "snapping" (projection) constraints: Edit (non-active) and Non-edit.  Presently, there are several settings for how the geometry is to be projected ("snapped") while transforming, but none were well-suited for retopo work, where typically the geometry is to be projected to the surface that's being retopologized.  I added some additional complexity in the filtering, and I added a couple UI checkboxes in tool settings to allow the artist a bit more control over how the geometry is projected.
+</p><p>Finally, I started a new module for retopology operators (just a <code>.h</code> and <code>.c</code> with a single operator at the moment).
+</p><p>I still need to update the retopo mode design doc.  I will work on that early next week.
+</p><p><br />
+</p>
+<h2><span id="week_5:_jan_31–feb_6"></span><span class="mw-headline" id="week_5:_jan_31.E2.80.93feb_6">week 5: jan 31–feb 6</span></h2>
+<ul><li>met with thomas dinges, dalai felinto, and other devs</li>
+<li>integrated jeroen bakker's retopo overlay into retopo mode</li>
+<li>finding edit mode to be tightly integrated throughout blender, might need to switch approaches to retopo mode</li></ul>
+<p>I switched to bringing in Jeroen's retopo overlay code into my branch, thinking that maybe I could gain some insights with the draw engine by doing this.  (especially the selection overlay system)  His patch was straightforward to bring in, although I simplified it a bit (for now), but there still were some quirks to how it worked in my branch than what he posted in the task.  Specifically, the depth buffer seemed to be blown away (or the "in front" option was getting set), because edit geometry that should be occluded was not.  I spent a bit of time trying to understand the draw engine and chatting with Clément Foucault, but I was running into blocks.
+</p><p><br />
+</p>
+<h2><span id="week_4:_jan_24–30"></span><span class="mw-headline" id="week_4:_jan_24.E2.80.9330">week 4: jan 24–30</span></h2>
+<ul><li>reviewed retopo overlay <a rel="nofollow" class="external text" href="https://developer.blender.org/D5919">Retopo Overlay</a></li>
+<li>continued work on basic retopo mode</li>
+<li>started a design doc on wiki</li>
+<li>(caught a second cold...)</li></ul>
+<p>Following my conversations with Campbell Barton, Daniel, and Julien, I've started with coding a retopo mode separate from edit mode but still with the hope that I wouldn't need to fork all of the tools and code or touch too much of the current code.  The mode does look and feel like edit mode, with edit mesh and bmesh (exact same as edit mode's), overlays, etc., but I was unable to get selection overlays to work and/or the tools weren't behaving quite right.  As far as I can tell by following in the debugger, the code paths are correctly followed, but there is still some levels of indirection that I'm not able to grok that keeps the edit mesh/bmesh from getting updated and/or the visualization of edit mesh/bmesh being correct.
+</p><p>observations: I'm finding that "Edit Mode" (whether editing meshes, text, curves, whatever) is _really_ tightly integrated throughout, but also there are about a dozen different ways that the code checks whether it's currently in edit mode.  (also, I'm still not quite sure why the modes are masked rather than straight enumerations.  I asked on #blender-coders, but the answers were not clear.)  Adding a sculpt mode or the various gp modes was fine, as they were far enough away from the other modes that code sharing wasn't as big of a deal.  This may complicate a separate Edit Mode that shares code with Edit Mode.
+</p><p><br />
+</p>
+<h2><span id="week_3:_jan_17–23"></span><span class="mw-headline" id="week_3:_jan_17.E2.80.9323">week 3: jan 17–23</span></h2>
+<ul><li>continued coding on adding retopology mode</li>
+<li>iterated on design doc with Daniel Bystedt and Julien Kaspar</li></ul>
+<p><br />
+</p>
+<h2><span id="week_2:_jan_10–16"></span><span class="mw-headline" id="week_2:_jan_10.E2.80.9316">week 2: jan 10–16</span></h2>
+<ul><li>met with Dalai to discuss project, admin</li>
+<li>started coding in a retopology mode</li>
+<li>started design document</li></ul>
+<p>I started a Google Doc to capture and iterate over some ideas for a Blender retopo mode (including terms, workflow philosophies, etc.), and I shared it with Daniel Bystedt and Julien Kaspar, two stakeholders for this project.  We iterated over much of the doc, trying to revisit all decisions that we made with RetopoFlow and where Blender's various modes are now.  I will post a cleaned up version as a design doc to the wiki soon.
+</p>
+<h2><span id="week_1:_jan_3–9"></span><span class="mw-headline" id="week_1:_jan_3.E2.80.939">week 1: jan 3–9</span></h2>
+<ul><li>(recovered from COVID...)</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120115
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.091 seconds
+Real time usage: 0.097 seconds
+Preprocessor visited node count: 147/1000000
+Preprocessor generated node count: 152/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6261-0!canonical and timestamp 20240112120115 and revision id 31387
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;oldid=31387">https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;oldid=31387</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 1 August 2022, at 16:25.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Jon_Denning/Reports/2022.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Jon_Denning/Reports/2022" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Jon_Denning.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Jon_Denning.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Jon_Denning.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;oldid=31387" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Jon_Denning/Reports/2022&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.091","walltime":"0.097","ppvisitednodes":{"value":147,"limit":1000000},"ppgeneratednodes":{"value":152,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120115","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":145});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453e684d9db78e","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

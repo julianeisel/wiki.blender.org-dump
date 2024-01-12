@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Brecht/Reports/2020 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Brecht/Reports/2020","wgTitle":"Brecht/Reports/2020","wgCurRevisionId":19376,"wgRevisionId":19376,"wgArticleId":4915,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Brecht/Reports/2020","wgRelevantArticleId":4915,"wgRequestId":"1b01478751191814c64121b2","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Brecht","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Brecht_Reports_2020 rootpage-User_Brecht skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2020.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ABrecht%2FReports%2F2020" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2020.html#September_14_-_18"><span class="tocnumber">1</span> <span class="toctext">September 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2020.html#August_3_-_7"><span class="tocnumber">2</span> <span class="toctext">August 3 - 7</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2020.html#July_27_-_31"><span class="tocnumber">3</span> <span class="toctext">July 27 - 31</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2020.html#July_13_-_17"><span class="tocnumber">4</span> <span class="toctext">July 13 - 17</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2020.html#June_30_-_July_3"><span class="tocnumber">5</span> <span class="toctext">June 30 - July 3</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2020.html#June_22_-_26"><span class="tocnumber">6</span> <span class="toctext">June 22 - 26</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2020.html#June_15_-_19"><span class="tocnumber">7</span> <span class="toctext">June 15 - 19</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2020.html#June_8_-_12"><span class="tocnumber">8</span> <span class="toctext">June 8 - 12</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2020.html#June_2_-_5"><span class="tocnumber">9</span> <span class="toctext">June 2 - 5</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2020.html#May_25_-_29"><span class="tocnumber">10</span> <span class="toctext">May 25 - 29</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2020.html#May_18_-_22"><span class="tocnumber">11</span> <span class="toctext">May 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2020.html#May_11_-_15"><span class="tocnumber">12</span> <span class="toctext">May 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2020.html#May_5_-_8"><span class="tocnumber">13</span> <span class="toctext">May 5 - 8</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="2020.html#Next_Week"><span class="tocnumber">13.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="2020.html#April_28_-_May_1"><span class="tocnumber">14</span> <span class="toctext">April 28 - May 1</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="2020.html#Next_Week_2"><span class="tocnumber">14.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="2020.html#April_20_-_24"><span class="tocnumber">15</span> <span class="toctext">April 20 - 24</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="2020.html#Next_Week_3"><span class="tocnumber">15.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="2020.html#April_14_-_17"><span class="tocnumber">16</span> <span class="toctext">April 14 - 17</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="2020.html#Next_Week_4"><span class="tocnumber">16.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="2020.html#April_6_-_10"><span class="tocnumber">17</span> <span class="toctext">April 6 - 10</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="2020.html#Next_Week_5"><span class="tocnumber">17.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="2020.html#March_30_-_April_3"><span class="tocnumber">18</span> <span class="toctext">March 30 - April 3</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="2020.html#Next_Week_6"><span class="tocnumber">18.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="2020.html#March_23_-_27"><span class="tocnumber">19</span> <span class="toctext">March 23 - 27</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="2020.html#Next_Week_7"><span class="tocnumber">19.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="2020.html#March_16_-_20"><span class="tocnumber">20</span> <span class="toctext">March 16 - 20</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="2020.html#Next_Week_8"><span class="tocnumber">20.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="2020.html#March_9_-_13"><span class="tocnumber">21</span> <span class="toctext">March 9 - 13</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="2020.html#Next_Week_9"><span class="tocnumber">21.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="2020.html#March_2_-_6"><span class="tocnumber">22</span> <span class="toctext">March 2 - 6</span></a>
+<ul>
+<li class="toclevel-2 tocsection-32"><a href="2020.html#Next_Week_10"><span class="tocnumber">22.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="2020.html#February_24_-_28"><span class="tocnumber">23</span> <span class="toctext">February 24 - 28</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="2020.html#Next_Week_11"><span class="tocnumber">23.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="2020.html#February_17_-_21"><span class="tocnumber">24</span> <span class="toctext">February 17 - 21</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="2020.html#Next_Week_12"><span class="tocnumber">24.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-37"><a href="2020.html#February_10_-_14"><span class="tocnumber">25</span> <span class="toctext">February 10 - 14</span></a>
+<ul>
+<li class="toclevel-2 tocsection-38"><a href="2020.html#Next_Week_13"><span class="tocnumber">25.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-39"><a href="2020.html#February_3_-_7"><span class="tocnumber">26</span> <span class="toctext">February 3 - 7</span></a>
+<ul>
+<li class="toclevel-2 tocsection-40"><a href="2020.html#Next_Week_14"><span class="tocnumber">26.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="2020.html#January_27_-_31"><span class="tocnumber">27</span> <span class="toctext">January 27 - 31</span></a>
+<ul>
+<li class="toclevel-2 tocsection-42"><a href="2020.html#Next_Week_15"><span class="tocnumber">27.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-43"><a href="2020.html#January_20_-_24"><span class="tocnumber">28</span> <span class="toctext">January 20 - 24</span></a>
+<ul>
+<li class="toclevel-2 tocsection-44"><a href="2020.html#Next_Week_16"><span class="tocnumber">28.1</span> <span class="toctext">Next Week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-45"><a href="2020.html#January_15_-_17"><span class="tocnumber">29</span> <span class="toctext">January 15 - 17</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Brecht/Reports/2020</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Brecht.html" title="User:Brecht">User:Brecht</a>&lrm; | <a href="../Reports.html" title="User:Brecht/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="September_14_-_18">September 14 - 18</span></h2>
+<ul><li>Code review</li>
+<li>Meetings and docs regarding future organization of development</li>
+<li>Bugfixes
+<ul><li>Fix T79929: crashes with Cycles denoising on older Macs</li>
+<li>Fix T78793, T79707: Cycles crash on macOS with older CPUs</li>
+<li>Fix OpenCL render error in large scenes</li>
+<li>Fix T80630: potential crash in volume grids in Eevee shaders</li></ul></li>
+<li>Tests: bundle tests for some modules in their own executables</li>
+<li>CMake: clean up setting of platform specific linker flags</li></ul>
+<h2><span class="mw-headline" id="August_3_-_7">August 3 - 7</span></h2>
+<ul><li>Code review</li>
+<li>Design doc regarding USD and Collections</li>
+<li>Particle nodes design discussion</li>
+<li>Point Clouds: basic support for instancing objects on points</li>
+<li>Buildbot: deploy changes for building every commit, additional fixes</li>
+<li>Bugfixes
+<ul><li>Cycles: load OpenVDB file earlier in Blender export</li>
+<li>Fix Cycles + grease pencil render failing after recent GPU refactoring</li>
+<li>Fix T79586: "rendering paused" not shown when viewport render starts paused</li>
+<li>Fix T78869: denoising performance regression on Windows</li>
+<li>Fix T78777: Cycles motion blur test differences between AVX/AVX2</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_27_-_31">July 27 - 31</span></h2>
+<ul><li>Code review</li>
+<li>Release notes editing</li>
+<li>Particle nodes presentation</li>
+<li>Buildbot
+<ul><li>Various fixes to get tests passing again</li>
+<li>Support for building every commit</li></ul></li>
+<li>Bugfixes:
+<ul><li>Fix T79397: blurry icons at some UI scales, after recent refactor</li>
+<li>Fix T79355: switch to texture paint workspace changes image in other workspaces</li>
+<li>Fix T61607: OpenEXR files with less common RGB channels names not loaded</li>
+<li>Fix T79067: Cycles panorama viewport render stretched after recent changes</li>
+<li>Fix T79219: Cycles NLM denoiser clean passes broken after recent changes</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_13_-_17">July 13 - 17</span></h2>
+<ul><li>Code review</li>
+<li>Build: make update support for git tags</li>
+<li>Bugfixes
+<ul><li>Fix T78537: too much memory usage rendering animation with persistent images</li>
+<li>Fix T78930: Cycles OpenCL error on graphics cards that don't support half float</li>
+<li>Fix T78881: Cycles OpenImageDenoise not using albedo and normal correctly</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_30_-_July_3">June 30 - July 3</span></h2>
+<ul><li>Code Review</li>
+<li>Bugfixes
+<ul><li>Fix T77095: fix Cycles performance regression with AMD RX cards</li>
+<li>Fix T78367: triangulate modifier does not preserve sculpt vertex colors</li>
+<li>Fix error in new Hair data type file reading</li>
+<li>Fix T77984: Cycles OpenCL error rendering empty scene</li>
+<li>Fix missing GPU image free in background mode</li>
+<li>Fix T77825: autosave missed too often while sculpting</li>
+<li>Fix T78038: Cycles crash rendering with volume object and motion blur</li>
+<li>Fix T78358: random crash editing shader nodes with textures</li>
+<li>Fix T78447: Cycles vertex color node not working with hair</li></ul></li>
+<li>Cycles
+<ul><li>Rename viewport denoise Fastest option to Automatic and extend tooltip</li>
+<li>Work towards final render denoising with OpenImageDenoise</li></ul></li>
+<li>Refactored generic geometry attributes patch</li></ul>
+<h2><span class="mw-headline" id="June_22_-_26">June 22 - 26</span></h2>
+<ul><li>Code review</li>
+<li>Cycles
+<ul><li>Add Intel OpenImageDenoise support for viewport denoising</li>
+<li>Add denoising settings to the render properties</li>
+<li>Add support for rendering sculpt vertex colors</li>
+<li>Add experimental preference to replace magic debug value 256</li>
+<li>Commit Embree, hair curve and TBB changes</li></ul></li>
+<li>Python API: support integer default for bpy.props.EnumProperty</li>
+<li>Bugfixes
+<ul><li>Fix crash compiling Cycles OpenCL, after recent TBB changes</li>
+<li>Fix T78295: reload scripts disables Cycles render passes in the compositor</li>
+<li>Fix T78199: reload scripts error when icon is used multiple times in toolbar</li>
+<li>Fix incorrect Python API description for bpy.data.version</li>
+<li>Fix viewport denoising not working if start samples higher than total samples</li>
+<li>Fix T78149: Cycles memory leak rendering animation with Embree</li></ul></li>
+<li>Build
+<ul><li>Remove unused lapack/hidapi/mingw32 build infrastructure</li>
+<li>Show helpful error when accidentally using GNUMakefile on Windows</li>
+<li>Upgrade a few smaller Linux/macOS only libraries to latest versions</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_15_-_19">June 15 - 19</span></h2>
+<ul><li>Code review</li>
+<li>UI and sculpt module meetings</li>
+<li>Sync Cycles standalone repo</li>
+<li>Buildbot changes to use separate builders for branches</li>
+<li>Render/Cycles module phabricator project reorganization</li>
+<li>Bugfixes
+<ul><li>Fix for T77095: work around render artifacts with AMD Radeon RX 4xx and 5xx</li>
+<li>Fix T77915: Cycles OSL microfacet closure not working in custom shaders</li>
+<li>Fix random crash in Cycles smoke volume loading</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_8_-_12">June 8 - 12</span></h2>
+<ul><li>Meetings with every module for 2.90 plans</li>
+<li>Code review</li>
+<li>Work on finishing Embree integration in Cycles
+<ul><li>Optimize curve intersection for GPU</li>
+<li>Improve shading and render results for ribbons</li>
+<li>Various other bug fixes and polishing</li></ul></li>
+<li>Fix Cycles viewport missing refresh when changing scene hair settings</li></ul>
+<h2><span class="mw-headline" id="June_2_-_5">June 2 - 5</span></h2>
+<ul><li>Code review</li>
+<li>Cycles: work towards enabling Embree by default
+<ul><li>Build: use TBB as Embree tasking system</li>
+<li>Attempt to optimize GPU render</li>
+<li>Attempt to use ribbons with fake normals as fast option</li></ul></li>
+<li>Cycles: work towards using TBB for task pools and task scheduler (code cleanup day)
+<ul><li>Cleanup: use move semantics for task pool functions</li>
+<li>Cleanup: minor refactoring around DeviceTask</li>
+<li>Cycles: make TBB a required library dependency, and use in a few places</li>
+<li>Cleanup: use lambdas instead of functors for task pools, remove threadid</li>
+<li>Cleanup: remove task pool stop() and finished()</li>
+<li>Cycles: replace own task pool implementation with TBB task groups</li></ul></li>
+<li>Linux: update appdata for 2.83 release</li>
+<li>Fix T77273: crash enabling portal lights</li></ul>
+<h2><span class="mw-headline" id="May_25_-_29">May 25 - 29</span></h2>
+<ul><li>Code review</li>
+<li>Cycles: change perspective depth pass to be more standard</li>
+<li>Blender: change bugfix release versioning from a/b/c to .1/.2/.3</li>
+<li>Update Cycles standalone repo for 2.83</li>
+<li>Release notes polishing</li>
+<li>Bugfixing and triaging
+<ul><li>Fix NaN in Cycles environment texture importance sampling in some scenes</li>
+<li>Fix T77109: Cycles viewport render crash after object add and undo</li>
+<li>Fix T77009: texture baking crash on Windows</li>
+<li>Fix T76925: more Cycles OpenCL compile errors with some drivers on Linux</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_18_-_22">May 18 - 22</span></h2>
+<ul><li>Code review</li>
+<li>Bugfixing and triaging
+<ul><li>Fix T76925: Cycles OpenCL compile error with some drivers on Linux</li>
+<li>Fix T76916: Cycles missing deform motion blur for shape key + subdiv modifier</li>
+<li>Fix Cycles viewport render fully restarting after undo</li>
+<li>Fix T76858: non-thread safe sculpt memory allocation when using --debug-memory</li>
+<li>Fix PBVH parallel range not initializing user data correctly in some cases</li>
+<li>Fix unnecessary buffer reallocation in sculpt mode, causing an assert</li>
+<li>Fix potential crash due to dyntopo GPU buffer invalid memory access</li>
+<li>Fix part of T76544: dyntopo sculpt undo stack memory leak</li></ul></li>
+<li>Refactoring
+<ul><li>Cleanup: make guarded memory allocation always thread safe</li>
+<li>Cleanup: remove legacy mmap memory allocation for 32 bit</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_11_-_15">May 11 - 15</span></h2>
+<ul><li>Code review</li>
+<li>Proposal and patch for LTS versioning number changes</li>
+<li>Bug fixing and triaging
+<ul><li>Fix T73984: unnecessary Cycles viewport updates with object texture coordinates</li>
+<li>Fix --debug-cycles printing CUDA devices twice</li>
+<li>Fix T52782: crash rendering more virtual parent particles than children</li>
+<li>Fix T59089: --engine command line option does not affect 3D viewport render</li>
+<li>Fix T75071: rendering fails when all render layers disabled, but using compositor</li>
+<li>Fix T66005: crash deleting render slot while rendering to it</li>
+<li>Fix T75715: crash rendering animation with persistent images</li>
+<li>Fix T76388: Freestyle not respecting Show Emitter settings</li>
+<li>Fix T75365: memory leak when writing PNG fails due to lack of disk space</li>
+<li>Fix T72920: Snap package fails to play audio and blocks audio in other apps</li>
+<li>Fix T76535: Eevee + Freestyle render crash with many strokes</li>
+<li>Fix CMake using different OpenEXR / USD includes and libraries in some cases</li>
+<li>Fix missing standard OpenColorIO roles, as reported by ociocheck</li>
+<li>Investigated NVIDIA CUDA driver screen freezes on Linux</li></ul></li>
+<li>Cycles
+<ul><li>Code refactor to bake using regular render session and tiles (old patch)</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_5_-_8">May 5 - 8</span></h2>
+<ul><li>Code review</li>
+<li>Bugfixes:
+<ul><li>Fix T76427: edit mesh undo hangs when building without TBB</li>
+<li>Fix T76324: face set operators not working from Python console by default</li>
+<li>Fix T76471: timer not removed after changing file browser to another type</li>
+<li>Fix T76525: crash drawing metaballs with multiple material slots</li>
+<li>Fix T76510: Eevee OpenVDB render artifacts due to texture clamping</li>
+<li>Fix T76468: volume sequence render not using correct frame in renders</li>
+<li>Fix Python error in scene without sequencer</li>
+<li>Fix T76414: crash using Python module that uses NVRTC</li>
+<li>Tasks: support build with TBB version 2017</li>
+<li>Fix T76318: lower part of new preferences window does not work</li>
+<li>Fix Cycles Python error when device name is not a valid UTF-8 string</li></ul></li>
+<li>Cycles: mark CUDA 10.2 as officially supported</li></ul>
+<h3><span class="mw-headline" id="Next_Week">Next Week</span></h3>
+<p>Continue fixing bugs as part of the bug sprint for 2.83.
+</p>
+<h2><span class="mw-headline" id="April_28_-_May_1">April 28 - May 1</span></h2>
+<ul><li>Code review</li>
+<li>Task: Use TBB as Task Scheduler (most implemented months ago, finished by Jeroen)</li>
+<li>Bugfixes
+<ul><li>Fix T75995: Cycles render artifacts with overlapping volumes</li>
+<li>Fix T76309: changing AOV type does not update compositor socket</li>
+<li>Fix some LLVM symbols outside of the llvm namespace being public on Linux</li>
+<li>Fix Python bz2 module failing to import on older macOS versions</li>
+<li>Fix T71334: top part of render window disappears on repeated renders</li>
+<li>Fix T75432: Cycles progressive refine render slow with denoising data</li>
+<li>Fix T76044: update Cycles to build with OSL 1.11 master</li>
+<li>Tests: fix some tests passing even if there are Python errors</li>
+<li>Fix Python bundled module test error</li>
+<li>Fix T75973: don't show raw Python errors to users for invalid shortcut paths</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_2">Next Week</span></h4>
+<p>More bug fixing and code review.
+</p>
+<h2><span class="mw-headline" id="April_20_-_24">April 20 - 24</span></h2>
+<ul><li>Code review</li>
+<li>Bug triaging</li>
+<li>Objects: add infrastructure for hair, pointcloud, volume modifiers</li>
+<li>Bugfixes
+<ul><li>Fix T73195: stereo camera view does not show background image</li>
+<li>Fix T75607: crash trying to sculpt while remesh is in progress</li>
+<li>Fix T75611: slow transform of many objects at the same time</li>
+<li>Fix T75987: crash entering edit mode with keyed particles</li>
+<li>Fix T76005: BLI_task test failing after recent changes</li>
+<li>Fix headless build failure on macOS</li>
+<li>Fix T74423: Cycles rendering artifacts with CUDA 10.2</li>
+<li>Fix T75981: crash in sculpt mode with mesh that used to have multiple materials</li>
+<li>Fix 3D viewport select using grease pencil engine when not needed</li>
+<li>Fix T75625: crash on exit in macOS after selecting objects</li>
+<li>Fix T75909: icons memory leak in headless build</li>
+<li>Fix T75969: view layer add with Copy Settings does not copy all data</li>
+<li>Fix clang-format differences between version 6 and 9</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_3">Next Week</span></h4>
+<p>Continue to focus on bugfixing, some catch up with code review.
+</p>
+<h2><span class="mw-headline" id="April_14_-_17">April 14 - 17</span></h2>
+<ul><li>Code review</li>
+<li>Bug triaging</li>
+<li>Release management for 2.83</li>
+<li>Manual updates for Cycles 2.83 features</li>
+<li>Bugfixes
+<ul><li>Fix poor video sequencer preferences UI layout</li>
+<li>Fix T75774: rename Musgrave texture output from Fac to Height</li>
+<li>Fix T73977, T73825: ignore Python user site-packages directory by default</li>
+<li>Fix splash screen not showing button to load config from 2.83 into 2.90</li>
+<li>Fix T75542: toggling modifier visibility not working correct with undo speedup</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_4">Next Week</span></h4>
+<p>Mostly focus on bugfixing, trying to get the main showstopper bugs in my areas fixed for 2.83.
+</p>
+<h2><span class="mw-headline" id="April_6_-_10">April 6 - 10</span></h2>
+<ul><li>Code review</li>
+<li>Cycles: more work towards decoupling GPU occupancy from tile size (in progress)</li>
+<li>Cycles: user manual updates for new 2.83 features</li>
+<li>Bugfixes:
+<ul><li>Fix T75542: toggling modifier visibility not working correct with undo speedup</li>
+<li>Fix T75288: crash in Cycles image loading with multithreaded shader compilation</li>
+<li>Fix T75290: Cycles crash with out of bounds memory access in volume mesh build</li>
+<li>Fix T75445: Filmic transform not working when using Turkish locale</li>
+<li>Fix T74572: adaptive sampling still not working correct with shader AOVs</li>
+<li>Fix missed depsgraph update after undo in some cases</li>
+<li>Fix volume object not rendering correct frame right after loading</li>
+<li>Fix volume object not loading frame sequences correct in some cases</li></ul></li>
+<li>Fix Blender not rebuilding when changing linker script</li>
+<li>Cleanup:
+<ul><li>Refactor adaptive sampling to more easily change some parameters</li>
+<li>Remove GHOST API to query tablet state from Window</li></ul></li>
+<li>Build: use -no-pie for portable builds on Linux</li></ul>
+<h4><span class="mw-headline" id="Next_Week_5">Next Week</span></h4>
+<p>Cycles bug fixing for 2.83. Code review (particularly particle nodes patches). Continue on Cycles adaptive sampling improvements for GPU, this will be for 2.90. Release management for 2.83.
+</p>
+<h2><span class="mw-headline" id="March_30_-_April_3">March 30 - April 3</span></h2>
+<ul><li>Cycles: work towards decoupling GPU occupancy from tile size (in progress)</li>
+<li>Undo: change depsgraph recalc flags handling to improve performance (under review)</li>
+<li>Volumes: add volume.grids.frame_filepath to get the current frame filepath</li>
+<li>Bugfixes:
+<ul><li>Fix T75287: other Cycles render passes wrong when using Cryptomatte</li>
+<li>Fix T74572: adaptive sampling not scaling render passes correctly</li>
+<li>Fix (harmless) PCRE not found warning when configuring CMake on Linux</li>
+<li>Fix T75223: Luxrender add-on failing to load on macOS</li>
+<li>Fix undo incorrectly detecting mesh as always changed after edits</li>
+<li>Fix undo misdetecting identical future chunk in some cases</li>
+<li>Fix undo debug logging not printing all types of undo pushes</li>
+<li>Fix missing NULL terminator for new brush option</li></ul></li>
+<li>Cleanup
+<ul><li>Refactor <code>read_libblock()</code> function for reading datablocks (under review)</li>
+<li>Cleanup: simplify Linux buildbot config, where default values already match</li></ul></li>
+<li>Code review</li></ul>
+<h4><span class="mw-headline" id="Next_Week_6">Next Week</span></h4>
+<p>Continue on Cycles adaptive sampling improvements for GPU, more bug tracker work and minor code review. Ended up spending more time on undo last week than planned, but I think it was useful.
+</p>
+<h2><span class="mw-headline" id="March_23_-_27">March 23 - 27</span></h2>
+<ul><li>Cycles OpenCL performance
+<ul><li>Work around OpenCL performance regression after AOVs and vector rotate</li>
+<li>Slightly improve OpenCL performance by reordering SVM enum values</li>
+<li>Limit number of processes compiling OpenCL kernel based on memory</li>
+<li>Review &amp; testing: Use OpenCL C 2.0 if available, to improve performance for AMD</li></ul></li>
+<li>Windows high frequency tablet events: patch review, testing and minor fixes.</li>
+<li>Font rendering:
+<ul><li>Always use international font</li>
+<li>Remove non-unicode font and simplify default font loading code</li></ul></li>
+<li>Provide ideas and feedback for animation playback performance project</li>
+<li>Investigate current state and performance of undo optimization project</li>
+<li>(Long) meetings about release management and GPU rendering</li>
+<li>Code review</li>
+<li>Bugfixes:
+<ul><li>Fix T74417: Freestyle render removes image texture users</li>
+<li>Fix T74711: tiling brush option in image editor not working anymore</li>
+<li>Fix T75090: crash with old NVIDIA drivers after overlay refactor</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_7">Next Week</span></h4>
+<p>Didn't get to adaptive sampling improvements for GPU last week, will try again this week. Further plan to work on Cycles bug tracker, review shader node related Cycles patches for 2.83. And maybe do some small volume object improvements from the task list if there is time left.
+</p>
+<h2><span class="mw-headline" id="March_16_-_20">March 16 - 20</span></h2>
+<ul><li>New volume object committed to master
+<ul><li>UI: add new icons for Volume, Hair and PointCloud</li>
+<li>Objects: add Volume object type, and prototypes for Hair and PointCloud</li>
+<li>Objects: Eevee and workbench rendering of new Volume, Hair, PointCloud</li>
+<li>Cycles: support for different 3D transform per volume grid</li>
+<li>Cycles: support rendering new Volume object type</li>
+<li>Cycles: support for rendering of new Hair object prototype</li>
+<li>Cycles: change volume step size controls, auto adjust based on voxel size</li>
+<li>Volumes: add render settings for volume datablock</li>
+<li>Tests: add OpenVDB volume tests and benchmark file</li>
+<li>Write release notes</li></ul></li>
+<li>Refactoring
+<ul><li>Cleanup: process colorspace conversion with a 1D pixel array</li></ul></li>
+<li>Bugfixes
+<ul><li>Fix T73372: cryptomatte not filling last pass for odd number of levels</li>
+<li>Fix T67712: cryptomatte sockets created in wrong order in some cases</li>
+<li>Fix T68370, T74973: Cycles cryptomatte not working when other passes are enabled</li>
+<li>Fix crash with empty volume object and points drawing</li>
+<li>Python API: add bl_use_stereo_viewport for RenderEngine</li>
+<li>Fix T74345: missing albedo for Cycles principled hair BSDF</li>
+<li>Fix Python error in Cycles baking panel</li>
+<li>Fix Cycles crash in Windows debug mode with volumes</li>
+<li>Fix headless and Python module build after recent alert icon changes</li>
+<li>Fix error using CUDA in plug-ins on Linux/macOS, hide our CUDA symbols</li>
+<li>Fix T74776: Cycles crash with missing image texture after recent changes</li></ul></li>
+<li>General code review and triaging</li></ul>
+<h4><span class="mw-headline" id="Next_Week_8">Next Week</span></h4>
+<p>Cycles bug fixing (including OpenCL performance regression), try to improve adaptive sampling for GPU render, code review of smaller patches for 2.83.
+</p>
+<h2><span class="mw-headline" id="March_9_-_13">March 9 - 13</span></h2>
+<ul><li>Cycles: load OpenVDB grids directly in Cycles (still as dense grid)</li>
+<li>Cycles: add internal default volume shader, to be used for new volume object</li>
+<li>Cycles: disable RTTI only for OSL files, other libraries like OpenVDB need it</li>
+<li>Cycles: add view layer setting to exclude volumes, like hair and surfaces</li>
+<li>Volumes: add option to display points in wireframe mode</li>
+<li>Eevee: internal support for arbitrary number of volume grids</li>
+<li>Smoke: put density/color in separate textures, fixes for workbench shader</li>
+<li>Refactoring
+<ul><li>Cleanup: add device_texture for images, distinct from other global memory</li>
+<li>Cleanup: refactor image loading to use abstract ImageLoader base class</li>
+<li>Cleanup: add ImageHandle to centralize image ownership logic</li>
+<li>Cleanup: stop encoding image data type in slot index</li></ul></li>
+<li>Bugfixes
+<ul><li>Fix T73626: crash scrubbing timeline with Cycles viewport and smoke/fire</li>
+<li>Fix T67718: Cycles viewport render crash editing point density settings</li>
+<li>Fix Cycles incorrect result when compressing some 8 bit log colorspace images</li>
+<li>Fix T74612: file browser thumbnails not showing and using CPU continuously</li>
+<li>Fix error in grease pencil vertex paint levels operator</li>
+<li>Fix part of T73921: hang with Eevee light baking and Mantaflow</li></ul></li>
+<li>General code review (VR, undo, ..)</li></ul>
+<h4><span class="mw-headline" id="Next_Week_9">Next Week</span></h4>
+<p>Commit new volume object to master. Try again to find time for optimizing Embree curve intersection code. More code review.
+</p>
+<h2><span class="mw-headline" id="March_2_-_6">March 2 - 6</span></h2>
+<ul><li>Cycles adaptive sampling: Optix support and various fixes/polishing</li>
+<li>Cycles: set up automated performance profiling over time</li>
+<li>Bugfixes:
+<ul><li>Fix T74375: grid levels theme preference reset to default</li></ul></li>
+<li>Refactoring
+<ul><li>IDs: change FILTER_ID_* to 64 bit to make space for new ID types</li>
+<li>IDs: modify wm.previews_clear operator to make space for new ID types</li>
+<li>RNA: support 64 bit boolean bitflags in DNA</li>
+<li>Investigate/prototype RNA runtime registration</li></ul></li>
+<li>Cleanup
+<ul><li>Move camera, lights, world, hair, volume, points to IDTypeInfo</li>
+<li>Tweak Cycles #includes in preparation for clang-format sorting</li></ul></li>
+<li>General code review</li></ul>
+<h4><span class="mw-headline" id="Next_Week_10">Next Week</span></h4>
+<p>Mostly code review, work more on optimizing Embree curve intersection code.
+</p>
+<h2><span class="mw-headline" id="February_24_-_28">February 24 - 28</span></h2>
+<ul><li>New volume object:
+<ul><li>Tweaks for better initial setup of volume object</li>
+<li>Complete Eevee dense grid rendering</li>
+<li>Make hair and pointcloud data types a build option</li>
+<li>Submit code reviews and address review comments</li>
+<li>Fix various bugs</li></ul></li>
+<li>Cycles: move sss and diffuse transmission into diffuse pass</li>
+<li>Objects: make evaluated data runtime storage usable for types other than mesh</li>
+<li>Builds
+<ul><li>Add compatibility between precompiled libraries and new glibc</li>
+<li>Ignore system paths when using precompiled libraries on Linux</li>
+<li>Don't include WITH_SYSTEM_GLEW as part of make lite</li>
+<li>Fix make deps failing to build opencollada on Linux, due to line endings</li>
+<li>Fix .arcconfig not working with latest arcanist version</li></ul></li>
+<li>General code review</li>
+<li>Bugfixes
+<ul><li>Fix T74095: crash deleting all faces in edit mode with Cycles rendering</li>
+<li>Fix Cycles Embree hair + motion blur failing after recent Catmull-Rom change</li>
+<li>Fix T74063: Cycles light pass viewport display wrong with saturated colors</li>
+<li>Fix T74262: Cycles OpenCL error on some devices after recent changes</li></ul></li>
+<li>Cleanup
+<ul><li>Deduplicate OpenVDB library definitions/include/libs logic</li>
+<li>Add ImageKey to avoid longer argument lists and duplicated code</li>
+<li>Split image sequence detection into own file, and make it reusable</li>
+<li>More refactoring of GPU material attributes and textures</li></ul></li>
+<li>Help writing blog post about release schedule</li></ul>
+<h4><span class="mw-headline" id="Next_Week_11">Next Week</span></h4>
+<p>Review and get Cycles adaptive sampling committed. Continue with volume object code review and polishing. Attempt to make Embree curve intersection code fast enough for the GPU. General code review and bug fixing.
+</p>
+<h2><span class="mw-headline" id="February_17_-_21">February 17 - 21</span></h2>
+<ul><li>Meetings and planning for asset manager and other UI work</li>
+<li>New volume object:
+<ul><li>Work towards support per-grid transform for Cycles and Eevee</li>
+<li>Cleanup: add ImageKey to avoid longer argument lists and duplicated code</li>
+<li>Cleanup: more refactoring of GPU material requested attributes/textures</li></ul></li>
+<li>Embree: work towards getting it ready to enable for CPU by default
+<ul><li>Fix Embree failing on objects with a very high number of motion steps</li>
+<li>Fix Cycles Embree crash with AO shader local only option</li>
+<li>Fix Cycles Embree test failures with shadow catcher</li>
+<li>Fix potential clashing Embree symbols with external renderer add-ons</li>
+<li>Start porting Embree curve intersection to CUDA/OpenCL for compatibility</li></ul></li>
+<li>Code review</li>
+<li>Bugfixes:
+<ul><li>Fix T73932: modifying keyframes in nodes fails when there is an image sequence</li>
+<li>Fix crash loading .blend file saved with Blender 2.25</li>
+<li>Fix T73954: Cycles viewport render from camera not respecting aspect ratio</li>
+<li>Fix macOS LLVM precompiled link error with older Xcode versions</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_12">Next Week</span></h4>
+<p>More work on getting Cycles patches commit ready, and continue work on completing new volume object rendering and viewport drawing.
+</p>
+<h2><span class="mw-headline" id="February_10_-_14">February 10 - 14</span></h2>
+<ul><li>New volume object:
+<ul><li>Support arbitray number of grids for Eevee shaders</li>
+<li>Add wireframe display using OpenVDB tree nodes</li>
+<li>Smoke: put density/color in separate textures</li>
+<li>Better integration into workbench drawing</li>
+<li>Show data type in grids list</li>
+<li>API functions to modify grids in the modifiers stack</li>
+<li>Various bugfixes</li></ul></li>
+<li>Cleanup:
+<ul><li>Work around clang-format differences between versions</li>
+<li>Refactor GPU material attribute and texture requests</li>
+<li>Split off code from gpu_codegen.c into smaller files</li>
+<li>Don't perform some GPU shader codegen operations twice</li>
+<li>Fix macOS build warnings about Boost symbol visibility</li></ul></li>
+<li>macOS libraries upgrade for OSL / LLVM / Freetype / Embree</li>
+<li>General code review (about 30 patches)</li>
+<li>Bug triaging</li>
+<li>Bugfixes:
+<ul><li>Fix T68243: Python sqlite module not working on macOS</li>
+<li>Fix potential crash with Eevee render of missing image textures</li>
+<li>Fix Eevee shader node error when using both RGB and vector curve nodes</li>
+<li>Fix crash in some Eevee shader node setups after vector math node changes</li>
+<li>Fix T67924: transform right/up arrow keys not working on macOS</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_13">Next Week</span></h4>
+<p>More patch review, and work on completing new volume object rendering and viewport drawing.
+</p>
+<h2><span class="mw-headline" id="February_3_-_7">February 3 - 7</span></h2>
+<ul><li>New volume object:
+<ul><li>Support for frame sequences</li>
+<li>Browse VDB files from add menu, auto detect sequences, drag &amp; drop</li>
+<li>Add global volume grid cache (for sharing grids between datablocks)</li>
+<li>Use principled volume by default in volume object materials</li>
+<li>Debug logging for grid file load/unload</li></ul></li>
+<li>Cleanup
+<ul><li>Refactor default materials and shader nodes</li>
+<li>Add type inheritance for Cycles nodes</li>
+<li>Export particle hair as a separate Cycles object</li>
+<li>Split Cycles export into smaller files</li>
+<li>Remove unnecessary operations in Cycles curves export</li>
+<li>Split Cycles Hair and Mesh classes, with Geometry base class</li>
+<li>Simplify Cycles primitive attribute map storage</li></ul></li>
+<li>Design discussions and planning for particle nodes</li>
+<li>General code review</li>
+<li>Bugfixes
+<ul><li>Fix T73364: crash calling particle_sytem.co_hair() on disabled particles</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_14">Next Week</span></h4>
+<p>Review Cycles patches for 2.83. Attempt to complete new volume object rendering and viewport drawing.
+</p>
+<h2><span class="mw-headline" id="January_27_-_31">January 27 - 31</span></h2>
+<ul><li>New volume object:
+<ul><li>Initial Cycles, Eevee and viewport rendering</li>
+<li>Work on completing API and on-demand loading</li></ul></li>
+<li>New hair and pointcloud object: initial viewport rendering</li>
+<li>General code review (about 30 patches)</li>
+<li>Bugfixes
+<ul><li>Fix T72143: editing image frame start/offset does not update in Eevee</li>
+<li>Fix tests failing on AMD Ryzen, due TBB initialization order issue</li>
+<li>Fix T73409: error deleting preset saved on different drive than Blender install</li>
+<li>Fix issues in Cycles standalone, particularly related to render display</li></ul></li></ul>
+<h4><span class="mw-headline" id="Next_Week_15">Next Week</span></h4>
+<p>Design discussions and planning for particle node and new object type projects. Continue on volume object, likely volume sequence support and tightening up the depsgraph related code. Review Cycles patches for 2.83. 
+</p>
+<h2><span class="mw-headline" id="January_20_-_24">January 20 - 24</span></h2>
+<ul><li>New hair, pointcloud and volume object types: initial data structures</li>
+<li>Tablet events: refactor code to fix various bugs and simplify it</li>
+<li>Review LANPR design with Sebastian</li>
+<li>Review undo optimization patch</li>
+<li>Fix various build and link issues after VFX platform upgrade</li>
+<li>General triaging and code review</li></ul>
+<h4><span class="mw-headline" id="Next_Week_16">Next Week</span></h4>
+<p>Rendering support for new volume object. Catch up with patch review.
+</p>
+<h2><span class="mw-headline" id="January_15_-_17">January 15 - 17</span></h2>
+<ul><li>Library upgrades to match VFX reference platform 2020</li>
+<li>Planning with Dalai for 2020 development projects</li>
+<li>Create 2.82 workboard, find and tag showstopper tasks</li>
+<li>Linux: update release notes for appdata</li>
+<li>Bugfixes:
+<ul><li>Fix Cycles not correctly using Background.shader if specified</li>
+<li>Fix T71830: invalid Linux appdata syntax</li>
+<li>Fix T73129: sculpt mode slow on mesh with fake user</li>
+<li>Fix T71952, T70125: Blender Linux crash on startup with some tablets</li>
+<li>Fix T68000: load previous settings error if config folder already exists</li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240111165306
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.066 seconds
+Real time usage: 0.066 seconds
+Preprocessor visited node count: 179/1000000
+Preprocessor generated node count: 184/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4915-0!canonical and timestamp 20240111165306 and revision id 19376
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;oldid=19376">https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;oldid=19376</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 21 September 2020, at 09:37.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Brecht/Reports/2020.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Brecht/Reports/2020" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Brecht.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Brecht.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Brecht.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;oldid=19376" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Brecht/Reports/2020&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.066","walltime":"0.066","ppvisitednodes":{"value":179,"limit":1000000},"ppgeneratednodes":{"value":184,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240111165306","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":41});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844554f60903b8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

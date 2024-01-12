@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Howardt/Bevel - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Howardt/Bevel","wgTitle":"Howardt/Bevel","wgCurRevisionId":13584,"wgRevisionId":13584,"wgArticleId":4796,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with broken file links"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Howardt/Bevel","wgRelevantArticleId":4796,"wgRequestId":"238b0b6a51a3c7a626a53e33","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Howardt","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Howardt_Bevel rootpage-User_Howardt skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="Bevel.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AHowardt%2FBevel" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Bevel.html#Bevel"><span class="tocnumber">1</span> <span class="toctext">Bevel</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Bevel.html#Edge_Bevel:_Requirements"><span class="tocnumber">1.1</span> <span class="toctext">Edge Bevel: Requirements</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="Bevel.html#Bevel_Amount"><span class="tocnumber">1.1.1</span> <span class="toctext">Bevel Amount</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="Bevel.html#Non-manifold_Edges"><span class="tocnumber">1.1.2</span> <span class="toctext">Non-manifold Edges</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="Bevel.html#Beveled_Edge_Ends"><span class="tocnumber">1.1.3</span> <span class="toctext">Beveled Edge Ends</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="Bevel.html#Multiple_Segments"><span class="tocnumber">1.1.4</span> <span class="toctext">Multiple Segments</span></a>
+<ul>
+<li class="toclevel-4 tocsection-7"><a href="Bevel.html#Profile"><span class="tocnumber">1.1.4.1</span> <span class="toctext">Profile</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="Bevel.html#Multiple_Segment_Corners"><span class="tocnumber">1.1.4.2</span> <span class="toctext">Multiple Segment Corners</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="Bevel.html#Edge_Bevel:_Implementation"><span class="tocnumber">1.2</span> <span class="toctext">Edge Bevel: Implementation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="Bevel.html#Data_Structure_for_Vertex_at_End_of_Beveled_Edge"><span class="tocnumber">1.2.1</span> <span class="toctext">Data Structure for Vertex at End of Beveled Edge</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="Bevel.html#Calculating_Vertex_Positions_for_Adj_Vertex_Mesh_Pattern"><span class="tocnumber">1.2.2</span> <span class="toctext">Calculating Vertex Positions for Adj Vertex Mesh Pattern</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="Bevel.html#Even_Sampling_of_Superellipses"><span class="tocnumber">1.2.3</span> <span class="toctext">Even Sampling of Superellipses</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="Bevel.html#Consistent_Widths_for_Even_Bevels"><span class="tocnumber">1.2.4</span> <span class="toctext">Consistent Widths for Even Bevels</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="Bevel.html#Solving_a_Chain"><span class="tocnumber">1.2.4.1</span> <span class="toctext">Solving a Chain</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="Bevel.html#Solving_a_Cycle"><span class="tocnumber">1.2.4.2</span> <span class="toctext">Solving a Cycle</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-16"><a href="Bevel.html#Good_UV_Interpolation"><span class="tocnumber">1.2.5</span> <span class="toctext">Good UV Interpolation</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Howardt/Bevel</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../User:Howardt.html" title="User:Howardt">User:Howardt</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Bevel">Bevel</span></h1>
+<p>These are developer notes about the Bevel algorithm in Blender.
+</p>
+<h2><span class="mw-headline" id="Edge_Bevel:_Requirements">Edge Bevel: Requirements</span></h2>
+<p>If you have an edge that is part of exactly two faces, an edge bevel should replace that edge with two parallel edges, each moved some distance along their respective faces. Usually the distance moved along each face is the same.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:602px;"><a href="../File:Dev-Source-Bevel-Edge-Req.png.html" class="image"><img alt="" src="../../w/images/e/ed/Dev-Source-Bevel-Edge-Req.png" width="600" height="200" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Edge</div></div></div>
+<h3><span class="mw-headline" id="Bevel_Amount">Bevel Amount</span></h3>
+<p>In the Bevel Edge figure the red edge is beveled.
+Four different ways of measuring the <i>bevel amount</i> are shown by colored lines on the diagram on the left:
+</p>
+<ul><li><i><b>Offset</b></i> (magenta line) - the distance each line moves on its respective face</li>
+<li><i><b>Width</b></i> (green line) - the distance across the newly made face between the two lines</li>
+<li><i><b>Depth</b></i> (yellow line) - the distance from the old edge to the new face, along the line that bisects the angle between the two faces</li>
+<li><i><b>Percentage</b></i> (percentage of pink line) - the distance moved along each face is a percentage of the edge along which the new edge endpoint slides</li></ul>
+<p>Note that the <i>Percentage</i> case is strange in several ways: because it moves each of the 4 endpoints of the two new lines a distance that depends on the length of an adjacent edge, the resulting new edges may not be parallel, and the distance that the two lines move along their respective faces may not be the same. Some users have asked for this as an option, however, in order to create special modeling effects (there's an airplane wing modeling tutorial that uses it, for example).
+</p><p>When beveling a single edge, the first three methods are equivalent in that they all produce the same final models, just with different actual values of <i>bevel amount</i>.  For a given final result, the amounts are related to each other by simple trigonometric functions of the angle between the faces.  The current Bevel in Blender uses the <i>Offset</i> method for measuring bevel amount, by default.
+</p><p>However when beveling more than one edge at once, on a model that isn't completely symmetrical and with 90 degree angles, the different measurement methods yield different results.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:719px;"><a href="../File:Dev-Source-Bevel-Edge-Offset-Methods.png.html" class="image"><img alt="" src="../../w/images/1/13/Dev-Source-Bevel-Edge-Offset-Methods.png" width="717" height="488" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Offset Methods</div></div></div>
+<p>In the Bevel Offset Methods figure, you can see the effect of using the same offset but different offset methods on faces that meet in obtuse or acute angles.  The same colors as in the Bevel Edge figure show where the specified distance (the same here for all methods except percentage) is measured.  For the percentage case, the size and shape of the offset depends on how long the face is in the direction away from the beveled edge.
+</p><p>From the above diagram, it looks like the <i>Width</i> method gives more even looking results.
+However, when you bevel all edges around a face, and all around a vertex, the <i>Offset</i> method has advantages.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:323px;"><a href="../File:Dev-Source-Bevel-Edge-Offset-Methods-Face.png.html" class="image"><img alt="" src="../../w/images/3/3d/Dev-Source-Bevel-Edge-Offset-Methods-Face.png" width="321" height="600" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Offset Methods on Face</div></div></div>
+<p>Notice that in Bevel Offset Methods On Face figure, the <i>Offset</i> method results in a new inside face that has a similar shape to the original face.  This is because it insets each edge the same amount.  Whereas the <i>Width</i> method has a different shape from the original face because each edge moves in a different amount, depending on the angle between the top face and the face on the other side of the beveled edge.
+</p><p>Probably artists would like the option of either <i>Offset</i> or <i>Width</i>.  The argument for <i>Depth</i> is more theoretical: it corresponds to the physical act of planing of the edge and going to the same planing depth on each edge.  That might make sense to some artists, though in practice it doesn't seem very useful.  The <i>Percentage</i> method, as mentioned above, seems to have specialized uses that some artists want sometimes.
+</p>
+<h3><span class="mw-headline" id="Non-manifold_Edges">Non-manifold Edges</span></h3>
+<p>What to do about beveling edges that are non-manifold - that is, they are not connected to exactly two faces?  For example, an edge that is the outer boundary of a plane, or an edge where three or more planes meet in a kind of fan.  While one can imagine things to do in these cases, for now the decision in Blender is to regard Edge Bevel as only working on manifold edges. Non-manifold edges will be ignored when beveling.
+</p>
+<h3><span class="mw-headline" id="Beveled_Edge_Ends">Beveled Edge Ends</span></h3>
+<p>It is not always clear how to finish off the ends of beveled edges.
+</p><p>One case where it is pretty clear is when the vertex at the end of the edge is on an outside boundary, so the only two faces involved are the faces adjacent to the edge.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:516px;"><a href="../File:Dev-Source-Bevel-Edge-Boundary-Ends.png.html" class="image"><img alt="" src="../../w/images/6/68/Dev-Source-Bevel-Edge-Boundary-Ends.png" width="514" height="237" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - ends on boundary</div></div></div>
+<p>At a vertex where three edges meet, with three faces between them, and only one edge is beveled, most people would expect the result on the left in the next figure.  But the result on the right is another option.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:408px;"><a href="../File:Dev-Source-Bevel-Edge-1-3.png.html" class="image"><img alt="" src="../../w/images/0/05/Dev-Source-Bevel-Edge-1-3.png" width="406" height="128" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - one of three edges beveled at each end</div></div></div>
+<p>In the left result, the faces between the non-beveled edges are carved away by the end of the beveled edge.
+In the right result, those faces are instead split by the ends of the beveled edge.
+Let us call the left method <i>Vertex Deletion</i> and the right method <i>Vertex Preservation</i>, where this refers to whether the vertex at the end of
+the original beveled edge is removed from the final result or not.
+One could make these two choices an option, but in situations like this <i>Vertex Perservation</i> doesn't seem very useful,
+so for now Blender will always use <i>Vertex Deletion</i> in this one-of-three-edges-beveled case.
+</p><p>A vertex where only two edges meet and only one of the edges is beveled presents another problem.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:602px;"><a href="../File:Dev-Source-Bevel-Edge-1-2.png.html" class="image"><img alt="" src="../../w/images/9/9c/Dev-Source-Bevel-Edge-1-2.png" width="600" height="420" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - one of two edges beveled</div></div></div>
+<p>In the figure above, (a) is the original, showing a split edge in a plane, and (b) - (e) show four choices of how to end the bevel.
+Of these choices, only (b) and (e) make a new bevel face that is a quad, something that seems desirable.
+Also, choices (c), (d), and (e) will make non-planar ngons if the upper and lower faces in (a) are not coplanar.
+Blender currently always uses choice (b) for situations like this.
+</p><p>Even with choice (b) there is another subchoice to be made: what size angle should we make at that triangle tip
+(or, equivalently, how far along the unbeveled edge should we slide to get the position of the new end of that edge)?
+The current choice is to slide it by the offset (the <i>Offset</i> distance, see above).
+</p><p>In the nonplanar case, this may not be exactly what is desired:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:265px;"><a href="../File:Dev-Source-Bevel-Edge-1-2-nonplanar.png.html" class="image"><img alt="" src="../../w/images/4/46/Dev-Source-Bevel-Edge-1-2-nonplanar.png" width="263" height="146" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - one of two edges beveled, nonplanar</div></div></div>
+<p>An artist might like the option to specify the slide distance as zero in this case, to make a nice vertical transition between
+the beveled and unbeveled edges.
+</p><p>Now consider the case of more than edges into a vertex, all beveled.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:769px;"><a href="../File:Dev-Source-Bevel-Edge-6-6.png.html" class="image"><img alt="" src="../../w/images/4/41/Dev-Source-Bevel-Edge-6-6.png" width="767" height="331" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - six of six edges beveled</div></div></div>
+<p>In this figure, where all six side edges of an irregular six-sided cone are beveled, it is pretty clear what to do.
+On the left side you see the original mesh, with dotted yellow lines showing the construction of the bevel.
+Whichever way the bevel amount is specified by the user, that can be translated into the <i>Offset</i> amount for each edge.
+Even if two adjacent bevel edges have different offsets, as they will in general when anything but the <i>Width</i> method has been used,
+there is always an intersection point on the common face.
+The old vertex gets replaced by a six-sided face that is formed by joining those intersection points.
+One problem with this is that that six-sided face may not be planar - and is not, in this case:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:218px;"><a href="../File:Dev-Source-Bevel-Edge-6-6-nonplanar.png.html" class="image"><img alt="" src="../../w/images/6/6d/Dev-Source-Bevel-Edge-6-6-nonplanar.png" width="216" height="102" class="thumbimage" /></a>  <div class="thumbcaption">Detail of previous bevel</div></div></div>
+<p>The only way to avoid this would be to move the intersection points to a common plane.
+Doing so would distort the desired widths, and in a case like this, would lead to uneven widths.
+Failing that, the polygon could be triangulated if it is nonplanar.
+One interesting way to triangulate would be to put a vertex at the center and join all the others to it.
+Of course, in many common cases, only three edges meet at a vertex and the triangle that replaces the vertex cannot be non-planar.
+Another case that offers no difficulties is when all the beveled edges are coplanar.
+</p><p>The harder case is when only some of the edges into a vertex are beveled.
+Consider this case, where in figure (a), the orange edges are beveled and the black ones are not.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:533px;"><a href="../File:Dev-Source-Bevel-Edge-3-4-problem.png.html" class="image"><img alt="" src="../../w/images/8/8a/Dev-Source-Bevel-Edge-3-4-problem.png" width="531" height="374" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Ends - Not all Edges Beveled</div></div></div>
+<p>In figure (a), the yellow dotted lines show where the beveled edge sides should go in order to make all bevels have the same width.
+As you can see, they do not meet at a common point on the unbeveled edge between two beveled edges.
+Since we need to keep that non-beveled edge, what can we do?  Some choices:
+</p>
+<ul><li><i><b>Allow Jogs</b></i>: Let the two beveled edges on either side meet the non-beveled edges at different points. In the diagram (a), this would mean making the magenta and aqua vertices and joining them.  Very ugly, and won't consider this option further.</li>
+<li><i><b>Preserve Widths</b></i>: Keep the specified widths correct by changing the angle of the non-beveled edge. In the diagram (a), this would mean making the yellow vertex as the meeting point.  The result is diagram (b). This could really distort the gross outline of the model but is not so bad if all of these edges are coplanar.</li>
+<li><i><b>Preserve Angles</b></i>: Keep the angles of the non-beveled edges as they are by changing the widths of one of the bevels. In the diagram (a), this would mean choosing either the aqua point or the magenta point as the meeting point (or even some other point, such as the average of those two). The result in diagram (c) is when the aqua point is chosen. Note that the bevel amount for the horizontal beveled edge has now been adjusted and is different on each side of it: the top half is as it was before but the bottom half is now a lot narrower. One could also think of a variant where both sides are changed to the same value, but then that would force a cascade of changes all around the vertex, and would lead to further inconsistencies, so let us not pursue this variant.</li></ul>
+<p>Blender used to use the <i>Preserve Widths</i> method.
+But this lead to unexpected behavior, reported as bugs by some artists.
+The issue is that you might expect that when there are unbeveled edges involved,
+they stay as they were and the new bevel edges slide along them (like in a loop slide operation):
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="../File:Dev-Source-Bevel-Edge-Bent-Grid.png.html" class="image"><img alt="" src="../../w/images/0/0e/Dev-Source-Bevel-Edge-Bent-Grid.png" width="400" height="350" class="thumbimage" /></a>  <div class="thumbcaption">Bevel showing (b) Preserve Widths and (c) Preserve Angles</div></div></div>
+<p>You can see in the above that using <i>Preserve Widths</i>, shown in (b), looks pretty strange,
+even though the widths of the angled bevels (as measured perpendicularly across them)
+are even.
+Using <i>Preserve Angles</i>, shown in (c), is more likely what artists would like to see.
+</p><p>Another problem with <i>Preserve Widths</i> is that it is sometimes impossible to make a meeting point
+for the offset edges that gives the desired width on both edges.
+In the <i>Bevel Ends - Not all Edges Beveled</i> diagram above, the yellow point that is the
+intersection of the two offset lines looks like a point that can be used to preserve widths.
+However, that point only exists if, as in that diagram, everything is in the same plane.
+If the two beveled edges are in different planes, then the lines, in general will not meet:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="../File:Dev-Source-Bevel-Edge-Bent-Plane.png.html" class="image"><img alt="" src="../../w/images/a/ae/Dev-Source-Bevel-Edge-Bent-Plane.png" width="400" height="600" class="thumbimage" /></a>  <div class="thumbcaption">Bevel, Preserve Widths, on Bent Plane</div></div></div>
+<p>In the above diagram, the orange lines show the needed offset lines to preserve widths.
+Those lines have been artificially extended in the three images below, shown from different viewpoints,
+to show that they do not meet at an intersection point.
+In such a case, one has to choose what to do, and falling back on <i>Preserve Angles</i> is probably the
+best of a number of not-great choices.
+</p><p>So now the method used by Blender is <i>Preserve Angles</i>, always, though the hook remains
+in the code to use <i>Preserve Widths</i> (only useful in planar cases), should we decide to offer
+that as a user option.
+</p><p><i>Update (July 5, 2015; for release version 2.76)</i>: due to user requests for the <i>Preserve Widths</i> behavior sometimes, we added a user option called <i>Loop Slide</i> (meaning: do the <i>Preserve Angles</i> behavior), on by default.
+Turning it off gives the <i>Preserve Widths</i> behavior.
+</p><p>Using <i>Preserve Angles</i> has problems of its own:
+as soon as you start changing widths, you would like to change the widths at the other end of
+the edge to match, else you get an uneven effect like this:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:335px;"><a href="../File:Dev-Source-Bevel-Edge-3-4-uneven.png.html" class="image"><img alt="" src="../../w/images/2/2b/Dev-Source-Bevel-Edge-3-4-uneven.png" width="333" height="189" class="thumbimage" /></a>  <div class="thumbcaption">Uneven Bevel If Change Widths</div></div></div>
+<p>In the above diagram, the mostly-vertical beveled edge has had its width changed at the center vertex
+in order to preserve angles, but the width at the bottom of that edge remains what the user specified.
+Clearly we should change the width at the bottom here to match the change made at the center.
+But notice that this means we cannot just process each vertex in isolation (as we are able to do
+if we use <i>Preserve Widths</i>, which makes no width changes).
+We could try to just change the width at the other end whenever we find we have to adjust a width,
+but what if that vertex has already been processed? E.g., in the above diagram, suppose we process
+all the vertices on the boundary before the middle one -- then we get the picture shown.
+We either need a more intelligent order of processing vertices, or we need a different algorithm
+that does a global width consistency pass before finally processing all the vertices.
+</p><p>Another question that arises when only some edges into a vertex are beveled is illustrated
+by the following figure:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:522px;"><a href="../File:Dev-Source-Bevel-Edge-1-6.png.html" class="image"><img alt="" src="../../w/images/5/50/Dev-Source-Bevel-Edge-1-6.png" width="520" height="480" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Choices: One Of Six Edges</div></div></div>
+<p>In the above figure, (a) shows a single edge out of six beveled.
+Whenever there are at least two unbeveled edges between beveled ones entering a vertex,
+we have a choice between these two options:
+</p>
+<ul><li><i><b>Full Vertex Bevel</b></i>: as shown in (b), make new vertices sliding along the unbeveled edges so as to make a vertex polygon to finish off the beveled edge(s)</li>
+<li><i><b>Partial Vertex Bevel</b></i>: as shown in (c), and from another angle in detail in (d), leave the original vertex intact and only affect faces and edges adjacent to beveled edges.  Sometimes the reflex face in (d) can look strange.</li></ul>
+<p>When you use <i>Full Vertex Bevel</i>, there is the question of how much to slide the new vertices along unbeveled edges.
+Blender currently uses the amount that the previously encountered beveled edge slid its vertex, which makes for an even-looking polygon.
+</p><p>In general, there may be more than one group of beveled edges that need to get a vertex polygon,
+with each group separated by two or more unbeveled edges. E.g.:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:522px;"><a href="../File:Dev-Source-Bevel-Edge-3-10.png.html" class="image"><img alt="" src="../../w/images/c/ce/Dev-Source-Bevel-Edge-3-10.png" width="520" height="480" class="thumbimage" /></a>  <div class="thumbcaption">Bevel Choices: Three Of Ten Edges, in Two Groups</div></div></div>
+<p>For simplicity of code, and because the reflex face faces can look strange, Blender
+currently always uses the <i>Full Vertex Bevel</i> method.  It is possible that artists
+might like <i>Partial Vertex Bevel</i> as an option.
+</p><p><i>Update (June 2, 2015, for Version 2.75)</i>:
+Users expressed a preference for the <i>Partial Vertex Bevel</i> algorithm in the case where there are 3 or more beveled edges (but not all edges beveled).
+So the code was updated to use that method.
+Now the three-out-of-ten edges case looks like:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:182px;"><a href="https://wiki.blender.org/w/index.php?title=Special:Upload&amp;wpDestFile=Dev-Source-Bevel-Edge-3-10-new.png" class="new" title="File:Dev-Source-Bevel-Edge-3-10-new.png">File:Dev-Source-Bevel-Edge-3-10-new.png</a>  <div class="thumbcaption">Three Of Ten Edges, new algorithm</div></div></div>
+<p>When deciding where a vertex should go when there are several unbeveled edges attached to it,
+preference is given to sliding along an edge that isn't in the same plane as the adjacent
+edges over edges that are in the same plane.
+This preserves the silhouette of the original.
+</p>
+<h3><span class="mw-headline" id="Multiple_Segments">Multiple Segments</span></h3>
+<p>So far the discussion has been about bevels where each edge to be beveled turns into a single new face.
+Blender also allows for bevels with multiple <i>segments</i>, where a segment is a new face.
+For example, here is an edge that has been beveled into 3 segments:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:152px;"><a href="../File:Dev-Source-Bevel-Edge-3-seg.png.html" class="image"><img alt="" src="../../w/images/1/14/Dev-Source-Bevel-Edge-3-seg.png" width="150" height="143" class="thumbimage" /></a>  <div class="thumbcaption">Beveled Edge With 3 Segments</div></div></div>
+<h4><span class="mw-headline" id="Profile">Profile</span></h4>
+<p>The multiple segments should have parallel edges.
+Viewed end-on, the multisegment beveled edge has a <i>profile</i>, which is typically formed
+by evenly spacing the segments+1 vertices needed for the profile along a smooth curve:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:129px;"><a href="../File:Dev-Source-Bevel-Edge-3-seg-profile.png.html" class="image"><img alt="" src="../../w/images/9/95/Dev-Source-Bevel-Edge-3-seg-profile.png" width="127" height="122" class="thumbimage" /></a>  <div class="thumbcaption">Profile of Beveled Edge With 3 Segments</div></div></div>
+<p>What smooth curve should Blender use?
+In the above diagram, where there is a 90 degree angle between the faces adjacent to
+the beveled edge and the offsets along those faces are equal, the natural curve
+used is the quarter-circle arc with radius equal to the offset.
+</p><p>Artists have asked for more options for the profile, for instance to have concave profiles
+or have a profile that follows the original faces (but with multiple segments).
+One way to do this would be to use the parameterized family of <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Superellipse">Superellipses</a>.
+Another option would be to allow an arbitrary Curve object to be specified as the profile.
+The 2.70 release of Blender implements the superellipse idea.
+There is now a <i>profile</i> parameter, which is really just 1/4 of the superellipse exponent:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:432px;"><a href="../File:Dev-Source-Bevel-Parameter.png.html" class="image"><img alt="" src="../../w/images/d/df/Dev-Source-Bevel-Parameter.png" width="430" height="350" class="thumbimage" /></a>  <div class="thumbcaption">Effect of Profile Parameter</div></div></div>
+<p>Yet another thing to consider is the effect of running the subdivision algorithm on the result of a multisegment bevel.
+If you want the limit surface (as the number of subdivisions goes to infinity) to be, say, a circular arc, then the vertices
+should not be placed directly on a circular arc, but rather in different, further out, positions that could be calculated mathematically.
+</p><p>When the adjacent faces do not form a 90 degree angle, or the offsets along each face are different,
+then we need to distort the quarter-circle arc somehow.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:502px;"><a href="../File:Dev-Source-Bevel-Map-To-Unit-Square.png.html" class="image"><img alt="" src="../../w/images/8/8f/Dev-Source-Bevel-Map-To-Unit-Square.png" width="500" height="200" class="thumbimage" /></a>  <div class="thumbcaption">Transform Non-Square Profile to Square Profile</div></div></div>
+<p>The way to do this is shown in the above diagram.
+On the left, the edge to be beveled is at C, viewed end-on, and the desired offset distances along the adjacent faces (in red)
+are offset<sub>1</sub> and offset<sub>2</sub>.  Letter A is placed so as to make ABCD a parallelogram.
+Now we can make a transform matrix that maps ABCD onto A'B'C'D', a square with sides of length 1.
+Finally, we can place vertices evenly on the quarter-circle arc (in blue) in the unit square,
+and then use the inverse transform matrix to map them back onto the
+distorted quarter-circle arc in the original figure on the left.
+</p>
+<h4><span class="mw-headline" id="Multiple_Segment_Corners">Multiple Segment Corners</span></h4>
+<p>When all edges into a vertex are beveled into multiple segments, we need a way of making a <i>vertex mesh</i>
+which matches the profiles coming in and looks smooth.
+</p><p>Here are some choices for how to do that at a three-edge vertex.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:667px;"><a href="../File:Dev-Source-Bevel-Corner-Patterns.png.html" class="image"><img alt="" src="../../w/images/7/7c/Dev-Source-Bevel-Corner-Patterns.png" width="665" height="220" class="thumbimage" /></a>  <div class="thumbcaption">Patterns for 3-Edge, 4-segment Vertex Mesh</div></div></div>
+<p>For reference, let us give some names to the patterns in the above diagram:
+</p>
+<ul><li><i><b>Poly</b></i> - shown in (a), make a polygon out of the ends of the beveled edges; in general this polygon will be non-planar</li>
+<li><i><b>LatLng</b></i> - shown in (b), the pattern is like the latitude and longitude lines on a globe</li>
+<li><i><b>None</b></i> - shown in (c), there is no separate mesh for the vertex but rather the ends of the segments are joined up with their adjacent edge segments; this requires cutting the ends of the beveled edges in two halves</li>
+<li><i><b>Adj</b></i> - shown in (d), the pattern shares quads between adjacent edges of the vertex polygon in a way that will be explained more below.</li></ul>
+<p>The <i>Poly</i> pattern is the one currently used for one-segment bevels.  It is a good pattern if the beveled edges
+are all in one plane, so that the vertex polygon will be planar, but it does not look good in the non-planar, multi-segment case.
+Artists probably would prefer that the mesh around the vertex somehow continues the silhouette of the profiles of
+the beveled edges, when viewed from different angles.
+For a quarter-circle arc profile, this would lead to the natural choice of a one-eighth-sphere octant for the case where
+three beveled edges meet at 90 degree lines (as in the corner of a cube).
+Patterns (b) and (d) attempt to do that, putting a number of points on the sphere octant and joining them up into smaller polygons.
+The <i>LatLng</i> pattern is easy to compute, but it has several disadvantages: it is asymmetrical, requiring the choice of
+one vertex as the <i>pole</i>; it is not all quads, pinching into triangles at the pole; and it is hard to see how to generalize
+to cases with more than 3 beveled edges into a vertex.
+The <i>Adj</i> pattern has none of these disadvantages, and so Blender currently uses that in preference to <i>LatLng</i>.
+The <i>None</i> pattern gives a kind of sharp point that may be desired in special cases, but Blender currently
+only uses it in some cases where only two edges into a vertex are beveled (the code calls this a "weld").
+</p><p>The <i>Adj</i> pattern is best described by showing some examples first:
+</p>
+ <div class="thumb tnone"><div class="thumbinner" style="width:667px;"><a href="../File:Dev-Source-Bevel-Adj-Patterns.png.html" class="image"><img alt="" src="../../w/images/6/63/Dev-Source-Bevel-Adj-Patterns.png" width="665" height="568" class="thumbimage" /></a>  <div class="thumbcaption">Adj Patterns for 3, 4, 5 edges and 1 to 5 segments (1-10 for the 5 edge pattern)</div></div></div>
+<p>As you can see, the pattern is different for odd and even nseg (number of segments).
+For odd nsegs, there is a center polygon with the same number of sides as the number of beveled edges.
+For even nsegs, there is a single vertex in the center.
+The rule to create the pattern is:
+</p>
+<ol><li>Form the boundary of the vertex mesh as in the <i>Poly</i> pattern (more on this below); the end of each beveled edge will have nseg segments and thus nseg+1 vertices across it (including the two ends).  Call the group of vertices and edges that are on the profile of one beveled edge a <i>boundary arc</i>.</li>
+<li>Let ns2 be nseg /2, rounding down if nseg is odd. Then each boundary arc has ns2 <i>rings</i> of quads going from the previous boundary arc to the succeeding boundary arc.  The tops and bottoms of the rings go from the last half of vertices of the preceding boundary arc to the first half of vertices of the succeeding boundary arc. The sides of the ring quads are the tops and bottoms for the ring quads of the preceding and succeeding boundary arcs.</li>
+<li>If nseg is odd, form a center polygon from the tops of the center quads in the innermost rings.</li></ol>
+<p>The above rules give the topology of the <i>Adj</i> pattern, but not how to set the coordinates of the vertices of the mesh.
+I have not been able to find a formula for placing the vertices on an octant of a sphere;
+it would be great if someone could find one.
+The current method used by Blender is described in the implementation section below.
+It can almost certainly be improved upon.
+</p><p>To make the boundary arcs for the <i>Poly</i> pattern and the outer rim of the <i>Adj</i> pattern,
+see the following diagram:
+</p>
+ <div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="../File:Dev-Source-Bevel-Project-Profile.png.html" class="image"><img alt="" src="../../w/images/4/46/Dev-Source-Bevel-Project-Profile.png" width="400" height="300" class="thumbimage" /></a>  <div class="thumbcaption">Construction of Boundary Arcs</div></div></div>
+<p>In the diagram, the bevel edge is part of the red line, and the offset lines are shown in dotted teal.
+Points A and B have been set as described in the Bevel Edge Ends section for the case of one segment.
+We need to find the position of point C.
+The diagram shows a natural choice, which is the point C on the beveled edge that is closest to line AB -
+that is, it makes a right angle with each of lines AB and CD.
+This forms a triangle ABC.  Note that in general the plane containing ABC may be tilted, and not
+the plane that has the beveled edge as normal.
+Now that we have triangle ABC, we can form the parallelogram that extends it and transform
+to a unit square, as shown in the diagram <i>Transform Non-Square Profile to Square Profile</i> above.
+The quarter-circle arc can be divided into nseg equal pieces and used to place the internal vertices
+of the boundary arc in the unit square, and then transformed back into 3D space in their original positions.
+</p><p>The plane ABC is called the "profile" plane because it is the plane in which the multisegment profile
+(cross section end) is inscribed.
+</p><p>There are cases where the above method for defining the profile plane and center arc point C does
+not yield what artists expect.  One example is when the edges to be beveled are as shown in (A) here:
+</p>
+ <div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../File:Dev-Source-Bevel-Tilt-Profile.png.html" class="image"><img alt="" src="../../w/images/d/de/Dev-Source-Bevel-Tilt-Profile.png" width="550" height="200" class="thumbimage" /></a>  <div class="thumbcaption">(A) Original (B) Tilted profiles (C) Non-tilted profiles</div></div></div>
+<p>The image in (B) shows the result of using the above algorithm to set the profile planes.
+Notice that the profile at the bottom lifts off the ground plane slightly,
+and the profile at the mid-level is also tilted out of the plane that contains all of
+the unbeveled horizontal edges at mid-level.
+The current Blender code recognizes these as special cases --- that is, when there
+are two unbeveled edges that either cross or terminate the beveled edge ---
+and adjusts the bevel plane to that of those unbeveled edges, as shown in (C).
+</p>
+<h2><span class="mw-headline" id="Edge_Bevel:_Implementation">Edge Bevel: Implementation</span></h2>
+<h3><span class="mw-headline" id="Data_Structure_for_Vertex_at_End_of_Beveled_Edge">Data Structure for Vertex at End of Beveled Edge</span></h3>
+<p>Consider a vertex that has a mixture of beveled and unbeveled edges leading into it.
+</p>
+ <div class="thumb tnone"><div class="thumbinner" style="width:615px;"><a href="../File:Dev-Source-Bevel-Imp-V.png.html" class="image"><img alt="" src="../../w/images/8/8e/Dev-Source-Bevel-Imp-V.png" width="613" height="261" class="thumbimage" /></a>  <div class="thumbcaption">Vertex With Edges a, b, and e Beveled</div></div></div>
+<p>On the left, the vertex in the middle is a vertex involved in a bevel,
+and is represented by a <code>BevVert</code> struct, which contains
+an array of <code>EdgeHalf</code> structs.
+Each <code>EdgeHalf</code> represents, as its name implies, a <i>half</i> of an edge --
+the half that is attached to this <code>BevVert</code>.
+So in the example shown, the array has <code>EdgeHalf</code>s for edges a, b, c, d, e, and f.
+In general, there is no intrinsic order to edges around a vertex:
+think about a bunch of wire edges sticking out at all angles in space from a vertex.
+But a very common case is that if you look down from the vertex normal,
+all of the edges are connected to exactly two faces and you can find a counterclockwise
+ordering of edges that is defined by going to the <i>next</i> edge by going across a common face.
+The <code>EdgeHalf</code> array for a <code>BevVert</code> is arranged in that order
+(starting from some arbitrary edge).
+In the above diagram, if the vertex normal is coming out of the page, then a, b, c, d, e, f
+would be a possible ordering in the array.
+If there are gaps between some edges (no faces at all), the code tries to do the best it can
+to order the subsequences that can be so ordered.
+</p><p>What happens after you bevel edges a, b, and e is that we create new vertices 0, 1, 2, and 3
+as shown on the right. (<i>Update</i>: now we don't create separate vertices 1 and 2, but rather just a single one there
+for the unbeveled edges to attach to.
+In other words, we only create these vertices on either side  of beveled edges, except for strange cases like only
+a single edge beveled.)
+These new vertices are called <i>Boundary Vertices</i> and are represented by a <code>BoundVert</code> struct.
+The <code>BoundVert</code>s are linked together in a circular list, in counterclockwise order
+(from the vertex normal side, the same as the edge order).
+More than one <code>EdgeHalf</code> can be attached to the same <code>BoundVert</code>,
+and an <code>EdgeHalf</code> that is for a beveled edge will be attached to two <code>BoundVert</code>s.
+The following diagram shows some of the pointers that link the <code>EdgeHalf</code>s and
+<code>BoundVert</code>s.
+</p>
+ <div class="thumb tnone"><div class="thumbinner" style="width:383px;"><a href="../File:Dev-Source-Bevel-Imp-VE.png.html" class="image"><img alt="" src="../../w/images/f/fa/Dev-Source-Bevel-Imp-VE.png" width="381" height="335" class="thumbimage" /></a>  <div class="thumbcaption">BoundVerts and EdgeHalfs for previous diagram</div></div></div>
+<p>An <code>EdgeHalf</code> has a <i>left</i> side and a <i>right</i> side,
+which are on the left and right sides of the edge when you look along the edge towards the <code>BevVert</code>
+(from the vertex normal side).
+The <code>vleft</code> and <code>vright</code> pointers of an <code>EdgeHalf</code>
+point to the <code>BoundVert</code>s on its left and right side.
+When the edge isn't beveled, they will both point to the same <code>BoundVert</code>,
+but when it is beveled there will be two different <code>BoundVerts</code>.
+For example, in the above diagram, beveled <code>EdgeHalf</code> b has
+<code>vleft = 0</code> and <code>vright = 1</code>.
+Unbeveled edge d has <code>vleft = vright = 2</code>.
+<code>EdgeHalf</code>s also have <code>fprev</code> and <code>fnext</code>
+pointers which point to the faces between the edge and the previous and next edges, respectively,
+in counterclockwise order.  Those pointers may be NULL if there is no face between the edges.
+</p><p>A <code>BoundVert</code> has <code>EdgeHalf</code> pointers <code>efirst</code> and
+<code>elast</code>, which point to the first and last <code>EdgeHalf</code>s in counterclockwise
+order attached to the <code>BoundVert</code>.
+If it is attached to the left side of a beveled edge then there will also be a <code>ebev</code> pointer that
+points to that <code>EdgeHalf</code>.
+For example, in the above diagram, <code>BoundVert</code> 2 has <code>efirst = d</code>,
+<code>elast = ebev = 3</code>.
+</p><p>The vertex mesh for a <code>BevVert</code> is kept in a <code>VMesh</code> struct.
+The main component of that is an array of <code>NewVert</code> structs, each of which
+holds a 3D coordinate and, eventually, the <code>BMesh</code> vertex instantiated for it.
+The <code>NewVert</code>s are indexed in the array according to the mesh pattern.
+For the <i>Adj</i> pattern, they are indexed by (i, j, k) where i is the index of the <code>BoundVert</code>,
+j is the index of the ring, and k is the index of the segment along a boundary arc between the
+given <code>BoundVert</code> and its counterclockwise successor.
+The vertices in the pattern have two or more indices according to this scheme.
+Of course there should only be one <code>BMVert</code> allocated for a vertex,
+so some of the <code>NewVert</code>s will share a <code>BMesh</code> vertex.
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:545px;"><a href="../File:Dev-Source-Bevel-Imp-Adj-Even.png.html" class="image"><img alt="" src="../../w/images/b/bc/Dev-Source-Bevel-Imp-Adj-Even.png" width="543" height="493" class="thumbimage" /></a>  <div class="thumbcaption">VMesh Adj Pattern indexing (even nseg)</div></div></div>
+<div class="thumb tnone"><div class="thumbinner" style="width:575px;"><a href="../File:Dev-Source-Bevel-Imp-Adj-Odd.png.html" class="image"><img alt="" src="../../w/images/0/01/Dev-Source-Bevel-Imp-Adj-Odd.png" width="573" height="474" class="thumbimage" /></a>  <div class="thumbcaption">VMesh Adj Pattern indexing (odd nseg)</div></div></div>
+<p>The above two diagrams show the indexing patterns for an even and odd number of segments,
+and three vertices in order, A, B, and C.
+In the diagrams, it is assumed that the predecessor boundary arc to A and the successor boundary arc to C
+are not for beveled edges.
+When a boundary arc is not for a beveled edge then only segment indices 0 and nseg are used.
+</p><p><i>Update</i>: Now even boundary arcs for non-beveled edges are divided into nseg segments.
+This yields a generally more pleasing vertex mesh, and is also what is needed for multisegment vertex bevel.
+The downside is that now the adjacent old faces will be higher-degree ngons when rebuild; but they should be flat so maybe this isn't such a big downside.
+Leaving the above diagrams there in case some future developer wants to try going back to the mixed mode of boundary arcs.
+</p>
+<h3><span class="mw-headline" id="Calculating_Vertex_Positions_for_Adj_Vertex_Mesh_Pattern">Calculating Vertex Positions for Adj Vertex Mesh Pattern</span></h3>
+<p>The original method for calculating the vertex positions for the <i>Adj</i> vertex mesh pattern
+was:
+</p>
+<ol><li>Calculate the position of the boundary arc vertices using the triangle formed by the two end vertices and the closest point on the beveled edge to the line between them, as described above in the <i>Multiple Segment Corners</i> section.</li>
+<li>For the inner rings of a given boundary arc, use the same method: find the endpoints on the adjacent boundary arcs and then form the triangle with those two points and the closest point on the beveled edge, and use the map-to-unit-square method to map a quarter-circle arc into position.</li>
+<li>Now there will be several choices for each vertex, because they can be indexed in more than one way (see the previous section), due to being on a ring for more than one boundary arc. Solve this dilemma by averaging the coordinate positions of all aliased indices for a vertex.</li></ol>
+<p>While this produced results that looked OK in many cases, there were also a lot of cases where it didn't work well.  For instance, for some corner angles, as the number of segments increased, the contour lines looked uneven and could even cross.
+Also, this method did not seem to converge to a solution where the vertex mesh smoothly transitioned into the adjacent sides (in other words, the normals of the planes at the edges of the vertex mesh didn't converge to the normals of the adjacent sides).
+</p><p>For these reasons, the literature was consulted for a better solution.
+Here are papers about two similar approaches:
+</p>
+<ol><li><i>N-Sided Hole Filling and Vertex Blending Using Subdivision Surfaces</i>, by Wei-Chung Hwang and Jung-Hong Chuang. Journal of Information Science and Engineering 19, 857-879 (2003).</li>
+<li><i>Filling N-Sided Holes Using Combined Subdivision Schemes</i>, by Adi Levin. International Conference on Curves and Surfaces [4th], Saint-Malo, France, July 1999.</li></ol>
+<p>Both use the 'Adj' pattern, and use subdivision schemes with modification in order to match the boundary curves and the tangencies there.
+The Hwang/Chuang paper uses a quadratric subdivision (like Doo-Sabin), while the Levin paper uses cubic subdivision (like Catmull-Clark).
+</p><p>After implementing both, I ended up choosing to use the Levin method.
+</p><p>A key part of the Levin method is to do a Catmull-Clark subdivision step.
+He recommends a variant that uses weights calculated by Sabin.
+As a concrete example of our indexing scheme, here is a picture of indexing of the unit cube with BoundVerts at (1,0,0), (0,1,0), and (0,0,1) and quarter-circle arcs on the faces of orthogonal planes through the origin:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:666px;"><a href="../File:Dev-Source-Bevel-CC-Cube.png.html" class="image"><img alt="" src="../../w/images/2/2b/Dev-Source-Bevel-CC-Cube.png" width="664" height="572" class="thumbimage" /></a>  <div class="thumbcaption">Cube corner with one step of subdivision</div></div></div>
+<p>The mesh on the left in the above diagram shows how the initial construction works:
+each boundary arc is divided in two, and one central vertex is made to join to the middle vertices.
+The coordinates of the middle vertex are up to <code></code>the designer<i>.</i>
+We move it along the direction from the original vertex to the centroid of the boundary vertices.
+The amount to move depends on the profile parameter.
+</p><p>For the general formulas, here is one step of a an internal quad turning into four quads with one step:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:558px;"><a href="../File:Dev-Source-Bevel-CC-Step.png.html" class="image"><img alt="" src="../../w/images/2/27/Dev-Source-Bevel-CC-Step.png" width="556" height="291" class="thumbimage" /></a>  <div class="thumbcaption">General interior step of subdivision</div></div></div>
+<p>Let M be the mesh on the left and M’ be the mesh on the right.
+M' is formed by adding new edges-vertices (crosses) and a new face-vertex (circle).
+Also, the coordinates of the old vertices(vertex-vertices) are changed.
+The Catmull-Clark rules give the following.  Assume we make all the face vertices first, then all the edge ones, then all the vertex ones.
+</p><p><b>New face vertex</b> M’(2j+1, 2k+1):
+</p>
+<table>
+<tbody><tr>
+<td>f(j,k)</td>
+<td>= avg(M(j,k) + M(j,k+1) + M(j+1,k) + M(j+1,k+1))
+</td></tr></tbody></table>
+<p>Note that f(j,k) is stored in M’(2j+1, 2k+1), which will be used below.
+</p><p><b>New vertical edge vertex</b> M’(2j+1,2k):
+</p>
+<table>
+<tbody><tr>
+<td>ev(j,k)</td>
+<td>= avg(M(j,k) + M(j+1,k) + f(j,k-1) + f(j,k))
+</td></tr>
+<tr>
+<td></td>
+<td>= avg(M(j,k) + M(j+1,k) + M’(2j+1,2(k-1)+1) + M’(2j+1,2k+1))
+</td></tr></tbody></table>
+<p><b>New horizontal edge vertex</b> M’(2j,2k+1):
+</p>
+<table>
+<tbody><tr>
+<td>eh(j,k)</td>
+<td>= avg(M(j,k) + M(j,k+1) + f(j-1,k) + f(j,k))
+</td></tr>
+<tr>
+<td></td>
+<td>= avg(M(j,k) + M(j,k+1) + M’(2(j-1)+1,2k+1) + M’(2j+1,2k+1))
+</td></tr></tbody></table>
+<p><b>New vertex vertex</b> M’(2j,2k):
+</p>
+<table>
+<tbody><tr>
+<td>v(j,k)</td>
+<td>= α(4) * avg(ev(j-1,k) + ev(j,k) + eh(j,k-1) + eh(j,k))
+</td></tr>
+<tr>
+<td></td>
+<td>+ β(4) * avg(f(j-1,k-1) + f(j,k-1) + f(j-1,k) + f(j,k)) + γ(4) * M(j,k)
+</td></tr>
+<tr>
+<td></td>
+<td>= α(4) * avg(M’(2(j-1)+1,2k) + M’(2j+1,2k) + M’(2j,2(k-1)+1) + M’(2j,2k+1))
+</td></tr>
+<tr>
+<td></td>
+<td>+ β(4) * avg(M’(2(j-1)+1,2(k-1)+1) + M’(2j+1,2(k-1)+1) + M’(2(j-1)+1,2k+1)
+</td></tr>
+<tr>
+<td></td>
+<td>+ M’(2j+1,2k+1)) + γ(4) * M(j,k)
+</td></tr></tbody></table>
+<p>See the paper or the code for the weight functions α(), β(), and γ().
+</p><p>There is also the new center vertex which is like the New vertex vertex formula but needs to gather new edge vertices and new face vertices all around it, and combine it with α, β, γ that depend on the number of sides of the hole.
+</p><p>Finally, the border and corner vertices need special adjustment.
+I implemented the formulas in the paper and they didn't seem to work.
+They seemed too extreme and not convergent to the desired boundary curves.
+Furthermore, reading Levin's thesis, which describes the same process, it appears the formulas
+are different.
+I probably am misunderstanding, but it is also possible there is an error in one or the other.
+</p><p>Instead, what I did is resample the boundary curves at even parameter spacing and set them to that.
+</p><p>Now there are two problems with the above method that still need to be resolved:
+</p>
+<ol><li>As you iterate, you always double the number of segments. So you will only get powers of 2 for the number of segments. We need to have an arbitrary number of segments.</li></ol>
+<ol><li>The spacing between the lines does not come out even (except where forced by resampling at the boundary).</li></ol>
+<p>Two solve these problems, the <code>adj_vmesh()</code> subdivides until the power of 2 exceeds the desired number of segments, and then uses <code>interp_vmesh()</code> to sample the required number of segments at even intervals along two dimensions.
+</p>
+<h3><span class="mw-headline" id="Even_Sampling_of_Superellipses">Even Sampling of Superellipses</span></h3>
+<p>The introduction of profile control via the superellipse parameter brought a new problem to the implementation: how to sample the profile so that you get evenly spaced chords.
+</p><p>With a circular arc for the profile, it is easy, using the trigonometric parameterization of the unit circle:
+</p><p>P(Θ) = (cos Θ, sin Θ)
+</p><p>gives the P = (x, y) coordinates for points on the arc as a function of the angle Θ.
+This has the nice property that if you divide a quarter circle angle into n equal pieces, and feed the cumulative angles into the above formula, then the arc lengths (and chord lengths) will all be equal.
+This is what an artist would expect along a boundary curve.
+</p><p>Unfortunately, the same doesn't hold for the trigonometric parameterization of a superellipse:
+</p><p>P(Θ) = (cos<sup>2/r</sup> Θ, sin<sup>2/r</sup> Θ)
+</p><p>when sampled at even intervals of Θ, gives an uneven spacing of arc length or chord length, when r is not equal to 2.
+The following picture shows this:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:402px;"><a href="../File:Dev-Source-Bevel-Superellipse-Trig.png.html" class="image"><img alt="" src="../../w/images/d/d5/Dev-Source-Bevel-Superellipse-Trig.png" width="400" height="176" class="thumbimage" /></a>  <div class="thumbcaption">Superellipses with Trigonometric Parameterization</div></div></div>
+<p>On the left is a superellipse with parameter r=0.3, and on the right is one with parameter r=3.0. The dots show the points along the arc using even spacing of Θ. For parameters &lt; 2, the dots bunch together near the ends; for parameters &gt; 2, the dots bunch together in the middle.
+</p><p>There are two other ways of parameterizing superellipses. The angle-center parameterization is:
+</p><p>P(Θ) = (R cos Θ, R sin Θ) where R = (cos<sup>r</sup> Θ + sin<sup>r</sup> Θ)<sup>-1/r</sup>
+</p><p>And there's the explicit equation for y in terms of x:
+</p><p>y = (1 - x<sup>r</sup>)<sup>1/r</sup>
+</p><p>I'll spare you the graphs, but they show that neither of these parameterizations yield an even spacing of the dots for an even spacing of the parameter.
+In fact, a search of the literature failed to find a closed form parameterization of a superellipse that would give an even spacing.
+</p><p>Ideally, we would like, for a given nseg and superellipse parameter r, to find a way of getting the ith (x, y) point along the quarter arc in the first quadrant, where i varies from Θ to nseg, such that the chord lengths between successive points are all equal.
+</p><p>The code does this by precomputing a series of Θ values such that evaluating at each of them in turn yields equal-length chords. (Actually, it precalculates a series of a parameter u that is a scaled version of Θ that avoids dealing with π so much.)
+It currently implements this as follows:
+</p>
+<ul><li>The function <code>superellipse_co(u, r, r_co)</code> evaluates the trigonometric parameterization of the superellipse with parameter r at u = Θ/4 (so as u goes from 0 to 2, the arc traverses the first quadrant).</li>
+<li>The function <code>find_superellipse_chord_u(u0, d2goal, r)</code> finds a value of u &gt; u0 so that the square of the chord length from the point at u0 to the point at u equals d2goal. It works by binary search on suitable u, until the chord length squareds match to suitable tolerance.</li>
+<li>The function <code>find_even_superellipse_params(n, r, r_params)</code> finds and returns an array of u parameters to give n even chords in the first quadrant. It does this by binary searching for the chord length squared that makes when repeated n times goes from the beginning to the end of the quadrant. The <code>find_superellipse_chord_u</code> function is used as a helper in this binary search.</li></ul>
+<p>For a given invocation of Bevel, which has a particular nseg, we need to precalculate the superellipse u's for that nseg.
+Also, because we need to do superellipse sampling during the Catmull-Clark subdivision steps, we also need to precalculate the u's for all n that are powers of 2 up to a value that equals or exceeds nseg.
+While this may not be exactly right, we just do this for the highest power of 2 needed, and then when we need the intervals for a power of 2 less than that, we suitably subsample the values for the highest power of two.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Consistent_Widths_for_Even_Bevels">Consistent Widths for Even Bevels</span></h3>
+<p>To show the problem of choosing consistent edge widths, consider the following diagram:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:352px;"><a href="../File:Dev-Source-Bevel-Mesh-Width-Constraints.png.html" class="image"><img alt="" src="../../w/images/f/fa/Dev-Source-Bevel-Mesh-Width-Constraints.png" width="350" height="400" class="thumbimage" /></a>  <div class="thumbcaption">Mesh With Widths Needing Matching</div></div></div>
+<p>In the diagram above, the black dots and lines are vertices and edges of a mesh,
+and the dotted red lines show where we would like to move the offset edges if beveling all of the edges
+of the two larger triangles but not beveling the edges joining to the center dots.
+Notice that some of the red lines happen to meet on the <i>spoke</i> edges, or at least come close,
+but in general they do not, and if we want to preserve angles, we will have to adjust some bevel widths.
+The letters in the diagrams label widths (between a black line and a dotted red line).
+A beveled edge might be forced to have four different widths: on each side and each end.
+For example, e, f, g, and h widths might all have to be different in the general case.
+(There are also widths on the other sides of the outer beveled edges too, not shown in this diagram.)
+</p><p>We can make a graph showing which widths are dependent on other widths:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:272px;"><a href="../File:Dev-Source-Bevel-Mesh-Width-Constraint-Graph.png.html" class="image"><img alt="" src="../../w/images/1/1e/Dev-Source-Bevel-Mesh-Width-Constraint-Graph.png" width="270" height="350" class="thumbimage" /></a>  <div class="thumbcaption">Width Dependencies for Mesh With Widths Needing Matching</div></div></div>
+<p>In the above diagram, the red lines connect widths that are part of the same bevel edge side.
+The magenta lines connect widths that are part of the same bevel edge end (on opposite sides of the original edge).
+And the blue dotted lines connect widths that are on beveled edges separated by one unbeveled edge.
+We would like the widths connected by red lines to be the same, so that you don't get the tapered-edge effect on beveled edges.
+We would like the widths connected by magenta lines to be the same so that the new bevel face evenly straddles the original edge.
+We are forced to make the edges connected by dotted blue lines to be related according to a function of the angles involved
+(really: so that the meet point is somewhere sliding along the unbeveled intermediate edge).
+You can see that because there are cycles in the graph, it may not be possible to satisfy all the constraints;
+there may be situations in which we will have to accept some tapered beveled edges.
+But by using the graph to adjust the edges in a certain order, we can minimize the number of places where that needs to happen,
+and in many cases eliminate the need for that to happen.
+Note: the condition that widths connected by magenta lines should be equal is probably not very important.
+What matters more is that the final new bevel face looks even - the memory of how it straddled the original face is probably gone.
+An alternate desired constraint might be that the sum of the widths connected by magenta lines should be as close as possible to
+the width originally specified by the user.
+</p><p>What can we do when there are conflicts?  Consider this diagram:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:540px;"><a href="../File:Dev-Source-Bevel-Mesh-Width-Constraint-Detail.png.html" class="image"><img alt="" src="../../w/images/f/ff/Dev-Source-Bevel-Mesh-Width-Constraint-Detail.png" width="538" height="352" class="thumbimage" /></a>  <div class="thumbcaption">Two beveled edges with conflicting widths</div></div></div>
+<p>The desired offsets for the two beveled edges are w<sub>1</sub> and w<sub>2</sub>, which would like us to put the vertex at A and B respectively.  We are going to have to pick some C at or between A and B at which to compromise; this will lead to new offsets w<sub>1</sub>’ and w<sub>2</sub>’.  We would like to minimize either |w<sub>1</sub> - w<sub>1</sub>’| + |w<sub>2</sub> - w<sub>2</sub>’|, or (w<sub>1</sub> - w<sub>1</sub>’)<sup>2</sup>  + (w<sub>2</sub> - w<sub>2</sub>’)<sup>2</sup>.  Let δ = the distance between A and B. We want to choose a λ between 0 and 1 and place C a distance λδ from A along the line AB.  So to minimize the sum of absolute values, we minimize:
+</p>
+<blockquote>
+<p>λδ sin θ<sub>1</sub> - (1-λ)δ sin θ<sub>2</sub> = δ(λ sin θ<sub>1</sub> - (1-λ) sin θ<sub>2</sub>)
+</p>
+</blockquote>
+<p>which is minimized at λ =  sin θ<sub>2</sub> / (sin θ<sub>1</sub>  +  sin θ<sub>2</sub>)
+</p><p>To minimize the sum of squares, we minimize
+</p>
+<blockquote>
+<p>δ<sup>2</sup>(λ<sup>2</sup> sin<sup>2</sup> θ<sub>1</sub> + (1-λ)<sup>2</sup> sin<sup>2</sup> θ<sub>2</sub>)
+</p>
+</blockquote>
+<p>which is minimized (using derivatives) at  sin<sup>2</sup> θ<sub>2</sub> / (sin<sup>2</sup> θ<sub>1</sub>  +  sin<sup>2</sup> θ<sub>2</sub>)
+</p><p>The diagram also illustrates that there are going to be some special cases.  If both θs are zero (so all three lines are the same), then can only have all widths be zero.  If either θ is straight or reflex then there is no way for any offset line to meet the unbeveled edge; in that case we need to use the ‘offset-in-two-planes’ method to set coordinate C (and that method might fail because the lines don’t meet, and if so, we can’t fall back to the ‘on-edge’ method! need to just choose something like the average of the closes points on each line).
+</p><p>Update: The method first implemented (trying to match widths as we go, followed by a depth-first search to adjust as much as possible) did not work all that well. The non-determinism (or, at least, dependence on initial vertex order) meant that different parts of the model could get different widths even though they are topologically the same.  So we are now going with a different method, detailed here.
+</p><p>The approach is to solve a least squares problem. Let each edge e<sub>i</sub> have widths L<sub>i</sub> and R<sub>i</sub>. Then when we are sliding along a non-beveled edge between beveled edges, as in the diagram above, the variable L<sub>i</sub> depends on R<sub>j</sub> according to this formula:
+</p>
+<blockquote>
+<p>L<sub>i</sub> = R<sub>j</sub> (sin θ<sub>1</sub> / sin θ<sub>2</sub>) = g<sub>i</sub> R<sub>i</sub> where g<sub>i</sub> = sin θ<sub>1</sub> / sin θ<sub>2</sub>
+</p>
+</blockquote>
+<p>where R is w'<sub>2</sub> in the above diagram.
+</p><p>An important simplifying observation is that if we ignore the magenta lines in the dependency graph above (as we argued we likely could), then the dependencies are much simplified: they will always be the disjoint union of a number of chains (straight line dependencies) and cycles. So we only have to figure out how to solve the least squares problem for chains and cycles - and then we can solve each independently.
+</p>
+<h4><span class="mw-headline" id="Solving_a_Chain">Solving a Chain</span></h4>
+<p>Suppose we have a chain of 4 vertices where with 3 beveled edges joining them, and a slide happening at all 4 vertices (we consider only one side of the chain in this derivation). Then the least squares problem we want to solve can be expressed with two matrices:
+</p>
+<blockquote>
+<table>
+<caption>A
+</caption>
+<tbody><tr>
+<td>1</td>
+<td>-g1</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>-g2</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>-1
+</td></tr>
+<tr>
+<td>w</td>
+<td>0</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>w</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>w</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>w
+</td></tr></tbody></table>
+</blockquote>
+<blockquote>
+<table>
+<caption>b
+</caption>
+<tbody><tr>
+<td>0
+</td></tr>
+<tr>
+<td>0
+</td></tr>
+<tr>
+<td>0
+</td></tr>
+<tr>
+<td>w R0
+</td></tr>
+<tr>
+<td>w R1
+</td></tr>
+<tr>
+<td>w R2
+</td></tr>
+<tr>
+<td>w L3
+</td></tr></tbody></table>
+</blockquote>
+<p>These go with a parameter column vector x = {r0, r1, r2, l3} -- that is, the right width (the width on the right of the edge at the end where you are looking at a vertex) for the first three parameters and the left width for the edge just beyond the end of the chain. The other left edges are dependent on the preceding edge's right width. E.g., l1 = g1 r1.  The equation
+</p>
+<blockquote><p>A x = b</p></blockquote>
+<p>expresses what we would like to be true: the first three rows say that the difference between the right and end left end of an edge is zero. Call these the <i>even width</i> constraints. Note that the edge just before the chain and just after it do not have even width constraints because we are free to set their other ends to the value at the end on the chain.  The last four rows are <i>match spec</i> constraints. They say that the width ri should match the specification for that edge, Ri. We multiply each of those rows by w so that we can make those constraints more or less important than the even width constraints.
+</p><p>Note that we have 7 equations but only 4 variables. So in general we can't make them all true, meaning we can't both have even widths and matching specs -- we will have to compromise. Whatever x we choose will leave a <i>residual</i> vector, r = b - Ax. The problem of minimizing the 2-norm of that vector is called a <i>linear least squares</i> problem. There is a package, Eigen3, linked with Blender, that can solve such problems, given matrices A and b.  There is also another package, Ceres, linked with Blender which can solve non-linear least squares problems, which allows more general residuals than the linear equation form shown here, and also allows one to set upper and lower bounds on the parameters; I found that using Ceres instead of Eigen3 for this problem was about twice as slow, so the current implementation uses Eigen3.  However, even using Eigen3 to solve these problems is fairly expensive compared to all of the rest of bevel calculations. For an example, a mesh with 4 chains of 210 edges each took 0.08 seconds to bevel, of which .055 seconds was just this least squares problem. We want bevel to be fast enough that it seems instantaneous to a user, so they can smoothly adjust the width interactively. For this reason, we will pursue a faster method.
+</p><p>The linear least squares problem has an exact solution, found by solving A<sup>T</sup>Ax = A<sup>T</sup>b. This is essentially what the Eigen3 routine solves. Our A matrix has a special form that is quite sparse, and it turns out that A<sup>T</sup>A is also quite sparse. But the inverse matrix (A<sup>T</sup>A)<sup>-1</sup> is not. And the pattern of entries in that inverse is not easy to describe.  So there isn't an easy way to code up the exact solution -- we might as well continue to use Eigen3, which uses sparse matrix methods.
+</p><p>However, the <i>even width</i> constraints have a form that yields an easy-to-code solution by backsubstitution to express each parameter in terms of the last one, which we can regard as the one degree of freedom we have in solving the n-1 even width constraints for n variables. So, rather than solve the above system, which gives a way of soft combining the desire to match widths with some (possibly more or less weighted) desire to match specs, we can pursue a two-part solution: first solve the equal width constraints exactly, in terms of the final parameter.  Then express the equal specs constraints in terms of that parameter. It will be a quadratic equation in one variable, which is easy to minimize.  This doesn't have the same tradeoff ability as the weighted solution, but will be a lot faster to execute (a linear running-time solution instead of a quadratic or approximate iterative one).
+</p><p>This two-part solution has this derivation. First, solving for parameters (number 1 to n), the parameter values take this form:
+</p>
+<blockquote>
+<p>p<sub>n</sub> = a  (for some free variable a)
+</p>
+</blockquote>
+<p>and
+</p>
+<blockquote>
+<p>p<sub>i</sub> = g<sub>i</sub> g<sub>i+1</sub> g<sub>i+2</sub> ... g<sub>n-1</sub> a
+</p>
+</blockquote>
+<p>for i &lt; n, assuming g<sub>n-1</sub> is defined as 1.  Call that product G<sub>i</sub>, and let G<sub>n</sub> = 1.
+</p><p>Now the match specs part least squares error equations can be written
+</p>
+<blockquote>
+<p>(G<sub>1</sub> a - s<sub>1</sub>)<sup>2</sup> + ... + (G<sub>n</sub> a - s<sub>n</sub>)<sup>2</sup>
+</p>
+</blockquote>
+<p>where s<sub>i</sub> is the specification width for parameter i. Expanding out the squaring:
+</p>
+<blockquote>
+<p>Σ<sub>i=1</sub><sup>n</sup> (G<sub>i</sub><sup>2</sup> a<sup>2</sup> - 2 G<sub>i</sub>s<sub>i</sub> a + s<sub>i</sub><sup>2</sup>)
+</p>
+</blockquote>
+<p>which we can minimize by taking the derivative with respect to a and setting to zero:
+</p>
+<blockquote>
+<p>Σ<sub>i=1</sub><sup>n</sup> (2 G<sub>i</sub><sup>2</sup> a - 2 G<sub>i</sub>s<sub>i</sub>) = 0
+</p>
+</blockquote>
+<p>which is solved as
+</p>
+<blockquote>
+<p>a = Σ<sub>i=1</sub><sup>n</sup> s<sub>i</sub> / Σ<sub>i=1</sub><sup>n</sup> G<sub>i</sub>
+</p>
+</blockquote>
+<p>How well does this two-step calculation do compared to the weighted one? Well, it is faster. For the 4 x 210 chain example cited above, the total time to do this width adjustment drops from .055 seconds to .005 seconds, and now represents 14% of the total bevel time instead of 69%.  What about the quality?
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a href="../File:Dev-Source-Bevel-Chain-Adjust.png.html" class="image"><img alt="" src="../../w/images/0/07/Dev-Source-Bevel-Chain-Adjust.png" width="800" height="578" class="thumbimage" /></a>  <div class="thumbcaption">Adjusting Chain Widths</div></div></div>
+<p>The above diagram shows on the top the positions of where the offset edges should go to make the widths exactly as specified. As you can see, forcing the meeting point to be on the existing edges means that we cannot simultaneously get the ideal widths on all edges. On the bottom row, the leftmost picture shows the result of using the full least squares solution, with spec matching weighted at 0.2.  The middle shows the result of using the faster 2-step process just derived. The final picture shows what happens if we try to match the specs (it is impossible to do that in the middle because we have to compromise between the two desired widths, but it is possible to make the free ends match exactly -- note how that makes the bevels taper.
+</p><p>In the end, different artists may want different results, but for now we will assume that the result in the second diagram is OK with artists. The first result may be slightly preferred by some -- at a cost of a 2% difference in widths at the two ends, the weighted least squares solution finds a solution where the maximum deviation from spec width is 38% instead of the 50% deviation achieved by the faster process.
+</p>
+<h4><span class="mw-headline" id="Solving_a_Cycle">Solving a Cycle</span></h4>
+<p>The A matrix for the cycle case is almost the same as the chain. The difference is that for n edges there will be n even width rows:
+</p>
+<blockquote>
+<table>
+<caption>A
+</caption>
+<tbody><tr>
+<td>1</td>
+<td>-g1</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>-g2</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>-g3
+</td></tr>
+<tr>
+<td>-g4</td>
+<td>0</td>
+<td>0</td>
+<td>1
+</td></tr>
+<tr>
+<td>w</td>
+<td>0</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>w</td>
+<td>0</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>w</td>
+<td>0
+</td></tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>w
+</td></tr></tbody></table>
+</blockquote>
+<p>Here it seems we don't get the same 1 degree of freedom in solving the even width constraints -- there would seem to be only one solution (and it will be achieved by setting all parameters to zero -- not very interesting!). But there is an exception. The determinant of the first n rows is zero when the product g1 g2 ... gn = 1.  That can happen surprisingly often with models that artists build. For instance, if all the sliding edges are bisectors of their angles, then the same point on the sliding edge will work for both edges attached there (this is the case where all the sin rations, g<sub>i</sub> are 1). Other cases occur when the model has some symmetry, so that for every pair θ<sub>1</sub>, θ<sub>2</sub> one later encounters a matching θ<sub>2</sub>, θ<sub>1</sub> in the cycle. Then the sin ratios are inverses of each other, and so cancel out to 1 when multiplying.  So it seems worthwhile to derive the fast case for cycles when that product is 1.
+</p><p>When the product of the g's is 1, then we get back one degree of freedom, and we can again express all of widths in terms of the g's and the free variable that is the last parameter (some arbitrary last element in the way the cycle is discovered). The formula for solution turns out to be the same as for the chain case, just that the final couple of g's can have values different from 1. A similar statement is true about the second step, minimizing the spec deviations in terms of the one free variable of the first part.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Good_UV_Interpolation">Good UV Interpolation</span></h3>
+<p>One of the hidden trickier aspects of beveling involves how to properly assign various auxiliary data to newly created vertices, edges, and faces: that is, things like weights, creases, colors, and UV values.
+Of these, getting the UV values right turned out to be by far the trickiest.
+</p><p>UV values give a mapping from corners of faces in 3D into 2D coordinates in a UV map (usually used for mapping textures).
+Inside Blender, the concept of a <i>face corner</i> is called a <i>Loop</i> -- it contains a vertex, and outgoing edge, and various <i>custom data layers</i>, among which are UV values (there can be more than one UV layer).
+Note that there are multiple loops at the same vertex -- one per face touching that vertex.
+Thus, there will be multiple UV values at the vertex.
+This means that it is possible, and indeed usually necessary, for there to be discontinuities in the UV mapping at some vertices.
+For example, if an edge is marked as a <i>seam</i> and then the object is unfolded to map a UV map, one or both of the vertices of that edge will likely appear several places in the UV map.
+</p><p>Now the general method used inside Blender to assign Custom Data values, like UVs, to newly created <i>target</i> loops is to use <i>loop interpolation</i> in some <i>source face</i>.
+The way that works is that the source face is flattened into a plane polygon, and then vertex position of the target loop is projected into the same plane.
+Finally, an interpolation algorithm is used to interpolate each of the custom data points from the values of those same data points at each of the loops of the source face (see <i>Generalized Barycentric Coordinates on Irregular Polygons</i> by Meyer, Lee, Barr, and Desbrun for the algorithm).
+</p><p>Now for most kinds of Custom Data, it is easy: when you create a new face, you go through each vertex in the face, find the closest original (before beveling) face, and interpolate in that.
+</p><p>But this doesn't always work well for UVs, for two reasons:
+</p>
+<ol><li>If the new face <i>straddles</i> an edge of the original object, so that the closest original face is not the same for all vertices of the new face, then mapped face in UV space will also straddle original mapped faces. Usually this is fine, and what is desired, but if the straddled edge is a seam then the new mapped UV face will likely cross a <i>no mans land</i> in UV space, where either nothing was mapped before or maybe another UV island is mapped. The latter is worse, but in either case, the original texture may now be <i>outside the lines</i> of the original UV net, and so you may get black textures until the user does some UV or texture image editing. We'd prefer that you not have to do this after doing a bevel.</li>
+<li>If the new face has vertices that are notionally on one of the original edges, and there's another new face sharing those vertices, we would like the UV net post-bevel to be connected there. The interpolation method makes sure that this is true if the vertices are actually on the edge; but sometimes they are <i>above</i> the edge, and the projection into the faces on either side of the edge leads to different interpolations, and thus, an unconnected net.</li></ol>
+<p>To solve the first of these problems, we do a careful analysis of new faces that straddle edges to see if it is OK to have different vertices interpolated in different faces without causing the <i>no mans land</i> problem.
+If it is not OK, then one face is picked and all edges are interpolated in it.
+But even in this latter case there is work to do to avoid <i>no mans land</i>: we need to snap the vertices that are outside the interpolating face to edges of that face.
+</p><p>To solve the second problem, we do an analysis of new vertices to see which ones are nominally <i>on</i> original edges (but may in fact be in space over the edges). Then we temporarily snap those vertices to the edges while interpolating, and then put them back where they belong.
+</p><p>There is a single <code>bev_create_ngon</code> function that all face creation goes through in the bevel tool.
+It takes in the array of vertices to make a face from, and it also takes in two parallel arrays to control interpolation: one is an array of faces to interpolate in, the other is an array of edges to snap to (temporarily) while interpolating. If all interpolation is in the same face then there is a separate argument for that, and the face array can be NULL.
+</p><p>There is also some code that explicitly merges all the UVs around a given vertex, using the average values. This is called in cases where it is known that all the faces connected to that vertex should be connected in UV space. (This is legacy code, and I'm not sure that these merge-UV routines are still needed -- it could be that the later-added edge-snapping capability has ensured that whenever this is called, the interpolated values of all loops will be the same anyway.)
+</p><p>To see an example of the analysis that was done for the vertex meshes, consider this diagram:
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:413px;"><a href="../File:Dev-Source-Bevel-UV-cases.png.html" class="image"><img alt="" src="../../w/images/a/a1/Dev-Source-Bevel-UV-cases.png" width="411" height="320" class="thumbimage" /></a>  <div class="thumbcaption">Vertex Meshes for Edge and Vertex Bevels, n=2 and n=3</div></div></div>
+<p>In these diagrams, the solid red lines show the original model edges. For edge bevels, the dotted red lines show the newly created edges for the outside edges of the edge bevels. For vertex bevels, the solid red lines continue as is from the vertex mesh.
+</p><p>Recall the number scheme for the vertices of the vertex mesh.
+If we have <i>n</i> sides, and <i>ns</i>/2 = <i>nsegments</i>/2 (truncating division), then there are <i>n</i> boundary vertices, and all of the vertex mesh vertices are numbered (<i>i</i>, <i>j</i>, <i>k</i>) where <i>i</i> is the boundary vertex index, <i>j</i> is the ring index, and <i>k</i> is the index along the side.
+</p><p>We can find a <i>representative face</i> for each boundary vertex, meaning the face that we should do interpolation in for that boundary vertex.
+For edge bevels, you can see that the boundary vertices are totally within one of the faces between beveled edges, so that is the representative face.
+For vertex bevels, the boundary vertices are on original edges, so the could get either the previous (in CCW order) or next face as the representative face; we arbitrarily choose the previous face.
+</p><p>We make these canonical quads: (<i>i</i>,<i>j</i>,<i>k</i>), (<i>i</i>,<i>j</i>,<i>k</i>+1), (<i>i</i>,<i>j</i>+1,<i>k</i>+1), (<i>i</i>,<i>j</i>+1,<i>k</i>)<br />
+where <i>i</i> in [0,<i>n</i>-1]; <i>j</i> in [0,<i>ns</i>/2-1], and <i>k</i> in [0,<i>ns</i>/2-1+<i>odd</i>]  (<i>odd</i> is 1 if there are an odd number of segments).
+</p><p>For this quad, here is the analysis of what arguments to give to <code>bev_create_ngon</code>:
+</p>
+<dl><dt>Edge bevel, even nsegments</dt>
+<dd>Use the representative face for boundary vertex <i>i</i> for all four vertices of the quad</dd>
+<dd>When <i>k</i> = <i>ns</i>/2 - 1, snap the 2nd and 3rd vertices to the side's beveled edge</dd>
+<dd>When <i>j</i> = <i>ns</i>/2 - 1, snap the 3rd and 4th vertices to the previous (CCW) side's beveled edge (break tie in favor of previous case)</dd>
+<dt>Edge bevel, odd nsegments</dt>
+<dd>Usually use the representative face for boundary vertex <i>i</i> for all four vertices of the quad. However, if <i>k</i>=<i>ns</i>/2 and the side's beveled edge is <i>not</i> a seam, then it is OK to use the representative face for boundary vertex <i>i</i>+1 for the 2nd and 3rd vertices.</dd>
+<dd>When "k" = <i>ns</i>/2, snap the 2nd and 3rd vertices to the side's beveled edge</dd>
+<dt>Vertex bevel, <i>j</i> = <i>k</i></dt>
+<dd>If the <i>on</i> edge for boundary vertex <i>i</i> is a seam, then use the representative face for all four vertices. Otherwise, use that for the 1st, 3rd, and 4th vertices, but use the representative face of boundary vertex "i"+1 for the 2nd vertex</dd>
+<dd>Snap the 1st and 3rd vertices to the <i>on</i> edge. But the <i>k</i>=<i>ns</i>/2 and <i>j'==</i>ns<i>/2-1 case is exceptional: we use boundary edge </i>i<i> to snap the 4th vertex and boundary edge </i>i<i>+1 to snap the 3rd vertex</i></dd>
+<dt>Vertex bevel, <i>j</i> &lt; <i>k</i></dt>
+<dd>Use the <i>i</i>+1 representative face for all vertices. No edge snapping.</dd>
+<dt>Vertex bevel, <i>j</i> &gt; <i>k</i></dt>
+<dd>Use the <i>i</i> representative face for all vertices. No edge snapping.</dd></dl>
+<p>Besides the polygons made for vertex meshes, there are two other classes of polygons made by the bevel tool.
+One class is the <i>edge</i> polygons, made only for edge bevels. These are the long thing faces that replace the original beveled edge. There will be <i>nsegments</i> such polygons, side-by-side, for each beveled edge.
+The only edge polygons that need special treatment are those that touch the center line (for even <i>nsegments</i>) or those that straddle it (for odd <i>nsegments</i>).
+The analysis is similar to what we showed for the vertex mesh cases, so we will omit the details here.
+In order to keep the UV net as connected as desired, there is some code to see what happens where the edge polygons butt up against the vertex meshes (or other edge meshes, in the case of <i>welds</i>), and sometimes do a merge UVs around vertices there.
+</p><p>The other class is the <i>replacement face</i> polygons: that is, all the original faces of the model that touch a beveled vertex or edge, and thus have to be remade using the moved / added vertices from the vertex mesh and edge polygons. Nothing special needs to be done as far as interpolation for these -- they just get interpolated in the corresponding original face, and no snapping is needed.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240111182856
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.142 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 62/1000000
+Preprocessor generated node count: 68/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4796-0!canonical and timestamp 20240111182856 and revision id 13584
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;oldid=13584">https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;oldid=13584</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 3 December 2019, at 16:39.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../Special:WhatLinksHere/User:Howardt/Bevel.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Howardt/Bevel" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../Special:Contributions/Howardt.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../Special:Log/Howardt.html">Logs</a></li><li id="t-userrights"><a href="../Special:UserRights/Howardt.html">View user groups</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;oldid=13584" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Howardt/Bevel&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.142","walltime":"0.174","ppvisitednodes":{"value":62,"limit":1000000},"ppgeneratednodes":{"value":68,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240111182856","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":41});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844550acccba0eb4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

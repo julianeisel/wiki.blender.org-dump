@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:JacquesLucke/Reports/2019 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:JacquesLucke/Reports/2019","wgTitle":"JacquesLucke/Reports/2019","wgCurRevisionId":13976,"wgRevisionId":13976,"wgArticleId":4329,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:JacquesLucke/Reports/2019","wgRelevantArticleId":4329,"wgRequestId":"d9580e7586e5b12dfcd514b4","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"JacquesLucke","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_JacquesLucke_Reports_2019 rootpage-User_JacquesLucke skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2019.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJacquesLucke%2FReports%2F2019" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2019.html#Week_15_.2B_Holidays:_January_7_-_11"><span class="tocnumber">1</span> <span class="toctext">Week 15 + Holidays: January 7 - 11</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2019.html#Week_16:_January_14_-_18"><span class="tocnumber">2</span> <span class="toctext">Week 16: January 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2019.html#Week_17:_January_21_-_25"><span class="tocnumber">3</span> <span class="toctext">Week 17: January 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2019.html#Week_18:_January_28_-_01"><span class="tocnumber">4</span> <span class="toctext">Week 18: January 28 - 01</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2019.html#Week_19:_February_04_-_08"><span class="tocnumber">5</span> <span class="toctext">Week 19: February 04 - 08</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="2019.html#Functions"><span class="tocnumber">5.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="2019.html#Week_20:_February_11_-_15"><span class="tocnumber">6</span> <span class="toctext">Week 20: February 11 - 15</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="2019.html#Functions_2"><span class="tocnumber">6.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="2019.html#Week_21:_February_18_-_22"><span class="tocnumber">7</span> <span class="toctext">Week 21: February 18 - 22</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="2019.html#Functions_3"><span class="tocnumber">7.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="2019.html#Week_22:_February_25_-_01"><span class="tocnumber">8</span> <span class="toctext">Week 22: February 25 - 01</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="2019.html#Functions_4"><span class="tocnumber">8.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="2019.html#Week_23:_March_04_-_08"><span class="tocnumber">9</span> <span class="toctext">Week 23: March 04 - 08</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="2019.html#Functions_5"><span class="tocnumber">9.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="2019.html#Week_24:_March_11_-_15"><span class="tocnumber">10</span> <span class="toctext">Week 24: March 11 - 15</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="2019.html#Functions_6"><span class="tocnumber">10.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="2019.html#Week_25:_March_18_-_22"><span class="tocnumber">11</span> <span class="toctext">Week 25: March 18 - 22</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="2019.html#Functions_7"><span class="tocnumber">11.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="2019.html#Week_26:_March_25_-_29"><span class="tocnumber">12</span> <span class="toctext">Week 26: March 25 - 29</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="2019.html#Functions_8"><span class="tocnumber">12.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="2019.html#Week_27:_April_01_-_05"><span class="tocnumber">13</span> <span class="toctext">Week 27: April 01 - 05</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="2019.html#Functions_9"><span class="tocnumber">13.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="2019.html#Week_28:_April_08_-_12"><span class="tocnumber">14</span> <span class="toctext">Week 28: April 08 - 12</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="2019.html#Functions_10"><span class="tocnumber">14.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="2019.html#Week_29:_April_15_-_19"><span class="tocnumber">15</span> <span class="toctext">Week 29: April 15 - 19</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="2019.html#Functions_11"><span class="tocnumber">15.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="2019.html#Week_30:_April_22_-_26"><span class="tocnumber">16</span> <span class="toctext">Week 30: April 22 - 26</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="2019.html#Functions_12"><span class="tocnumber">16.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="2019.html#Week_31:_April_29_-_03"><span class="tocnumber">17</span> <span class="toctext">Week 31: April 29 - 03</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="2019.html#Functions_13"><span class="tocnumber">17.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="2019.html#Week_32:_May_06_-_10"><span class="tocnumber">18</span> <span class="toctext">Week 32: May 06 - 10</span></a>
+<ul>
+<li class="toclevel-2 tocsection-32"><a href="2019.html#Functions_14"><span class="tocnumber">18.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="2019.html#Week_33:_May_13_-_17"><span class="tocnumber">19</span> <span class="toctext">Week 33: May 13 - 17</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="2019.html#Functions_15"><span class="tocnumber">19.1</span> <span class="toctext">Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="2019.html#Week_34:_May_20_-_24"><span class="tocnumber">20</span> <span class="toctext">Week 34: May 20 - 24</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="2019.html#Functions_16"><span class="tocnumber">20.1</span> <span class="toctext">Functions</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2019.html#Documents"><span class="tocnumber">20.2</span> <span class="toctext">Documents</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="2019.html#Week_35:_May_27_-_31"><span class="tocnumber">21</span> <span class="toctext">Week 35: May 27 - 31</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2019.html#Week_36:_June_03_-_07"><span class="tocnumber">22</span> <span class="toctext">Week 36: June 03 - 07</span></a>
+<ul>
+<li class="toclevel-2 tocsection-40"><a href="2019.html#Functions_Branch"><span class="tocnumber">22.1</span> <span class="toctext">Functions Branch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="2019.html#Week_37:_June_10_-_14"><span class="tocnumber">23</span> <span class="toctext">Week 37: June 10 - 14</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2019.html#Week_38:_June_17_-_21"><span class="tocnumber">24</span> <span class="toctext">Week 38: June 17 - 21</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2019.html#Week_39:_June_24_-_28"><span class="tocnumber">25</span> <span class="toctext">Week 39: June 24 - 28</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2019.html#Week_40:_July_01_-_05"><span class="tocnumber">26</span> <span class="toctext">Week 40: July 01 - 05</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2019.html#Week_41:_July_08_-_12"><span class="tocnumber">27</span> <span class="toctext">Week 41: July 08 - 12</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2019.html#Week_42:_July_15_-_19"><span class="tocnumber">28</span> <span class="toctext">Week 42: July 15 - 19</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2019.html#Week_43:_July_22_-_26"><span class="tocnumber">29</span> <span class="toctext">Week 43: July 22 - 26</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2019.html#Week_44:_July_29_-_02"><span class="tocnumber">30</span> <span class="toctext">Week 44: July 29 - 02</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2019.html#Week_45:_August_05_-_09"><span class="tocnumber">31</span> <span class="toctext">Week 45: August 05 - 09</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2019.html#Week_46:_August_12_-_16"><span class="tocnumber">32</span> <span class="toctext">Week 46: August 12 - 16</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="2019.html#Week_47:_August_19_-_23"><span class="tocnumber">33</span> <span class="toctext">Week 47: August 19 - 23</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="2019.html#Week_48:_August_26_-_30"><span class="tocnumber">34</span> <span class="toctext">Week 48: August 26 - 30</span></a></li>
+<li class="toclevel-1 tocsection-53"><a href="2019.html#Week_49:_September_02_-_06"><span class="tocnumber">35</span> <span class="toctext">Week 49: September 02 - 06</span></a></li>
+<li class="toclevel-1 tocsection-54"><a href="2019.html#Week_50:_September_09_-_13"><span class="tocnumber">36</span> <span class="toctext">Week 50: September 09 - 13</span></a></li>
+<li class="toclevel-1 tocsection-55"><a href="2019.html#Week_51:_September_16_-_20"><span class="tocnumber">37</span> <span class="toctext">Week 51: September 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-56"><a href="2019.html#Week_52:_September_23_-_27"><span class="tocnumber">38</span> <span class="toctext">Week 52: September 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-57"><a href="2019.html#Week_53:_October_14_-_18"><span class="tocnumber">39</span> <span class="toctext">Week 53: October 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-58"><a href="2019.html#Week_54:_October_21_-_25"><span class="tocnumber">40</span> <span class="toctext">Week 54: October 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-59"><a href="2019.html#Week_55:_October_28_-_01"><span class="tocnumber">41</span> <span class="toctext">Week 55: October 28 - 01</span></a></li>
+<li class="toclevel-1 tocsection-60"><a href="2019.html#Week_56:_November_04_-_08"><span class="tocnumber">42</span> <span class="toctext">Week 56: November 04 - 08</span></a></li>
+<li class="toclevel-1 tocsection-61"><a href="2019.html#Week_57:_November_11_-_15"><span class="tocnumber">43</span> <span class="toctext">Week 57: November 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-62"><a href="2019.html#Week_58:_November_18_-_22"><span class="tocnumber">44</span> <span class="toctext">Week 58: November 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-63"><a href="2019.html#Week_59:_November_25_-_29"><span class="tocnumber">45</span> <span class="toctext">Week 59: November 25 - 29</span></a></li>
+<li class="toclevel-1 tocsection-64"><a href="2019.html#Week_60:_December_02_-_06"><span class="tocnumber">46</span> <span class="toctext">Week 60: December 02 - 06</span></a></li>
+<li class="toclevel-1 tocsection-65"><a href="2019.html#Week_61:_December_09_-_13"><span class="tocnumber">47</span> <span class="toctext">Week 61: December 09 - 13</span></a></li>
+<li class="toclevel-1 tocsection-66"><a href="2019.html#Week_62:_December_16_-_20"><span class="tocnumber">48</span> <span class="toctext">Week 62: December 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-67"><a href="2019.html#Week_63:_December_23_-_27"><span class="tocnumber">49</span> <span class="toctext">Week 63: December 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-68"><a href="2019.html#Week_64:_December_30_-_03"><span class="tocnumber">50</span> <span class="toctext">Week 64: December 30 - 03</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:JacquesLucke/Reports/2019</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:JacquesLucke.html" title="User:JacquesLucke">User:JacquesLucke</a>&lrm; | <a href="../Reports.html" title="User:JacquesLucke/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span id="Week_15_+_Holidays:_January_7_-_11"></span><span class="mw-headline" id="Week_15_.2B_Holidays:_January_7_-_11">Week 15 + Holidays: January 7 - 11</span></h2>
+<ul><li>Fixed Bugs: <a rel="nofollow" class="external text" href="https://developer.blender.org/rBff6ff90cbec72dea41f1a0f638d2334185095514">T60342</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB22ddd573638582ad5213bb4a7ff23ccae50dd285">T60338</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB12e9d52882e32d85c3890b73aa5a21aff9c787fc">T60327</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA668b2abbf54ad286bfdea09ab5a7858c87777d22">T60282</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf9cefc4d179ab7aa98b016a4026436d86b027524">T60291</a></li>
+<li>Started working on a new project called <a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/derivedrepo">derivedrepo</a>. It's purpose is to generate a new repository based on some (git) repository using some derivation function. The primary goal is keep a repository of compiled Blender builds to make bisecting more efficient. However, the project tries to solve a more general problem.</li>
+<li>Started working on nodes in Blender. So far I mostly implemented a node compiler that uses LLVM as backend. Will write more documentation this week. The code is currently in two separate repositories on Github: <a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/blender/tree/nodes_playground">Blender Core</a> and <a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/function_nodes_ui">UI</a>.</li></ul>
+<h2><span class="mw-headline" id="Week_16:_January_14_-_18">Week 16: January 14 - 18</span></h2>
+<ul><li>Testing new ArrayBase data structure as a replacement for ListBase (linked lists should not be used when it can be avoided...) (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4225">D4225</a>).</li>
+<li>Fixed Bugs: <a rel="nofollow" class="external text" href="https://developer.blender.org/rBAba97e19e5b3df449784a4cc4ed89ce7b511ec3e4">T60591</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBa0df26f0041062c8268e9e6f099ee7db42bf61b4">T60383</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBec3e2b0ce5a056ca53c37a07d24d86e31f4d2e97">T60304</a></li>
+<li>Unfinished fixes: <a rel="nofollow" class="external text" href="https://developer.blender.org/D4221">D4221</a></li>
+<li>Started working on making vertices active using box/circle/lasso select, but stopped for UX reasons (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4217">D4217</a>).</li>
+<li>Wrote a wiki page for the <a rel="nofollow" class="external text" href="../../Source/Nodes/EverythingNodes.html">Everything Nodes</a> project.</li></ul>
+<h2><span class="mw-headline" id="Week_17:_January_21_-_25">Week 17: January 21 - 25</span></h2>
+<ul><li>Fixed Bugs: <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA2eb519ceca77a4fe2fd5f8d071767db06aa01aa5">rBA2eb519c</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB6b5416909ef4f2e833ee9527bf1219d266ace99d">T60816</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBa4a60358b55d0b42dec425a5dc49ed660e5bbdfb">T58502</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB7faf0c8c2ff715b09feede8a58ea33bfeb0fa2da">T59145</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBac5278b682cfb090aafe93082e95349cb7d993d3">T60791</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB06a6b5dba459d4153d85c5894e3c3e72abeb34e3">T60126</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB0c829e8240eebd7ce4ed9d61f8682c0d6bf534f4">T60709</a></li>
+<li>Wrote a small addon for the Spring team to copy drivers (<a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/driver_copy">Github</a>).</li>
+<li>Tried to help some new developers to do their first code contribution (<a rel="nofollow" class="external text" href="https://twitter.com/JacquesLucke/status/1088803410881794048">Twitter</a> -&gt; <a rel="nofollow" class="external text" href="https://developer.blender.org/D4258">D4258</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D4260">D4260</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D4261">D4261</a>).</li>
+<li>Tested a generic interface for function calls. Also learned a lot about C++ this week. Currently, the code is still on <a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/blender/tree/functions">Github</a>, but will push the branch to developer.blender.org soonish.</li></ul>
+<h2><span class="mw-headline" id="Week_18:_January_28_-_01">Week 18: January 28 - 01</span></h2>
+<ul><li>Created an initial proposal for a Python Tool API. Many things have to be discussed still (<a rel="nofollow" class="external text" href="https://developer.blender.org/T61105">T61105</a>).</li>
+<li>Removed deprecated ghosting code (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4271">D4271</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBb5e93b02c9cfffefe46a067389333ab871bd8605">T60996</a>: Dyntopo flood fill fails due to missing ob-&gt;imat</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB2ff6b2925a1273d02a805057cfbed79d29bad5e3">T60067</a>: some modifiers don't use shape keys correctly</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3b6e4cf7cec8845cf839f10d241c1dcc81eb98b2">T60226</a>: Inset not working well on very small faces</li>
+<li>Fix: allow curve of driver to be evaluated individually (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBf4c0dacde7bfc9efea9d0cf990325109fa2f4bb0">f4c0dac</a>).</li>
+<li>Fixed some addons that were broken, because the object color does have an alpha value now (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB1ceaca7f646c90f601dd53e4843d914e25289df2">1ceaca7</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA4e8ddec4e1be8e67da90fe244707fb2077837604">4e8ddec</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA04dc7f2acbe3d7b6dc5c85ce259aba17bd747448">04dc7f2</a>).</li>
+<li>Fix: allow removal of addons that are symlinked (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBe6ba760ce8fda5cf2e18bf26dddeeabdb4021066">e6ba760</a>).</li>
+<li>Reviewed and merged: <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9552d4b32108af968c1fb822ce57ad0ec8f566cb">9552d4b</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBd473d5be5f59ed2cdd8e7b08feabcf7d9b8a8b5b">d473d5b</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB534891997a6f4d5a2977e5f3cd0e0b3c3eafe9bd">5348919</a></li>
+<li>Started to update the bgl docs (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4280">D4280</a>).</li>
+<li>Committed to the Blender manual repository for the first time (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM4563">4563</a>).</li></ul>
+<h2><span class="mw-headline" id="Week_19:_February_04_-_08">Week 19: February 04 - 08</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA829154dd125ef84c59ebfad92031368853e18b7f">T61275</a>: recognize values with decimal separator in svg importer</li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://developer.blender.org/D4312">D4312</a>.</li>
+<li>Cleanup: Remove deprecated ghosting code (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB45478158479d3aa695de9dfafc2fe433d1ae0f51">4547815</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB6202bc82b858d8f6876c6c20ec62dd0a16209087">T60935</a>: More numerically stable distance to ray computation.</li>
+<li>Some improvements/fixes for the Object Scatter addon (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBAf40ec5d6a4e7ca3aa39debc1ca32518250d21e57">f40ec5d</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA8e3a51e4e4e668283668aafa4c88c03a9af7f06d">8e3a51e</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA6f0deb3b89dd17458d0079bd97b183758fb4e80e">6f0deb3</a>).</li>
+<li>Don't split groups by default when importing .obj files (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBA899c287a85b3127538619ff90326ad23599795f8">899c287</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions">Functions</span></h4>
+<p>Besides these things I also continued to work on the functions project. I'm spending quite some time learning how to do certain things in C++ (which I did not use for a serious project yet). I investigated/implemented the following:
+</p>
+<ul><li>Managing shared ownership over language boundaries.</li>
+<li>Using dynamic composition instead of inheritance for some types.</li>
+<li>How to use const so that it does not get in the way.</li></ul>
+<p>I also worked on some data structures that I want to work with. I put those into BLI for now. Feels like a good place for Blenders own C++ data structures. Most of them also have some unit tests already.
+</p>
+<ul><li>SmallVector&lt;T&gt;: Similar to std::vector, just that it does not have to allocate memory when it is small.</li>
+<li>SmallSet&lt;T&gt;: Build on top of SmallVector but supports different operations.</li>
+<li>SmallMap&lt;K, V&gt;: Similar to SmallSet.</li>
+<li>SmallSetVector&lt;T&gt;: An vector that supports efficient membership testing.</li>
+<li>Composition: Can be used in other objects to extend them dynamically. In my case I use it to have generic type and function objects that can be extended with backend specific information.</li>
+<li>RefCounter&lt;T&gt;: Generic object that wraps another object and extends it with an atomic reference counter.</li>
+<li>Shared&lt;T&gt;: Similar to std::shared_ptr but wraps a RefCounter object. Having it allows automatic shared ownership within C++, but still makes it possible to pass the RefCounter to C code.</li></ul>
+<p>Furthermore, I added a new node tree type, but it doesn't really do anything yet. I hope I'll get to that point next week.
+</p>
+<h2><span class="mw-headline" id="Week_20:_February_11_-_15">Week 20: February 11 - 15</span></h2>
+<ul><li>Make marker lines in sequencer and graph editor optional (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4348">D4348</a>).</li>
+<li>Tracked down some bugs I experienced when having references to node trees in a modifier. They were caused by user count problems of nodes (<a rel="nofollow" class="external text" href="https://developer.blender.org/T61506">T61506</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/T61515">T61515</a>). The bugs were fixed by Bastien.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB20f78dc12f9c17b52e2be58d337ffbd113dfab66">T61430</a>: invoke_popup() does not respect ui scale.</li></ul>
+<h4><span class="mw-headline" id="Functions_2">Functions</span></h4>
+<ul><li>Libs for Functions (quite experimental still): <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf2c8e39d2985f820701f981d5b396bbb671e9ac5">Small Stack</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe3cdeb80b1c6e5d6c9bd159696e1ecfd37832ad2">MemPool</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBd7fca3e46835977659cd1839810e7926483e8d07">Lazy Initialization Macro</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB548eb3a8225ce154d4f202ef718edbc5b24eeb3e">ListBase Wrapper</a></li>
+<li>Functions: <a rel="nofollow" class="external text" href="https://developer.blender.org/rBd93ecc84bb447040378dd706b30607d3ed576313">Type Inferencer Interface</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB47ea90771da4de42ae797c7272fb4bf741e8e4ef">Type Relations</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB393f220f4884a304b15a06b04cb39f0e2aacfdd4">Gather function dependencies</a></li></ul>
+<p>I took two days off.
+</p>
+<h2><span class="mw-headline" id="Week_21:_February_18_-_22">Week 21: February 18 - 22</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB4f0b61f15bb46bfb8a949b314d05130c0425c816">T61791</a>: Motion path step is not taken into account</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB7c53bca1dd20460ebc4c404c058faeff5afb0ce0">T61702</a>: obmat used incorrectly when calculating constant detail size</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBAb1320f3af626210555df43494733ffc295d2aeda">T61707</a>: Use id attribute to initialize object and curve names when importing .svg.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBa0d0d37ecd9f9d0b6503f89f9587ad44eeab43ca">T61666</a>: missing NULL_UNIT that stops iteration over units.</li>
+<li>FCurves: Remember active fcurve when selecting other bone (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBc598ad9ac6637cf2804d9fe16408888737d7dc9c">c598ad9</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4320">D4320</a>: Port "Import BrushSet" addon to Blender 2.8.</li>
+<li>Committed marker line patch from last week (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB3b3eba6374067d3d9c289655663dbdb57bf3ea8c">3b3eba6</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_3">Functions</span></h4>
+<ul><li>Made some nodes a bit more generic (input/output/math).</li>
+<li>Added possibility to use a generated function in the Displace modifier to calculate vertex weights.</li>
+<li>Added a new driver variable that can evaluate a function (and also set-ups dependencies mostly correct).</li></ul>
+<h2><span class="mw-headline" id="Week_22:_February_25_-_01">Week 22: February 25 - 01</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB921c37bfa3108708cb6c2a6cd7c1b1a588be2d74">T62050</a>: Remove non-persistent timers in load-pre callback.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB5938fd4cccaa71aca3250ce08b336518a773c59a">T61994</a>: Crash when box selecting instances.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA45c7d47bf20697220df8a16c48858f4371584ef4">T61827</a>: Operator align.selected2xyz was very slow.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM4574">T61875</a>: Wrong description of normalize node in manual.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB1419399f03235db56f0b18640755b117561c5efb">T61919</a>: Rename "Smooth Vertex" -&gt; "Smooth Vertices"</li>
+<li>UI: Show marker lines in remaining animation spaces (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBd54143078562fbf7780f0da8ab5c6da79a9c21b1">d541430</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4401">D4401</a>: Create new temperature unit.</li></ul>
+<h4><span class="mw-headline" id="Functions_4">Functions</span></h4>
+<ul><li>Gave a presentation about Everything Nodes in the Studio.</li>
+<li>Initial LLVM backend.</li>
+<li>Major file structure cleanup.</li></ul>
+<h2><span class="mw-headline" id="Week_23:_March_04_-_08">Week 23: March 04 - 08</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB8ef460ddab266f3d47719ea1856aa633ea74c17d">T62319</a>: Changing keyframe properties does not trigger update.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBb38b0cdb0dc3604c3ec2d7627897ba595de44646">T62305</a>: Unconnected group vector inputs are mapped incorrectly.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB594f2b80165d1fa750150d32f9c9dfd344b497e3">T61671</a>: Too strong too dark text shadow in Blender Light theme.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBb3d638087d8ebceda4dec623533275522c3adced">T61761</a>: Randomize Transform is an object mode operator.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB5e8e3c00f2aa8331148c59db40a9ee43ee55438e">T62112</a>: Wrong curve face count.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB55cd481bf2d85df3b7febe75c8f604ef3c5144a0">T62208</a>: Constant detail picker not taking object scale into account.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB7a6b46aac56b2a529370129bbedcd20f408c6352">T62163</a>: Duplicating particle system results in crash.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB5e999c249c9d8d317511b2f771d69fb5886c720c">T62202</a>: Circle select does not work on hair points.</li></ul>
+<ul><li>Refactor building the draw string for floats and ints (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBd617466d87863d75a83dd01e68da7228907f4656">d617466</a>).</li>
+<li>Patch that allows displaying factors as percentages (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4462">D4462</a>).</li>
+<li>Found cause for <a rel="nofollow" class="external text" href="https://developer.blender.org/T62210">T62210</a>. Unfortunately applied wrong <a rel="nofollow" class="external text" href="https://developer.blender.org/rB301bcf771dec827138412ca6e7a25e2269eb5e9e">fix</a>.</li>
+<li>Went over old bug reports and closed 40+ that had too little information to reproduce the issue.</li></ul>
+<h4><span class="mw-headline" id="Functions_5">Functions</span></h4>
+<ul><li>Mostly cleanup and small refactorings.</li>
+<li>Further experiment with how to manage shared ownership.</li>
+<li>Build LLVM IR for a function graph.</li>
+<li>Allocate Tuple objects on the stack in C and LLVM IR.</li>
+<li>Simplify node creation with automatic registration and automatic search menu.</li>
+<li>New Function Points modifier that uses a function which outputs a list. This is mostly for testing purposes for non-trivial data types.</li>
+<li>New "Append to List", "Get List Element" and "Combine Lists" node. They only work with Float Lists for now.</li></ul>
+<h2><span class="mw-headline" id="Week_24:_March_11_-_15">Week 24: March 11 - 15</span></h2>
+<ul><li>Fix truncated text errors (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7bfdf357116f0f59b254adb334ae1c24530e904f">T61300</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBac147872cca748e33bd84da5dbb34ab22f02ffca">T62594</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBcfd909f184ccd87ed6dcfa45a5ab93d8fc5cb742">T62678</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB86ea76254d3f625bf3d9e15dade5d5b3544c06a3">T62614</a>: Copy eevee settings when scene is copied.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB17e0565cc5748f959ec318c472b28ff9e41ed507">T58668</a>: Misaligned text when editing multiple values.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB81d5f15a2a71eaa7c506b0b87706059b9c48d23a">T61253</a>: Wrong syntax highlighting when @ is used for multiplication.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB836f3494d75947fa6002cfc2cc8d3547b9f29a7f">T62059</a>: Driver not updating in Color Ramp.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB1f8738a39847165b0ec5ac494de91a734e02b878">T59928</a>: 'Radius' option does nothing when adding light probe.</li></ul>
+<ul><li>New Option to display factors as percentages (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB107c94c338a7b58acd9627fe85ec5d5bbdf36803">107c94c3</a>).</li>
+<li>Remove functions from bgl docs, that don't exist anymore (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4280">D4280</a>).</li>
+<li>Produced a video showing my bug fixing process (<a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=gIUZTBYJ3OQ">YouTube</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_6">Functions</span></h4>
+<p>Tried to find the right abstractions to allow for more complex socket declarations in nodes. I have a plan now, but still has to be implemented correctly. Examples for behaviors that should be supported:
+</p>
+<ul><li>Nodes that operate on lists adapt automatically based on what is connected.</li>
+<li>Vectorized nodes that can switch between accepting lists and single values automatically.</li>
+<li>Sockets that can accept any data type, but is still statically typed.</li>
+<li>Variadic nodes that allow a dynamic amount of sockets (e.g. function input/output, but this is useful in many nodes).</li></ul>
+<h2><span class="mw-headline" id="Week_25:_March_18_-_22">Week 25: March 18 - 22</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBb29790a953ff0f31c431daaaa2864e48bd38e94c">T62587</a>: Particle instances Use Count node saved correctly.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBad3d9256821c197c44c6565ef2797cf361f12ec9">T62636</a>: Overlapping scrollbar in driver editor.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB2b79f274e38b10bd28bae34e98990ae95a0eafc0">T61226</a>: Make hair editing (more?) thread safe.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9b8eef9d9c4a337bcdb9127bec63513dd0ee7e54">T62558</a>: Certain IES file causes crash.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc4908c8e8c6e29c09acadf5d2eec129fdacab5db">T62758</a>: Hair curves with UV mapped textures renders wrong.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB91914320ca539dfbbd3e417a42387fd6ec6182df">T62711</a>: Incorrect motion path update.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB1b1b60459686de36cb8e307d8fce711bc6cf87af">T62678</a>: Better glyph clipping test.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB75b14db6a969b43121884befd15e990cd4e5f5fa">T62808</a>: Hair shape cut crash.</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4553">D4553</a>: Wrong user count after changing gpencil material.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4563">D4563</a>: Do not show full action range.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4566">D4566</a>: Incorrect context when selecting particles.</li></ul>
+<h4><span class="mw-headline" id="Functions_7">Functions</span></h4>
+<ul><li>Unified socket declaration system.</li>
+<li>More specialized automatic type inferencer.</li>
+<li>New Pack List node (replaces "Append to List" and "Combine Lists").</li>
+<li>Initial support for calling "subfunctions".</li>
+<li>Custom search terms for nodes.</li>
+<li>Initial body type for lazy input evaluation.</li>
+<li>New Boolean type.</li>
+<li>New Switch node that makes use of lazy input evaluation.</li></ul>
+<h2><span class="mw-headline" id="Week_26:_March_25_-_29">Week 26: March 25 - 29</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB84240ebb3ebde58f6bfba256e49d37697fb6bc9f">T62776</a>: Face maps are initialized incorrectly.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9cd970734b5f9f9c2b81e67b0da2a3acd07e1c9a">T62536</a>: Incorrect context when selecting particles.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9b39a7179372d0360021a9d2e88190f17f34b29e">T62958</a>: Improve exponential easing formula.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB16a04dccd556d2969e0868aa91667449deae90d2">T62955</a>: Missing panels in workbench engine.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc87e467e390ab97ed156ee0aa5cf22eb26ae78a7">T62935</a>: Missing tag when copying constraints.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB56b06ee83afba38099fb7affc260885a613a3779">T62901</a>: Bad handling of missing addon category.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBfe9c9a313fbb78ba9987c9978d52e22bc33b30f2">T63040</a>: Resizing node has offset.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe2995b29a99bdd81076349edfe500e9711fc1da4">T63015</a>: Crash when using circle select tool in lattice edit mode.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB87ac695106c786097903fe3ddbca755a97a27d5f">T63032</a>: Increase camera properties precision in UI.</li>
+<li>Fix idnames in addons after recent change (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBA0f2207e7fe467cdce1a0b4cc1a1ab0ccda0dfcef">0f2207e</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_8">Functions</span></h4>
+<ul><li>Experimental lazy fgraph evaluation.</li>
+<li>Manage execution stack and keep track of where functions come from.</li>
+<li>Initial problems panel in node editor.</li>
+<li>Use Blender's guarded allocator in more places.</li>
+<li>Initial multipool allocator structure.</li>
+<li>Wrap LLVM's IRBuilder to allow for cleaner code.</li>
+<li>Utility functions to optimize and print generated code.</li>
+<li>Refactor node declaration system.</li>
+<li>Wrote some <a rel="nofollow" class="external text" href="../../Source/Nodes/InitialFunctionsSystem.html">technical documentation</a> for the stuff I've been working on in the last couple of weeks. Some topics are still missing, but that should give a good overview of the general architecture as it is right now.</li></ul>
+<h2><span class="mw-headline" id="Week_27:_April_01_-_05">Week 27: April 01 - 05</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBceded86de32db576b4d31ae6b86ad155f67b77bc">T61830</a>: Remove option to add new keymap item in search mode.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBdf3c1dde04442b148c547f09fac51a32589f83ea">T63256</a>: Make Dupli Face was broken since there are collections.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3c7a538c9b73ff7ab87ba508c5d44433d6c2877b">T60891</a>: bgl docs still include deprecated opengl functions.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB2bc3418884281908f14f1bd243cab1497f4301b6">T63000</a>: Don't use original file name for autosave.</li>
+<li>Started implementing a proposal for an Animation Editor Scrubbing Area (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4654">D4654</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4648">D4648</a>: Fix T63227: import vertex colors from .ply file without alpha.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4601">D4601</a>: Interface: New region type 'Footer', used by text editor.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4649">D4649</a>: Cleanup: Replace deprecated finite with isfinite.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4479">D4479</a>: Remember the last display mode in File Browser.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4629">D4629</a>: Fix T62939: Incorrect cursor position when exiting UI slider.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4611">D4611</a>: UI: Fix odd behavior in region sizing, simplify code.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4617">D4617</a>: UI: Collapsed nodes have the same width as uncollapsed nodes.</li></ul>
+<h4><span class="mw-headline" id="Functions_9">Functions</span></h4>
+<ul><li>Implement and use actual hash map/set instead of using linear search.</li>
+<li>Support for vectorized nodes in the UI.</li>
+<li>Generic automatic vectorization of functions.</li>
+<li>New Vector Math node.</li>
+<li>Splitup C API code into multiple files.</li>
+<li>More robust node tree update after changes.</li>
+<li>Simple cache to not build the same IR multiple times per module.</li>
+<li>Support for reroute nodes.</li>
+<li>Improve UI of Pack List node.</li>
+<li>Simple operators to create function trees from modifier.</li></ul>
+<h2><span class="mw-headline" id="Week_28:_April_08_-_12">Week 28: April 08 - 12</span></h2>
+<p>This week was the "Homestretch Workshop" week, therefore there were a lot of meetings and less time for actual coding work.
+</p>
+<ul><li>UI: Do not show full action range (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB14e1a4e9cfe400e047bf1446aa1076c82c8dbcfe">14e1a4e</a>).</li>
+<li>Refactor View2D number drawing (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4681">D4681</a>).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4667">D4667</a>: Fix add_search node operator to show custom nodes.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4479">D4479</a>: Remember the last display mode in File Browser.</li></ul>
+<h4><span class="mw-headline" id="Functions_10">Functions</span></h4>
+<ul><li>Implement MultiMap and ArrayRef data structure.</li>
+<li>Experimented with some lazy non-recursive evaluation methods, but this still needs more work.</li>
+<li>New Float Range node.</li></ul>
+<h2><span class="mw-headline" id="Week_29:_April_15_-_19">Week 29: April 15 - 19</span></h2>
+<ul><li>Refactor View2D number drawing (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7fdffd735ff24b570a61faf5620e2c4b2f908be2">7fdffd7</a>).</li>
+<li>Refactor boundbox handling of event handlers (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4705">D4705</a>).</li>
+<li>Refactor storage usage during fcurve modifier evaluation (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB81ce3801bf0a876b73b73817ca1a61b4e81b214d">81ce380</a>).</li>
+<li>Avoid autosave name collisions (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB5461a68852d746498ac29eb06b8e12f79519ad79">5461a68</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf3b7b7eb0c3b434301f02718e5304144892c3e0a">T63673</a>: Wrong API documentation for Quaternion.dot(other).</li></ul>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4697">D4697</a>: Incorrect poll methods in node category classes.</li></ul>
+<h4><span class="mw-headline" id="Functions_11">Functions</span></h4>
+<ul><li>Better defined relations between types.</li>
+<li>Support for implicit conversions in all directions between boolean, integer and float.</li>
+<li>New document about <a rel="nofollow" class="external text" href="../../Source/Nodes/MeshTypeRequirements.html">mesh type requirements</a>.</li>
+<li>New document about <a rel="nofollow" class="external text" href="../../Source/Nodes/BreakModifierStack.html">categorizing modifiers</a>.</li>
+<li>New <a rel="nofollow" class="external text" href="../../Source/Nodes/SimulationArchitectureProposal.html">simulation architecture proposal</a>.</li></ul>
+<h2><span class="mw-headline" id="Week_30:_April_22_-_26">Week 30: April 22 - 26</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc043ab1cf3bce77248a8d7dfa42b2e9f8f9611aa">T63233</a>: Set default blur kernel radius to 2.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc9ed39925a51fc421a734027c2ef386157392f3b">T63649</a>: Action group expand setting for graph editor missing.</li>
+<li>New BLI_NOINLINE macro (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBea940bcb539cc23cf01c230e295b6d3e05c50846">ea940bc</a>).</li>
+<li>Sequencer: Use Alpha Over blend mode by default (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7c6c5b40cae47e2ecb0e2ef2a5ca1883270c0023">7c6c5b4</a>).</li>
+<li>UI: Simple confirm dialog when loading new file (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBca41548626f5f49a769dc018ab54d7ed06c05489">ca41548</a>).</li>
+<li>Refactor: Allow event handlers to have a poll function (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBea8026438104f7be178fcb06562932e4e3d2f094">ea80264</a>).</li>
+<li>Refactor: Separate template selection from read_homefile operator (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBcfe9c7b3bd533379b6a52380fd62d7cdfaefd183">cfe9c7b</a>).</li></ul>
+<ul><li>Refactor: Separate scrollers from text drawing in API (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4747">D4747</a>).</li>
+<li>Refactor: Markers drawing (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4745">D4745</a>).</li>
+<li>Continued working on the Animation Editor Scrubbing Area (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4654">D4654</a>).</li></ul>
+<ul><li>Reviewed: New backdrop draw-callback for node editor (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4709">D4709</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_12">Functions</span></h4>
+<ul><li>Splitup DataFlowGraph into a dynamic DataFlowGraphBuilder and a very compact DataFlowGraph. This allows faster traversal of the graph for evaluation.</li>
+<li>Initial unit tests or the function system. Still have to figure out how to link the tests correctly to be able to test everything.</li></ul>
+<p>The new data structure allowed me to implement a more efficient evaluation procedure with the following properties:
+</p>
+<ul><li>It uses no recursive calls.</li>
+<li>It does no heap allocation in the common case (except when the tree depth is very large).</li>
+<li>Support for lazy tuple calls (only calculate the inputs that are necessary).</li>
+<li>Frees values that are no longer needed very early.</li>
+<li>Copies are avoided in many cases by handing over ownership between nodes.</li>
+<li>Very few hash map lookups (nodes and sockets are identified by an index in a long array in the new data structure).</li>
+<li>Call stack information is maintained.</li></ul>
+<h2><span class="mw-headline" id="Week_31:_April_29_-_03">Week 31: April 29 - 03</span></h2>
+<ul><li>Finished the animation editor scrubbing area (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4654">D4654</a>).</li>
+<li>Refactor: Support arbitrary y offset for channel list (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBfa59346c1340da4189e5c7d38164a74dc096db10">fa59346</a>).</li>
+<li>Refactor: Grid and scale indicator text drawing (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB667af6cf411918ba181afc1a7d6bcb474f9fadb8">667af6c</a>).</li></ul>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4759">D4759</a>: A.N.T. Landscape addon broken after psutil API change.</li></ul>
+<h4><span class="mw-headline" id="Functions_13">Functions</span></h4>
+<ul><li>Generate more readable IR by not calling hardcoded integer pointers directly but through a named wrapper function.</li>
+<li>Automatic function vectorization using llvm.</li></ul>
+<h2><span class="mw-headline" id="Week_32:_May_06_-_10">Week 32: May 06 - 10</span></h2>
+<p>I only worked 2 days this week, but also found some time to work in the train.
+</p>
+<ul><li>UI: Animation editor scrubbing area (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBf2b7582b27fa1235a013b2d92af72428c0fc1623">f2b7582</a>).</li>
+<li>Keymap: Special keymap for clip editor scrubbing area (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBc79fc710b3f97e5bcf8db59fc358d430617e08c9">c79fc71</a>).</li>
+<li>UI: Move scrollbars to the right in animation editors (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB3b9813fe50497e077faeb052a26a436868230e20">3b9813f</a>).</li>
+<li>Experimented with multi-step-user-interaction-operators (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4829">D4829</a>).</li></ul>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4844">D4844</a>: Update io_anim_nuke_chan to 2.8.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4830">D4830</a>: Timeline Playhead Scrubber.</li></ul>
+<h4><span class="mw-headline" id="Functions_14">Functions</span></h4>
+<ul><li>Make it easier to build LLVM IR for common constructs like loops and if-then-else.</li>
+<li>Make printf function easily accessible within LLVM IR for debugging purposes.</li>
+<li>Start using ArrayRef in more places, as it really simplifies the code, avoids code duplication and reduces memory allocations.</li>
+<li>Initial support for default values for auto-vectorized functions (necessary when one input list is empty).</li></ul>
+<h2><span class="mw-headline" id="Week_33:_May_13_-_17">Week 33: May 13 - 17</span></h2>
+<ul><li>UI: Confirm dialog when closing an unsaved file (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB687385b963f4389b3d714fed264bb0ff24bc43f5">687385b</a>).</li>
+<li>UI: File Close Dialog (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB5ce3f69da438bf2bd58d5039f8a4165f31262e1e">5ce3f69</a>).</li>
+<li>UI: Don't display markers in driver editor (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB86650b01d873ef8ea46f4c147129199f647e6ffc">86650b0</a>).</li>
+<li>Correct outliner width computation (<a rel="nofollow" class="external text" href="https://developer.blender.org/D4887">D4887</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBAd3882e8a34e8a2d6cc26cfe59fd4461ef6d8a824">T64721</a>: Object Scatter addon broken after recent changes.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBddae9c92326486c5c95613bc0b7bb46e2d9bc261">T64634</a>: Incorrect type casting in versioning code.</li>
+<li>Interface: Callback to free popup arguments (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBc66a7822cef2d2fd38ab80e5c8c95de554df73e2">c66a782</a>).</li>
+<li>Refactor: Simplify ID Property freeing (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBdb5120603f8f6236d1417199f257e35e0eb8c00b">db51206</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe60890075b37097287f561c1b681685a21dcd4fe">e608900</a>).</li>
+<li>BLI_memarena: Unpoison memory before freeing it (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa7542b9e2b3cd2ecddbf6dfaddad9164a93720d4">a7542b9</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_15">Functions</span></h4>
+<ul><li>Wrote some more comments for the C++ data structures in BLI.</li>
+<li>New StringRef and StringRefNull class that can point to strings owned by another object (similar to ArrayRef).</li>
+<li>Use StringRef and ArrayRef in many more places to decouple implementation details.</li>
+<li>Remove Signature and Parameter classes. The data is now directly stored in the Function class.</li></ul>
+<h2><span class="mw-headline" id="Week_34:_May_20_-_24">Week 34: May 20 - 24</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB11d5a1baff49dbc234cd691fa419c8b63a79da5e">T64776</a>: Multiple close file dialogs.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB81320ce7f7c699d832edf8ba0f609bb246389a33">T64766</a>: Use grid size from user preferences.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA678f7523b013cdb81068e6e28f03cd724895f306">T64941</a>: Insert missing bpy. to access context after recent changes.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBeec47f284aeb9fce670e70252af4bac125b4a9e3">T63443</a>: Tool 'builtin_brush.draw' not found for space 'IMAGE_EDITOR'.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB1b60b6edf176ae0dc6a0506d2edffdb1788585f3">T65071</a>: Crash when selecting joined tracks.</li>
+<li>GPU: Double uniform names buffer size (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB6f893d6f05fb90008c8dcdc1ba3bb6b619ad645b">6f893d6</a>).</li>
+<li>BLI_memiter: unpoison memory before freeing it (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBaa0242170add738431cec4b212a7ce87e06588e3">aa02421</a>).</li>
+<li>Graph Editor: View-selected takes scrubbing and marker region into account (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb03ee4828be1032052ee4f81f15691a56cde3415">b03ee48</a>).</li></ul>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D4912">D4912</a>: Update operator_modal_draw python template.</li></ul>
+<h4><span class="mw-headline" id="Functions_16">Functions</span></h4>
+<ul><li>One cleanup pass over all new data structures.</li>
+<li>Cache auto-vectorized functions.</li></ul>
+<h4><span class="mw-headline" id="Documents">Documents</span></h4>
+<p>This week I spent some time writing documents about various topics.
+</p>
+<ul><li>Guide for users on how to help triaging bugs (<a rel="nofollow" class="external text" href="../../Process/Help_Triaging_Bugs.html">link</a>).</li>
+<li>Proposal for basic C++ data structures, that can be used in many places in Blender (<a rel="nofollow" class="external text" href="../Documents/BasicDataStructures.html">link</a>).</li>
+<li>First steps towards making simulations "first-class" in Blender (<a rel="nofollow" class="external text" href="../../Source/Nodes/SimulationFrameworkFirstSteps.html">link</a>).</li>
+<li>Patterns for how nodes can define their socket interfaces (<a rel="nofollow" class="external text" href="../../Source/Nodes/NodeInterfaceFramework.html">link</a>).</li>
+<li>Proposal for how a particle system can be represented with nodes (<a rel="nofollow" class="external text" href="../../Source/Nodes/ParticleSystemNodes.html">link</a>).</li></ul>
+<h2><span class="mw-headline" id="Week_35:_May_27_-_31">Week 35: May 27 - 31</span></h2>
+<p>I only worked on three days this week.
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe4726462823d7e5554239a60f744a6e3f4b6cdde">T65080</a>: Handle case when View2D has 0 scale.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB29a29699f7ca126552d33edc832f1228ee5dabe9">T65145</a>: Draw curve draw tool settings in column.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf3fb7c5f22cf33e6cfe1392387e187ecb5cb7699">T65177</a>: Camera frame visible in viewport render.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB68adbf80cfacb54721b42f5d2dd9d1efef3326d8">T65275</a>: Missing dereference.</li>
+<li>Sequencer: Drag outside of sequence to initiate box select (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB8e125f278c52b38cf3be53b2296f0dc30885bae4">8e125f2</a>).</li>
+<li>Sequencer: Fix box select using incorrect rectangles for sequences (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBf8f43184e2a09c70845c3c834b9b66e3d1f03d65">f8f4318</a>).</li>
+<li>Outliner: Correct outliner width computation (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa63ac425d07533e602d285df4e1a13e8ec64c4cf">a63ac42</a>).</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4975">D4975</a>: Click-drag in empty area to box select markers.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4966">D4966</a>: C++ data structures in BLI.</li></ul>
+<h2><span class="mw-headline" id="Week_36:_June_03_-_07">Week 36: June 03 - 07</span></h2>
+<ul><li>API Docs: Fixed some examples (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB3a7af37e280276026e937aa95aefde11290741d2">3a7af37</a>).</li>
+<li>Particles: Remove unused particle settings from UI (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB87fde57b63887aa3082917eebcff5f3f069d610a">87fde57</a>).</li>
+<li>Python Templates: fix operator_mesh_uv template (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB54021da58bb0a593cbdfa38317d2d8a16fa1780c">54021da</a>).</li>
+<li>Dopesheet: drag to box select in dopesheet (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb79976a9bd94dc372bb8f215c766d4ef03d67bcb">b79976a</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBcd1ac4d908a89e4eb5c3da50bbe748aec2b36692">T65492</a>: Make material slots popover wider.</li>
+<li>NLA Editor: Drag in empty region to invoke box-select (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB8b1ca3ec537cc13d87e15dc80dc04d53ee2d95ca">8b1ca3e</a>).</li>
+<li>NLA Editor: Box-select was selecting wrong elements (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7484ed9bdcba1460b0fa1785dd207a5a0e872cae">7484ed9</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc0c2f8663e4f3b4166a95b1978bf2441b8f3152a">T65303</a>: Fix and improve autorun-scripts popup.</li>
+<li>Graph Editor: Drag to box-select keyframes (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB04bac387315ce09822c36bc20e0fe4e7d533fec8">04bac38</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB4d8ffa5ac5bb9346bdd7199da92386f7af7ed8ae">T65328</a>: Offset when outliner gains focus.</li>
+<li>Markers: Click-drag in empty area to box-select markers (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBab5219af345721e888ce6832b281369f834843ba">ab5219a</a>).</li></ul>
+<h4><span class="mw-headline" id="Functions_Branch">Functions Branch</span></h4>
+<ul><li>Improve macros for functions that lazy-initialize data. The data is now freed before Blender's leak detection runs, avoiding false positives.</li>
+<li>Started working on the new particle system. For now it is just be a modifier, that will hopefully change in the future.</li></ul>
+<h2><span class="mw-headline" id="Week_37:_June_10_-_14">Week 37: June 10 - 14</span></h2>
+<p>This week I almost exclusively worked on updating the Blender manual for 2.8.
+I worked on the following sections:
+</p>
+<ul><li>User Interface</li>
+<li>Image Editor, UV Editor, Text Editor, Python console, Info Editor</li>
+<li>Parts of Scene Layout</li>
+<li>Physics</li>
+<li>Compositing</li>
+<li>Scripting</li></ul>
+<ul><li>Compositor: fix linear feather falloff in dilate/erode node (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBabd240332d4601b80e0cb03739f03f2fad3e8a1c">abd2403</a>).</li></ul>
+<h2><span class="mw-headline" id="Week_38:_June_17_-_21">Week 38: June 17 - 21</span></h2>
+<p>In the manual I updated the Forces section.
+Additionally, I updated all the screenshots in various sections, most notably for the compositor nodes. For that I developed a small script that automatically creates screenshots of all the nodes (<a rel="nofollow" class="external text" href="https://gist.github.com/JacquesLucke/65485586a86b2e1de6e3f3b92867947a">Github Gist</a>).
+</p><p>Most of the time this week was spent on a new particle system. The current state can be found in the functions branch. Note, that there is not really an UI yet. Instead there are just a few settings in the modifier that I use for testing. Some things I worked on this week:
+</p>
+<ul><li>Emitters: emit from point, curve and mesh surface.</li>
+<li>Events: Initial generic event system for particles. So far there are two event types: Age Reached and Mesh Collision.</li>
+<li>Multithreading: I already added initial multithreading support, because it is quite simple in the current design. Having it enabled will help make sure that nothing will break threadability.</li></ul>
+<h2><span class="mw-headline" id="Week_39:_June_24_-_28">Week 39: June 24 - 28</span></h2>
+<p>I took 1,5 days off during the week but worked some hours on the weekend.
+I worked almost exclusively on a new particle system this week.
+The general framework (particle container, event handling, ..) is in a fairly good shape now. So, I can start implementing some UI for it next week.
+</p><p>Notable changes:
+</p>
+<ul><li>The particle simulation can contain multiple types of particles.</li>
+<li>An emitter can emit multiple types of particles.</li>
+<li>New particles can be created when particles trigger certain events (e.g. age reached or mesh collision).</li>
+<li>New Vector Adaptor data structure can be put on any memory buffer (the vector has a fixed max size).</li>
+<li>New memory allocator that manages arrays of fixed lengths but with different element sizes.</li>
+<li>Deletion of tagged particles is multithreaded now.</li>
+<li>An event can generate information that can be used by the triggered action (e.g. to bounce off a surface).</li></ul>
+<h2><span class="mw-headline" id="Week_40:_July_01_-_05">Week 40: July 01 - 05</span></h2>
+<p>This week I worked on the new particle system almost all the time. Other than that I wrote the Shader Editor manual page and merged some small patches.
+As planned, I started implementing a node UI for the new particle system this week. I can show some of the WIP results next week.
+</p><p>Notable changes in the functions branch:
+</p>
+<ul><li>Some C++ API functions wrapping BLI_task.h to simplify threading code a bit.</li>
+<li>Commented many important parts of the code: current internal particle system api, Type/Function/DataFlowGraph/FunctionGraph/... classes</li>
+<li>New BParticles node tree type (this part is in Python).</li>
+<li>New IndexedNodeTree structure that makes node tree related lookups more efficient (e.g. find neighbors or nodes with a specific bl_idname).</li>
+<li>Tuples don't need to increment an atomic counter anymore, improving threadability.</li>
+<li>Simplify construction of SmallVector instances from ListBase and keys/values of mappings.</li>
+<li>Improved multi-map implementation, which now also supports small-object-optimization.</li>
+<li>Initial nodes: point/mesh emitter, particle type, collision event, age reached event, kill particle, change direction, explode, gravity force, turbulence force, particle info.</li>
+<li>Allow building a data flow graph from any node tree containing function nodes and data sockets.</li>
+<li>Use the function system to compute inputs for actions when events happen.</li>
+<li>Start generalizing how unlinked inputs in data flow nodes are converted to a data flow graph.</li>
+<li>New monotonic allocator, and use it instead of more complex ones.</li></ul>
+<h2><span class="mw-headline" id="Week_41:_July_08_-_12">Week 41: July 08 - 12</span></h2>
+<p>I continued working on the new particle system, except for fixing one bug related to image saving.
+</p><p>Furthermore, I uploaded a video showing the current state of the system (<a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=2tKpHuq9qEk">Youtube</a>).
+</p><p>Notable changes in the functions branch:
+</p>
+<ul><li>Simplify memory management using array allocator.</li>
+<li>Parallelize distributing tetrahedons at particles.</li>
+<li>Allow events to pass data actions following it.</li>
+<li>Support specifying default values for input sockets.</li>
+<li>Experimented with taking emitter velocity into account.</li>
+<li>Lots of cleanup in the code that parses the node tree and produces the simulation description.</li>
+<li>Very basic temporary caching system.</li>
+<li>New Object socket type.</li>
+<li>Particles have a size now.</li>
+<li>Cache particle blocks for reuse.</li>
+<li>Simplifications to the way particles are identified.</li>
+<li>Support for running actions when new particles are born.</li>
+<li>New StringMap type.</li>
+<li>Testing a new approach to finding dependencies on objects statically.</li></ul>
+<h2><span class="mw-headline" id="Week_42:_July_15_-_19">Week 42: July 15 - 19</span></h2>
+<p>I started the week with a couple of hours on the bug tracker, mostly triaging bug reports that were created after RC1.
+Then I continued working on the particle system.
+</p><p>There is a new screen recording (<a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=Vj19nhhz_Ho">Youtube</a>).
+</p><p>Notable changes in the functions branch:
+</p>
+<ul><li>Initial custom emitter to test the concept.</li>
+<li>Improve storage of previous object positions to interpolate them in a time step.</li>
+<li>Functions can depend on the geometry of other objects now.</li>
+<li>Store a color per particle.</li>
+<li>Experimental Close By Points event.</li>
+<li>Experimental Initial Grid emitter.</li>
+<li>Introduce concept of Offset Handlers and create a Trail node using it.</li>
+<li>Lots of cleanup and splitting up things into separate files.</li>
+<li>Use another integrator when there are no forces acting on a particle type.</li>
+<li>Show particle type names in nodes.</li></ul>
+<h2><span class="mw-headline" id="Week_43:_July_22_-_26">Week 43: July 22 - 26</span></h2>
+<p>I only worked for 3.5 days this week.
+</p>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D5333">D5333</a>: Missing offset in markers names on current frame.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9e3ff9e059baf3cd87aa0fe7ee8081f63df1674f">T67334</a>: Blender does not exit after saving.</li>
+<li>Wrote a document about some technical details of the new particle system (<a rel="nofollow" class="external text" href="../../Source/Nodes/ParticleSystemCodeArchitecture.html">link</a>).</li></ul>
+<p>Notable changes in the functions branch:
+</p>
+<ul><li>Data types of sockets correspond to socket type again.</li>
+<li>New virtual node tree abstraction to simplify iteration over node trees and allow group-inlining more easily later.</li>
+<li>Remove the "Small" prefix from many data structures.</li>
+<li>Simplified how function bodies and type extensions are stored.</li>
+<li>Improve error handling when invalid nodes are connected to certain inputs.</li>
+<li>Expose collision info in separate node instead of in the event node.</li>
+<li>Many input can be controlled per particle now.</li></ul>
+<h2><span class="mw-headline" id="Week_44:_July_29_-_02">Week 44: July 29 - 02</span></h2>
+<p>Notable changes in the functions branch:
+</p>
+<ul><li>More generic input providers for functions that are evaluated per particle.</li>
+<li>Add some more particle attribute types.</li>
+<li>Give particles a unique ID on creation.</li>
+<li>New color socket type and Change Particle Color node.</li>
+<li>Support compiling particle functions down to machine code.</li>
+<li>New data graph builder providing better performance and functionality in less code.</li>
+<li>Support for loading socket values only once instead of in every execution.</li>
+<li>Initial texture color access after collision event.</li>
+<li>Experimented with ways to group unlinked input sockets to reduce overhead.</li></ul>
+<h2><span class="mw-headline" id="Week_45:_August_05_-_09">Week 45: August 05 - 09</span></h2>
+<p>This week I only worked for three days.
+</p>
+<ul><li>Worked one day on the bug tracker triaging ~50 reports.</li>
+<li>Wrote an new <a rel="nofollow" class="external text" href="../../Source/Nodes/UpdatedParticleNodesUI.html">document</a> that presents an updated particle system UI.</li></ul>
+<p>Notable changes in the functions branch:
+</p>
+<ul><li>Did some cleanup in blenlib.</li>
+<li>Fixed a bug some users had with the node search.</li>
+<li>Reimplemented the way lists with in functions.</li></ul>
+<h2><span class="mw-headline" id="Week_46:_August_12_-_16">Week 46: August 12 - 16</span></h2>
+<p>My main task for this week was to gather feedback on the particle nodes proposal. Furthermore, I thought about how to solve different problems that were brought up on <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/particle-nodes-ui/8808">devtalk</a>. Next week, I'll present another updated proposal.
+</p><p>Created three new tasks:
+</p>
+<ul><li>Steps to get particle nodes into Blender 2.82 (<a rel="nofollow" class="external text" href="https://developer.blender.org/T68636">T68636</a>).</li>
+<li>Math with Nodes (<a rel="nofollow" class="external text" href="https://developer.blender.org/T68734">T68734</a>).</li>
+<li>Node Group Inputs (<a rel="nofollow" class="external text" href="https://developer.blender.org/T68733">T68733</a>).</li></ul>
+<p>Notable changes in the functions branch:
+</p>
+<ul><li>Do not reference count types.</li>
+<li>Merged some patches that implement new math operations.</li>
+<li>Simplify the way attributes are stored.</li>
+<li>New Map, Set and SetVector implementation.</li></ul>
+<h2><span class="mw-headline" id="Week_47:_August_19_-_23">Week 47: August 19 - 23</span></h2>
+<ul><li>I uploaded an updated <a rel="nofollow" class="external text" href="../../Source/Nodes/UpdatedParticleNodesUI2.html">particle nodes UI proposal</a>. After some discussion I started updating the implementation.</li>
+<li>RNA: Cleanup PointerRNA struct (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa1aa4a259713f26c32a5fac4adbe0751e0479f5b">a1aa4a2</a>).</li>
+<li>UI: Remove "Show Frame Indicator" option (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBec07340004480abe037015b9888390b6b637f317">ec07340</a>).</li>
+<li>Timeline: refactor cache drawing (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB34921e9e5671df4f8932ba671ee5703ca4739ecb">34921e9</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBecfe020e6c8f9ded6a32300b9de43f29e1009c5d">T68951</a>: Incrementing int property causes overflow.</li>
+<li>Memory: Fix guarded aligned malloc with small alignment (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBf2cab8267f22293fc28de9a87f81b535b7955020">f2cab82</a>).</li></ul>
+<p>Notable changes in the functions branch:
+</p>
+<ul><li>Started implementing the updated proposal.</li>
+<li>Various cleanups and improvements for blenlib.</li></ul>
+<h2><span class="mw-headline" id="Week_48:_August_26_-_30">Week 48: August 26 - 30</span></h2>
+<p>I only worked three days this week.
+</p>
+<ul><li>Blenlib: New ArrayRef data structure (<a rel="nofollow" class="external text" href="https://developer.blender.org/D5592">D5592</a>).</li>
+<li>Helped reviewing the shading nodes gsoc code.</li></ul>
+<p>Changes in functions branch:
+</p>
+<ul><li>Removed some abstractions that are not useful anymore.</li>
+<li>Changed how the world state is tracked (e.g. to handle moving emitters).</li>
+<li>Initial string socket type.</li>
+<li>Initial support for vertex groups in mesh emitter to control the density.</li></ul>
+<h2><span class="mw-headline" id="Week_49:_September_02_-_06">Week 49: September 02 - 06</span></h2>
+<ul><li>Wrote an addon for Andy (<a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/looping_slides">Github</a>).</li>
+<li>Mesh Batch Cache: Fix threading issue (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB05721cd00ad164822e270500237fc9457d969812">05721cd</a>).</li></ul>
+<p>Changes in functions branch:
+</p>
+<ul><li>Access surface data in mesh emitter action.</li>
+<li>Improved Change Velocity node.</li>
+<li>Initial variation input for Age Reached Event node.</li>
+<li>New Change Size node.</li>
+<li>New node to access vertex weights at emission or collision position.</li>
+<li>Take face area into account in mesh emitter.</li>
+<li>Support for selecting the uv map by name when accessing texture information on a mesh surface.</li>
+<li>Initial Size Over Time node.</li>
+<li>Initial Falloff implementation with new Constant and Point Distance Falloff nodes.</li>
+<li>New BParticles Output modifier that can be used to splitup the simulated particles into multiple objects.</li></ul>
+<h2><span class="mw-headline" id="Week_50:_September_09_-_13">Week 50: September 09 - 13</span></h2>
+<p>This week the first code from the functions branch was committed to master, only generic C++ libraries though.
+In particular, the following data structures have been merged: Array, ArrayRef, MutableArrayRef, Set, VectorSet, Map, StringMap, StringRef, Vector, Stack and IndexRange.
+</p><p>Changes in the functions branch:
+</p>
+<ul><li>Updated attribute block storage which is in blenkernel now.</li>
+<li>New Drag Force node.</li>
+<li>Multiple density modes in Mesh Emitter node.</li>
+<li>Project and Dot Product operation in vector math node.</li>
+<li>Experiments with a mesh force node.</li>
+<li>Initial Mesh Distance Falloff node.</li>
+<li>Tested a BitArrayRef implementation.</li>
+<li>New Custom Event node.</li>
+<li>New Change Particle Position node.</li>
+<li>Use falloff in Turbulence Force node.</li>
+<li>Initial Always Execute node.</li>
+<li>Tested new NamedTupleRef abstraction.</li>
+<li>Changed naming from Particle Type to Particle System.</li></ul>
+<h2><span class="mw-headline" id="Week_51:_September_16_-_20">Week 51: September 16 - 20</span></h2>
+<p>Monday and Tuesday I mostly worked on the particle system to get it into a state that can be presented to the team.
+Wednesday, I made presented the current state of the particle system to the team in two 90 minute sessions.
+The remaining time on Wednesday, Thursday and Friday I worked on the bug tracker. 
+</p>
+<ul><li>Outliner: Add descriptions to outliner.object_operation (<a rel="nofollow" class="external text" href="https://developer.blender.org/D5852">D5852</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB87ebc4ef4f2029a8f4fb21ea433c4ca189b243d5">T70060</a>: Add bgl wrapper for glVertexAttribIPointer</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB44d0c868bf06967e29f545dee420c4dab9b7c8c0">T70101</a>: Displace modifier handles empty vertex group incorrectly</li>
+<li>Reviewed and merged some smaller patches (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBfb6ef2ec8d0367e5d3433787561ee56773f9bee3">D5847</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB60af4d207b7008fb0ed559ac4372ceba8a13406a">D5744</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB7a83b64f7bd39934cf73dcca94598b610e829fb4">D5716</a>).</li></ul>
+<p>Changes in the functions branch:
+</p>
+<ul><li>Improved error handling when connecting wrong sockets.</li>
+<li>More centralized ownership of many parts to allow for optimizations in the future.</li>
+<li>Simplified adding a new particle simulation from the add menu.</li>
+<li>New Execute input for Initial Grid and Point Emitter.</li>
+<li>Added some node mockups (can be activated in the n panel).</li>
+<li>Added missing nodes to the add menu.</li>
+<li>New particle randomness input.</li>
+<li>Improved collision detection with moving meshes.</li>
+<li>Initial particle group implementation.</li></ul>
+<h2><span class="mw-headline" id="Week_52:_September_23_-_27">Week 52: September 23 - 27</span></h2>
+<p>Took two days off.
+</p>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB44d0c868bf06967e29f545dee420c4dab9b7c8c0">T70101</a>: Displace modifier handles empty vertex group incorrectly.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB4987f28ed248de44e5fc00f197012bed45514ca1">T70177</a>: Crash when calling to_track_quat() without arguments.</li>
+<li>Uploaded a video showing some particle nodes (<a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=A05UghlpVPs">Youtube</a>).</li></ul>
+<p>Changes in the functions branch:
+</p>
+<ul><li>Replace Falloff with weight input for more flexibility.</li>
+<li>Various improvements in the functions system (e.g. improved ownership handling).</li></ul>
+<h2><span class="mw-headline" id="Week_53:_October_14_-_18">Week 53: October 14 - 18</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB2a9b162d94576d0182661179cf0500cfbc85236f">T70605</a>: Incorrect darken and lighten rgb mix mode.</li>
+<li>General bug tracker work.</li>
+<li>Learned the basics of how to use the Thread Building Blocks library. That might become useful to do more efficient multithreading for particle nodes.</li>
+<li>Wrote a document outlining the current core concepts for a node based particle system (<a rel="nofollow" class="external text" href="../../Source/Nodes/ParticleNodesCoreConcepts.html">link</a>).</li></ul>
+<p>Right now I'm actually not working in the functions branch, but in the "functions-experimental-refactor" branch. The reason for that is that I want to do a major refactoring without breaking the current builds. Those can be used to play with the new system already. The goal of the refactor is to allow for more powerful particle functions and to increase the throughput when evaluating functions.
+</p>
+<h2><span class="mw-headline" id="Week_54:_October_21_-_25">Week 54: October 21 - 25</span></h2>
+<p>Besides more refactoring work, this week was mostly covered by the Blender Conference.
+</p>
+<h2><span class="mw-headline" id="Week_55:_October_28_-_01">Week 55: October 28 - 01</span></h2>
+<ul><li>Object Scatter: new Use Normal rotation option (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBAdbfabe387097a7bdb8d7d73bc0c9cd0311d9926a">dbfabe3</a>).</li></ul>
+<p>This week I continued to work on the refactoring. I'm almost done implementing the core structures for generic type handling and efficient function evaluation. 
+</p><p>Next week I want to finish the refactor and delete the code that has been replaced. After that I will start working on features for the particle nodes system again.
+</p>
+<h2><span class="mw-headline" id="Week_56:_November_04_-_08">Week 56: November 04 - 08</span></h2>
+<p>Finished the refactor I worked on the last couple of weeks. The old function system has been removed and the new code is now merged into the functions branch. The particle system has been updated to use the new system.
+I also updated the math nodes to test the approach explained in <a rel="nofollow" class="external text" href="https://developer.blender.org/T68734">T68734</a>.
+Furthermore, I started a design topic on data type names in <a rel="nofollow" class="external text" href="https://developer.blender.org/T71384">T71384</a>.
+</p><p>Next week I will work on features that affect users more directly again.
+</p>
+<h2><span class="mw-headline" id="Week_57:_November_11_-_15">Week 57: November 11 - 15</span></h2>
+<ul><li>Spent some time studying other particle nodes systems.</li>
+<li>Changed the way forces work in bparticles. Instead of having individual force nodes, there is only one that takes a vector input now.</li>
+<li>New Perlin Noise node.</li>
+<li>New Closest Point on Object node.</li>
+<li>Initial node groups implementation. Only works with data sockets for now. I continue to work on this next week.</li>
+<li>General ongoing refactoring and experimentation in various parts of the code.</li></ul>
+<h2><span class="mw-headline" id="Week_58:_November_18_-_22">Week 58: November 18 - 22</span></h2>
+<p>I spent most of this week testing different ways to handle node groups of function/particle nodes internally. I tried a couple of different approaches, but most failed in one aspect or another. I ended up using the group-inlining strategy that is used for materials as well. However, I remember the where every inlined node comes from and handle unlinked group inputs differently. I'm not entirely done implementing this approach yet, so I'll continue to work on it next week.
+</p><p>As byproduct of this weeks work, I cleaned up quite some code again and added some utility functions on blenlib data structures.
+Lastly, I implemented a simple Dot file export library to be able to write graph visualizers more easily. I was going to write a dot exporter for the 4th time this week, so it was about time to make this a bit easier.
+</p>
+<h2><span class="mw-headline" id="Week_59:_November_25_-_29">Week 59: November 25 - 29</span></h2>
+<ul><li>Bought, built and setup my new workstation.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D5827">D5827</a>: Interpolation node.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D5957">D5957</a>: Additional math node functions.</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D5473">D5473</a>: Add pressure forces to cloth sim.</li>
+<li>Studied node systems in other software a bit more.</li>
+<li>Improved the dot export library.</li>
+<li>Started using the inlined node tree structure I developed last week.</li>
+<li>Started experimenting with a persistent Surface Locations concept. This will allow e.g. particles to reference their birth position on a mesh and stick to it when the mesh moves.</li></ul>
+<h2><span class="mw-headline" id="Week_60:_December_02_-_06">Week 60: December 02 - 06</span></h2>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D5788">D5788</a>: Add ability to create internal springs to the cloth sim.</li>
+<li>Experimented more with "Surface Hooks". Seems to work quite well so far.</li>
+<li>One can access the position, normal, vertex weight and image colors at surface hooks now.</li>
+<li>Execute and Influence sockets work in node groups now.</li>
+<li>Experimented using a new IDHandle data structure. It's a handle to a Blender ID data-block that can be stored per particle more safely.</li>
+<li>Simplified a bunch of particle node tree parsing code.</li>
+<li>Improved node group user experience. There is a new (maybe temporary) shortcut V, that helps managing the node group interface.</li>
+<li>Implemented a function evaluation optimization that reduces the amount of unnecessary computation (e.g. when some math node does not depend on any particle attribute).</li></ul>
+<h2><span class="mw-headline" id="Week_61:_December_09_-_13">Week 61: December 09 - 13</span></h2>
+<ul><li>Optimized evaluation of math nodes.</li>
+<li>Initial support custom particle attributes.</li>
+<li>Initial Custom Emitter node.</li>
+<li>New simple (internal) class ID system, to compare c++ types.</li>
+<li>Vectorized and optimized various nodes that work with surface hooks.</li>
+<li>New Emitter Time Info node.</li>
+<li>New Sample Object Surface node with support for density control with vertex weights.</li>
+<li>New Get List Elements node.</li>
+<li>New Find Non Close Points node.</li>
+<li>Fix crash when using Trails or Explode node with a single particle system (still need a better warning system).</li>
+<li>New Select node (more general Switch node).</li>
+<li>Extended the CPPType class with more functions that I use a lot.</li></ul>
+<h2><span class="mw-headline" id="Week_62:_December_16_-_20">Week 62: December 16 - 20</span></h2>
+<ul><li>New Random Floats node.</li>
+<li>New Random Vector node.</li>
+<li>New Random Vectors node with multiple sampling methods.</li>
+<li>New Vector from Value node.</li>
+<li>New Multiply Vector with Value node.</li>
+<li>New start-stop mode in Float Range node.</li>
+<li>New Spawn Particles node.</li>
+<li>New Join Text List node.</li>
+<li>Made node groups look more similar to builtin nodes.</li>
+<li>Support for removing execute sockets.</li>
+<li>New (internal) IndexMask class that replaces the use of ArrayRef&lt;uint&gt; in many places.</li>
+<li>Replaced many builtin nodes with groups.</li>
+<li>Support for opening/closing groups with Tab.</li>
+<li>Automatically show node groups from nodelib directory in the node search.</li>
+<li>New Node Instance Identifier node. It outputs different identifier for this node when it is used in a group which is used multiple times.</li>
+<li>Started using TBB (Intels Thread Building Blocks) in some places.</li></ul>
+<h2><span class="mw-headline" id="Week_63:_December_23_-_27">Week 63: December 23 - 27</span></h2>
+<p>This week I took two days off and was sick a couple of days. I did some work on the bug tracker and fixed some minor issues in the functions branch.
+</p>
+<h2><span class="mw-headline" id="Week_64:_December_30_-_03">Week 64: December 30 - 03</span></h2>
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB8df339438a051ffb31384fa700900c50d63f9275">T72682</a>: Regression when moving markers while holding ctrl.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rB485ff4b9bf44ce65ea19314b8371ec8659c12712">T72423</a>: Incorrect tooltips in curve profile layout.</li>
+<li>Some more generic bug tracker work.</li></ul>
+<ul><li>Created some simple c++ wrappers for TBB to simplify multithreading in some cases.</li>
+<li>Every particle attribute is now stored in a continuous array after the simulation, instead of being chunked in multiple smaller arrays. This makes many operations easier.</li>
+<li>Parallelized more parts of the simulation.</li>
+<li>New StringMultiMap data structure which maps strings to an array of values.</li>
+<li>Changed how the function network is generated based on the node tree.</li>
+<li>Implemented initial constant folding after the function network has been generated.</li></ul>
+<p>These changes are mostly internal. Their goal was to achieve better performance and to allow for new features like access to attributes of other particle systems. Furthermore, I'm also still brainstorming about how we could integrate the particle system with other simulation systems in the future, but I do not have a fully satisfying solution yet.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112092105
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.150 seconds
+Preprocessor visited node count: 270/1000000
+Preprocessor generated node count: 276/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4329-0!canonical and timestamp 20240112092105 and revision id 13976
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;oldid=13976">https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;oldid=13976</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 5 January 2020, at 16:06.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:JacquesLucke/Reports/2019.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:JacquesLucke/Reports/2019" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/JacquesLucke.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/JacquesLucke.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/JacquesLucke.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;oldid=13976" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2019&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.148","walltime":"0.150","ppvisitednodes":{"value":270,"limit":1000000},"ppgeneratednodes":{"value":276,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112092105","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":44});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8445678ab870662e","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

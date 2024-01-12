@@ -1,0 +1,2843 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Ankitm/Reports/2021 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Ankitm/Reports/2021","wgTitle":"Ankitm/Reports/2021","wgCurRevisionId":25204,"wgRevisionId":25204,"wgArticleId":5697,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Ankitm/Reports/2021","wgRelevantArticleId":5697,"wgRequestId":"44e06d9f728d7ece43ffc56a","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Ankitm","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","jquery.tablesorter","jquery.makeCollapsible","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Ankitm_Reports_2021 rootpage-User_Ankitm skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2021.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AAnkitm%2FReports%2F2021" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2021.html#21_June"><span class="tocnumber">1</span> <span class="toctext">21 June</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2021.html#14_June"><span class="tocnumber">2</span> <span class="toctext">14 June</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2021.html#7_June"><span class="tocnumber">3</span> <span class="toctext">7 June</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2021.html#31_May"><span class="tocnumber">4</span> <span class="toctext">31 May</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2021.html#24_May"><span class="tocnumber">5</span> <span class="toctext">24 May</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2021.html#17_May"><span class="tocnumber">6</span> <span class="toctext">17 May</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2021.html#10_May"><span class="tocnumber">7</span> <span class="toctext">10 May</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2021.html#3_May"><span class="tocnumber">8</span> <span class="toctext">3 May</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2021.html#26_April"><span class="tocnumber">9</span> <span class="toctext">26 April</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2021.html#19_April"><span class="tocnumber">10</span> <span class="toctext">19 April</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2021.html#12_April"><span class="tocnumber">11</span> <span class="toctext">12 April</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2021.html#5_April"><span class="tocnumber">12</span> <span class="toctext">5 April</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2021.html#29_March"><span class="tocnumber">13</span> <span class="toctext">29 March</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Ankitm/Reports/2021</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Ankitm.html" title="User:Ankitm">User:Ankitm</a>&lrm; | <a href="../Reports.html" title="User:Ankitm/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h3><span class="mw-headline" id="21_June">21 June</span></h3>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/D11675">D11675</a></td>
+<td>HELP: Trying to move a file to C++ and having issues.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89307">T89307 </a></td>
+<td>Blender crashes when using operator panels on macOS.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80154">T80154 </a></td>
+<td>Mantaflow rendering unstable (when using multiple fluid domains).
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88844">T88844 </a></td>
+<td>AMD GPU - EEVEE - Compositor is broken again in 2.93 (Regression) - Alpha Channel crazy behaviour is back..
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83513">T83513 </a></td>
+<td>Faces flicker in edit mode on all objects except the default cube
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88087">T88087 </a></td>
+<td>Importing OBJ error
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88181">T88181 </a></td>
+<td>Artifacts showing even on default cube, when scaled. Happening especially in Edit Mode, Eevee render view and face orientation.
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88783">T88783 </a></td>
+<td>Material Icon Generator Freezes Blender
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89161">T89161 </a></td>
+<td>blender not starting
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89201">T89201 </a></td>
+<td>Blender 2.93 Crashes on Launch on macOS Mojave 10.14.6
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89383">T89383 </a></td>
+<td>Dont&#39; working Blender for apple m1 at frist time.
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85799">T85799 </a></td>
+<td>Wintab crash on window close.
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85520">T85520 </a></td>
+<td>Cycles OpenCL - Broken kernels w/RX Vega 64 - Blender 2.92.0
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88477">T88477 </a></td>
+<td>Blender 2.92 problem with particle istance - fur don't touch the mesh
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87828">T87828 </a></td>
+<td>Mantaflow error when using blender in background mode
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86744">T86744 </a></td>
+<td>Cannot sculpt under masked geometry 2.92
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89265">T89265 </a></td>
+<td>Use-after-free when tabbing through numeric inputs
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88366">T88366 </a></td>
+<td>Window title shows unsaved indicator while loading
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89421">T89421 </a></td>
+<td>OBJ/MTL: import fails for .mtl files with texture options -o u v, -s u v
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89431">T89431 </a></td>
+<td>mantaflow instability on high timesteps
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88014">T88014 </a></td>
+<td>Freestyle Lines Stopping Short of Vertices &amp; Partially Failing
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85212">T85212 </a></td>
+<td>Mantaflow instability
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88748">T88748 </a></td>
+<td>Crash while selecting objects
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89000">T89000 </a></td>
+<td>Hair dynamics issue
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88796">T88796 </a></td>
+<td>Blender 2.93 LTS Setup Wizard cancels installation with error codes 2503, 2502
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89198">T89198 </a></td>
+<td>Particle emission from object random direction
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88923">T88923 </a></td>
+<td>Render of 2.93 splash screen fails.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88805">T88805 </a></td>
+<td>Keeps Freezing
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86672">T86672 </a></td>
+<td>Copy node_tree in ShaderNodeCustomGroup works incorrectly
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="14_June">14 June</span></h3>
+<p>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D11613">D11613</a>: Fix for T89129: Blender file dialog displays in-progress Safari downloads as a folder.
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88472">T88472</a></td>
+<td>blender 3d particle system crash
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89201">T89201</a></td>
+<td>Blender 2.93 Crashes on Launch on macOS Mojave 10.14.6
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85212">T85212</a></td>
+<td>Mantaflow instability.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88844">T88844</a></td>
+<td>AMD GPU - EEVEE - Compositor is broken again in 2.93 (Regression) - Alpha Channel crazy behaviour is back..
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88877">T88877</a></td>
+<td>2.93: Crash on system with a non-English locale.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88930">T88930</a></td>
+<td>command line arg "--python-use-system-env" not working anymore.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85270">T85270</a></td>
+<td>DopeSheet Massive Performance Drop when it is used to store keyframes.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86663">T86663</a></td>
+<td>Blender freezes with big custom data
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88679">T88679</a></td>
+<td>Playback locks to frame with Sync-to-Audo, when changing Sound Settings
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88754">T88754</a></td>
+<td>Intel HD graphics: Changing Roughness Value to 0 causes mesh to be black.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88779">T88779</a></td>
+<td>Mix/Add nodes breaks Eevee AO render pass if one socket is unfilled.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89247">T89247</a></td>
+<td>Select Similar Face Regions triggers AddressSanitizer crash
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84001">T84001</a></td>
+<td>Mantaflow Initial velocity not working PROPERLY
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89030">T89030</a></td>
+<td>cannot use external cache in particule system
+</td></tr>
+<tr>
+<td>Needs info from developers</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87394">T87394</a></td>
+<td>Hairs &amp; custom normals
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81778">T81778</a></td>
+<td>2.90 crash when opening "Shading" viewport
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83475">T83475</a></td>
+<td>macOS Big Sur - Scroll Wheel Bug
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83975">T83975</a></td>
+<td>Screen randomly goes black, computer freezes, but if it doesn't freeze, Blende is closed when the screen returns.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86235">T86235</a></td>
+<td>Importing objects gets around log(n) slower the more objects are in the scene
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86616">T86616</a></td>
+<td>Unknown Error in cuMemFree9mem.device_pointer)(device_cuda_impl.cpp:975) in Cycles.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88281">T88281</a></td>
+<td>Poselibrary 'flip pose' function is causing lattice controls to rotate unexpectedly
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88842">T88842</a></td>
+<td>AMD GPU rendering issue
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89059">T89059</a></td>
+<td>Zoom not working the same back and front.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89177">T89177</a></td>
+<td>Blender does not open
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89256">T89256</a></td>
+<td>access violation
+</td></tr>
+<tr>
+<td>Needs triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88796">T88796</a></td>
+<td>Blender 2.93 LTS Setup Wizard cancels installation with error codes 2503, 2502
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87564">T87564</a></td>
+<td>Geometry Nodes: Using "Input-Value"-node with "Attribute-Math-Divide"-node leads to incorrect results in following "Attribute-Math-Modulo"-node
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88529">T88529</a></td>
+<td>Impossible to avoid Blender create a image file when baking the animation to a own scene format.
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88652">T88652</a></td>
+<td>CPU error message OIDN MacOS M1
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="7_June">7 June</span></h3>
+<p>Committed <a rel="nofollow" class="external text" href="http://developer.blender.org/rB91d3a5486967">rB91d3a5486967</a>: Fix build error, remove duplicate include.
+</p><p>Created some meta lists for issues like mac + AMD crashes, pulseaudio issues on linux etc. Will share with triaging team soon.
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T71346">T71346</a></td>
+<td>FileBrowser regression, new dialog does not take full paths
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86312">T86312</a></td>
+<td>Drivers driven by hide_viewport (Disable in Viewports) objects in the outliner require a dependency update.
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88387">T88387</a></td>
+<td>Experimental Blender builds hard depend on libpulse on Linux
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88650">T88650</a></td>
+<td>blender viewport overlays break
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89043">T89043</a></td>
+<td>Import dialog throws file not found error
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89075">T89075</a></td>
+<td>Blender Crashes when saving
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86169">T86169</a></td>
+<td>Modifier Shortcuts Not Working on old files in 2.9.2
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87062">T87062</a></td>
+<td>Startup crash
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T78313">T78313</a></td>
+<td>Looptools Gstretch crash.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82081">T82081</a></td>
+<td>Color Management render view only has 'standard'.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85756">T85756</a></td>
+<td>Freeze option menu.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87996">T87996</a></td>
+<td>Viewport performance degradation - macOS resolution/scaling issue.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88169">T88169</a></td>
+<td>Properties pin tab showing BendyBone edit mode variables.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88570">T88570</a></td>
+<td>Crash when saving after pressing ctrl+S twice..
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88956">T88956</a></td>
+<td>Blender 2.93.0 will not open on MacMini.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T89021">T89021</a></td>
+<td>Focus to main window does not occur after pressing it while render window is visible.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88404">T88404</a></td>
+<td>use-after-free crash after setting scene's render.engine inside custom render engine context
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T77651">T77651</a></td>
+<td>ChromeOS: Black screen/window on startup:
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T78071">T78071</a></td>
+<td>Object drivers driven by outliner visibility not updating automatically
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87159">T87159</a></td>
+<td>Crash when changing input passes for viewport denoising
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87866">T87866</a></td>
+<td>Boolean modifier - Intersect option - not working / artifacts while doing 3D Sectioning
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87927">T87927</a></td>
+<td>AMD Radeon 6900XT: Viewport Tearing Artifact in weight paint mode
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88048">T88048</a></td>
+<td>Boolean modifier - Intersect option -  spike type artifacts while using Hole Tolerant option
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88272">T88272</a></td>
+<td>Bone roll messed up after import as FBX
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88837">T88837</a></td>
+<td>Pre load update is after a node tree update
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88877">T88877</a></td>
+<td>2.93: Crash on system with a non-English locale
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86176">T86176</a></td>
+<td>Render properties. Color management lost options. Regression
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86368">T86368</a></td>
+<td>Crash/segfault on double-tap-a in weight paint mode with mask
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86409">T86409</a></td>
+<td>Cuda Error Illegal Address when hiding objects while in render view
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86568">T86568</a></td>
+<td>Unexpected crash while rendering a video.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87509">T87509</a></td>
+<td>Blender suddenly crashes when I try to save
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87847">T87847</a></td>
+<td>Blender crashes
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88468">T88468</a></td>
+<td>F3 search crash custom node tree
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88472">T88472</a></td>
+<td>blender 3d particle system crash
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88509">T88509</a></td>
+<td>Macbook keyboard input language disables keyboard input
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88789">T88789</a></td>
+<td>WRL import issue
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88963">T88963</a></td>
+<td>Transfer Mode not working in Xray with Empty images in the background
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84300">T84300</a></td>
+<td>File save is very slow under Big Sur, "Listing Dirs..." for minutes
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87646">T87646</a></td>
+<td>Strange bug with editing default shapekeys
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87795">T87795</a></td>
+<td>Boolean modifier crashes Blender using intersect
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88796">T88796</a></td>
+<td>Blender 2.93 LTS Setup Wizard cancels installation with error codes 2503, 2502
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87498">T87498</a></td>
+<td>Backward compatibility issues
+</td></tr>
+<tr>
+<td>Subtasks</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83531">T83531</a></td>
+<td>FBX Export Breaks Bone Roll Values - Simple Example.
+</td></tr>
+<tr>
+<td>Subtasks</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87181">T87181</a></td>
+<td>Invalid armature (bone roll flipped?) when importing FBX 7.5 from mixamo.com.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="31_May">31 May</span></h3>
+<ul><li>Reviewed <a rel="nofollow" class="external text" href="http://developer.blender.org/D11466">D11466</a>: Fix for <a rel="nofollow" class="external text" href="http://developer.blender.org/T87867">T87867</a>: The Blender File Open dialog triggers OneDrive Files On-Demand downloads (macOS)..</li></ul>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88386">T88386</a></td>
+<td>arm64: Viewport and Timeline jump large distances when scrolling the pointer off screen using Shift-Middle Mouse
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87707">T87707</a></td>
+<td>Smoke doesn't work correctly.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87996">T87996</a></td>
+<td>Viewport performance degradation - macOS resolution/scaling issue.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88438">T88438</a></td>
+<td>Libraries Changes for Blender 3.0.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88529">T88529</a></td>
+<td>Impossible to avoid Blender create a image file when baking the animation to a own scene format..
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T77651">T77651</a></td>
+<td>ChromeOS: Black screen/window on startup:
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T78071">T78071</a></td>
+<td>Object drivers driven by outliner visibility not updating automatically
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87159">T87159</a></td>
+<td>Crash when changing input passes for viewport denoising
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88236">T88236</a></td>
+<td>Weird Tab and redraw behavior in color popup
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88272">T88272</a></td>
+<td>Bone roll messed up after import as FBX
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88877">T88877</a></td>
+<td>2.93: Crash on system with a non-English locale from
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86312">T86312</a></td>
+<td>Drivers driven by hide_viewport (Disable in Viewports) objects in the outliner require a dependency update.
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87650">T87650</a></td>
+<td>Eevee AO glowing in material preview, short range at default trace precision.
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87820">T87820</a></td>
+<td>Continuous Grab bug
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88212">T88212</a></td>
+<td>2.93 ARM64 Beta Crashes from startup on MacOS 11.4 Beta
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88774">T88774</a></td>
+<td>Bookmarks in file manager doesn&#39;t allow to delete a folder removed from the system
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88845">T88845</a></td>
+<td>Blender 2.93 LTS crash on macOs big sur
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83173">T83173</a></td>
+<td>EXCEPTION_ACCESS_VIOLATION in nvoglv64.dll
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86169">T86169</a></td>
+<td>Modifier Shortcuts Not Working on old files in 2.9.2
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86518">T86518</a></td>
+<td>collapse at the moment of opening the file
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87062">T87062</a></td>
+<td>Startup crash
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87237">T87237</a></td>
+<td>Jittery movement in viewport
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87503">T87503</a></td>
+<td>Trouble with Geometry Nodes
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87509">T87509</a></td>
+<td>Blender suddenly crashes when I try to save
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87646">T87646</a></td>
+<td>Strange bug with editing default shapekeys
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88468">T88468</a></td>
+<td>F3 search crash custom node tree
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88509">T88509</a></td>
+<td>Macbook keyboard input language disables keyboard input
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88827">T88827</a></td>
+<td>viewport denoiser won't work on blender 2.93.0
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88186">T88186</a></td>
+<td>[2.92] Crash when loading mp3 file in VSE
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88484">T88484</a></td>
+<td>Compositor: adding viewer node with volume object causes crash in DebugInfo::graphviz
+</td></tr>
+<tr>
+<td>Updated</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83531">T83531</a></td>
+<td>FBX Export Breaks Bone Roll Values - Simple Example.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="24_May">24 May</span></h3>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80595">T80595</a></td>
+<td>Assigning multiple materials to one face makes it invisible
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83558">T83558</a></td>
+<td>New Graphics card is not cuda compatible for path tracing
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87141">T87141</a></td>
+<td>RTX ILLEGAL ADDRESS CRASH
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88406">T88406</a></td>
+<td>Lineart modifier Stroke and mesh aliasing.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88662">T88662</a></td>
+<td>Cannot Apply Multi Objects
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86381">T86381</a></td>
+<td>Rendering in Command line throws "Error: Cannot read file..."
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88620">T88620</a></td>
+<td>I've download 3 versions of this software. Yet I still can't select or edit anything that matters. Trash!!! Trash!!!! Trash!!!!!
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86023">T86023</a></td>
+<td>Sculpting: Ctrl+S reverts recent progress. .
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87482">T87482</a></td>
+<td>Geometric nodes do not transfer vertex groups. .
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88064">T88064</a></td>
+<td>Liquid does not fluids continously.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88419">T88419</a></td>
+<td>Is macOS Mojave not supported anymore?.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85529">T85529</a></td>
+<td>Rigid body constraint hinge shift with animated object
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85951">T85951</a></td>
+<td>Blender 2.91.2 VSE MPEG-4 video outputs are being rejected by YouTube
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86264">T86264</a></td>
+<td>Add Handlers to Tools
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87739">T87739</a></td>
+<td>Line Art further improvement list
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87801">T87801</a></td>
+<td>Eevee ambient occlusion is incorrect on M1 macMini
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87868">T87868</a></td>
+<td>Plane with transparent scattered as particle generates artifact in the intersection with the emitter object
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87871">T87871</a></td>
+<td>Vertex Weight Transfer in LineArt may not work when Remove Double option is enabled
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87938">T87938</a></td>
+<td>Thread lock on GPU rendering
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88503">T88503</a></td>
+<td>Geometry nodes: Crash when using attribute proximity on mesh primitives when moving/rotating/scaling object
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88623">T88623</a></td>
+<td>Crash when rendering animation with mpeg-1
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88483">T88483</a></td>
+<td>Blender freezes
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="17_May">17 May</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB2e7d3ad7b51b">rB2e7d3ad7b51b</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11323">D11323</a>: macOS build: set minimum deployment target correctly</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB704f56d68f3e">rB704f56d68f3e</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11328">D11328</a>: macOS build: set minimum deployment target correctly</li></ul>
+<p><br />
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82643">T82643</a></td>
+<td>Crash in BlendfileLoadingBaseTest when reading a file with metaball
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87231">T87231</a></td>
+<td>macOS: Glass shader is black in viewport.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88182">T88182</a></td>
+<td>Touchpad not working in Pop!OS.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88186">T88186</a></td>
+<td>[2.92] Crash when loading mp3 file in VSE.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83945">T83945</a></td>
+<td>Reflection of smoke on object surface has white box surrounding
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85708">T85708</a></td>
+<td>White Noise Glitch using Value Attribute of Particle Instances
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86909">T86909</a></td>
+<td>Startup file opens as a blend file, but not as a startup
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87486">T87486</a></td>
+<td>Can't open file with modifiers to a grease pencil library override
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87830">T87830</a></td>
+<td>Multiresolution displacement baking do not work properly
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88113">T88113</a></td>
+<td>Use after free: Baking Rigid Body physics causes instant crash.version
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88161">T88161</a></td>
+<td>Dragging nodes and objects are delayed in 2.93
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88419">T88419</a></td>
+<td>Is macOS Mojave not supported anymore?
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88484">T88484</a></td>
+<td>Compositor: adding viewer node with volume object causes crash in DebugInfo::graphviz
+</td></tr>
+<tr>
+<td>Needs info from Developers</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81011">T81011</a></td>
+<td>Mantaflow - Flickering Square pattern of the particles
+</td></tr>
+<tr>
+<td>Needs info from Developers</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81968">T81968</a></td>
+<td>[Mantaflow] Generating a huge number of particles as substeps increase
+</td></tr>
+<tr>
+<td>Needs info from Developers</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82419">T82419</a></td>
+<td>Grease Pencil mask error
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83432">T83432</a></td>
+<td>GPU render fails with Cycles
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86216">T86216</a></td>
+<td>EXCEPTION_ACCESS_VIOLATION
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86260">T86260</a></td>
+<td>Blender crash after baking a few frames of smoke simulation
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86389">T86389</a></td>
+<td>Improve: Curve Mesh discontinuity with varying point radii
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86984">T86984</a></td>
+<td>OpenVDB files don't appear in Cryptomatte, Object ID or Material IDfirst start".
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87040">T87040</a></td>
+<td>Blender opening new windows very slow
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87123">T87123</a></td>
+<td>Blender Crashes upon Closing RDP Session
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87362">T87362</a></td>
+<td>Particles Not Rendering
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87789">T87789</a></td>
+<td>baking high res mantaflow sims ( both fluids and gas/smoke ) crashes blender 2.92
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88057">T88057</a></td>
+<td>freezing in working process
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88244">T88244</a></td>
+<td>Eevee: Blender crashes when rendering complex scenes with Stereoscopy and Motion Blur
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88305">T88305</a></td>
+<td>blender crash
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88386">T88386</a></td>
+<td>Viewport and Timeline will jump large distances when scrolling the pointer off screen using Shift-Middle Mouse ARM64
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88483">T88483</a></td>
+<td>Blender freezes
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88419">T88419</a></td>
+<td>Is macOS Mojave not supported anymore?
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="10_May">10 May</span></h3>
+<p>Tried to fix 1. deprecation warnings in glog and 2. size of struct is different in C-C++ in bf_editor_space_node.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB193425ce1db1">rB193425ce1db1</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11207">D11207</a>: Cycles: fix inconsistent-missing-override warnings</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB0e581f619670">rB0e581f619670</a>: Cleanup: Fix missing-braces warning on macOS Clang</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB49cb30bb0c0c">rB49cb30bb0c0c</a>: Cleanup: Fix inconsistent-missing-override warning</li></ul>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Comment</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88089">T88089</a></td>
+<td>Animation playback in viewport corrupts sound output on linux.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86923">T86923</a></td>
+<td>Bledner-2.93 Pulseaudio crack in start playback
+</td></tr>
+<tr>
+<td>Resolved</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84268">T84268</a></td>
+<td>Crash when selecting in weight mode (Paint Mask) as "Resolved".
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82788">T82788</a></td>
+<td>Screen flickers / goes black/ red when starting up Blender in fullscreen via startup file
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85641">T85641</a></td>
+<td>Freeze when using Object.ray_cast in a driver script
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86194">T86194</a></td>
+<td>Blender crashes with Noise Texture Node + Hair Particle System + Eevee.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86922">T86922</a></td>
+<td>Eevee: Rendering particle hair results in plain white pixels
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87486">T87486</a></td>
+<td>Can't open file with modifiers to a grease pencil library override
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88233">T88233</a></td>
+<td>Crash at playing viewport shading animation after resizing 3D viewport editor
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88241">T88241</a></td>
+<td>macOS: Eevee Screen Space Reflections are broken on arm64
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82322">T82322</a></td>
+<td>Unwanted double clicks when using wacom cintiq
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83523">T83523</a></td>
+<td>Blender-2.92.0-ba740ad2abc6-macOS  crashing
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84371">T84371</a></td>
+<td>Audio glitching in Chrome when Blender is open
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87040">T87040</a></td>
+<td>Blender opening new windows very slow
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87362">T87362</a></td>
+<td>Particles Not Rendering
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87774">T87774</a></td>
+<td>macOS big sur Opening a fixed file causes the software to crash
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88247">T88247</a></td>
+<td>Blender 2.8+ (including 2.9) Mesh Broken
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88305">T88305</a></td>
+<td>blender crash
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87853">T87853</a></td>
+<td>Crash when <code>select none</code> on Weight painter
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86842">T86842</a></td>
+<td>Weight Painting with masks Crash On MacOS
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="3_May">3 May</span></h3>
+<p>Spent some time on getting reliable steps for <a rel="nofollow" class="external text" href="http://developer.blender.org/T88063">T88063</a> (gpu_pass_free assert failed) bug.
+</p><p>Also checked on how to fix the remaining deprecation warnings.
+</p><p>Exams are over now. 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/rBM8011">rBM8011</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11135">D11135</a>: macOS: add notes about location of .crash files.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB08f4bab658cd">rB08f4bab658cd</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11144">D11144</a>: System info: add OS version to sys_info.py</li></ul>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/D11207">D11207</a>: Cycles: fix inconsistent-missing-override warning.
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88064">T88064</a></td>
+<td>Liquid does not fluids continously
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85615">T85615</a></td>
+<td>on Mac: while doing "Blender 2.9 Beginner Tutorial - Part 1" on YouTube I get "segmentation fault".
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87590">T87590</a></td>
+<td>Modifier following Geometry Nodes removes UV
+</td></tr>
+<tr>
+<td>Created</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88033">T88033</a></td>
+<td>Memory leak after importing a model/ toggling shading workspace.
+</td></tr>
+<tr>
+<td>Created</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88063">T88063</a></td>
+<td>gpu_pass_free assert failed.
+</td></tr>
+<tr>
+<td>Created</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88084">T88084</a></td>
+<td>RSS feed on code.blender.org broken after category renames
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84859">T84859</a></td>
+<td>Glitch in Viewport Shading, 2.91 not working properly into
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85336">T85336</a></td>
+<td>Blender crashes when rendering from the command line without display or remote display
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85546">T85546</a></td>
+<td>Cycles: Grease Pencil Stroke object causes headless rendering to abort
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87580">T87580</a></td>
+<td>OBJ Import omits 50% of Tris
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84559">T84559</a></td>
+<td>White Screen on Viewport Shading after 2.91 Update
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T88087">T88087</a></td>
+<td>Importing OBJ error
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="26_April">26 April</span></h3>
+<p><a rel="nofollow" class="external text" href="http://developer.blender.org/rB8c73f44a019c">rB8c73f44a019c</a>: Fix build error: use of unintialized variable (authored by Wannes Malfait (Wannes)).
+</p>
+<ul><li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D11144">D11144</a>: System info: add OS version to sys_info.py.</li>
+<li>Created <a rel="nofollow" class="external text" href="http://developer.blender.org/D11135">D11135</a>: macOS: add notes about location of .crash files.</li></ul>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>created</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87867">T87867</a></td>
+<td>macOS: attribute check for "file on demand" OneDrive files triggers download .
+</td></tr>
+<tr>
+<td>merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T65874">T65874</a></td>
+<td>How to delete my account? into T37616
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87446">T87446</a></td>
+<td>Mesh deform binding crashes blender.
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87408">T87408</a></td>
+<td>Black Shapes
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87453">T87453</a></td>
+<td>Auto Mirror appears to be broken
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87435">T87435</a></td>
+<td>Loading object from asset management and unable to edit object
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87443">T87443</a></td>
+<td>eevee render crash
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87299">T87299</a></td>
+<td>Failure of STL file Import
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87320">T87320</a></td>
+<td>Crashing to Desktop
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87525">T87525</a></td>
+<td>2 crashes when working with multiple particle systems
+</td></tr>
+<tr>
+<td>Closed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87451">T87451</a></td>
+<td>Crash to Desktops I think 10+ today
+</td></tr>
+<tr>
+<td>Needs Info from User</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85552">T85552</a></td>
+<td>Blender crash on Drag drop
+</td></tr>
+<tr>
+<td>Needs Info from User</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85565">T85565</a></td>
+<td>Blender crashes when you hit command z, delete something or render something.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85200">T85200</a></td>
+<td>Cannot input non-ASCII characters with third-party software on Windows
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87420">T87420</a></td>
+<td>Object selection before Vertex Groups weight painting for Bones
+</td></tr>
+<tr>
+<td>Needs Info from User</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85586">T85586</a></td>
+<td>Blender crashes upon closing file view, rendering, saving a file, importing exporting etc.
+</td></tr>
+<tr>
+<td>Needs Info from User</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85444">T85444</a></td>
+<td>Sculpt remesh produced large N-gon
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85475">T85475</a></td>
+<td>Blender normal map baking incorrect
+</td></tr>
+<tr>
+<td>Needs info from Developer</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85409">T85409</a></td>
+<td>Quick Liquid has no effect until playback loops back on the start frame
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87853">T87853</a></td>
+<td>Crash when <code>select none</code> on Weight painter
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87510">T87510</a></td>
+<td>Painting on Color vs. Alpha Channel + "Affect Alpha" doesn't work as expected.
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87318">T87318</a></td>
+<td>Blender crashes while using particle edit.
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87127">T87127</a></td>
+<td>Blender does not open&#160;:( ( With missing files).
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84268">T84268</a></td>
+<td>Crash when selecting in weight mode (Paint Mask).
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87544">T87544</a></td>
+<td>(Workbench) When importing .blend/.FBX all materials are white..
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85615">T85615</a></td>
+<td>on Mac: while doing "Blender 2.9 Beginner Tutorial - Part 1" on YouTube I get "segmentation fault".
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87882">T87882</a></td>
+<td>It's almost Impossiable to Download Blender manual.
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87410">T87410</a></td>
+<td>Interaction menu cannot be changed..
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87621">T87621</a></td>
+<td>The Blender File Open dialog triggers OneDrive Files On-Demand downloads.
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87188">T87188</a></td>
+<td>Dragging an image from a Safari webpage crashes Blender, while from Chrome or Firefox doesn't crash (and do nothing)  on MacOS.
+</td></tr>
+<tr>
+<td>Checked</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87414">T87414</a></td>
+<td>Image reference using handles crash.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="19_April">19 April</span></h3>
+<p>Slow week this one, was travelling back to home.
+</p>
+<ul><li>Committed <a rel="nofollow" class="external text" href="http://developer.blender.org/rBaa95f8019e42">rBaa95f8019e42</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D11012">D11012</a>: macOS: Fix unknown -Wsuggest-override warning</li>
+<li>Review <a rel="nofollow" class="external text" href="http://developer.blender.org/D9827">D9827</a>: macOS: Implement adding files to the system's recent files.</li>
+<li>Check correctness of <a rel="nofollow" class="external text" href="http://developer.blender.org/D11079">D11079</a>: deps_builder: add support for building zstd</li></ul>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Investigated</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86662">T86662</a></td>
+<td>Object selection toggles between the camera and light, BUT NOT THE CUBE!.
+</td></tr>
+<tr>
+<td>Investigated</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87466">T87466</a></td>
+<td>Cycles "Persistent Data" animation test problem [ 2.93 Apha ].
+</td></tr>
+<tr>
+<td>Investigated</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87625">T87625</a></td>
+<td>Debug build BM_mesh_triangulate() will hang forever if mesh face count is high..
+</td></tr>
+<tr>
+<td>Needs triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80156">T80156</a></td>
+<td>Blender Benchmark segfaults with Optix initialization error
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85394">T85394</a></td>
+<td>macOS: Slowdown/crashes/ empty windows when using Sidecar feature with iPad
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87317">T87317</a></td>
+<td>Cycles Standalone: Issue with shader nodes
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79514">T79514</a></td>
+<td>macOS: mirroring sidecar display shows empty child windows
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81463">T81463</a></td>
+<td>iPad sidecar as a pen display lagging
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87201">T87201</a></td>
+<td>Blank file view when trying to save a file
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87723">T87723</a></td>
+<td>Persistent Data ignores Animation Data on rendering
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="12_April">12 April</span></h3>
+<p>Checked with multiple Xcode versions and abandoned <a rel="nofollow" class="external text" href="http://developer.blender.org/D10842">D10842</a>: macOS/CMake: invoke tools via xcrun.
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T76489">T76489</a></td>
+<td>RadeonVII Cycles render freezes on complex volumetric scenes
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79380">T79380</a></td>
+<td>Crash on creating a new material in empty scene
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87584">T87584</a></td>
+<td>weird audio noise when starting playback in blender
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84821">T84821</a></td>
+<td>Blender 2.83.11 Beta: Crash running python script with registered timer (fixed in 2.90+).
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87625">T87625</a></td>
+<td>Debug build BM_mesh_triangulate() will hang forever if mesh face count is high..
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T77509">T77509</a></td>
+<td>Issues with using a Mac trackpad when the Auto Depth option is enabled
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T77591">T77591</a></td>
+<td>Blender Interface Does Not Respect Windows Colour Profiles
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79425">T79425</a></td>
+<td>grease pencil fast draw loses details in macOS
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80207">T80207</a></td>
+<td>FBX Animation Export - Unexpected Rotations
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81324">T81324</a></td>
+<td>Incorrect VRAM quantity in the Status Bar ( GNU/Linux AMDGPU )
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84674">T84674</a></td>
+<td>Incident: bcon3 branching didn't happen in nice time to make builds
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84737">T84737</a></td>
+<td>MacOS: Eevee render crashes with GPU hang occurred
+</td></tr>
+<tr>
+<td>Created</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87534">T87534</a></td>
+<td>Assert BLI_thread_is_main while rendering via a script.
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79818">T79818</a></td>
+<td>Blender 2.81 - 2.90: Applying more than one material on a mesh object does not work on Linux System
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84579">T84579</a></td>
+<td>OpenCL error: CL_INVALID_KERNEL_ARGS in clEnqueueNDRangeKernel()
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T78033">T78033</a></td>
+<td>Disproportional Render Time approaching 16k Environment Textures on CUDA Device
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T78300">T78300</a></td>
+<td>Mac version Chinese Language missing Text
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79186">T79186</a></td>
+<td>When returning to an open instance of Blender from other application, Blender (often) crashes immediately.
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79836">T79836</a></td>
+<td>Cycles slowdown and disk reading issues with large textures
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T79861">T79861</a></td>
+<td>Vertex Paint samples the color in eevee rather than the true value unlike in Texture Paint sampling with Eevee
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80156">T80156</a></td>
+<td>Blender Benchmark segfaults with Optix initialization error
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80232">T80232</a></td>
+<td>Viewport response on Mac is lagging as compared to 2.80
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T80632">T80632</a></td>
+<td>Blender freezing in the Viewport edit mode for couple of seconds when selecting faces / edges / vertices or entering edit mode
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81088">T81088</a></td>
+<td>system reload scripts doesn't work for addons stored in an alternative file path as set in preferences/file paths/scripts
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81339">T81339</a></td>
+<td>Some weird bug when using 2 gpus (gt 1030 and a gtx 980)
+</td></tr>
+<tr>
+<td>Needs info from user</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84746">T84746</a></td>
+<td>crashing using GPU and CPU to render
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="5_April">5 April</span></h3>
+<p>Fell sick on Thursday. Recovered now, so will catch up this week.
+</p><p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/rB15670ebb9549">rB15670ebb9549</a>: Cleanup: Fix pessimizing move warning.</li></ul>
+<p>Review:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10846">D10846</a>: Compositor: Enable suggest-override warning..</li></ul>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86744">T86744</a></td>
+<td>Cannot sculpt under masked geometry 2.92.
+</td></tr>
+<tr>
+<td>commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86910">T86910</a></td>
+<td>Bone Heat weighting failed.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T71670">T71670</a></td>
+<td>FBX exporting - camera pixel size don't correspond to original size.
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84536">T84536</a></td>
+<td>SSS diffusion bug with multiple intersections in probe disk
+</td></tr>
+<tr>
+<td>Needs Information from Developers</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T71959">T71959</a></td>
+<td>Improve UV unwrapping balance between angle and area preservation
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T81296">T81296</a></td>
+<td>FBX export parenting problem
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85003">T85003</a></td>
+<td>Blue on cropped part of image when Sequencer color space is Linear
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85897">T85897</a></td>
+<td>Slow viewport framerate (e.g. tumbling the camera, not scrubbing) due to commit 0812949bbc3d7acfd1f20a47087ff973110aa177
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86271">T86271</a></td>
+<td>Blender crashing when working in Compositor - for example deleting Cryptomatte nodes
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83467">T83467</a></td>
+<td>Python error importing FBX file
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85875">T85875</a></td>
+<td>Crash Audio
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86043">T86043</a></td>
+<td>Unwrap not unwrapping completely
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86218">T86218</a></td>
+<td>Blender 2.92.0 crashes
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86269">T86269</a></td>
+<td>Crash on Cycles render
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86535">T86535</a></td>
+<td>Crashes when trying to unhide a collection
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86607">T86607</a></td>
+<td>Baking diffuse with no indirect/direct lighting is not working.
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86662">T86662</a></td>
+<td>Object selection toggles between the camera and light, BUT NOT THE CUBE!
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86856">T86856</a></td>
+<td>EXCEPTION_ACCESS_VIOLATION
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86933">T86933</a></td>
+<td>Blender crashing when "Duet Display" (third party app) is running.
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86976">T86976</a></td>
+<td>'Not responding' white screen showing up while trying to open a file
+</td></tr>
+<tr>
+<td>Merged</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87261">T87261</a></td>
+<td>Dev..Blender.Org - No way to delete account, need admin action
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="29_March">29 March</span></h3>
+<p>Some items from 26 - 28 March included too.
+</p><p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ec82477af9b">rB0ec82477</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10664">D10664</a>&#160;: macOS/bpy: install into site-packages</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/241f05d53c32">rB241f05d5</a>: macOS/bpy: accommodate portable builds, and multi-config generators.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a702ca3faa9b">rBa702ca3f</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10665">D10665</a>&#160;: Tests/bpy: Add installation verification test</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fbe2c3f4227d">rBfbe2c3f4</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10656">D10656</a>&#160;: Tests: disable python tests for blender as python module</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad31b13f91e4">rBad31b13f</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10657">D10657</a>&#160;: macOS/bpy: add support for OpenMP</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/77ac67dae4bc">rB77ac67da</a>: Cleanup/CMake: remove trailing /; whitespace.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5f0d176d4cf">rBe5f0d176</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10343">D10343</a>&#160;: CMake: issue warnings when changing options</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1a100d2d78c7">rB1a100d2d</a>: Cleanup/CMake: tweak messages in platform_apple</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f061de9b3e6b">rBf061de9b</a>: Cleanup/CMake: warning to status to reduce noise</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/548d16d4a50b">rB548d16d4</a>: BKE: attempt to fix build error on windows</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6578f9d1e998">rB6578f9d1</a>: Modifiers: Fix build error with GMP</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7fd3b07da1b8">rB7fd3b07d</a>: <a rel="nofollow" class="external text" href="http://developer.blender.org/D10652">D10652</a>&#160;: Build Environment: set MAKE_THREADS as per the CPU</li></ul>
+<p>Worked on Diffs:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10719">D10719</a>: guardedalloc_test: Do overflow tests without allocation.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10815">D10815</a>: CMake: Fix GLUT error on non-Windows platforms..</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10838">D10838</a>: WIP attempt to set CMAKE_OSX_SYSROOT before project call.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10842">D10842</a>: macOS/CMake: invoke tools via xcrun.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D10877">D10877</a>: macOS/bpy: Fix error in builds with Address Sanitizer.</li></ul>
+<p><br />
+</p>
+<table role="presentation" class="wikitable mw-collapsible mw-collapsed sortable">
+
+<tbody><tr>
+<th>Activity</th>
+<th>Task</th>
+<th>Title
+</th></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86599">T86599</a></td>
+<td>grease pencil linked crash
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87113">T87113</a></td>
+<td>what?
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86352">T86352</a></td>
+<td>Running blender on Nvidia RTX 2070 Graphics card (open GLC3.3 or higher code)
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87196">T87196</a></td>
+<td>hi'
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T83147">T83147</a></td>
+<td>Freelancer
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86698">T86698</a></td>
+<td>Problem in the program
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87042">T87042</a></td>
+<td>Please Guide me about this
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86938">T86938</a></td>
+<td>Blender crashes when I switch to rendered mode
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85640">T85640</a></td>
+<td>The sapling tree gen addon doesn't work
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86680">T86680</a></td>
+<td>Parsing error
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86835">T86835</a></td>
+<td>Cloth Render Bug
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86751">T86751</a></td>
+<td>A bug that makes the object outside of viewport solid  invisible
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86537">T86537</a></td>
+<td>geometry nodes lose textures after apply curve modifier
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86988">T86988</a></td>
+<td>does anybody know how to fix this problem that I'm having on blender 2.92?. When I was starting to import the obj model, I turned the shading view on and it started showing this kind of glitch
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86927">T86927</a></td>
+<td>exporting from blender to unity causes model to look half deleted
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86801">T86801</a></td>
+<td>Randomize transform not working in edit mode
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86516">T86516</a></td>
+<td>Blender consuming huge memory and CPU
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84488">T84488</a></td>
+<td>FBX exports only one action
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86789">T86789</a></td>
+<td>Outputs and input ports of nods are not connecting
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86528">T86528</a></td>
+<td>Blender 2.80 and above crashes on startup.
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86718">T86718</a></td>
+<td>Unable to edit particle when clothes attached to armature
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85324">T85324</a></td>
+<td>failed to create cuda context (misaligned address)
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86630">T86630</a></td>
+<td>EXCEPTION_ACCESS_VIOLATION 0x0000000000000000
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86840">T86840</a></td>
+<td>Eevee: Not working properly in Catalina
+</td></tr>
+<tr>
+<td>Archived</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86550">T86550</a></td>
+<td>Attribute Fill changes Viewport shading and Outline
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82353">T82353</a></td>
+<td>Blender crashes and destroys my scene.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82732">T82732</a></td>
+<td>Fbx files imported without animation.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T84999">T84999</a></td>
+<td>Add Operator tests.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85765">T85765</a></td>
+<td>Slow performance in Edit Mode.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86410">T86410</a></td>
+<td>EVVEE: cryptomatte broken.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86535">T86535</a></td>
+<td>Crashes when trying to unhide a collection.
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86559">T86559</a></td>
+<td>Output Video doesn't match Output settings..
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86563">T86563</a></td>
+<td>Failed angle_normalized_v3v3() assertion when navigating viewport..
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86607">T86607</a></td>
+<td>Baking diffuse with no indirect/direct lighting is not working. .
+</td></tr>
+<tr>
+<td>Commented</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86662">T86662</a></td>
+<td>Object selection toggles between the camera and light, BUT NOT THE CUBE!.
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82246">T82246</a></td>
+<td>I want to import FBX with blend shape from Maya and export it as glb.
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85244">T85244</a></td>
+<td>Lock Interface toggle will not toggle
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86803">T86803</a></td>
+<td>enum_items not working with dynamic EnumProperty
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86836">T86836</a></td>
+<td>[2.93-A] Composite Node Output completely black, Viewer Node working from the same data.
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86916">T86916</a></td>
+<td>OpenCL RX Vega 56 Cycles Render Problem "Split kernel error: invalid ray state"
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86654">T86654</a></td>
+<td>Bad motion blur from alembic animation import in v2.92. Works as expected in v2.83.13
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T82847">T82847</a></td>
+<td>Vertex colors color space
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86502">T86502</a></td>
+<td>Multiple crashes
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85771">T85771</a></td>
+<td>Geometry Node boolean with empty collection
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86085">T86085</a></td>
+<td>Point Distribute inconsisntency
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86378">T86378</a></td>
+<td>Automatic Save crashing blender when any UI action is performed at the same time
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86505">T86505</a></td>
+<td>Curve deform with shape keys buggy
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T86166">T86166</a></td>
+<td>Memoryblock errors when working with materials (linux/amd)
+</td></tr>
+<tr>
+<td>Needs Triage</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T85686">T85686</a></td>
+<td>Blender 2.91.2 crashes randomly
+</td></tr>
+<tr>
+<td>Confirmed</td>
+<td><a rel="nofollow" class="external text" href="http://developer.blender.org/T87130">T87130</a></td>
+<td>2.91 download redirection
+</td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121411
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.474 seconds
+Real time usage: 0.474 seconds
+Preprocessor visited node count: 4926/1000000
+Preprocessor generated node count: 9090/1000000
+Post‐expand include size: 26500/2097152 bytes
+Template argument size: 7980/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  245.101      1 -total
+ 45.47%  111.440     12 Template:GitCommit
+ 40.50%   99.271     24 Template:GitCommit/PhabricatorParse
+ 28.81%   70.612    395 Template:Phab
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5697-0!canonical and timestamp 20240112121411 and revision id 25204
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;oldid=25204">https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;oldid=25204</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 28 June 2021, at 07:25.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Ankitm/Reports/2021.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Ankitm/Reports/2021" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Ankitm.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Ankitm.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Ankitm.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;oldid=25204" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Ankitm/Reports/2021&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.474","walltime":"0.474","ppvisitednodes":{"value":4926,"limit":1000000},"ppgeneratednodes":{"value":9090,"limit":1000000},"postexpandincludesize":{"value":26500,"limit":2097152},"templateargumentsize":{"value":7980,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  245.101      1 -total"," 45.47%  111.440     12 Template:GitCommit"," 40.50%   99.271     24 Template:GitCommit/PhabricatorParse"," 28.81%   70.612    395 Template:Phab"]},"cachereport":{"timestamp":"20240112121411","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":524});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844551571cebb7e4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

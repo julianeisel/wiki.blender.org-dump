@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Pablodp606/Reports/2019 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Pablodp606/Reports/2019","wgTitle":"Pablodp606/Reports/2019","wgCurRevisionId":15292,"wgRevisionId":15292,"wgArticleId":4685,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Pablodp606/Reports/2019","wgRelevantArticleId":4685,"wgRequestId":"b017097185fde1000c657dca","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Pablodp606","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Pablodp606_Reports_2019 rootpage-User_Pablodp606 skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2019.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3APablodp606%2FReports%2F2019" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2019.html#December_23_-_December_27"><span class="tocnumber">1</span> <span class="toctext">December 23 - December 27</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2019.html#December_16_-_December_20"><span class="tocnumber">2</span> <span class="toctext">December 16 - December 20</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2019.html#December_9_-_December_13"><span class="tocnumber">3</span> <span class="toctext">December 9 - December 13</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2019.html#December_2_-_December_6"><span class="tocnumber">4</span> <span class="toctext">December 2 - December 6</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2019.html#November_25_-_November_29"><span class="tocnumber">5</span> <span class="toctext">November 25 - November 29</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2019.html#November_18_-_November_22"><span class="tocnumber">6</span> <span class="toctext">November 18 - November 22</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2019.html#November_11_-_November_15"><span class="tocnumber">7</span> <span class="toctext">November 11 - November 15</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2019.html#November_4_-_November_8"><span class="tocnumber">8</span> <span class="toctext">November 4 - November 8</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2019.html#October_28_-_November_1"><span class="tocnumber">9</span> <span class="toctext">October 28 - November 1</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2019.html#October_21_-_25"><span class="tocnumber">10</span> <span class="toctext">October 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2019.html#October_14_-_18"><span class="tocnumber">11</span> <span class="toctext">October 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2019.html#October_7_-_11"><span class="tocnumber">12</span> <span class="toctext">October 7 - 11</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2019.html#September_30_-_October_4"><span class="tocnumber">13</span> <span class="toctext">September 30 - October 4</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2019.html#September_23_-_27"><span class="tocnumber">14</span> <span class="toctext">September 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2019.html#September_16_-_20"><span class="tocnumber">15</span> <span class="toctext">September 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2019.html#September_9_-_13"><span class="tocnumber">16</span> <span class="toctext">September 9 - 13</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2019.html#September_2_-_6"><span class="tocnumber">17</span> <span class="toctext">September 2 - 6</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2019.html#August_26_-_30"><span class="tocnumber">18</span> <span class="toctext">August 26 - 30</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Pablodp606/Reports/2019</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h3><span class="mw-headline" id="December_23_-_December_27">December 23 - December 27</span></h3>
+<p>This week I finished the minimum requirements for the sculpt vertex colors patch. Rendering, multiple layers, alpha and conversion operators are working.
+</p><p><b>Next week</b>
+</p>
+<ul><li>The way the default brush of sculpt vertex colors applies paint is not right, I need to investigate that.</li>
+<li>Merge the remaining paint brush parameters and check if everything works.</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6498">D6498</a> Fix T72747: Increase minimum voxel size in the voxel remesher</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6497">D6497</a> Sculpt: Update brush defaults</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6488">D6488</a> Fix T72700: Missing flush vert visibility on sculpt undo</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6487">D6487</a> Fix T72690: Do not draw points behind the viewport camera in the paint cursor</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6476">D6476</a> Fix T71712: Free the dynamic mesh preview when rebuilding the PBVH</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6475">D6475</a> Fix T72647: Check if the PBVH type makes sense for the sampling mode</li></ul>
+<h3><span class="mw-headline" id="December_16_-_December_20">December 16 - December 20</span></h3>
+<p>I worked on the sculpt vertex colors patch, updated the IK pose brush patch and create a new operator to control the voxel size of the voxel remesher
+</p><p><b>Next week</b>
+</p>
+<ul><li>Work on sculpt vertex colors for 2.83</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6449">D6449</a> Voxel Remesh: Edit Voxel Size operator</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6444">D6444</a> Sculpt: Remove partial viewport updates from sculpt stroke code</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6433">D6433</a> Sculpt: Add color alpha controls to the brush cursor</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6426">D6426</a> Fix T72438: Use PBVH vert coordinates in sculpt API when using shape keys</li></ul>
+<h3><span class="mw-headline" id="December_9_-_December_13">December 9 - December 13</span></h3>
+<p>I spent most of the week refactoring and testing the IK pose brush. I also worked for the first time with the 3D texture projetion code to plan what improvements can be done for UDIM painting.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue working on 2.82 projects</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6389">D6389</a> Sculpt: Pose Brush with Inverse Kinematics</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6385">D6385</a> Texture Paint: New Cursor and Spherical 3D falloff</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T72409: Remove references to Unified use_pressure_size and use_pressure_strength <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6ba9413393">c6ba941339</a>.</li></ul>
+<h3><span class="mw-headline" id="December_2_-_December_6">December 2 - December 6</span></h3>
+<p>I continued working on the new tools, focusing on vertex colors. Tools like the color filter, gradient tools or mask expand by color are working.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue working on 2.82 projects</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6376">D6376</a> Fix T72251: Add rotate brush as constrained by radius for automasking</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T72006: Clay brush with size pressure corrupts mesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e77fdc62b75">e77fdc62b7</a>.</li>
+<li>Fix T72054: Sculpt Mode crash when using Relax Mesh Filter with Dyntopo enabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a7851de3a0">8a7851de3a</a>.</li>
+<li>Fix T72092: Clay Strips Brush stroke crash with Brush Detail Size <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/448669a630d">448669a630</a>.</li>
+<li>Fix Mask Brush gradient artifacts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/40e2f4469a7">40e2f4469a</a>.</li></ul>
+<h3><span class="mw-headline" id="November_25_-_November_29">November 25 - November 29</span></h3>
+<p>This week I started working on the tools that use the Sculpt Face Groups and Vertex Colors to have everything ready when the two main patches are accepted. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue working on 2.82 projects</li>
+<li>Rebase the Face Groups patch on top of the overlay engine</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6346">D6346</a> Fix Sculpt Mask Overlay drawing</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6341">D6341</a> Fix Mask Brush gradient artifacts</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6339">D6339</a> Fix T72092: Clay Strips Brush stroke crash with Brush Detail Size</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6333">D6333</a> Fix T72054: Sculpt Mode crash when using Relax Mesh Filter with Dyntopo enabled</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6326">D6326</a> Fix T72006: Clay brush with size pressure corrupts mesh</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6324">D6324</a> Sculpt: Sculpt plane cursor preview</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Clay Brush: Input curves and update defaults <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e3006e5079">9e3006e507</a>.</li>
+<li>Sculpt: Sample Voxel Size <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/47645a8db62">47645a8db6</a>.</li>
+<li>Sculpt/Paint: Remove Unified SIZE_PRESSURE and ALPHA_PRESSURE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9251b077203">9251b07720</a>.</li>
+<li>Sculpt/Paint: Move Elastic Deform Kelvinlets to BKE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e4014ef921">0e4014ef92</a>.</li>
+<li>Fix T71667: Use the Sculpt Mesh API in the Multires Smooth brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6d436ae283">b6d436ae28</a>.</li>
+<li>Fix T71868: Clay Strips brush collapsed geometry <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e85ab2cdc2a">e85ab2cdc2</a>.</li>
+<li>Fix typo in versiong code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c9e7d8030f5">c9e7d8030f</a></li></ul>
+<h3><span class="mw-headline" id="November_18_-_November_22">November 18 - November 22</span></h3>
+<p>This week I did more work in 2.82 sculpt mode project and I started committing them to master. I rebased and finished the initial implementation for both the Sculpt vertex colors and the Face groups patches. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue working on 2.82 projects</li>
+<li>Rename Face Maps to Face Groups in the new visibility system</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6299">D6299</a> Fix T71868: Clay Strips brush collapsed geometry</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6298">D6298</a> Clay Brush: Input curves and update defaults</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6291">D6291</a> Sculpt/Paint: Remove Unified SIZE_PRESSURE and ALPHA_PRESSURE</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6281">D6281</a> Sculpt/Paint: Move Elastic Deform Kelvinlets to BKE</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6277">D6277</a> Fix T71667: Use the Sculpt Mesh API in the Multires Smooth brush</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Paint: Smoother curve preset <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71ddcf1a088">71ddcf1a08</a>.</li>
+<li>Fix Windows Build <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f903835370b">f903835370</a>.</li>
+<li>Sculpt: Invert Scrape to Fill <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a482d940bc1">a482d940bc</a>.</li>
+<li>Sculpt: Topology Slide/Relax <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a47f694b865">a47f694b86</a>.</li>
+<li>Pose brush: Smooth Iterations Brush Property <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/186bd1759f0">186bd1759f</a>.</li>
+<li>Sculpt: Mask Slice <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/470fe59f7e8">470fe59f7e</a>.</li>
+<li>Sculpt: Multiplane Scrape Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c3279be222b">c3279be222</a>.</li>
+<li>Sculpt: Enable symmetrize operator with Dyntopo disabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c9be3b27ce">6c9be3b27c</a>.</li>
+<li>Sculpt: New Clay Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/316107d4cd1">316107d4cd</a>.</li>
+<li>Clay Strips: Input pressure curve and new defaults <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c7ade50deee">c7ade50dee</a>.</li>
+<li>Sculpt/Paint: Dash Ratio and Dash Samples <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/15f82278d5d">15f82278d5</a>.</li></ul>
+<p><b>Other Projects</b>
+</p>
+<ul><li>I tried to refactor the clay brush to fit all work possible into a single multithreaded task, but I didn't notice any performance improvement. In my computer the sculpt mode is still faster when multithreading is disabled, so maybe I should try to fix that first.</li></ul>
+<h3><span class="mw-headline" id="November_11_-_November_15">November 11 - November 15</span></h3>
+<p>I continued working on 2.82 sculpt mode projects, fixes and optimizations. I also updated most of the sculpting patches that were on review. I'm waiting to commit them until the release of 2.81 to avoid merge conflicts in sculpt.c
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue working on 2.82 projects</li>
+<li>Commit all 2.82 to master if 2.81 releases</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6269">D6269</a> Sculpt: Delay Viewport Updates</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6266">D6266</a> Workbench: X-Ray Fresnel</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6251">D6251</a> Sculpt: Sample Voxel Size</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6238">D6238</a> Sculpt: Clay Thumb Brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6228">D6228</a> Sculpt: New Clay Brush</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Sculpt: Sculpt template defaults <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9bd0d8b5505">9bd0d8b550</a>.</li></ul>
+<h3><span class="mw-headline" id="November_4_-_November_8">November 4 - November 8</span></h3>
+<p>I spent most of the week testing 2.81 before the release and making changes to the default brushes. The IK pose brush is almost there (symmetry is not that easy to do).
+</p><p><b>Next week</b>
+</p>
+<ul><li>Prepare things for the 2.81 release</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6219">D6219</a> Fix T71434: Rebuild PBVH only on sculpt geometry changes</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6214">D6214</a> Clay Strips: Input pressure curve and new defaults</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6209">D6209</a> Paint: Use float for brush size</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6207">D6207</a> Fix T71373: Sculpt Mask not extracting correctly on scaled objects</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6194">D6194</a> Sculpt: Use more saturated colors in the cursor</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix 2D paint antialiasing offset <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a58c1d4497d">a58c1d4497</a>.</li>
+<li>Fix Voxel Remesher preserve volume artifacts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/265295e6a6c">265295e6a6</a>.</li>
+<li>Clay Strips: Set default normal radius to 1.55 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b944e530ea">9b944e530e</a>.</li>
+<li>Fix T70687: Deleting sculpting mask extraction causes crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bd51f4fc09">0bd51f4fc0</a>.</li>
+<li>Paint: Option to disable antialiasing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd827194f7c">cd827194f7</a>.</li>
+<li>Fix EEVEE sculpt mask rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be2bdaf6aab">be2bdaf6aa</a>.</li>
+<li>Fix T70866: Missing PBVH updates after mask undo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/90fd75c869c">90fd75c869</a>.</li></ul>
+<h3><span class="mw-headline" id="October_28_-_November_1">October 28 - November 1</span></h3>
+<p>This week I continued implementing 2.82 sculpt mode planned features and fixing the remaining bugs in 2.81. At this point, almost all features planned for 2.82 that don't have dependencies on other projects are implemented (I think the only one missing is the symmetry implementation in the pose brush with IK).
+</p><p><b>Next week</b>
+</p>
+<ul><li>Prepare things for the 2.81 release</li>
+<li>Finish the IK Pose brush</li>
+<li>Investigate texture rake deformation</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6186">D6186</a> Fix 2D paint antialiasing offset</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6180">D6180</a> Sculpt: Enable symmetrize operator with Dyntopo disabled</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6176">D6176</a> Fix Voxel Remesher preserve volume artifacts</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6174">D6174</a> Sculpt: Multiplane Scrape Brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6165">D6165</a> Sculpt: Clay Strips Roundness property</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6163">D6163</a> Elastic Deform: Integrate Grab Kelvinlets</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6160">D6160</a> Sculpt: Mask Slice</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6158">D6158</a> Sculpt: QuadriFlow Guides</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6157">D6157</a> Pose brush: Smooth Iterations Brush Property</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6156">D6156</a> Sculpt: Texture mesh filter</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T71053: Poly Build tool crashes blender when deleting wire vertices <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6180c2249e">c6180c2249</a>.</li>
+<li>Fix EEVEE sculpt mask rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be2bdaf6aab">be2bdaf6aa</a>.</li>
+<li>Fix EEVEE sculpt mask rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be2bdaf6aab">be2bdaf6aa</a>.</li>
+<li>Fix T70687: Deleting sculpting mask extraction causes crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bd51f4fc09">0bd51f4fc0</a>.</li></ul>
+<h3><span class="mw-headline" id="October_21_-_25">October 21 - 25</span></h3>
+<p><b>Blender Conference</b>
+</p>
+<h3><span class="mw-headline" id="October_14_-_18">October 14 - 18</span></h3>
+<p>This week I finished two of the main patches for 2.82 sculpt mode, the topology slide/relax tools and the sculpt face maps.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Blender Conference</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6088">D6088</a> Fix T70866: Missing PBVH updates after mask undo</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6080">D6080</a> Fix EEVEE sculpt mask rendering</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6070">D6070</a> Sculpt Facemap</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6059">D6059</a> Sculpt: Topology Slide/Relax</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T70790: Crash in sculpt mode switching from two meshes after reload saved file <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/970d7ed860f">970d7ed860</a>.</li>
+<li>Fix T70839: Sculpt brushes stop affecting after using move, rotate or scale tools <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/082fb6603d5">082fb6603d</a>.</li></ul>
+<p><b>Other Projects</b>
+</p>
+<ul><li>I updated the sculpt vertex colors patch to support all new brush parameters introduced for texture paint</li>
+<li>I made 2 demo files for the 2.81 release.</li></ul>
+<h3><span class="mw-headline" id="October_7_-_11">October 7 - 11</span></h3>
+<p>This week I started coding the final patches for 2.82 sculpt mode. I hope to have all bigger features ready next week to make a demo at the Blender Conference.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Finish the 2.82 sculpt mode bigger features</li>
+<li>Fix new bugs that may appear in the tracker for 2.81</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6044">D6044</a> Paint: Option to disable antialiasing</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6042">D6042</a> Fix T70687: Deleting sculpting mask extraction causes crash</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6022">D6022</a> Sculpt: Invert Scrape to Fill</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6020">D6020</a> Fix T70636: Detect resize direction based on initial mouse movement</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6011">D6011</a> Enable normal radius fix for all brushes</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Sculpt: Fix wireframe drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d95bb087d03">d95bb087d0</a>.</li>
+<li>Fix T70544: Mesh extracted from Mask crash Blender when using Dyntopo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a630e46a582">a630e46a58</a>.</li>
+<li>Fix multires cursor not displaying the active vertex <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e79fc33fda7">e79fc33fda</a>.</li>
+<li>Fix T70554: Snake Hook + Ctrl does not set the brush stroke in its normal direction <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06c5520bda4">06c5520bda</a>.</li>
+<li>Sculpt: Fix projection artifacts by changing the voxel remesh isovalue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/abc36cad833">abc36cad83</a>.</li>
+<li>Paint: 2D paint brush stroke antialiasing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce22efb4258">ce22efb425</a>.</li>
+<li>Sculpt/Paint: Invert curve alpha overlay <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/525a8bdf1dd">525a8bdf1d</a>.</li>
+<li>Sculpt: Update only modified grids on multires undo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/afb9bdc320a">afb9bdc320</a>.</li>
+<li>Fix T70387: Sculpting with Original Normal rips edges <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/29707e34376">29707e3437</a>.</li></ul>
+<h3><span class="mw-headline" id="September_30_-_October_4">September 30 - October 4</span></h3>
+<p>2.81 sculpt mode is ready. This week I did the last tweaks, bug fixes paches and performance optimizations. Next week I can start with new projects.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Start planning the 2.82 projects</li>
+<li>Fix new bugs that may appear in the tracker</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5998">D5998</a> Sculpt/Paint: Invert curve alpha overlay</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5996">D5996</a> Sculpt: Change default min_iter_per_thread</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5994">D5994</a> Sculpt: Update only modified grids on multires undo</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5993">D5993</a> Sculpt: Split normal radius and area radius</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5982">D5982</a> Fix T70387: Sculpting with Original Normal rips edges</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5975">D5975</a> Sculpt Vertex Colors</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5960">D5960</a> Sculpt: Vertex group to mask conversion operators</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5949">D5949</a> Sculpt/Paint: Dash Ratio and Dash Samples</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5938">D5938</a> Fix T70342: QuadriFlow with the new symmetry option creates holes at the center</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Sculpt: Clay Strips brush tweaks <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d590db83705">d590db8370</a>.</li>
+<li>Fix T70499: Can't change Brush Texture Rotation without holding the Shift key. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b55a1da50d">2b55a1da50</a>.</li>
+<li>Fix sculpt normal update in SculptDraw brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/67f9b94291c">67f9b94291</a>.</li>
+<li>Fix T70299: Grab brush not working as expected when Ctrl is press <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3bbe01dad33">3bbe01dad3</a>.</li>
+<li>Fix T66312: Undo does not restore normals correctly in sculpt mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae7bea265d0">ae7bea265d</a>.</li>
+<li>Sculpt: Disable remesh operators with Multires <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6db6267d85e">6db6267d85</a>.</li>
+<li>Fix T69227: Ignore inbetween mouse events in Snake Hook <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d6c440bd7ad">d6c440bd7a</a>.</li>
+<li>Fix T70102: Mask Extract bad solution <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a1f4fc8a78">8a1f4fc8a7</a>.</li>
+<li>Use PBVH_FullyMasked flag in mesh filter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1f16ba67fc">a1f16ba67f</a>.</li>
+<li>Fix T70358: Use face count in Quadriflow by default <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3052229264c">3052229264</a>.</li>
+<li>Fix T70310: Difficult to change brush size from big to small <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/606af693fb5">606af693fb</a>.</li>
+<li>Fix T70324: Layer Brush has bad behaviours and create artifacts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/29f25da7692">29f25da769</a>.</li>
+<li>Fix default cursor blue color <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fb62c578bc0">fb62c578bc</a>.</li>
+<li>Fix bug in nearest_vertex_get_finalize <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed59c32b0c4">ed59c32b0c</a>.</li>
+<li>PBVH: PBVH_FullyMasked and PBVH_FullyUnmasked flags <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8f6f70846e">e8f6f70846</a>.</li>
+<li>Fix T70385: Pose brush breaks when using pose origin offset <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3dc027add39">3dc027add3</a>.</li>
+<li>Fix PBVH search callback in pose and elastic deform <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/61efeb6df98">61efeb6df9</a>.</li>
+<li>Sculpt: Only redraw nodes where the mask changed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b419c18b05">6b419c18b0</a>.</li></ul>
+<p><b>Other projects</b>
+</p>
+<ul><li>I made the first version of the Pose Brush with inverse kinematics. The patch is almost ready.</li>
+<li>The sculpt vertex colors patch is on review. We need to agree on what features and changes should include the first patch of this feature.</li>
+<li>I added brush stroke antialiasing to the 2D paint line fixes patch.</li></ul>
+<h3><span class="mw-headline" id="September_23_-_27">September 23 - 27</span></h3>
+<p>Sculpt mode for 2.81 is almost finished. Almost all UI/UX changes are in master. Next weeks I will focus on performance I will start designing the 2.82 features. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Sculpt mode performance</li>
+<li>Multilayer/multichannel painting design task</li>
+<li>Fix bugs</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5935">D5935</a> PBVH: PBVH_FullyMasked and PBVH_FullyUnmasked flags</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5934">D5934</a> Fix T70324: Layer Brush has bad behaviours and create artifacts</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5933">D5933</a> Fix T70326: Some bad behaviours with Voxel Remesh</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5931">D5931</a> Fix T70310: Difficult to change brush size from big to small</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5929">D5929</a> Sculpt: Update bounding boxes only on stroke done</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5927">D5927</a> Sculpt: Enable pinch in draw sharp</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5923">D5923</a> Sculpt: Only redraw nodes where the mask changed</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5920">D5920</a> Fix T70299: Grab brush not working as expected when Ctrl is press</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5895">D5895</a> Fix T66312: Undo don't restor proper geometry in sculpt mode</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5871">D5871</a> Fix topbar padding to fit the tool icons</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Sculpt: Sculpt cursor UX improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be985bdde27">be985bdde2</a>.</li>
+<li>Voxel remesh: Enable adaptivity <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c372318165c">c372318165</a>.</li>
+<li>Sculpt: Use func_finalize instead of mutex <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/82136bb36ef">82136bb36e</a>.</li>
+<li>Sculpt: Pose brush origin offset <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a74b7c14b3">6a74b7c14b</a>.</li>
+<li>Fix T70291: Sculpt remesh inverts normal when fix poles is activated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7ae549448ea">7ae549448e</a>.</li>
+<li>Fix T56497: Snake hook sculpt brush slips off and affects the part of the mesh behind <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9df9fb33244">9df9fb3324</a>.</li>
+<li>Fix T70280: QuadriFlow remesh with "Use Paint Symmetry" and "Smooth Normals" may give wrong normals <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97f4d4c66eb">97f4d4c66e</a>.</li>
+<li>Sculpt: Enable accumulate in scrape brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bef8c5ea8b">2bef8c5ea8</a>.</li>
+<li>Fix accumulate in Draw Sharp brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a933237d687">a933237d68</a>.</li>
+<li>Quadriflow: Symmetry support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5c9bf3aa28">e5c9bf3aa2</a>.</li>
+<li>Voxel Remesh: Fix poles and preserve volume <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/454c1a5de4c">454c1a5de4</a>.</li>
+<li>Sculpt: Brush default settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a0d4c2e607f">a0d4c2e607</a>.</li>
+<li>Sculpt: UI fixes and improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7c544626b71">7c544626b7</a>.</li>
+<li>Fix T70140: Topology Automasking and 2D Falloff don't work correctly together <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aea8c0102ac">aea8c0102a</a>.</li>
+<li>Fix T69875: Sculpt Scene Spacing breaks with Adjust Strength for Spacing enabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a9d3e95bea0">a9d3e95bea</a>.</li>
+<li>Fix crash in dynamic mesh preview edge list update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a7904dff4be">a7904dff4b</a>.</li></ul>
+<p><b>Other projects</b>
+</p>
+<ul><li>I did some performance experiments to make the sculpt tools update only clipped nodes when previewing the result. This still needs a final implementation.</li></ul>
+<h3><span class="mw-headline" id="September_16_-_20">September 16 - 20</span></h3>
+<p>This week I worked on improvements for some of the sculpt tools, operators and UI. Patches to fix the volume preservation and symmetry in the remeshers are ready to review, which were the most important issues we have in the behaviour of the new features. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue fixing bugs in the tools</li>
+<li>Continue working on the UI/UX of sculpt mode</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5863">D5863</a> Voxel remesh: Fix poles and preserve volume</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5855">D5855</a> Quadriflow: Symmetry support</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5849">D5849</a> Fix T69875: Sculpt Scene Spacing breaks with Adjust Strength for Spacing enabled</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5848">D5848</a> Fix T70020: Sculpt mode transform tools fail with cursor orientation</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5846">D5846</a> Sculpt: Separate option for dynamic mesh preview</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5841">D5841</a> Sculpt: Pose brush origin offset</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5833">D5833</a> Paint: 2D paint line improvements</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5826">D5826</a> Sculpt: Enable accumulate in scrape brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5824">D5824</a> Fix crash in dynamic mesh preview edge list update</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5814">D5814</a> Fix accumulate in draw sharp brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5813">D5813</a> Sculpt: Brush default settings</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix remesher operator poll function <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/85acd72c9be">85acd72c9b</a>.</li>
+<li>Fix T69580: Smooth brush freezes on highpoly mesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1318d24155">a1318d2415</a>.</li>
+<li>Fix T69984: Cursor curve Alpha doesn't display curves other than Custom <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16a384b4855">16a384b485</a>.</li>
+<li>Sculpt: Split original normal into original normal and plane <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/04843d1572f">04843d1572</a>.</li>
+<li>Fix enabled dynamic size in pose brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fb39f1776f6">fb39f1776f</a>.</li>
+<li>Sculpt: Rename pinch to magnify in some brushes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0927e7b8355">0927e7b835</a>.</li>
+<li>Fix topology automasking when starting from a boundary vertex <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54b690897ec">54b690897e</a>.</li>
+<li>Sculpt: Add pose origin preview to the Pose Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58214ab52a6">58214ab52a</a>.</li></ul>
+<h3><span class="mw-headline" id="September_9_-_13">September 9 - 13</span></h3>
+<p>All sculpting features of the sculpt branch are now in master. I spent the week updating the patches, fixing bugs and doing some UX improvements to the new tools.
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue fixing bugs in the tools</li>
+<li>Work on the UI/UX of sculpt mode</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5789">D5789</a> Fix T69747: Texture Paint: alpha not used in gradient</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5761">D5761</a> Sculpt: add pose origin preview to the pose brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5792">D5792</a> Cursor color theme setting</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5791">D5791</a> Show the number of verts &amp; faces for selected objects in object mode</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5780">D5780</a> Fix assert when canceling a sculpt mode transform operation</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T69816: Using Transform gizmos in Sculpt Mode while MultiRes is activated crashes Blender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27b82bbb75c">27b82bbb75</a>.</li>
+<li>Fix T69804: Transform tools in sculpt mode fails with transformed objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f71d89bb047">f71d89bb04</a>.</li>
+<li>Fix T69737: Crash using the Elastic Deform brush and Compressibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/70a93477052">70a9347705</a>.</li>
+<li>Fix T69722: Pose brush crashes with multires modifier <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d84d49280bd">d84d49280b</a>.</li>
+<li>Sculpt: Transform tool <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/309cd047ef4">309cd047ef</a>.</li>
+<li>Fix T69729: Missing Direction buttons in Draw Sharp brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa12428ede9">fa12428ede</a>.</li>
+<li>Fix T69723: Crash with mask expand operator while in rendered or material view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/841df2b98e7">841df2b98e</a>.</li>
+<li>Sculpt: Grab Active Vertex and Dynamic Mesh Preview <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a3e7440cfdd">a3e7440cfd</a>.</li>
+<li>Fix warning and naming in mask expand <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0f7ada0d2b">e0f7ada0d2</a>.</li>
+<li>Sculpt: Mask Extract operator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cfb3011e521">cfb3011e52</a>.</li>
+<li>Sculpt: Mask Expand operator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0083c961259">0083c96125</a>.</li>
+<li>Sculpt: Pose Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bfbee878313">bfbee87831</a>.</li>
+<li>Sculpt: Topology automasking <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b2739724e6">2b2739724e</a>.</li>
+<li>Sculpt: Mask Filter and Dirty Mask generator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/13206a6dc04">13206a6dc0</a>.</li>
+<li>Sculpt: Mesh Filter Tool <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a4df70d411">6a4df70d41</a>.</li>
+<li>Sculpt: Elastic Deform Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/70c1aaf59ba">70c1aaf59b</a>.</li>
+<li>Sculpt: Draw Sharp Brush <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/70991bfd94a">70991bfd94</a>.</li></ul>
+<h3><span class="mw-headline" id="September_2_-_6">September 2 - 6</span></h3>
+<p>This week I updated all sculpt branch patches following the revision. Most of them are now ready for master. I also started looking at the 2D texture painting code and I did some initial improvements there as it is the next area I want to focus on. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Rebase and commit the sculpt branch patches</li>
+<li>Fix bugs in the sculpt branch tools</li>
+<li>Depending on the number of bugs, improve the 2D painting stabilizer</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5717">D5717</a>: Sculpt: Transform tool</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5697">D5697</a>: Texture paint: 2D painting improvements</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5676">D5676</a>: Paint: Stroke step queue</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5658">D5658</a>: Edit Mesh: loop at cursor position - WIP</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T69548: Sculpt scene spacing breaks when object pivot not at origin <a rel="nofollow" class="external text" href="https://developer.blender.org/rB6d8a86c07d5f5c290a9e606a7e03dccac9ddcf43">6d8a86c07d5f</a></li></ul>
+<p><b>Other projects</b>
+</p>
+<ul><li>I started doing some experiments to improve the 2D painting stabilizer</li>
+<li>Add scaling support to the sculpt mode transform tool</li></ul>
+<h3><span class="mw-headline" id="August_26_-_30">August 26 - 30</span></h3>
+<p>All patches from the sculpt branch that I would like to include in 2.81 are now ready to review except for the transform tool. The sculpt related part of that tool is working fine in the sculpt branch, but the gizmo/pivot point part needs to be reworked. Maybe it's easier now that we have the transform origins option. 
+</p><p><b>Next week</b>
+</p>
+<ul><li>Continue fixing the patches for the sculpt branch</li>
+<li>Sculpt: transform tool</li>
+<li>Edit mesh: loop at cursor position</li></ul>
+<p><b>Patches</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5384">D5384</a>: Sculpt: Mask extract operator</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5634">D5634</a>: Sculpt: Regularized Kelvinlets brushes</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5645">D5645</a>: Sculpt: Topology automasking</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5646">D5646</a>: Sculpt: Grab active vertex</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5647">D5647</a>: Sculpt: Pose brush</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5657">D5657</a>: Sculpt: Mask expand operator</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Sculpt/Paint: Brush world spacing option for sculpt mode <a rel="nofollow" class="external text" href="https://developer.blender.org/rBS87cafe92ce2f99d8da620b80e1c26f8078554f93">87cafe92ce2f</a></li>
+<li>Sculpt: new brush cursor, active vertex and normal radius <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe0c792135adf8de3e6a54ddcbab53cab95b2b019">e0c792135adf</a></li>
+<li>Edit Mesh: Poly build tool improvements <a rel="nofollow" class="external text" href="https://developer.blender.org/rBSd8baafd693ebf830d6153bd31bd63521c7569984">d8baafd693eb</a></li>
+<li>Fix T68763: Smooth Brush not working in LookDev or Rendered Mode <a rel="nofollow" class="external text" href="https://developer.blender.org/rBS8e4f3b2bb070a5022200c43866e81b6d5b8d3d1a">8e4f3b2bb070</a></li>
+<li>Fix Poly Build crash with empty meshes <a rel="nofollow" class="external text" href="https://developer.blender.org/rBSd5ed3de654513f6a53d0db79e912ba179e2833c3">d5ed3de65451</a></li></ul>
+<p><b>Other projects</b>
+</p>
+<ul><li>Sculpt branch: fix pose brush with multiple symmetry axis active, add radius preview.</li>
+<li>Merge mask by normal and mask expand into a single operator</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120549
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.362 seconds
+Real time usage: 0.359 seconds
+Preprocessor visited node count: 5320/1000000
+Preprocessor generated node count: 3761/1000000
+Post‐expand include size: 28245/2097152 bytes
+Template argument size: 8400/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  266.104      1 -total
+ 94.06%  250.306    105 Template:GitCommit
+ 25.40%   67.599    105 Template:GitCommit/PhabricatorParseDeprecated
+ 19.22%   51.138    105 Template:GitCommit/PhabricatorParse
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4685-0!canonical and timestamp 20240112120549 and revision id 15292
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;oldid=15292">https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;oldid=15292</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 16 March 2020, at 16:36.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:Pablodp606/Reports/2019" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Pablodp606/Reports/2019" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Pablodp606.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Pablodp606.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Pablodp606.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;oldid=15292" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Pablodp606/Reports/2019&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.362","walltime":"0.359","ppvisitednodes":{"value":5320,"limit":1000000},"ppgeneratednodes":{"value":3761,"limit":1000000},"postexpandincludesize":{"value":28245,"limit":2097152},"templateargumentsize":{"value":8400,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  266.104      1 -total"," 94.06%  250.306    105 Template:GitCommit"," 25.40%   67.599    105 Template:GitCommit/PhabricatorParseDeprecated"," 19.22%   51.138    105 Template:GitCommit/PhabricatorParse"]},"cachereport":{"timestamp":"20240112120549","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":37});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8445546eef0db8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

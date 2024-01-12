@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:PhilippOeser/Foundation/2018 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:PhilippOeser/Foundation/2018","wgTitle":"PhilippOeser/Foundation/2018","wgCurRevisionId":10119,"wgRevisionId":10119,"wgArticleId":1305,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:PhilippOeser/Foundation/2018","wgRelevantArticleId":1305,"wgRequestId":"b66e25faf7c11ff556c92228","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"PhilippOeser","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_PhilippOeser_Foundation_2018 rootpage-User_PhilippOeser skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2018.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3APhilippOeser%2FFoundation%2F2018" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2018.html#Warmup_.28December_2017.29"><span class="tocnumber">1</span> <span class="toctext">Warmup (December 2017)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2018.html#Calendar_Week_1_.28January_2nd_-_5th.29"><span class="tocnumber">2</span> <span class="toctext">Calendar Week 1 (January 2nd - 5th)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2018.html#Calendar_Week_2_.28January_8th_-_12th.29"><span class="tocnumber">3</span> <span class="toctext">Calendar Week 2 (January 8th - 12th)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2018.html#Calendar_Week_3_.28January_15th_-_19th.29"><span class="tocnumber">4</span> <span class="toctext">Calendar Week 3 (January 15th - 19th)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2018.html#Calendar_Week_4_.28January_22nd_-_26th.29"><span class="tocnumber">5</span> <span class="toctext">Calendar Week 4 (January 22nd - 26th)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2018.html#Calendar_Week_14_.28April_2nd_-_6th.29"><span class="tocnumber">6</span> <span class="toctext">Calendar Week 14 (April 2nd - 6th)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2018.html#Calendar_Week_15_.28April_9th_-_13th.29"><span class="tocnumber">7</span> <span class="toctext">Calendar Week 15 (April 9th - 13th)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2018.html#Calendar_Week_16_.28April_16th_-_20th.29"><span class="tocnumber">8</span> <span class="toctext">Calendar Week 16 (April 16th - 20th)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2018.html#Calendar_Week_17_.28April_23rd_-_27th.29"><span class="tocnumber">9</span> <span class="toctext">Calendar Week 17 (April 23rd - 27th)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2018.html#Calendar_Week_18_.28April_30th_-_May_4th.29"><span class="tocnumber">10</span> <span class="toctext">Calendar Week 18 (April 30th - May 4th)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2018.html#Calendar_Week_19_.28May_7th_-_May_11th.29"><span class="tocnumber">11</span> <span class="toctext">Calendar Week 19 (May 7th - May 11th)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2018.html#Calendar_Week_20_.28May_14th_-_May_18th.29"><span class="tocnumber">12</span> <span class="toctext">Calendar Week 20 (May 14th - May 18th)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2018.html#Calendar_Week_21_.28May_21st_-_May_25th.29"><span class="tocnumber">13</span> <span class="toctext">Calendar Week 21 (May 21st - May 25th)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2018.html#Calendar_Week_22_.28May_28st_-_June_1st.29"><span class="tocnumber">14</span> <span class="toctext">Calendar Week 22 (May 28st - June 1st)</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2018.html#Calendar_Week_40_.28Oct_1st_-_Oct_5th.29"><span class="tocnumber">15</span> <span class="toctext">Calendar Week 40 (Oct 1st - Oct 5th)</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2018.html#Calendar_Week_41_.28Oct_8th_-_Oct_12th.29"><span class="tocnumber">16</span> <span class="toctext">Calendar Week 41 (Oct 8th - Oct 12th)</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2018.html#Calendar_Week_42_.28Oct_15th_-_Oct_19th.29"><span class="tocnumber">17</span> <span class="toctext">Calendar Week 42 (Oct 15th - Oct 19th)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2018.html#Calendar_Week_43_.28Oct_22nd_-_Oct_26th.29"><span class="tocnumber">18</span> <span class="toctext">Calendar Week 43 (Oct 22nd - Oct 26th)</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2018.html#Calendar_Week_44_.28Oct_29th_-_Nov_2nd.29"><span class="tocnumber">19</span> <span class="toctext">Calendar Week 44 (Oct 29th - Nov 2nd)</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2018.html#Calendar_Week_45_.28Nov_5th_-_Nov_9th.29"><span class="tocnumber">20</span> <span class="toctext">Calendar Week 45 (Nov 5th - Nov 9th)</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2018.html#Calendar_Week_46_.28Nov_12th_-_Nov_16th.29"><span class="tocnumber">21</span> <span class="toctext">Calendar Week 46 (Nov 12th - Nov 16th)</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2018.html#Calendar_Week_47_.28Nov_19th_-_Nov_23rd.29"><span class="tocnumber">22</span> <span class="toctext">Calendar Week 47 (Nov 19th - Nov 23rd)</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2018.html#Calendar_Week_48_.28Nov_26th_-_Nov_30th.29"><span class="tocnumber">23</span> <span class="toctext">Calendar Week 48 (Nov 26th - Nov 30th)</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2018.html#Calendar_Week_49_.28Dec_3rd_-_Dec_7th.29"><span class="tocnumber">24</span> <span class="toctext">Calendar Week 49 (Dec 3rd - Dec 7th)</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2018.html#Calendar_Week_50_.28Dec_10th_-_Dec_14th.29"><span class="tocnumber">25</span> <span class="toctext">Calendar Week 50 (Dec 10th - Dec 14th)</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2018.html#Calendar_Week_51_.28Dec_17th_-_Dec_21st.29"><span class="tocnumber">26</span> <span class="toctext">Calendar Week 51 (Dec 17th - Dec 21st)</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2018.html#Calendar_Week_52_.28Dec_24th_-_Dec_28th.29"><span class="tocnumber">27</span> <span class="toctext">Calendar Week 52 (Dec 24th - Dec 28th)</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:PhilippOeser/Foundation/2018</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span id="Warmup_(December_2017)"></span><span class="mw-headline" id="Warmup_.28December_2017.29">Warmup (December 2017)</span></h2>
+<p><b>Info</b>
+</p><p>after some time not being active did some warmup in the tracker
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53639">#53639</a>: confirmed, investigated, posted patch [made a commit -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53630">#53630</a>: found commit causing this, posted hacky workaround, mont29 did real fix and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T52977">#52977</a>: found commit causing this, mont29 did real fix and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53624">#53624</a>: posted solution, outcome pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53646">#53646</a>: confirmed, posted backtrace, still open</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53212">#53212</a>: investigated -&gt; not reproducable</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53625">#53625</a>: confirmed, investigated, suggested workaround, real solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53647">#53647</a>: confirmed, investigated, posted patch [somewhat made a commit -- see 2.8 Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53513">#53513</a>: confirmed, investigated, shied away, but dfelinto fixed/closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53579">#53579</a>: raised from incomplete to confirmed, investigated, found cause, lijenstina did fix and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53645">#53645</a>: investigated, asked for more info, closed later (see Week 1)</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>Fix T53639: text sequence strips no stamped into render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08b063a19f21cd1bcafc9c0dff70d5ff6f0e099a">rB08b063a1</a></li></ul>
+<p><b>2.8 Commits</b>
+</p>
+<ul><li>patch that 'Fix T53647: Outliner crashes when active object is deleted' was based on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2a24afe8c1aa0221b378585e3c1901cc568a6d7">rBf2a24afe</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_1_(January_2nd_-_5th)"></span><span class="mw-headline" id="Calendar_Week_1_.28January_2nd_-_5th.29">Calendar Week 1 (January 2nd - 5th)</span></h2>
+<p><b>Info</b>
+</p><p>spend time mostly triaging/investigating tracker reports. Also looked into running tests for 2.79a release
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53677">#53677</a>: triaged incomplete, suggested solution, closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53676">#53676</a>: triaged incomplete (missing info), closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53679">#53679</a>: triaged incomplete, suggested solution, closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53212">#53212</a>: triaged incomplete (not reproducable), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53662">#53662</a>: investigated, still have to discuss with mont29, pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53650">#53650</a>: confirmed, investigated, posted patch [made a commit -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53681">#53681</a>: closed as invalid (not a bug), posted solution</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53680">#53680</a>: confirmed, investigated (tbc in Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53668">#53668</a>: triaged normal, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53682">#53682</a>: confirmed, but triaged invalid (2.8 report)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53620">#53620</a>: confirmed, assigned mont29 (fbx)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53672">#53672</a>: confirmed, investigated a bit, brecht claimed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53673">#53673</a>: triaged normal, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53661">#53661</a>: triaged normal, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53686">#53686</a>: confirmed, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53687">#53687</a>: confirmed, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53664">#53664</a>: marked as todo, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53628">#53628</a>: triaged incomplete (not reproducable), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53623">#53623</a>: triaged low, posted workaround, reporter closed as resolved</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53258">#53258</a>: triaged incomplete (expected behaviour), no response, closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53622">#53622</a>: triaged invalid (not a bug per se), suggested/posted workaround</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53697">#53697</a>: triaged incomplete (missing info), closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53695">#53695</a>: triaged invalid (2.8 report)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53645">#53645</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53353">#53353</a>: reopened (some information was given), but asked for even more info, closed later (see Week 2)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53698">#53698</a>: confirmed, investigated a bit, solution peding</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53693">#53693</a>: triaged incomplete, suggested solution, reporter closed as resolved</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53699">#53699</a>: triaged incomplete, response, then closed as invalid (not a bug)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53694">#53694</a>: closed as duplicate of <a rel="nofollow" class="external text" href="http://developer.blender.org/TT45854">#T45854</a></li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53691">#53691</a>: confirmed, investigated, assigned sergey, sergey did fix and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53590">#53590</a>: investigated, asked campbell, he closed as todo</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53601">#53601</a>: investigated, closed as invalid (windows internal problem)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53553">#53553</a>: triaged normal, solution pending</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>Fix T53650: remove hard limits on force field size and max distance <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6abf41f71210b56c9484bf6bbd0df90d9c93fdc">rBc6abf41f</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_2_(January_8th_-_12th)"></span><span class="mw-headline" id="Calendar_Week_2_.28January_8th_-_12th.29">Calendar Week 2 (January 8th - 12th)</span></h2>
+<p><b>Info</b>
+</p><p>spend time mostly triaging/investigating tracker reports. Had to refresh blender-deps and enabled them for some reports (alembic,...)
+Also tried to investigate some of the pending solutions more in depth [only limited success]
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53704">#53704</a>: confirmed, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53708">#53708</a>: confirmed, campbell investigated and closed as invalid (corrupt input file)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53716">#53716</a>: triaged incomplete (missing info), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53732">#53732</a>: closed (graphics driver bug)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53711">#53711</a>: confirmed, assigned sybren (alembic), solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T50227">#50227</a>: reopened (could confirm the issue), assigned sybren (alembic), solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53745">#53745</a>: confirmed, assigned sybren (alembic), solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53679">#53679</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53677">#53677</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53676">#53676</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53746">#53746</a>: triaged incomplete (missing info), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53733">#53733</a>: [LONG] confirmed, investigated, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53744">#53744</a>: confirmed, campbell moved to todo</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53701">#53701</a>: confirmed, tested provided patch, bjornmose commited and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53692">#53692</a>: assigned sergey (cycles), brecht fixed and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53700">#53700</a>: assigned aligorith, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53710">#53710</a>: confirmed, assigned campbell, he closed as todo</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53690">#53690</a>: triaged incomplete (graphics driver issue), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53596">#53596</a>: investigated (cannot reproduce), added Windows tag</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53582">#53582</a>: triaged incomplete (file renders fine here), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53455">#53455</a>: investigated, found commit causing this, assigned campbell, he fixed and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53751">#53751</a>: investigated, closed as invalid (not a bug)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53752">#53752</a>: investigated, suggested patch [made a commit -- see Master Commits], but WARNING / OOPS: there are issues with it and should be reverted for now...</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53754">#53754</a>: moved to todo (not a bug per se), but want to discuss with campbell also</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53757">#53757</a>: triaged incomplete (missing info), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53240">#53240</a>: closed/archived (graphics driver bug and no response)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53680">#53680</a>: investigated more, got closer, but this was a time-sink also..., gave up and assigned campbell for now</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53762">#53762</a>: triaged incomplete (caused by addon, which one? response pending)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53765">#53765</a>: triaged incomplete (missing info), response pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53766">#53766</a>: confirmed, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53768">#53768</a>: investigated, suggested workaround</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53258">#53258</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53697">#53697</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53353">#53353</a>: closed (more than a week without reply)</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>Fix T53752: Draw curve fails w/ stylus <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0cc5d89485f0c34cd3b79752320a40c140af050">rBd0cc5d89</a> WARNING / OOPS: there are issues with it and should be reverted for now...</li></ul>
+<p><br />
+<b>Next Week</b>
+</p><p>I'd really like to spend more time on actually fixing (pending previous but also older bugs), but priority will still be triaging what's incoming/already there...
+Also need to make entries in the wiki TODO for the things I marked as TODO
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_3_(January_15th_-_19th)"></span><span class="mw-headline" id="Calendar_Week_3_.28January_15th_-_19th.29">Calendar Week 3 (January 15th - 19th)</span></h2>
+<p><b>Info</b>
+</p><p>More time was spent on reading code and trying to fix bugs myself [with limited success in the timespan of 1hr / report...]. Most of the time I hopped on tho other reports if I hit that timelimit (marked by '[LONG]'). Had a day off on tuesday but made up for this on Saturday.
+Summary: involved in 30 reports, 4 longer investigations
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53744">#53744</a>: [LONG] investigated, solution halfway there...</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53791">#53791</a>: confirmed, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53788">#53788</a>: assigned to sergey, he closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53792">#53792</a>: confirmed, some investigation, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53786">#53786</a>: [LONG] some investigation, asked campbell, he fixed and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53814">#53814</a>: invesigated, not reproducable</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53812">#53812</a>: investigated, assigned mont29, he fixed and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53809">#53809</a>: investigated, not a bug, suggested solution, reporter then closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53813">#53813</a>: checked, was already fixed in master</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53816">#53816</a>: checked, suggested 'nota bug', brecht as well and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53746">#53746</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53628">#53628</a>: [LONG] dived into dupli(group) code but 1hr was not enough to find cause/solution yet...</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53820">#53820</a>: closed (3rd party addon)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53821">#53821</a>: investifated, assigend mont29, solution pending / is TODO</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53827">#53827</a>: closed after short investigation (not a bug)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53823">#53823</a>: confirmed, made crash-preventing patch, assigned campbell who fixed and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53826">#53826</a>: made sure every information is there, brecht took over (OSX issue)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53828">#53828</a>: investigated, moderated, bastien/campbell decided to remove old version</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53773">#53773</a>: too little info, no response after suggestions, closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53768">#53768</a>: claimed (py API addition), pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53829">#53829</a>: closed, spam</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53802">#53802</a>: invesigated, assigned (but will likely fix myself if still enough time)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53783">#53783</a>: invesigated, assigned, howardt already had this TODO in another task and closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53757">#53757</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53758">#53758</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53745">#53745</a>: some more investigation (testing different file)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53838">#53838</a>: confirmed, assigned</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53246">#53246</a>: investigated code, found cause, assigned sergey, pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53839">#53839</a>: investigated, but missing information</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53763">#53763</a>: [LONG] investigating custom normals code, assigned mont29 in the who closed as invalid (known limitation)</li></ul>
+<p><br />
+</p><p><b>Next Week</b>
+</p><p>General rate of incoming reports leaves about 4-5hrs [out of 20] of longer investigations [diving deeper in code] for selected reports. 
+I have a couple of these still with pending results. Try to finish these off while still keeping the priority of handling incoming (new) reports.
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_4_(January_22nd_-_26th)"></span><span class="mw-headline" id="Calendar_Week_4_.28January_22nd_-_26th.29">Calendar Week 4 (January 22nd - 26th)</span></h2>
+<p><b>Info</b>
+</p><p>Still struggeling to get to good results investigating certain reports when constraining to 1-1.5hrs max (which is a good limit though to get other stuff done)
+</p><p>Summary: involved in 37 reports, 4 longer investigations, 3 master commits
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53835">#53835</a>: [LONG] investigated, found cause, assigned sergey</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53841">#53841</a>: investigated, suggested patch, mont29 committed similar [somewhat made a commit -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53801">#53801</a>: checked, couldnt reproduce</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53843">#53843</a>: confirmed, suggested patch, assigned campbell who fixed differently</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53842">#53842</a>: assigned luciorossi who closed as invalid</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53845">#53845</a>: [LONG] investigation, hit time limit, move on...</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53846">#53846</a>: incomplete report, asked for specific info, closed later (no answer)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53624">#53624</a>: investigated, suggested solution, talked to lijenstina et.al, [committed -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53861">#53861</a>: closed spam</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53861">#53861</a>: closed spam</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53870">#53870</a>: triaged incomplete suggested something to try, no answer yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53871">#53871</a>: triaged incomplete suggested something to try, no answer yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53856">#53856</a>: added similar reports</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53766">#53766</a>: investigated, suggested fix, talked to nBurn [committed -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53779">#53779</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53793">#53793</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53796">#53796</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53797">#53797</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53686">#53686</a>: [LONG] more investigations, got closer to cause but hit time limit, asked brecht/sergey instead</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53884">#53884</a>: first incomplete, after more information: confirmed, assigned sybren</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53882">#53882</a>: checked, was already fixed in master</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53595">#53595</a>: checked, assigned luciorossi who closed as invalid</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T50620">#50620</a>: checked, involved campbell, probably todo rather then bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53886">#53886</a>: confirmed, brecht resolved (tradeoff simple vs complex scene)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53887">#53887</a>: confirmed, assigned nexyon</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53888">#53888</a>: confirmed, assigned nexyon</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53363">#53363</a>: checked, assigned mont29 who fixed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53904">#53904</a>: [LONGISH] more a todo, but had a closer look at view code, no real result yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53902">#53902</a>: confirmed, brecht closed as duplicate</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53615">#53615</a>: discussing the report, no real solution yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53911">#53911</a>: closed spam</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53891">#53891</a>: checked, not reproducable, external addon? yes</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53907">#53907</a>: marked incomplete</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53909">#53909</a>: checked code closely, assigned aligorith</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53912">#53912</a>: no bug but todo, suggested workaround</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53773">#53773</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53846">#53846</a>: closed (more than a week without reply)</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>Fix T53841: Can not import .obj or .fbx generated from Marvelous Designer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/29ae03c572bda6278f5a515eb56f6bdd27296c1a">rBA29ae03c</a></li>
+<li>fix T53624: A.N.T. Landscape should not be operating in edit mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/87579bd164c60ac7e6861be49bc7bcd4b84641ce">rBA87579bd</a></li>
+<li>fix T53766: MeasureIt measurements not appearing on all layers an object exists on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/dc6704ab42317256a0cad14728f275ee542f9904">rBAdc6704a</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_14_(April_2nd_-_6th)"></span><span class="mw-headline" id="Calendar_Week_14_.28April_2nd_-_6th.29">Calendar Week 14 (April 2nd - 6th)</span></h2>
+<p><b>Info</b>
+</p><p>Most time spent triaging incoming reports, also took a first round of looking at older open/untriaged reports.
+Summary: involved in 46 reports
+</p><p><br />
+<b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54468">#54468</a>: sugested better python usage, crash involved needs confirmation still</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54485">#54485</a>: confirmed, claimed, looked at code a bit, but postponed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54482">#54482</a>: no real bug, but asked @severin as well, not closed yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54489">#54489</a>: confirmed, not solved yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54490">#54490</a>: cannot reproduce, special hardware, needs triage still</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54502">#54502</a>: investigated, asked for more information (no answer, later closed)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54495">#54495</a>: investigated, suggested to try it the right way (no answer, later closed)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54497">#54497</a>: asked reporter to try stuff, he then could resolve</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54504">#54504</a>: investigated, found cause and workaround but not solution, assigned brecht</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54515">#54515</a>: investigated, clarified, mont29 closed then</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54445">#54445</a>: investigated, could not reproduce, user could resolve, closed then</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54511">#54511</a>: investigated, suggested workaround, user happy, still need proper code fix</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54517">#54517</a>: incomplete, no answer (closed later)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54507">#54507</a>: confirmed, assigned @aligorith, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54506">#54506</a>: assigned @akitula, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54519">#54519</a>: suggested workaround, assigned @severin, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54520">#54520</a>: checked, couldnt reproduce, but archived (as is 2.8 report)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53745">#53745</a>: added information given in IRC</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54442">#54442</a>: confirmed, claimed, but not high prio atm</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54521">#54521</a>: checked, suggested better .blend but closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54493">#54493</a>: incomplete, asked for info, user could resolve, closed then</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54494">#54494</a>: confirmed, also checked suggested patch, campbell did real fix</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54524">#54524</a>: investigated, found causing commit, assigned @severin, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54525">#54525</a>: investigated, claimed, suggested patch, review pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54528">#54528</a>: investigated, suggested better/correct usage, closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54526">#54526</a>: investigated, claimed, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54527">#54527</a>: confirmed, @blendify fixed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54529">#54529</a>: checked, found user error, closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54532">#54532</a>: investigated, asked for more information, Tamito Kajiyama took over later and closed as duplicate</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54057">#54057</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54291">#54291</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54307">#54307</a>: closed (factory startup fixed issue in report)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54318">#54318</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54355">#54355</a>: closed as resolved (user feedback suggested issue is gone)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54390">#54390</a>: closed as resolved (user feedback suggested issue is gone)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54394">#54394</a>: closed as resolved (user feedback suggested issue is gone)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54464">#54464</a>: investigated, could not reproduce, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54469">#54469</a>: closed as invalid (external addon)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54258">#54258</a>: checked, could not reproduce, no answer, @lijenstina closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54201">#54201</a>: confirmed, claimed, will look into it later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54303">#54303</a>: triaged incomplete, @lijenstina closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54352">#54352</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54294">#54294</a>: closed as not a bug (with explanation to reporter what the misunderstanding was)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54405">#54405</a>: closed as archived (was on TODO already)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54423">#54423</a>: investigated, suggested code change, mont29 commited and closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54536">#54536</a>: investigated, suggested code change, mont29 commited and closed later</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_15_(April_9th_-_13th)"></span><span class="mw-headline" id="Calendar_Week_15_.28April_9th_-_13th.29">Calendar Week 15 (April 9th - 13th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports
+Summary: involved in 34 reports, 1 master commit
+</p><p><b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54535">#54535</a>: incomplete, asked for more info, no answer, closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54541">#54541</a>: investigated, clarified, claimed for the time being, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54544">#54544</a>: investigated, suggested substitution of code to @campbellbarton,solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54546">#54546</a>: investigated, found code cause, assigned @campbellbarton, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54547">#54547</a>: investigated, found (user) cause, suggested better usage, closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54548">#54548</a>: investigated, explained cause in detail, mont29 then closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54549">#54549</a>: investigated, made patch [committed -- see Master Commits]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54552">#54552</a>: investigated, explained cause in detail, then closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54257">#54257</a>: [LONG] investigated in detail, archived as 'known bug, won't fix in 2.7x, will be fixed in 2.8'</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54557">#54557</a>: first incomplete, but user could verify it was caused by external addon, closed then</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54553">#54553</a>: confirmed, found relating issues, possibly fixed now, will need to recheck</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54228">#54228</a>: confirmed, detailed report, assigned @howardt, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54558">#54558</a>: [LONGISH] confirmed, found causing commit, assigned @campbelbarton in the end</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54563">#54563</a>: investigated, closed as feature request</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54567">#54567</a>: investigated, closed as already fixed in master</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54560">#54560</a>: [LONGISH] investigated, suggested possible patch workaround, but no easy fix, @sergey closed as TODO</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54509">#54509</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54517">#54517</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54502">#54502</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54495">#54495</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54478">#54478</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54352">#54352</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54080">#54080</a>: incomplete, asked for more information</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54000">#54000</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53979">#53979</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53801">#53801</a>: closed (wasnt closed though issue seems resolved)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54569">#54569</a>: investigated, explained somewhat hidden reason, closed as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54578">#54578</a>: investigated, found causing commit, assigned @campbellbarton, solution pending (though fix might be in already)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54559">#54559</a>: [LONGISH] investigated, but dont think this is a bug, asked@sergey, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54554">#54554</a>: [LONGISH] investigated, confirmed, also confirmed user provided patch, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54585">#54585</a>: [LONGISH] investigated, confirmed, found causing commit, assigned @nBurn (who fixed and closed)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54581">#54581</a>: [LONGISH] investigated, confirmed, assigned @sergey in the end</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54580">#54580</a>: investigated, detailed report, asked @campbellbarton for advice, solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54593">#54593</a>: investigated, detailed report, assigned @campbellbarton (who fixed and closed)</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>fix T54549: Vector Transform node in wrong nodeclass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5a3c146652b7e5d1b5e1b45bdced0d8c2d3c2554">rB5a3c1466</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_16_(April_16th_-_20th)"></span><span class="mw-headline" id="Calendar_Week_16_.28April_16th_-_20th.29">Calendar Week 16 (April 16th - 20th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports
+Summary: involved in 48 reports, 1 master commit
+</p><p><b>Tracker Triaging</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54390">#54390</a>: closed, was resolved by user actually</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54535">#54535</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54257">#54257</a>: closed (after some of my investigation mont29 then also asked sergey and this will be solved by 2.8 CoW)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54578">#54578</a>: closed (checked, and was also resolved by a previous campbellbarton commit)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54553">#54553</a>: closed (checked, and was also resolved by a previous campbellbarton commit)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54602">#54602</a>: closed (checked, and was also resolved by a previous campbellbarton commit)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54598">#54598</a>: closed (2.8 report)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54610">#54610</a>: investigated, then closed as duplicate</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54637">#54637</a>: investigated in some depth (UI code), claimed, but solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54597">#54597</a>: investigated in some depth (bmesh op), claimed, but solution pending</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54684">#54684</a>: investigated, was corrupted UVs, no answer how these were imported/generated, closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54673">#54673</a>: investigated, confirmed and claimed, solution pending [might as well be corrupt .lwo] but needs another look</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54671">#54671</a>: investigated, closed as archived, suggested workaround [cycles terminator issue]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54594">#54594</a>: confirmed with some further investigation, assigened to sergey (busy)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54584">#54584</a>: confirmed, assigned campbellbarton (undo rewrite), might have another look myself if time permits</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54698">#54698</a>: closed (feature request)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54692">#54692</a>: triaged incomplete, no answer, lijestina closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54700">#54700</a>: triaged incomplete, example file came a lot later, needs triage now actually</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54703">#54703</a>: investigated but is a limitation of alembic, added to TODO</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54551">#54551</a>: confirmed (though similar report existed), assigned sergey but he archived as not a bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54397">#54397</a>: confirmed (surface deform modifier violating modifier stack), assigned lucarood, but no answer yet (might also have a go at it)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54583">#54583</a>: mixed report (user error which I explained) and graphics glitches (which I marked incomplete, no answer, lijenstina closed later)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54704">#54704</a>: was fixed already, but Chaosgroup didnt update their version of our addon, closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54701">#54701</a>: second part of report was valid, comited fix (see master commits)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54482">#54482</a>: archived (design of scale manipulator), redirected to 2.8 design task</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54410">#54410</a>: confirmed, found causing commit, assigned campbell, solution pending [could also look into it]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54314">#54314</a>: [LONGISH] interesting problem that boils down to have py access to renderings etc, claimed as TODO</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54478">#54478</a>: could not reproduce, but newest blender version also solved it for user apparently, closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54542">#54542</a>: closed (not a bug, there are options to control this already)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54459">#54459</a>: confirmed and claimed, but solution pending, needs a second look</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54729">#54729</a>: not a valid report, closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54730">#54730</a>: more of a question about 2.8, closed</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54340">#54340</a>: fancy hardware, asked for more information</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54358">#54358</a>: confirmed and claimed for the time being [needs a second thourough look later]</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54734">#54734</a>: cannot reproduce, even after second answer</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54736">#54736</a>: closed, 2.8 report</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54735">#54735</a>: marked incomplete, no answer, lijenstina closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54349">#54349</a>: more of a TODO, but claimed, no patch yet though</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T53621">#53621</a>: older report, one suggestion was there, but no answer anymore... closed later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54080">#54080</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54574">#54574</a>: closed (more than a week without reply)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54579">#54579</a>: needs triage again (user provided more info since incomplete triage)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54321">#54321</a>: confirmed and claimed, simple fix will do later</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54341">#54341</a>: more a TODO, but claimed (sergey approved to work on it), patch follows (needs some cleanup still)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54346">#54346</a>: cannot reproduce, marked incomplete, lijenstina closed later due to no answer</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54325">#54325</a>: [LONGISH] investigation, claimed, but no solution yet</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T54743">#54743</a>: confirmed, assigned campbell (undo refactor)</li></ul>
+<p><br />
+<b>Master Commits</b>
+</p>
+<ul><li>Material Library VX: fix error when clearing category <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/8d3301f66c77e7b5a1f310a311d2055dbd473e09">rBA8d3301f</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_17_(April_23rd_-_27th)"></span><span class="mw-headline" id="Calendar_Week_17_.28April_23rd_-_27th.29">Calendar Week 17 (April 23rd - 27th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also gathered a couple of claimed reports now that I also prepared some patches for. Next week I want to push some of these.
+Untriaged reports are down from 70 to around 40 now, some remaining are a bit fuzzy, but these also have to go down next week...
+</p><p><b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+</p><p>Summary: involved in 38 reports, 3 master commits
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix T54789: A Simple Typo in the "Node Wrangler" Addon <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/b678ef752f129647e94bf21eb72c0fd30428d1ba">rBAb678ef7</a></li>
+<li>Fix T54803: Materials Library VX: follow strict class naming <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/9e97716c99af066ba578c8ac5685a7e92a363b59">rBA9e97716</a></li>
+<li>Fix discontinuity in default UVs for a torus <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d37dcc488045242cabd15b1e4e6df95f4ac1c508">rBd37dcc48</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_18_(April_30th_-_May_4th)"></span><span class="mw-headline" id="Calendar_Week_18_.28April_30th_-_May_4th.29">Calendar Week 18 (April 30th - May 4th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also going over claimed reports now.
+</p><p><b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+</p><p>Summary: involved in XXX (havent counted yet) reports, 1 master commit
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix T54341: Particle Instance Modifier doesn't preserve edge datas <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/288d7794d4c6836e1322d5ed943c4fbd4b0b0e54">rB288d7794</a></li></ul>
+<h2><span id="Calendar_Week_19_(May_7th_-_May_11th)"></span><span class="mw-headline" id="Calendar_Week_19_.28May_7th_-_May_11th.29">Calendar Week 19 (May 7th - May 11th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also going over claimed reports now.
+</p><p><b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+Summary: involved in XXX (havent counted yet) reports, 5 master commits
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix T54324: remove stencil entries from weight paint keymap <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9eb5aa32b843fdc7be5a7be264909170b725874c">rB9eb5aa32</a></li>
+<li>Fix T54525: crash when setting number of frames to use between dupoff frames <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f76e6c326f6">rB1f76e6c3</a></li>
+<li>Fix Movieclip editors 'graph' and 'dopesheet' view using themes region background setting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/66ec3c7e7f9c">rB66ec3c7e</a></li>
+<li>Fix T54997: simple typo in property description <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34c474e69541">rB34c474e6</a></li>
+<li>Fix T54992: Lattice modifier on another Lattice object does not take the</li></ul>
+<p>Influence vertexgroup into account <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69f2305415a2">rB69f23054</a>
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_20_(May_14th_-_May_18th)"></span><span class="mw-headline" id="Calendar_Week_20_.28May_14th_-_May_18th.29">Calendar Week 20 (May 14th - May 18th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also going over claimed reports now.
+</p><p><b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+Summary: involved in XXX (havent counted yet) reports, 2 master commits
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix T55065: lipSynch Importer not handling relative file paths correctly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/474702157831f1a58bb50f5240ab8b1b02b6ba37">rBA4747021</a></li>
+<li>Fix T55115: crash when iterating SmokeDomainSettings color_grid property through python <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e7a21a5f549f5db73385820cafcd8f2bb9c91da">rB5e7a21a5</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_21_(May_21st_-_May_25th)"></span><span class="mw-headline" id="Calendar_Week_21_.28May_21st_-_May_25th.29">Calendar Week 21 (May 21st - May 25th)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also going over claimed reports now.
+</p><p>Note: one public holiday, also took one day off
+</p><p><b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+Summary: involved in XXX (havent counted yet) reports, 3 master commits
+</p><p><b>Master Commits</b>
+</p>
+<ul><li>Fix T54336: Extend property of Lasso select tool in Node editor does not work <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54f2e58452bba1db8c50d26ca6999473fa45809d">rB54f2e584</a></li>
+<li>Fix Extend property of Lasso select tool in Mask editor not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3e9b592b08b614e29acdfd7906f572953c528378">rB3e9b592b</a></li>
+<li>Fix T55034: Setting duplication group for multiple selected items only affects one item <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1318660b0449b6e6afe6d349826af89005bc29dd">rB1318660b</a></li></ul>
+<h2><span id="Calendar_Week_22_(May_28st_-_June_1st)"></span><span class="mw-headline" id="Calendar_Week_22_.28May_28st_-_June_1st.29">Calendar Week 22 (May 28st - June 1st)</span></h2>
+<p><b>Info</b>
+</p><p>continued with triaging incomming reports, some more cleanup in older reports.
+Also going over claimed reports now. Also started porting old wiki over to new wiki (see T48096) and started looking into porting over the TODO list to phabricator.
+</p><p><br />
+<b>Tracker Triaging</b>
+</p><p>Will provide info in a more compressed form from now on, going over every report again seems more timeconsuming than its benifits justify.
+Summary: involved in XXX (havent counted yet) reports
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_40_(Oct_1st_-_Oct_5th)"></span><span class="mw-headline" id="Calendar_Week_40_.28Oct_1st_-_Oct_5th.29">Calendar Week 40 (Oct 1st - Oct 5th)</span></h2>
+<p><b>Info</b>
+</p><p>Happily back on the tracker!
+Note: one public holiday, also skipped Friday due to sickness (but made up for it Saturday/Sunday)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 35 reports:
+</p>
+<ul><li>Closed by own commits: 3.5</li>
+<li>Closed as Invalid: 2</li>
+<li>Closed as Resolved (user error or needed further explaination): 3</li>
+<li>Closed as Archived (no more info from reporter): 4</li>
+<li>Closed by others (did first investigation and assigned): 2</li>
+<li>Triaged Incomplete: 4</li>
+<li>Trigaged, investigated (but solution still pending): 15</li>
+<li>Differentials in review: 2</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T56990: AutoIK fails <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/60d4d583760cb3317968546406eba1da3d6330c8">rB60d4d583</a></li>
+<li>Fix T57011: Crash pressing Free Light Cache during Indirect Light Cache</li></ul>
+<p>Baking <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cc92d83d398854f461fe042959c384306d38320a">rBcc92d83d</a>
+</p>
+<ul><li>Vertex Paint: support switching to secondary color temporarily holding Ctrl <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d5fb2e103e03046194d69640aadf7e76a700620">rB7d5fb2e1</a></li>
+<li>use keyword argument for template_node_socket() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d38654ecd369e494473864adbb3305f3ef6cb63">rB7d38654e</a></li></ul>
+<h2><span id="Calendar_Week_41_(Oct_8th_-_Oct_12th)"></span><span class="mw-headline" id="Calendar_Week_41_.28Oct_8th_-_Oct_12th.29">Calendar Week 41 (Oct 8th - Oct 12th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging with a slightly increased time per report (which results in a couple of more Differentials made)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 33 reports:
+</p>
+<ul><li>Closed by own commits: 3</li>
+<li>Closed as Invalid: 2</li>
+<li>Closed as Duplicate: 1</li>
+<li>Closed as Resolved (user error or needed further explaination): 3</li>
+<li>Closed as Archived (no more info from reporter): 4</li>
+<li>Closed by others (did first investigation and assigned): 4</li>
+<li>Triaged Incomplete: 3</li>
+<li>Trigaged, investigated (but solution still pending): 13</li>
+<li>Differentials in review: 5</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57113: OBJ material import int conversion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/3aa692ee44df29670b4a03e29ab1f546b3b0c553">rBA3aa692e</a></li>
+<li>Fix T57128: error in Blender 27X keymap (Z key) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae3ac8062f4786938fcbd3cbe1b0151a54818821">rBae3ac806</a></li>
+<li>Fix T57130: Crash when running 'set active object as camera' on an empty <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1fad887d9e22da97009f28288cc6f21cc32a6c37">rB1fad887d</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_42_(Oct_15th_-_Oct_19th)"></span><span class="mw-headline" id="Calendar_Week_42_.28Oct_15th_-_Oct_19th.29">Calendar Week 42 (Oct 15th - Oct 19th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging with a slightly increased time in studying underlying code in more depth (WM main loop, UI code and dependency graph -- see T57098, T56636 and T57090)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 40 reports:
+</p>
+<ul><li>Closed by own commits: 3</li>
+<li>Closed as Invalid: 10</li>
+<li>Closed as Duplicate: 2</li>
+<li>Closed as Resolved (user error or needed further explaination): 7</li>
+<li>Closed as Archived (no more info from reporter): 1</li>
+<li>Closed by others (did first investigation and assigned): 4</li>
+<li>Triaged Incomplete: 11</li>
+<li>Trigaged, investigated (but solution still pending): 2</li>
+<li>Differentials in review: 2</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57247: Render animation does not respect render single view layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/345175082b1387270988f0d61fd43f09bbcf6afd">rB34517508</a></li>
+<li>Fix T57238: pie_menus_official: pivot point pie error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/a24896c2dbbbb33eaa06cfe6801185c085722d65">rBAa24896c</a></li>
+<li>Fix T57096: Crash when scaling bones <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6adf9ac9a32f0c9b9690fef1b9066e030683a45">rBe6adf9ac</a></li></ul>
+<h2><span id="Calendar_Week_43_(Oct_22nd_-_Oct_26th)"></span><span class="mw-headline" id="Calendar_Week_43_.28Oct_22nd_-_Oct_26th.29">Calendar Week 43 (Oct 22nd - Oct 26th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging (still with slightly increased time in studying underlying code). Trying to stick this to a couple of areas (decission on this isnt really settled, still looking and everything basically)
+Also BCONF this week (wasnt able to be there because of family duties...)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 51 reports:
+</p>
+<ul><li>Created own report: 2</li>
+<li>Closed by own commits: 5</li>
+<li>Closed as Invalid: 6</li>
+<li>Closed as Duplicate: 4</li>
+<li>Closed as Resolved (user error or needed further explaination): 5</li>
+<li>Closed as Archived (no more info from reporter): 4</li>
+<li>Closed by others (did first investigation and assigned): 13</li>
+<li>Triaged Incomplete: 3</li>
+<li>Trigaged, investigated (but solution still pending): 9</li>
+<li>Differentials in review: 3</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Use keyword argument for ui label text in cryptomatte passes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f15afc47ed5380bba5a42555451d88be51d70756">rBf15afc47</a></li>
+<li>Fix T57384: Depsgraph assert after loading file with Mask Node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/262504ddd190a66f9d8353afc2c2da653a998cc4">rB262504dd</a></li>
+<li>Fix T57394: missing bl_category in panel (custom props / stereoscopy) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/94ab6429bbdaf9f3541c715c5ae32647d454692a">rB94ab6429</a></li>
+<li>Fix mapped mesh display skipping generated faces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69dd58f21033">rB69dd58f2</a></li>
+<li>Fix T56636: Custom property cannot be animated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b4ebb9d8efb202221834475e1c06b0ae3e4ffe77">rBb4ebb9d8</a></li>
+<li>Fix T57028: Connect Vertex not working with more than 2 selected</li></ul>
+<p>vertices <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0f4064c66ff87fa84577f0522e2f3baf030be71f">rB0f4064c6</a>
+</p>
+<h2><span id="Calendar_Week_44_(Oct_29th_-_Nov_2nd)"></span><span class="mw-headline" id="Calendar_Week_44_.28Oct_29th_-_Nov_2nd.29">Calendar Week 44 (Oct 29th - Nov 2nd)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging (little less actual coding this week - emphasis back to triaging). 
+One public holiday [reformation day wednesday]
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 71 reports:
+</p>
+<ul><li>Closed by own commits: 0</li>
+<li>Closed as Invalid: 1</li>
+<li>Closed as Duplicate: 6</li>
+<li>Closed as Resolved (user error or needed further explaination): 13</li>
+<li>Closed as Archived (no more info from reporter): 14</li>
+<li>Closed by others (did first investigation and assigned): 12</li>
+<li>Triaged Incomplete: 8</li>
+<li>Trigaged, investigated (but solution still pending): 17</li>
+<li>Differentials in review: 4</li></ul>
+<p><b>Commits</b>
+</p><p>None this week
+</p><p><br />
+</p>
+<h2><span id="Calendar_Week_45_(Nov_5th_-_Nov_9th)"></span><span class="mw-headline" id="Calendar_Week_45_.28Nov_5th_-_Nov_9th.29">Calendar Week 45 (Nov 5th - Nov 9th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging. Emphasis back to triaging, not so much fixing -- well, almost&#160;:)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 90 reports:
+</p>
+<ul><li>Closed by own commits: 2</li>
+<li>Closed as Invalid: 2</li>
+<li>Closed as Duplicate: 2</li>
+<li>Closed as Resolved (user error or needed further explaination): 6</li>
+<li>Closed as Archived (no more info from reporter): 10</li>
+<li>Closed by others (did first investigation and assigned): 11</li>
+<li>Own reported: 2</li>
+<li>Triaged Incomplete: 14</li>
+<li>Trigaged, investigated (but solution still pending): 38</li>
+<li>Differentials in review: 3</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57742: Sculpt/Paint Brush Menus fails to display constant detail</li></ul>
+<p>resolution <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdf8ce6d2446966883d659caba2655a5f800946d">rBcdf8ce6d</a>
+</p>
+<ul><li>Fix T57737: crash displaying expanded tooltip for transform tool <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d0383d25932aab3091bf321b3a43e51329882fb">rB3d0383d2</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_46_(Nov_12th_-_Nov_16th)"></span><span class="mw-headline" id="Calendar_Week_46_.28Nov_12th_-_Nov_16th.29">Calendar Week 46 (Nov 12th - Nov 16th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging. Emphasis back to triaging, not so much fixing -- well, almost&#160;:)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 54 reports:
+</p>
+<ul><li>Closed by own commits: 5</li>
+<li>Closed as Invalid: 4</li>
+<li>Closed as Duplicate: 3</li>
+<li>Closed as Resolved (user error or needed further explaination): 4</li>
+<li>Closed as Archived (no more info from reporter): 5</li>
+<li>Closed by others (did first investigation and assigned): 14</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 8</li>
+<li>Trigaged, investigated (but solution still pending): 10</li>
+<li>Differentials in review: 1</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57766: error in Quick Effects &gt; Quick Fur <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e37a6be9e10ec04f6e2a157c71e4d303ab0642e3">rBe37a6be9</a></li>
+<li>Fix T57794: Text in Clip Editor Dopesheet not visible <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/de36a2f99b344b35aef580cd711e36bd5045127a">rBde36a2f9</a></li>
+<li>Fix copy tracking settings operators <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57573e0da994d4f81a830a0b25f89e49ef44ad9a">rB57573e0d</a></li>
+<li>Fix icon in Clip Editor header (Graph view type with enabled Filters) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4722003ca539e7742d462752049a9dd1ba7e2571">rB4722003c</a></li>
+<li>OBJ import: Fix spec <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/a0e769eeb3603a30caf663c97f833f569e757b5f">rBAa0e769e</a></li>
+<li>Fix node_shader_utils: "Specular Tint" is a float (not a color) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cfb6f14616ecd96831815b48c7edfdd706ddcf2e">rBcfb6f146</a></li>
+<li>PyTemplates operator_modal_view3d_raycast: update to blender2.8 (*/@) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/20963a6a06c2b77d0f012bc3826da10822b11d5e">rB20963a6a</a></li>
+<li>Fix T57863: Can't enable Node Wrangler addon <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/88b34670b8c6601032db7bb7b546b89d30e6f793">rBA88b3467</a></li>
+<li>Fix T57632: 3DS Importer Exception when assigning an object as a parent to its self <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/92ebf635ee2a9ddbc7fbf4a0c06b9732ee555b27">rBA92ebf63</a></li></ul>
+<h2><span id="Calendar_Week_47_(Nov_19th_-_Nov_23rd)"></span><span class="mw-headline" id="Calendar_Week_47_.28Nov_19th_-_Nov_23rd.29">Calendar Week 47 (Nov 19th - Nov 23rd)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging.
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 58 reports:
+</p>
+<ul><li>Closed by own commits: 4</li>
+<li>Closed as Invalid: 1</li>
+<li>Closed as Duplicate: 11</li>
+<li>Closed as Resolved (user error or needed further explaination): 6</li>
+<li>Closed as Archived (no more info from reporter): 1</li>
+<li>Closed by others (did first investigation and assigned): 12</li>
+<li>Own reported: 2</li>
+<li>Triaged Incomplete: 9</li>
+<li>Trigaged, investigated (but solution still pending): 11</li>
+<li>Differentials in review: 1</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57884: Triangle count is incorrect when above around 2 billion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cec83e92e6160adf1e39e0173c77743cb1ff1be7">rBcec83e92</a></li>
+<li>Fix T57578: Vertex Connect crash with less than two verts selected <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/783b0809b60abecb97d084495a6a910ae7bb9b09">rB783b0809</a></li>
+<li>glTF exporter: fix getting uv_layer in certain cases <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/be2df5249105015aaafb06def0d1279c559c56ff">rBAbe2df52</a></li>
+<li>Fix T58032: particle children 'Use Clump Curve' crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3919f99354376504408cfb4bbd4e71d71ffdadbe">rB3919f993</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_48_(Nov_26th_-_Nov_30th)"></span><span class="mw-headline" id="Calendar_Week_48_.28Nov_26th_-_Nov_30th.29">Calendar Week 48 (Nov 26th - Nov 30th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging.
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 76 reports:
+</p>
+<ul><li>Closed by own commits: 6</li>
+<li>Closed as Invalid: 1</li>
+<li>Closed as Duplicate: 16</li>
+<li>Closed as Resolved (user error or needed further explaination): 9</li>
+<li>Closed as Archived (no more info from reporter): 0</li>
+<li>Closed by others (did first investigation and assigned): 9</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 4</li>
+<li>Trigaged, investigated (but solution still pending): 32</li>
+<li>Differentials in review: 1</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T57929: missing UI updates when changing active object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00d438639dab0370987c330296a3cbc0f4e388de">rB00d43863</a></li>
+<li>make node editor tool region background transparent <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/39dcf6a10a53c49d3c1339755181dfce233f7b3d">rB39dcf6a1</a></li>
+<li>node_wrangler: fix panel after 'toolification' of the node editor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/0645fd005a749130e1cec3cd9921dab7adf10967">rBA0645fd0</a></li>
+<li>Fix T58100: Crash on bpy.context.object.visible_get() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3aed46a6cf753011c8d662b837074c8de9481abc">rB3aed46a6</a></li>
+<li>Fix T58105: Subdivision Set operator stuck in relative mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/213414674b2dc79755b0dfbe61aaaba38a28ba65">rB21341467</a></li>
+<li>Fix T58068: gizmo crash for bone on a disabled armature layer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3cc0eb36c3c05ac2661e2fac04c51db1bf0082b9">rB3cc0eb36</a></li></ul>
+<p><br />
+</p>
+<h2><span id="Calendar_Week_49_(Dec_3rd_-_Dec_7th)"></span><span class="mw-headline" id="Calendar_Week_49_.28Dec_3rd_-_Dec_7th.29">Calendar Week 49 (Dec 3rd - Dec 7th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging.
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 98 reports:
+</p>
+<ul><li>Closed by own commits: 13</li>
+<li>Closed as Invalid: 9</li>
+<li>Closed as Duplicate: 17</li>
+<li>Closed as Resolved (user error or needed further explaination): 3</li>
+<li>Closed as Archived (no more info from reporter): 0</li>
+<li>Closed by others (did first investigation and assigned): 24</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 14</li>
+<li>Trigaged, investigated (but solution still pending): 18</li>
+<li>Differentials in review: 1</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T58258: Select Objects in Collection not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/764e937d1a77b99d384a729700a08ef6fbe7bfac">rB764e937d</a></li>
+<li>Show tool title for favorites menu <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b16f03566ba02a7d0da7d5cf0b749a6b9e3e725a">rBb16f0356</a></li>
+<li>Fix T58495: Remove the Draw Curve operator from the Add menu <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/245065460f3381e8e3375464ec5ff3ce5b0ce3d6">rB24506546</a></li>
+<li>Fix T58714: mesh_looptools: update for 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/3148c4219f001511b69c3fb31dfedca98b9f4360">rBA3148c42</a></li>
+<li>mesh_looptools cleanup: avoid passing scene around <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/3aa7c2cc3e50f429616fd8ed2c0276c30ba6fc22">rBA3aa7c2c</a></li>
+<li>Fix T58104: Duplicated previews for Matcaps/HDRIs in portable installs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/378e5232e88eb99c40025c681c9b28724a370c0f">rB378e5232</a></li>
+<li>Fix T587983D Print Toolbox: update to 2.8 API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/c3c0fd18ee1d58f8c9e7b03329894503afffa732">rBAc3c0fd1</a></li>
+<li>Fix T58663: UV Align Auto does nothing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32d50858c353734124f68fd71b66f46ed2cb2ceb">rB32d50858</a></li>
+<li>Fix T58046: Crash when changing Particle type, when Hair has dynamics <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/41e4059f3c41234016dfabf6b3ae9e40c735483e">rB41e4059f</a></li>
+<li>mesh_f2: port to 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/08d30a13bf6a4d64b049b1917595ecb6097ccfa9">rBA08d30a1</a></li>
+<li>Fix T58902: error getting tools for Image Editor (modes Paint and Mask) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c1f6ecdfabfbfbe3fe4207722589e02953df736e">rBc1f6ecdf</a></li>
+<li>Fix T58922: add 'Control Points' and 'Segments' editmode menus for Surfaces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f034926dbac36de826b023cb0adeed447384414e">rBf034926d</a></li>
+<li>Fix T57994: Particle Instance modifiers 'Index Layer' off by one <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0eb61c799d0e98ccb92b12aea744c79a9da7e7c2">rB0eb61c79</a></li>
+<li>Fix T58952: view3d_pie_menus: using snapping pie causes error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/7ec6d84fccdd20f1410f09d7284ccc2ebf80cc3a">rBA7ec6d84</a></li></ul>
+<h2><span id="Calendar_Week_50_(Dec_10th_-_Dec_14th)"></span><span class="mw-headline" id="Calendar_Week_50_.28Dec_10th_-_Dec_14th.29">Calendar Week 50 (Dec 10th - Dec 14th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging. Balancing triaging and fixing.
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 87 reports:
+</p>
+<ul><li>Closed by own commits: 5</li>
+<li>Fix unreported: 2</li>
+<li>Closed as Invalid: 3</li>
+<li>Closed as Duplicate: 13</li>
+<li>Closed as Resolved (user error or needed further explaination): 10</li>
+<li>Closed as Archived (no more info from reporter): 1</li>
+<li>Closed by others (did first investigation and assigned): 23</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 9</li>
+<li>Trigaged, investigated (but solution still pending): 21</li>
+<li>Differentials in review: 2</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T59005: no FCurve cleanup in the Timeline <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e4153946ad1e81c697b8d51d92a3e2f088d0af4d">rBe4153946</a></li>
+<li>Fix T59069: Implement BMesh.from_object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eb83efb6d1bbbde744a35aa56b33473ad6961132">rBeb83efb6</a></li>
+<li>Fix T59001: UV Editor - Crash when hiding all UVs while 3D view is open...<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54e1d3815762ef964a74f179ef846110673e743f">rB54e1d381</a></li>
+<li>Fix T59232: PyTemplates operator_modal_timer: update to 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2796da2e5b594368d6ef1e92b59cef75bcd819c">rBf2796da2</a></li>
+<li>Fix T59202: FBX export: skip special properties when exporting custom properties <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/e4f4053de64eaa04b0199eea8f55a5f6b8b456dd">rBAe4f4053</a></li>
+<li>fix relationship line always drawing from the parents origin <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c1adf86a2ef30a9033ff7cfe757b1e7c7b174784">rBc1adf86a</a></li>
+<li>fix shader editor errors when showing world shader tree <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ac68f44b8a0cb5926af2977721fc01cb4eb8e1b7">rBac68f44b</a></li></ul>
+<h2><span id="Calendar_Week_51_(Dec_17th_-_Dec_21st)"></span><span class="mw-headline" id="Calendar_Week_51_.28Dec_17th_-_Dec_21st.29">Calendar Week 51 (Dec 17th - Dec 21st)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging. Balancing triaging and fixing.
+Took one day off (Friday - son was ill)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 63 reports:
+</p>
+<ul><li>Closed by own commits: 6</li>
+<li>Fix unreported: 2</li>
+<li>Closed as Invalid: 2</li>
+<li>Closed as Duplicate: 12</li>
+<li>Closed as Resolved (user error or needed further explaination): 8</li>
+<li>Closed as Archived (no more info from reporter): 10</li>
+<li>Closed by others (did first investigation and assigned): 10</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 10</li>
+<li>Trigaged, investigated (but solution still pending): 3</li>
+<li>Differentials in review: 2</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T59172: Blender 2.7x keymap error when setting pivot point <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/86e6901662de8165e766e108de8e8edb09303f7a">rB86e69016</a></li>
+<li>Fix T59112: bone pinning error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37d09827c607b33174277c1d7860d5290312bb0d">rB37d09827</a></li>
+<li>Fix T59484: Particles Lattice deform fails <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e08e323a7cf302b59e90077594caef7db725c57">rB8e08e323</a></li>
+<li>Fix T55105: Smoke Emission from particles was ignoring lattice... <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d542e55b096ba3d8e14cac2e4d314f0a5e759982">rBd542e55b</a></li>
+<li>Fix T59500: Weight Smoothing Not Working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc8f2e9ee42be09ff196c2e427f52042cff97197">rBbc8f2e9e</a></li>
+<li>Fix Proportional Edit Projected 2D method skiped center calculation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/684898cfbf0e2c658e0c5c6fd564668ef791feee">rB684898cf</a></li>
+<li>Fix T58327: Quick Favorites "Remove from Favorites" missing for added Modifiers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c79b8490976554d448435ae9b61d0697ad40e79f">rBc79b8490</a></li>
+<li>Node Wrangler: another update for 2.8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/e3c9be92624d93ba3eb78731887455fbf41040d6">rBAe3c9be9</a></li></ul>
+<h2><span id="Calendar_Week_52_(Dec_24th_-_Dec_28th)"></span><span class="mw-headline" id="Calendar_Week_52_.28Dec_24th_-_Dec_28th.29">Calendar Week 52 (Dec 24th - Dec 28th)</span></h2>
+<p><b>Info</b>
+</p><p>Continued tracker triaging. Balancing triaging and fixing.
+Took one day off (Monday), two public holidays (Christmas)
+</p><p><b>Tracker Triaging</b>
+</p><p>Involved in 35 reports:
+</p>
+<ul><li>Closed by own commits: 6</li>
+<li>Fix unreported: 1</li>
+<li>Closed as Invalid: 1</li>
+<li>Closed as Duplicate: 9</li>
+<li>Closed as Resolved (user error or needed further explaination): 2</li>
+<li>Closed as Archived (no more info from reporter): 2</li>
+<li>Closed by others (did first investigation and assigned): 3</li>
+<li>Own reported: 0</li>
+<li>Triaged Incomplete: 6</li>
+<li>Trigaged, investigated (but solution still pending): 5</li>
+<li>Differentials in review: 1</li></ul>
+<p><b>Commits</b>
+</p>
+<ul><li>Fix T59884: Rigidbody Calculate Mass Sets Mass to 0 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be1b32e4e49e6f8b51aca193c8a2399af893008f">rBbe1b32e4</a></li>
+<li>Fix T59861: converting GP stroke to curve doesn't immediately work <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/21e4f3bd8c3b797d6b51cafbfb33e2bed9f42269">rB21e4f3bd</a></li>
+<li>cleanup: remove unused passes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c196de56bbb163048b08f321983234a5e72e804">rB2c196de5</a></li>
+<li>Fix T59922: crash reading files with older renderlayers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c07ae0e821e441b3c3a9b6f192487744c54f4015">rBc07ae0e8</a></li>
+<li>Fix T59526: VSE Add submenus for clips/masks dont show with only one item <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c01cafabfa7d18c39d935ef87eebb6b427dba94">rB8c01cafa</a></li>
+<li>Fix T59785: Curve modifier does not update in realtime in object mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5095077148549b16d9eb72d56faa0427d51828e">rBc5095077</a></li>
+<li>T57377: Alembic import: Fix crash with mcol indices out of bounds <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/436f1a2afad33e74adb58f9db681dbc6e76fb591">rB436f1a2a</a></li></ul>
+<p><br />
+to be continued in <a rel="nofollow" class="external free" href="2019.html">https://wiki.blender.org/wiki/User:PhilippOeser/Foundation/2019</a> ...
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240111145407
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 1.062 seconds
+Real time usage: 1.059 seconds
+Preprocessor visited node count: 19295/1000000
+Preprocessor generated node count: 8462/1000000
+Post‐expand include size: 131133/2097152 bytes
+Template argument size: 71360/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  889.643      1 -total
+ 87.48%  778.293     96 Template:GitCommit
+ 77.92%  693.177    192 Template:GitCommit/PhabricatorParse
+  5.70%   50.667    273 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:1305-0!canonical and timestamp 20240111145406 and revision id 10119
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;oldid=10119">https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;oldid=10119</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 7 January 2019, at 16:27.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="https://wiki.blender.org/wiki/Special:WhatLinksHere/User:PhilippOeser/Foundation/2018" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:PhilippOeser/Foundation/2018" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/PhilippOeser.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/PhilippOeser.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/PhilippOeser.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;oldid=10119" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:PhilippOeser/Foundation/2018&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.062","walltime":"1.059","ppvisitednodes":{"value":19295,"limit":1000000},"ppgeneratednodes":{"value":8462,"limit":1000000},"postexpandincludesize":{"value":131133,"limit":2097152},"templateargumentsize":{"value":71360,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  889.643      1 -total"," 87.48%  778.293     96 Template:GitCommit"," 77.92%  693.177    192 Template:GitCommit/PhabricatorParse","  5.70%   50.667    273 Template:BugReport"]},"cachereport":{"timestamp":"20240111145407","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":37});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8445545d0e5eb8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

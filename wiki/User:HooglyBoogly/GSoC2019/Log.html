@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:HooglyBoogly/GSoC2019/Log - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:HooglyBoogly/GSoC2019/Log","wgTitle":"HooglyBoogly/GSoC2019/Log","wgCurRevisionId":12022,"wgRevisionId":12022,"wgArticleId":4471,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:HooglyBoogly/GSoC2019/Log","wgRelevantArticleId":4471,"wgRequestId":"130653940be9ea903527c9f6","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"HooglyBoogly","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_HooglyBoogly_GSoC2019_Log rootpage-User_HooglyBoogly skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="Log.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AHooglyBoogly%2FGSoC2019%2FLog" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Log.html#Project_Home"><span class="tocnumber">1</span> <span class="toctext">Project Home</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Log.html#Daily_Log"><span class="tocnumber">2</span> <span class="toctext">Daily Log</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Log.html#May_27"><span class="tocnumber">2.1</span> <span class="toctext">May 27</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Log.html#May_28"><span class="tocnumber">2.2</span> <span class="toctext">May 28</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Log.html#May_29"><span class="tocnumber">2.3</span> <span class="toctext">May 29</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="Log.html#May_30"><span class="tocnumber">2.4</span> <span class="toctext">May 30</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Log.html#May_31"><span class="tocnumber">2.5</span> <span class="toctext">May 31</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Log.html#June_3"><span class="tocnumber">2.6</span> <span class="toctext">June 3</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Log.html#June_4"><span class="tocnumber">2.7</span> <span class="toctext">June 4</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Log.html#June_5"><span class="tocnumber">2.8</span> <span class="toctext">June 5</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Log.html#June_6"><span class="tocnumber">2.9</span> <span class="toctext">June 6</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Log.html#June_7"><span class="tocnumber">2.10</span> <span class="toctext">June 7</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Log.html#June_10"><span class="tocnumber">2.11</span> <span class="toctext">June 10</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="Log.html#June_11"><span class="tocnumber">2.12</span> <span class="toctext">June 11</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Log.html#June_12"><span class="tocnumber">2.13</span> <span class="toctext">June 12</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Log.html#June_13"><span class="tocnumber">2.14</span> <span class="toctext">June 13</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="Log.html#June_17"><span class="tocnumber">2.15</span> <span class="toctext">June 17</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="Log.html#June_18"><span class="tocnumber">2.16</span> <span class="toctext">June 18</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="Log.html#June_19"><span class="tocnumber">2.17</span> <span class="toctext">June 19</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="Log.html#June_20"><span class="tocnumber">2.18</span> <span class="toctext">June 20</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="Log.html#June_21"><span class="tocnumber">2.19</span> <span class="toctext">June 21</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="Log.html#June_23"><span class="tocnumber">2.20</span> <span class="toctext">June 23</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="Log.html#June_24"><span class="tocnumber">2.21</span> <span class="toctext">June 24</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Log.html#June_25"><span class="tocnumber">2.22</span> <span class="toctext">June 25</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="Log.html#June_26"><span class="tocnumber">2.23</span> <span class="toctext">June 26</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="Log.html#June_27"><span class="tocnumber">2.24</span> <span class="toctext">June 27</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="Log.html#June_28"><span class="tocnumber">2.25</span> <span class="toctext">June 28</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="Log.html#July_1"><span class="tocnumber">2.26</span> <span class="toctext">July 1</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="Log.html#July_2"><span class="tocnumber">2.27</span> <span class="toctext">July 2</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="Log.html#July_3"><span class="tocnumber">2.28</span> <span class="toctext">July 3</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="Log.html#July_4"><span class="tocnumber">2.29</span> <span class="toctext">July 4</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="Log.html#July_5"><span class="tocnumber">2.30</span> <span class="toctext">July 5</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="Log.html#July_7"><span class="tocnumber">2.31</span> <span class="toctext">July 7</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="Log.html#July_8"><span class="tocnumber">2.32</span> <span class="toctext">July 8</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="Log.html#July_9"><span class="tocnumber">2.33</span> <span class="toctext">July 9</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="Log.html#July_10"><span class="tocnumber">2.34</span> <span class="toctext">July 10</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="Log.html#July_12"><span class="tocnumber">2.35</span> <span class="toctext">July 12</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="Log.html#July_15"><span class="tocnumber">2.36</span> <span class="toctext">July 15</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="Log.html#July_16"><span class="tocnumber">2.37</span> <span class="toctext">July 16</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="Log.html#July_17"><span class="tocnumber">2.38</span> <span class="toctext">July 17</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="Log.html#July_19"><span class="tocnumber">2.39</span> <span class="toctext">July 19</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="Log.html#July_20"><span class="tocnumber">2.40</span> <span class="toctext">July 20</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="Log.html#July_22"><span class="tocnumber">2.41</span> <span class="toctext">July 22</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="Log.html#July_23"><span class="tocnumber">2.42</span> <span class="toctext">July 23</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="Log.html#July_24"><span class="tocnumber">2.43</span> <span class="toctext">July 24</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="Log.html#July_25"><span class="tocnumber">2.44</span> <span class="toctext">July 25</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="Log.html#July_26"><span class="tocnumber">2.45</span> <span class="toctext">July 26</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="Log.html#July_29"><span class="tocnumber">2.46</span> <span class="toctext">July 29</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="Log.html#July_30"><span class="tocnumber">2.47</span> <span class="toctext">July 30</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="Log.html#July_31"><span class="tocnumber">2.48</span> <span class="toctext">July 31</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="Log.html#August_1"><span class="tocnumber">2.49</span> <span class="toctext">August 1</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="Log.html#August_2"><span class="tocnumber">2.50</span> <span class="toctext">August 2</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="Log.html#August_5"><span class="tocnumber">2.51</span> <span class="toctext">August 5</span></a></li>
+<li class="toclevel-2 tocsection-54"><a href="Log.html#August_6"><span class="tocnumber">2.52</span> <span class="toctext">August 6</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="Log.html#August_7"><span class="tocnumber">2.53</span> <span class="toctext">August 7</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="Log.html#August_8"><span class="tocnumber">2.54</span> <span class="toctext">August 8</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="Log.html#August_9"><span class="tocnumber">2.55</span> <span class="toctext">August 9</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="Log.html#August_12"><span class="tocnumber">2.56</span> <span class="toctext">August 12</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="Log.html#August_13"><span class="tocnumber">2.57</span> <span class="toctext">August 13</span></a></li>
+<li class="toclevel-2 tocsection-60"><a href="Log.html#August_14"><span class="tocnumber">2.58</span> <span class="toctext">August 14</span></a></li>
+<li class="toclevel-2 tocsection-61"><a href="Log.html#August_15"><span class="tocnumber">2.59</span> <span class="toctext">August 15</span></a></li>
+<li class="toclevel-2 tocsection-62"><a href="Log.html#August_17"><span class="tocnumber">2.60</span> <span class="toctext">August 17</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:HooglyBoogly/GSoC2019/Log</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:HooglyBoogly.html" title="User:HooglyBoogly">User:HooglyBoogly</a>&lrm; | <a href="../GSoC2019.html" title="User:HooglyBoogly/GSoC2019">GSoC2019</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h3><span class="mw-headline" id="Project_Home"><a href="index.html" class="mw-redirect" title="User:HooglyBoogly/GSoC2019/">Project Home</a></span></h3>
+<h1><span class="mw-headline" id="Daily_Log">Daily Log</span></h1>
+<p>I'm going to keep a daily log throughout the summer, and I'll keep it updated here in case anyone finds it interesting.
+</p>
+<h2><span class="mw-headline" id="May_27">May 27</span></h2>
+<p>Today I added got the <code>CurveMapping</code> interface element added to the modifer UI when the custom profiles checkmark is added. What took most of the time was figuring out all of the places I needed to change to make this happen. It makes sense looking at it afterwards, but the changes I had to make were quite distributed around (See <b>Piping Data</b> in notes). I learned a fair amount about the structure of the code doing this. There are still issues I need to solve with getting the new properties into the tool, especially the profile drawing interface.
+</p><p>I'm also starting to look more into where to add the functionality to the <code>CurveMapping</code> code that I need to. (The drawing and sampling of a non-function). Once I do that I'll be able to get this data into the calculate profile part of the operator (and solve the issue of half of the profile being done at once, that's still an unknown at this point).
+</p>
+<h2><span class="mw-headline" id="May_28">May 28</span></h2>
+<p>I had to drive back home from Vermont today, so I didn't get quite as much time I thought. I focussed on creating a method for sampling the <code>CurveMap</code> curves along their path rather than along the X coordinate today. For now I am using linear interpolation rather than curves though. I basically need to calculate the total distance of the curve's path and then travel down it and record the position (both X and Y now!) for the segment.
+</p><p>The existing <code>CurveMapping</code> code evaluates this once and stores the result in a table so it doesn't have to recalculate it, and I will need to do this next.
+</p><p>I'm just testing this functionality in the <code>bmesh_bevel</code> code for now. Although I've started discussing how to get this data incorporated in the bevel process, for now I'm focussing on creating and displaying it. 
+</p><p>Hopefully I will be able to finish up the two types of sampling tomorrow, and then I'll look at connecting the points in index order rather than in order of X.
+</p>
+<h2><span class="mw-headline" id="May_29">May 29</span></h2>
+<p>I've finished the linearly interpolated sampling of the <code>CurveMap</code>, and by removing sorting from the <code>curvemapping_changed</code> function the profile curve can be properly not a function, but it doesn't draw correctly. I'm finding that there are so many parts of the curvemapping code I have to change that I'm rethinking my plan of putting my code for the "Path_Mapping" code in there with it. Here are the things I have to change from the original curvemapping code to get to my profile editor:
+</p>
+<ol><li><b>The structs</b> I have to store the total length of the curve and the amount of segments to sample it with. And the tables also need to be twice as big because they need to store X and Y values for each sampled location.</li></ol>
+<ol><li><b>Evaluation</b> Instead of returning a single float, evaluating along a profile returns the 2D coordinates of a point along the path.</li></ol>
+<ol><li><b>Drawing</b> The evaluation for drawing currenty assumes there's only one Y value for each X.</li></ol>
+<p>There are also quite a few features that aren't needed from the <code>CurveMapping</code> code: extrapolation, the specific color mapping features, and the generality of not specifying the 0 to 1 clipping range.
+</p><p>In addition to finishing up the simple sample case, I also started to get the sampled data into the <code>Profile</code> struct in the bevel code. I'm figuring out the first simple cases that I can address first.
+</p>
+<h2><span class="mw-headline" id="May_30">May 30</span></h2>
+<p>Today I finished getting the sampled info into the <code>ProfileSpacing</code> struct. That struct contains the 2D locations of the profile's points before it gets transformed into 3D on top of a plane. Unfortunately I think this means I've completed most of the more straightforward part of using the profile information in bmesh_bevel.
+</p><p>I also spent way too long today dusting off my GDB knowledge diagnosing some stupid seg-faults that I caused with some typos and another silly mistake. It's all part of getting up to speed on a new project, and it'll be faster in the future, but it still feels stupid in retrospect.
+</p><p>Next, I could either focus more on getting the profile UI widget drawing fixed out, or see what I can do with this profile-spacing info in the simple weld cases I've talked about.
+</p>
+<h2><span class="mw-headline" id="May_31">May 31</span></h2>
+<p>Today I focussed on laying out where my changes will need to go in <code>bmesh_bevel.c</code>. I've formed a plan for getting bevel cases (like the weld case where just two edges meet) to work with custom profiles while keeping the rest of the modifier working while I work on the project. I'll store the custom profile 2D coords alongside the normal profile 2D profile coords in <code>ProfileSpacing</code>. Because I have both of those, I can call <code>calculate_profile_custom</code> instead of <code>calculate_profile</code> in cases that I'm working on which will use the custom bevel profile when it finds the 3D coords of the profile.
+</p><p>After that I started to try to find where the cases I will consider first are in the code, and figure out what the execution path is that leads up to them. First I am going to consider the case <code>M_NONE</code>, the weld case. I need to figure out where <code>calculate_profiles</code> is called along the path that leads to that case in order to find where to change it.
+</p><p>For a change of pace I also started to write the function to create the table of segment locations along the path, but I am going to need to think a little more about generalizing it before I consider that finished.
+</p>
+<h2><span class="mw-headline" id="June_3">June 3</span></h2>
+<p>Today I got the first visual results of the custom profile in the weld case, which is very exciting! It's still symmetrized by the existing code, and I'm not sure it's even behaving correctly, but moving the points in the UI moves the beveled vertices, so that's cool.
+</p><p>I didn't write much code today though. I mostly went through the <code>build_vmesh</code> code, looking at the weld case specifically. My process is generally going through and writing down a bunch of questions, then looking through the code again trying to answer them. I also solved some seg faults that came up with some of my smalelr changes.
+</p><p>Over the weekend I thought of a method to generalize creating the sampled table. I wrote it but I didn't pursue testing it because I think the final implementation of the curve widget is a little too up in the air to pursue optimizing it at this point.
+</p>
+<h2><span class="mw-headline" id="June_4">June 4</span></h2>
+<p>I got the terminated edge (n_gon end version) case working today, which is the first time I've been able to actually see my custom profile properly in the bevelled mesh. This makes it clear that I need to focus on getting the drawing code working better quite soon.
+</p><p>I would have liked to get the weld case working, and I think it did work a couple times in my testing throughout the day, but right now when the segment count goes up all of the profile points bunch up to one location on one side of the profile.
+</p><p>Luckily, so far these changes haven't amounted to much more than feeding the new profile point locations to the profile vertex creation code, and disabling / simplifying some features that are unique to the sampling of the superellipse from the regular profile.
+</p><p>The next problem I'm going to need to tackle for these cases is orienting all of the profiles in the same direction, chance already isn't quite good enough. I'm going to need to find a way to calculate chains and cycles of beveled edges and a way to store which side of each <code>BevVert</code> / <code>VMesh</code> is the top, and make it consistent.
+</p>
+<h2><span class="mw-headline" id="June_5">June 5</span></h2>
+<p>Today I spent a fair amount of time debugging the problem I mentioned where the profile vertices would bunch up on one side of the profile. It turned out that the custom profile case needed to get the profile from the <code>Profile</code> struct, because it wasn't done that way otherwise. Now the vertices get placed at the correct location. I find that when I decide to start testing and debugging a problem rather than just looking around in the code it takes longer to find the solution. But I do think I learn more in the process.
+</p><p>Now the weld and terminal edge profiles are placed properly, just with the wrong orientation sometimes. So I also started to think about how to properly implement the process of finding consistent orientations. As usual, once I start to write about it, I start to understand it and the intuition for the solution becomes a lot clearer. I posted about this in my DevTalk thread for feedback if anyone has any, and I'm looking forward to starting to implement it tomorrow.
+</p>
+<h2><span class="mw-headline" id="June_6">June 6</span></h2>
+<p>I started constructing the code to regularize the orientations of the profiles today. I started with a comment structure showing the steps the code will have to take. And of course I had to make a few changes to how it will work, just like always. I decided it's better to travel from <code>EdgeHalf</code> to <code>EdgeHalf</code>, because those are the elements that are actually beveled, and they have pointers directly to the two <code>BoundVerts</code> from which the profile could start. There are two parts that I am still figuring out how to best solve.
+</p><p>One is traveling across a <code>BevVert</code> to the next <code>EdgeHalf</code>. The case where there is only one other beveled edge leaving the vertex is simple, it's just a weld and the code will travel down that next edge. But if there are more beveled edges coming into the vertex it becomes more complicated. They might all even form the same angle with the edge we're traveling from. I haven't decided how to manage this case where they form the same angle, except maybe arbitrarily.
+</p><p>The second part is how to actually propagate which side of the <code>EdgeHalf</code> the profile should start at. My only idea here is checking which of the two <code>BoundVerts</code> connects to the last starting <code>BoundVert</code>. To implement that I just have to work my way back across the new boundary edges, and hope that they have already been built. 
+</p><p>It's fun to think about these problems, but I do hope this method ends up working out.
+</p>
+<h2><span class="mw-headline" id="June_7">June 7</span></h2>
+<p>Today I continued working on my implementation of **profile orientation regularization** (which is actually getting much faster to say). The part that actually travels down the beveled edges should be finished, although I'm sure it will cause some segfaults before I really finish it. The only part of this that isn't finished is the part that marks the <code>BoundVerts</code> as profile-beginning or profile-ending edges. This is a tricky problem. I've thought of a solution for one of the cases, but it relies on the boundary geometry being built and connected up, and I'm only hoping and guessing that that is true.
+</p><p>I wrote up a section about this in the notes document: "Passing Along the Choice of BoundVert for Profile Start." It's very helpful more me to lay out the problem like that.
+</p><p>I've spent two and a half days without even compiling code. It's maybe not as exciting without visual progress, but it's great to be so immersed in solving a single problem.
+</p>
+<h2><span class="mw-headline" id="June_10">June 10</span></h2>
+<p>Over the weekend and today I finished the first draft of the profile orientation regularization code and started to test it. After thinking about my convoluted method for passing on the correct profile orientation I realized that I was hugely over complicating the issue. The fact that really simplifies it is that every time you move from one <code>EdgeHalf</code> to the next, you flip whether you are moving into or out of a <code>BevVert</code>. And because the left and right sides of an <code>EdgeHalf</code> are defined relative to the <code>BevVert</code>, they switch off every time. So the orientation just needs to reverse every time!
+</p><p>I tested by drawing a sphere with <code>DRW_debug_sphere</code> at every profile start <code>BoundVert</code>. After fixing one segfault, the code did mostly what I expected-- the profile start stays at the same side of the beveled edge. There are some issues, and the code doesn't execute exactly how I expected, so I'll need to spend some time improving it though.
+</p><p>Today I also made the weld case use the new profile orientation information. If the first of the two BoundVerts it comes across isn't the start BoundVert, it switches them, that simple!
+</p>
+<h2><span class="mw-headline" id="June_11">June 11</span></h2>
+<p>I don't have much new to report from today. I'm testing the code I wrote for traveling down chains and cycles of beveled edges, and like I said before the results are mostly good, but it's not working how I expected it to. My test scene has one long chain of beveled edges, so I would only expect the traveling code to run once-- it should visit everything the first time. But instead it only visits one edge each time. The function that gets the next edge to visit is not working in the "into BevVert" case.
+</p><p>I should probably make it a rule that it takes the same amount of time to debug code that it does to write it, it would probably help me plan. Luckily I was visiting with my brother and he was interested so I could explain my code's situation to him to make it more enjoyable. I hope I can fix this problem soon, although that unearth another problem.
+</p>
+<h2><span class="mw-headline" id="June_12">June 12</span></h2>
+<p>Today I fixed the first problem I came across with the traversal for the orientation code. I disabled all of the iterations except the first, and then fixed issues and tested things out until it traveled all the way along the chain of beveled edges I've been testing with. There are still issues with the side of the <code>EdgeHalfs</code> that it assigns as the start, but at least it travels around properly. It was sort of slow debugging today, but every day I get better at working with the bevel code, and I figured out how to draw debug spheres on vertices, which makes testing much quicker.
+</p>
+<h2><span class="mw-headline" id="June_13">June 13</span></h2>
+<p>I had a shorter day today, but I still made progress on the process that marks the <code>BoundVerts</code> as profile starts. It now marks the same side along a path properly in my test cases. I started to look into using this information in the terminal edge case. I'm not sure yet though whether the profile vertices in the terminal edge case are created in the same area as the profile vertices of the weld case. I hope to be able to switch the <code>BoundVerts</code> based on which is the profile start the same way I delt with the weld case.
+</p><p>I've started thinking a bit about how to deal with the &gt;2 beveled edges case. I think I will probably want to interpolate between the profile of every boundary edge with weights based on how far the new vertex is from each boundary edge.
+</p><p>I also discovered that it's possible to create geometry outside of the 0 to 1 region, outside of the profile. It's great that it's disabled by default, but by disabling clipping and zooming out you can move the profile geometry further than you can by default. It's awesome to have the option to do this, it will probably be pretty useful in some situations.
+</p>
+<h2><span class="mw-headline" id="June_17">June 17</span></h2>
+<p>Today I spent a while looking into how to get the terminal edge case to use the marked profile orientation. This is tricky because the profile for a terminal edge is part of the boundary, which is created before the orientations of the profiles are regularized. This necessitates a method to adjust the "boundary arc's" vertice's locations after they are created.
+</p><p>I also looked into how to implement the drawing for the profile creation widget. The first idea I have for drawing the dark area under the profile is to start drawing light from the top then travel down the widget's height, switching to dark after hitting any line between two points, then switching back and forth between colors every time it hits a new line.
+</p><p>In order to implement this I have completely separate the new "profile_path" code from the original "colortools" code, which is proving to have effects in multiple areas of the code, the drawing, the input, and others.
+</p>
+<h2><span class="mw-headline" id="June_18">June 18</span></h2>
+<p>I finally figured out the best way to fix the orientations of the terminal edge profiles. After trying out a bunch of options, I settled on something quite simple. If a terminal edge profile is being created with the wrong orientation, it recalculates the profile positions. I added a "reversed" option to <code>calculate_profile_custom</code> that flips the vertices across the y=x line, and then the vertices are placed in the opposite order. This is fix is simpler than I expected, which is great!
+</p><p>I've also been separating and changing the <code>CurveMapping</code> code into new <code>ProfileWidget</code> headers and files. I've created three new files for this: <code>DNA_profilepath_types.h</code>, <code>BKE_profile_path.h</code>, and <code>profile_path.c</code>. I'm not certain these are the best names, but I am confident that completely separating the profile widget code from the old <code>CurveMapping</code> code is the right choice. So much has to change for the profile functionality that it feels more harmful than helpful to keep them together.
+</p>
+<ol><li>The points are not sorted by their X values</li>
+<li>The drawing has to be rewritten to take into account the non-function nature of the profiles vs. the direct mapping of the curves.</li>
+<li>The evaluation also has to be rewritten to return both X and Y values as results. This is already complete for the linear case.</li>
+<li>All functionality relating to color management becomes unecessary.</li>
+<li>It's not necessary to have more than one curve (profile), which simplifies some functions.</li>
+<li>The presets will need to change.</li>
+<li>Extrapolation is unecessary and can be removed.</li></ol>
+<p>Here I've also basically written myself a todo list for the next few days. I think the hardest parts will be writing the drawing code and connecting the interface callbacks back up to the new implementation, they will both necessitate venturing deeper into Blender's UI code.
+</p>
+<h2><span class="mw-headline" id="June_19">June 19</span></h2>
+<p>Today I've been working on fixing up the code I reused from the curve editor. I've removed a lot of it and converted it to use the profile editor code instead. There are so many places in the interface code to change. I've been making fast progress, and I think early tomorrow I'll be ready to try compiling it and start fixing whatever errors come up. Then I can start to implement the improvements I mentioned, mainly updating the drawing code.
+</p>
+<h2><span class="mw-headline" id="June_20">June 20</span></h2>
+<p>Over the past day or two I've modified 30 different files while creating the <code>ProfileWidget</code> code for the custom profile input. The net change is +1500 lines so far. Mostly I've started by duplicating the code associated with the <code>CurveMapping</code> curve editor. Then I strip out unecessary functionality, which in some cases removed most of the new code. After that I moved through the new code fixing errors and switching to the new use case, which also reduced the complexity of the new code a lot. 
+</p><p>I wanted it to compile by the end of the day today, and I've gotten that far! Now I'm going through the process of finding more and more esoteric SEGFAULTs-- currently I'm fixing an issue where the total number of points in the profile path is -32768. I wish I knew a way to write code without creating those kinds of issues, but then I suppose I'd be finished with my project.
+</p>
+<h2><span class="mw-headline" id="June_21">June 21</span></h2>
+<p>At first today I focussed on fixing crashes that came up in the transition to the new <code>ProfileWidget</code> code. After fixing a couple, including the incorrect total point value I mentioned yesterday, the widget is mostly stable. I then did some work on the UI for the buttons above the profile editor, making them look more in line with more recent 2.80 UI (and better in my opinion). 
+</p><p>After spending a while with the widget's drawing code, I understand how it works well enough to make the changes I need to. I started to implement the profile color fill algorithm I've described before, but I've been dissapointed by how inefficient it seems, and I think I thought of a better solution. I'm hoping to be able to use an existing triangulation algorithm to fill the "polygon" of the custom profile with a darker color. My original method would have been O(x_width * nlogn) (where n is the number of points in the table), and it looks like a triangulation algorithm would at least drop that x_width term, which could be very helpful. I'm hoping to get feedback on how possible this over the weekend.
+</p>
+<h2><span class="mw-headline" id="June_23">June 23</span></h2>
+<p>I worked on the <code>ProfileWidget</code> a lot over the weekend and I actually finished what I had planned for the next week today! I finished the fill of the profile area with the triangulation method. I wasn't sure if it was going to work, and I had some really cryptic errors on the way, so I was really excited when it worked! It works really well, and you can't see any overlap between the triangles which was one of the things I was worried about. It looks a bit odd with quadrant 1-4 point positions when clipping is turned off, the bottom-right corner could move down to the display's corner in that case.
+</p><p>I also implemented a new insertion algorithm that uses the minimum line segment distance to choose the index of the new point after a fair amount of experimentation for the best algorithm.
+</p><p>And finally reading and writing the bevel modifier's profile widget is working! So we can save and load files with these features.
+</p><p>Overall I'm really happy to have that all done earlier than I expected. It means I can hopefully make progress on a couple things this week:
+1. Begin tackling the ADJ vertex mesh generation.
+2. New table generation for the profile path that doesn't use an X-Y mapping.
+3. Fix profile sampling with "Sample only points" turned off.
+</p>
+<h2><span class="mw-headline" id="June_24">June 24</span></h2>
+<p>Today I mostly moved back into the bmesh bevel file. I started to experiment with the remaining cases I haven't tackled. First, the pipe case, which basically reuses the profile again and again for each vertex along the straighter edge. Right now it snaps to the superellipse function, so I tried to convert it to snap to the custom profile, but I failed really spectacularly! I think I have the right idea-- the profile is moved along to each point and the point is snapped to the closest line, but right now all it does is give the mesh huge spikes and crazy geometry!
+</p><p>I also found every instance of <code>calculate_profile</code> and made it use the custom variant in the custom case. It's interesting to see what it does, and it's definitely closer, but it might be a long path to get it to work.
+</p>
+<h2><span class="mw-headline" id="June_25">June 25</span></h2>
+<p>After causing a bunch of crazy errors in the bevel vertex mesh creation yesterday, I decided that I needed to understand the overall process better. So today I added print statements to most of the ADJ vertex mesh generation functions to get a better picture of the process that's used to bevel these situations. After getting a better understanding of what's going on I made some simpler changes -- using the custom profile instead of the superellipse profile, disabling <code>snap_to_superellipse</code> and others. Mostly this totally ruined the vertex meshes, but it has to get worse before it gets better! Right?
+</p><p>Somewhere in the process I caused a strange segfault that I've been working on solving for a while.
+</p>
+<h2><span class="mw-headline" id="June_26">June 26</span></h2>
+<p>I finally solved that segfault I was working on yesterday! It turned out to be a pretty stupid mistake of disabling the <code>free</code> block at the end of the bevel function which was why it was causing an error in a different place in Blender. With that solved I started to work a bit more on the vertex mesh creation. I'm still in the phase of understanding how the ADJ pattern is already created, so it's slow going.
+</p><p>I also spent some time getting the profile widget more feature complete. I added:
+</p>
+<ol><li>A reverse button that flips the position and the order of the profile points. This will be the way to flip the orientation of the bevel profile.</li>
+<li>A functional preset selector with three presets built in for now.</li></ol>
+<p>Working on the profile widget is sort of a way to procrastinate on the vertex meshes, but I'm still feeling good about the progress I've made there.
+</p>
+<h2><span class="mw-headline" id="June_27">June 27</span></h2>
+<p>I'm still working on the vertex meshes. I mostly made progress today in understanding what's going on already and thinking about plans for my implementations. There are three cases I need to solve, one is the "cube corner" case, another is the "pipe" case, and the last is the general ADJ pattern case. I think I have general ideas of how I want to solve the first two.
+</p><p>First, for the "cube corner" case, I would like to keep using the general subdivision method that's already used. Right now though the code snaps to the bulge created by the profile radius. I'd like to either just remove that or replace it with something that moves closer to sampled profiles depending on how close it is to each one, which would tie in to my general ideas of how to deal with the general case.
+</p><p>And second, for the "pipe" case, it should be possible to use a somewhat simpler solution. I would like to try recalculating the profile at every ring along the line of the "pipe" and just use the profile at that location. This depends on a couple other assumptions being true, but it seems like it might work well.
+</p><p>The general case is much harder. Apart from some unguided subdivision in the vertex mesh (which probably wouldn't actually be that bad in most cases), I don't yet have specific ideas of how to deal with it. I'll probably want to progress more with the other cases before I try to make concrete plans here.
+</p>
+<h2><span class="mw-headline" id="June_28">June 28</span></h2>
+<p>Howard answered some questions I had about the vertex mesh creation and related code today. He wrote a lot of really helpful explanations, so I've been going over them and making sure I understand everything he wrote about. The idea of the canonical indexes for <code>VMesh</code> vertices was a particularly important thing I finally think I understand. Because there are multiple ways to index the same vertex there is one proper / canonical way.
+</p><p>After clearing up some of these confusions I started to make a plan for how the best way to tackle the <code>VMeshs</code>, what I'm calling "Decaying Profile Influence." I would like to try it out manually for a profile with an overhang before I settle on it though.
+</p>
+<h2><span class="mw-headline" id="July_1">July 1</span></h2>
+<p>I spent the morning finishing up some experiments I was doing over the weekend trying out different methods for <code>VMesh</code> creation. I enjoy the process of communicating this stuff, and it's great to get people involved. The consensus seems to be that the ADJ grid and the Boolean options are good, and having both of them would be the best solution. Given that I almost have the mesh ADJ grid working, I'm considering tackling the boolean method too. Then I'd be able to make an option for which one was used. It could even go in as a miter option!
+</p><p>I'm wary of taking on too much with not enough time left though; judging by how it was pretty tricky to get the boolean option working manually, I doubt it will be quick to implement. But it seems like a great solution for some of the more geometric profiles.
+</p><p>I wanted to lay out the other big things left to do to help prioritize:
+</p>
+<ol><li><b>Get the profile widget into the bevel tool menu.</b> I should only need to pass the pointer through the BMesh slot.</li>
+<li><b>Fix memory leaks.</b> The process of copying the old profile widget crashes when I enable the modifier's "freeData" function.</li>
+<li><b>Update profile widget table-building.</b> I've figured out how to do this and I don't think it will take too much longer.</li>
+<li><b>Fix profile orientation next to impassable BevVerts.</b> Just a bug that I think might take a bit of time to fix.</li>
+<li><b>Documentation and cleanup.</b></li></ol>
+<p>Also today, I've made some progress on the profile widget's table creation, and I made a bit of progress for custom profile ADJ VMesh creation.
+</p>
+<h2><span class="mw-headline" id="July_2">July 2</span></h2>
+<p>Today I made some decisions about what I wanted to prioritize for the rest of the summer. I decided to focus on the ADJ method and the "cut-off" method that was suggested on DevTalk for now for creating <code>VMeshes</code>. The boolean method is such an unknown that I don't want to jeopardize anything else to make it work. It's definitely still possible that I get to it, but I'd like to get through my backlog first.
+</p><p>To that end, today I knocked one of the big items off of the to-do list. I fixed **#2**, the memory leak from the bevel modifier and fixed saving and loading bevel modifiers in the process. I also merged the <code>ProfilePath</code> and <code>ProfileWidget</code> structs-- I can't think of a situation where a given widget would need more than one path. I also made a fair amount of progress toward getting the profile widget into the bevel tool(which now works!). The hard part will apparently be freeing the widget when I'm done with it, but I'll figure that out when I get there.
+</p><p>I have to add a couple more items to my big things left to do list though:
+</p>
+<ol><li><b>Add "harden normals" functionality.</b> Set custom normals for the profile faces using the curvature of the profile.</li>
+<li><b>Add symmetrical profile drawing.</b> For now I don't want to commit to making another <code>VMesh</code> method for this, but I've received a lot of requests for a symmetrical option and this would be an important step toward that.</li></ol>
+<h2><span class="mw-headline" id="July_3">July 3</span></h2>
+<p>I spent a while today working on getting the profile widget in the redo panel. I really feel like I'm guessing when I start using the RNA system, and to combine it with the bmesh slots system makes it even more confusing. I think I may have solved the problem of how to get the pointer to through the RNA function (<code>editmesh_bevel.c</code>) to the bmesh system (<code>bmo_bevel.c</code>), but I can't tell yet, because I can't figure out a way to actually draw the profile widget in the redo panel. There's no way to access a UILayout pointer from the mesh tool that adds the other properties, and I need that to call the profile widget template. I've added the other options though!
+</p><p>Anyway, I'm not familiar enough with the way the redo panel is created and so far it hasn't been an easy thing to locate in the code. With so many things left to do, I decided to move on to something I can do more efficiently. I started to work on updated sampling for the profile. I'll use the same sampling for making the display table and the evaluation for finding where the profile points should go, which is great because it will simplify my code. There was a lot of discussion on DevTalk about the best way to do this. It might be nice to add more options in the future, but I think I chose a method that's a good compromise between the different requirements.
+</p>
+<h2><span class="mw-headline" id="July_4">July 4</span></h2>
+<p>I got the new sampling algorithm mostly working! Writing it was a lot of fun in the morning, but it became quite a slog in the afternoon when I had to fix all of the bugs I also added-- plenty of incorrect calculations, corrupted memory chunks, and other segfaults. I used the profile widget as a way to test the new algorithm, so it looked pretty crazy when it didn't work. I'm happy with where it ended up though. I like how general it is and how it has a few different use cases.
+</p><p>There are still some things I need to fix though. I think the reduced version of the bezier handle calculation that I copied over from <code>colortools.c</code> makes some assumptions for the X direction that I'll need to figure out. Right now it looks like the handles aren't in quite the right place. Maybe I'll start again from the <code>curve.c</code> code and reduce it myself. Another thing to fix is that I didn't realize the bezier forward differencing included the starting bezier point, so I'll have to fix that.
+</p>
+<h2><span class="mw-headline" id="July_5">July 5</span></h2>
+<p>I enabled the new sampling for the bevel profile curve this morning and it's working well. I think it will be important to have the option to disable the extra samples for straight edges though. I spent most of the day fixing bugs and crashes that I found or created when I made this change. It was slightly frustrating but it should be pretty stable now. It's fun to use!
+</p><p>I also flipped around the X profile orientation. (And solved all the bugs that came up there). It's nice to have a clear list of what I can do next. I think next I'll add the option I mentioned above and then move on to other tasks.
+</p>
+<h2><span class="mw-headline" id="July_7">July 7</span></h2>
+<p>Over the weekend I spent some time working on creating an option for whether to sample the straight edges between two vector-handle control points. There's some (relatively) complicated logic in the code that determines how many samples to give to each edge. First I give one sample to all of the straight edges, just so that their start point is sampled. Then I ask-- out of the remaining samples, how many can I give to each curved edge if I split them up evenly? I assign those and then distribute the (still!) remaining samples to the most curved edges. Then the sampling process happens and the locations are returned. It's fun code but it took a while to debug.
+</p><p>With that done I'm almost completely happy with the sampling process. I may need to test the "don't sample straight edges" case a bit more, especially the last step of sample distribution process I just described, but once I do I think most people's needs will be filled. I'll want to get feedback on that though, because it could be that another method would be really important to some people.
+</p>
+<h2><span class="mw-headline" id="July_8">July 8</span></h2>
+<p>I couldn't work quite as much today, I was switching locations again on my quest to live somewhat nomadically, and the trip and getting set up takes longer than I expect. And the work I did do was a little bit frustrating too. I chose one of my 8 remaining items on my to do list, the profile widget in the redo panel. After getting some help on the chat I set up a custom drawing callback that will now draw the redo panel for the edit mesh bevel operation.
+</p><p>But I haven't been able to get there yet because of an error I've been running into with the rna system when I try to add the <code>ProfileWidget</code> pointer to the operation's properties that leads to a segfault later on when the operation is run.
+</p><p><code>".prwdgt": only during preprocessing.</code>
+</p><p>I have to say I feel very lost whenever I try to do anything a little more complicated than the basics with the RNA system. It seems very cool, but I wish it was documented better. There are so few comments in the RNA API files! I've pretty much resorted to searching around the codebase for similar examples. I'll probably ask for some help tomorrow morning. I know I haven't properly set up and initialized the pointer, so that may be it.
+</p>
+<h2><span class="mw-headline" id="July_9">July 9</span></h2>
+<p>When I asked on Blender.Chat about drawing the RNA pointer issues I was having, Jeroen Bakker suggested using the global <code>ToolSettings</code> struct to store the ProfileWidget. This makes the <code>ProfileWidget</code> available everywhere from the scene's context. This is great because it gets around the issues that Howard was having with freeing pointers after they're used by the tool, and it makes storing and reusing the widget easier by pretty much bypassing the RNA system.
+</p><p>So I implemented that and got the widget's profile view into the redo panel. It's awesome to have it in the tool and it's fun to use! The issue is that all of the widget's other buttons are in the UI Template code, and the whole premise of that code is that the <code>ProfileWidget</code> is in a RNA property! I thought that this would make this solution inviable, but it turns out that everything inn the <code>ToolSettings</code> struct has an RNA property too, so I added that and it works well!
+</p><p>There is one strange issue where the "Use Custom Profile" checkbox shows up a second time when the first one is enable though, it's quite weird.
+</p>
+<h2><span class="mw-headline" id="July_10">July 10</span></h2>
+<p>Today I fixed the problem with the orientation of single segment bevel chains. It turned out to be a very simple fix, much easier than I expected. I basically just had to change the orientation assigned to the first edge visited.
+</p><p>I also moved the "Sample Straight Edges" option from tbe bevel operator (modifier and tool) to the <code>ProfileWidget</code>. I'd imagine that anything using the widget would probably want this option, so putting it in makes it more modular and hopefully more useful.
+</p><p>In the place of the "Sample Straight Edges" property, I added a "Vertex Mesh Method" property to the bevel operator. This will let you choose between the ADJ and cut-off methods, even in non-custom profile cases. In the future you could hopefully also select the boolean method and others. For now the cut-off method is just a hole though. It should be a fun project to implement it!
+</p>
+<h2><span class="mw-headline" id="July_12">July 12</span></h2>
+<p>Today I worked on laying out the algorithm for creating the cut-off vertex meshes. I think I've mentioned before that this is always a really fun process. The description of how it will work then becomes most of the comments for the code, so I think it ends up helping the quality of the code's documentation. 
+</p><p>The algorithm I finally came up with finds the direction of the "vertical" into the mesh, and puts a corner vertex down that direction from each boundvert by the height of the transformed profile. If it's a 3-way intersection it checks to see if they're at the same spot, but otherwise it always makes the center face and also the cutoff faces for each profile by using those corner vertices. It ended up being a lot simpler than I thought! (At least the algorithm, not totally sure about the implementation yet)
+</p>
+<h2><span class="mw-headline" id="July_15">July 15</span></h2>
+<p>Today I worked on the first draft of the cut-off method vertex meshes. The trickiest part is the problem of how to actually get the data into the <code>bev_create_ngon</code> function, which creates all of the faces in the bevel code. The poly method (simple triangles for the one segment cast) uses <code>BLI_array</code>s to accumulate vertices, whereas the ADJ mesh is built by accumulating the vertices in <code>NewVert</code> structs and storing them in the <code>VMesh</code> struct, then later creating the Ngons/quads directly from those. There are pros and cons to both methods, but I think the former is better, because there are only a few extra verts in the vertex mesh. I don't think it's worth complicating the indexing of the <code>VMesh</code> struct to add them in.
+</p>
+<h2><span class="mw-headline" id="July_16">July 16</span></h2>
+<p>Today I finished up implementing the cut-off method code. I'm still having trouble getting the data into the face creation function, so I'm starting to debug that. When I get it to stop crashing I'm pretty sure there will be more things to fix, but I'm pretty confident that the big ideas are right.
+</p><p>I also worked a little bit on finishing the updating of the <code>ProfileWidget</code> Python API. Now I'm pretty sure the only thing to do there is update the evaluation functions to return 2D vectors instead of just a float. I just need to find an example of where that's already done somewhere and it shouldn't be too hard.
+</p>
+<h2><span class="mw-headline" id="July_17">July 17</span></h2>
+<p>I'm discovering again that the implementation of a new algorithm takes *much* more time than it does to concept it! I've resolved the crashes but the vertices are placed in crazy locations, and those that are correct (the profile vertices) are doubles because I'm creating a new <code>BMVert</code> every time I add a vertex to a face for now. 
+</p><p>I really need to properly understand the whole process and reasoning behind first creating an array of <code>NewVerts</code> and then creating the <code>BMVerts</code>. I think it's mostly a quicker way to find the right vertices, so I don't think it would be necessary to use the same process in this situation because there are so few of them, but I think I will anyway. The whole setup is there anyway, and the abstractions are useful so I might as well use them.
+</p>
+<h2><span class="mw-headline" id="July_19">July 19</span></h2>
+<p>Today I *finally* got cutoff method working. I'm now filling the <code>VMesh</code> <code>NewVert</code> array and then creating the <code>BMVerts</code>, sharing them between some of the <code>NewVerts</code>. I'm only using a few of the ADJ pattern indices, just 2 on the second ring for each boundary vertex. This whole process makes a lot more sense now that I've implemented something like it myself, but it took a lot of trial and error to figure out, and I had to fix a couple very silly crashes I created in the process.
+</p><p>One thing I still need to figure out is the direction of the edges for each profile's corner face. I was using the (ready?!) average of the cross products of neighboring profile's normals and their horizontal directions, but that wasn't working out very well. Now I'm just using the opposite of the normal of the face closest to each boundvert. This is ALSO not right, because it results in cutoff faces that aren't quite planar. I just need to figure out the math for the right direction at this point, everything else is in place. That which will probably involve finding the direction of the edge that's the intersection between the two profile planes.
+</p>
+<h2><span class="mw-headline" id="July_20">July 20</span></h2>
+<p>Today I mostly worked on:
+1. Getting miter options to turn back to the default "sharp" method when the cutoff vertex method is enabled.
+2. Adding a second <code>ProfileParams</code> struct filled with regular (non-custom) profile data for the miter profiles when miters and custom profiles are used together. 
+It felt like a nice break to focus on something easier than the past week, and this knocks another item off the todo list-- that's always nice. I should probably think about a better way to disable options though. Just making them *not work* isn't really the best solution. Graying them out would probably be better, but then you sort of run into a network of dependencies with the options, and that might get a bit too complicated.
+</p>
+<h2><span class="mw-headline" id="July_22">July 22</span></h2>
+<p>Today I decided to actually do a first pass on the implementation of the pipe ADJ mesh case. The logic isn't too complicated-- it attempts to reuse the profile at each vertex in the mesh by intersecting the original profile with a new plane at the current vertex's ring in the <code>VMesh</code>. 
+</p><p>It works, but only for a portion of the vertices in the <code>VMesh</code>, which suggests problems with the vmesh NewVert indexing. It could be that I shouldn't be adjusting the position of a "non-canonically" indexed <code>NewVert</code>. Although I'm not certain about that, because theoretically If the code works at some vertices it should work everywhere, and when I use the same code with the original for loops (original indexing) it also only works properly for a portion of the vertex mesh. It's not quite the type of thing I know how to debug though. I'll seek some feedback on it.
+</p>
+<h2><span class="mw-headline" id="July_23">July 23</span></h2>
+<p>Today I worked more on debugging the pipe vmesh case. I got to a point where I'm sure that it's calculating the right locations for all of the vertices, but it's either not using the new locations properly or they aren't being put in the right spot.
+</p><p>I also started going through the "HANS-TODO" markers resolving the problems or making sure they were either not problems or already solved. I started with 58 and I've gotten it down to almost 50 now. As I go through I'm finding that a lot of stuff is looking pretty close to finished, which is a great feeling. The problems I have left are the more esoteric, nuanced bugs though. Luckily I have a lot of debugging code that should still be useful, and I don't think any of the bugs are showstoppers, but they might be a bit tricky to solve.
+</p>
+<h2><span class="mw-headline" id="July_24">July 24</span></h2>
+<p>Today I worked on a number of different things. I started by looking through the feedback from Howard on the pipe ADJ mesh with a custom profile. I fixed some of the things he mentioned, but I'm still not sure about the indexing issue (at least that's what I think it is). There are also the 3-way pipe cases where the pipe profiles are diagonal and meet at the same <code>BoundVert</code> on one side. I still think getting the original position of the vertices before snapping with "adj_mesh" is probably a good way to go, but it might not work in that 3-way situation. It's sort of funny that the pipe case is almost harder than the general ADJ vmesh case.
+</p>
+<h2><span class="mw-headline" id="July_25">July 25</span></h2>
+<p>I'm also making progress on the TODO comments. I've got it down to 44 and solved some things that I had been putting off. There are still some issues with the sampling, but now it shows a preview of where the bevel's segment samples will go in the widget itself in addition to the control points. It turns out the bevel code can't affect the <code>ProfileWidget</code> that's displayed in the UI because it has a copy of it, not the original. So I have to give the UI <code>ProfileWidget</code> the correct number of segments in the Python interface code. That's the first test of widget's API and it worked the first time, which is nice.
+</p><p>The versioning for old bevel modifiers without a profile widget is also working now!
+</p><p>I'm down to 31 TODOs at the end of the day, but I caused a new bug in the process with deleting objects with bevel modifiers and enabling custom profiles. I'll have to solve another TODO with sampling fewer samples than control points to fix the second. I guess when I fix problems I always tend to add more! But overall I'm making good progress getting rid of the backlog! I'm just happy I actually kept track of it or I'd be wasting a lot of time looking around for these things.
+</p>
+<h2><span class="mw-headline" id="July_26">July 26</span></h2>
+<p>Today I continued the process I've been working on the last few days, working on the smaller TODOs scattered throughout the code. I'm down to 21 now. The remaining changes are mostly smaller bugs I still need to fix. The biggest group of them is probably some of the weirdness with the sampling code and how it's used by bevel.
+</p><p>There are only a few weeks left now, especially because I'm going to be away the last week. I'm starting to prioritize the things I think I need to finish this summer and I'm saving some of the less critical stuff for afterwards.
+</p>
+<h2><span class="mw-headline" id="July_29">July 29</span></h2>
+<p>This morning I started looking into a bug I caused earlier where dragging the <code>ProfileWidget</code> points doesn't update the modifier. I don't think it's an issue with the widget itself, because dragging the points still updates the tool. It's also strange that some of the buttons in the widget *do* update the modifier! I don't see anything related to updating in either the tool or modifier RNA definitions though, so I'm not sure how much difference there can be there.
+</p><p>I had a shorter day today, but I also resolved a couple more TODOs. I'm down to 18 now. I also settled on another method to try for the pipe case. I'm going to use the regular "canonical" indexing of the mesh verts and use them to find the corresponding indices of the pipe profile mesh verts. Then I'll interpolate between the two based on which ring relative to the pipe profiles the current index is. It's going to be some tricky logic to do the translations between boundvert indices, but hopefully I'll understand the ADJ indexing very well afterwards. And I only have to do it in two cases-- the pipe case has a 3 beveled edge and 4 beveled edge case.
+</p>
+<h2><span class="mw-headline" id="July_30">July 30</span></h2>
+<p>This morning I found the bug that was causing the widget to not update the modifier this morning. It was just this line of code had moved to the wrong place in the buttons layout code:
+<code>UI_block_funcN_set(block, rna_update_cb, MEM_dupallocN(cb), NULL);</code>
+</p><p>I also finally got the pipe case working, but only when it's a 4-way intersection. The 3-way intersection is much more complicated because the triangle area between the two profile planes is diagonal, so there has to be some more interesting math. But I think I can get that finished tomorrow.
+</p>
+<h2><span class="mw-headline" id="July_31">July 31</span></h2>
+<p>It's nearly August! And I finally finished the pipe case. I'm actually really happy with the topology it creates. I thought it might be pretty weird, but I think maintaining quads throughout the whole vmesh is much more useful. And it doesn't waste polygons like the "triangle fan at the end" method would have.
+</p><p>It took a fair amount of thinking / trial and error to figure the indexing and interpolation factors for the "triangle" area of the <code>VMesh</code>, but luckily I had some interested and smart people around to bounce ideas off of.
+</p><p>Now that this is finished I'm getting really close to finishing the set of features I wanted to finish by the end of summer. I have a couple ideas for smaller features I could implement if I have enough time, mostly features people have asked for on DevTalk. (After bug fixes!)
+</p>
+<ul><li>Symmetry mode for the profile widget</li>
+<li>Exporting and importing profiles from the widget to and from objects. I might delay this though to see how it could work with the upcoming asset manager project.</li>
+<li>More adaptive profile sampling</li>
+<li>Start thinking about boolean vertex meshes</li>
+<li>Icons for profile presets</li>
+<li>More advanced presets, functions that could build presets from inputs like the number of steps.</li></ul>
+<h2><span class="mw-headline" id="August_1">August 1</span></h2>
+<p>I continued working on smaller projects today. Here's a list of commits:
+</p>
+<ol><li>Profile Widget: Dynamic Hi-Res table size</li>
+<li>Merge branch 'master' into soc-2019-bevel-profiles</li>
+<li>Profile Widget: Sometimes disable move / delete buttons</li>
+<li>Rest of rename from previous commit PROF_HANDLE_AUTO_ANIM to PROF_HANDLE_AUTO</li>
+<li>Profile Widget Curves: Further reduced complexity</li>
+<li>Bevel Custom Profile: Fixed sampling too many segments from widget.</li>
+<li>Bevel Cutoff Method: Don't use the cutoff method in the pipe case.</li></ol>
+<p>I also added a profile-widget-sampling RNA function, but I ran into some difficulty: The return array from the RNA function can't be of variable length because that functionality doesn't exist. The conclusion from there would probably be just to use the maximum size of the table, because you can't sample more points than that, but the RNA system only allows the return array to have a size of 32. I don't see much point in having a sampling function that's limited to 32 samples, so I think I'll disable this for now. If it's a requested feature later on I'll figure out how to solve this issue. But I'm not sure if I should leave the code there commented (it might be helpful in the future) or just delete it.
+</p>
+<h2><span class="mw-headline" id="August_2">August 2</span></h2>
+<p>I started off today by trying to understand the process of interpolation from the greater power of 2 segment <code>VMesh</code> to the final. I'm pretty confident that it's a fine process to use for custom profiles-- it looks general enough and I don't see assumptions about non-custom superellipse profiles. It was marked on my backlog to try to understand it and document it with comments, but after looking through it for a bit I'm just not sure it's worth my time to do that right now. I have a feeble grasp of the basics of what it's doing and with enough time I think I could understand the whole thing, but I'm not the best person to document this code.
+</p><p>Anyway, that was a long way of saying I don't have to do anything there. I started looking at the harden normals code today, which is similarly pretty complicated and new looking, but I think I can get the hang of it, and helpfully I have some pretty specific goals in mind for this after talking to Howard.
+</p>
+<h2><span class="mw-headline" id="August_5">August 5</span></h2>
+<p>Today and over the weekend I changed the sampling function to return a list of <code>ProfilePoints</code> rather than an array of floats. The primary objective here was to make it possible to carry over data about the sharpness of points from the control points to the sampled points and to be able to use that data for hardening the profiles of the bevel. But it also makes it possible to not use temporary arrays to transfer over the information to the new tables when they're created, and it provides for cleaner code in the bevel tool as well.
+</p>
+<h2><span class="mw-headline" id="August_6">August 6</span></h2>
+<p>I looked over some miscellaneous bugs, although I didn't make much progress on most of them. At this point the remaining bugs are pretty tricky. I spent a while messing with the RNA system to try to add a better method to only sample new segment points from the widget when it's changed, but I ended up finding a pretty simple solution to that. I also finally talked to Campbell about whether the public widget functions should have a <code>BKE_</code> prefix, and they should! He changed over the <code>CurveMapping</code> functions too!
+</p><p>I spent a while compiling the things I have left to do before starting the merging process. It's nice to have a public, organized list. It's really motivating too to check off an item from it! I would really like to get the short term stuff done as soon as possible so I can post a diff of the branch and hopefully start some code review. Although that might have to be after I get back from my trip at the end of August.
+</p>
+<h2><span class="mw-headline" id="August_7">August 7</span></h2>
+<p>Today I spent a while working on the modifier and tool UI. It's fun to play around with the UI, and I like thinking about what would make it better. Once again I have to complain though that the functions in <code>interface.c</code> and <code>interface_layout.c</code> are not very well documented. It can be frustrating to spend a long time figuring out the difference between two functions with very similar names and no comments. There are also multiple ways to add items to the ui, which starts to get frustrating too-- the <code>uiItem*</code> functions, and the <code>uiBut*</code> functions (as well as the <code>RNA_def*</code> functions in other situations).
+</p><p>Anyway, I'm pretty happy with the UI and I shared a screenshot and some thoughts on DevTalk. There are a couple things that could be better which I mentioned there as well though. But I'm going to cross it off my list for now. And I fixed the high-res table not including the last control point of the profile too.
+</p><p>I also fixed the "fullness" calculation for the initial vertex mesh before subdivision, which again is very arbitrary in the custom profile case for the ADJ mesh, but it's better than it was before.
+</p><p>Tomorrow I want to fix the orientation bug-- it's getting pretty annoying. If I finish that I'd like to ask people on DevTalk for profile presets.
+</p>
+<h2><span class="mw-headline" id="August_8">August 8</span></h2>
+<p>I've spent so much time working on the orientation bug today! There are two separate problems: One is that the orientation is being calculated incorrectly next to vertex meshes sometimes. This is probably an issue with the <code>regularize_profile_orientation</code> function. The other is that the profiles next to vertex meshes disobey the calculated profile just about every other time! And strangely this is usually the profiles on the vertical edges of a new cube. I'm guessing this is an issue with how the profiles are used. Another strange thing about this one is that using miters fixes the issue.
+</p><p>I've gone through a couple of possibilities for what could be causing the second problem (disobeying the calculated orientation):
+</p>
+<ol><li><b>Incorrect <code>reverse</code> argument to <code>calculate_profile</code>:</b> I know this is fixed because every call to this is either before the regularize profile orientation pass or is has <code>!bndv-&gt;is_profile_start</code> as the <code>reverse</code> parameter.</li>
+<li><b><code>get_profile_point</code> with reversed segments:</b> I looked through all the calls to this function and didn't find any with an <code>ns - k</code> argument for the ring segment where it didn't make sense, so I don't think this is the issue.</li></ol>
+<p>This leaves only a couple possibilities:
+</p>
+<ol><li>The debug code to draw the profile orientation is incorrect.</li>
+<li>Some profiles aren't getting recalculated after the RPO pass. But I don't think I deleted any calls to <code>calculate_profile</code> so I'm not sure about that.</li>
+<li>The <code>VMesh</code> code doesn't care about the profile orientation. But I'm not sure why this would have changed.</li></ol>
+<p>Because this problem is really frustrating I took a break to spent some time this morning working on the UI. After some feedback on the forum I decided to use the same UI for the modifier and the tool. It's a big change but I'm used to it already, and I think it's an improvement.
+</p>
+<h2><span class="mw-headline" id="August_9">August 9</span></h2>
+<p>After spending more time debuggint the profile orientation regularization code I ended up just rewriting it from scratch. Overall the process of fixing this has been so much more involved than I thought it would be. It's a very simple thing that needs to be done, but I guess there are enough details in the implementation that it can be hard to get right.
+</p><p>I wrote the new version as a recursive function that's called after the initial start function. That might make it a little less efficient, but I can make it a while loop later if I need to. I just want it to work!
+</p><p>After I finished writing it I debugged it for a while and found a bunch of stupid little changes. I used the graphical debugger in QT Creator for the first time which is definitely an improvement. But after spending the whole day on it I still had to finish up the say with it not working in even simple situations.
+</p><p>I think I'm really close to getting it work. I made a diagram and I have a clear idea of what needs to be done, and I think what remains is fixing some little details in the implementation that are throwing it off.
+</p>
+<h2><span class="mw-headline" id="August_12">August 12</span></h2>
+<p>Hooray! After a lot of frustration and pain I finally fixed the profile orientation regularization problem! There were two key realizations that I had that made me realize the problem. The first is that setting each <code>EdgeHalf's</code> right boundvert's <code>is_profile_start</code> boolean is totally pointless and can cause a lot of errors! Because the profiles are defined in the counterclockwise direction, I should only set the property there!
+</p><p>I actually just forgot the second key realization. My brain is kind of fried after so much debugging. But it might have had to do with not setting the "second best angle" variable properly so it was returning a best edge even when it shouldn't.
+</p><p>I'm guessing the new version I wrote from scratch is probably slower, so I fixed the old version and made it used dot products instead of angles for a speed boost. Just for fun I'll try to profile it later just in case though.
+</p>
+<h2><span class="mw-headline" id="August_13">August 13</span></h2>
+<p>I had a bit of a shorter day today as a break from thinking about profile orientations basically all of the time for the last five days. I did one of of the fun projects I'd been saving for a time like this and added the presets. On a family member and architect's suggestion I looked at a product catalog for moldings and added a couple of typical shapes from there. I didn't want to go crazy and add too many though because I want to open it up to suggestions from the community in case they have them. In general I think just a couple is enough too.
+</p><p>I also had a moment of inspiration and decided to take on a "Steps" preset. I didn't think I would get to this, but it looks really cool and it generates the right amount of control points based on the number of segments from the modifier or the tool.
+</p><p>One other thing: I started to write a script to get the number of "HANS-TODO" occurrences at the time of each commit throughout the summer. It would be fun to include a plot of this in my final report.
+</p>
+<h2><span class="mw-headline" id="August_14">August 14</span></h2>
+<p>I worked in a lot of different areas today, a little bit in the UI, making the modifier and tool UI just a little more consistent, but mostly cleaning up around the bevel code. I tried fixing the cutoff method so it would work with the "Arc" outer miter, but I didn't get further than narrowing down why it doesn't work:
+</p>
+<ul><li>Miter profiles don't have <code>plane_no</code> filled, so the down direction is incorrect.</li>
+<li>Indexing profile points of miters with <code>(i, 0, k)</code> seems to return zero except for the first and last profile point.</li></ul>
+<p>I'm pretty confident I can get around these two problems and make it work. It would really look a lot better if I did. But the other todo associated with the cutoff method is trickier. I need to figure out how to fill the face and vertex arrays that <code>bev_create_ngon</code> uses, and even the purpose of them. I may ask for help with this.
+</p><p>The biggest thing I finished today though is the documentation. It's really easy to set up, all I have to do is type "make." I'm not sure if this will need to go through review-- I already had someone look over it and I followed the guidelines-- but I'll just post the diff along with the patch when I post it and commit it to SVN when the patch lands. It was actually pretty fun writing the documentation and thinking about what someone would be wondering about when they use the custom profiles.
+</p>
+<h2><span class="mw-headline" id="August_15">August 15</span></h2>
+<p>Today I updated the modal keymap for bevel to include the new features. A lot of keys are taken already but "Z" has a nice squiggly shape that looks a little like a custom profile, so I used that as a toggle for using the custom profile, which will be the same profile as was used in the tool last.
+</p><p>I also finally fixed the distribution of the extra samples. It was wrong before because it wasn't properly calculating the order of the edges based on their curvature, all of the indices in that array were just zero. So it was just going through and assigning all of the extra points to the first edge. To fix this I added a struct to store the index and curvature of edges, and a sorting function so that I could use <code>qsort</code> to get the curvature order. This should be faster too, although not by much.
+</p><p>I also looked into why some of the information I'm counting from the <code>Profile</code> struct in the cutoff <code>VMesh</code> method isn't there for miter profiles. I don't have a solution for this yet but I'd like to. 
+</p>
+<h2><span class="mw-headline" id="August_17">August 17</span></h2>
+<p>Today I wanted to prepare my laptop to be able to use it on my trip, which launched into a huge adventure / torture of getting <code>make deps</code> to work so I could build Blender properly. I basically spent all day on it along with some packing and working on some cleanup and even length sampling, but even at the end I was having the same issue I had at the beginning of the way. The problem is during the linking process of <code>OpenImageIO</code>, where it thinks I have a different version of webP libraries than I actually do (or something like that). But there's also an issue with the <code>make deps</code> step itself where I have to give it root permissions even though it should only be writing to Blender's libs folder.
+</p>
+<pre>Although they shouldn't be, these problems might be related to the distrobution I'm using, Manjaro, which tends to produce more errors in situations like this I gather. So if I need to I will install Ubuntu 19.04. Or I might just have time to work on my final report on my trip.
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20240112120233
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.078 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 246/1000000
+Preprocessor generated node count: 252/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4471-0!canonical and timestamp 20240112120233 and revision id 12022
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;oldid=12022">https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;oldid=12022</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 18 August 2019, at 21:09.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:HooglyBoogly/GSoC2019/Log.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:HooglyBoogly/GSoC2019/Log" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/HooglyBoogly.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/HooglyBoogly.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/HooglyBoogly.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;oldid=12022" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:HooglyBoogly/GSoC2019/Log&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.078","walltime":"0.079","ppvisitednodes":{"value":246,"limit":1000000},"ppgeneratednodes":{"value":252,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120233","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":132});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8445404d3883b918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

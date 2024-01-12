@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Sergey/Foundation/2017 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Sergey/Foundation/2017","wgTitle":"Sergey/Foundation/2017","wgCurRevisionId":579,"wgRevisionId":579,"wgArticleId":352,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Sergey/Foundation/2017","wgRelevantArticleId":352,"wgRequestId":"982407ccecd073a8364e3d15","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Sergey","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Sergey_Foundation_2017 rootpage-User_Sergey skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2017.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ASergey%2FFoundation%2F2017" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2017.html#Weekly_Reports_for_year_2017"><span class="tocnumber">1</span> <span class="toctext">Weekly Reports for year 2017</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2017.html#Week_265:_2nd_-_8th_January"><span class="tocnumber">1.1</span> <span class="toctext">Week 265: 2nd - 8th January</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2017.html#Week_266:_9th_-_15th_January"><span class="tocnumber">1.2</span> <span class="toctext">Week 266: 9th - 15th January</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2017.html#Week_267:_16th_-_22nd_January"><span class="tocnumber">1.3</span> <span class="toctext">Week 267: 16th - 22nd January</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2017.html#Week_268:_23rd_-_29th_January"><span class="tocnumber">1.4</span> <span class="toctext">Week 268: 23rd - 29th January</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2017.html#Week_268:_30th_January_-_5th_February"><span class="tocnumber">1.5</span> <span class="toctext">Week 268: 30th January - 5th February</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2017.html#Week_269:_6th_-_12th_February"><span class="tocnumber">1.6</span> <span class="toctext">Week 269: 6th - 12th February</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2017.html#Week_270:_13th_-_19th_February"><span class="tocnumber">1.7</span> <span class="toctext">Week 270: 13th - 19th February</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2017.html#Week_271:_20th_-_26th_February"><span class="tocnumber">1.8</span> <span class="toctext">Week 271: 20th - 26th February</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2017.html#Week_272:_27th_February_-_5th_March"><span class="tocnumber">1.9</span> <span class="toctext">Week 272: 27th February - 5th March</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2017.html#Week_273:_6th_-_12th_March"><span class="tocnumber">1.10</span> <span class="toctext">Week 273: 6th - 12th March</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2017.html#Week_274:_13th_-_19th_March"><span class="tocnumber">1.11</span> <span class="toctext">Week 274: 13th - 19th March</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2017.html#Week_277:_20th_-_26th_March"><span class="tocnumber">1.12</span> <span class="toctext">Week 277: 20th - 26th March</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2017.html#Week_278:_27th_March_-_2nd_April"><span class="tocnumber">1.13</span> <span class="toctext">Week 278: 27th March - 2nd April</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2017.html#Week_279:_3d_-_9th_April"><span class="tocnumber">1.14</span> <span class="toctext">Week 279: 3d - 9th April</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2017.html#Week_280:_10th_-_16th_April"><span class="tocnumber">1.15</span> <span class="toctext">Week 280: 10th - 16th April</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2017.html#Week_281:_17th_-_23rd_April"><span class="tocnumber">1.16</span> <span class="toctext">Week 281: 17th - 23rd April</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2017.html#Week_282:_24th_-_30rd_April"><span class="tocnumber">1.17</span> <span class="toctext">Week 282: 24th - 30rd April</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2017.html#Week_283:_1st_-_7th_May"><span class="tocnumber">1.18</span> <span class="toctext">Week 283: 1st - 7th May</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2017.html#Week_284:_8th_-_14th_May"><span class="tocnumber">1.19</span> <span class="toctext">Week 284: 8th - 14th May</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2017.html#Week_285:_15th_-_21st_May"><span class="tocnumber">1.20</span> <span class="toctext">Week 285: 15th - 21st May</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2017.html#Week_286:_22nd_-_28th_May"><span class="tocnumber">1.21</span> <span class="toctext">Week 286: 22nd - 28th May</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2017.html#Week_287:_29th_May_-_4th_June"><span class="tocnumber">1.22</span> <span class="toctext">Week 287: 29th May - 4th June</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2017.html#Week_288:_5th_-_11th_June"><span class="tocnumber">1.23</span> <span class="toctext">Week 288: 5th - 11th June</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2017.html#Week_289:_12th_-_18th_June"><span class="tocnumber">1.24</span> <span class="toctext">Week 289: 12th - 18th June</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2017.html#Week_290:_19th_-_25th_June"><span class="tocnumber">1.25</span> <span class="toctext">Week 290: 19th - 25th June</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2017.html#Week_291:_26th_June_-_2nd_July"><span class="tocnumber">1.26</span> <span class="toctext">Week 291: 26th June - 2nd July</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2017.html#Week_292:_3rd_-_9th_July"><span class="tocnumber">1.27</span> <span class="toctext">Week 292: 3rd - 9th July</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2017.html#Week_293:_10th_-_16th_July"><span class="tocnumber">1.28</span> <span class="toctext">Week 293: 10th - 16th July</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2017.html#Week_294:_17th_-_23rd_July"><span class="tocnumber">1.29</span> <span class="toctext">Week 294: 17th - 23rd July</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2017.html#Week_295:_24th_-_30th_-July"><span class="tocnumber">1.30</span> <span class="toctext">Week 295: 24th - 30th -July</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2017.html#Week_296:_31st_July_-_6th_August"><span class="tocnumber">1.31</span> <span class="toctext">Week 296: 31st July - 6th August</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2017.html#Week_297:_7th_-_13th_August"><span class="tocnumber">1.32</span> <span class="toctext">Week 297: 7th - 13th August</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2017.html#Week_298:_14th_-_20th_August"><span class="tocnumber">1.33</span> <span class="toctext">Week 298: 14th - 20th August</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2017.html#Week_299:_21st_-_27th_August"><span class="tocnumber">1.34</span> <span class="toctext">Week 299: 21st - 27th August</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2017.html#Week_300:_28th_August_-_3rd_September"><span class="tocnumber">1.35</span> <span class="toctext">Week 300: 28th August - 3rd September</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2017.html#Week_301:_4th_-_10th_September"><span class="tocnumber">1.36</span> <span class="toctext">Week 301: 4th - 10th September</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2017.html#Week_302:_11th-17th_September"><span class="tocnumber">1.37</span> <span class="toctext">Week 302: 11th-17th  September</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2017.html#Week_303:_18th_-_24th_September"><span class="tocnumber">1.38</span> <span class="toctext">Week 303: 18th - 24th September</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2017.html#Week_304:_25th_September_-_1st_October"><span class="tocnumber">1.39</span> <span class="toctext">Week 304: 25th September - 1st October</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2017.html#Week_305:_2nd_-_8th_October"><span class="tocnumber">1.40</span> <span class="toctext">Week 305: 2nd - 8th October</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2017.html#Week_306:_9th_-_15th_October"><span class="tocnumber">1.41</span> <span class="toctext">Week 306: 9th - 15th October</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2017.html#Week_307:_16th_-_22nd_October"><span class="tocnumber">1.42</span> <span class="toctext">Week 307: 16th - 22nd October</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2017.html#Week_308:_23rd_-_29th_October"><span class="tocnumber">1.43</span> <span class="toctext">Week 308: 23rd - 29th October</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2017.html#Week_309:_30th_October_-_5th_Novemver"><span class="tocnumber">1.44</span> <span class="toctext">Week 309: 30th October - 5th Novemver</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2017.html#Week_310:_6th_-_12th_November"><span class="tocnumber">1.45</span> <span class="toctext">Week 310: 6th - 12th November</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2017.html#Week_311:_13th_-_19th_November"><span class="tocnumber">1.46</span> <span class="toctext">Week 311: 13th - 19th November</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2017.html#Week_312:_20th_-_26th_November"><span class="tocnumber">1.47</span> <span class="toctext">Week 312: 20th - 26th November</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2017.html#Week_313:_27th_November_-_4th_December"><span class="tocnumber">1.48</span> <span class="toctext">Week 313: 27th November - 4th December</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="2017.html#Week_314:_4th_-_10th_December"><span class="tocnumber">1.49</span> <span class="toctext">Week 314: 4th - 10th December</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2017.html#Week_315:_11th_-_17th_December"><span class="tocnumber">1.50</span> <span class="toctext">Week 315: 11th - 17th December</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2017.html#Week_316:_18th_-_24th_December"><span class="tocnumber">1.51</span> <span class="toctext">Week 316: 18th - 24th December</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="2017.html#Week_317:_25th_-_31st_December"><span class="tocnumber">1.52</span> <span class="toctext">Week 317: 25th - 31st December</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Sergey/Foundation/2017</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Sergey.html" title="User:Sergey">User:Sergey</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Weekly_Reports_for_year_2017">Weekly Reports for year 2017</span></h1>
+<h2><span class="mw-headline" id="Week_265:_2nd_-_8th_January">Week 265: 2nd - 8th January</span></h2>
+<p>Another week off in Russia.
+</p>
+<h2><span class="mw-headline" id="Week_266:_9th_-_15th_January">Week 266: 9th - 15th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>First week back from Russia. Monday was packing, Tuesday was a day in airports.</li>
+<li>Investigated slow viewport update on dual-xeon 56 threads machine. Really need to reduce amount of mutex-locks for such configurations.</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fixed wrong deformation motion blur with auto-smooth meshes (fixes agents' eye issue)</li>
+<li>Optimized BVH for more optimal storage of motion curve primitives. Gave about 30% speedup in an agent-only hair scene.</li>
+<li>Worked further on more optimal BVH for motion curve primitives. Gained some really nice speedups in the artifical scene (hair-only from agent). Real numbers will come shortly after re-rendering some shots to gain real-life statistics. Stay tuned!</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_267:_16th_-_22nd_January">Week 267: 16th - 22nd January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Wrapped up and committed old patch from the studio for Nathan (Allow first clicking Shift before selecting axis of transform manipulator)</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fixed wrong viewport rendering caused by -nan coordinates.</li>
+<li>Wrapped up and committed olf patch for exposing diffuse and glossy depth to Light Path node</li>
+<li>Finished motion blur patches from previous week, implemented similar speedup for triangles and moved everything to master branch.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_268:_23rd_-_29th_January">Week 268: 23rd - 29th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed crash with adaptive microdisplacement (caused by bug in OpenSubdiv)</li>
+<li>Wrapped up some patches (AO approximation of indirect light mainly), worked on finishing other optimization patches (like speedup of transparent shadows on GPU).</li>
+<li>Fixed bug in bug-o-meter.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50517">#50517</a> Rendering expecting time is negative</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50512">#50512</a> Linked Backround scene with animation not updating with new depsgraph</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50032">#50032</a> Wrong render result when same image is used with and without alpha</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Fix duplicated operation node when two objects are sharing same armature</li></ul></li></ul>
+<p>Fixed: 3, Closed: 6.
+</p>
+<h2><span class="mw-headline" id="Week_268:_30th_January_-_5th_February">Week 268: 30th January - 5th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Explode modifier: Don't tessellate DM if we are not going to apply modifier</li>
+<li>Buildbot: Re-enable cuda support for OSX</li>
+<li>Spent quite some time looking into new deg issues, such as missing updates in special cases when viewing scene via sequencer.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50331">#50331</a> New Dependency Graph - "frame" python driver expression not working</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50535">#50535</a> Cycles render segfault when Explode modifier before hair particle modifier + UV material</li></ul></li></ul>
+<p>Fixed: 3, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_269:_6th_-_12th_February">Week 269: 6th - 12th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix memory leak when building without audaspace</li>
+<li>Seed up displace modifier by multi-threading it</li>
+<li>Optimized some parts of armature deform modifier</li>
+<li>Fix missing hair after rendering with different viewport/render settings (was a regression since some other fix)</li>
+<li>Speed up of color management in sequencer by multi-threading it</li>
+<li>Fix non-deterministic behavior of image sequence loading via RNA API, causing Cycles to behave buggy</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49253">#49253</a> Cycles blackbody is wrong on AVX2 CPU on Windows</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Wrapped up and committed transparent shadows speedup for CUDA, giving 2x speedup on scene like koro.blend.</li>
+<li>Fix pointiness attribute giving wrong results with autosplit</li>
+<li>Initial work to cover Cycles nodes with OpenGL tests</li></ul></li></ul>
+<p>Fixed: 1, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_270:_13th_-_19th_February">Week 270: 13th - 19th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Lots of time spent on ensuring BKE_mesh_split_faces (used for auto-smooth) gives correct topology (used to return extra loose edges and vertices).</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50655">#50655</a> Pointiness is too slow to calculate</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50542">#50542</a> Wrong metadata frame when using OpenGL render</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50687">#50687</a> Cycles baking time estimate and progress bar doesn't work / progress when baking with high samples</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix wrong shading on GPU when background has NaN pixels and MIS enabled</li>
+<li>Fix wrong transparent shadows with CUDA (regression in recent optimization)</li>
+<li>Optimize sorting of transparent intersections on CUDA</li>
+<li>Fix wrong pointiness caused by precision issues</li>
+<li>Fix wrong hair render results when using BVH motion steps</li></ul></li></ul>
+<p>Fixed: 3, Closed: 1.
+</p>
+<h2><span class="mw-headline" id="Week_271:_20th_-_26th_February">Week 271: 20th - 26th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Quite some time was spent in the data center, recovering the development infrastructure machine and rewiring the rack.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50719">#50719</a> Memory usage won't reset to zero while re-rendering on two video cards</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50718">#50718</a> Regression: Split Normals Render Problem with Cycles</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50748">#50748</a> Render Time incorrect when refreshing rendered preview in GPU mode</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50656">#50656</a> Compositing node editor is empty, no nodes can be added</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix Cycles still saving render output when error happened</li>
+<li>Fix wrong render results with texture limit and half-float textures</li>
+<li>Fix non-zero exit status when rendering animation from CLI and running out of memory</li></ul></li></ul>
+<p>Fixed: 4, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_272:_27th_February_-_5th_March">Week 272: 27th February - 5th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix memory leak when making duplicates real and parent had constraints</li>
+<li>Shrinkwrap constraint actually depends on geometry</li>
+<li>Investigated how bad our task scheduler is, used TBB as reference. Appears that with TBB there is almost no speed regressions of new depsgraph in files like T50027.</li>
+<li>Started working on improving our scheduler by simplifying the code.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50634">#50634</a> Hair Primitive as Triangles + Hair shader with a texture = crash</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50677">#50677</a> Shrinkwrap constraint don't get updated when target mesh gets modified</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49936">#49936</a> Cycles point density get's it's bounding box from basis shape key</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T48549">#48549</a> Crash baking high-to-low-poly normal map in cycles</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50565">#50565</a> Planar constraints don't work properly with non-Blender key configurations</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix division by zero in volume code which was producing -nan, producing render artifacts in the studio</li>
+<li>Fixed untinialized variable in image texture loading (hopefully that was a reason of sometimes missing texture on the farm).</li></ul></li></ul>
+<p>Fixed: 5, Closed: 4.
+</p>
+<h2><span class="mw-headline" id="Week_273:_6th_-_12th_March">Week 273: 6th - 12th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Had party all week in the studio while Ton was away for the business trip</li>
+<li>Worked on improvements for task scheduler. Mainly related on thread overhead. Gives 50% speedup with file from <a rel="nofollow" class="external text" href="http://developer.blender.org/T50027">#50027</a> and makes new depsgraph only 10% slower on my machine with that scene.</li>
+<li>The work from above also helped simplifying evaluation code in depsgrapgh</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50886">#50886</a> Blender crashes on render</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49603">#49603</a> Blender/Cycles 2.78 CUDA error on Jetson-TX1~</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50849">#50849</a> Transparent background produces artifacts in this compositing setup</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Spent quite some time reviewing work from Mai and Nirved prior putting it to master, including doing some performance comparisons for beautiful charts.</li></ul></li></ul>
+<p>Fixed: 3, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_274:_13th_-_19th_March">Week 274: 13th - 19th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Spend some time working on layer collections update via depsgraph. Dalai is finishing up that patch now.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50938">#50938</a> Cache not being reset when changing simulation settings with new depsgraph</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50968">#50968</a> Cycles crashes when image datablock points to a directory</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Fixed crash with curve bevel indirect dupligroups</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Some fixes to make Mesa OpenCL compiler more happy</li>
+<li>Allow rendering a range of resumable chunks</li>
+<li>Fixed compilation error of new OpenCL code on older drivers/cards</li>
+<li>Tried to solve rendering artifacts on fglrx driver for gcn1 cards.</li>
+<li>Fix compilation error of LCG RNG</li></ul></li></ul>
+<p>Fixed: 2, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_277:_20th_-_26th_March">Week 277: 20th - 26th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Spent quite some time hunting NaN pixels for the studio, was very tricky-to-reproduce issue =\</li>
+<li>Spent some time discussing overrides with Dalai</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50990">#50990</a> Random black pixels in Cycles when rendering material with Multiscatter GGX</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50975">#50975</a> Cycles: Light sampling threshold inadvertently clamps negative lamps</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50268">#50268</a> Cycles allows to select un supported GPUs for OpenCL</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50533">#50533</a> Transparency shader doesn't cast shadows with curve segments</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50238">#50238</a> Cycles: difference in texture position between OpenGL and Cycles render</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51007">#51007</a> Material viewport mode crash on node with more than 64 outputs</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50995">#50995</a> Wrong freestyle render with new depgraph</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Use more friendly GPU device name for AMD cards</li>
+<li>Use SSE-optimized version of triangle intersection for motion triangles</li>
+<li>Workaround incorrect SSS with CUDA toolkit 8.0.61</li>
+<li>Correct isfinite check used in integrator</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Fix missing relations update tag when typing #frame</li></ul></li></ul>
+<p>Fixed: 7, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_278:_27th_March_-_2nd_April">Week 278: 27th March - 2nd April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix threading conflicts in multitex_ext_safe()</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51051">#51051</a> Incorrect render on 32bit Linux</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Shadow catcher went online</li>
+<li>Some optimizations for CPU (pass SSE vectors by reference rather than value and things like that)</li>
+<li>Switch to reformulated Pluecker ray/triangle intersection, solves render artifacts of certain scenes</li>
+<li>Worked around NVCC segfault for Fermi cards</li>
+<li>Solve threading conflict in shader synchronization</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Fix missing updates when in local view</li></ul></li></ul>
+<p>Fixed: 1, Closed: 1.
+</p>
+<h2><span class="mw-headline" id="Week_279:_3d_-_9th_April">Week 279: 3d - 9th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Looked into all race condition reported by hellgrind on the barber shot render, trying to solve missing textures and spontaneous crashes. Took quitre some time, but seems we are good now.</li>
+<li>This also lead fixing some uninitialized memory access in Cycles</li>
+<li>Optimized Debug build of msgfmt on Windows by a factor of 2 (speeds up locales generation when doing debug build)</li>
+<li>Added Blender 2.8 to the BUildbot</li>
+<li>Looked into unit tests failure on 32 bit platform, fixed some real bug in motion tracking which was visible on such platforms.</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix corrupted mesh render when topology differs at the next zframe</li></ul></li></ul>
+<p>Fixed: 0, Closed: 1.
+</p>
+<h2><span class="mw-headline" id="Week_280:_10th_-_16th_April">Week 280: 10th - 16th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix use-after-free bug in motion tracking</li>
+<li>Color management: Avoid memory copy into same buffer</li>
+<li>Task scheduler: Prevent race condition for the pools created from non-main thread</li>
+<li>Buildbot: Attempt to fix CUDA compilation on OSX</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51158">#51158</a> Motion Tracking Movie clip editor graph</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51184">#51184</a> Crash of Blender when I try to join an object with one that has booleans modifiers</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Helkped Dalai with getting core profile to work (fixing crash on startup)</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Workaround cubic volume filtering crashing on Linux</li>
+<li>Fix empty OpenCL device name for certain configurations</li></ul></li></ul>
+<p>Fixed: 2, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_281:_17th_-_23rd_April">Week 281: 17th - 23rd April</span></h2>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51187">#51187</a> Memory leak when exporting OpenEXR monochrome animation</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Use better workaround for getting scene layer for Derivedmesh's mask</li>
+<li>Fix text drawing with core profile</li>
+<li>Fix wrong RNA update function declarations which was causing crashes in painting modes</li>
+<li>Use model view matrix instead of texture matrix for texture brush overlay (so we don't need to implement texture matrix stack for core profile)</li>
+<li>Fix node editor drawing when built with core profile ()</li>
+<li>Fix alpha overlay for sculpt/paint when using core profile</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Remove meaningless volume shader output if it has no volume shaders. Speeds up OpenCL on malformed shaders.</li>
+<li>Fix regression in SSS rendering after principled commit</li>
+<li>Solve speed regression of classroom scene after principled commit</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Use proper scene to get frame from for pose constraints evaluaiton</li></ul></li></ul>
+<p>Fixed: 1, Closed: 10.
+</p>
+<h2><span class="mw-headline" id="Week_282:_24th_-_30rd_April">Week 282: 24th - 30rd April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Sanitized some threading areas, by avoiding unneeded locks and using some atomic operations to avoid threading conflicts.</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Remove re-hashing done in BPT volume code (was done to avoid correlation issues, which is now fixed elsewhere. Gives some&#160;% of speedup)</li>
+<li>Prepared vectorized types implementation for easier extension (just committed patches prepared in a free time. The idea is to avoid having types <code>ssef</code> and <code>float4</code> which are basically identical nowadays).</li>
+<li>Fix over-allocation of triangles storage for triangle primitive hair. It was actually causing access to non-initialized memory, which crashed on Windows.</li>
+<li>Fix image textures were completely broken since recent unlimited textures commit</li>
+<li>Looked into ways to solve noise of Agent shots. Prepared some hack-patch to blur sharp glossy for out-of-focus regions of the frame. The sampling still needs to be fixed (there  are correlation issues)</li></ul></li></ul>
+<p>Fixed: 0, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_283:_1st_-_7th_May">Week 283: 1st - 7th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Masks: Fix broken animation after adding primitives</li>
+<li>Worked on DEG proposal for 2.8.</li>
+<li>Did some help/tweaks for the shots here in the studio to make them easier for render.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51412">#51412</a> Instant crash with texture plugged into the Displacement output</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fixed split kernel being broken for CUDA</li>
+<li>Some simplification and de-duplication of code in CPU/OpenCL sampling.</li>
+<li>Use render visibility for duplis when Render Layer option in viewport is used. Was a request for the studio here.</li>
+<li>Fixed memory leaks and crashes after python-configurable passes commit</li>
+<li>Fix access array index of -1 in SSS and volume split kernels</li></ul></li></ul>
+<p>Fixed: 1, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_284:_8th_-_14th_May">Week 284: 8th - 14th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed various issues with sequencer interface code</li>
+<li>Fix missing render update when building without OCIO but having GLSL image draw method</li>
+<li>Depsgraph: Fix/workaround crash when fcu-&gt;rna_path is NULL, causing bunny from the cloud to crash</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51153">#51153</a> Video duration is detected wrong after FFmpeg update</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Properly free memory used by KernelGlobals (regression since some refactor/denoiser work)</li>
+<li>Use more stable version of integer square root function, solving bug with CMJ pattern when building with Clang.</li></ul></li></ul>
+<p>Fixed: 1, Closed: 4.
+</p>
+<h2><span class="mw-headline" id="Week_285:_15th_-_21st_May">Week 285: 15th - 21st May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix memory leak in environment</li>
+<li>Fix memory leak when saving OpenEXR files</li>
+<li>Fix crash opening really old files with compositor</li>
+<li>Finished and published dependency graph design v1 for Blender 2.8</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51348">#51348</a> Node highlighting is broken</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49324">#49324</a> True displacement crashes when shader returns NaN</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50109">#50109</a> Blender crash when a "Render Result" as a Texture</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49864">#49864</a> EnvMap baking crashes 2.78 if 'Full Sample' checked in AA</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50673">#50673</a> OpenEXR multilayer image truncated on save</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T49981">#49981</a> When camera is on inactive layer, it does not evaluate constraints</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51388">#51388</a> Mask moves when zoom is changed in the movie clip editor</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51529">#51529</a> Black boxes on a denoising render when using a .exr image as a environmental texture</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51070">#51070</a> Cannot scale procedural texture in compositor</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51556">#51556</a> Sequencer - White Balance Modifier - Masking is not honored</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51537">#51537</a> Light passes are summed twice for split kernel since denoise commit</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Optimize expansion of headers in the source for OpenCL</li></ul></li></ul>
+<p>Fixed: 11, Closed: 17.
+</p>
+<h2><span class="mw-headline" id="Week_286:_22nd_-_28th_May">Week 286: 22nd - 28th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Apparently, was a short week, with one day off. Additionally, wasted half a day with embassy and preparing documents which were requested during appointment.</li>
+<li>Needed to rework fix for for crash loading old files with compositor.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51577">#51577</a> ColorBalance strip modifier misses some color input</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51308">#51308</a> Bright/Contrast Doesn't respect Pre-multiplied Alpha</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51568">#51568</a> CUDA error in viewport render after fix for for OpenCL</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51592">#51592</a> Simplify AO Cycles setting remains active while Simplify is disabled</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51609">#51609</a> Bake Texture, Margin crashing Blender</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50908">#50908</a> Motion Tracker ignored grease pencil mask</li></ul></li></ul>
+<p>Fixed: 6, Closed: 7.
+</p>
+<h2><span class="mw-headline" id="Week_287:_29th_May_-_4th_June">Week 287: 29th May - 4th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Image pool: Use memory pool for allocating elements. Solves memory overhead with lots of threads accessing image pool.</li>
+<li>Displace modifier: Pre-fetch all possible images to image pool prior execution. Avoids global lock on all threads for initial pixel sample.</li>
+<li>Task scheduler: Optimize subsequent pushing bunch of tasks (solves speed regression with lots of cached objects comparing to old depsgraph)</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51646">#51646</a> Motion Tracker instantly crashes</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51661">#51661</a> Swaping strips does not refresh sequencer</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50027">#50027</a> Rigidbody playback and simulation performance regression with new depsgraph</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Add missing update tag clear for proxy objects (solved majority of speed regression with barbershop files in comparison with old depsgraph)</li>
+<li>Fix missing relations for objects which are indirectly linked, which was causing wrong order of updates</li></ul></li></ul>
+<ul><li><strong>Motion tracking</strong>
+<ul><li>Re-bundle from upstream to ensure code base is perfectly in sync</li>
+<li>Made sure all tests are passing</li>
+<li>Was looking into some patches/suggestions about improving our automatic  keyframe selection.</li>
+<li>Lots of cleanups, removal of semi-finished/unused code. The goal is to make code clear enough to work on by anyone.</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Gawain: Optimize shader uniform access. Halves shader update latency for Clement (800ms old vs. 400ms after optimization)</li>
+<li>Worked with Dalai on generic iterator for objects and duplis, and their support for external render engines.</li></ul></li></ul>
+<p>Fixed: 3, Closed: 9.
+</p>
+<h2><span class="mw-headline" id="Week_288:_5th_-_11th_June">Week 288: 5th - 11th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Spent some time on preparing testbuild1</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51756">#51756</a> Fix crash when transforming vertices in edit mode</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Remove dead/unused code, making it more clear to follow</li>
+<li>Optimized modifiers evaluation, by removing all semi-finished granular updates. Better go granular nodes only when it's absolutely needed. Avoids overhead of depsgraph traversal.</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Added Probes to the dependency graph</li>
+<li>Replace recursion with loops in certain iterators</li>
+<li>Support rendering objects from dupli-list for cycles</li>
+<li>Worked on sanitizing the usage of despgraph, bases and such. Still some work to be done.</li>
+<li>Started working on making depsgraph per-workspace/layer.</li></ul></li></ul>
+<p>Fixed: 1, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_289:_12th_-_18th_June">Week 289: 12th - 18th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Mainly worked on copy-on-write support for dependency graph. Got alt-a working in Blender2.8 branch. Still some work to be done to support all the tools.</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fixed compilation of mega-kernel OpenCL on OSX (this is currently official combination, OpenCL split still needs work on OSX).</li>
+<li>Fix race condition happening in progress utility</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Prepared code to allow having multiple depsgraph per scene, dependent on workspace. Onyl evaluaiton functions for now are modified in a way that they are not using hardcoded scene-&gt;depsgraph. Still few places remained tho.</li>
+<li>Some small optimizations of build process.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_290:_19th_-_25th_June">Week 290: 19th - 25th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Only worked one day, before going to holidays.</li>
+<li>Got initial work for copy-on-write committable under compile-time ifdef.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_291:_26th_June_-_2nd_July">Week 291: 26th June - 2nd July</span></h2>
+<ul><li>Was on a vacation in Russia</li></ul>
+<h2><span class="mw-headline" id="Week_292:_3rd_-_9th_July">Week 292: 3rd - 9th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Arrived back to .nl on Tuesday, started working on Wednesday</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fixed compilation without Logging and no C++11 enabled.</li>
+<li>Some simple fixes to avoid passing big arguments by their value (const references ftw!)</li></ul></li></ul>
+<ul><li><strong>General development</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51955">#51955</a> Changing Auto-IK length crashes Blender (with new-depsgraph)</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51980">#51980</a> Motion Tracking - png image files appear in the Blender program directory when using refine</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51978">#51978</a> Setup Tracking Scene after Motion Tracking fails the first time</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T50973">#50973</a> Directional blur node doesn't clamp value if using driver</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51991">#51991</a> Disabled for viewport particle system becomes visible after BI render</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51977">#51977</a> New depsgraph removes the grass in victor scene</li></ul></li></ul>
+<p>Fixed: 6, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_293:_10th_-_16th_July">Week 293: 10th - 16th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix memory leak caused by node clipboard</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52011">#52011</a> Border render is incorrect with multiple scenes</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51989">#51989</a> Don't set image user offset for movie files</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Disable OpenCL clFlush workarounds, brings speedup.</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Spent quite some time tracking down crashes of previews. Turned out to be some design issue of Workspace which caused this. For now Dalai committed workaround which makes Blender stable, but need to lay down better design for accessing Scene Layer, Workspaces etc without accessing G.main, or any window manager.</li>
+<li>Begin work on making depsgraph per-scene-layer. Just some ground work, making evaluation and other functions to NOT use scene-&gt;despgraph. More work here when Luca is done with EvaluaitonContext for modifier stack.</li>
+<li>Initial support of armatures for copy-on-write</li></ul></li></ul>
+<p>Fixed: 2, Closed: 5.
+</p>
+<h2><span class="mw-headline" id="Week_294:_17th_-_23rd_July">Week 294: 17th - 23rd July</span></h2>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52021">#52021</a> Shadow catcher renders wrong when catcher object is behind transparent object</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52134">#52134</a> New depsgraph crashes when evaluating several psys on from object</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Was mainly focused on dependency graph in blender2.8 branch</li>
+<li>Some preparations to make depsgraph per scene layer (possibly, dependent on window as well).</li>
+<li>Replaced hardcoded particle setting tagging from looping over all objects/particle settings to use dependency graph relations instead to do tagging and flushing.</li>
+<li>Made simple animation files to work (testing on agent's walk cycle) when Blender is built with copy-on-write.</li>
+<li>Made playback of animated node trees</li>
+<li>Lots of other fixes here and there all over the dependency graph..</li></ul></li></ul>
+<p>Fixed: 2, Closed: 4.
+</p>
+<h2><span class="mw-headline" id="Week_295:_24th_-_30th_-July">Week 295: 24th - 30th -July</span></h2>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52212">#52212</a> Vgroups doesn't work after Carve Boolean</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52186">#52186</a> Crash on bevel</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Lots of work done for copy-on-write and modifiers support.</li>
+<li>Fix crashes of previews, by making sure all referenced datablocks are in preview bmain and that all scene layers are also proeprly initialized.</li>
+<li>Lots of fixes related on re-mapping original ID pointers to copied-on-write ones during depsgraph creation.</li>
+<li>Synchronize collection visibility after copy, fixes visibility issues when built with CoW support.</li>
+<li>Support armature edit / pose mode for copy-on-write.</li>
+<li>Skip iterating over all ntree users on node tree parameter update</li>
+<li>Avoid re-evaluating all objects on frame change. Needed to support some logic to preserve evaluated mesh for non-changing objects.</li>
+<li>Al; ended up in quite robust evaluation of existing scenes. All tools needs some work now, to make sure they are aware that bmain has original datablocks and that for evaluated ones they need to query depsgraph.</li></ul></li></ul>
+<p>Fixed: 2, Closed: 6.
+</p>
+<h2><span class="mw-headline" id="Week_296:_31st_July_-_6th_August">Week 296: 31st July - 6th August</span></h2>
+<p>Was away at SIGGRAPH 2017.
+</p>
+<h2><span class="mw-headline" id="Week_297:_7th_-_13th_August">Week 297: 7th - 13th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Various fixes for all rtecent changes to make all platforms on buildbot happy</li>
+<li>Slowly getting to speed after SIGGRAPH.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/TT52255">#T52255</a> New Depsgraph - Constraint and Drivers not working together when the driver references itself</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52229">#52229</a> Shadow Catcher artifacts when under transparency</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Was looking into shadow catcher bugs/improvements. Ended up with rather simple code, but testing took quite some time to make sure there is no regressions and that everything is behaving as it should.</li>
+<li>Fix instanced shadow catcher objects influencing each other</li></ul></li></ul>
+<p>Fixed: 2, Closed: 8.
+</p>
+<h2><span class="mw-headline" id="Week_298:_14th_-_20th_August">Week 298: 14th - 20th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Spent quite some time trying to get Vega GPu to work in the studio. Got some numbers, but setup is very flackey.</li>
+<li>Worked on automated benchmark script for the studio. Will be shared later next week.</li>
+<li>Prepared Blender 2.79 ReleaseCandidate 2.</li>
+<li>Spent whole day in the datacenter doing maintenance.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51850">#51850</a> Motion tracking - poor performance with keyframe matching on large video</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52331">#52331</a> Motion blur shutter length not keyable</li></ul></li></ul>
+<p>Fixed: 2, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_299:_21st_-_27th_August">Week 299: 21st - 27th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Various optimizations in tangent space calculation</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52479">#52479</a> Regression: Motion Tracking no longer works</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52454">#52454</a> Crash in DEG_graph_on_visible_update when activating scene layer</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52209">#52209</a> New Depsgraph - animated follow curve constraint sometimes freaks out when the curve has a parent</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52218">#52218</a> Missing update when reconnecting node</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51805">#51805</a> Overlapping volumes renders incorrect on AMD GPU</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51907">#51907</a> New Depsgraph - Camera constraint is not evaluated properly</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix issue with -0 being considered a non-finite value</li>
+<li>Fix threading conflict when doing Cycles background render</li>
+<li>Fix stack overflow during traversal caused by floating overflow</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Fix crash entering edit mode when using copy-on-write</li></ul></li></ul>
+<p>Fixed: 6, Closed: 4.
+</p>
+<h2><span class="mw-headline" id="Week_300:_28th_August_-_3rd_September">Week 300: 28th August - 3rd September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Got step back from general development, focusing on some studio stuff and experimenting with various things in Cycles.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_301:_4th_-_10th_September">Week 301: 4th - 10th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Next month working remotely, so took time to travel home and setup desktop for latest Blender again.</li>
+<li>Was mainly looking into own bugs (few issues in depsgraph and Cycles)</li>
+<li>Looked into some precision issues in Cycles, needed to be done for 2.79 release.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52533">#52533</a> Blender shuts down when rendering duplicated smoke domain</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52522">#52522</a> VSE renders with alpha transparent PNG image incorrectly</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52531">#52531</a> Blender 2D stabilisation node issue when autoscale is selected</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52433">#52433</a> Volume Absorption color tint</li></ul></li></ul>
+<p>Fixed: 4, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_302:_11th-17th_September">Week 302: 11th-17th  September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Was mainly focused on bug tracker, getting brain free from rust.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52679">#52679</a> Hole in bake normal</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52573">#52573</a> Cycles baking artifacts</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52113">#52113</a> Compositor doesnt mix unrendered render layers well</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52140">#52140</a> Align objects centers using origin for text</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52299">#52299</a> X resolution of 4 causes nodes to collapse</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52741">#52741</a> Follow track with depth object crashes Blender with new depsgraph</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52739">#52739</a> Crash loading corrupted video files</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52749">#52749</a> New Depsgraph - Render View Mask is not initialized correctly</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52653">#52653</a> Render output of linked scenes conflicts with other scenes with the same name</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51416">#51416</a> Blender Crashes while moving Sliders</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52537">#52537</a> Dyntopo "detail flood fill" doesn't work in some cases</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52732">#52732</a> Particle system volume grid particles out of volume</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52763">#52763</a> Boolean problem with vertex group</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52705">#52705</a> Lamps shadows are not refreshed when tweaking lamps parameters (Blender 2.8)</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Tweaks to avoid compilation error of megakernel (spotted during experiments on NVidia, but was probably happening on macOS OpenCL as well)</li>
+<li>Add automated tests for Cycles baking</li></ul></li></ul>
+<p>Fixed: 14, Closed: 20.
+</p>
+<h2><span class="mw-headline" id="Week_303:_18th_-_24th_September">Week 303: 18th - 24th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Color management: When look is applied, we can not consider spaces to match (actually fixed <a rel="nofollow" class="external text" href="http://developer.blender.org/T52812">#52812</a> happening in Blender2.8)</li>
+<li>Tracking: Fix crash when tracking failed</li>
+<li>Cycles: Fixed compilation of OpenCL megakernel on NVidia card and on macOS platform.</li>
+<li>Cycles: Looked into failing denoising on macOS, but still under investigation. Have some clues now where the error might be and where it can not be, would give more investigation later.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52432">#52432</a> Blender crashes while using Ghost (new depsgraph)</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52811">#52811</a> At any framerate selected, video exported with 1000fps</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52823">#52823</a> New Depsgraph - Shrinkwrap crashes blender</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52818">#52818</a> Tangent space calculation is really slow for high-density mesh with degenerated topology</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52840">#52840</a> New Depsgraph - Mask editor not working correctly</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52851">#52851</a> Per-frame traking is broken when sequence doesn't start at frame 1</li></ul></li></ul>
+<p>Fixed: 6, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_304:_25th_September_-_1st_October">Week 304: 25th September - 1st October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Was quite annoying week with catching some sort of fly, which knocked me off for majority of the week.</li>
+<li>OpenVDB: Fix compilation error against OpenVDB 4</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52835">#52835</a> When driven IK influence change, ik animation have 1 frame delay</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52932">#52932</a> Driver with target of custom property from scene fails to update</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52086">#52086</a> Graph editor "normalize" drag errors for integers</li></ul></li></ul>
+<p>Fixed: 3, Closed: 1.
+</p>
+<h2><span class="mw-headline" id="Week_305:_2nd_-_8th_October">Week 305: 2nd - 8th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Helped Dalai with Blender 2.8 design document</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52920">#52920</a> Saving Tiff Files type Blender crashes</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52927">#52927</a> Compositor wrong scale when scale size input is connected to complex node</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52981">#52981</a> 2D Curve shapes do not render untill extruded</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52982">#52982</a> Join operator with context override crashes Blender 2.79</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52940">#52940</a> VSE Glow Effect Strip on transparent images has no blur</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53012">#53012</a> Shadow catcher creates artifacts on contact area</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix possible race condition when generating Beckmann table</li></ul></li></ul>
+<p>Fixed: 6, Closed: 6.
+</p>
+<h2><span class="mw-headline" id="Week_306:_9th_-_15th_October">Week 306: 9th - 15th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Was a short week, Monday was spent doing paperwork, Friday i was flying to Amsterdam.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53048">#53048</a> OSL Volume is broken in Blender 2.79</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix compilation of sm_20 and sm_21 kernels</li>
+<li>Fix possible race condition when initializing devices list (was causing crashes in 2.8)</li>
+<li>Speedup up tangent space calculation</li></ul></li></ul>
+<p>Fixed: 1, Closed: 2.
+</p>
+<h2><span class="mw-headline" id="Week_307:_16th_-_22nd_October">Week 307: 16th - 22nd October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix memory corruption in GPU_debug on GTX1080</li>
+<li>Fixes in new ID copy functionality to support needs/expectations of copy-on-write.</li></ul></li></ul>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53007">#53007</a> OpenSubdiv + transparency = artefact/crashes</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix wrong shading when some mesh triangle has non-finite coordinate</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Made a <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Depsgraph/Planning-October2017&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Depsgraph/Planning-October2017 (page does not exist)">project plan</a></li>
+<li>Make Copy-on-Write a command line option</li>
+<li>Use new ID management API to copy ID pointers (avoids extra temporary allocations, locks and solves ID counter issues)</li>
+<li>Removed direct access to scene-&gt;depsgraph from evaluaiton code, use depsgraph passed via EvaluaitonContext.</li>
+<li>Begun working on making depsgraph to be per-workspace/window/layer.</li></ul></li></ul>
+<p>Fixed: 1, Closed: 7.
+</p>
+<h2><span class="mw-headline" id="Week_308:_23rd_-_29th_October">Week 308: 23rd - 29th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Blender Conference 2017 week!</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix compilation error without C++11</li>
+<li>Fix memory leak in test and simplify code</li></ul></li></ul>
+<ul><li><strong>Depsgraph</strong>
+<ul><li>Remove bunch of debug code, make code more obvious to follow and attractive for others. Get rid of some basework done years ago which we never ended up using.</li>
+<li>Add missing movie clip dopesheet invalidation</li>
+<li>Lots of work to get away from code which was using <code>scene-&gt;depsgraph</code> since now we need to support multiple depsgraphs per scene.</li>
+<li>Removed workarounds needed fro old dependencu graph almost all over the code. Makes it easier to port modules to a new system.</li>
+<li>Got ready to make depsgraph to be per-scene per-workspace, need to run some additional tests to ensure the change does not break anything obvious and the work can go to public.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_309:_30th_October_-_5th_Novemver">Week 309: 30th October - 5th Novemver</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Monday was absolutely dead since some sandwitch. Was an open-doors event at the studio anyway. So was yet another short week&#160;:(</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Some maintenance work, port commits to snandalone repository and back.</li>
+<li>Added API and some basic information about Cycles-specific settings to output file's metadata.</li>
+<li>Experimented with reducing stack size for GPU. Gives about 200MB saving for 1080, but was giving slowdown on AMD. Brecht reworked the patch and put it to master.</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Lots of work porting all scene/relations update to new API which is aware of multiple depsgraphs per scene.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_310:_6th_-_12th_November">Week 310: 6th - 12th November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cycles: Fix compilation error with latest OIIO</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Fix missing relations when node tree uses an object (for example, Point Density shader)</li></ul></li></ul>
+<ul><li><strong>Blender 2.8 / Dependency graph</strong>
+<ul><li>Fix/workaround crash when rendering from command line</li>
+<li>Fix/workaround command line rendering of sequencer</li>
+<li>Removed lots of legacy workarounds all over the place which started to be in a way of The Ultimate Depsgraph</li>
+<li>Switched all areas (except of render pipeline) to a new depsgraph ownership model. This allowed to have proper visible layer switch from the top bar!</li>
+<li>Made all Cycles regression tests to pass!</li>
+<li>Fix broken copy-on-write draw after ownership changes</li>
+<li>Workaround crash rendering font objects</li></ul></li></ul>
+<p>Fixed: 0, Closed: 5.
+</p>
+<h2><span class="mw-headline" id="Week_311:_13th_-_19th_November">Week 311: 13th - 19th November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cycles: Fix compilation error with OIIO compiled against system PugiXML</li>
+<li>Depsgraph: Fix relations for metaballs</li>
+<li>Depsgraph: Speed up playback of hair system used for static duplication</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53068">#53068</a>: AMD Threadripper not working well with Blender</li></ul></li></ul>
+<p>Fixed: 1, Closed: 1.
+</p>
+<h2><span class="mw-headline" id="Week_312:_20th_-_26th_November">Week 312: 20th - 26th November</span></h2>
+<ul><li><strong>Bug-tracker work</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53371">#53371</a> Keying Node fails with values above 1</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Fixed handful of crashes/bugs when running depsgraph with copy-on-write enabled.</li>
+<li>Started switching modifiers away from using md-scene. Use time from evaluation context instead. Solves missing time updates of modifiers when copy-on-write is enabled.</li>
+<li>Handle selection updates (draw cache tagging/update) using dependency graph. Solves missing draw refresh in edit mode with copy-on-write enbaled.</li>
+<li>Got rid of base-&gt;flags "flush" to object from depsgraph iteration. This is something which should be happening at the evaluation time.</li></ul></li></ul>
+<p>Fixed: 1, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_313:_27th_November_-_4th_December">Week 313: 27th November - 4th December</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Sequencer: Add option to render OpenGL preview with DoF</li>
+<li>Transform: Avoid use of ob-&gt;recalc in snapping code (replace with direct object update, based on new DEG callbacks)</li>
+<li>Transform: Remove legacy workarounds, which were in a way of moving forward with new DEG and CoW and such.</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Replace direct calls to editors update from certain operators with tag system of dependency graph. Would solve issues with possible multiple CoW objects for the given ID, all of which needs to be informed.</li>
+<li>Remove workaround for Blender Internal in viewport,</li>
+<li>Avoid use of bContext in new DEG callbacks listening to ID updates.</li>
+<li>Make draw manager to hook to DEG via listening callbacks (similar to how it's done for Cycles in master). Avoid use of special obscure flags in Object DNA.</li>
+<li>Fix missing objects in viewport when CoW is enabled</li>
+<li>Fix crash with compositor node tree when CoW is enabled</li>
+<li>Fix crash on playback of animated objects when CoW is enabled</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Lots of cleanup in Draw Manager and Eevee, make naming more obvious and match in semantic with other areas.</li>
+<li>Avoid use of goto's in looooon functions.</li>
+<li>Move transform API to use DEG query, instead of direct calls to object update + tag + flush.</li>
+<li>Remove Object-&gt;recalc flag, use ID-&gt;LIB_TAG_RECALC_* flags instead. No need to keep two similar bitflags in sync!</li></ul></li></ul>
+<p>Fixed: 0, Closed: 0.
+</p>
+<h2><span class="mw-headline" id="Week_314:_4th_-_10th_December">Week 314: 4th - 10th December</span></h2>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53408">#53408</a>: Updating Cycles Nodes via Drivers in Material View</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53499">#53499</a>: Cannot load DPX files</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Made collections in Groups to work with Copy-on-write</li>
+<li>Made proxies to (kind of) work with Copy-on-Write. Still need work.</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Fixed missing drivers update coming from animated custom property</li>
+<li>Fixed wrong relations build when driver variable was first pointing to a bone and then was changed to something else.</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix difference in image Clip extension method between CPU and GPU</li></ul></li></ul>
+<p>Fixed: 2, Closed: 8.
+</p>
+<h2><span class="mw-headline" id="Week_315:_11th_-_17th_December">Week 315: 11th - 17th December</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Speed up preparing tracking initialization when having lots of tracks tracked frames.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53528">#53528</a> Empty thumbnails in filebrowser</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53552">#53552</a> Unneeded particle cache reset on frame change</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53547">#53547</a> Metaballs as dupli objects are not updated with the new Depsgraph</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Make ID level recalc flags more clear what they means</li>
+<li>Got rid of ID_RECALC_DATA tag, it is to be checked via object-&gt;data-&gt;id tags</li>
+<li>Remove id tagging workarounds needed for dupliframes. Those should not be needed with new dependency graph at all.</li>
+<li>Begin work on making id-&gt;recalc flags more granular, so render engines can only update what is required.</li>
+<li>At the same time, got rid of 3 places where depsgraph update tags and ID/object recalc flags needed to be kept in sync.</li></ul></li></ul>
+<p>Fixed: 0, Closed: 3.
+</p>
+<h2><span class="mw-headline" id="Week_316:_18th_-_24th_December">Week 316: 18th - 24th December</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Last working week of year 2017! Congratulations everyone and happy new year!</li>
+<li>Font objects: Support proper auto-space</li>
+<li>Optimizations in global task scheduler, targeting to avoid threading overhead on machines with 32+ threads.</li>
+<li>Avoid global lock for loops and orig index layers in subsurf code</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53398">#53398</a> Surface deform modifier says that convex polygons are concave for big faces</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53559">#53559</a> Auto texture space for text and font is wrong in Cycles</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53523">#53523</a> Keyframes for Marker weight stay, even if the track itself is deleted</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53400">#53400</a> DEG tagging is freeing Irradiance Grid when selecting objects</li></ul></li></ul>
+<ul><li><strong>Motion tracking</strong>
+<ul><li>Fix possible numerical overflow when assigning boolean</li>
+<li>Add missing animation fix when deleting plane track</li>
+<li>Add missing animation path fix after renaming tracks</li></ul></li></ul>
+<ul><li><strong>Blender 2.8</strong>
+<ul><li>Made ID-&gt;recalc flags more granular, helps telling render engines about what was changed.</li></ul></li></ul>
+<ul><li><strong>Dependency graph</strong>
+<ul><li>Synchronize some changes from 2.8 branch to master. Helps making those changes to be well-tested.</li>
+<li>Make transitive relation reduction to work again. Helps performance in the cost of somewhat bigger building time. Not used by default yet.</li>
+<li>Bring timing statistics to the new dependency graph. Currently only supports dump to gnuplot format, built-in visualization in Blender is yet to come!</li></ul></li></ul>
+<ul><li><strong>Cycles</strong>
+<ul><li>Fix crash opening user preferences after adding extra GPU</li></ul></li></ul>
+<p>Fixed: 4, Closed: 5.
+</p>
+<h2><span class="mw-headline" id="Week_317:_25th_-_31st_December">Week 317: 25th - 31st December</span></h2>
+<p>Away in Russia for holidays.
+</p><p>Fixed: 0, Closed: 0.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112121344
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.193 seconds
+Real time usage: 0.200 seconds
+Preprocessor visited node count: 1099/1000000
+Preprocessor generated node count: 2520/1000000
+Post‐expand include size: 5590/2097152 bytes
+Template argument size: 1272/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   42.495      1 -total
+ 54.93%   23.344    127 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:352-0!canonical and timestamp 20240112121343 and revision id 579
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;oldid=579">https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;oldid=579</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 26 June 2018, at 19:36.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Sergey/Foundation/2017.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Sergey/Foundation/2017" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Sergey.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Sergey.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Sergey.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;oldid=579" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2017&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.193","walltime":"0.200","ppvisitednodes":{"value":1099,"limit":1000000},"ppgeneratednodes":{"value":2520,"limit":1000000},"postexpandincludesize":{"value":5590,"limit":2097152},"templateargumentsize":{"value":1272,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   42.495      1 -total"," 54.93%   23.344    127 Template:BugReport"]},"cachereport":{"timestamp":"20240112121344","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":249});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844550adade40eb4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

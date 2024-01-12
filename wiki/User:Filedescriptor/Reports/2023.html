@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Filedescriptor/Reports/2023 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Filedescriptor/Reports/2023","wgTitle":"Filedescriptor/Reports/2023","wgCurRevisionId":37758,"wgRevisionId":37758,"wgArticleId":6660,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Filedescriptor/Reports/2023","wgRelevantArticleId":6660,"wgRequestId":"aaaeab2e137d4186fef196a3","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Filedescriptor","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Filedescriptor_Reports_2023 rootpage-User_Filedescriptor skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2023.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AFiledescriptor%2FReports%2F2023" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2023.html#Weekly_Reports_2023"><span class="tocnumber">1</span> <span class="toctext">Weekly Reports 2023</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2023.html#February_06_-_February_10_.28week_1.29"><span class="tocnumber">1.1</span> <span class="toctext">February 06 - February 10 (week 1)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2023.html#February_13_-_February_17_.28week_2.29"><span class="tocnumber">1.2</span> <span class="toctext">February 13 - February 17 (week 2)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2023.html#February_20_-_February_24_.28week_3.29"><span class="tocnumber">1.3</span> <span class="toctext">February 20 - February 24 (week 3)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2023.html#February_27_-_March_03_.28week_4.29"><span class="tocnumber">1.4</span> <span class="toctext">February 27 - March 03 (week 4)</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2023.html#March_06_-_March_10_.28week_5.29"><span class="tocnumber">1.5</span> <span class="toctext">March 06 - March 10 (week 5)</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2023.html#March_13_-_March_17_.28week_6.29"><span class="tocnumber">1.6</span> <span class="toctext">March 13 - March 17 (week 6)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2023.html#March_20_-_March_24_.28week_7.29"><span class="tocnumber">1.7</span> <span class="toctext">March 20 - March 24 (week 7)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2023.html#March_27_-_March_31_.28week_8.29"><span class="tocnumber">1.8</span> <span class="toctext">March 27 - March 31 (week 8)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2023.html#April_3_-_April_7_.28week_9.29"><span class="tocnumber">1.9</span> <span class="toctext">April 3 - April 7 (week 9)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2023.html#April_10_-_April_14_.28week_10.29"><span class="tocnumber">1.10</span> <span class="toctext">April 10 - April 14 (week 10)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2023.html#April_17_-_April_21_.28week_11.29"><span class="tocnumber">1.11</span> <span class="toctext">April 17 - April 21 (week 11)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2023.html#April_24_-_April_28_.28week_12.29"><span class="tocnumber">1.12</span> <span class="toctext">April 24 - April 28 (week 12)</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2023.html#May_01_-_May_05_.28week_13.29"><span class="tocnumber">1.13</span> <span class="toctext">May 01 - May 05 (week 13)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2023.html#May_08_-_May_12_.28week_14.29"><span class="tocnumber">1.14</span> <span class="toctext">May 08 - May 12 (week 14)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2023.html#May_15_-_May_19_.28week_15.29"><span class="tocnumber">1.15</span> <span class="toctext">May 15 - May 19  (week 15)</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2023.html#May_22_-_May_26_.28week_16.29"><span class="tocnumber">1.16</span> <span class="toctext">May 22 - May 26  (week 16)</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2023.html#May_29_-_June_02_.28week_17.29"><span class="tocnumber">1.17</span> <span class="toctext">May 29 - June 02  (week 17)</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2023.html#June_05_-_June_09_.28week_18.29"><span class="tocnumber">1.18</span> <span class="toctext">June 05 - June 09 (week 18)</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2023.html#June_12_-_June_16_.28week_19.29"><span class="tocnumber">1.19</span> <span class="toctext">June 12 - June 16 (week 19)</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2023.html#June_19_-_June_23_.28week_20.29"><span class="tocnumber">1.20</span> <span class="toctext">June 19 - June 23 (week 20)</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2023.html#June_26_-_June_30_.28week_21.29"><span class="tocnumber">1.21</span> <span class="toctext">June 26 - June 30 (week 21)</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2023.html#July_03_-_July_07_.28week_22.29"><span class="tocnumber">1.22</span> <span class="toctext">July 03 - July 07 (week 22)</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2023.html#July_10_-_July_14_.28week_23.29"><span class="tocnumber">1.23</span> <span class="toctext">July 10 - July 14 (week 23)</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2023.html#July_17_-_July_21_.28week_24.29"><span class="tocnumber">1.24</span> <span class="toctext">July 17 - July 21 (week 24)</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2023.html#July_24_-_July_28_.28week_25.29"><span class="tocnumber">1.25</span> <span class="toctext">July 24 - July 28 (week 25)</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2023.html#July_31_-_August_04_.28week_26.29"><span class="tocnumber">1.26</span> <span class="toctext">July 31 - August 04 (week 26)</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2023.html#August_07_-_August_11_.28week_27.29"><span class="tocnumber">1.27</span> <span class="toctext">August 07 - August 11 (week 27)</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2023.html#August_14_-_August_18_.28week_28.29"><span class="tocnumber">1.28</span> <span class="toctext">August 14 - August 18 (week 28)</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2023.html#August_21_-_August_25_.28week_29.29"><span class="tocnumber">1.29</span> <span class="toctext">August 21 - August 25 (week 29)</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2023.html#August_28_-_September_01_.28week_30.29"><span class="tocnumber">1.30</span> <span class="toctext">August 28 - September 01 (week 30)</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2023.html#September_04_-_September_08_.28week_31.29"><span class="tocnumber">1.31</span> <span class="toctext">September 04 - September 08 (week 31)</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2023.html#September_11_-_September_15_.28week_32.29"><span class="tocnumber">1.32</span> <span class="toctext">September 11 - September 15 (week 32)</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2023.html#September_18_-_September_22_.28week_33.29"><span class="tocnumber">1.33</span> <span class="toctext">September 18 - September 22 (week 33)</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2023.html#September_25_-_September_29_.28week_34.29"><span class="tocnumber">1.34</span> <span class="toctext">September 25 - September 29 (week 34)</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2023.html#October_02_-_October_06_.28week_35.29"><span class="tocnumber">1.35</span> <span class="toctext">October 02 - October 06 (week 35)</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2023.html#October_09_-_October_13_.28week_36.29"><span class="tocnumber">1.36</span> <span class="toctext">October 09 - October 13 (week 36)</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2023.html#October_16_-_October_20_.28week_37.29"><span class="tocnumber">1.37</span> <span class="toctext">October 16 - October 20 (week 37)</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2023.html#October_23_-_October_27_.28week_38.29"><span class="tocnumber">1.38</span> <span class="toctext">October 23 - October 27 (week 38)</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2023.html#October_30_-_November_03_.28week_39.29"><span class="tocnumber">1.39</span> <span class="toctext">October 30 - November 03 (week 39)</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2023.html#November_06_-_November_10_.28week_40.29"><span class="tocnumber">1.40</span> <span class="toctext">November 06 - November 10 (week 40)</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2023.html#November_13_-_November_17_.28week_41.29"><span class="tocnumber">1.41</span> <span class="toctext">November 13 - November 17 (week 41)</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2023.html#November_20_-_November_24_.28week_42.29"><span class="tocnumber">1.42</span> <span class="toctext">November 20 - November 24 (week 42)</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2023.html#November_27_-_December_01_.28week_43.29"><span class="tocnumber">1.43</span> <span class="toctext">November 27 - December 01 (week 43)</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2023.html#December_04_-_December_08_.28week_44.29"><span class="tocnumber">1.44</span> <span class="toctext">December 04 - December 08 (week 44)</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2023.html#December_11_-_December_15_.28week_45.29"><span class="tocnumber">1.45</span> <span class="toctext">December 11 - December 15 (week 45)</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2023.html#December_18_-_December_22_.28week_46.29"><span class="tocnumber">1.46</span> <span class="toctext">December 18 - December 22 (week 46)</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2023.html#December_25_-_December_29_.28week_47.29"><span class="tocnumber">1.47</span> <span class="toctext">December 25 - December 29 (week 47)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Filedescriptor/Reports/2023</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Filedescriptor.html" title="User:Filedescriptor">User:Filedescriptor</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Weekly_Reports_2023">Weekly Reports 2023</span></h1>
+<h2><span id="February_06_-_February_10_(week_1)"></span><span class="mw-headline" id="February_06_-_February_10_.28week_1.29">February 06 - February 10 (week 1)</span></h2>
+<p>I tested and reviewed some critical fixes by Amélie Fondevilla:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/D17214">D17214</a> Fix T104371: Grease Pencil merge down layer duplicates wrong frame</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc9f7fe64f1">dc9f7fe64f</a> Fix #104514: GPencil merge down layer misses some frames</li></ul>
+<p>This week I continued development of the (hair) curves edit mode. Although this seems very unrelated to grease pencil, curves make use of the <code>CurvesGeometry</code> structure which will be the core component for the upcoming GP 3.0 project. This work allows me to get familiar with the structure as well as the C++ patterns that are used. I made sure to also implement these features in a way that the code can be used by other objects that use <code>CurvesGeometry</code>. This means that GP 3.0 can use this code as well. 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f01bf82480c">f01bf82480</a> Curves: Add select pick operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3bed78ff591">3bed78ff59</a> Curves: Add box selection</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f8c4419503">6f8c441950</a> Curves: Add select linked</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7351f533e07">7351f533e0</a> Curves: Add lasso and circle select</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104620">PR #104620</a> Curves: Add support for proportional editing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104626">PR #104626</a> Curves: Add select more/less</li></ul>
+<p>Next to the development work, I also planned, coordinated, and summarized some meetings. I also talked to Clément Foucault and Shen Ciao about grease pencil rendering.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-02-06-grease-pencil-module-meeting/27526">Grease Pencil Module Meeting</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-02-09-grease-pencil-developer-meeting/27618">Grease Pencil Developer Meeting</a></li>
+<li>Meeting about reviewing the <a rel="nofollow" class="external text" href="https://docs.google.com/spreadsheets/d/199VVlQxMXu5dQkCnx7q__C--vhiQUS9CTr6bDWO1Sxg/edit#gid=1372438798">summary of the user feedback form</a>.</li></ul>
+<p>I also began working on a principles documents for the upcoming grease pencil 3.0 project.
+</p>
+<h2><span id="February_13_-_February_17_(week_2)"></span><span class="mw-headline" id="February_13_-_February_17_.28week_2.29">February 13 - February 17 (week 2)</span></h2>
+<p>This week I continued the work on the curves edit mode. With the addition of the toolbar and some fixes regarding the overlay drawing, it was ready to land for 3.5 and is now out of experimental.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55843cd64b2">55843cd64b</a> Curves: Add select more/less</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4fbc9c42e51">4fbc9c42e5</a> Curves: Add transform tools to toolbar</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/715acf758cc">715acf758c</a> Curves: Use deformed points in edit mode overlay</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d4f7f1dfe43">d4f7f1dfe4</a> Curves: Fix memory leak in view3d_select</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7dbf2e2e959">7dbf2e2e95</a> Curves: Draw point overlay only in point selection mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d20db05949">8d20db0594</a> Curves: Fix curve segment selection</li></ul>
+<p>I also had some meetings regarding the GP 3.0 project and started to work on a technical outline of the current plan that I will present to the team in Amsterdam in the next week.
+</p>
+<h2><span id="February_20_-_February_24_(week_3)"></span><span class="mw-headline" id="February_20_-_February_24_.28week_3.29">February 20 - February 24 (week 3)</span></h2>
+<p>This week I mostly focused on fixing bugs in the new hair curves edit mode.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/33cbd063d36">33cbd063d3</a> Curves: Fix proportional editing not working</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a135a9a5f2">8a135a9a5f</a> Curves: Add cursor snapping support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fef2f707a5">2fef2f707a</a> Fix: Unable pick select first point/curve in Curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/061d1916771">061d191677</a> Fix #105043: Add shortcut for proportional editing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e7bd1dfb1b">2e7bd1dfb1</a> Fix #105044: Crash when rotating hair curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/059ba28b299">059ba28b29</a> Fix #105026: Texture space operators in transform menu</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105184">PR #105184</a> Fix #105109: Pick selection with multi object edit</li></ul>
+<p>Next to patching bugs I began working on the <code>Duplicate</code> operator.
+</p><p>I also organized the Grease Pencil Module meeting and finished the technical outline of the GP 3.0 project.
+This plan will be presented to the team in Amsterdam next week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-02-20-grease-pencil-module-meeting/27810">Grease Pencil Module Meeting</a></li></ul>
+<h2><span id="February_27_-_March_03_(week_4)"></span><span class="mw-headline" id="February_27_-_March_03_.28week_4.29">February 27 - March 03 (week 4)</span></h2>
+<p>This week, I was in Amsterdam at Blender and mostly worked on the technical design of Grease Pencil 3.0.
+After multiple meetings throughout the week with Bastien, Brecht, Dalai, Francesco, Julien, Sergey, and more, this is the design that was approved:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://hackmd.io/@filedescriptors/HJlP52oCj">Grease Pencil 3.0: Final technical design</a></li></ul>
+<p>I also planned the next 5 weeks or so of development with some target milestones. The goal is to confirm the performance improvements
+that we expect from this new design.
+</p><p>I also committed some fixes to curves edit mode:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00ca7c5221e">00ca7c5221</a> Fix #105109: Pick selection with multi object edit</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6af81c5367">e6af81c536</a> Fix #105028: No update exiting curves edit mode</li></ul>
+<h2><span id="March_06_-_March_10_(week_5)"></span><span class="mw-headline" id="March_06_-_March_10_.28week_5.29">March 06 - March 10 (week 5)</span></h2>
+<p><i>Due to the strike in France this week, I ended up spending Wednesday and Thursday in Amsterdam. I was also sick on Friday.</i>
+</p><p>I began the work on the Grease Pencil 3.0 project this week by doing some refactoring:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53bb713eda7">53bb713eda</a> Refactor: Rename <code>OB_GPENCIL</code> and <code>ID_GD</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105597">PR #105597</a> Refactor: Rename grease pencil files to legacy</li></ul>
+<p>I created a local branch for adding the new data-block and object called <code>grease-pencil-v3</code>. This branch might get pushed to the main repository for the initial development.
+</p><p>I also organized the module meeting as well as a meeting specifically on the future of LineArt:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-03-08-grease-pencil-module-meeting/28184">2023-03-08 Grease Pencil Module Meeting</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-03-10-lineart-meeting/28271">2023-03-10 Line Art Meeting</a></li></ul>
+<h2><span id="March_13_-_March_17_(week_6)"></span><span class="mw-headline" id="March_13_-_March_17_.28week_6.29">March 13 - March 17 (week 6)</span></h2>
+<p>I began the week with some more refactoring. 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2788fa915be">2788fa915b</a> Refactor: CurvesGeometry read/write function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/df0c2693b6b">df0c2693b6</a> Refactor: Rename grease pencil files to legacy</li></ul>
+<p>Then I spent the rest of the week working on the <code>grease-pencil-v3</code> branch.
+Here is a summary of what I worked on:
+</p>
+<ul><li>DNA for the new data-block (<code>DNA_grease_pencil_types.h</code>). There were a couple of decisions made here.
+<ul><li>the map structure for the frames in a layer is stored in DNA as an array of keys and an array of values. The map will then be created at runtime.</li>
+<li>the layer tree is also created at runtime and stored in DNA as an array of tree nodes (pre-order serialization of the N-tree).</li></ul></li>
+<li>Classes for the layer tree:
+<ul><li>There is now a <code>TreeNode</code> class that is the base class for the <code>Layer</code> and <code>LayerGroup</code> class. The <code>TreeNode</code> is used to store the tree data (every node owns the data of its children) and also for easy iteration and searching through the tree. The <code>Layer</code> class will give access to the frames data. The <code>LayerGroup</code> class has an API for adding layers and creating groups.</li></ul></li>
+<li>Conversion between a <code>bGPDframe</code> and a <code>GreasePencilDrawing</code>:
+<ul><li>As of right now it supports the following attributes on the point domain: <code>positions</code>, <code>radius</code>, <code>opacity</code>, <code>.selection</code> (UI attribute). And the <code>cyclic</code> and <code>material_index</code> attributes on the curve domain.</li>
+<li>I also began working on converting the layers, this is still WIP.</li></ul></li></ul>
+<p><a href="../../File:Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png.html" class="image" title="I tested the conversion function by converting a single frame to a drawing and storing it in a Curves object."><img alt="I tested the conversion function by converting a single frame to a drawing and storing it in a Curves object." src="../../../w/images/thumb/d/dd/Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png/640px-Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png" width="640" height="393" srcset="../../../w/images/thumb/d/dd/Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png/960px-Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png 1.5x, ../../../w/images/thumb/d/dd/Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png/1280px-Screenshot_of_the_Grease_Pencil_Suzanne_as_Hair_Curves.png 2x" /></a>
+</p><p><br />
+</p>
+<ul><li>New grease pencil data-block and object.
+<ul><li>Next to adding the data-block and object (still WIP), I made it possible to convert between the old and new object with the <code>object_convert</code> operator (WIP).</li></ul></li>
+<li>Tests
+<ul><li>I added a test file. Right now this is just testing the <code>TreeNode</code>, <code>Layer</code> and <code>LayerGroup</code> classes. More individual tests need to be added.</li></ul></li></ul>
+<h2><span id="March_20_-_March_24_(week_7)"></span><span class="mw-headline" id="March_20_-_March_24_.28week_7.29">March 20 - March 24 (week 7)</span></h2>
+<p>This week I spent most of my time setting up the rendering code for the new grease pencil data-block. 
+</p>
+<ul><li>Continued working on the blend read and write. This seems to be fully functional now.</li>
+<li>Fix the copying of the layer tree.</li>
+<li>Copy materials when converting to the new object type.</li>
+<li>Merged in the <code>gpencil-next</code> render engine. Use this render engine by default with the new object type.</li>
+<li>Implement the initial draw caches for the new data type.</li></ul>
+<h2><span id="March_27_-_March_31_(week_8)"></span><span class="mw-headline" id="March_27_-_March_31_.28week_8.29">March 27 - March 31 (week 8)</span></h2>
+<p>This week I focused on rendering the new grease pencil data using the <code>gpencil-next</code> engine that Clément started to work on last year.
+I implemented fill triangulation on geometry evaluation and added functions for the batch cache creation (using multithreading now).
+</p><p>At the end of the week I was able to convert and play back the pirate test file <a rel="nofollow" class="external text" href="https://cloud.blender.org/p/gallery/5edd13a01e5ba50266481719">here</a> (simplified to not include effects, modifiers and layer adjustments). 
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Pirate_test_file_with_GP_3.png.html" class="image"><img alt="Pirate test file with GP 3.png" src="../../../w/images/thumb/0/0e/Pirate_test_file_with_GP_3.png/300px-Pirate_test_file_with_GP_3.png" width="300" height="173" class="thumbimage" srcset="../../../w/images/thumb/0/0e/Pirate_test_file_with_GP_3.png/450px-Pirate_test_file_with_GP_3.png 1.5x, ../../../w/images/thumb/0/0e/Pirate_test_file_with_GP_3.png/600px-Pirate_test_file_with_GP_3.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Pirate_test_file_with_GP_3.png.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>The timings of the batch cache creation are roughly the same (~0.3ms faster on average) and the FPS while playback also is roughly the same. But the file size (compressed) went from around 40MiB to 18 MiB. This is a very good start as I did not spent any time on more optimizations yet.
+</p><p>I added an experimental option in the settings for grease pencil 3.0. It also switches the grease pencil engine. This means that with the option enabled, the current grease pencil objects are no longer rendered. I also began the work of draw mode and the draw operator.
+</p><p>My plan for the next week is to get a simple drawing operator working.
+</p><p>Committs:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/903e7cb07b1">903e7cb07b</a> Add initial rendering of fills</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/ff4d3e93ac5">ff4d3e93ac</a> Fix memory leak from the layer tree storage.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/8dd953ead0e">8dd953ead0</a> Add experimental option for GP v3</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/6d480ab9f05">6d480ab9f0</a> Fix depth buffer issue</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/8ae7836a7f6">8ae7836a7f</a> Fix crash when generating triangles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/1b087afa065">1b087afa06</a> Improve visible drawing iteration</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/6e12c302884">6e12c30288</a> Invalidate drawing cache when frame is changed</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/a55f44db8b5">a55f44db8b</a> Fix fills not triangulating properly</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/b1da925d5b9">b1da925d5b</a> Fix loading of the layers from storage</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/fe51c411e1d">fe51c411e1</a> Fix rendering of fills</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/7ffca78f932">7ffca78f93</a> Fix crash when trying to select GP objects in the viewport</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/59067b9cb80">59067b9cb8</a> Add shader based toggle for showing fills and strokes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/47c1aba3669">47c1aba366</a> Enable paint mode for the new object</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/6c38afd07d8">6c38afd07d</a> Use frames API correctly in layer class</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/1f413c26ff2">1f413c26ff</a> Multithreading for batch cache creation</li></ul>
+<h2><span id="April_3_-_April_7_(week_9)"></span><span class="mw-headline" id="April_3_-_April_7_.28week_9.29">April 3 - April 7 (week 9)</span></h2>
+<p>This week I focused on getting the next milestone of task <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105540">#105540</a> done. I was able to write a simple drawing operator and also render the stroke while drawing. The goal for this initial drawing operator is mostly to have a real example to test performance with.
+</p><p>I also spent some time expanding the grease pencil data API and write more tests. This work will continue throughout the next weeks.
+</p><p>Finally, I began the last milestone for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105540">#105540</a>: Performance tests. I hope that I can finish this next week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/de60ebe156e">de60ebe156</a> Improve triangles API for drawings</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/3bff9cb5d6b">3bff9cb5d6</a> WIP Initial paint operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/493b061a961">493b061a96</a> Initial paint operator</li></ul>
+<h2><span id="April_10_-_April_14_(week_10)"></span><span class="mw-headline" id="April_10_-_April_14_.28week_10.29">April 10 - April 14 (week 10)</span></h2>
+<p>I began this week by completing the performance tests. The results can be found in the comment under the task <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105540#issuecomment-919053">here</a>.
+After that, I worked on getting a full conversion of the data-block working. The progress of this is documented in the task <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106822">#106822</a>.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/95b43c41a86">95b43c41a8</a> Fix missing ID cases</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/abc5711167f">abc5711167</a> Check experimental option in poll function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/a115eaccb59">a115eaccb5</a> Fix sorted_keys cache not being cleared</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/d0c38114b2a">d0c38114b2</a> Fix add_empty_darings not initializing runtime data</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/0b9a5381f94">0b9a5381f9</a> Add GreasePencilFrame in the layer map</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/8088c045367">8088c04536</a> Add active_layer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/bee460756fe">bee460756f</a> Fix some errors in the UI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/c72ade033d8">c72ade033d</a> Improve active layer functionality</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/10f20bf5d5a">10f20bf5d5</a> Refactor: Rename more grease pencil files to legacy</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/efb93b7f6b6">efb93b7f6b</a> Add deltatime, rotation, and color to point conversion</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/01923aae9b7">01923aae9b</a> Conversion of stroke attributes</li></ul>
+<h2><span id="April_17_-_April_21_(week_11)"></span><span class="mw-headline" id="April_17_-_April_21_.28week_11.29">April 17 - April 21 (week 11)</span></h2>
+<p>This week I focused on making sure all the data in the grease pencil DNA is converted. The only thing missing as of now are the <code>weights</code>. This will have to be done on <code>CurvesGeometry</code> though. I also worked on writing the GP 3.0 blog post.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/ea442d52d67">ea442d52d6</a> Fix bug in saving layer tree to storage and add test</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/a182f4ebf27">a182f4ebf2</a> Set materials inside the conversion function.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/80e88a1ebd0">80e88a1ebd</a> Add more fields to <code>GreasePencilLayer</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/3c7cd7c4857">3c7cd7c485</a> Get length of layer name when converting.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/ac66f9b6249">ac66f9b624</a> Make sure to construct the CurvesGeometry in place</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/9e9063b241f">9e9063b241</a> Fix crash when converting grease pencil object</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/f49427d1829">f49427d182</a> Add layer masks</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/85c87d901c8">85c87d901c</a> Add onion skinning settings.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/6ec13208391">6ec1320839</a> Add grease pencil frame flag + cleanup</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/fbf61c87e22">fbf61c87e2</a> Refactor save/load layer tree</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/filedescriptor/blender/commit/22527b9bbc1">22527b9bbc</a> Fix crash when layer has no keyframes.</li></ul>
+<p>I also committed a small change to the <code>remove_if</code> functions of some <code>BLI</code> containers:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/66158498de9">66158498de</a> BLI: Return number of values removed from remove_if</li></ul>
+<p>Finally, I reviewed and committed the following PR for Blender 3.6:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106663">GPencil: Several Weight Paint additions</a></li></ul>
+<p>I was sick from Wednesday till the end of the week.
+</p>
+<h2><span id="April_24_-_April_28_(week_12)"></span><span class="mw-headline" id="April_24_-_April_28_.28week_12.29">April 24 - April 28 (week 12)</span></h2>
+<h2><span id="May_01_-_May_05_(week_13)"></span><span class="mw-headline" id="May_01_-_May_05_.28week_13.29">May 01 - May 05 (week 13)</span></h2>
+<p>This week I was mostly working on the code review for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106848">PR #106848</a>. A lot of the time was spent cleaning up the code. I also spend some time working on the blog post as well as having some design discussions with Dalai about the integration of Grease Pencil into Geometry Nodes. 
+</p>
+<h2><span id="May_08_-_May_12_(week_14)"></span><span class="mw-headline" id="May_08_-_May_12_.28week_14.29">May 08 - May 12 (week 14)</span></h2>
+<p>This week I got feedback from Bastien on the state of GP 3.0. He raised some concerns on how the layer tree was stored which meant that some of the API has to be rewritten.
+I spent most of the time working on this rewrite.
+</p><p>I had to take the last 3 days of the week off due to family reasons.
+</p>
+<h2><span id="May_15_-_May_19_(week_15)"></span><span class="mw-headline" id="May_15_-_May_19_.28week_15.29">May 15 - May 19  (week 15)</span></h2>
+<h2><span id="May_22_-_May_26_(week_16)"></span><span class="mw-headline" id="May_22_-_May_26_.28week_16.29">May 22 - May 26  (week 16)</span></h2>
+<p>Note: I moved to Amsterdam at the end of the last week.
+</p><p>This week I finished the review of the GP 3.0 patch. There were a few back and forth with Bastien about the ID and RNA code of the new grease pencil.
+There was a crash when opening files saved with GP 3.0 objects that I fixed on Thursday.
+</p>
+<h2><span id="May_29_-_June_02_(week_17)"></span><span class="mw-headline" id="May_29_-_June_02_.28week_17.29">May 29 - June 02  (week 17)</span></h2>
+<h2><span id="June_05_-_June_09_(week_18)"></span><span class="mw-headline" id="June_05_-_June_09_.28week_18.29">June 05 - June 09 (week 18)</span></h2>
+<p>I started this week by working on the (de)select all operator. The intent was to create an example of how to convert one of these operators to the new data-structure for other contributors to look at. I did the same for the "select box" operator for an interactive example. The interactive selection operators are defined for all objects so they work a bit differently. I then created multiple community tasks for people to work on.
+There were also multiple meetings this week. I had a session with Dalai to talk more about the integration of Grease Pencil into Geometry nodes. The results of that session were then presented to the geometry nodes team on two different occasions. We also had a meeting with some people from the animation module to talk about Grease Pencil and the dopesheet. We discussed keyframes shaped as boxes for grease pencil frames (potentially called Cels, see <a rel="nofollow" class="external free" href="https://en.wikipedia.org/wiki/Cel">https://en.wikipedia.org/wiki/Cel</a>).
+At the end of the week, I began work on the layer tree UI.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d0b10bbc74">8d0b10bbc7</a> Fix: GP brush stroke operator name and description</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa0fe6f55e5">fa0fe6f55e</a> Refactor: Pass deformed positions to curve selection</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b29ba95caeb">b29ba95cae</a> GPv3: Add "(De)select All" operator and keymap</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f4f771442b">7f4f771442</a> GPv3: Add "Select Box" operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b550d0be232">b550d0be23</a> Cleanup: Move anim_filter.c to C++</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26bad3b1870">26bad3b187</a> Curves: Add separate start and end amounts to Select Ends operator</li></ul>
+<h2><span id="June_12_-_June_16_(week_19)"></span><span class="mw-headline" id="June_12_-_June_16_.28week_19.29">June 12 - June 16 (week 19)</span></h2>
+<p>While I did attended the Annecy Festival this week, I also spent some of the time working on Grease Pencil. I reviewed code from other contributors and also worked on the layer tree UI. 
+</p><p><a href="../../File:Layer_Tree_UI.png.html" class="image" title="Work-in-progress layer tree UI"><img alt="Work-in-progress layer tree UI" src="../../../w/images/thumb/6/62/Layer_Tree_UI.png/360px-Layer_Tree_UI.png" width="360" height="249" srcset="../../../w/images/thumb/6/62/Layer_Tree_UI.png/540px-Layer_Tree_UI.png 1.5x, ../../../w/images/6/62/Layer_Tree_UI.png 2x" /></a>
+</p>
+<h2><span id="June_19_-_June_23_(week_20)"></span><span class="mw-headline" id="June_19_-_June_23_.28week_20.29">June 19 - June 23 (week 20)</span></h2>
+<p>This week I worked mainly on the layer tree UI, an initial undo system for grease pencil edit mode and some core API changes.
+</p><p><a href="../../File:Grease_Pencil_Layer_Tree_UI_Progress.png.html" class="image"><img alt="Grease Pencil Layer Tree UI Progress.png" src="../../../w/images/4/46/Grease_Pencil_Layer_Tree_UI_Progress.png" width="401" height="211" /></a>
+</p><p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/81b99c327b7">81b99c327b</a> Fix GPv3 experimental link</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6503f1dc9f">a6503f1dc9</a> Cleanup: Moving selection domain getter for GP</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/19f55906588">19f5590658</a> Fix GPv3 selection operators always showing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/171de8b5a7e">171de8b5a7</a> Cleanup: Remove <code>ED_grease_pencil_draw.h</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c0b81da5b4">8c0b81da5b</a> Cleanup: Separate GP operators and functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb041b3f48f">bb041b3f48</a> Fix #109207: Can't select in gpencil edit mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2264a32f545">2264a32f54</a> Fix: Missing select menu for GPv3</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b3f3b41d096">b3f3b41d09</a> GPv3: Initial Layer Tree UI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dddc69d0be1">dddc69d0be</a> GPv3: Add layers RNA</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4ef0ac05a0">a4ef0ac05a</a> GPv3: Add hide and lock buttons to layer UI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0d6fda3b26b">0d6fda3b26</a> Fix: GPv3 layer operators missing undo flag</li></ul>
+<p>Pull requests:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109123">PR #109123</a> WIP: GPv3: Add initial undo system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109251">PR #109251</a> Refactor: Convert several animation editor files to C++</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109293">PR #109293</a> Curves: Mask function for end points</li></ul>
+<p>I also reviewed several other PRs related to the Grease Pencil 3.0 project.
+</p>
+<h2><span id="June_26_-_June_30_(week_21)"></span><span class="mw-headline" id="June_26_-_June_30_.28week_21.29">June 26 - June 30 (week 21)</span></h2>
+<p>I started this week by working more on the layer tree UI. I added support for showing groups, adding new groups and renaming groups.
+The visibility of layers and the lock state is now also inherited from the parent groups.
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Layer_Groups.png.html" class="image"><img alt="Layer Groups.png" src="../../../w/images/thumb/6/6d/Layer_Groups.png/480px-Layer_Groups.png" width="480" height="243" srcset="../../../w/images/6/6d/Layer_Groups.png 1.5x" /></a></div></div>
+<p>Finally at the end of the week I participated in the Animation Workshop and worked on a prototype for a ghosting system.
+I wrote a devtalk thread with all the information: <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/ghosting-system-for-animation/30116">Ghosting System for Animation</a>
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Ghosting_System_Prototype.png.html" class="image"><img alt="Ghosting System Prototype.png" src="../../../w/images/thumb/5/53/Ghosting_System_Prototype.png/480px-Ghosting_System_Prototype.png" width="480" height="258" srcset="../../../w/images/thumb/5/53/Ghosting_System_Prototype.png/720px-Ghosting_System_Prototype.png 1.5x, ../../../w/images/thumb/5/53/Ghosting_System_Prototype.png/960px-Ghosting_System_Prototype.png 2x" /></a></div></div>
+<p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/497f9a69412">497f9a6941</a> GPv3: Add operator to reorder the active layer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a693165c88">0a693165c8</a> Refactor: Move <code>GreasePencilDrawing</code> functionality</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5dd29c9a053">5dd29c9a05</a> Fix: Uses of <code>foreach_editable_drawing</code> callbacks</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2418252ea7d">2418252ea7</a> Refactor: Move <code>stroke_cache</code> to gpencil runtime</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f059362127">9f05936212</a> GPv3: Change <code>name_plural</code> to  "grease_pencils_v3"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b69bba25adf">b69bba25ad</a> GPv3: Add python endpoint to get/set active layer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d4cdd6b88d">3d4cdd6b88</a> Fix: Typo in <code>grease_pencil.layer_add</code> description</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34d65eff1b7">34d65eff1b</a> Fix: Memory leak in <code>grease_pencil.layer_reorder</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b61316c7adb">b61316c7ad</a> GPv3: Add operator to add new layer group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5967cb53e9c">5967cb53e9</a> GPv3: Make visibility and lock state inheritable</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fee98019558">fee9801955</a> GPv3: Add caching of layer groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf4e9ffbd9c">bf4e9ffbd9</a> GPv3: Add rename function for layer groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5a9db0dd4c6">5a9db0dd4c</a> GPv3: Add initial layer group python API access</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4bb600ef953">4bb600ef95</a> GPv3: Add functions to find layer groups by name</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f6d6d84d6b">2f6d6d84d6</a> Fix: GPv3: Memory leak in reorder layer operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eb856f6fbb5">eb856f6fbb</a> GPv3: Build group hierarchy for layer tree UI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fdfc09502a1">fdfc09502a</a> GPv3: Improve redrawing for drawing operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6bec3bca094">6bec3bca09</a> GPv3: Remove dead code in drawing operator</li></ul>
+<h2><span id="July_03_-_July_07_(week_22)"></span><span class="mw-headline" id="July_03_-_July_07_.28week_22.29">July 03 - July 07 (week 22)</span></h2>
+<p>This week I mostly worked on internal Grease Pencil API things. I added functions to add frames with a duration as well as implicit holds (frames that are held until the next frame starts).
+I committed the circle select operator which means that all except one of the selection operators are implemented.
+Work on the drawing operator is also happening. This week I worked on getting the paint mode fully set up, make sure tool settings and brushes are working, and getting the cursor to show up.
+Finally, I helped Amélie with the eraser operator. Work on the drawing operator and the eraser will continue next week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/de95539cedd">de95539ced</a> Cleanup: Rename grease pencil modes to legacy</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d99d05f00d">3d99d05f00</a> GPv3: Add separate paint mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/61d5ff14094">61d5ff1409</a> GPv3: Add function to insert frames with duration</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44ee5b38ac1">44ee5b38ac</a> GPv3: Add operator to insert blank frames</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b19aaf67302">b19aaf6730</a> Refactor: GPv3: Add frame API</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fde2eca1d2b">fde2eca1d2</a> GPv3: Select circle</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d3574a4a5c">4d3574a4a5</a> Curves: Reimplement random selection with mask</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4df8c942f19">4df8c942f1</a> Fix: Memory leak when copying a GP drawing</li></ul>
+<h2><span id="July_10_-_July_14_(week_23)"></span><span class="mw-headline" id="July_10_-_July_14_.28week_23.29">July 10 - July 14 (week 23)</span></h2>
+<p>This week I worked on a lot of smaller tasks. I also helped Amélie with some of her tasks every now and then.
+The initial dopsheet support (just for viewing channels and keyframes) is now in main. I also committed some of the changes in the drawing tool branch to main, so that they could be used for the eraser.
+I investigated an issue where copying a grease pencil data-block would lead to dangling pointers. I was able to fix the issue, but it required a change in the DNA part. This means that files saved before this commit are broken (if they had a grease pencil 3 object). Since GP 3 is considered experimental, no extra work on versioning this change was done.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09f8f4d0498">09f8f4d049</a> GPv3: Add initial dopesheet support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9356e18d151">9356e18d15</a> GPv3: Add <code>on_stroke_begin</code> callback</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7cf8bfd2a05">7cf8bfd2a0</a> GPv3: Draw paint cursor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2f0426980f">f2f0426980</a> GPv3: Refactor root_group to be a pointer in DNA</li></ul>
+<h2><span id="July_17_-_July_21_(week_24)"></span><span class="mw-headline" id="July_17_-_July_21_.28week_24.29">July 17 - July 21 (week 24)</span></h2>
+<p>This week I mostly worked on the drawing tool and related areas like the UI. It's almost ready for a first round of testing now.
+Other than that I worked on a bunch of related tasks to the drawing. Specifically a "simplify" operator that removes points from a stroke without changing the visual appearance (within a threshold).
+I made sure that this function would also consider the thickness of the points (and could potentially even consider more, like the opacity or the vertex color!).
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba1795ec811">ba1795ec81</a> GPv3: Add tagging drawing for topology change</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e3813f02c9">2e3813f02c</a> IndexMask: Add unoptimized <code>from_union</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/93855a5efd1">93855a5efd</a> IndexMask: Add tests for <code>IndexMask::from_union</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/46d60aacd8f">46d60aacd8</a> Array Utils: Add <code>find_all_ranges</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71837fcb046">71837fcb04</a> GPv3: Add <code>get_editable_drawing_at</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7cd5e25743c">7cd5e25743</a> GPv3: Stroke Simplify operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8dd0faec549">8dd0faec54</a> GPv3: Refactor: <code>ramer_douglas_peucker_simplify</code></li></ul>
+<h2><span id="July_24_-_July_28_(week_25)"></span><span class="mw-headline" id="July_24_-_July_28_.28week_25.29">July 24 - July 28 (week 25)</span></h2>
+<p>This week I began working on the modifier support for Grease Pencil 3. The initial step was committed and work on porting the old modifiers can begin soon. One step that is remaining is a common way to handle the filtering. I will continue working on this next week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5846b9164aa">5846b9164a</a> GeometrySet: Add new <code>GreasePencilComponent</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d6aa9906fdb">d6aa9906fd</a> Modifiers: Add <code>idname</code> field to <code>ModifierTypeInfo</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/610834540a0">610834540a</a> GPv3: Return correct mode in <code>BKE_paintmode_get_active_from_context</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8acd3dfb8ee">8acd3dfb8e</a> Anim: Cleanup: Move <code>CfraElem</code> struct to editors</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/20b1077097b">20b1077097</a> GPv3: Initial modifier support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/187545109a4">187545109a</a> Cleanup: GPv3 drawings API</li></ul>
+<h2><span id="July_31_-_August_04_(week_26)"></span><span class="mw-headline" id="July_31_-_August_04_.28week_26.29">July 31 - August 04 (week 26)</span></h2>
+<p>After a week of feedback from the community on the drawing tool, I rewrote a majority of the code to address the issues this week. This is nearly done at the beginning of next week, another round of testing can start. I also worked on some core changes like adding a user count to drawings so we can instance a drawing on multiple keyframes. This is already supported internally now and just needs to be exposed by an operator. 
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8df59686034">8df5968603</a> GPv3: Add <code>remove_frame</code> function to layers</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/de8ce4e34b7">de8ce4e34b</a> GPv3: Add user count to drawings</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/162fc23887e">162fc23887</a> GPv3: Use <code>add_new</code> and <code>remove_contained</code> in core</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b2f61b5c8a4">b2f61b5c8a</a> GPv3: Replace <code>int</code> with <code>FramesMapKey</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/331969159ef">331969159e</a> Fix: Unreported memory leak</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/873453005d1">873453005d</a> Fix: GPv3 not rendering when origin is out of view</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/270a2297287">270a229728</a> Fix: GPv3: Crash on undo when changing frames map</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/110ea98ea21">110ea98ea2</a> GPv3: Fix missing tag in frames map</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/13e9f553b91">13e9f553b9</a> Cleanup: GPv3: Use references in editor functions</li></ul>
+<h2><span id="August_07_-_August_11_(week_27)"></span><span class="mw-headline" id="August_07_-_August_11_.28week_27.29">August 07 - August 11 (week 27)</span></h2>
+<p>At the beginning of this week I did some more work on the drawing tool. I worked on making the stroke ends a bit better and fixed some issues. It's now in another round of testing.
+I then began working on a pull request to add vertex group support for <code>Curves</code> and <code>CurvesGeometry</code> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106944">PR #106944</a>. This is one of the remaining blockers for modifier filters to work properly.
+Finally I worked on the outliner support for GPv3. The PR is almost ready.
+</p><p><a href="../../File:Grease_Pencil_3_Outliner_Screenshot.png.html" class="image"><img alt="Grease Pencil 3 Outliner Screenshot.png" src="../../../w/images/7/7a/Grease_Pencil_3_Outliner_Screenshot.png" width="480" height="244" /></a>
+</p><p>GPv3 commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/827a71fe7ef">827a71fe7e</a> GPv3: Refactor: replace <code>remove_frame_at</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e172b9e2ea">9e172b9e2e</a> Cleanup: GPv3: Use <code>int64_t</code> for indices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f660317140">4f66031714</a> GPv3: Fix TreeNode::parent_group() for root group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e594b5d96f">7e594b5d96</a> GPv3: Allow buttons for child nodes to be inactive</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d14289c46ae">d14289c46a</a> GPv3: Fix: Assert hit when exiting paint mode</li></ul>
+<p>Other commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5eef5b0d61a">5eef5b0d61</a> Fix #110447: Curves random selection is reversed</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/101abc6f6cf">101abc6f6c</a> Sim Nodes: Don't delete parent bake directory</li></ul>
+<h2><span id="August_14_-_August_18_(week_28)"></span><span class="mw-headline" id="August_14_-_August_18_.28week_28.29">August 14 - August 18 (week 28)</span></h2>
+<p>At the beginning of the week I committed the initial outliner support. I then spent some time refactoring parts of the core structure, namely the use of <code>TreeNode</code> class. Core functions that both work on layers and layer groups should use this class instead (e.g. <code>rename_layer</code> should really be <code>rename_node</code>).
+I then started to work on the ghosting system (e.g. onion skinning) again. I will continue that work after my holiday break in September.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/310ccbdc33a">310ccbdc33</a> GPv3: Initial outliner support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba574097b89">ba574097b8</a> GPv3: Python: Rename <code>groups</code> to <code>layer_groups</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26617471387">2661747138</a> Cleanup: GPv3: Move inline <code>Drawing</code> methods</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/969de5135a3">969de5135a</a> GPv3: Re-evaluate on frame change</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b14a0ee57e8">b14a0ee57e</a> Cleanup: GPv3: Refactor usage of <code>TreeNode</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5aacbf6c81b">5aacbf6c81</a> Fix: GPv3: Crash because of missing null check</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bc755face2">0bc755face</a> Fix #109403: GP doesn't render selection outline</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/725f1dbf2d1">725f1dbf2d</a> Revert: GPv3: DNA rename of <code>name</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d06a6105a74">d06a6105a7</a> Fix: GPv3: <code>TreeNode::is_locked()</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/24082ceecc7">24082ceecc</a> Cleanup: GPv3: Constructors and destructors</li></ul>
+<h2><span id="August_21_-_August_25_(week_29)"></span><span class="mw-headline" id="August_21_-_August_25_.28week_29.29">August 21 - August 25 (week 29)</span></h2>
+<p>On vacation.
+</p>
+<h2><span id="August_28_-_September_01_(week_30)"></span><span class="mw-headline" id="August_28_-_September_01_.28week_30.29">August 28 - September 01 (week 30)</span></h2>
+<p>On vacation.
+</p>
+<h2><span id="September_04_-_September_08_(week_31)"></span><span class="mw-headline" id="September_04_-_September_08_.28week_31.29">September 04 - September 08 (week 31)</span></h2>
+<p>On vacation.
+</p>
+<h2><span id="September_11_-_September_15_(week_32)"></span><span class="mw-headline" id="September_11_-_September_15_.28week_32.29">September 11 - September 15 (week 32)</span></h2>
+<p>I started the week by finishing the review of a lot of PRs for the grease pencil dopesheet. Almost all operators have been ported to GPv3 now.
+At the end of the week I began looking into Geometry Nodes support. There might be a need from the studio for it.
+</p><p>With the Geometry Nodes team we decided on a design for an initial implementation. I'll post a write-up on devtalk next week.
+</p><p>Committed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b66c0676b4d">b66c0676b4</a> GPv3: Move dopesheet channels</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ed35e5665a">5ed35e5665</a> Cleanup: Anim: Replace use of <code>T_AUTOMERGE</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c0850237a1e">c0850237a1</a> Fix: "use_duplicated_keyframes" not found</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97d2dbb24e1">97d2dbb24e</a> Fix #112068: Crash when loading converted curves</li></ul>
+<p>Reviewed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6221ff436fc">6221ff436f</a> GPv3: Jump to Selected/Previous/Next keyframe</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3ee79007752">3ee7900775</a> GPv3: Frame All/Selected keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5325b3ee15">e5325b3ee1</a> GPv3: Mirror grease pencil frames</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/127eee87ce3">127eee87ce</a> GPv3: Duplicate keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08eb7f1c970">08eb7f1c97</a> GPv3: Snap selected grease pencil frames</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0b8c83d273c">0b8c83d273</a> GPv3: Send updates after drop operation</li></ul>
+<h2><span id="September_18_-_September_22_(week_33)"></span><span class="mw-headline" id="September_18_-_September_22_.28week_33.29">September 18 - September 22 (week 33)</span></h2>
+<p>I spent most of this week working on the geometry nodes integration for grease pencil.
+I wrote a post on devtalk about it: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/grease-pencil-integration-into-geometry-nodes/31220/15">https://devtalk.blender.org/t/grease-pencil-integration-into-geometry-nodes/31220/15</a>
+Progress has been good and there is a WIP pull request: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112535">PR #112535</a>
+</p><p>Here is a quick demo of the "Set Position node":
+</p><p><video src="../../../w/images/1/1e/GPv3_Set_Position_Node_Demo.mp4" width="480" height="282" style="max-width: 100%; max-height: 100%; width: 480px; height: 282px;" controls=""><a href="../../File:GPv3_Set_Position_Node_Demo.mp4.html">https://wiki.blender.org/wiki/File:GPv3_Set_Position_Node_Demo.mp4</a></video>
+</p><p><br />
+Reviewed &amp; committed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8eb2d193c5e">8eb2d193c5</a> GPv3: Re-evaluate object after deleting keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e944b1b2cc">7e944b1b2c</a> GPv3: Add statistics information</li></ul>
+<h2><span id="September_25_-_September_29_(week_34)"></span><span class="mw-headline" id="September_25_-_September_29_.28week_34.29">September 25 - September 29 (week 34)</span></h2>
+<p>I began this week by continuing the geometry nodes integration. Then, during the bcon3 switch for Blender 4.0, there was an issue with Grease Pencil 3 not being entirely behind the experimental flag, causing the compilation of the beta to fail. I fixed that. Finally, I worked on the review for the initial drawing tool.
+I had a meeting with the animation team talking about how grease pencil would fit into the new animation system: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/2023-09-29-layered-animation-model-grease-pencil-v3/31361">https://devtalk.blender.org/t/2023-09-29-layered-animation-model-grease-pencil-v3/31361</a>
+</p>
+<h2><span id="October_02_-_October_06_(week_35)"></span><span class="mw-headline" id="October_02_-_October_06_.28week_35.29">October 02 - October 06 (week 35)</span></h2>
+<p>This week I was only working Thursday and Friday.
+I finished the review of the drawing tool and it was finally committed this week. I also did more work on the geometry nodes integration PR. The initial stage will be ready for main soon.
+</p><p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e87435cf4d">7e87435cf4</a> GPv3: Initial drawing tool</li></ul>
+<p>PRs:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112535">PR #112535</a> GPv3: Initial Geometry Nodes support</li></ul>
+<h2><span id="October_09_-_October_13_(week_36)"></span><span class="mw-headline" id="October_09_-_October_13_.28week_36.29">October 09 - October 13 (week 36)</span></h2>
+<p>This week I took some time to investigate bugs in the new drawing tool. There are still issues left, so I'll continue fixing them next week.
+The geometry nodes integration was merged. This implements the design I posted here: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/grease-pencil-integration-into-geometry-nodes/31220">https://devtalk.blender.org/t/grease-pencil-integration-into-geometry-nodes/31220</a>. Initially, it only came with support for the "Set Position" node, but many more nodes have already been ported: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/issues/113602">https://projects.blender.org/blender/blender/issues/113602</a>.
+</p><p>I also worked on making sure that in edit mode, selecting strokes that are deformed by a geometry nodes modifier works. Currently this is limited to deformations, newly created strokes in a modifier will not be select-able, since they don't have corresponding original data.
+</p><p>Finally I changed the spreadsheet code to be able to display the curves geometries inside grease pencil layers. This makes it easier to see what is actually going in the grease pencil data.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cf2ea5979cc">cf2ea5979c</a> Fix: GPv3 draw tool sometimes draws a cyclic curve</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa2a05ef865">fa2a05ef86</a> Fix: GPv3 sometimes crashes when drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4e05da26483">4e05da2648</a> Fix: GPv3: Crash when drawing new stroke</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b85ca7b05d">1b85ca7b05</a> Fix: GPv3: Reorder layers missing update</li></ul>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e7e1ec55d2f">e7e1ec55d2</a> GPv3: Add <code>DrawingTransforms</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3931a54e08b">3931a54e08</a> GPv3: Initial Geometry Nodes support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f43426f0de9">f43426f0de</a> GPv3: Rename layer domain to just "Layer"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c620b0b00ea">c620b0b00e</a> GPv3: Domain Size node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/43a60ca38ef">43a60ca38e</a> GPv3: Transform Geometry node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49b21eba11c">49b21eba11</a> GPv3: Support crazyspace in selection code</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/faa24698a5f">faa24698a5</a> GPv3: Implement expanding of Grease Pencil component in the spreadsheet</li></ul>
+<h2><span id="October_16_-_October_20_(week_37)"></span><span class="mw-headline" id="October_16_-_October_20_.28week_37.29">October 16 - October 20 (week 37)</span></h2>
+<p>This week I spent most of my time fixing bugs, reviewing code and working on my presentation for the next week.
+One of the bigger changes was the way the thickness/radius is stored in grease pencil. Previously, each stroke would store a thickness value in pixels
+and each point would store a factor of this thickness. This meant that the render engine had to convert the pixel value into world space units.
+The chosen conversion was 1px = 0.001 units, which was a bit arbitrary. With <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07749b389d1">07749b389d</a>, all the points now store their radius in blender units. No more conversion is done by the render engine. This means that for now, the drawing tool works in screen space (the brush size is chosen in pixels rather than e.g. cm). But there will be a patch that allows to both work in screen space and in world space with brushes.
+</p><p>Changes:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/97c5cb19d12">97c5cb19d1</a> GPv3: Hide points overlay in stroke selection mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f59827de741">f59827de74</a> GPv3: Add API to copy and add a layer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07749b389d1">07749b389d</a> GPv3: Convert radius to blender units</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/74facf98416">74facf9841</a> GPv3: Add wrapper class for DrawingReference</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a89bb7632af">a89bb7632a</a> GPv3: Separate/Delete Geometry node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f6c8ddda26a">f6c8ddda26</a> GPv3: Add <code>is_child_of</code> function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e433a8eaaf7">e433a8eaaf</a> GPv3: Replace find API with <code>find_node_by_name</code></li></ul>
+<p>Fixes:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78cb2776bbb">78cb2776bb</a> Fix #113740: Crash adding layer into empty group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed124d23d10">ed124d23d1</a> Fix: GPv3: Crash when storing deformed points</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/080823f93c9">080823f93c</a> Fix: GPv3: Memory leak in <code>set_name</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37d2eaee4eb">37d2eaee4e</a> Fix: GPv3: Crash renaming a layer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26816931c4c">26816931c4</a> Fix: GPv3: Remap materials</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6281d9a0399">6281d9a039</a> Fix: GPv3 depth buffer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44e2681459e">44e2681459</a> Fix: GPv3: Drawing tool didn't initialize all attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eab204b0a4f">eab204b0a4</a> Fix: GPv3: Radial brush size control broken</li></ul>
+<h2><span id="October_23_-_October_27_(week_38)"></span><span class="mw-headline" id="October_23_-_October_27_.28week_38.29">October 23 - October 27 (week 38)</span></h2>
+<p>Most of this week was spent on preparing the conference and my talk. You can find the recording of my talk here: <a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=IplntCQtRKA">https://www.youtube.com/watch?v=IplntCQtRKA</a>
+</p><p>Nonetheless, I did fix some issues/bugs:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e1c3a001030">e1c3a00103</a> GPv3: Draw strokes relative to the object origin</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ddd4c2ae769">ddd4c2ae76</a> Fix: GPv3: Crash when drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ab652f7b5f0">ab652f7b5f</a> Fix: GPv3: Crash earsing when using modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d453ca1c01">4d453ca1c0</a> Fix: GPv3: Erasing when object is not at the origin</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/23e9ebfdbd3">23e9ebfdbd</a> Fix: GPv3: Crash when transforming keyframes</li></ul>
+<h2><span id="October_30_-_November_03_(week_39)"></span><span class="mw-headline" id="October_30_-_November_03_.28week_39.29">October 30 - November 03 (week 39)</span></h2>
+<p>This week I looked at the pull requests that had pilled up during the week of the conference and reviewed some of them. I then began working on multi-frame editing and finished the implementation. It's now in main but needs more testing to make sure everything is working as expected. I also began thinking about material locking but the PR for that is not done yet. I took Friday of this week off.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9934381733a">9934381733</a> GPv3: Rename GP_Layer/GP_Group to Layer/Group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05d6818aa25">05d6818aa2</a> Fix #110038: Crash when sculpting on GP object with modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/91db8fc5a04">91db8fc5a0</a> GPv3: Multi-frame editing</li></ul>
+<h2><span id="November_06_-_November_10_(week_40)"></span><span class="mw-headline" id="November_06_-_November_10_.28week_40.29">November 06 - November 10 (week 40)</span></h2>
+<p>This week I mostly worked on material locking. I also spent some time recording myself working on that task. You can find the video here: <a rel="nofollow" class="external free" href="https://youtu.be/oPLfElMC4wU?si=ONeomk4sLlHrTWS2">https://youtu.be/oPLfElMC4wU?si=ONeomk4sLlHrTWS2</a>
+</p><p>Also, I thought a bit about 2D polygon clipping and a potential implementation. Nothing concrete for now.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2529aa65849">2529aa6584</a> GPv3: Include current frame in multi-frame editing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f6655ab06cc">f6655ab06c</a> Fix #114453: Grease Pencil shows up as "Grease Pencil (legacy)" in some places</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff5df8a78fe">ff5df8a78f</a> Fix #114564: Can't search grease pencil modifiers</li></ul>
+<h2><span id="November_13_-_November_17_(week_41)"></span><span class="mw-headline" id="November_13_-_November_17_.28week_41.29">November 13 - November 17 (week 41)</span></h2>
+<p>Unfortunately, I was sick most of this week. At the end of the week, I did some bug fixing and code review. I also did more work on the material locking PR that should be landing soon.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/143b891ff99">143b891ff9</a> Fix: GPv3: Using current frame twice in multi-frame</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a884968593d">a884968593</a> GPv3: Use immutable layer references</li></ul>
+<h2><span id="November_20_-_November_24_(week_42)"></span><span class="mw-headline" id="November_20_-_November_24_.28week_42.29">November 20 - November 24 (week 42)</span></h2>
+<p>This week I worked on reviewing a bunch of PRs. I also fixed an important bug in the draw tool. The bug caused the stroke to stutter a lot as if the tool was lagging.
+Finally, I finished addressing the feedback on the material locking PR and it was merged.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6064e726d4d">6064e726d4</a> Fix: GPv3: Stutter while drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78d9267a56c">78d9267a56</a> GPv3: Material locking</li></ul>
+<h2><span id="November_27_-_December_01_(week_43)"></span><span class="mw-headline" id="November_27_-_December_01_.28week_43.29">November 27 - December 01 (week 43)</span></h2>
+<p>I spent this week doing a lot of code review and fixing some issues. I also worked on the drawing placements (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115602">PR #115602</a>) and started to work on rendering GPv3 to image (e.g. the F12 render).
+</p><p>Reviewed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1970de9d197">1970de9d19</a> <code>GPv3: Fix #113994: Overlay: Hide points for locked layers</code> by casey bianco-davis</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/671f428ead2">671f428ead</a> <code>GPv3: "Set Active Layer" operator and menu</code> by Clément Busschaert</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fb275bc040c">fb275bc040</a> <code>GPv3: Duplicate Points operator</code> by casey bianco-davis</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8a785b65b7">b8a785b65b</a> <code>GPv3: Show and hide layers operators</code> by Matias Mendiola</li></ul>
+<p>Commmits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8dc9a9a0e37">8dc9a9a0e3</a> <code>Fix: GPv3: Uninitialized runtime variable</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a743018b1b">3a743018b1</a> <code>Fix: GPv3: Wrong location in paint_init_pivot</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0185609a26a">0185609a26</a> <code>Fix: GPv3: Smoothing even with factor of 0</code></li></ul>
+<h2><span id="December_04_-_December_08_(week_44)"></span><span class="mw-headline" id="December_04_-_December_08_.28week_44.29">December 04 - December 08 (week 44)</span></h2>
+<p>This week I finished the drawing placement PR review and committed it to main. There was one issue reported for drawing on surfaces which I fixed later that week.
+Drawing on the nearest stroke didn't work, because we still couldn't render Grease Pencil v3 to image (the F12 render). I worked on that this week too and the PR got merged
+at the end of the week. Following that I looked at the material preview icons and got that working after some debugging.
+</p><p>Commits:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5fea1eda361">5fea1eda36</a> <code>GPv3: Drawing Placements</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8efff3b2d74">8efff3b2d7</a> <code>GPv3: Render to Image</code></li></ul>
+<p>Reviewed:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/773d5745e86">773d5745e8</a> <code>Fix: GPv3: Strokes with hidden materials are editable</code> by casey bianco-davis</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31ee0a2a3e0">31ee0a2a3e</a> <code>Fix: GPv3: Missing add layer option in menu when list is empty</code> by Pratik Borhade</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5a2b8da6193">5a2b8da619</a> <code>Fix: GPv3: Crash switching to draw mode for empty object</code> by Pratik Borhade</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4dcda1ec12a">4dcda1ec12</a> <code>GPv3: Overlay: Show edit lines option</code> by Casey Bianco-Davis</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58041799bcb">58041799bc</a> <code>GPv3: Overlay: Only show visible and editable materials</code> by casey bianco-davis</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e5d4a87993">2e5d4a8799</a> <code>GPv3: Clean loose points operator</code> by Pratik Borhade</li></ul>
+<p>Fixes:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/35b9e37295c">35b9e37295</a> <code>Fix #115716: Empty Grease Pencil Keymap Warning</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cad81786d01">cad81786d0</a> <code>Fix: GPv3: Memory leaks in curve fitting functions</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aaed15a2e13">aaed15a2e1</a> <code>Fix: GPv3: Crash when drawing</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e45ec4896f">8e45ec4896</a> <code>Fix: GPv3: Compiler error</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f8b20936c81">f8b20936c8</a> <code>Fix #115895: Surface drawing artifacts at borders</code></li></ul>
+<h2><span id="December_11_-_December_15_(week_45)"></span><span class="mw-headline" id="December_11_-_December_15_.28week_45.29">December 11 - December 15 (week 45)</span></h2>
+<h2><span id="December_18_-_December_22_(week_46)"></span><span class="mw-headline" id="December_18_-_December_22_.28week_46.29">December 18 - December 22 (week 46)</span></h2>
+<h2><span id="December_25_-_December_29_(week_47)"></span><span class="mw-headline" id="December_25_-_December_29_.28week_47.29">December 25 - December 29 (week 47)</span></h2>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112000522
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.668 seconds
+Real time usage: 1.208 seconds
+Preprocessor visited node count: 10334/1000000
+Preprocessor generated node count: 7305/1000000
+Post‐expand include size: 57127/2097152 bytes
+Template argument size: 17450/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  494.890      1 -total
+ 90.41%  447.411    224 Template:GitCommit
+ 23.91%  118.351    189 Template:GitCommit/PhabricatorParseDeprecated
+ 17.15%   84.873    184 Template:GitCommit/PhabricatorParse
+  1.33%    6.570     12 Template:PullRequest
+  0.39%    1.936      2 Template:Issue
+  0.21%    1.031      1 Template:Phab
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6660-0!canonical and timestamp 20240112000521 and revision id 37758
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;oldid=37758">https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;oldid=37758</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 10 December 2023, at 10:41.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Filedescriptor/Reports/2023.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Filedescriptor/Reports/2023" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Filedescriptor.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Filedescriptor.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Filedescriptor.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;oldid=37758" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Filedescriptor/Reports/2023&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.668","walltime":"1.208","ppvisitednodes":{"value":10334,"limit":1000000},"ppgeneratednodes":{"value":7305,"limit":1000000},"postexpandincludesize":{"value":57127,"limit":2097152},"templateargumentsize":{"value":17450,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  494.890      1 -total"," 90.41%  447.411    224 Template:GitCommit"," 23.91%  118.351    189 Template:GitCommit/PhabricatorParseDeprecated"," 17.15%   84.873    184 Template:GitCommit/PhabricatorParse","  1.33%    6.570     12 Template:PullRequest","  0.39%    1.936      2 Template:Issue","  0.21%    1.031      1 Template:Phab"]},"cachereport":{"timestamp":"20240112000522","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844551b74884b7e4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

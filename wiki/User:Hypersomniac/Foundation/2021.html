@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Hypersomniac/Foundation/2021 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Hypersomniac/Foundation/2021","wgTitle":"Hypersomniac/Foundation/2021","wgCurRevisionId":29777,"wgRevisionId":29777,"wgArticleId":5597,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Hypersomniac/Foundation/2021","wgRelevantArticleId":5597,"wgRequestId":"d359a0afedcfa20ae60b4449","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Hypersomniac","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Hypersomniac_Foundation_2021 rootpage-User_Hypersomniac skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2021.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AHypersomniac%2FFoundation%2F2021" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2021.html#Week_258_:_13th_-_26th_December"><span class="tocnumber">1</span> <span class="toctext">Week 258&#160;: 13th - 26th December</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2021.html#Week_256_:_6th_-_12th_December"><span class="tocnumber">2</span> <span class="toctext">Week 256&#160;: 6th - 12th December</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2021.html#Week_255_:_29th_-_5th_December"><span class="tocnumber">3</span> <span class="toctext">Week 255&#160;: 29th - 5th December</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2021.html#Week_254_:_22nd_-_28th_November"><span class="tocnumber">4</span> <span class="toctext">Week 254&#160;: 22nd - 28th November</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2021.html#Week_253_:_15th_-_21st_November"><span class="tocnumber">5</span> <span class="toctext">Week 253&#160;: 15th - 21st November</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2021.html#Week_252_:_8th_-_14th_November"><span class="tocnumber">6</span> <span class="toctext">Week 252&#160;: 8th - 14th November</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2021.html#Week_251_:_1st_-_7th_November"><span class="tocnumber">7</span> <span class="toctext">Week 251&#160;: 1st - 7th November</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2021.html#Week_250_:_25th_-_31st_October"><span class="tocnumber">8</span> <span class="toctext">Week 250&#160;: 25th - 31st October</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2021.html#Week_249_:_18th_-_24th_October"><span class="tocnumber">9</span> <span class="toctext">Week 249&#160;: 18th - 24th October</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2021.html#Week_248_:_11th_-_17th_October"><span class="tocnumber">10</span> <span class="toctext">Week 248&#160;: 11th - 17th October</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2021.html#Week_247_:_4th_-_10th_October"><span class="tocnumber">11</span> <span class="toctext">Week 247&#160;: 4th - 10th October</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2021.html#Week_246_:_27th_-_3rd_October"><span class="tocnumber">12</span> <span class="toctext">Week 246&#160;: 27th - 3rd October</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2021.html#Week_245_:_20th_-_26th_September"><span class="tocnumber">13</span> <span class="toctext">Week 245&#160;: 20th - 26th September</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2021.html#Week_244_:_13th_-_19th_September"><span class="tocnumber">14</span> <span class="toctext">Week 244&#160;: 13th - 19th September</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2021.html#Week_243_:_6th_-_12th_September"><span class="tocnumber">15</span> <span class="toctext">Week 243&#160;: 6th - 12th September</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2021.html#Week_242_:_30th_-_5th_September"><span class="tocnumber">16</span> <span class="toctext">Week 242&#160;: 30th - 5th September</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2021.html#Week_241_:_23rd_-_29th_August"><span class="tocnumber">17</span> <span class="toctext">Week 241&#160;: 23rd - 29th August</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2021.html#Week_240_:_16th_-_22nd_August"><span class="tocnumber">18</span> <span class="toctext">Week 240&#160;: 16th - 22nd August</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2021.html#Week_239_:_2nd_-_15th_August"><span class="tocnumber">19</span> <span class="toctext">Week 239&#160;: 2nd - 15th August</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2021.html#Week_237_:_26th_-_1st_August"><span class="tocnumber">20</span> <span class="toctext">Week 237&#160;: 26th - 1st August</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2021.html#Week_236_:_19th_-_25th_July"><span class="tocnumber">21</span> <span class="toctext">Week 236&#160;: 19th - 25th July</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2021.html#Week_235_:_12th_-_18th_July"><span class="tocnumber">22</span> <span class="toctext">Week 235&#160;: 12th - 18th July</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2021.html#Week_234_:_5th_-_11th_July"><span class="tocnumber">23</span> <span class="toctext">Week 234&#160;: 5th - 11th July</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2021.html#Week_233_:_28th_-_4th_July"><span class="tocnumber">24</span> <span class="toctext">Week 233&#160;: 28th - 4th July</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2021.html#Week_232_:_21st_-_27th_June"><span class="tocnumber">25</span> <span class="toctext">Week 232&#160;: 21st - 27th June</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2021.html#Week_231_:_14th_-_20th_June"><span class="tocnumber">26</span> <span class="toctext">Week 231&#160;: 14th - 20th June</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2021.html#Week_230_:_7th_-_13th_June"><span class="tocnumber">27</span> <span class="toctext">Week 230&#160;: 7th - 13th June</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2021.html#Week_229_:_31st_-_6th_June"><span class="tocnumber">28</span> <span class="toctext">Week 229&#160;: 31st - 6th June</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2021.html#Week_228_:_24th_-_30th_May"><span class="tocnumber">29</span> <span class="toctext">Week 228&#160;: 24th - 30th May</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2021.html#Week_227_:_17th_-_23rd_May"><span class="tocnumber">30</span> <span class="toctext">Week 227&#160;: 17th - 23rd May</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2021.html#Week_226_:_10th_-_16th_May"><span class="tocnumber">31</span> <span class="toctext">Week 226&#160;: 10th - 16th May</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2021.html#Week_225_:_3rd_-_9th_May"><span class="tocnumber">32</span> <span class="toctext">Week 225&#160;: 3rd - 9th May</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2021.html#Week_224_:_26th_-_2nd_May"><span class="tocnumber">33</span> <span class="toctext">Week 224&#160;: 26th - 2nd May</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2021.html#Week_223_:_19th_-_25th_April"><span class="tocnumber">34</span> <span class="toctext">Week 223&#160;: 19th - 25th April</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2021.html#Week_222_:_12th_-_18th_April"><span class="tocnumber">35</span> <span class="toctext">Week 222&#160;: 12th - 18th April</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2021.html#Week_221_:_5th_-_11th_April"><span class="tocnumber">36</span> <span class="toctext">Week 221&#160;: 5th - 11th April</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2021.html#Week_220_:_29th_-_4th_April"><span class="tocnumber">37</span> <span class="toctext">Week 220&#160;: 29th - 4th April</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2021.html#Week_219_:_22nd_-_28th_March"><span class="tocnumber">38</span> <span class="toctext">Week 219&#160;: 22nd - 28th March</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2021.html#Week_218_:_15th_-_21st_March"><span class="tocnumber">39</span> <span class="toctext">Week 218&#160;: 15th - 21st March</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2021.html#Week_217_:_8th_-_14th_March"><span class="tocnumber">40</span> <span class="toctext">Week 217&#160;: 8th - 14th March</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2021.html#Week_216_:_1st_-_7th_March"><span class="tocnumber">41</span> <span class="toctext">Week 216&#160;: 1st - 7th March</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2021.html#Week_215_:_22nd_-_28th_February"><span class="tocnumber">42</span> <span class="toctext">Week 215&#160;: 22nd - 28th February</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2021.html#Week_214_:_15th_-_21st_February"><span class="tocnumber">43</span> <span class="toctext">Week 214&#160;: 15th - 21st February</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2021.html#Week_213_:_8th_-_14th_February"><span class="tocnumber">44</span> <span class="toctext">Week 213&#160;: 8th - 14th February</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2021.html#Week_212_:_1st_-_7th_February"><span class="tocnumber">45</span> <span class="toctext">Week 212&#160;: 1st - 7th February</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2021.html#Week_214_:_25th_-_31st_February"><span class="tocnumber">46</span> <span class="toctext">Week 214&#160;: 25th - 31st February</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2021.html#Week_213_:_18th_-_24th_February"><span class="tocnumber">47</span> <span class="toctext">Week 213&#160;: 18th - 24th February</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2021.html#Week_212_:_11th_-_17th_February"><span class="tocnumber">48</span> <span class="toctext">Week 212&#160;: 11th - 17th February</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2021.html#Week_211_:_4th_-_10th_February"><span class="tocnumber">49</span> <span class="toctext">Week 211&#160;: 4th - 10th February</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Hypersomniac/Foundation/2021</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Hypersomniac.html" title="User:Hypersomniac">User:Hypersomniac</a>&lrm; | <a href="../Foundation.html" title="User:Hypersomniac/Foundation">Foundation</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div style="float:left; margin: 0 40px 40px 0;">
+</div>
+<h2><span class="mw-headline" id="Week_258_:_13th_-_26th_December">Week 258&#160;: 13th - 26th December</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Vacation.
+</p>
+<h2><span class="mw-headline" id="Week_256_:_6th_-_12th_December">Week 256&#160;: 6th - 12th December</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Light: Separate directional lights iteration <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/021bf5b171e">021bf5b171</a>.</li>
+<li>EEVEE: Shadow: Add defrag shader and page debug buffer generator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/36bec765e2e">36bec765e2</a>.</li>
+<li>EEVEE: Shadow: Add depth scan for tile tagging <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/181bc602147">181bc60214</a>.</li>
+<li>EEVEE: Shadow: Avoid double rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55a6a8900ae">55a6a8900a</a>.</li>
+<li>EEVEE: Shadow: Split LOD masking to its own shader <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a7c4afd211">0a7c4afd21</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_255_:_29th_-_5th_December">Week 255&#160;: 29th - 5th December</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Light: Merge ShadowData into LightData <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26335dfc57e">26335dfc57</a>.</li>
+<li>EEVEE: Light: Port light culling to GPU <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b00ca35758">1b00ca3575</a>.</li>
+<li>EEVEE: Shadow: Add LOD system for punctual shadows <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7303a453aa7">7303a453aa</a>.</li>
+<li>EEVEE: Shadow: Make punctual LOD selection based on pixel density <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b23d9519d0c">b23d9519d0</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_254_:_22nd_-_28th_November">Week 254&#160;: 22nd - 28th November</span></h2>
+<ul><li><strong>3.0 Release</strong>
+<ul><li>Fix T92609 Default Compositing tab shows red overlay when stereoscopy is turned on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/845716e6002">845716e600</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Add DRW_shgroup_vertex_buffer_ref <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/68602f3d874">68602f3d87</a>.</li>
+<li>GL: Add support for all image resource types <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/68b0195bf3e">68b0195bf3</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_253_:_15th_-_21st_November">Week 253&#160;: 15th - 21st November</span></h2>
+<ul><li><strong>3.0 Release</strong>
+<ul><li>Fix T91838 Crash when toggling edit mode on object with geometry node modifier, but only if the instanced objects material has a normal map assigned. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00e4d665f44">00e4d665f4</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Shadow: New virtual shadowmap sampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a8a4f5f8056">a8a4f5f805</a>.</li>
+<li>GPU: Add more barrier types <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9bd070fbc26">9bd070fbc2</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_252_:_8th_-_14th_November">Week 252&#160;: 8th - 14th November</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>BLI: Add more operator to float4 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/761ba976019">761ba97601</a>.</li>
+<li>DRW: Add debug line buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fbfbc9f15d0">fbfbc9f15d</a>.</li>
+<li>DRWView: Add frustum infos to uniform buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55af3361bfa">55af3361bf</a>.</li>
+<li>EEVEE: Shadow: Add Tilemap lod debug and fix clipmap end distance <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ebb2b1120c4">ebb2b1120c</a>.</li>
+<li>EEVEE: Shadow: Implement Virtual Shadowmapping <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c4cf354146">9c4cf35414</a>.</li>
+<li>EEVEE: Shadows: Virtual shadowmap part 2 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7664e1dd79d">7664e1dd79</a>.</li>
+<li>GPU: Bump shader to version 430 and support other image uniforms <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9db0734a1e5">9db0734a1e</a>.</li>
+<li>GPUTexture: Fix support / validation for integer textures <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf42246984e">bf42246984</a>.</li>
+<li>GPUVertexBuf: Mark dirty when using GPU_vertbuf_get_data <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b61ca8f349">2b61ca8f34</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_251_:_1st_-_7th_November">Week 251&#160;: 1st - 7th November</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>Fix T88766 EEVEE: Missing glossy reflections with Shader to RGB &amp; SSR is active. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/272cb6157d8">272cb6157d</a>.</li>
+<li>Fix T89777 EEVEE: Contact Shadows causes wrong shading in Reflection Plane <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f9f6d8de58a">f9f6d8de58</a>.</li>
+<li>Fix T91398 Overlay: Camera BG jitter offset (regression) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71799d46b4b">71799d46b4</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Shading Group: Add compute dispatch with size reference <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c746eeae931">c746eeae93</a>.</li>
+<li>EEVEE: Camera: fix fallback camera projection matrix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c92b2d8bc4a">c92b2d8bc4</a>.</li>
+<li>EEVEE: Cleanup: Rename uvcoordsvar to uv and explicit output location <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92a92fc60f3">92a92fc60f</a>.</li>
+<li>EEVEE: Deffered: Change normal packing for better negative normals <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a97234574dd">a97234574d</a>.</li>
+<li>EEVEE: Forward: Support raytracing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/682e1bea7ee">682e1bea7e</a>.</li>
+<li>EEVEE: Gbuffer: Split file <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/75db7522c66">75db7522c6</a>.</li>
+<li>EEVEE: Principled BSDF: Fix refraction roughness when GGX single-scatter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8ab3f2f521">b8ab3f2f52</a>.</li>
+<li>EEVEE: Raytrace: Add Diffuse surface raytracing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5905b11c077">5905b11c07</a>.</li>
+<li>EEVEE: Raytracing: Add back screen space raytracing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/52a81b81755">52a81b8175</a>.</li>
+<li>EEVEE: Raytracing: Add denoise and move raytrace passes to raytracing module. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fc6a430d8e8">fc6a430d8e</a>.</li>
+<li>EEVEE: Subsurface: Fix issue cause by HiZ mipmaps <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/282a0c90d11">282a0c90d1</a>.</li>
+<li>EEVEE: Subsurface: Small optimisation &amp; fix comparison <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/96d354a84da">96d354a84d</a>.</li>
+<li>EEVEE: Texture: Make ensure function return true if allocation occured <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5fadd8c84c">e5fadd8c84</a>.</li>
+<li>EEVEE: Update / remove obsolete properties in the UI. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a6a06fab70">2a6a06fab7</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_250_:_25th_-_31st_October">Week 250&#160;: 25th - 31st October</span></h2>
+<ul><li><strong>3.0 Release</strong>
+<ul><li>GPUState: Fix enum max value for enum operator macro <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/894096a5287">894096a528</a>.</li></ul></li></ul>
+<ul><li><strong>3.1 Release</strong>
+<ul><li>Revert "Pointcloud selection support" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe440012155">fe44001215</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_249_:_18th_-_24th_October">Week 249&#160;: 18th - 24th October</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Add eevee_build: precomputation and codegen at compile time <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55a85af05d3">55a85af05d</a>.</li>
+<li>EEVEE: Port back HiZbuffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3db3006d4c2">3db3006d4c</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_248_:_11th_-_17th_October">Week 248&#160;: 11th - 17th October</span></h2>
+<ul><li><strong>3.0 Release</strong>
+<ul><li>Fix T88766 EEVEE: Missing glossy reflections with Shader to RGB &amp; SSR is active. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/10abaf3ddf0">10abaf3ddf</a>.</li>
+<li>Fix T89777 EEVEE: Contact Shadows causes wrong shading in Reflection Plane <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d39cd851c0c">d39cd851c0</a>.</li>
+<li>Fix T91398 Overlay: Camera BG jitter offset (regression) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42d79a6041a">42d79a6041</a>.</li>
+<li>Fix T91981: Crash when using operators that needs scene depth <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/45f167237f0">45f167237f</a>.</li>
+<li>Fix T92226 EEVEE: AO misaligned on first sample <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30bed8761df">30bed8761d</a>.</li>
+<li>Fix T92250 EEVEE: Render crash with Motion Blur and Overscan <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e150f171d5f">e150f171d5</a>.</li>
+<li>GHOST: Unify behavior of offscreen context creation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6535779c92b">6535779c92</a>.</li>
+<li>GPUTexture: Fix assert when using stereo viewport with EEVEE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/22892955553">2289295555</a>.</li>
+<li>Revert "GHOST: Unify behavior of offscreen context creation" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad802488756">ad80248875</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_247_:_4th_-_10th_October">Week 247&#160;: 4th - 10th October</span></h2>
+<ul><li><strong>Master</strong>
+<ul><li>DRW: Move buffer &amp; temp textures &amp; framebuffer management to DrawManager <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1d49293b804">1d49293b80</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Fix Crash with some geometry type <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/008fb3eed9b">008fb3eed9</a>.</li>
+<li>EEVEE: Fix smooth transition when using render borders <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f85107fef7">9f85107fef</a>.</li>
+<li>EEVEE: Material: Add thickness output <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b0da401292f">b0da401292</a>.</li>
+<li>EEVEE: Subsurface Scattering: New implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee7deb09cf3">ee7deb09cf</a>.</li>
+<li>EEVEE: Transmittance: Add back light transmittance <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b304514bd5d">b304514bd5</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_246_:_27th_-_3rd_October">Week 246&#160;: 27th - 3rd October</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>Cleanup: Remove compiler warnings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ab6a6ffed49">ab6a6ffed4</a>.</li>
+<li>EEVEE: Fix crash when destroying the Instance (in debug build) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2994b6dd985">2994b6dd98</a>.</li>
+<li>EEVEE: Fix shader compilation caused by latest merge <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f773e289b7">6f773e289b</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_245_:_20th_-_26th_September">Week 245&#160;: 20th - 26th September</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>I went to the Blender Studio to discuss and plan the next year. Took some time to investigate a Mac M1 bug.
+</p>
+<ul><li><strong>Master</strong>
+<ul><li>Fix T87801: Eevee ambient occlusion is incorrect on M1 macMini <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84f98e28e38">84f98e28e3</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_244_:_13th_-_19th_September">Week 244&#160;: 13th - 19th September</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Film: Make smooth transition not rely on dtxl-&gt;color persistence <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d3a825678a4">d3a825678a</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_243_:_6th_-_12th_September">Week 243&#160;: 6th - 12th September</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Use special depth shader to resolve the depth buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c51604e308d">c51604e308</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_242_:_30th_-_5th_September">Week 242&#160;: 30th - 5th September</span></h2>
+<h2><span class="mw-headline" id="Week_241_:_23rd_-_29th_August">Week 241&#160;: 23rd - 29th August</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: LightGrid: Fix divide by zero leading to wrong world lighting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9207920c1e1">9207920c1e</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_240_:_16th_-_22nd_August">Week 240&#160;: 16th - 22nd August</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Film: Fix undefined viewport color values after resizing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f79788f7671">f79788f767</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_239_:_2nd_-_15th_August">Week 239&#160;: 2nd - 15th August</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Vacation.
+</p>
+<h2><span class="mw-headline" id="Week_237_:_26th_-_1st_August">Week 237&#160;: 26th - 1st August</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Vacation.
+</p>
+<h2><span class="mw-headline" id="Week_236_:_19th_-_25th_July">Week 236&#160;: 19th - 25th July</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Fix compilation on OSX platform <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4287db151e">c4287db151</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_235_:_12th_-_18th_July">Week 235&#160;: 12th - 18th July</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: GBuffer: Change layout <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6206a30519e">6206a30519</a>.</li>
+<li>GPUFramebuffer: Bump maximum color attachement to 8 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3ff83a4a84">e3ff83a4a8</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_234_:_5th_-_11th_July">Week 234&#160;: 5th - 11th July</span></h2>
+<h2><span class="mw-headline" id="Week_233_:_28th_-_4th_July">Week 233&#160;: 28th - 4th July</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: Fix crash caused by transparent material without prepass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/169a2a54d77">169a2a54d7</a>.</li>
+<li>EEVEE: Hair: Add back shaded hair support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4a3ba6f83d">c4a3ba6f83</a>.</li>
+<li>GPU: Shader: Add debug context line count <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/80b92467f0b">80b92467f0</a>.</li>
+<li>GPUMaterial: Fix issue with displacement tree and partial derivatives <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d8ec228a76f">d8ec228a76</a>.</li>
+<li>GPUNodeTree: Fix issue with weight tree inversion and displacement <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27adad0b0d0">27adad0b0d</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_232_:_21st_-_27th_June">Week 232&#160;: 21st - 27th June</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Fix crash in deferred compilation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e962002db2b">e962002db2</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_231_:_14th_-_20th_June">Week 231&#160;: 14th - 20th June</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: ShaderLib: Add support for requesting lib to be appended to shader <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/94f813db703">94f813db70</a>.</li>
+<li>EEVEE: Add back refraction support for lightprobes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3ad7832a8d2">3ad7832a8d</a>.</li>
+<li>EEVEE: Cleanup: Replace lighting evaluation macro by functions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/209ab8c4249">209ab8c424</a>.</li>
+<li>EEVEE: Film: Fix accumulator precision when zoomed out <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c844497aee6">c844497aee</a>.</li>
+<li>EEVEE: Port back barycentric coordinates. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6ae942540a">a6ae942540</a>.</li>
+<li>GPUCodegen: Fix crash when there is no output node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f262a461c0">1f262a461c</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_230_:_7th_-_13th_June">Week 230&#160;: 7th - 13th June</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>EEVEE: GPencil: Finish geometry support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4260823e1e7">4260823e1e</a>.</li>
+<li>EEVEE: GPencil: Fix missing strokes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c816924e74">4c816924e7</a>.</li>
+<li>EEVEE: Shadows: Modify view matrix instead of projection for each face <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1459e1fcff">a1459e1fcf</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_229_:_31st_-_6th_June">Week 229&#160;: 31st - 6th June</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>BLI: float2: add more operator and fix a typo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/581cb48c9e3">581cb48c9e</a>.</li>
+<li>BLI: float3: add division operator between 2 float3 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d87161e574c">d87161e574</a>.</li>
+<li>BLI: int2: add more float operator to avoid incorrect implicit cast <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae529ed93e0">ae529ed93e</a>.</li>
+<li>EEVEE: Fix background transparent <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff00c1d6eb7">ff00c1d6eb</a>.</li>
+<li>EEVEE: Fix irradiance baking sample order <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8b40c5fd6d">c8b40c5fd6</a>.</li>
+<li>EEVEE: Fix irradiance smoothing wrong <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2dc9db65d71">2dc9db65d7</a>.</li>
+<li>EEVEE: Fix world probe rendering objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92aedc5edab">92aedc5eda</a>.</li>
+<li>EEVEE: ForwardPass: Add lightprobe support &amp; fix pipeline selection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/04f053c6a4a">04f053c6a4</a>.</li>
+<li>EEVEE: FowardPass: Fix closure sampling, add emission &amp; fix transparency <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b153666e70">9b153666e7</a>.</li>
+<li>EEVEE: GBuffer: Fix undefined behavior <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/33ff463ea18">33ff463ea1</a>.</li>
+<li>EEVEE: Light: Fix culling in orthographic view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b3084d23bf7">b3084d23bf</a>.</li>
+<li>EEVEE: LightCache: Fix broken light bounce <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79a5322fa41">79a5322fa4</a>.</li>
+<li>EEVEE: LightCache: Fix broken visibility sampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f5d7879520">7f5d787952</a>.</li>
+<li>EEVEE: LightCache: Port back cache Display <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f5c3c9d74f">1f5c3c9d74</a>.</li>
+<li>EEVEE: LightCache: Port baking <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/14df74ea8b6">14df74ea8b</a>.</li>
+<li>EEVEE: LightProbe: Fix grid display and deduplicate code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6d3c7a8281e">6d3c7a8281</a>.</li>
+<li>EEVEE: LightProbe: Fix level bias and visibility filtering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bdcf0cceadd">bdcf0ccead</a>.</li>
+<li>EEVEE: LightProbe: Fix light cache display visibility without overlays <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e6deba985a">8e6deba985</a>.</li>
+<li>EEVEE: LightProbe: Fix wrong shading on other cube faces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d31e74d3f8e">d31e74d3f8</a>.</li>
+<li>EEVEE: LookDev: Add back overlay support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/93881a2a8e5">93881a2a8e</a>.</li>
+<li>EEVEE: LookDev: Move rendering to view render. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c1e7868c7a">6c1e7868c7</a>.</li>
+<li>EEVEE: Lookdev: Add back lighting support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3caf7ba32de">3caf7ba32d</a>.</li>
+<li>EEVEE: Material: Add back support for backfacing and transparency <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89a002c4e38">89a002c4e3</a>.</li>
+<li>EEVEE: Nodes: Fix environment texture node default mapping and ... <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc64186d759">dc64186d75</a>.</li>
+<li>EEVEE: Patch lightprobe and light modules to handle zero lights/probes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d66b98e9c89">d66b98e9c8</a>.</li>
+<li>EEVEE: Remove light specular during baking &amp; fix bounce light <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d3f65a0443">7d3f65a044</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_228_:_24th_-_30th_May">Week 228&#160;: 24th - 30th May</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>EEVEE: Fix NaN caused by ensure_valid_reflection() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c3693829775">c369382977</a>.</li>
+<li>Revert "EEVEE: Ensure Reflection: Use new implementation" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba4228bcf77">ba4228bcf7</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Add DRW_view_frustum_bsphere_get <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6376b575d96">6376b575d9</a>.</li>
+<li>DRW: Add DRW_view_get_active <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44950601851">4495060185</a>.</li>
+<li>DRW: Increase shader library max supported lib count <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31963c8d861">31963c8d86</a>.</li>
+<li>EEVEE/GPU: Nodes: Fix some BSDF nodes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/113c16d7a94">113c16d7a9</a>.</li>
+<li>EEVEE: Add back world nodetree support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e19c028cc4a">e19c028cc4</a>.</li>
+<li>EEVEE: Fix ModelMatrix in nodetree and wrong bump map output <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1bc0a70d94b">1bc0a70d94</a>.</li>
+<li>EEVEE: Fix crash cause by world material without attributes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25dd16a8cdb">25dd16a8cd</a>.</li>
+<li>EEVEE: GPencil: Add basic support for gpencil geometry <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06ca1818d00">06ca1818d0</a>.</li>
+<li>EEVEE: LightProbe: Finish loading and rendering of lightcache <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/060c462f3ae">060c462f3a</a>.</li>
+<li>EEVEE: Lightprobe: Add back lightprobe rendering support for world. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0fb16215942">0fb1621594</a>.</li>
+<li>EEVEE: Lightprobe: Add simple world probe rendering and downsampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4dbdd7b52d">f4dbdd7b52</a>.</li>
+<li>EEVEE: Lightprobe: Port back lightprobe filtering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5fb1b27d17f">5fb1b27d17</a>.</li>
+<li>EEVEE: Rework multi material handling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b6c70a780f">2b6c70a780</a>.</li>
+<li>World: Add static default world <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f04011dd879">f04011dd87</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_227_:_17th_-_23rd_May">Week 227&#160;: 17th - 23rd May</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>EEVEE: Subsurface Node: Fix inverted texture blur input <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d67223ca297">d67223ca29</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Shader: Fix deferred compilation abortion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44bb4be66c0">44bb4be66c</a>.</li>
+<li>EEVEE: Add back split sum BSDF approximation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f7f1ee9e990">f7f1ee9e99</a>.</li>
+<li>EEVEE: Material: Add basic material logic <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c71240f14e">0c71240f14</a>.</li>
+<li>EEVEE: Material: Fix shader uuid to material type conversion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c0d8c4b758">6c0d8c4b75</a>.</li>
+<li>EEVEE: Material: Use weight to random sample closure per types <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e91df656f5b">e91df656f5</a>.</li>
+<li>GPU/EEVEE: Refactor codegen and nodetree support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6dc49ec9924">6dc49ec992</a>.</li>
+<li>GPUMaterial: Add recalc flag workaround <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/10cf16270a0">10cf16270a</a>.</li>
+<li>GPUNode: Remove ssr_id and sss_id <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25806227e86">25806227e8</a>.</li>
+<li>GPUNodeTree: Add weight tree inversion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d36a00d140">7d36a00d14</a>.</li>
+<li>GPUNodeTree: Move closure socket implicit cast to ntreeGPUMaterialNodes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a857d83a67">9a857d83a6</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_226_:_10th_-_16th_May">Week 226&#160;: 10th - 16th May</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>EEVEE: Depth of Field: Fix tile artifacts in mixed focus regions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5d97e293c30">5d97e293c3</a>.</li>
+<li>Fix T85845 EEVEE: Depth Of Field: Artifacts with slight out of focus <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/45d3303ae42">45d3303ae4</a>.</li>
+<li>Fix T87851 EEVEE: Performance regression with baked lighting &amp; transparency <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d4783e019e3">d4783e019e</a>.</li>
+<li>Fix T88204 EEVEE: Animated world light doesnt work during render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/610c0ecc3b9">610c0ecc3b</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_225_:_3rd_-_9th_May">Week 225&#160;: 3rd - 9th May</span></h2>
+<ul><li><strong>Master</strong>
+<ul><li>Fix T86037 EEVEE: SSR option changes render passes result <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8293d6258e">c8293d6258</a>.</li></ul></li></ul>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>DRW: Fix issue with batch reusing freed VBO indices. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/96abe5ebbc5">96abe5ebbc</a>.</li>
+<li>Fix T86823 Eevee: refraction depth shared between different materials <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/95889fe071e">95889fe071</a>.</li>
+<li>Fix T87068 EEVEE: Moire effect with particle hair and subsurface <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1a9f8e6c3f">a1a9f8e6c3</a>.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_224_:_26th_-_2nd_May">Week 224&#160;: 26th - 2nd May</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>Fix T87464 EEVEE: Crash with deformation Motion Blur <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4bebc03e0e">c4bebc03e0</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRWShaderLib: Add better debug output from missing lib <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f46661428b3">f46661428b</a>.</li>
+<li>DRWTexture: Add missing integer render-targets format support. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c59156dac73">c59156dac7</a>.</li>
+<li>EEVEE: Add specular layer to temporary default material <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c7fb0d5c7b8">c7fb0d5c7b</a>.</li>
+<li>EEVEE: Film/Sampling: Add smooth transition <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1a5c5f6cb5">f1a5c5f6cb</a>.</li>
+<li>EEVEE: Implementation of volume rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4500a90cdc5">4500a90cdc</a>.</li>
+<li>EEVEE: Initial implementation of deferred shading <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/99a5d49a381">99a5d49a38</a>.</li>
+<li>EEVEE: Shadow: Add back soft shadows support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/556478c20e6">556478c20e</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_223_:_19th_-_25th_April">Week 223&#160;: 19th - 25th April</span></h2>
+<ul><li><strong>2.93 Release</strong>
+<ul><li>EEVEE: Fix unreported memory leak when toggling AO on/off <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d994b26ba9">3d994b26ba</a>.</li>
+<li>Fix T87369 EEVEE: Ambient Oclussion: Firefly caused by degenerated normal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4cf60a2abf2">4cf60a2abf</a>.</li>
+<li>Fix T87440 EEVEE: Specular Light Viewport Render Pass wrong behavior <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3735986e875">3735986e87</a>.</li>
+<li>Fix T87541 EEVEE: AO causes black outline around objects and NaN pixels <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27cfc1ea114">27cfc1ea11</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>BLI: Add more operator to float2/3 and int2/3 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0932d508c89">0932d508c8</a>.</li>
+<li>BLI: add int2 and int3 C++ support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0fdd8a64b42">0fdd8a64b4</a>.</li>
+<li>DRW: Debug: Add DRW_debug_view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9dddfe2ef65">9dddfe2ef6</a>.</li>
+<li>EEVEE: Check updates using recalc flag only an object maps. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/da91f87764a">da91f87764</a>.</li>
+<li>EEVEE: Fix use after free crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fd359684d6">2fd359684d</a>.</li>
+<li>EEVEE: Shadow: Add Point light shadows support back <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e808500ba17">e808500ba1</a>.</li>
+<li>EEVEE: Shadow: Add back shadow caster tracking <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5df8d5af8a8">5df8d5af8a</a>.</li>
+<li>EEVEE: Shadow: Simplify the shadow module <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1d3de154e21">1d3de154e2</a>.</li>
+<li>EEVEE: Use C++ vector types <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4090bac8c82">4090bac8c8</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_222_:_12th_-_18th_April">Week 222&#160;: 12th - 18th April</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>Cleanup: EEVEE: RenderPasses: Use iterator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9bf6fa974df">9bf6fa974d</a>.</li>
+<li>DRW: Fix const correctness <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf0ca28494d">bf0ca28494</a>.</li>
+<li>DRW: Make draw_debug.h C++ compatible <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ab55a1b67be">ab55a1b67b</a>.</li>
+<li>EEVE: Lights: Implement simple culling scheme. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89af2b0485f">89af2b0485</a>.</li>
+<li>EEVEE: Add back object update and view update detection. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/431a662f4fb">431a662f4f</a>.</li>
+<li>EEVEE: Light: 2.5D Culling: Initial implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5697f96608c">5697f96608</a>.</li>
+<li>EEVEE: Light: Add back LTC area lights and lighting function <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/610294205fb">610294205f</a>.</li>
+<li>EEVEE: Lights: Initial Work in progress implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/017e9d852e5">017e9d852e</a>.</li>
+<li>EEVEE: Lights: Support infinite light count <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/520962b3d6b">520962b3d6</a>.</li>
+<li>EEVEE: Motion Blur: Add back post process motion blur <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4ae2b91c9d">a4ae2b91c9</a>.</li>
+<li>EEVEE: Motion Blur: Fix cdf inversion and a typo <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c74f9322da">9c74f9322d</a>.</li>
+<li>EEVEE: Refactor: Split implementation to .cc file <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/23584ee52f7">23584ee52f</a>.</li>
+<li>EEVEE: Split shading passes to eevee_shading.cc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ddc1be5556c">ddc1be5556</a>.</li>
+<li>GPUTexture: Fix missing cases for integer textures <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/93b774a6619">93b774a661</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_221_:_5th_-_11th_April">Week 221&#160;: 5th - 11th April</span></h2>
+<ul><li><strong>Master</strong>
+<ul><li>EEVEE: Ensure Reflection: Use new implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c4d24e1fd7">5c4d24e1fd</a>.</li>
+<li>Fix T87107 EEVEE: Principled BSDF doesn't handle negative specular <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08ae545de43">08ae545de4</a>.</li></ul></li></ul>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Fix debug print of error in shader lib dependency. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d18e74d8229">d18e74d822</a>.</li>
+<li>EEVEE: Add wrapper to simplify ubo managment <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0cd48960379">0cd4896037</a>.</li>
+<li>EEVEE: Depth Of Field: Add back post process depth of field. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a7d9d45155">2a7d9d4515</a>.</li>
+<li>EEVEE: Depth Of Field: Fix ortho factor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1857fa8bc9b">1857fa8bc9</a>.</li>
+<li>EEVEE: Motion Blur: Add back accumulation logic <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e540c9c47a7">e540c9c47a</a>.</li>
+<li>EEVEE: Motion Blur: Add back accumulation logic <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f9b15edbdee">f9b15edbde</a>.</li>
+<li>EEVEE: Sampling: Add UBO containing LDS random numbers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ac6e2b00838">ac6e2b0083</a>.</li>
+<li>GPUTexture: Fix max FBO attachement in panoramic view + dof + eevee <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c753a2c802">8c753a2c80</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_220_:_29th_-_4th_April">Week 220&#160;: 29th - 4th April</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DNA: Camera: Add panoramic types and parameters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8777497c4be">8777497c4b</a>.</li>
+<li>DRWView: Add getter for camtexco <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fcb85633ea5">fcb85633ea</a>.</li>
+<li>EEVEE: Depth Of Field: Port back jittered dof <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89f2d3427ed">89f2d3427e</a>.</li>
+<li>EEVEE: Film: Add option to use log encoding <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0e1dd73bb0">e0e1dd73bb</a>.</li>
+<li>EEVEE: Film: Filtered accumulation with panoramic projection support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad23570fa2d">ad23570fa2</a>.</li>
+<li>EEVEE: Render: Add back render mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa88f5af4c3">fa88f5af4c</a>.</li>
+<li>EEVEE: Reorganize ShadingView initialisation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a2f400cf3b">8a2f400cf3</a>.</li>
+<li>EEVEE: Shader: Add preprocessor to have better shared enum definition <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a766ee6d5d4">a766ee6d5d</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_219_:_22nd_-_28th_March">Week 219&#160;: 22nd - 28th March</span></h2>
+<ul><li><strong>Eevee Rewrite</strong>
+<ul><li>DRW: Move GPUViewport texture pool to DRW module <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f7cb19956fa">f7cb19956f</a>.</li>
+<li>DRW: Move mempool datas to a DRW managed struct. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/81632de7061">81632de706</a>.</li>
+<li>EEVEE: Add new engine managed per viewport data <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/829e2e4a249">829e2e4a24</a>.</li>
+<li>EEVEE: New basic drawing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25af8b801d1">25af8b801d</a>.</li>
+<li>EEVEE: Remove EEVEE <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09e1f276ff6">09e1f276ff</a>.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_218_:_15th_-_21st_March">Week 218&#160;: 15th - 21st March</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:4_EEVEE_293_soft_shadows.png.html" class="image"><img alt="4 EEVEE 293 soft shadows.png" src="../../../w/images/thumb/a/a1/4_EEVEE_293_soft_shadows.png/300px-4_EEVEE_293_soft_shadows.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/a/a1/4_EEVEE_293_soft_shadows.png/450px-4_EEVEE_293_soft_shadows.png 1.5x, ../../../w/images/thumb/a/a1/4_EEVEE_293_soft_shadows.png/600px-4_EEVEE_293_soft_shadows.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:4_EEVEE_293_soft_shadows.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Going through the list of patches pending reviews for EEVEE I noticed an old feature request to add volume light contribution slider.
+The patch was simple but I wondered if it was worth it. I've picked it up and added a diffuse slider for the sake of completeness.
+</p><p>This change made me go through over the volumetric lighting evaluation code and made some improvements notably the addition of area light shape support and soft volumetric shadows.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fix T86660 EEVEE: Undefined behaviour in specular_occlusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ca67c47a15">9ca67c47a1</a>.</li>
+<li>EEVEE: Volumetrics: Add back support for light clamp <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b96acd0663b">b96acd0663</a>.</li>
+<li>EEVEE: Volumetrics: Add support for soft volumetric shadows <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89ef0da5513">89ef0da551</a>.</li>
+<li>EEVEE: Volumetrics: Add Area light shape support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/355f884b2f0">355f884b2f</a>.</li>
+<li>EEVEE: Volumetrics: Add special attenuation volume for lights <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a0f737f91d">0a0f737f91</a>.</li>
+<li>EEVEE: Volumetrics: Fix sun volumetric shadow <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54f52cac7cc">54f52cac7c</a>.</li>
+<li>EEVEE: Lights: Add Volume and diffuse light power slider <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/884f934a853">884f934a85</a>.</li>
+<li>Fix T86448 EEVEE: SSRefraction Depth regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b1150fa1f5a">b1150fa1f5</a>.</li>
+<li>Fix T86612 EEVEE: Wrong AmbientOcclusion on refractive materials <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b6bcbe60cf">6b6bcbe60c</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I'll take a look at the needed changes for arbitrary Geometry attributes support from geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_217_:_8th_-_14th_March">Week 217&#160;: 8th - 14th March</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Fixed some bugs in EEVEE and did many cleanups commits. My main focus was ScreenSpaceReflections which has been improved to be less noisy overall and have less self intersection issues.
+The reflections also now have less chances to pass through geometry, this is mostly noticeable if camera is near a reflective floor.
+</p><p>I updated the Vulkan branch to master and added the VulkanMemoryAllocator to the external libraries.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Cleanup: EEVEE: Make bsdf_sampling_lib.glsl more tidy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5fee9dae5d7">5fee9dae5d</a>.</li>
+<li>Cleanup: EEVEE: Remove hammersley texture and split hammersley code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a7f6f2867d">6a7f6f2867</a>.</li>
+<li>Cleanup: EEVEE: Remove SSR shader variations <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83b7f7dfb7b">83b7f7dfb7</a>.</li>
+<li>Cleanup: EEVEE: Remove the horizon search layered shader <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/75fc6e3b2b3">75fc6e3b2b</a>.</li>
+<li>Cleanup: EEVEE: Remove unused mipmapping on main color buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8041b1dd1ce">8041b1dd1c</a>.</li>
+<li>Cleanup: EEVEE: Split effect_ssr.glsl <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/40d579b69f2">40d579b69f</a>.</li>
+<li>Cleanup: EEVEE: Use correct prefix for view space vectors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/793335f3e24">793335f3e2</a>.</li>
+<li>EEVEE: SubsurfaceScattering: Fix wrong sss component being affected by alpha <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/165a2da7532">165a2da753</a>.</li>
+<li>EEVEE: GGX: Use distribution of visible normal for sampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d89fb77d894">d89fb77d89</a>.</li>
+<li>EEVEE: Planar reflections: Fix ambient occlusion broken in reflections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00baf875ef5">00baf875ef</a>.</li>
+<li>EEVEE: RenderPass: Fix Ambient Occlusion pass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e30315ba959">e30315ba95</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Add back multi ray-hitpoint reuse <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/267a9e14f5a">267a9e14f5</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Add back support for planar reflections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/56bf4f3fb32">56bf4f3fb3</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Avoid outputing NaNs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/03490618a28">03490618a2</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Improve hit quality <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9957096f35f">9957096f35</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Improve minimal hit threshold <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4cd9a1164b5">4cd9a1164b</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Increase depth threshold <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b79f2090417">b79f209041</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Jitter starting texel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bbc5e260519">bbc5e26051</a>.</li>
+<li>EEVEE: Specular Occlusion: Avoid overdarkening on smooth surfaces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89365502693">8936550269</a>.</li>
+<li>Fix T86429 EEVEE: Ambient occlusion broken on some platform <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ab2252a663">5ab2252a66</a>.</li>
+<li>Fix T86476 EEVEE: SSS material with variable radius can produce NaNs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09e77d2c893">09e77d2c89</a>.</li></ul></li></ul>
+<ul><li><strong>Vulkan</strong>
+<ul><li>Vulkan: First part of VKTexture <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af2bc8be40d">af2bc8be40</a>.</li>
+<li>Vulkan: Bypass BGL when running with the vulkan backend <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72bce1be8ee">72bce1be8e</a>.</li>
+<li>Vulkan: Fix crash because of null active framebuffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d390f01e487">d390f01e48</a>.</li>
+<li>Vulkan: Add allocator and command pool to VKContext <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0956a5134ae">0956a5134a</a>.</li>
+<li>GPUContext: Pass GHOST context handle for GPUContext creation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a08daae92e">9a08daae92</a>.</li>
+<li>GHOST: Window: Add drawing context handle getter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dd4405121c5">dd4405121c</a>.</li>
+<li>GHOST: Vulkan: Add compile time option to bypass required features <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b996cc6440a">b996cc6440</a>.</li>
+<li>Vulkan: Add basic implementation of textures <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bcd24c0c4f">0bcd24c0c4</a>.</li>
+<li>Vulkan: Fix compilation after merging <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/12e88ee7227">12e88ee722</a>.</li>
+<li>VulkanMemoryAllocator: Add new extern library <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b908c3fa0a8">b908c3fa0a</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I will work on the Vulkan implementation.
+</p>
+<h2><span class="mw-headline" id="Week_216_:_1st_-_7th_March">Week 216&#160;: 1st - 7th March</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week I rewrote the screen ray-trace code to be cleaner in order to share some of it with the ambient occlusion.
+I had to revert the thickness heuristic because it was very hard to make it scale independent and was not giving good results with the optimized sampling patern.
+</p><p>Also made a big change by using a fullscreen copy of the depth buffer for all screen space raytracing.
+This might increase the cost of it a bit but it fix many issues we had with the hard coded half-res.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>EEVEE: Reflections: Add ensure_valid_reflection to glossy closures <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1c22b551d0c">1c22b551d0</a>.</li>
+<li>EEVEE: Ambient Occlusion: Add sample parameter support for the AO node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30cb4326fe0">30cb4326fe</a>.</li>
+<li>EEVEE: Ambient Occlusion: Use ScreenSpaceRay for iteration <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0983e66e030">0983e66e03</a>.</li>
+<li>EEVEE: RenderPass: Improve AO pass if screen space radius is small <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1540f1df076">1540f1df07</a>.</li>
+<li>EEVEE: Depth of field: Do not shrink highlights when using overblur <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1e7d8a4ad51">1e7d8a4ad5</a>.</li>
+<li>EEVEE: Volumetrics: Avoid old files with too many volume shadow sample being too slow <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b9bb69a1147">b9bb69a114</a>.</li>
+<li>EEVEE: Volumetrics: Fix incorrect volumetric light shadowing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a29c19b2bf">3a29c19b2b</a>.</li>
+<li>EEVEE: ScreenSpaceReflections: Check reflection ray against geometric normal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f746b568f30">f746b568f3</a>.</li>
+<li>EEVEE: ScreenSpaceRayTrace: Cleanup/Refactor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6842c549bb3">6842c549bb</a>.</li>
+<li>EEVEE: Use Fullscreen maxZBuffer instead of halfres <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba75ea80120">ba75ea8012</a>.</li>
+<li>Fix T81741 EEVEE: Ambient Occlusion does not converge properly <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf799cb12c6">bf799cb12c</a>.</li>
+<li>Fix T86042 EEVEE: incorrect irradiance bake <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b450d2d148f">b450d2d148</a>.</li>
+<li>Fix T86138 EEVEE: Bake Indirect Lighting crash in 2.93 with older files <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b9e1cc931ee">b9e1cc931e</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d6a79ffc28">8d6a79ffc2</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>There is still some improvements to the reflections I would like to commit before moving on.
+</p>
+<h2><span class="mw-headline" id="Week_215_:_22nd_-_28th_February">Week 215&#160;: 22nd - 28th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week I was focused on planning the future of EEVEE and designing the realtime compositor. More about this next week.
+</p><p>I also wrote the documentation for the new Depth of field, but is still under review.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Workbench: Fix samples taken outside of pixel footprint <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32ca8e58a37">32ca8e58a3</a>.</li>
+<li>Fix T85726 Workbench: Orthographic view is blurry <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb2af40ec7d">bb2af40ec7</a>.</li>
+<li>Fix T85959 EEVEE: DOF with "Jitter Camera" broken <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/400f2e4be67">400f2e4be6</a>.</li>
+<li>Fix T85609 EEVEE: Viewport "vibrates" when mouse input is active <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d45a89ee443">d45a89ee44</a>.</li>
+<li>Fix T85720 EEVEE: Contact shadows do not appear when enabling SSR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd1a0839843">cd1a083984</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I would like to finish one cleanup for 2.93 about tracing buffer management and address the issue about AO not being as sharp any more.
+</p>
+<h2><span class="mw-headline" id="Week_214_:_15th_-_21st_February">Week 214&#160;: 15th - 21st February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>While looking at the occlusion regression, it appeared to me that the result was wrong. The dark fresnel effect is not supposed to be present. It took me some times but I rewrote it to be faster (less samples taken) and more robust (Specular occlusion and diffuse occlusion is now applied separately for each Closure) without any darkening effect. Also implemented a hardcoded thickness heuristic that will reduce over-darkening of thin objects like poles.
+</p><p>Planar reflections is now also masked correctly but only one reflection will be used per surfaces.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fix T85714 Crash when Viewport Rending an image using EEVEE. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4dd782a1a39">4dd782a1a3</a>.</li>
+<li>Fix T85603 EEVEE: Baking Indirect lighting crashes Blender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/48167644b7e">48167644b7</a>.</li>
+<li>GPU: Add define to ouput more context lines for GLSL errors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/764082676b4">764082676b</a>.</li>
+<li>GPU: Add RGB10_A2 format support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6fa984a1afa">6fa984a1af</a>.</li>
+<li>EEVEE: Planar Reflections: Fix regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1a9fe57a9f6">1a9fe57a9f</a>.</li>
+<li>EEVEE: Ambient Occlusion Node: Support inverted and distance parameters <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dee94afd039">dee94afd03</a>.</li>
+<li>EEVEE: Ambient Occlusion: Refactor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/64d96f68d6e">64d96f68d6</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I'll be working on updating the documentation, the release notes, the render tests and do planning for the 3.0 release.
+</p>
+<h2><span class="mw-headline" id="Week_213_:_8th_-_14th_February">Week 213&#160;: 8th - 14th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>The new depth of field has been merged (see <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/000a340afa6">000a340afa</a>). I changed the sampling pattern of the camera jitter option to reduce noise as much as possible. But this sampling pattern needs a specific number of samples, so the actual number of samples for render is rounded up to the needed sample count for jittered DOF.
+</p><p>I also finished the fix / refactor of the closure library. A few regression are still here but should be tackled next week (AO and planar probe roughness masking when not using SSR).
+</p><p>While updating the Look Up Tables for the GGX BRDF and BTDF I improved their precision. Glass materials now have better precision around the critical angle.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>EEVEE: Fix glass with sharp distribution not ignoring roughness <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e81e1c33f4">9e81e1c33f</a>.</li>
+<li>EEVEE: Change cubemap roughness fit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aaf1650b099">aaf1650b09</a>.</li>
+<li>EEVEE: Update Offline LUT <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e7f61685edc">e7f61685ed</a>.</li>
+<li>EEVEE: Update LUT GGX generation shader <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83ac8628c49">83ac8628c4</a>.</li>
+<li>EEVEE: Fix incorrect fresnel function. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06492fd6198">06492fd619</a>.</li>
+<li>EEVEE: Refactor closure_lit_lib.glsl <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f7e6830991">7f7e683099</a>.</li>
+<li>EEVEE: Depth of field: New implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/000a340afa6">000a340afa</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>Focus on regressions introduced by the closure_lit_lib.glsl refactor.
+</p>
+<h2><span class="mw-headline" id="Week_212_:_1st_-_7th_February">Week 212&#160;: 1st - 7th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Squashed a few high priority bugs. Then I started looking into cleaning EEVEE's Closure evaluation code for surfaces.
+This code is messy and not extensible easily and one of the reason I did not look into adding more feature.
+</p><p>This cleanup might affect performance a bit but will improve compatibility with Cycles and pave the way to new feature.
+</p><p>I also adressed some issues with the new Depth of field. It should be merged soon. I just want to check if a better sampling
+pattern is possible for jittered camera position.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fix T85314 GPU: Drawlist submit data overflows. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0fc456f091d">0fc456f091</a>.</li>
+<li>Fix T81843 Bones invisible using Weight Paint + Wireframe shading + Bone X-Ray <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5d8655ca15">d5d8655ca1</a>.</li>
+<li>Fix T81177 EEVEE: Missing shadow if last material has no shadow <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c02f2d7371a">c02f2d7371</a>.</li>
+<li>DRW: Fix render wrong orthographic depth conversion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d1ee8a0502c">d1ee8a0502</a>.</li>
+<li>GPU: Fix performance regression on AMD GPU <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/03c1c5f3a4c">03c1c5f3a4</a>.</li>
+<li>Fix regression: Crash garbage collecting VBOs on never evaluated scenes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30ac21bf339">30ac21bf33</a>.</li></ul></li></ul>
+<ul><li><strong>Depth of field</strong>
+<ul><li>EEVEE: Depth of field: Add slight defocus bokeh shape foreground flip <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4c1b2addcc">c4c1b2addc</a>.</li>
+<li>EEVEE: Depth of field: Fix bokeh shape rotation inverted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d447a5eab35">d447a5eab3</a>.</li>
+<li>EEVEE: Depth of field: Fix bokeh shape not inverted for scatter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/376bffae032">376bffae03</a>.</li></ul></li></ul>
+<ul><li><strong>Closure Evaluation Cleanup</strong>
+<ul><li>EEVEE: Fix missing shadowing factor <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1df2f7a7133">1df2f7a713</a>.</li>
+<li>EEVEE: Fix lightgrid accumulation not using diffuse_accum <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/36b066ee982">36b066ee98</a>.</li>
+<li>EEVEE: Rewrite closure_lit_lib to reduce complexity <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe008592024">fe00859202</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>During testing after closure evaluation code rewriting, I found out that there was some rendering issues that I want to investigate.
+After that I want to focus on pushing the pyGPU addition for 2.93.
+</p>
+<h2><span class="mw-headline" id="Week_214_:_25th_-_31st_February">Week 214&#160;: 25th - 31st February</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Eevee_new_dof1.png.html" class="image"><img alt="Eevee new dof1.png" src="../../../w/images/thumb/9/9c/Eevee_new_dof1.png/300px-Eevee_new_dof1.png" width="300" height="168" class="thumbimage" srcset="../../../w/images/thumb/9/9c/Eevee_new_dof1.png/450px-Eevee_new_dof1.png 1.5x, ../../../w/images/thumb/9/9c/Eevee_new_dof1.png/600px-Eevee_new_dof1.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_new_dof1.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Eevee_new_dof2.png.html" class="image"><img alt="Eevee new dof2.png" src="../../../w/images/thumb/7/71/Eevee_new_dof2.png/300px-Eevee_new_dof2.png" width="300" height="176" class="thumbimage" srcset="../../../w/images/thumb/7/71/Eevee_new_dof2.png/450px-Eevee_new_dof2.png 1.5x, ../../../w/images/thumb/7/71/Eevee_new_dof2.png/600px-Eevee_new_dof2.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_new_dof2.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Used the week to really polish the implementation to make sure it meets our targets. Performance could be a bit better but we aim for quality and simplicity first.
+</p><p>I have also added a new jittered camera position option to have an extra layer of correctness. Since we needs at least 16 samples for anti-aliasing, why not improve Depth Of field at the same time? By jittering the camera position we come closer to the reference. This mitigate some issues we have with the post process DoF. We reduce the Circle Of Confusion in this case, just enough to fill the gaps between the jittered samples.
+</p><p>The patch is up for review <a rel="nofollow" class="external text" href="http://developer.blender.org/D10238">D10238</a> and a new experimental branch is up for <a rel="nofollow" class="external text" href="https://builder.blender.org/download/branches/">download</a>.
+</p>
+<ul><li><strong>Depth of field</strong>
+<ul><li>EEVEE: Depth of field: Fix incorrect prediction for holefill tiles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c96b1e4cda0">c96b1e4cda</a>.</li>
+<li>EEVEE: Depth of field: Improve slight defocus opacity estimation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f12338f3ce7">f12338f3ce</a>.</li>
+<li>EEVEE: Depth of field: Bleed more background over in-focus area <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6d0a5be0e2">e6d0a5be0e</a>.</li>
+<li>EEVEE: Depth of field: Fix tile prediction and fast gather threshold <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d6f58271b6">7d6f58271b</a>.</li>
+<li>EEVEE: Depth Of Field: Fix jittered dof breaking screenspace effects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5db9a008b95">5db9a008b9</a>.</li>
+<li>EEVEE: Depth Of Field: Flip bokeh shape on foreground. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/099788c3e84">099788c3e8</a>.</li>
+<li>EEVEE: Depth Of Field: UI: Change Jitter option name &amp; tooltip <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c4dbb592b2">9c4dbb592b</a>.</li>
+<li>EEVEE: Depth Of Field: Add minimal overblur radius <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57fc9f6082a">57fc9f6082</a>.</li>
+<li>EEVEE: Depth Of Field: Add new jittered Dof <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fc6b04d4e33">fc6b04d4e3</a>.</li>
+<li>EEVEE: Depth Of Field: Reintroduce the extra offset for convolution <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4b04818d79c">4b04818d79</a>.</li>
+<li>EEVEE: Depth Of Field: Fix orthographic view Circle of confusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8b324fe90f">c8b324fe90</a>.</li>
+<li>EEVEE: Depth Of Field: Gather: Fix tiling artifact on foreground <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c848511424">3c84851142</a>.</li>
+<li>EEVEE: Depth Of Field: Gather: Fix polygonal dof radius being too big <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f14c0d20c2">1f14c0d20c</a>.</li>
+<li>EEVEE: Depth Of Field: Lower minimal CoC radius for scattering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/24f09b8f557">24f09b8f55</a>.</li>
+<li>EEVEE: Depth Of Field: Tests: update shader tests <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff74136da92">ff74136da9</a>.</li>
+<li>EEVEE: Depth Of Field: Fix fast gather tiles bleeding color <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/61e5c665b7f">61e5c665b7</a>.</li>
+<li>EEVEE: Depth Of Field: Add high quality slight defocus option <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e1f2db669c0">e1f2db669c</a>.</li>
+<li>EEVEE: Depth Of Field: Fix jump in appearance when using bokeh texture <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a8e3293b81d">a8e3293b81</a>.</li>
+<li>EEVEE: Depth Of Field: Fix apparent tiles on foreground limits <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cfa97fd7f78">cfa97fd7f7</a>.</li>
+<li>EEVEE: Depth Of Field: Add denoising pass to stabilize bokeh highlights <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f48adcca648">f48adcca64</a>.</li>
+<li>EEVEE: Depth Of Field: Resolve: Fix slight focus gather radius too big <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9457a0faf59">9457a0faf5</a>.</li>
+<li>EEVEE: Depth Of Field: Scatter Add UI options <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eedf6c6295a">eedf6c6295</a>.</li>
+<li>EEVEE: Depth Of Field: Revert fix scatter power difference <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e320184996">6e32018499</a>.</li>
+<li>EEVEE: Depth Of Field: Fix neighborhood rejection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89d9f5983c4">89d9f5983c</a>.</li>
+<li>EEVEE: Depth Of Field: Always use RGBA16F format <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06e080c7128">06e080c712</a>.</li>
+<li>EEVEE: Depth Of Field: Improve bokeh shape support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b036baa60ad">b036baa60a</a>.</li>
+<li>EEVEE: Depth Of Field: Improve anamorphic bokeh support for gather <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c948ea405f">2c948ea405</a>.</li>
+<li>EEVEE: Depth Of Field: Support anamorphic bokeh on slight focus gather <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/874665d5e66">874665d5e6</a>.</li>
+<li>EEVEE: Depth Of Field: Convolution output premultiplied color <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/556381c84af">556381c84a</a>.</li>
+<li>EEVEE: Depth Of Field: Scatter: Speedup: Reduce pixel shader complexity <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/64612d57e21">64612d57e2</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/18ea15cf2d0">18ea15cf2d</a>.</li>
+<li>EEVEE: Depth Of Field: Resolve: Do not load layers that will not be used <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c9c79aad9e9">c9c79aad9e</a>.</li>
+<li>EEVEE: Depth Of Field: Resolve: Fix some issues <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6fff85b2e4b">6fff85b2e4</a>.</li>
+<li>EEVEE: Depth Of Field: Scatter: Improve neighborhood rejection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fea585ded46">fea585ded4</a>.</li>
+<li>EEVEE: Depth Of Field: Fix issue with texture reuse <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e7e4b3c6afe">e7e4b3c6af</a>.</li>
+<li>EEVEE: Depth Of Field: Use bilinear filtering during resolve <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5841c1d819b">5841c1d819</a>.</li>
+<li>EEVEE: Depth Of Field: Filter weight buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f91aeaedb1c">f91aeaedb1</a>.</li>
+<li>EEVEE: Depth Of Field: Tweak: Reduce fast gather random radius a bit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7365bfdd52">d7365bfdd5</a>.</li>
+<li>EEVEE: Depth Of Field: Use bilinear filtering for fast gather <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/91353706337">9135370633</a>.</li>
+<li>EEVEE: Depth Of Field: Use RGB only format when alpha isn't required <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53ab14ffed6">53ab14ffed</a>.</li>
+<li>EEVEE: Depth Of Field: Improve foreground gather pass performance <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0b55a9f8868">0b55a9f886</a>.</li>
+<li>EEVEE: Depth Of Field: Fix NaNs in going through resolve pass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/55936c060b5">55936c060b</a>.</li>
+<li>EEVEE: Depth Of Field: Improve scatter rejection masks <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c6431809da">6c6431809d</a>.</li>
+<li>EEVEE: Depth Of Field: Fix compositing issues <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f0213d9294">3f0213d929</a>.</li>
+<li>EEVEE: Depth Of Field: Make max mipmap based on maximum CoC <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e137695436e">e137695436</a>.</li>
+<li>EEVEE: Depth Of Field: Improve slight focus gather patern <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d78831fbde">8d78831fbd</a>.</li>
+<li>EEVEE: Depth Of Field: Fix scatter anamorphic bokeh energy conservation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32033401683">3203340168</a>.</li>
+<li>EEVEE: Depth Of Field: Improve Max size slider UI feel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a9e12e50ae4">a9e12e50ae</a>.</li>
+<li>EEVEE: Depth Of Field: Separate scatter buffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e623e62d3e3">e623e62d3e</a>.</li>
+<li>EEVEE: Depth Of Field: Resolve pass: Fix some bugs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/928aee934fc">928aee934f</a>.</li>
+<li>EEVEE: Depth Of Field: Add performance debugging defines <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f38479f9b4f">f38479f9b4</a>.</li>
+<li>EEVEE: Depth Of Field: Tweak layer threshold for more watertighteness <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/440c3483234">440c348323</a>.</li>
+<li>EEVEE: Depth Of Field: Add back the resolve sample jitter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6650310844b">6650310844</a>.</li>
+<li>EEVEE: Depth Of Field: Fix output weight of the gather passes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a655eb871c">6a655eb871</a>.</li>
+<li>EEVEE: Depth Of Field: Change foreground occlusion threshold <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8067f798f4">c8067f798f</a>.</li>
+<li>EEVEE: Depth Of Field: Correct foreground occlusion weighting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/371312cf2ce">371312cf2c</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>This week should have been for bugfix so I will resume my bugfixing activities waiting for feedback about the new DoF.
+</p>
+<h2><span class="mw-headline" id="Week_213_:_18th_-_24th_February">Week 213&#160;: 18th - 24th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Implemented the remaining passes. We have a median filter that reduces the noise output of the gather passes. Also added support for polygonal bokeh shapes.
+</p>
+<ul><li><strong>Depth of field</strong>
+<ul><li>EEVEE: Depth Of Field: Fix sample weighting for foreground <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ec909e5d0ff">ec909e5d0f</a>.</li>
+<li>EEVEE: Depth Of Field: Various improvement <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fee0c901277">fee0c90127</a>.</li>
+<li>EEVEE: Depth Of Field: Fix slight out of focus tile dilation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42732568d50">42732568d5</a>.</li>
+<li>EEVEE: Depth Of Field: Speedup: Use linearstep in scatter pass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b94f1a63f17">b94f1a63f1</a>.</li>
+<li>EEVEE: Depth Of Field: Fix issue with slight focus filtering perf. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8f112af609a">8f112af609</a>.</li>
+<li>EEVEE: Depth Of Field: Fix issue with neighborhood comparison <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c732382aea">0c732382ae</a>.</li>
+<li>EEVEE: Depth Of Field: Add gather density change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/643420186cf">643420186c</a>.</li>
+<li>EEVEE: Depth Of Field: Fix missing slight focus convolution <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f3fb67c431">4f3fb67c43</a>.</li>
+<li>EEVEE: Depth Of Field: Fix early out on half res CoC <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e267afebf44">e267afebf4</a>.</li>
+<li>EEVEE: Depth Of Field: Fix slight out of focus missing tile <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e69f8483edf">e69f8483ed</a>.</li>
+<li>EEVEE: Depth Of Field: Fix ring opacity issues <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f658822f96">9f658822f9</a>.</li>
+<li>EEVEE: Depth Of Field: Disable filtering for foreground <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f6ce899d42">4f6ce899d4</a>.</li>
+<li>EEVEE: Depth Of Field: Add Bokeh shape texture precomputation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63e898a0ff2">63e898a0ff</a>.</li>
+<li>EEVEE: Depth Of Field: Dilate CoC Tiles based on max CoC radius <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/239229c390e">239229c390</a>.</li>
+<li>EEVEE: Depth Of Field: Gather median filter <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/14e6f2f4db2">14e6f2f4db</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>Most of the new implementation is finished. But there are many areas that needs tweaking to achieve the quality we aim for.
+</p>
+<h2><span class="mw-headline" id="Week_212_:_11th_-_17th_February">Week 212&#160;: 11th - 17th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>The bulk of the new Depth Of Field pipeline is now implemented. We have the gather passes and some tile prepasses that are mandatory to have correct Circle of confusion spreading and for performance. We also now have scattering occlusion that will prevent scattered distant highlights bleeding into the closer foreground. A crude scattering selection is made using neighborhood to reject areas that are too bright and would kill performance.
+</p>
+<ul><li><strong>Depth of field</strong>
+<ul><li>EEVEE: Depth Of Field: Scatter optimization <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34de342257b">34de342257</a>.</li>
+<li>EEVEE: Depth Of Field: Fix alpha resolve <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f071e41d639">f071e41d63</a>.</li>
+<li>EEVEE: Depth Of Field: Scatter Occlusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dacce1d07f0">dacce1d07f</a>.</li>
+<li>EEVEE: Depth Of Field: Fix Weighting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b2e65855a4">2b2e65855a</a>.</li>
+<li>EEVEE: Depth Of Field: Improvement part 3 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef2ed3d7373">ef2ed3d737</a>.</li>
+<li>EEVEE: Depth Of Field: Improvement part 2 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a62ab73a37">3a62ab73a3</a>.</li>
+<li>EEVEE: Depth Of Field: Improvement part 1 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69b667d14e9">69b667d14e</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>There are still some additional passes to implement to get to the quality of the reference implementation.
+</p>
+<h2><span class="mw-headline" id="Week_211_:_4th_-_10th_February">Week 211&#160;: 4th - 10th February</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week has been mostly planning how to implement the new depth of field, and going over the detail of the reference implementation.
+For now I've only implemented the scattering optimization that reduce overdraws by 4 (improves color precision and performance).
+</p>
+<ul><li><strong>Depth of field</strong>
+<ul><li>EEVEE: Depth of field: Improve scatter pass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/144d9b901e2">144d9b901e</a>.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I now have a clear understanding of the techniques involved and I'll be able to start the new implementatiuon.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112051350
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 1.139 seconds
+Real time usage: 1.215 seconds
+Preprocessor visited node count: 18701/1000000
+Preprocessor generated node count: 8693/1000000
+Post‐expand include size: 99574/2097152 bytes
+Template argument size: 29610/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  919.557      1 -total
+ 93.06%  855.720    370 Template:GitCommit
+ 25.30%  232.653    370 Template:GitCommit/PhabricatorParseDeprecated
+ 18.60%  171.018    370 Template:GitCommit/PhabricatorParse
+  0.14%    1.330      1 Template:PhabDiff
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:5597-0!canonical and timestamp 20240112051349 and revision id 29777
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;oldid=29777">https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;oldid=29777</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 21 March 2022, at 23:16.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Hypersomniac/Foundation/2021.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Hypersomniac/Foundation/2021" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Hypersomniac.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Hypersomniac.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Hypersomniac.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;oldid=29777" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2021&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.139","walltime":"1.215","ppvisitednodes":{"value":18701,"limit":1000000},"ppgeneratednodes":{"value":8693,"limit":1000000},"postexpandincludesize":{"value":99574,"limit":2097152},"templateargumentsize":{"value":29610,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  919.557      1 -total"," 93.06%  855.720    370 Template:GitCommit"," 25.30%  232.653    370 Template:GitCommit/PhabricatorParseDeprecated"," 18.60%  171.018    370 Template:GitCommit/PhabricatorParse","  0.14%    1.330      1 Template:PhabDiff"]},"cachereport":{"timestamp":"20240112051350","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":39});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84454493cd040bae","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

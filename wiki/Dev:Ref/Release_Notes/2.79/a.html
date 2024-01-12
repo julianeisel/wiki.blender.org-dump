@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Reference/Release Notes/2.79/a - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Reference/Release_Notes/2.79/a","wgTitle":"Reference/Release Notes/2.79/a","wgCurRevisionId":34633,"wgRevisionId":34633,"wgArticleId":179,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Reference/Release_Notes/2.79/a","wgRelevantArticleId":179,"wgRequestId":"c8ba0a3f1ef1b9bfcab4ca6d","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Dev:Ref/Release_Notes/2.79/a","wgWikiEditorEnabledModules":[],"wgInternalRedirectTargetUrl":"/wiki/Reference/Release_Notes/2.79/a"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="../../../Reference/Release_Notes/2.79/a.html"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Reference_Release_Notes_2_79_a rootpage-Reference skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="../../../Reference/Release_Notes/2.79/a.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=Reference%2FRelease+Notes%2F2.79%2Fa" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="a.html#Blender_2.79a:_Bug_Fixes"><span class="tocnumber">1</span> <span class="toctext">Blender 2.79a: Bug Fixes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="a.html#Objects_.2F_Animation_.2F_GP"><span class="tocnumber">1.1</span> <span class="toctext">Objects / Animation / GP</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="a.html#Animation"><span class="tocnumber">1.1.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="a.html#Grease_Pencil"><span class="tocnumber">1.1.2</span> <span class="toctext">Grease Pencil</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="a.html#Objects"><span class="tocnumber">1.1.3</span> <span class="toctext">Objects</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="a.html#Dependency_Graph"><span class="tocnumber">1.1.4</span> <span class="toctext">Dependency Graph</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="a.html#Data_.2F_Geometry"><span class="tocnumber">1.2</span> <span class="toctext">Data / Geometry</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="a.html#Armatures"><span class="tocnumber">1.2.1</span> <span class="toctext">Armatures</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="a.html#Curve.2FText_Editing"><span class="tocnumber">1.2.2</span> <span class="toctext">Curve/Text Editing</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="a.html#Mesh_Editing"><span class="tocnumber">1.2.3</span> <span class="toctext">Mesh Editing</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="a.html#Modifiers"><span class="tocnumber">1.2.4</span> <span class="toctext">Modifiers</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="a.html#Material_.2F_Texture"><span class="tocnumber">1.2.5</span> <span class="toctext">Material / Texture</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="a.html#Physics_.2F_Simulations_.2F_Sculpt_.2F_Paint"><span class="tocnumber">1.3</span> <span class="toctext">Physics / Simulations / Sculpt / Paint</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="a.html#Particles"><span class="tocnumber">1.3.1</span> <span class="toctext">Particles</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="a.html#Physics_.2F_Hair_.2F_Simulations"><span class="tocnumber">1.3.2</span> <span class="toctext">Physics / Hair / Simulations</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="a.html#Sculpting_.2F_Painting"><span class="tocnumber">1.3.3</span> <span class="toctext">Sculpting / Painting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="a.html#Image_.2F_Video_.2F_Render"><span class="tocnumber">1.4</span> <span class="toctext">Image / Video / Render</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="a.html#Image_.2F_UV_Editing"><span class="tocnumber">1.4.1</span> <span class="toctext">Image / UV Editing</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="a.html#Masking"><span class="tocnumber">1.4.2</span> <span class="toctext">Masking</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="a.html#Motion_Tracking"><span class="tocnumber">1.4.3</span> <span class="toctext">Motion Tracking</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="a.html#Nodes_.2F_Compositor"><span class="tocnumber">1.4.4</span> <span class="toctext">Nodes / Compositor</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="a.html#Render"><span class="tocnumber">1.4.5</span> <span class="toctext">Render</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="a.html#Render:_Cycles"><span class="tocnumber">1.4.6</span> <span class="toctext">Render: Cycles</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="a.html#Sequencer"><span class="tocnumber">1.4.7</span> <span class="toctext">Sequencer</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="a.html#UI_.2F_Spaces_.2F_Transform"><span class="tocnumber">1.5</span> <span class="toctext">UI / Spaces / Transform</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="a.html#3D_View"><span class="tocnumber">1.5.1</span> <span class="toctext">3D View</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="a.html#Input_.28NDOF_.2F_3D_Mouse.29"><span class="tocnumber">1.5.2</span> <span class="toctext">Input (NDOF / 3D Mouse)</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="a.html#Outliner"><span class="tocnumber">1.5.3</span> <span class="toctext">Outliner</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="a.html#Transform"><span class="tocnumber">1.5.4</span> <span class="toctext">Transform</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="a.html#User_Interface"><span class="tocnumber">1.5.5</span> <span class="toctext">User Interface</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-31"><a href="a.html#Game_Engine"><span class="tocnumber">1.6</span> <span class="toctext">Game Engine</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="a.html#System_.2F_Misc"><span class="tocnumber">1.7</span> <span class="toctext">System / Misc</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="a.html#Collada"><span class="tocnumber">1.7.1</span> <span class="toctext">Collada</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="a.html#File_I.2FO"><span class="tocnumber">1.7.2</span> <span class="toctext">File I/O</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="a.html#Other"><span class="tocnumber">1.7.3</span> <span class="toctext">Other</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="a.html#Python"><span class="tocnumber">1.7.4</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="a.html#System"><span class="tocnumber">1.7.5</span> <span class="toctext">System</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">Reference/Release Notes/2.79/a</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../../Reference.html" title="Reference">Reference</a>&lrm; | <a href="../../../Reference/Release_Notes.html" title="Reference/Release Notes">Release Notes</a>&lrm; | <a href="../../../Reference/Release_Notes/2.79.html" title="Reference/Release Notes/2.79">2.79</a></span><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.blender.org/w/index.php?title=Dev:Ref/Release_Notes/2.79/a&amp;redirect=no" class="mw-redirect" title="Dev:Ref/Release Notes/2.79/a">Dev:Ref/Release Notes/2.79/a</a>)</span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Blender_2.79a:_Bug_Fixes">Blender 2.79a: Bug Fixes</span></h1>
+<p>Changes from revision <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8e40b171b">rBe8e40b17</a> to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c1bed0a12">rB4c1bed0a</a>, inclusive.
+</p><p>Total fixed bugs: 202 (117 from tracker, 85 reported/found by other ways).
+</p><p><b>Note:</b> Nearly all commits from 2.79 are listed here (over 75% of total), only really technical/non-user affecting ones have been skipped.
+</p>
+<h2><span id="Objects_/_Animation_/_GP"></span><span class="mw-headline" id="Objects_.2F_Animation_.2F_GP">Objects / Animation / GP</span></h2>
+<h3><span class="mw-headline" id="Animation">Animation</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52932">#52932</a>: Driver with target of custom property from scene fails to update (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad834085b7">rBad834085</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52835">#52835</a>: When driven IK influence change, ik animation have 1 frame delay (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89de073ea5">rB89de073e</a>).</li></ul>
+<ul><li>Fix unreported: Fix missing ID remapping in Action editor callback (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f6d5d679e">rB9f6d5d67</a>).</li>
+<li>Fix unreported: <a rel="nofollow" class="external text" href="http://developer.blender.org/T50354">#50354</a>: Action length calculation added unnecessary padding if some F-Curves only contained a single key (on the last real frame of the action) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f887b8b230">rBf887b8b2</a>).</li>
+<li>Fix unreported: Fix: Undo pushes were missing for Add/Remove Driver Variable buttons, and Remove Driver button (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08e16e0bd1">rB08e16e0b</a>).</li></ul>
+<h3><span class="mw-headline" id="Grease_Pencil">Grease Pencil</span></h3>
+<ul><li>Fix unreported: Fix: When transforming GP strokes in "Local" mode, the strokes would get obscured by the transform constraint lines (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/99e4c819f7">rB99e4c819</a>).</li></ul>
+<h3><span class="mw-headline" id="Objects">Objects</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52729">#52729</a>: Decimals not showing over 100m or 100 feet (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5384b2a6e2">rB5384b2a6</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52140">#52140</a>: Align objects centers using origin for text (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a0f199aa7">rB3a0f199a</a>).</li></ul>
+<h3><span class="mw-headline" id="Dependency_Graph">Dependency Graph</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52432">#52432</a>: Blender crashes while using Ghost (new depsgraph) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2213153c27">rB2213153c</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52741">#52741</a>: Follow track with depth object crashes Blender with new depsgraph (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5dbe0c566">rBd5dbe0c5</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53547">#53547</a>: Metaballs as dupli objects are not updated with the new Depsgraph (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8cdda3d2ad">rB8cdda3d2</a>).</li></ul>
+<ul><li>Fix unreported: Transform: Enable recursion dependency check for new depsgraph (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef04aa4a43">rBef04aa4a</a>).</li>
+<li>Fix unreported: Depsgraph: Fix relations for metaballs (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7103c6ef3b">rB7103c6ef</a>).</li></ul>
+<h2><span id="Data_/_Geometry"></span><span class="mw-headline" id="Data_.2F_Geometry">Data / Geometry</span></h2>
+<h3><span class="mw-headline" id="Armatures">Armatures</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53300">#53300</a>: Bone Extrude via Ctrl + Click is not done from active bone tail (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/969196069a">rB96919606</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53054">#53054</a>: Parentless bone + IK crashes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c63e08863d">rBc63e0886</a>).</li></ul>
+<h3><span id="Curve/Text_Editing"></span><span class="mw-headline" id="Curve.2FText_Editing">Curve/Text Editing</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52860">#52860</a>: 3D Text crashes w/ Ctrl Backspace (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b969f7eb55">rBb969f7eb</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53410">#53410</a>: 3D Text always recalculated (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/480b0b5dfc">rB480b0b5d</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53586">#53586</a>: Surfaces collapse when joined (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1611177ac9">rB1611177a</a>).</li></ul>
+<ul><li>Fix unreported: Curves: Fix wrong bitset being checked against CYCLIC bit flag (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2edc2b4912">rB2edc2b49</a>).</li></ul>
+<h3><span class="mw-headline" id="Mesh_Editing">Mesh Editing</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53145">#53145</a>: bevel tool fails when used a second time (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/36f324fc55">rB36f324fc</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53145">#53145</a>: bevel tool does not start with amount at zero (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1a4e130b3">rBf1a4e130</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52723">#52723</a>: Reset UV layers failed (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0641069778">rB06410697</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52748">#52748</a>: Select shortest face path fails (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/60bfa969e2">rB60bfa969</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52384">#52384</a>: Bridge pair result depends on other loops (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/495aa77b53">rB495aa77b</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53131">#53131</a>: Incorrect vert-edge angle calculation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/60e8d86fb1">rB60e8d86f</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53441">#53441</a>: Inset doesn't start at zero (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/19b27d84ab">rB19b27d84</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53529">#53529</a>: Rip crashes w/ wire edge (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/52a5daa404">rB52a5daa4</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53343">#53343</a>: Custom Normal Data Transfer Crashes when some vertexes have no faces (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ff8c9c5931">rBff8c9c59</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53420">#53420</a>: Vertex Groups: The "-" button gets a hidden function (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/50ca70b275">rB50ca70b2</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52733">#52733</a>: Percent  mode for Bevel sometimes had nans (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/48079e1f11">rB48079e1f</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52871">#52871</a>: <code>BLI_polyfill_beautify_quad_rotate_calc_ex</code> was mistakenly considering the state as degenerated (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9298d99b77">rB9298d99b</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52871">#52871</a>: beauty fill error (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9d501d23cb">rB9d501d23</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53143">#53143</a>: Knife Crash after Grid Fill (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f247ed07a">rB4f247ed0</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53713">#53713</a>: User remap failed w/ texface images (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26ffade5c1">rB26ffade5</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52818">#52818</a>: Tangent space calculation is really slow for high-density mesh with degenerated topology (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a5320aea3">rB9a5320ae</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53678">#53678</a>: Smart Project UV margin ignores units (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42e207b599">rB42e207b5</a>).</li></ul>
+<ul><li>Fix unreported: Fix for inset when accessed from spacebar search (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db3e3f9c24">rBdb3e3f9c</a>).</li>
+<li>Fix unreported: Edit Mesh: click extrude, ensure inverse matrix (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3e3a27d089">rB3e3a27d0</a>).</li>
+<li>Fix unreported: Polyfill Beautify: option to rotate out of degenerate state (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0834eefae0">rB0834eefa</a>).</li>
+<li>Fix unreported: BMesh: use less involved check for edge rotation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/58ab62ed6d">rB58ab62ed</a>).</li>
+<li>Fix unreported: Avoid bias when calculating quad split direction (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/569d2df634">rB569d2df6</a>).</li>
+<li>Fix unreported: Beauty fill was skipping small faces (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b6130533f">rB1b613053</a>).</li>
+<li>Fix unreported: Polyfill Beautify: half-edge optimization (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4a457d4f1e">rB4a457d4f</a>).</li>
+<li>Fix unreported: Use BLI_heap_reinsert for decimate and beautify (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eaeb0a002e">rBeaeb0a00</a>).</li>
+<li>Fix unreported: BMesh: move bridge tools stepping logic into macro (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02b206780e">rB02b20678</a>).</li>
+<li>Fix unreported: Subsurf: Avoid global lock for loops and orig index layers (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83b0603061">rB83b06030</a>).</li>
+<li>Fix unreported: Subsurf: Avoid possible use of partially initialized edge hash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72151f3e36">rB72151f3e</a>).</li>
+<li>Fix unreported: Fix scalability issue in threaded code of Mesh normals computation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/71e0894e0d">rB71e0894e</a>).</li></ul>
+<h3><span class="mw-headline" id="Modifiers">Modifiers</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51074">#51074</a>: Boolean modifier inverts operation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d07011da71">rBd07011da</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52291">#52291</a>: Boolean fails w/ co-linear edged ngons (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78cc3c828f">rB78cc3c82</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52763">#52763</a>: Boolean problem with vertex group (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00d8097510">rB00d80975</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52823">#52823</a>: New Depsgraph - Shrinkwrap crashes blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/754630cee4">rB754630ce</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53007">#53007</a>: OpenSubdiv + transparency = artefact/crashes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba40d8f331">rBba40d8f3</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53398">#53398</a>: Surface deform modifier says that convex polygons are concave for big faces (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c46f69376">rB4c46f693</a>).</li></ul>
+<ul><li>Fix unreported: Fix (irc-reported by @sergey) invalid precision value in a float RNA property (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e43a9e9cc">rB8e43a9e9</a>).</li></ul>
+<h3><span id="Material_/_Texture"></span><span class="mw-headline" id="Material_.2F_Texture">Material / Texture</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53116">#53116</a>: default texture coordinates for volume materials are blank (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/576899b90a">rB576899b9</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52953">#52953</a>: Crash removing material (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/243b961c29">rB243b961c</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53509">#53509</a>: Datablock ID Properties attached to bpy.types.Material are not loaded (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c365472b6">rB0c365472</a>).</li></ul>
+<ul><li>Fix unreported: Fix logic for pinning textures users from context (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8f9d9ba14e">rB8f9d9ba1</a>).</li></ul>
+<h2><span id="Physics_/_Simulations_/_Sculpt_/_Paint"></span><span class="mw-headline" id="Physics_.2F_Simulations_.2F_Sculpt_.2F_Paint">Physics / Simulations / Sculpt / Paint</span></h2>
+<h3><span class="mw-headline" id="Particles">Particles</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53552">#53552</a>: Unneeded particle cache reset on frame change (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f19787e52">rB6f19787e</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52732">#52732</a>: Particle system volume grid particles out of volume (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17c00d222f">rB17c00d22</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53513">#53513</a>: Particle size showing in multiple places (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c70a45027d">rBc70a4502</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53832">#53832</a>: Particle weight paint crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b3538e02a">rB5b3538e0</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53823">#53823</a>: Particle weight brush crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6481cbbe5">rBb6481cbb</a>).</li></ul>
+<ul><li>Fix unreported: Fix missing update for particles w/ fluids (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84361a0709">rB84361a07</a>).</li></ul>
+<h3><span id="Physics_/_Hair_/_Simulations"></span><span class="mw-headline" id="Physics_.2F_Hair_.2F_Simulations">Physics / Hair / Simulations</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53650">#53650</a>: remove hard limits on force field size and max distance (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a9abc0f5e">rB2a9abc0f</a>).</li></ul>
+<ul><li>Fix unreported: Fix error copying smoke modifier uv layer (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f032c3867">rB9f032c38</a>).</li>
+<li>Fix unreported: Depsgraph: Don't make non-dynamic hair dependent on time (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/76032b133c">rB76032b13</a>).</li></ul>
+<h3><span id="Sculpting_/_Painting"></span><span class="mw-headline" id="Sculpting_.2F_Painting">Sculpting / Painting</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53577">#53577</a>: Rake sculpt/paint wrong on first step (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/413817a3d2">rB413817a3</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52537">#52537</a>: Dyntopo "detail flood fill" doesn't work in some cases (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1b8e8326b4">rB1b8e8326</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53593">#53593</a>: sculpt brush rake spacing bug after recent bugfix (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c1bed0a12">rB4c1bed0a</a>).</li></ul>
+<ul><li>Fix unreported: Fix brush reset (missing notifier) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98dc9072e5">rB98dc9072</a>).</li>
+<li>Fix unreported: Fix sculpt secondary color missing some brushes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6058b651c4">rB6058b651</a>).</li></ul>
+<h2><span id="Image_/_Video_/_Render"></span><span class="mw-headline" id="Image_.2F_Video_.2F_Render">Image / Video / Render</span></h2>
+<h3><span id="Image_/_UV_Editing"></span><span class="mw-headline" id="Image_.2F_UV_Editing">Image / UV Editing</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53092">#53092</a>: errors reading EXR files with different data/display window (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f901bf6f47">rBf901bf6f</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52739">#52739</a>: Crash loading corrupted video files (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c39f021ad">rB9c39f021</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52811">#52811</a>: At any framerate selected, video exported with 1000fps (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3163d0e205">rB3163d0e2</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52920">#52920</a>: Saving Tiff Files type Blender crashes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d305c10104">rBd305c101</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53499">#53499</a>: Cannot load DPX files (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8bdca8c0a">rBb8bdca8c</a>).</li></ul>
+<ul><li>Fix unreported: Fix writing Iris images w/ invalid header (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/acae901a10">rBacae901a</a>).</li></ul>
+<h3><span class="mw-headline" id="Masking">Masking</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52840">#52840</a>: New Depsgraph - Mask editor not working correctly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69062cdd8d">rB69062cdd</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52749">#52749</a>: New Depsgraph - Render View Mask is not initialized correctly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/538182511a">rB53818251</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53419">#53419</a>: Masking "Add" menu is not present in Image editor, but shortcut is (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8f95c7829">rBc8f95c78</a>).</li></ul>
+<h3><span class="mw-headline" id="Motion_Tracking">Motion Tracking</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52851">#52851</a>: Per-frame traking is broken when sequence doesn't start at frame 1 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f0743b56ec">rBf0743b56</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53612">#53612</a>: Blender crashes on CleanTracks with 'DELETE_SEGMENTS' and a disabled marker (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1d05ac2a1">rBa1d05ac2</a>).</li></ul>
+<ul><li>Fix unreported: Tracking: Fix crash when tracking failed (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/350f5c6894">rB350f5c68</a>).</li>
+<li>Fix unreported: Tracking: Create mesh from selected tracks only (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/333ef6e6f7">rB333ef6e6</a>).</li></ul>
+<h3><span id="Nodes_/_Compositor"></span><span class="mw-headline" id="Nodes_.2F_Compositor">Nodes / Compositor</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53360">#53360</a>: crash with GLSL bump mapping and missing group output node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb89759624">rBbb897596</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52299">#52299</a>: X resolution of 4 causes nodes to collapse (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdc35e63bd">rBcdc35e63</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53371">#53371</a>: Keying Node fails with values above 1 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1c7657befb">rB1c7657be</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52113">#52113</a>: Compositor doesnt mix unrendered render layers well (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3182336666">rB31823366</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53263">#53263</a>: Proposed Blender crashes when rendering with Stabilizer 2D node without movie selected (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce35151f38">rBce35151f</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53696">#53696</a>: Compositor HSV limits changed (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/528e00dae0">rB528e00da</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52927">#52927</a>: Compositor wrong scale when scale size input is connected to complex node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/259e9ad00d">rB259e9ad0</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T47212">#47212</a>: Luminance Key not working with HDR and out-of-gamut ranges (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/13973a5bbf">rB13973a5b</a>).</li></ul>
+<ul><li>Fix unreported: Fix compositor node links getting lost on file load for custom render passes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6bd1189e5c">rB6bd1189e</a>).</li>
+<li>Fix unreported: Node selection: Stop operator when mouse selection selected a node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf58ec9265">rBbf58ec92</a>).</li>
+<li>Fix unreported: Compositor: Ensured 16 byte alignment for variables accessed by SSE instructions (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02bac54fa9">rB02bac54f</a>).</li>
+<li>Fix unreported: (Nodes) Display image name if any in the Image and Texture Image node title (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/010cf35e7e">rB010cf35e</a>).</li>
+<li>Fix unreported: Fix old files with changed node socket type not loading correctly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79563d2a33">rB79563d2a</a>).</li></ul>
+<h3><span class="mw-headline" id="Render">Render</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52679">#52679</a>: Hole in bake normal (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/759af7f1ee">rB759af7f1</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53185">#53185</a>: After rendering an animation (Ctrl-F12), pressing F12 no longer renders single frames only (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6cfc5edb86">rB6cfc5edb</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53810">#53810</a>: Crash removing a scene used in render (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ddcad4377">rB5ddcad43</a>).</li></ul>
+<ul><li>Fix unreported: Fix incorrect color management when saving JPG previews for EXR (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1dbdcfe9a9">rB1dbdcfe9</a>).</li>
+<li>Fix unreported: Fix leak when rendering OpenGL animations (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e4dce3b3d7">rBe4dce3b3</a>).</li></ul>
+<h3><span class="mw-headline" id="Render:_Cycles">Render: Cycles</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53129">#53129</a>: Cycles missing update when changing image auto refresh (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6e5558194">rBa6e55581</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53217">#53217</a>: GLSL principled BSDF black with zero clearcoat roughness (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d564beda44">rBd564beda</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52368">#52368</a>: Cycles OSL trace() failing on Windows 32 bit (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bc667ec79">rB2bc667ec</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53348">#53348</a>: Cycles difference between gradient texture on CPU and GPU (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/198fd0be43">rB198fd0be</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53171">#53171</a>: lamp specials strength tweak fails with renamed emission nodes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b2d5f9077">rB5b2d5f90</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52573">#52573</a>: Cycles baking artifacts (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b0c55d5c94">rBb0c55d5c</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T51416">#51416</a>: Blender Crashes while moving Sliders (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aafe528c7d">rBaafe528c</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53048">#53048</a>: OSL Volume is broken in Blender 2.79 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad7385422e">rBad738542</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53559">#53559</a>: Auto texture space for text and font is wrong in Cycles (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e7aad8fd0e">rBe7aad8fd</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53600">#53600</a>: Cycles shader mixing issue with principled BSDF and zero weights (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/836a1ccf72">rB836a1ccf</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52801">#52801</a>: reload scripts causes Cycles viewport render crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1ee24a284">rBf1ee24a2</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53017">#53017</a>: Cycles not detecting AMD GPU when there is an NVidia GPU too (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f50f0676a">rB1f50f067</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53755">#53755</a>: Cycles OpenCL lamp shaders have incorrect normal (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ca933f457">rB2ca933f4</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53692">#53692</a>: OpenCL multi GPU rendering not using all GPUs (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30a0459f2c">rB30a0459f</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53567">#53567</a>: Negative pixel values causing artifacts with denoising (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/824c039230">rB824c0392</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53012">#53012</a>: Shadow catcher creates artifacts on contact area (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c3237cdc13">rBc3237cdc</a>).</li></ul>
+<ul><li>Fix unreported: OpenVDB: Fix compilation error against OpenVDB 4 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0cdfe887b4">rB0cdfe887</a>).</li>
+<li>Fix unreported: Cycles: Fix possible race condition when generating Beckmann table (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b5c629e604">rBb5c629e6</a>).</li>
+<li>Fix unreported: Fix Cycles bug in RR termination, probability should never be &gt; 1.0 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/df1af9b349">rBdf1af9b3</a>).</li>
+<li>Fix unreported: CMake: support CUDA 9 toolkit, and automatically disable sm_2x binaries (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cd9c68f0c5">rBcd9c68f0</a>).</li>
+<li>Fix unreported: Fix part of <a rel="nofollow" class="external text" href="http://developer.blender.org/T53038">#53038</a>: principled BSDF clearcoat weight has no effect with 0 roughness (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/440d647cc1">rB440d647c</a>).</li>
+<li>Fix unreported: Fix incorrect MIS with principled BSDF and specular roughness 0 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/866be3423c">rB866be342</a>).</li>
+<li>Fix unreported: Cycles: Fix possible race condition when initializing devices list (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/93d711ce55">rB93d711ce</a>).</li>
+<li>Fix unreported: Cycles: Fix wrong shading when some mesh triangle has non-finite coordinate (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/075950ad66">rB075950ad</a>).</li>
+<li>Fix unreported: Cycles: Fix compilation error with latest OIIO (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49f57e5346">rB49f57e53</a>).</li>
+<li>Fix unreported: Cycles: Fix compilation error with OIIO compiled against system PugiXML (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6f3fec259">rBb6f3fec2</a>).</li>
+<li>Fix unreported: Cycles: Fix compilation error of standalone application (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/391f7cc406">rB391f7cc4</a>).</li>
+<li>Fix unreported: Cycles: Workaround for performance loss with the CUDA 9.0 SDK (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b3adce7766">rBb3adce77</a>).</li>
+<li>Fix unreported: Cycles: Fix difference in image Clip extension method between CPU and GPU (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a50c381fac">rBa50c381f</a>).</li>
+<li>Fix unreported: Cycles: Fix crash opening user preferences after adding extra GPU (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a3616980c6">rBa3616980</a>).</li>
+<li>Fix unreported: Cycles: Fix bug in user preferences with factory startup (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f5a027b94">rB2f5a027b</a>).</li></ul>
+<h3><span class="mw-headline" id="Sequencer">Sequencer</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52890">#52890</a>: Crash unlinking sequencer sound (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eaba111bd5">rBeaba111b</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53430">#53430</a>: Cut at the strip end fails w/ endstill (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ab1897de7">rB5ab1897d</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52940">#52940</a>: VSE Glow Effect Strip on transparent images has no blur (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3ad84309df">rB3ad84309</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53639">#53639</a>: text sequence strips no stamped into render (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8f7030e5f3">rB8f7030e5</a>).</li></ul>
+<h2><span id="UI_/_Spaces_/_Transform"></span><span class="mw-headline" id="UI_.2F_Spaces_.2F_Transform">UI / Spaces / Transform</span></h2>
+<h3><span class="mw-headline" id="3D_View">3D View</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52959">#52959</a>: Local view looses clip range on exit (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7f6e9c595b">rB7f6e9c59</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53850">#53850</a>: Lock to Cursor breaks 3D manipulators (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b90f3928a3">rBb90f3928</a>).</li></ul>
+<ul><li>Fix unreported: Fix ruler access from search pop-up (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b0fbe95a1b">rBb0fbe95a</a>).</li>
+<li>Fix unreported: 3D View: use shortest angle between quaternions (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2895cb22a7">rB2895cb22</a>).</li></ul>
+<h3><span id="Input_(NDOF_/_3D_Mouse)"></span><span class="mw-headline" id="Input_.28NDOF_.2F_3D_Mouse.29">Input (NDOF / 3D Mouse)</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52998">#52998</a>: disabled menu entries responding to key shortcuts (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/20c96cce86">rB20c96cce</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52861">#52861</a>: Keymap editor filter doesn't show shortcuts using "+" (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ca236408f3">rBca236408</a>).</li></ul>
+<h3><span class="mw-headline" id="Outliner">Outliner</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53342">#53342</a>: Outliner 'select hierarchy' broken (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7153cee305">rB7153cee3</a>).</li></ul>
+<h3><span class="mw-headline" id="Transform">Transform</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53463">#53463</a>: Rotation numerical input shows instable behaviour (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a9d64b578">rB8a9d64b5</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53309">#53309</a>: Remove default 'Clear loc/rot/scale delta transform' shortcuts (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c4f8d924e1">rBc4f8d924</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52086">#52086</a>: Graph editor "normalize" drag errors for integers (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f916baa70">rB9f916baa</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53311">#53311</a>: transform edge/normal orientation (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57b11d8b4e">rB57b11d8b</a>).</li></ul>
+<h3><span class="mw-headline" id="User_Interface">User Interface</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52800">#52800</a>: fix UI flickering with Mesa on Linux (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c85a305c09">rBc85a305c</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53630">#53630</a>: Effect strips not disFix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52977">#52977</a>: playing Input data. Parent bone name disappeared in the UI in pose mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4bc89d815c">rB4bc89d81</a>).</li></ul>
+<ul><li>Fix unreported: Fix failure in our UI code that could allow search button without search callbacks, leading to crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8e40b171b">rBe8e40b17</a>).</li>
+<li>Fix unreported: Add some security checks against future bad float UIprecision values (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e4be7d348">rB7e4be7d3</a>).</li>
+<li>Fix unreported: UI: avoid int cast before clamping number input (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a437b9bbbe">rBa437b9bb</a>).</li>
+<li>Fix unreported: UI: fullstop at end of tooltips (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4c3e2518c8">rB4c3e2518</a>).</li>
+<li>Fix unreported: Fix incorrect allocation size (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6b2d1f63db">rB6b2d1f63</a>).</li></ul>
+<h2><span class="mw-headline" id="Game_Engine">Game Engine</span></h2>
+<ul><li>Fix unreported: Fix BGE sound actuator property access (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d2d207773e">rBd2d20777</a>).</li></ul>
+<h2><span id="System_/_Misc"></span><span class="mw-headline" id="System_.2F_Misc">System / Misc</span></h2>
+<h3><span class="mw-headline" id="Collada">Collada</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53322">#53322</a>: Collada export crash w/ shape keys (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/869e4a3420">rB869e4a34</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53230">#53230</a>: avoid Nullpointer problems in Collada Exporter (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eaf14b1ebf">rBeaf14b1e</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52831">#52831</a>: removed enforcement of matrix decomposition when animations are exported (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a123dafdc0">rBa123dafd</a>).</li></ul>
+<h3><span id="File_I/O"></span><span class="mw-headline" id="File_I.2FO">File I/O</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52816">#52816</a>: regression can't open file in 2.79 (crash) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4116673c7">rBa4116673</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53002">#53002</a>: Batch-Generate Previews generate empty or none image for large objects (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/47a388b2a9">rB47a388b2</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52514">#52514</a>: don't clear filename when dropping directory path in file browser (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/625b2f5dab">rB625b2f5d</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53250">#53250</a>: Crash when linking/appending a scene to a blend when another linked scene in this blend is currently open/active (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06df30a415">rB06df30a4</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53572">#53572</a>: Alembic imports UV maps incorrectly (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0f841e24b0">rB0f841e24</a>).</li></ul>
+<ul><li>Fix unreported: Alembic import: fixed mesh corruption when changing topology (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bae796f0d5">rBbae796f0</a>).</li></ul>
+<h3><span class="mw-headline" id="Other">Other</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53274">#53274</a>: Saving template prefs overwrites default prefs (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38fdfe757d">rB38fdfe75</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53637">#53637</a>: Keymap from app-template ignored (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c484d0bda">rB8c484d0b</a>).</li></ul>
+<ul><li>Fix unreported: Fix potential string buffer overruns (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30f53d56b6">rB30f53d56</a>).</li>
+<li>Fix unreported: Fix build with OSL 1.9.x, automatically aligns to 16 bytes now (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f968268c1e">rBf968268c</a>).</li>
+<li>Fix unreported: WM: minor correction to user-pref writing (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/75aec5eeaa">rB75aec5ee</a>).</li>
+<li>Fix unreported: WM: don't load preferences on 'File -&gt; New' (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/571e801b27">rB571e801b</a>).</li>
+<li>Fix unreported: WM: load UI for new file, even when pref disabled (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f0ebb0941">rB9f0ebb09</a>).</li>
+<li>Fix unreported: Fix MSVSC2017 error (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/405874bd79">rB405874bd</a>).</li>
+<li>Fix unreported: Fix SGI foramt reader CVE-2017-2901 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7b8b621c1d">rB7b8b621c</a>).</li>
+<li>Fix unreported: Memory: add MEM_malloc_arrayN() function to protect against overflow (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a972729895">rBa9727298</a>).</li>
+<li>Fix unreported: Fix buffer overflows in TIFF, PNG, IRIS, DPX, HDR and AVI loading (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16718fe4ea">rB16718fe4</a>).</li>
+<li>Fix unreported: Fix buffer overflow vulernability in thumbnail file reading (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/04c5131281">rB04c51312</a>).</li>
+<li>Fix unreported: Fix buffer overflow vulnerabilities in mesh code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9287434fa1">rB9287434f</a>).</li>
+<li>Fix unreported: Fix buffer overflow vulnerability in curve, font, particles code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8dbd5ea4c8">rB8dbd5ea4</a>).</li>
+<li>Fix unreported: Fix manual lookups (data is now lowercase) (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cae8c68ca6">rBcae8c68c</a>).</li></ul>
+<h3><span class="mw-headline" id="Python">Python</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53273">#53273</a>: render bake settings properties not showing correct Python path (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/825aecaee3">rB825aecae</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52442">#52442</a>: bl_app_templates_system not working (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d89353159f">rBd8935315</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53294">#53294</a>: bpy.ops.image.open crash (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ea3f6438d">rB8ea3f643</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53191">#53191</a>: Python API Reference link wrong in splash screen (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f2307d1a7">rB5f2307d1</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T52982">#52982</a>: Join operator with context override crashes Blender 2.79 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09c387269a">rB09c38726</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53772">#53772</a>: Presets don't support colons (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/91ce295796">rB91ce2957</a>).</li></ul>
+<ul><li>Fix unreported: Fix bpy.utils.resource_path('SYSTEM') output (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/21ecdacdf1">rB21ecdacd</a>).</li>
+<li>Fix unreported: Fix setting the operator name in Py operator API (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8c9bebfe28">rB8c9bebfe</a>).</li>
+<li>Fix unreported: Docs: add note for bmesh face_split_edgenet (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a253b1b7bc">rBa253b1b7</a>).</li>
+<li>Fix unreported: Fix edge-split bmesh operator giving empty result (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce6e30b3dc">rBce6e30b3</a>).</li>
+<li>Fix unreported: Fix BMesh PyAPI internal flag clearing logic (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6639350f92">rB6639350f</a>).</li>
+<li>Fix unreported: Docs: clarify return value for BVH API (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c456eb90a">rB0c456eb9</a>).</li>
+<li>Fix unreported: bl_app_override: support empty UI layout items (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6d640504e8">rB6d640504</a>).</li>
+<li>Fix unreported: Fix bad 'poll' prop callback API doc (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3193045c59">rB3193045c</a>).</li>
+<li>Fix unreported: Fix background_job template (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38357cd004">rB38357cd0</a>).</li>
+<li>Fix unreported: Fix bmesh.utils.face_join arg parsing (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/20cccb1561">rB20cccb15</a>).</li></ul>
+<h3><span class="mw-headline" id="System">System</span></h3>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53004">#53004</a>: XWayland ignores cursor-warp calls (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1ab828d4bb">rB1ab828d4</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T53068">#53068</a>: AMD Threadripper not working well with Blender (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dfed7c48ac">rBdfed7c48</a>).</li></ul>
+<ul><li>Fix unreported: GPU: Fix memory corruption in GPU_debug on GTX1080 (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3a1ade22e5">rB3a1ade22</a>).</li>
+<li>Fix unreported: Task scheduler: Start with suspended pool to avoid threading overhead on push (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8553449cf2">rB8553449c</a>).</li></ul>
+<p><br />
+</p>
+<hr />
+<p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112083651
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 1.851 seconds
+Real time usage: 1.852 seconds
+Preprocessor visited node count: 39330/1000000
+Preprocessor generated node count: 7708/1000000
+Post‐expand include size: 148896/2097152 bytes
+Template argument size: 45264/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1720.887      1 -total
+ 95.79% 1648.359    204 Template:GitCommit
+ 85.88% 1477.960    408 Template:GitCommit/PhabricatorParse
+  1.27%   21.887    120 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:179-0!canonical and timestamp 20240112083650 and revision id 34633
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;oldid=34633">https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;oldid=34633</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 31 March 2023, at 15:26.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../../Special:WhatLinksHere/Reference/Release_Notes/2.79/a.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/Reference/Release_Notes/2.79/a" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="../../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;oldid=34633" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=Reference/Release_Notes/2.79/a&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.851","walltime":"1.852","ppvisitednodes":{"value":39330,"limit":1000000},"ppgeneratednodes":{"value":7708,"limit":1000000},"postexpandincludesize":{"value":148896,"limit":2097152},"templateargumentsize":{"value":45264,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00% 1720.887      1 -total"," 95.79% 1648.359    204 Template:GitCommit"," 85.88% 1477.960    408 Template:GitCommit/PhabricatorParse","  1.27%   21.887    120 Template:BugReport"]},"cachereport":{"timestamp":"20240112083651","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":39});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844542258ab1b7ac","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

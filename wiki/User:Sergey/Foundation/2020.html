@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Sergey/Foundation/2020 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Sergey/Foundation/2020","wgTitle":"Sergey/Foundation/2020","wgCurRevisionId":21359,"wgRevisionId":21359,"wgArticleId":4877,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Sergey/Foundation/2020","wgRelevantArticleId":4877,"wgRequestId":"86d364ca8b7359f640d932fe","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Sergey","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Sergey_Foundation_2020 rootpage-User_Sergey skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2020.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ASergey%2FFoundation%2F2020" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2020.html#Weekly_Reports_for_year_2020"><span class="tocnumber">1</span> <span class="toctext">Weekly Reports for year 2020</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2020.html#Week_418:_30th_December_-_5th_January"><span class="tocnumber">1.1</span> <span class="toctext">Week 418: 30th December - 5th January</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2020.html#Week_419:_6th_-_12th_January"><span class="tocnumber">1.2</span> <span class="toctext">Week 419: 6th - 12th January</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2020.html#Week_420:_13th_-_19th_January"><span class="tocnumber">1.3</span> <span class="toctext">Week 420: 13th - 19th January</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2020.html#Week_421:_20th_-_26th_January"><span class="tocnumber">1.4</span> <span class="toctext">Week 421: 20th - 26th January</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2020.html#Week_422:_27th_January_-_2nd_February"><span class="tocnumber">1.5</span> <span class="toctext">Week 422: 27th January - 2nd February</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2020.html#Week_423:_3rd_-_9th_February"><span class="tocnumber">1.6</span> <span class="toctext">Week 423: 3rd - 9th February</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2020.html#Week_424:_10th_-_16th_February"><span class="tocnumber">1.7</span> <span class="toctext">Week 424: 10th - 16th February</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2020.html#Week_425:_17th_-_23rd_February"><span class="tocnumber">1.8</span> <span class="toctext">Week 425: 17th - 23rd February</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2020.html#Week_426:_24th_February_-_1st_March"><span class="tocnumber">1.9</span> <span class="toctext">Week 426: 24th February - 1st March</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2020.html#Week_427:_24th_2nd_-_8th_March"><span class="tocnumber">1.10</span> <span class="toctext">Week 427: 24th 2nd - 8th March</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2020.html#Week_428:_9th_-_15th_March"><span class="tocnumber">1.11</span> <span class="toctext">Week 428: 9th - 15th March</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2020.html#Week_429:_16th_-_22nd_March"><span class="tocnumber">1.12</span> <span class="toctext">Week 429: 16th - 22nd March</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2020.html#Week_430:_23rd_-_29th_March"><span class="tocnumber">1.13</span> <span class="toctext">Week 430: 23rd - 29th March</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2020.html#Week_431:_30th_March_-_5th_April"><span class="tocnumber">1.14</span> <span class="toctext">Week 431: 30th March - 5th April</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2020.html#Week_432:_6th_-_12th_April"><span class="tocnumber">1.15</span> <span class="toctext">Week 432: 6th - 12th April</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2020.html#Week_433:_13th_-_19th_April"><span class="tocnumber">1.16</span> <span class="toctext">Week 433: 13th - 19th April</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2020.html#Week_434:_20th_-_26th_April"><span class="tocnumber">1.17</span> <span class="toctext">Week 434: 20th - 26th April</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2020.html#Week_435:_27th_April_-_3rd_May"><span class="tocnumber">1.18</span> <span class="toctext">Week 435: 27th April - 3rd May</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2020.html#Week_436:_4th_-_10th_May"><span class="tocnumber">1.19</span> <span class="toctext">Week 436: 4th - 10th May</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2020.html#Week_437:_11th_-_17th_May"><span class="tocnumber">1.20</span> <span class="toctext">Week 437: 11th - 17th May</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2020.html#Week_438:_18th_-_24th_May"><span class="tocnumber">1.21</span> <span class="toctext">Week 438: 18th - 24th May</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2020.html#Week_439:_25th_-_31st_May"><span class="tocnumber">1.22</span> <span class="toctext">Week 439: 25th - 31st May</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2020.html#Week_440:_1st_-_7th_June"><span class="tocnumber">1.23</span> <span class="toctext">Week 440: 1st - 7th June</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2020.html#Week_441:_8th_-_14th_June"><span class="tocnumber">1.24</span> <span class="toctext">Week 441: 8th - 14th June</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2020.html#Week_442:_15th_-_21st_June"><span class="tocnumber">1.25</span> <span class="toctext">Week 442: 15th - 21st June</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2020.html#Week_443:_22nd_-_28th_June"><span class="tocnumber">1.26</span> <span class="toctext">Week 443: 22nd - 28th June</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2020.html#Week_444:_29th_June_-_5th_July"><span class="tocnumber">1.27</span> <span class="toctext">Week 444: 29th June - 5th July</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2020.html#Week_445:_6th_-_12th_July"><span class="tocnumber">1.28</span> <span class="toctext">Week 445: 6th - 12th July</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2020.html#Week_446:_13th_-_19th_July"><span class="tocnumber">1.29</span> <span class="toctext">Week 446: 13th - 19th July</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2020.html#Week_447:_20th_-_26th_July"><span class="tocnumber">1.30</span> <span class="toctext">Week 447: 20th - 26th July</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2020.html#Week_448:_27th_July_-_2nd_August"><span class="tocnumber">1.31</span> <span class="toctext">Week 448: 27th July - 2nd August</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2020.html#Week_449:_3rd_-_9th_August"><span class="tocnumber">1.32</span> <span class="toctext">Week 449: 3rd - 9th August</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2020.html#Week_450:_10th_-_16th_August"><span class="tocnumber">1.33</span> <span class="toctext">Week 450: 10th - 16th August</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2020.html#Week_451:_17th_-_23rd_August"><span class="tocnumber">1.34</span> <span class="toctext">Week 451: 17th - 23rd August</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2020.html#Week_452:_24th_-_30th_August"><span class="tocnumber">1.35</span> <span class="toctext">Week 452: 24th - 30th August</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2020.html#Week_453:_31st_August_-_6th_September"><span class="tocnumber">1.36</span> <span class="toctext">Week 453: 31st August - 6th September</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2020.html#Week_454:_7th_-_13th_September"><span class="tocnumber">1.37</span> <span class="toctext">Week 454: 7th - 13th September</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2020.html#Week_455:_14th_-_20th_September"><span class="tocnumber">1.38</span> <span class="toctext">Week 455: 14th - 20th September</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2020.html#Week_456:_21st_-_27th_September"><span class="tocnumber">1.39</span> <span class="toctext">Week 456: 21st - 27th September</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2020.html#Week_457:_28th_September_-_4th_October"><span class="tocnumber">1.40</span> <span class="toctext">Week 457: 28th September - 4th October</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2020.html#Week_458:_5th_-_11th_October"><span class="tocnumber">1.41</span> <span class="toctext">Week 458: 5th - 11th October</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2020.html#Week_459:_12th_-_18th_October"><span class="tocnumber">1.42</span> <span class="toctext">Week 459: 12th - 18th October</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2020.html#Week_460:_19th_-_25th_October"><span class="tocnumber">1.43</span> <span class="toctext">Week 460: 19th - 25th October</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2020.html#Week_461:_26th_October_-_1st_November"><span class="tocnumber">1.44</span> <span class="toctext">Week 461: 26th October - 1st November</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2020.html#Week_462:_2nd_-_8th_November"><span class="tocnumber">1.45</span> <span class="toctext">Week 462: 2nd - 8th November</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2020.html#Week_463:_9th_-_15th_November"><span class="tocnumber">1.46</span> <span class="toctext">Week 463: 9th - 15th November</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2020.html#Week_464:_16th_-_22nd_November"><span class="tocnumber">1.47</span> <span class="toctext">Week 464: 16th - 22nd November</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2020.html#Week_465:_23rd_-_29th_November"><span class="tocnumber">1.48</span> <span class="toctext">Week 465: 23rd - 29th November</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="2020.html#Week_466:_30th_November_-_6th_December"><span class="tocnumber">1.49</span> <span class="toctext">Week 466: 30th November - 6th December</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2020.html#Week_467:_7th_-_13th_December"><span class="tocnumber">1.50</span> <span class="toctext">Week 467: 7th - 13th December</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2020.html#Week_468:_14th_-_20th_December"><span class="tocnumber">1.51</span> <span class="toctext">Week 468: 14th - 20th  December</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="2020.html#Week_469:_21st_-_27th_December"><span class="tocnumber">1.52</span> <span class="toctext">Week 469: 21st - 27th  December</span></a></li>
+<li class="toclevel-2 tocsection-54"><a href="2020.html#Week_470:_28th_December_-_3rd_January"><span class="tocnumber">1.53</span> <span class="toctext">Week 470: 28th December - 3rd  January</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Sergey/Foundation/2020</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Sergey.html" title="User:Sergey">User:Sergey</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Weekly_Reports_for_year_2020">Weekly Reports for year 2020</span></h1>
+<h2><span class="mw-headline" id="Week_418:_30th_December_-_5th_January">Week 418: 30th December - 5th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Another short week due to new year</li>
+<li>Updated volume regression tests for Cycles (for Manta)</li>
+<li>Some tasks for the studio (computers, servers, ...)</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T72820">#72820</a> Linked objects jumping around during render</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T72821">#72821</a> Crash when ID is removed from post-update callback</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Increase productivity in tracker/fixes.</li></ul></li></ul>
+<p>Fixed 2, Closed 2.
+</p>
+<h2><span class="mw-headline" id="Week_419:_6th_-_12th_January">Week 419: 6th - 12th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Depsgraph: Fix wrong ID filtering</li>
+<li>Fix crash opening specific files (like the one from <a rel="nofollow" class="external text" href="http://developer.blender.org/TT48684">#T48684</a>)</li>
+<li>Helped OpenData team with the release of new benchmark launcher</li>
+<li>Looked into performance issues (<a rel="nofollow" class="external text" href="http://developer.blender.org/TT57936">#T57936</a>). Will publish updated report later next week.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T62311">#62311</a> Metaball animation playback crash</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T71908">#71908</a> Animated properties are lost after frame-post handler</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Some studio related duties (dying hardware)</li>
+<li>Clean up old patches/reports assigned to self</li>
+<li>Keep up with high priority bugs</li></ul></li></ul>
+<p>Fixed 2, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_420:_13th_-_19th_January">Week 420: 13th - 19th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Depsgraph: Re-iterated over fix for handlers and animated properties. Initial fix caused regression in more commonly used cases, so it was reverted. Actual solution goes somewhere way deeper.</li>
+<li>Fixes for non-x86_64 platforms for 2.82 for linux distors.</li>
+<li>Collected updated performance bottlenecks for T57936</li>
+<li>Meeting with Brecht and Dalai about roadmap for 2020.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Some more meetings will likely be needed for roadmap</li>
+<li>Document performance investigation</li>
+<li>Make a plan of action for multires, have second pair of eyes (hi, Brecht&#160;:) on it</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_421:_20th_-_26th_January">Week 421: 20th - 26th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix wrong DNA alignment on specific architectures (such as arm)</li>
+<li>Refactored the way external dependencies are communicated to CMake, letting build system to have full dependency graph. Fixing weird unpredictable linking errors, which depend on feature set.</li>
+<li>Fixed static initialization order fiasco of TBB/MKL.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_422:_27th_January_-_2nd_February">Week 422: 27th January - 2nd February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Infrastructure maintenance week.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_423:_3rd_-_9th_February">Week 423: 3rd - 9th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Codesign setup for macOS buildbot builds.</li>
+<li>Worked around static initialization fiasco between TBB and MKL (appeared when running tests on centOS on AMD machine).</li>
+<li>Worked on blowing dust away from tracking module, stumbled into some design violations in constraint system. Annoyingly, the change was committed without waiting for any of review.</li>
+<li>Got pulled into setting up renderfarm workers on Friday afternoon, which escalated a bit into a rabbit hole to hell.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish fix for Follow Track constraint started on Friday.</li>
+<li>One of storage/render nodes needs to have hard drive situation figured out (spontaneous SMART errors. Dirty/flackey backplane?).</li>
+<li>Prepare for the release (make sure tests are passing, prepare packing situation for all sort of stores and so on).</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_424:_10th_-_16th_February">Week 424: 10th - 16th February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>2.82 release week:
+<ul><li>Investigated new Microsoft Store tooling for packaging</li>
+<li>Fixed regression tests</li>
+<li>Baby-sited release builds</li></ul></li>
+<li>Started looking into smooth propagation of multires delta to higher levels. Only spent half a day on Friday on this.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/TT73675">#T73675</a> Leaving exit mode tags all objects for update</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Keep working on smoothing delta for multires.</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_425:_17th_-_23rd_February">Week 425: 17th - 23rd February</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Solve strict compiler warnings on macOS</li>
+<li>Worked on making codesign more resilient for possible interrupts</li>
+<li>Looked into making pre-compiled libraries work on Arch</li>
+<li>Kept working on multires in a local branch</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Spend as much time as possible on multires. Goal is to have smooth propagation for reshape operator</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_426:_24th_February_-_1st_March">Week 426: 24th February - 1st March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Spent all week on multires.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Start moving safe-for-2.83-parts to master</li>
+<li>Get rest of changes testable by artists</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_427:_24th_2nd_-_8th_March">Week 427: 24th 2nd - 8th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Another week of multires. Progress so far:
+<ul><li>New basement for "reshape" functionality seems to be wrapped up (all the common functionality for Subdivide, Reshape, Apply Base, propagation of edits from sculpt to top level)</li>
+<li>Subdivide and reshape are ported to the new basement. They might cause some minor artifacts on a really extraordinary cases (like the 2 quads with 2 common edges in the Suzanne's nose). But comparing to 2.80 and 2.79 works rock-solid and keeps shape the same on any of multires levels.</li>
+<li>Propagation of sculpt edits to top level is also ported to the new basement. Causes minor artifacts in the extraordinary case mentioned above. Compared to 2.80 and 2.79 allows to rotate an entire mesh or its parts and have top level details adopted accordingly (previously, they will not be aware of rotation and will be added in the wrong direction).</li>
+<li>Tested by Julien Kaspar</li></ul></li>
+<li>There is still quite some work to be done to make it really rock solid, but that's for the next week.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Update project task, list current limitations and list of things to resolve, put code to a Git branch.</li>
+<li>Port "Apply Base" to the new code path, solving artifacts happening by this operator.</li>
+<li>Make sculpt undo system aware of "propagation", which requires being able to undo changes to CustomData layers.
+<ul><li>This is the biggest stopper so far, as attempting to undo past sculpt level change will no longer propagate properly.</li>
+<li>Isn't really a new issue (was there since 2.5x), but is really annoying and dangerous.</li></ul></li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_428:_9th_-_15th_March">Week 428: 9th - 15th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cleanup: Replace ABS/SQUARE/CUBE with function calls (solves real problem in studio light code)</li>
+<li>Depsgraph: Fix crash deleting Viewer image from Outliner</li>
+<li>Some rounds of disk cache review</li>
+<li>Committed all current fixes for multires (subdivide, reshape, apply base)</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T74686">#74686</a> Loading btx file in multires modifier is not working</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Continue (and, hopefully, finish) disk cache review.</li>
+<li>Review status after multires  changes (see if there any bugs reported after the merge).</li>
+<li>move forward with propagation undo in sculpt mode.</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_429:_16th_-_22nd_March">Week 429: 16th - 22nd March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed warnings encountered when compiling with MSVC.</li>
+<li>Various fixes in multires:
+<ul><li>Apply Base didn't work correct when there are deformation modifiers prior to multires</li>
+<li>Apply Base was randomly distorting mesh with shapekeys</li>
+<li>Support subdivision and propagation for base meshes with creases</li>
+<li>Fix non-working Simple type subdivision</li>
+<li>Disallow changing mode and quality after subdivision</li>
+<li>Fix assert when removing modifier in edit mode</li></ul></li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T74322">#74322</a> Wrong object bundles with scaled camera</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Need to look into some dependency graph fiasco for the studio</li>
+<li>Carry on with the tasks mentioned in the multires (T73317)</li></ul></li></ul>
+<p>Fixed 1, Closed 1.
+</p>
+<h2><span class="mw-headline" id="Week_430:_23rd_-_29th_March">Week 430: 23rd - 29th March</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed wrong threading usage in sound area poked from depsgrapgh</li>
+<li>Multires:
+<ul><li>Enable Optimal Display by default.</li>
+<li>Fixed possible interference between Apply Base and sculpt mode.</li>
+<li>Worked on support Undo for Apply Base during sculpt mode (same code would be used to undo propagation on sculpt level change).</li></ul></li>
+<li>Fixed build on macOS 10.15.4 and Xcode 11.4.</li>
+<li>Fixed other legacy and annoying aspects of CMake on macOS.</li>
+<li>Quite a bit of non-code work (like meetings),</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T74984">#74984</a> Crash opening specific production files</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Get the Undo patches reviewed. They are tiny, so should be quick</li>
+<li>Support Undo of propagation (which is a bit of a challenge since propagation happens on property change, not on operator)</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_431:_30th_March_-_5th_April">Week 431: 30th March - 5th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Commented overall idea of undo stack implementation for sculpt mode (all the knowledge which had to be gathered together during the previous week is now put in the ocmment).</li>
+<li>Refactor of some aspects of undo stack in sculpt mode: made it so it's possible to easily have base geometry and PBVH coordinates to be mixed together in the same undo step.</li>
+<li>Worked on propagation undo. Have a first pass over the patch which implements it. Some cleanup and much more testing is required.</li>
+<li>Reviewed Joeroen's optimization tasks.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Put "Apply Base" undo to the code review (with all the followups to address feedback and such)</li>
+<li>Put propagation undo to the code review</li>
+<li>Look into Apply Base with simple subdivision (there is a bug in the tracker)</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_432:_6th_-_12th_April">Week 432: 6th - 12th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Tracking: Fix slow undistored display</li>
+<li>Tracking: Fix (un)distortion happen in single thread</li>
+<li>Tracking: Fix missing distortion update on focal length change</li>
+<li>Tracking: Forward compatibility code for distortion models</li>
+<li>Gave a first pass of review of D7372: Sculpt: Multires Unsubdivide</li>
+<li>Split multires undo patches, currently only undo for "Apply Base" is under review. Propagation undo goes deeper into rabbit hole to hell.</li>
+<li>Started Subdivision Surface design document</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T75297">#75297</a>: Apply base inflates meshes with Simple subdivision</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T75371">#75371</a>: Crash using object.to_mesh() when in edit mode</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish subdivision surface design document</li>
+<li>Start multires design document</li>
+<li>Apply fix for undo of "Apply Base"</li></ul></li></ul>
+<p>Fixed 2, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_433:_13th_-_19th_April">Week 433: 13th - 19th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Documentation and code review week:
+<ul><li>Gave a second pass on subdivision surface documentation together with Francesco.</li>
+<li>Wrote an initial pass for multiresolution documentation</li>
+<li>Reviewed 10 patches in pair review with Campbell</li>
+<li>Reviewed patches from Pablo and Sybren</li></ul></li>
+<li>Updated propagation undo patch for latest changes in master</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Find a solution for propagation undo when active multires modifier used in sculpt changes</li>
+<li>Give it a pass for depsgraph documentation</li>
+<li>Spend some time working on lens distortion for motion tracking (new model for interoperability is coming)</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_434:_20th_-_26th_April">Week 434: 20th - 26th April</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cleanup and refactor of bundle adjustment code in Libmv</li>
+<li>New distortion mode is submitted for review D7484</li>
+<li>Code review session with Campbell</li>
+<li>Reviewed quite a bit of patches and submitted few bug fix proposals in the bug tracker</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T75697">#75697</a> Multires in simple mode doesn't work correct on a plane</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T75631">#75631</a> New multires shrinkage problem</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Find a solution for propagation undo when active multires modifier used in sculpt changes</li>
+<li>Give it a pass for depsgraph documentation</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_435:_27th_April_-_3rd_May">Week 435: 27th April - 3rd May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Mainly code review week, both pair review with Campbell and reviewing patches in own areas.</li>
+<li>Put new distortion model to master.</li>
+<li>Solution for multires ended up requiring a bigger redesign task, need to write down findings and solution proposals and discuss viability/priority with the team.</li>
+<li>Didn't have time for the planned documentation from the last week.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Documentation for multires/sculpt undo, depsgraph documentation.</li>
+<li>Join forces of the bug tracker&#160;:)</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_436:_4th_-_10th_May">Week 436: 4th - 10th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Was a shorter week than usual due to the liberation day.</li>
+<li>Was spend on the bug and patch tracker: looking into issues, giving suggestions, answering questions.</li>
+<li>Some time was also spent as a studio support.</li>
+<li>Worked with Zack, so he can help with the documentation.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Keep working in the tracker.</li>
+<li>Some extra time would need to be spent for the studio.</li>
+<li>Keep working with Zack.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_437:_11th_-_17th_May">Week 437: 11th - 17th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cosmetic and sanity fixes in multires for 2.83 (corrected NULL pointer check and simple things like that).</li>
+<li>Fixed in multires mask interpolation (was doing wrong weights for linear interpolation).</li>
+<li>Fixed masks propagation when changing multires level.</li>
+<li>Fixed missing dependency graph update when converting curve&lt;-&gt;mesh.</li>
+<li>Libmv: Fix crash solving when having negative frames.</li>
+<li>Spent quite some time replying in the tracker about how to approach specific reports (combined with patches review for the fixes).</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T74713">#74713</a> Unpredictable active texture node for Workbench</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Same plans as for the previous week.</li></ul></li></ul>
+<p>Fixed 1, Closed 3.
+</p>
+<h2><span class="mw-headline" id="Week_438:_18th_-_24th_May">Week 438: 18th - 24th May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed access past allocated buffer in AVI MJPEG codec</li>
+<li>Alembic: Fix bad allocation with invalid knots data</li>
+<li>Remove legacy OpenSubdiv code from CCGDerivedMesh</li>
+<li>Reviewed quite a bit of patches (would really need to keep track of those =\)</li>
+<li>Majority of remaining time was spent on fixing OpenSubdiv integration which caused very bad performance (T76855). Got a patch, need to get it reviewed from idea level since it increases memory footprint.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T76573">#76573</a> Make links with Multires leading to crash</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T76721">#76721</a> ASAN crash on animation rendering</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish OpenSubdiv performance fix</li>
+<li>Keep working in the tracker</li></ul></li></ul>
+<p>Fixed 2, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_439:_25th_-_31st_May">Week 439: 25th - 31st May</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Reviewed quite a bit of sculpting patches</li>
+<li>Finished the OpenSubdiv integration fix, gaining small performance improvement for all meshes, and big improvement for certain meshes with non-manifold geometry.</li>
+<li>Started removing code which is related to CCGDerivedMesh. Got stopped by multires bake.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T65889">#65889</a> Hair Particles not updating when using image sequence</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Port multires bake to new the multires system</li>
+<li>Will be short week: holiday + cleanup day.</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_440:_1st_-_7th_June">Week 440: 1st - 7th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Short week due to the national holiday on Monday.</li>
+<li>Wednesday was spent on helping with getting builds done, signed, tested.</li>
+<li>Friday was Code Quality day, wrapped up the CLang-Tidy configuration and proposal (D7937).</li>
+<li>Rest of the time was spent on bake from multires code, porting it to the new system. About 80% is done.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish with the multires baking code.</li>
+<li>Module planing/roadmap/development.</li>
+<li>Infrastructure related work (changes on buildbot for LTS and updates for C++17)</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_441:_8th_-_14th_June">Week 441: 8th - 14th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>VFX &amp; Video module work, initial pass in organizing workboards.</li>
+<li>Keep reviewing Sculpt/Multires patches.</li>
+<li>Buildbot maintenance (hardware problems, preparing for LTS and C++17).</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T77448">#77448</a> Camera Solver constraint can't be converted to f-curve</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T69497">#69497</a> Color Correction node ignores mask in certain cases</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Wrap up buildbot work</li>
+<li>Have clear 2.90/2.91 roadmap for VFX &amp; Video module</li></ul></li></ul>
+<p>Fixed 2, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_442:_15th_-_21st_June">Week 442: 15th - 21st June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Usual code reviews in the mornings.</li>
+<li>Finished buildbot work, so now it can do C++17 for master and be usable for LTS as well.</li>
+<li>Switched Blender to C++17 (with all the required changes in the code).</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T67358">#67358</a> Compositor Disabled Node Config -&gt; SegFault</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Catch up with the module work, especially the backlog.</li>
+<li>Go back to multires baking.</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_443:_22nd_-_28th_June">Week 443: 22nd - 28th June</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Caught up with backlog in the VFX &amp; Video module</li>
+<li>Regular code reviews for sculpt and dependency graph</li>
+<li>Deployment of developer.b.o with support of canned responses</li>
+<li>Updates for builder website to support LTS releases better</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Sequencer planning for 2.91 / 2.92 (some design docs coming)</li>
+<li>Keep looking into multires bake (the bake to non-base-mesh is a bit tricky)</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_444:_29th_June_-_5th_July">Week 444: 29th June - 5th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Maintenance on the codesign code, make it more resilient to startup.</li>
+<li>Switch BLI and Cycles to spin lock from TBB. Addresses deprecation warning using macOS SDK 10.12.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T67358">#67358</a> Fix T78264: Auto Render stops working after rendering manually.</li>
+<li>Clang-Tidy integration, followed by joined forces to address a lot of warnings during the Quality Friday.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Plans from last week moved here.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_445:_6th_-_12th_July">Week 445: 6th - 12th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed DNA alignment issue for all ARM arhcitectures (armel, armhf, arm64)</li>
+<li>Platform maintenance for macOS and Linux. All the libraries are updated now and committed to SVN.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Plans from last week moved here.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_446:_13th_-_19th_July">Week 446: 13th - 19th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>A lot of non-code work, server maintenance</li>
+<li>Code reviews for sculpt, Cycles, dependency graph</li>
+<li>Put all design decisions about VSE in the studio to a task <a rel="nofollow" class="external text" href="http://developer.blender.org/T78986">#78986</a></li>
+<li>Friday got back to multires bake, have some local progress, but is still not ready for baking to non-base-level</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Support multires bake to non-base quads (finishing the code from Friday)</li>
+<li>Come up with a concrete plan for VSE project</li>
+<li>More code review</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_447:_20th_-_26th_July">Week 447: 20th - 26th July</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix interface artifacts on Intel GPUs on macOS</li>
+<li>Code review for dependency graph, multires, sculpt</li>
+<li>Started with simple tasks for VSE project</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T78867">#78867</a> Crash related to viewing video files</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Publish VSE scene for benchmark</li>
+<li>Start with bigger topics of the VSE project</li>
+<li>Somehow balance with the multires work</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_448:_27th_July_-_2nd_August">Week 448: 27th July - 2nd August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review</li>
+<li>Had limited time to work on the topics from the last week, as the time was spent on fixing VSE+depsgraph+undo bug</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/TT78586">#T78586</a> In compositor image previews inside nodes don't update/refresh when they should</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/TT78835">#T78835</a> Ghosting audio after using undo</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>VSE topics from the last week.</li>
+<li>Make depsgraph+pose channels undo fully reliable (currently it could run into similar problems to the audio in sequencer)</li></ul></li></ul>
+<p>Fixed 2, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_449:_3rd_-_9th_August">Week 449: 3rd - 9th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review</li>
+<li>Fix render issue on Cycles GPU with motion blur and particles</li>
+<li>Cover pose channels with session UUID (preventing depsgraph + undo mappign runtime data to the wrong channels)</li>
+<li>Submitted a patch for session UUID for modifiers</li>
+<li>Friday was the quality day</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Start on the VSE project</li>
+<li>Look into tracker's distortion model refine</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_450:_10th_-_16th_August">Week 450: 10th - 16th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review.</li>
+<li>Cover modifiers with session UUIDs (solving possible issues with depsgraph+undo).</li>
+<li>Sequencer: Implement zoom-to-fit view mode.</li>
+<li>Sequencer: Looked into enabling microarchitecture for pre-compiled FFmpeg. Seems to give very nice speedup.</li>
+<li>Looked into distortion mode. The issue is not in distortion mode, but in the way how tracker works with very-wide-lens in general.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T79563">#79563</a> Compositor's Stabilize 2D in invert mode does not work correctly</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish the FFmpeg microarchitecture, re-compile Linux libraries</li>
+<li>Carry on with the sequencer project. Will likely be spending time on design doc for the cache and how to bring it back under control.</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_451:_17th_-_23rd_August">Week 451: 17th - 23rd August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review.</li>
+<li>Committed SSE optimization for FFmpeg</li>
+<li>Created a patch to improve threading of FFmpeg I/O, D8627</li>
+<li>Looked into threading other hot areas of FFmpeg. It is probably doable, but the FFmpeg is very limiting in that case.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Design documentation for the VSE cache</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_452:_24th_-_30th_August">Week 452: 24th - 30th August</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review.</li>
+<li>On top of them, some reviews for 2.90 release</li>
+<li>Initial pass on VSE Cache design. Will publish on Monday so that feedback can be handled faster.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T80035">#80035</a> Fix crash switching/adding scenes</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_453:_31st_August_-_6th_September">Week 453: 31st August - 6th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Typical rounds of code review.</li>
+<li>Worked on the VSE cache design (T80278)</li>
+<li>Minor fixes in the code and quality days activities</li>
+<li>Infrastructure related tasks</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_454:_7th_-_13th_September">Week 454: 7th - 13th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Multires: Fix memory leak when multires is at level 0</li>
+<li>Implemented art-directable hair style for the studio (via rigging the mesh and copying the strands to the hair system) <a rel="nofollow" class="external free" href="https://developer.blender.org/D8849">https://developer.blender.org/D8849</a></li>
+<li>Worked on making buildbot system more resilient to intermittent problems</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T77763">#77763</a> Wrong highlight of active grab vertex</li></ul></li></ul>
+<p>Fixed 1, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_455:_14th_-_20th_September">Week 455: 14th - 20th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Platform maintenance for Linux</li>
+<li>Infrastructure tasks (buildbot and develoepr.b.o)</li>
+<li>Patch reviews for Cycles, sculpt, VSE</li>
+<li>ID properties support for timeline markers</li>
+<li>Tuesday meetings</li></ul></li></ul>
+<p>Fixed 0, Closed 1.
+</p>
+<h2><span class="mw-headline" id="Week_456:_21st_-_27th_September">Week 456: 21st - 27th September</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Usual rounds of review, meetings, discussions.</li>
+<li>Linux platform maintenance.</li>
+<li>A bit of time was spent on fixing OpenCL on Intel Iris GPUs.</li>
+<li>Some time was spent on more artistic friendly length brush for hair.</li>
+<li>Some hours were spent on infrastructure.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Finish patches for hair length brush, and OpenCL.</li>
+<li>Sculpt stroke, VSE, compositor patches review.</li>
+<li>Whatever rest appears during the week.</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_457:_28th_September_-_4th_October">Week 457: 28th September - 4th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Short week. Took a half-week off</li>
+<li>Cycles: Fix usage of memory barriers in split kernel</li></ul></li></ul>
+<p>Fixed 0, Closed 0.
+</p>
+<h2><span class="mw-headline" id="Week_458:_5th_-_11th_October">Week 458: 5th - 11th October</span></h2>
+<p>Took a week off
+</p>
+<h2><span class="mw-headline" id="Week_459:_12th_-_18th_October">Week 459: 12th - 18th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Catching up with the development after taking time off</li>
+<li>Code reviews for sculpting and nodes do-versions</li></ul></li></ul>
+<ul><li><strong>Motion tracking</strong>
+<ul><li>Fixed memory leak in modal solver</li>
+<li>Re-worked fix for bundle adjuster after new distortion model was added</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_460:_19th_-_25th_October">Week 460: 19th - 25th October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Fix crash with exact booleans on non-SSSE3-complaint hardware (reompiled GMP library as fat library)</li>
+<li>Compositor: Ensure keying node result is pre-multiplied</li>
+<li>Cleanup in multires code, remove legacy and unused codepaths</li>
+<li>Re-implemented simple subdivision mode do-versions from Pablo. Need to send for a review with proper explanation of why things done the way they were done.</li>
+<li>Helped with the bcon3.</li>
+<li>helped James with onboarding.</li>
+<li>Reviewed VSE media transform tool patch.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>More helping James with on-boarding</li>
+<li>Wrap up the multires do-versions</li>
+<li>Wrap up media transform tools</li>
+<li>Review compositor patch for relative space</li>
+<li>Review compositor proposal for caching/faster operations</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_461:_26th_October_-_1st_November">Week 461: 26th October - 1st November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Regular rounds of reviews for sculpting, tracking, VSE.</li>
+<li>Continued with multires bake port to the new multires code. Baking to level 0 works, baking of quads to non-base level works.</li>
+<li>Tracking: Move optical center to lens panel.</li>
+<li>Multires: Remove simple subdivision type</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>More reviews.</li>
+<li>Infrastructure maintenance.</li>
+<li>Work with Richard during his code week</li>
+<li>Work with James</li>
+<li>Review compositor proposal for caching/faster operations</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_462:_2nd_-_8th_November">Week 462: 2nd - 8th November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Mainly busy with infrastructure/maintenance tasks</li>
+<li>Regular reviews for sculpting</li>
+<li>Did more reviews for sequencer, as it was Richard's code week</li>
+<li>Code quality day</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Some more infrastructure</li>
+<li>Review compositor proposal for caching/faster operations</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_463:_9th_-_15th_November">Week 463: 9th - 15th November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Wrap up patches from Friday, nothing special, just house-keeping which didn't have time to commit on Friday.</li>
+<li>Maintenance on Git server. To out knowledge went smooth.</li>
+<li>Codesign tweaks to help avoid situations when unsigned binary is uploaded to the builder.</li>
+<li>Regular rounds of review.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Address feedback about VSE transform redesign for the studio.</li>
+<li>Finish compositor review (need to finish writing up the reply in the design task)</li>
+<li>Review for sculpting.</li>
+<li>Hopefully some time for development in the module/multires.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_464:_16th_-_22nd_November">Week 464: 16th - 22nd November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Regular design and code reviews, including, but not limited to sculpting, compositor, VSE.</li>
+<li>The VSE design feedback was handled by Francesco, got reviewed and stamped with approval.</li>
+<li>Linux+atomics fixes with tests.</li>
+<li>Limited time to move with multires bake port to the new system.</li>
+<li>Some time spent on new tools for motion tracking.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Carry on with feedback on sculpting/compositor designs.</li>
+<li>Review camera intrinsics proposal.</li>
+<li>Move on with multires bake and tracking tools.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_465:_23rd_-_29th_November">Week 465: 23rd - 29th November</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Regular design and code reviews.</li>
+<li>Server maintenance.</li>
+<li>Fixes for atomic library (mainly committing work we've already agreed on in the code review)</li>
+<li>Worked on making motion tracking thread-safe for tracking multiple tracks. Seems the fix will also allow to have very nice speedup.</li></ul></li></ul>
+<ul><li><strong>Bug tracker</strong>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T77261">#77261</a>: Multires creates spikes when subdividing ngons</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Compositor and tracking intrinsics designs still needs review.</li>
+<li>Finalize the threading/speedup patches, get them committed.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_466:_30th_November_-_6th_December">Week 466: 30th November - 6th December</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Regular design and code reviews.</li>
+<li>Server maintenance.</li>
+<li>Fixes for threading in motion tracking</li>
+<li>Speed improvements for the motion tracker</li>
+<li>Wrapping up tasks before taking time off</li></ul></li></ul>
+<p>Have an absolutely fantastic holiday season!
+</p>
+<h2><span class="mw-headline" id="Week_467:_7th_-_13th_December">Week 467: 7th - 13th December</span></h2>
+<p>Time off.
+</p>
+<h2><span class="mw-headline" id="Week_468:_14th_-_20th_December">Week 468: 14th - 20th  December</span></h2>
+<p>Time off.
+</p>
+<h2><span class="mw-headline" id="Week_469:_21st_-_27th_December">Week 469: 21st - 27th  December</span></h2>
+<p>Time off.
+</p>
+<h2><span class="mw-headline" id="Week_470:_28th_December_-_3rd_January">Week 470: 28th December - 3rd  January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Shorter week: new year.</li>
+<li>Worked on motion tracking features. They are under review, but will not be ready for 2.92 due to the release cycle.</li></ul></li></ul>
+<ul><li><strong>Next week</strong>
+<ul><li>Address feedback on the tracking pacthes.</li>
+<li>Documentation.</li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121621
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.126 seconds
+Real time usage: 0.133 seconds
+Preprocessor visited node count: 424/1000000
+Preprocessor generated node count: 778/1000000
+Post‐expand include size: 1330/2097152 bytes
+Template argument size: 310/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   11.518      1 -total
+ 54.66%    6.295     30 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4877-0!canonical and timestamp 20240112121621 and revision id 21359
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;oldid=21359">https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;oldid=21359</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 4 January 2021, at 11:32.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Sergey/Foundation/2020.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Sergey/Foundation/2020" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Sergey.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Sergey.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Sergey.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;oldid=21359" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Sergey/Foundation/2020&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.126","walltime":"0.133","ppvisitednodes":{"value":424,"limit":1000000},"ppgeneratednodes":{"value":778,"limit":1000000},"postexpandincludesize":{"value":1330,"limit":2097152},"templateargumentsize":{"value":310,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   11.518      1 -total"," 54.66%    6.295     30 Template:BugReport"]},"cachereport":{"timestamp":"20240112121621","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":182});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844554867a7eb8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

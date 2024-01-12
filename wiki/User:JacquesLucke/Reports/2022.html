@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:JacquesLucke/Reports/2022 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:JacquesLucke/Reports/2022","wgTitle":"JacquesLucke/Reports/2022","wgCurRevisionId":32832,"wgRevisionId":32832,"wgArticleId":6233,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:JacquesLucke/Reports/2022","wgRelevantArticleId":6233,"wgRequestId":"8f507c26ccabc992ee1bda93","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"JacquesLucke","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_JacquesLucke_Reports_2022 rootpage-User_JacquesLucke skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2022.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AJacquesLucke%2FReports%2F2022" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2022.html#Week_166:_January_03_-_07"><span class="tocnumber">1</span> <span class="toctext">Week 166: January 03 - 07</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2022.html#Week_167:_January_10_-_14"><span class="tocnumber">2</span> <span class="toctext">Week 167: January 10 - 14</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2022.html#Week_168:_January_16_-_20"><span class="tocnumber">3</span> <span class="toctext">Week 168: January 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2022.html#Week_169:_January_24_-_28"><span class="tocnumber">4</span> <span class="toctext">Week 169: January 24 - 28</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2022.html#Week_170:_January_31_-_04"><span class="tocnumber">5</span> <span class="toctext">Week 170: January 31 - 04</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2022.html#Week_171:_February_07_-_11"><span class="tocnumber">6</span> <span class="toctext">Week 171: February 07 - 11</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2022.html#Week_172:_February_14_-_18"><span class="tocnumber">7</span> <span class="toctext">Week 172: February 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2022.html#Week_173:_February_21_-_25"><span class="tocnumber">8</span> <span class="toctext">Week 173: February 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2022.html#Week_174:_February_28_-_04"><span class="tocnumber">9</span> <span class="toctext">Week 174: February 28 - 04</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2022.html#Week_175:_March_07_-_11"><span class="tocnumber">10</span> <span class="toctext">Week 175: March 07 - 11</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2022.html#Week_176:_March_14_-_18"><span class="tocnumber">11</span> <span class="toctext">Week 176: March 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2022.html#Week_177:_March_21_-_25"><span class="tocnumber">12</span> <span class="toctext">Week 177: March 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2022.html#Week_178:_March_28_-_01"><span class="tocnumber">13</span> <span class="toctext">Week 178: March 28 - 01</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2022.html#Week_179:_April_04_-_08"><span class="tocnumber">14</span> <span class="toctext">Week 179: April 04 - 08</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2022.html#Week_180:_April_11_-_15"><span class="tocnumber">15</span> <span class="toctext">Week 180: April 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2022.html#Week_181:_April_18_-_22"><span class="tocnumber">16</span> <span class="toctext">Week 181: April 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2022.html#Week_182:_April_25_-_29"><span class="tocnumber">17</span> <span class="toctext">Week 182: April 25 - 29</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2022.html#Week_183:_May_02_-_05"><span class="tocnumber">18</span> <span class="toctext">Week 183: May 02 - 05</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2022.html#Week_184:_May_09_-_13"><span class="tocnumber">19</span> <span class="toctext">Week 184: May 09 - 13</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2022.html#Week_185:_May_16_-_20"><span class="tocnumber">20</span> <span class="toctext">Week 185: May 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2022.html#Week_186:_May_23_-_27"><span class="tocnumber">21</span> <span class="toctext">Week 186: May 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2022.html#Week_187:_May_30_-_03"><span class="tocnumber">22</span> <span class="toctext">Week 187: May 30 - 03</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2022.html#Week_188:_June_06_-_10"><span class="tocnumber">23</span> <span class="toctext">Week 188: June 06 - 10</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2022.html#Week_189:_June_13_-_17"><span class="tocnumber">24</span> <span class="toctext">Week 189: June 13 - 17</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2022.html#Week_190:_June_20_-_24"><span class="tocnumber">25</span> <span class="toctext">Week 190: June 20 - 24</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2022.html#Week_191:_June_27_-_01"><span class="tocnumber">26</span> <span class="toctext">Week 191: June 27 - 01</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2022.html#Week_192:_July_04_-_08"><span class="tocnumber">27</span> <span class="toctext">Week 192: July 04 - 08</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2022.html#Week_193:_July_11_-_15"><span class="tocnumber">28</span> <span class="toctext">Week 193: July 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2022.html#Week_194:_July_18_-_22"><span class="tocnumber">29</span> <span class="toctext">Week 194: July 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2022.html#Week_195:_July_15_-_29"><span class="tocnumber">30</span> <span class="toctext">Week 195: July 15 - 29</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2022.html#Week_196:_August_08_-_12"><span class="tocnumber">31</span> <span class="toctext">Week 196: August 08 - 12</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2022.html#Week_197:_August_15_-_19"><span class="tocnumber">32</span> <span class="toctext">Week 197: August 15 - 19</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2022.html#Week_198:_August_22_-_26"><span class="tocnumber">33</span> <span class="toctext">Week 198: August 22 - 26</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2022.html#Week_199:_August_29_-_02"><span class="tocnumber">34</span> <span class="toctext">Week 199: August 29 - 02</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2022.html#Week_200:_September_05_-_09"><span class="tocnumber">35</span> <span class="toctext">Week 200: September 05 - 09</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2022.html#Week_201:_September_12_-_16"><span class="tocnumber">36</span> <span class="toctext">Week 201: September 12 - 16</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2022.html#Week_202:_September_19_-_23"><span class="tocnumber">37</span> <span class="toctext">Week 202: September 19 - 23</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2022.html#Week_203:_September_26_-_30"><span class="tocnumber">38</span> <span class="toctext">Week 203: September 26 - 30</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2022.html#Week_204:_October_03_-_07"><span class="tocnumber">39</span> <span class="toctext">Week 204: October 03 - 07</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2022.html#Week_205:_October_17_-_21"><span class="tocnumber">40</span> <span class="toctext">Week 205: October 17 - 21</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2022.html#Week_206:_October_24_-_28"><span class="tocnumber">41</span> <span class="toctext">Week 206: October 24 - 28</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2022.html#Week_207:_October_31_-_04"><span class="tocnumber">42</span> <span class="toctext">Week 207: October 31 - 04</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2022.html#Week_208:_November_07_-_11"><span class="tocnumber">43</span> <span class="toctext">Week 208: November 07 - 11</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2022.html#Week_209:_November_14_-_18"><span class="tocnumber">44</span> <span class="toctext">Week 209: November 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2022.html#Week_210:_November_21_-_25"><span class="tocnumber">45</span> <span class="toctext">Week 210: November 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2022.html#Week_211:_November_28_-_02"><span class="tocnumber">46</span> <span class="toctext">Week 211: November 28 - 02</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2022.html#Week_212:_December_05_-_09"><span class="tocnumber">47</span> <span class="toctext">Week 212: December 05 - 09</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2022.html#Week_213:_December_12_-_16"><span class="tocnumber">48</span> <span class="toctext">Week 213: December 12 - 16</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2022.html#Week_214:_December_19_-_23"><span class="tocnumber">49</span> <span class="toctext">Week 214: December 19 - 23</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2022.html#Week_215:_December_26_-_30"><span class="tocnumber">50</span> <span class="toctext">Week 215: December 26 - 30</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:JacquesLucke/Reports/2022</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:JacquesLucke.html" title="User:JacquesLucke">User:JacquesLucke</a>&lrm; | <a href="../Reports.html" title="User:JacquesLucke/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="Week_166:_January_03_-_07">Week 166: January 03 - 07</span></h2>
+<ul><li>Fix T94545: Support realizing instanced collections (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d960c78693368b">d960c78693</a>).</li>
+<li>Fix T94707: Inverted output of separate geometry node incorrect (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c906b7c219f3f">6c906b7c21</a>).</li>
+<li>Fix T94534: Dangling pointer in internal link after removing socket (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5e73fa13dd275">d5e73fa13d</a>).</li>
+<li>Fix T94659: Crash when deleting instances (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3e92b4ed2408ea">3e92b4ed24</a>).</li>
+<li>Assets: Disable automatic preview generation for node groups (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b63f375775b429">b63f375775</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13739">D13739</a>: UI: Show recently selected items at the top of searches.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13747">D13747</a>: Assets: Add operator to create preview from active object.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13748">D13748</a>: Assets: Enable node group assets.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13752">D13752</a>: Add script to check namespace names for unity builds.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13757">D13757</a>: Geometry Nodes: Experimental Scale Elements node (WIP).</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>General geometry nodes work.
+</p>
+<h2><span class="mw-headline" id="Week_167:_January_10_-_14">Week 167: January 10 - 14</span></h2>
+<ul><li>Fix T94766: Texture coordinates from other object do not refresh (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8dd163160e411c">8dd163160e</a>).</li>
+<li>Fix T94111: Nurb normal calculation does not work (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/39ba82f25d1532">39ba82f25d</a>).</li>
+<li>Fix T94812: Render layer sockets are missing after file load (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/145f1d1e0a59c1">145f1d1e0a</a>).</li>
+<li>Fix T94797: Crash when playing animation in eevee rendered view (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1e61b759c7adc1">1e61b759c7</a>).</li>
+<li>Fix T94867: Viewport render not updating when editing color ramp (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c9a8975de5555c">c9a8975de5</a>).</li>
+<li>Cleanup: Add utility macro to simplify using std::enable_if (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bd8fa07a3df6d5">bd8fa07a3d</a>).</li>
+<li>Cleanup: Move attribute operators to c++ (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0a3de0305c35f3">0a3de0305c</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13757">D13757</a>: Geometry Nodes: New Scale Elements node.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13825">D13825</a>: Geometry Nodes: New Field at Index node.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13828">D13828</a>: Geometry Nodes: Improve domain interpolations.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13819">D13819</a>: Geometry Nodes: Add intermediate field node type. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13827">D13827</a>: Geometry Nodes: Experimental new Face Vertex/Edge node. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13838">D13838</a>: Attributes: Add operator to convert attributes to legacy attributes. (WIP)</li></ul>
+<p><b>Next Week</b>
+</p><p>General geometry nodes work.
+</p>
+<h2><span class="mw-headline" id="Week_168:_January_16_-_20">Week 168: January 16 - 20</span></h2>
+<ul><li>Fix T95006: Missing modifier update after frame change (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f8ae130af4082538f5859f39439cf3b6b52873e">9f8ae130af</a>).</li>
+<li>Fix T94977: Muted link is not ignored in eevee (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2486346f6f0418d90b714119466921ac1da477e4">2486346f6f</a>).</li>
+<li>Geometry Nodes: Improve domain interpolation code (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/796e9d442cf8f967dc5bf7c6f36bf4fab0ac89f6">796e9d442c</a>).</li>
+<li>Geometry Nodes: New Field at Index node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b88a37a490fa9e344eb36fd0bdda6eb46218e99b">b88a37a490</a>).</li>
+<li>Geometry Nodes: New Scale Elements node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d034b85f3325379c40981502e44a07e5ef4c7d14">d034b85f33</a>)</li>
+<li>Attributes: Add operator to convert generic attributes to other types (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f6888b530ac81abbe61755971449ad6b42b93c82">f6888b530a</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13827">D13827</a>: Geometry Nodes: New Face Vertex/Edge node.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D13739">D13739</a>: UI: Show recently selected items at the top of searches.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Workshop in Amsterdam.
+</p>
+<h2><span class="mw-headline" id="Week_169:_January_24_-_28">Week 169: January 24 - 28</span></h2>
+<p>This week I was in Amsterdam to discuss various topics surrounding a new hair system. More details will be published later.
+</p>
+<ul><li>Assets: Allow creating preview image by rendering active object (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/12b26d21b00135">12b26d21b0</a>).</li>
+<li>Assets: Enable node group assets (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37848d1c8edf18">37848d1c8e</a>).</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_170:_January_31_-_04">Week 170: January 31 - 04</span></h2>
+<ul><li>Fix T95205: Remove attribute only once (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/525725753981a7">5257257539</a>).</li>
+<li>Fix T95314: Constant values not shown in spreadsheet (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84dab8b5973c84">84dab8b597</a>).</li>
+<li>Fix T95262: Instances ignored in Frame Selected operator (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/217e0a2ce61592">217e0a2ce6</a>).</li>
+<li>Fix T95395: Dangling parent pointer when creating node group (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bd71b49e79325">2bd71b49e7</a>).</li>
+<li>Fix T95084: Evaluate all output attributes before changing geometry (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a985f558a6eb16">a985f558a6</a>).</li>
+<li>Fix T94435: Remove anonymous attributes when applying modifier (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4be87e97f48533">4be87e97f4</a>).</li>
+<li>Fix T95489: Support writing to vertex groups with geometry nodes again (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8a634cb1dff73">b8a634cb1d</a>).</li>
+<li>BLI: Fix memory leak in VectorSet (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf8597febe2020">bf8597febe</a>).</li>
+<li>Cleanup: Avoid generating some functions in all translation units (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b4563ab2dfe1e5">b4563ab2df</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14006">D14006</a>: BLI: New C++ BitVector data structure (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95472">T95472</a>: Prototype for Node Layers / Modifier Tree.</li>
+<li>Code Review.</li>
+<li>Experimented with a new nodes evaluator.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_171:_February_07_-_11">Week 171: February 07 - 11</span></h2>
+<ul><li>Fix T95578: Missing update when linking selected nodes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f868e56470094">2f868e5647</a>).</li>
+<li>Fix T95543: Incorrect handling of implicit field inputs in ui (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/65d287a14a4081">65d287a14a</a>).</li>
+<li>Fix T95570: Missing task isolation when computing normals (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/de718605558f31">de71860555</a>).</li>
+<li>Fix T91840: Do not create invalid links when inserting a node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06ac5992618a75">06ac599261</a>).</li>
+<li>Fix T95612: Only overwrite existing attributes with matching domain and type (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7313a84c5acb40">7313a84c5a</a>).</li>
+<li>Fix T95664: Missing update after changing active output node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/87d2de88fdeec7">87d2de88fd</a>).</li>
+<li>Fix T95624: Video texture not refreshing when changing offset in node (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/720d653b418bb5">720d653b41</a>).</li>
+<li>Fix T95613: Remove anonymous attributes when converting object (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25c40007968339">25c4000796</a>).</li>
+<li>Fix: Missing null check (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eb071e3d3cae00">eb071e3d3c</a>).</li>
+<li>BLI: Wrap parallel_invoke from tbb (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7c10e364b2358f">7c10e364b2</a>).</li>
+<li>Geometry Nodes: Show indicator when realize instances node is in legacy mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b38f40e90475f3">b38f40e904</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14006">D14006</a>: BLI: New C++ BitVector data structure.</li>
+<li>Continued experimenting with a new geometry nodes evaluator.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_172:_February_14_-_18">Week 172: February 14 - 18</span></h2>
+<ul><li>Fix T95749: Missing update when normal node changes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/33dde170cecf04">33dde170ce</a>).</li>
+<li>Fix T95815: Missing null check when computing dupli dimensions (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0622d2ec611dbd">0622d2ec61</a>).</li>
+<li>Fix: Removing anonymous attributes before adding mesh to bmain (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/257ba175fa7e32">257ba175fa</a>).</li>
+<li>Curves: Add initial sculpt mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07032dd218922d">07032dd218</a>).</li>
+<li>Curves: Initial brush system integration for curves sculpt mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/61aaeb3745ad72">61aaeb3745</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95845">T95845</a>: Use Copy on Write in more places.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95842">T95842</a>: Prepare custom data API for attribute sharing.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95776">T95776</a>: How to attach hair to a surface.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_173:_February_21_-_25">Week 173: February 21 - 25</span></h2>
+<ul><li>Fix T93784: Text and curve objects have no motion blur (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4e78a7360e451b">4e78a7360e</a>).</li>
+<li>Fix T95985: Crash when assigning a name for an output attribute (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17e0634902b7fc">17e0634902</a>).</li>
+<li>Curves: Initial brush implementations for curves sculpt mode (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/226f0c4fef7e77">226f0c4fef</a>).</li>
+<li>Curves: Add surface object pointer (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e11cfc56af4e1">6e11cfc56a</a>).</li>
+<li>Paint: Decouple op-&gt;customdata from PaintStroke (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/141d5851d7d240">141d5851d7</a>).</li>
+<li>Paint: Pass operator to stroke update function (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed9f7630342f4d">ed9f763034</a>).</li>
+<li>BLI: Support accessing nth last element in Array/Span/Vector (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9be720d85efb30">9be720d85e</a>).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14185">D14185</a>: Nodes: Improve inserting nodes on existing links. (WIP)</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_174:_February_28_-_04">Week 174: February 28 - 04</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/37d2c774c124">rB37d2c774</a>: Fix T96073: Don't remove links when inserting reroute nodes.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4a95c3466faf">rB4a95c346</a>: Fix T96085: Repeated evaluation of geometry nodes when nothing changed.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7935d3668a93">rB7935d366</a>: Fix T95479: Geometry nodes crash with cage display.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fb31f34af84">rB2fb31f34</a>: Fix T95692: Incorrect interpolated children particle hair.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/45079b169dc5">rB45079b16</a>: Fix T96160: Freezing when using multiple Handle Type Selection nodes.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9216cf9cb589">rB9216cf9c</a>: Fix: Dangling internal links after removing sockets.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c23ec04b4e30">rBc23ec04b</a>: BLI: Add scoped-defer utility to add RAII-like behavior to C types.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ac45540a348e">rBac45540a</a>: Curves: Add brush to add curves on surface.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9789a6c6d968">rB9789a6c6</a>: Search: Take word order into account in string search.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14241">D14241</a>: Curves: Initial comb/shrink/grow brushes.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_175:_March_07_-_11">Week 175: March 07 - 11</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/00f6e4c99051">rB00f6e4c9</a>: Fix T96180: Driver in node tree not updating in real time.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/801d7b4921dc">rB801d7b49</a>: Fix T95738: Wrong "Bottom" selection for cone without base.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/22a341d9d8d3">rB22a341d9</a>: Fix T96292: Unable to set active material output using Python.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/commit/c34f0b90d49">rBAc34f0b9</a>: Node Wrangler: Fix node outline position with ui scaling.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/579183567806">rB57918356</a>: Geometry Nodes: Fix spline length node after recent refactor.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4b598739c5c1">rB4b598739</a>: Curves: Disable stroke spacing for curve sculpt brushes.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/94d2470c416f">rB94d2470c</a>: Curves: Increase default viewport resolution for curves object.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/10c11bb89736">rB10c11bb8</a>: Curves: Add initial comb, grow and shrink brush.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f91e7d7792e">rB3f91e7d7</a>: Curves: Actually delete curves with Delete brush.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14277">D14277</a>: Curves: Initial geometry nodes support for curves object (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14299">D14299</a>: Fix T96278: Missing update after alpha socket connection.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T96259">T96259</a>: Curves Sculpt Brushes.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_176:_March_14_-_18">Week 176: March 14 - 18</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/82e7956f12aa">rB82e7956f</a>: Fix T96396: Cannot set active node group output with Python.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf5e9ef2df3e">rBbf5e9ef2</a>: Fix T96402: Fix case when material output is contained in node group.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79ae5f50149a">rB79ae5f50</a>: Fix T96386: Crash when changing shader to node group in properties.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7509a741166c">rB7509a741</a>: Fix T96278: Missing update after alpha socket connection.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0968a9c5201">rBd0968a9c</a>: BLI: Add probabilistic rounding utility.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3e16f3b3ef4b">rB3e16f3b3</a>: BLI: Move generic data structures to blenlib.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/871148363282">rB87114836</a>: BLI: Generalize converting CPPType to static type.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2252bc6a5527">rB2252bc6a</a>: BLI: Move CPPType to blenlib.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6702aa604f2">rBb6702aa6</a>: Curves: Separate sculpt brushes into separate files.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/46b35c683688">rB46b35c68</a>: Cleanup: Remove accidental shallow mesh copy.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14340">D14340</a>: Curves: New Add brush.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14376">D14376</a>: Curves: Improve Comb brush. (WIP)</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_177:_March_21_-_25">Week 177: March 21 - 25</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ceaa787e425a">rBceaa787e</a>: Fix T96420: Set ID node not working for instances.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0ce1c45f840">rBe0ce1c45</a>: Fix T96577: Setting curve handles not working correctly with multiple curves.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/87a0770bb969">rB87a0770b</a>: Fix T96361: Missing update when changing texture mapping properties.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a58be397e2bf">rBa58be397</a>: Curves: New Add brush.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d67f9820b8f8">rBd67f9820</a>: Curves: Improve Comb brush.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14408">D14408</a>: Curves: Improve Snake Hook brush.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14441">D14441</a>: Curves: Support converting curves to legacy hair system.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_178:_March_28_-_01">Week 178: March 28 - 01</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1cdf8b19e588">rB1cdf8b19</a>: Fix T96957: creating paint curve crashes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2202259e9c1f">rB2202259e</a>: Fix T96909: crash when assigning new node group to group node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fced604acfc9">rBfced604a</a>: Curves: improve Snake Hook brush</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3656e66ac24d">rB3656e66a</a>: Curves: support converting curves to legacy hair system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7c644211898">rBd7c64421</a>: BLI: support value initialization in CPPType</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c55afdf30b33">rBc55afdf3</a>: BLI: add utility to convert IndexMask to best mask type</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a264dff4fa7d">rBa264dff4</a>: BLI: optimize Map/Set/VectorSet.clear methods</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3c6c15d67655">rB3c6c15d6</a>: Functions: move loops into function builders</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14474">D14474</a>: Curves: New Grow/Shrink brush.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14515">D14515</a>: Curves: Operator to snap curves to surface. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T96442">T96442</a>: User manual entries for the first batch of curve sculpt brushes</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_179:_April_04_-_08">Week 179: April 04 - 08</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9743f7658207">rB9743f765</a>: Fix: accidentally swapped value with itself</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e40b0d52cfcc">rBe40b0d52</a>: Preferences: enable Duplicate Data for curves and point cloud objects</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fd5e5dac8946">rBfd5e5dac</a>: Geometry Nodes: avoid data copy in store named attribute node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/50869b408b20">rB50869b40</a>: Curves: operator to snap curves to surface</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/434521a9e2cc">rB434521a9</a>: Curves: improve Add menu for new curves object</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30f9ebb64441">rB30f9ebb6</a>: Curves: expose convert to particle system operator in sculpt mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/190334b47df4">rB190334b4</a>: Curves: new Grow/Shrink brush</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ee3f71d747e3">rBee3f71d7</a>: Functions: allow for better compiler optimization</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/120a17a45a6d">rB120a17a4</a>: BLI: add CPPType utility to copy elements to a shorter array</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a5beca7ba0da">rBa5beca7b</a>: BLI: inline fast path of IndexRange::as_span</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/384a02a214ca">rB384a02a2</a>: BLI: add missing materialize methods for virtual arrays</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2aff04917f9e">rB2aff0491</a>: Functions: parallelize materializing arrays after field evaluation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/67c42e7f034a">rB67c42e7f</a>: Functions: optimize simple generated multi-functions</li>
+<li>Started generalizing devirtualization for better performance and reduced code duplication.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_180:_April_11_-_15">Week 180: April 11 - 15</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c71013082d09">rBc7101308</a>: Geometry Nodes: show used named attributes in nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2839fe9a4d30">rB2839fe9a</a>: Curves: initial geometry nodes support for curves objects</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c9574412c7e3">rBc9574412</a>: Curves: fix some issues with operator to convert to particle system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e0c8d0913b96">rBe0c8d091</a>: Curves: remove Test1 brush</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14647">D14647</a>: Auto-save improvements. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14628">D14628</a>: Geometry Nodes: Refactor array devirtualization. (WIP)</li>
+<li>Worked on a design for attribute name semantics.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_181:_April_18_-_22">Week 181: April 18 - 22</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc7f88fd152f">rBdc7f88fd</a>: BLI: prioritize detecting single values higher than detecting spans</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2d32960b4de">rBa2d32960</a>: BLI: optimize constructing new virtual array</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ed971a19fad4">rBed971a19</a>: Curves: show sculpt tool settings in panels</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0178e694b72d">rB0178e694</a>: Geometry Nodes: show used named attributes in modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c196ca37407d">rBc196ca37</a>: Functions: fix procedure executor not writing output in correct buffer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aca083fbf382">rBaca083fb</a>: Nodes: raise exception when creating node group input/output fails</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b9799dfb8a78">rBb9799dfb</a>: Geometry Nodes: better support for byte color attributes</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14628">D14628</a>: Geometry Nodes: Refactor array devirtualization.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T97443">T97443</a>: Fix curves sculpt brush names ending with .001</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T97452">T97452</a>: Attribute identification and semantics</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Geometry nodes and hair project.
+</p>
+<h2><span class="mw-headline" id="Week_182:_April_25_-_29">Week 182: April 25 - 29</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26afa23b3b81">rB26afa23b</a>: Fix: use natural string sorting for attribute names</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/654bc35bc805">rB654bc35b</a>: Geometry Nodes: improve ui when trying to remove built-in attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09710d5f2ae5">rB09710d5f</a>: Geometry Nodes: show timing overlay above attributes overlay</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b3f7c64819e">rB2b3f7c64</a>: Geometry Nodes: improve attribute dependency overlay</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a5359918004">rB9a535991</a>: Geometry Nodes: rename used attributes panel</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae94e36cfb2f">rBae94e36c</a>: Geometry Nodes: refactor array devirtualization</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/696370380145">rB69637038</a>: Nodes: show overlays in node editor even when nodes are collapsed</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7458f909cc2">rBb7458f90</a>: Curves: add "Curves" to brush names</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f0f44fd92f16">rBf0f44fd9</a>: Curves: support spherical delete brush</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7b16ddeb5a02">rB7b16ddeb</a>: BLI: small optimization to retrieving CPPType from static type</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14764">D14764</a>: BLI: Improve parameter devirtualization (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14795">D14795</a>: Curves: Support symmetry in curves sculpting brushes.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Workshop in Amsterdam.
+</p>
+<h2><span class="mw-headline" id="Week_183:_May_02_-_05">Week 183: May 02 - 05</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bff9bf728e16">rBbff9bf72</a>: Fix T97774: don't crash when no brush is selected</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/54b293237ea9">rB54b29323</a>: Fix T97375: changing node tree from Python is very slow</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ba081f59bc6">rB2ba081f5</a>: Curves: disable Empty Hair operator when there is no active mesh</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/edc92f779ec1">rBedc92f77</a>: Curves: support converting legacy curves to new curves object</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b1517e26e288">rBb1517e26</a>: Curves: use old Add &gt; Curve menu for new curves object</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b24291be1e0">rB5b24291b</a>: Curves: move curve sculpt settings out of advanced panel</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ad119d327e5b">rBad119d32</a>: Curves: change default name of curves object to Curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/18bcd8321a68">rB18bcd832</a>: Curves: show warning when using Add brush without surface</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dbba5c4df973">rBdbba5c4d</a>: Curves: control number of control points in new curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09f769bde580">rB09f769bd</a>: Curves: show Front Faces Only option in tools panel</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8d78c3152ef7">rB8d78c315</a>: Curves: unify "Front Faces Only" name with mesh sculpt mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8bd0ed6bd2f3">rB8bd0ed6b</a>: Curves: show direction in panel for Grow / Shrink brush settings</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5162135e1470">rB5162135e</a>: Curves: add second experimental option for new curves tools</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7dc94155f620">rB7dc94155</a>: Curves: support symmetry in curves sculpting brushes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b54c6a20aaf5">rBb54c6a20</a>: Curves: fix brush position is not under mouse cursor</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14864">D14864</a>: Curves: Deform curves based on surface node. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14877">D14877</a>: Curves: Interpolate number of control points for new curves from neighboring curves. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14875">D14875</a>: Spreadsheet: Support showing enum value strings instead of integers.</li>
+<li>Code Review.</li></ul>
+<p><b>Next Week</b>
+</p><p>Workshop in Amsterdam.
+</p>
+<h2><span class="mw-headline" id="Week_184:_May_09_-_13">Week 184: May 09 - 13</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9913196470e6">rB99131964</a>: Geometry Nodes: use .a_ prefix for anonymous attribute names</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e8089b6bf50">rB2e8089b6</a>: Workaround for msvc compiler bug</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/94a54ab5549b">rB94a54ab5</a>: Curves: add operator to convert hair particle system to new curves</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95776">T95776</a>: How to attach hair to a surface</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14925">D14925</a>: Attributes: Initial support for quaternion attributes.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14942">D14942</a>: Curves: Draw legacy hair particle system as curves object. (WIP)</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_185:_May_16_-_20">Week 185: May 16 - 20</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f517b3a29568">rBf517b3a2</a>: Fix T98157: improve animation fps with better check in depsgraph</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e70af5cd527">rB2e70af5c</a>: Fix T97761: incorrect mixing of integers</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14942">D14942</a>: Curves: Draw legacy hair particle system as curves object. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14972">D14972</a>: Curves: New Pinch brush (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14993">D14993</a>: BLI: Use no_unique_address attribute.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95776">T95776</a>: How to attach hair to a surface</li>
+<li>Code Review.</li>
+<li>Worked more on design and implementation of a new more versatile evaluator for geometry nodes.</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_186:_May_23_-_27">Week 186: May 23 - 27</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a5409d2b5941">rBa5409d2b</a>: Fix T98316: geometry nodes stop updating after duplication</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f2d13b8c664">rB2f2d13b8</a>: Fix T97237: dragging custom node group asset adds broken node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e07b1b831639">rBe07b1b83</a>: Fix T98317: equal vs not-equal modes in compare node are not exact opposites</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ea6a0dd4d8e">rB2ea6a0dd</a>: Fix T98328: missing depsgraph update after adding node group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/174c3ffb4adf">rB174c3ffb</a>: Fix T98268: replace string node des not handle empty strings correctly</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f29ff7fb7e19">rBf29ff7fb</a>: Fix T98152: Named Attribute node changes data type for non-existant attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a337e7738fbf">rBa337e773</a>: BLI: use no_unique_address attribute</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15016">D15016</a>: Curves: Make tangent computation more robust against duplicate points.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14934">D14934</a>: Curves: Add float selection in sculpt mode</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14972">D14972</a>: Curves: New Pinch brush (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15033">D15033</a>: Nodes: Add separately allocated run-time data for bNodeTree.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T98366">T98366</a>: Active Attributes</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T95776">T95776</a>: How to attach hair to a surface</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes, and will be in Amsterdam half the week.
+</p>
+<h2><span class="mw-headline" id="Week_187:_May_30_-_03">Week 187: May 30 - 03</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc389a61529d">rBdc389a61</a>: Fix T98454: subdivision doesn't propagate int attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0f47506cde50">rB0f47506c</a>: Fix T98501: setting node socket default value is very slow</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/899ec8b6b803">rB899ec8b6</a>: Curves: use uv coordinates to attach curves to mesh</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f77b2daaccf">rB2f77b2da</a>: Nodes: call init function for new node trees in ntreeAddTree</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bb0fc675822f">rBbb0fc675</a>: Nodes: add separately allocated run-time data for bNodeTree</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a59cf053091">rB6a59cf05</a>: Nodes: add separately allocated runtime data for nodes and sockets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c80bcf8c2fb">rB5c80bcf8</a>: Functions: speedup preparing multi-function parameters</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e43a57d22df">rB9e43a57d</a>: Cycles: fix missing attribute update</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a094cdacf89a">rBa094cdac</a>: BLI: fix memory error when moving VArray_Span</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15082">D15082</a>: Allocator: Improve allocator usage in C++ containers. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15101">D15101</a>: Attributes: Store default uv map as string on Mesh. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15134">D15134</a>: Curves: Prototypes for various features surrounding the new curves object.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T98492">T98492</a>: Geometry Nodes Evaluator 3.0</li></ul>
+<p><b>Next Week</b>
+</p><p>More hair and geometry nodes discussions.
+</p>
+<h2><span class="mw-headline" id="Week_188:_June_06_-_10">Week 188: June 06 - 10</span></h2>
+<p>Was in Amsterdam still.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f49efed9533b">rBf49efed9</a>: Curves: fix transforms in Add brush</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b69aad60bda2">rBb69aad60</a>: Curves: use root/tip radius of the first curve in the viewport</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1a71f9d2b817">rB1a71f9d2</a>: Curves: use radius of middle point to determine curve shape</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cc1cc46099d7">rBcc1cc460</a>: Fix: incorrect curve parameter for catmull rom curves</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15134">D15134</a>: Curves: Prototypes for various features surrounding the new curves object.</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_189:_June_13_-_17">Week 189: June 13 - 17</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49b068bc639c">rB49b068bc</a>: Fix T98847: missing null check in versioning code</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc11e1164a07">rBdc11e116</a>: Fix T98796: avoid unnecessary mesh copy</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30f244d96f16">rB30f244d9</a>: Fix: curves have incorrect resolution attribute after realizing instances</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/75489b5887cd">rB75489b58</a>: Geometry Nodes: tweak Volume to Mesh threshold declaration</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8bd304bd453">rBb8bd304b</a>: Geometry Nodes: speedup Separate XYZ node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e903403b4129">rBe903403b</a>: Curves: support adding keymap items for operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/133095fff434">rB133095ff</a>: Curves: refactor Add brush</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d48735cca2c6">rBd48735cc</a>: Functions: speedup multi-function procedure executor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7e193cdada3">rBb7e193cd</a>: BLI: avoid unnecessary allocation when converting virtual array</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T98845">T98845</a>: Access original data from a geometry object</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15134">D15134</a>: Curves: Prototypes for various features surrounding the new curves object.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T98940">T98940</a>: Texture nodes CPU evaluation design</li>
+<li>Helped with <a rel="nofollow" class="external text" href="http://developer.blender.org/D15198">D15198</a>: Geometry Nodes: Volume Cube node</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_190:_June_20_-_24">Week 190: June 20 - 24</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/06b212c44603">rB06b212c4</a>: Fix: assert when deleting all curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3237c6dbe877">rB3237c6db</a>: Fix: crash when converting zero legacy curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d2e4bd79950f">rBd2e4bd79</a>: Curves: extract surface brush sampling into separate function</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b513c89e8450">rBb513c89e</a>: Functions: avoid using Map for small values</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef8bb8c0d524">rBef8bb8c0</a>: Functions: improve span buffer reuse in procedure execution</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/22fc0cbd6966">rB22fc0cbd</a>: BLI: improve support for trivial virtual arrays</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/af983a3eef49">rBaf983a3e</a>: BLI: add min_inplace and max_inplace functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a8afc142f72">rB2a8afc14</a>: BLI: improve check for common virtual array implementations</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15134">D15134</a>: Curves: Prototypes for various features surrounding the new curves object.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14864">D14864</a>: Curves: Deform curves based on surface node. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15280">D15280</a>: BKE: New attribute API (WIP).</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_191:_June_27_-_01">Week 191: June 27 - 01</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c96f2778f050">rBc96f2778</a>: Fix: sampling points on mesh surface generates too many points</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/416aef4e13cc">rB416aef4e</a>: Curves: New tools for curves sculpt mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eff62ea8abac">rBeff62ea8</a>: Geometry Nodes: remove warning in Points node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dfea5e24ad43">rBdfea5e24</a>: BLI: add kdtree range search method that accepts c++ lambda</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c51b8ec86364">rBc51b8ec8</a>: BLI: add Vector.append_and_get_index with rvalue parameter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5d9ade27de54">rB5d9ade27</a>: BLI: improve span access to virtual arrays</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ab444a80a280">rBab444a80</a>: BLI: refactor length parameterization</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D14864">D14864</a>: Curves: Deform curves based on surface node. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15280">D15280</a>: BKE: New attribute API (WIP).</li>
+<li>Looked into gdb pretty printing.</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_192:_July_04_-_08">Week 192: July 04 - 08</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05b38ecc7835">rB05b38ecc</a>: Curves: support deforming curves on surface</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c46d4d9fad5e">rBc46d4d9f</a>: Curves: move curves surface transforms to blenkernel</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b876ce2a4a46">rBb876ce2a</a>: Geometry Nodes: new geometry attribute API</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b98d116257ae">rBb98d1162</a>: BLI: use a slightly less trivial reverse uv sampler</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8f0907b79701">rB8f0907b7</a>: BLI: add float3x3 * float3 operator overload</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6636edbb0094">rB6636edbb</a>: BLI: improve reverse uv sample in edge cases</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba62e20af67e">rBba62e20a</a>: BLI: make some spans default constructible</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15378">D15378</a>: Functions: More clearly separate fields from multi-functions.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15401">D15401</a>: Cleanup: Remove unused get_cage_mesh parameter.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15407">D15407</a>: Curves: Sculpt on deformed curves (WIP).</li>
+<li>Committed node wrangler patches.</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_193:_July_11_-_15">Week 193: July 11 - 15</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3935bf255e33">rB3935bf25</a>: Fix T99677: crash when convex hull node is used on empty mesh</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e6da22eb0f4">rB6e6da22e</a>: Fix: crash when iterating over all attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d58072caf4ab">rBd58072ca</a>: Fix: missing geometry copy before modifying it</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02aefa765963">rB02aefa76</a>: Fix: wrong node name in menu</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0a552b5c602">rBd0a552b5</a>: Fix: set dangling pointer to null</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1c382a4940c6">rB1c382a49</a>: Curves: improve error checking in deform curves on surface node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44e530e1b107">rB44e530e1</a>: Geometry Nodes: fix face corner to edge attribute interpolation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/96cc6030375b">rB96cc6030</a>: Geometry Nodes: update curve type counts after realizing instances</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8a07ef66311">rBc8a07ef6</a>: BLI: fix finding indices from virtual array</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15440">D15440</a>: Geometry Nodes: New uv map based attribute transfer mode.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15407">D15407</a>: Curves: Sculpt on deformed curves (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15460">D15460</a>: Textures: Example for using field evaluator for texture nodes (WIP).</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_194:_July_18_-_22">Week 194: July 18 - 22</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/beb746135dbe">rBbeb74613</a>: Fix T99830: missing update after reordering node group sockets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d53ea1d0af58">rBd53ea1d0</a>: Fix T99905: wrong toposort when the node tree is cyclic</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5da807e00fb7">rB5da807e0</a>: Fix: Store Named Attribute node not working when attribute did not exist</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2232855b50e9">rB2232855b</a>: Curves: align surface and curves object in Empty Hair operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ecf4f4a71f1f">rBecf4f4a7</a>: Curves: fix uninitialized curve type when adding new curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/538da79c6d17">rB538da79c</a>: Curves: fix applying materials when applying modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1f94b56d7744">rB1f94b56d</a>: Curves: support sculpting on deformed curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2034e8c42dd9">rB2034e8c4</a>: Geometry Nodes: add debug check for whether AttributeWriter.finish is called</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3ea91cecc939">rB3ea91cec</a>: Cleanup: remove unused get_cage_mesh parameter</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15491">D15491</a>: Nodes: Move NodeTreeRef functionality into node runtime data. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15493">D15493</a>: Curves: Prototype for node group operators.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T99907">T99907</a>: Support user defined crazy space for curves.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T99908">T99908</a>: Crazy-space support for meshes in geometry nodes</li></ul>
+<p><b>Next Week</b>
+</p><p>Hair project and geometry nodes.
+</p>
+<h2><span class="mw-headline" id="Week_195:_July_15_-_29">Week 195: July 15 - 29</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72fb92ded8e8">rB72fb92de</a>: Fix T99961: crash when spreadsheet shows volume grids</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f1cdcba8528">rB6f1cdcba</a>: Fix T99929: lattice modifier looks up vertex group index in wrong place</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5feb3541f459">rB5feb3541</a>: Fix T99889: Fillet Curve node uses wrong radius</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2c81b4d4cf75">rB2c81b4d4</a>: Fix T99880: no node timing for frames in node groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b9e66af686f5">rBb9e66af6</a>: Fix T99851: Subdivide Curve node does not initialize attributes of end point</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/332d547ab7bc">rB332d547a</a>: Fix T99850: incorrect tangents on evaluated bezier curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d56778565834">rBd5677856</a>: Fix T99816: renaming attribute works incorrectly</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c5712c6795e7">rBc5712c67</a>: Fix T99373: add some padding in spreadsheet vector columns</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/caf907626d2c">rBcaf90762</a>: Fix T99271: modifier errors are not cleared</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ac1554bcf63e">rBac1554bc</a>: Fix T98982: cannot change default value of some node group input types</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72f77598a245">rB72f77598</a>: Fix T98798: tag collection geometry when changing instance offset</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5945a90df99b">rB5945a90d</a>: Fix T98788: bad first curve tangent when first points have same position</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e5eb46d7339">rB6e5eb46d</a>: Fix T100026: crash with zero-sized attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84272ce19a57">rB84272ce1</a>: Fix: add missing return</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84a3ff63d013">rB84a3ff63</a>: Fix: missing evaluated offsets in Resample Curve node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0dcfd93c6eeb">rB0dcfd93c</a>: Fix: curves edit hints not propagated in Join Geometry node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cacdea7f4a5b">rBcacdea7f</a>: Fix: crash when accessing attributes from multiple threads</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1c05f30e4dcb">rB1c05f30e</a>: Curves: add warning when invalid uv map is used when adding curves</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aa7d13034701">rBaa7d1303</a>: Curves: improve handling of empty surface meshes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ccb9d5d30763">rBccb9d5d3</a>: Curves: enable density brush when first entering curves sculpt mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53113a2e5719">rB53113a2e</a>: Geometry: detect when the sample uv is in multiple triangles</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rBL62979">rBL62979</a>: Geometry Nodes: update curve tangent test</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15536">D15536</a>: Curves: Add CurvesGeometry.radii()</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15545">D15545</a>: Fix T99624: <code>is_animatable</code> of id properties is false</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T100020">T100020</a>: Curve and Mesh Topology Inputs</li></ul>
+<p><b>Next Week</b>
+</p><p>Vacation.
+</p>
+<h2><span class="mw-headline" id="Week_196:_August_08_-_12">Week 196: August 08 - 12</span></h2>
+<p>Attended Siggraph in Vancouver.
+</p>
+<h2><span class="mw-headline" id="Week_197:_August_15_-_19">Week 197: August 15 - 19</span></h2>
+<p>Was sick this week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16084066009e">rB16084066</a>: Fix: nurbs basis cache not computed before it is used</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15491">D15491</a>: Nodes: Move NodeTreeRef functionality into node runtime data.</li></ul>
+<h2><span class="mw-headline" id="Week_198:_August_22_-_26">Week 198: August 22 - 26</span></h2>
+<p>Still recovering from last week.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4fecf652e24e">rB4fecf652</a>: Fix T100568: triangulate node resets vertices to rest position</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/56205e9f31d5">rB56205e9f</a>: Fix T100579: internal links are drawn when sockets are hidden</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5d67b524412d">rB5d67b524</a>: Fix T100562: Realize Instances node crashes when there is an attribute name…</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/95464a842cc1">rB95464a84</a>: Fix T99932: video in node group does not play</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1663530408fd">rB16635304</a>: Fix T100318: handle custom nodes in field inferencing more gracefully</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15491">D15491</a>: Nodes: Move NodeTreeRef functionality into node runtime data.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15775">D15775</a>: Nodes: Add persistent identifier to nodes (WIP).</li></ul>
+<h2><span class="mw-headline" id="Week_199:_August_29_-_02">Week 199: August 29 - 02</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3a6a2f41284">rBe3a6a2f4</a>: Fix T99004: scaling volume down results in crash</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/34e30baedf7e">rB34e30bae</a>: Fix T100673: crash when using slide brush without attachment info</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6177d9f0c898">rB6177d9f0</a>: Fix: reverse uv lookup fails due to floating point accuracy issues</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25e307d725d0">rB25e307d7</a>: Nodes: move NodeTreeRef functionality into node runtime data</li>
+<li>Described a possible undo improvement in <a rel="nofollow" class="external text" href="http://developer.blender.org/T98574">T98574</a>.</li>
+<li>Worked on the geometry nodes evaluation refactor.</li>
+<li>Started working on an attribute overlay.</li>
+<li>Fixed some issues after the NodeTreeRef refactor.</li>
+<li>Spent a fair amount of time doing code review (e.g. <a rel="nofollow" class="external text" href="http://developer.blender.org/D15488">D15488</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/D15617">D15617</a>)</li></ul>
+<h2><span class="mw-headline" id="Week_200:_September_05_-_09">Week 200: September 05 - 09</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8000d5268423">rB8000d526</a>: Fix T100796: wrong tangents on bezier splines with duplicate points and handles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1339fec22a1a">rB1339fec2</a>: Nodes: fix memory leak</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d481fb10efb9">rBd481fb10</a>: Nodes: fix handling cyclic node trees</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/17d8028181e2">rB17d80281</a>: Nodes: add owner_tree method to nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/46642507ae65">rB46642507</a>: Geometry Nodes: improve printing geometry set for debugging</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/967664d1ee2f">rB967664d1</a>: BLI: new C++ BitVector data structure</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa0f18b37d11">rBfa0f18b3</a>: Cleanup: readfile: use correct type</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15914">D15914</a>: Geometry Nodes: New evaluation system.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15896">D15896</a>: Attribute Overlay (WIP).</li>
+<li>Started getting used to the Vulkan API.</li>
+<li>Experimented with a new ChunkList data structure.</li></ul>
+<h2><span class="mw-headline" id="Week_201:_September_12_-_16">Week 201: September 12 - 16</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d67a995d91f">rB4d67a995</a>: Fix: crash when evaluating geometry nodes after deleting an unlinked node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cf56b8be37c0">rBcf56b8be</a>: Fix T101166: crash when creating group input socket</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/62cee2400348">rB62cee240</a>: Fix: crash when changing to viewer context in spreadsheet</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4130f1e674f8">rB4130f1e6</a>: Geometry Nodes: new evaluation system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7549e0c5ae36">rB7549e0c5</a>: Geometry Nodes: use stringref instead of string in logger</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8b26349d5777">rB8b26349d</a>: BLO: move blenloader to C++</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c4295ee6f92">rB5c4295ee</a>: Workaround for msvc compiler bug</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15896">D15896</a>: Attribute Overlay (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15976">D15976</a>: Geometry Nodes: Lazy threading.</li>
+<li>Learned more about the GPU and Draw API in Blender.</li>
+<li>Code Review.</li></ul>
+<h2><span class="mw-headline" id="Week_202:_September_19_-_23">Week 202: September 19 - 23</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e746999aa937">rBe746999a</a>: Fix T101309: crash when executing geometry nodes without logger</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b4cb893e7eb">rB2b4cb893</a>: Fix T101214: hidden link can cause cycle in node tree</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c8ee70c96200">rBc8ee70c9</a>: Geometry Nodes: decentralize implicit input definitions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c81d3bd4691">rB5c81d3bd</a>: Geometry Nodes: improve evaluator with lazy threading</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5d4afd5bac7">rBe5d4afd5</a>: Depsgraph: generalize passing parameters to depsgraph object iterator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e345686cb7f4">rBe345686c</a>: View3d: move space_view3d.c to c++</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fd63efd0ea8">rB2fd63efd</a>: BLI: simplify removing elements from containers with predicate</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc88f2006d81">rBbc88f200</a>: Cleanup: remove vector adaptor data structure</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6e70e7bacf8">rBc6e70e7b</a>: Cleanup: follow C++ type cast style guide in some files</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fffd7d7a85d">rB2fffd7d7</a>: Move overlay engine to C++</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/939643741767">rB93964374</a>: Move workspace.c to C++</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15954">D15954</a>: Geometry Nodes: Viewport preview (WIP).</li>
+<li>Code Review.</li>
+<li>Experimented with an attribute api that could potentially replace CustomData (<a rel="nofollow" class="external text" href="https://github.com/JacquesLucke/blender/blob/dna-attribute-api/source/blender/blenkernel/BKE_attributes.hh">Github</a>).</li></ul>
+<h2><span class="mw-headline" id="Week_203:_September_26_-_30">Week 203: September 26 - 30</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db0ef8b00d3c">rBdb0ef8b0</a>: Fix T101410: ignore dangling reroute inputs</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fc136427d55">rB2fc13642</a>: Fix T101451: curve attribute overlay disappears when origin is out of view</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b21154078365">rBb2115407</a>: Fix: bump subversion to avoid corrupted files</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b70b02ee429d">rBb70b02ee</a>: Fix: Spline Parameter node produces NaN when curve is a single point</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c55d38f00b8c">rBc55d38f0</a>: Geometry Nodes: viewport preview</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ffbabb24c8c">rB5ffbabb2</a>: Nodes: fix missing updates with muted nodes and reroutes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/697e86a76199">rB697e86a7</a>: View3D: move view3d_draw.c to c++</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16069">D16069</a>: Always show warning when opening files saved in a new version (Proposal).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16070">D16070</a>: Potential Fix T101378: Missing update with complex node update functions.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D15440">D15440</a>: Geometry Nodes: New uv map based attribute transfer mode.</li></ul>
+<h2><span class="mw-headline" id="Week_204:_October_03_-_07">Week 204: October 03 - 07</span></h2>
+<p>Two weeks of vacation started on Tuesday.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72ceb7dec136">rB72ceb7de</a>: Fix: crash when linked geometry node group is missing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e65598b4fa20">rBe65598b4</a>: Geometry Nodes: new Sample UV Surface node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31ae3a501284">rB31ae3a50</a>: Geometry Nodes: set viewer overlay opacity default to 1</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16137">D16137</a>: Geometry Nodes: Separate Instances from InstancesComponent.</li></ul>
+<h2><span class="mw-headline" id="Week_205:_October_17_-_21">Week 205: October 17 - 21</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7abd79398d71">rB7abd7939</a>: Fix T101642: crash when deleting group output inside node group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/91e85230f9c1">rB91e85230</a>: Fix T101660: crash when trying to propagate string attributes in some nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9d710374bda4">rB9d710374</a>: Fix T101645: division by zero in fillet node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8415bc9c80aa">rB8415bc9c</a>: Fix T101554: disable viewer node when corresponding modifier is disabled</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4b30ee773ce7">rB4b30ee77</a>: Fix T101316: workbench texture mode not working with geometry nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5e0e5b134103">rB5e0e5b13</a>: Fix T101215: Distribute Points in Volume node does not refresh on frame change</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e5425b566d0f">rBe5425b56</a>: Geometry Nodes: separate Instances from InstancesComponent</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/619ce8392b21">rB619ce839</a>: Depsgraph: wrong copy-on-write update after depsgraph rebuild</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2fcfcabd742">rBa2fcfcab</a>: Cleanup: add missing CPPType for MStringProperty</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16283">D16283</a>: Avoid pipeline stalls with lazy-evaluated caches (experiment).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16289">D16289</a>: Fix T101536: Missing node tree updates after remapping id.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16304">D16304</a>: Nodes: Restrict Python API on built-in nodes.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16305">D16305</a>: Fix T100988: Flickering when using sculpt brush in drag dot mode.</li></ul>
+<h2><span class="mw-headline" id="Week_206:_October_24_-_28">Week 206: October 24 - 28</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/53795877727d">rB53795877</a>: Fix T101210: invalid internal node links lead to crash</li>
+<li>Various meetings and was at the Blender Conference</li></ul>
+<h2><span class="mw-headline" id="Week_207:_October_31_-_04">Week 207: October 31 - 04</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c29c61f840aa">rBc29c61f8</a>: Fix T102292: deadlock in geometry nodes evaluation with task isolation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0697631929d9">rB06976319</a>: Fix T102144: missing validation of spline resolution</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25c6444bad25">rB25c6444b</a>: Fix T102153: crash when muting node group with active viewer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4e97bd67d97">rBf4e97bd6</a>: Geometry Nodes: fix missing curve cache</li>
+<li>Participated in geometry nodes workshop in Amsterdam. More notes will be available soon.</li></ul>
+<h2><span class="mw-headline" id="Week_208:_November_07_-_11">Week 208: November 07 - 11</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/79d8610d0406">rB79d8610d</a>: Fix T102311: crash when opening node add menu with assets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ff71acd8410">rB8ff71acd</a>: Fix T102324: reverse curve node breaks crazy space editing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/52bd198153ed">rB52bd1981</a>: Fix T100872: restrict Python API on built-in nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c842a5a18716">rBc842a5a1</a>: Fix T101526: assert due to wrong node tree owner id</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1140e001a07b">rB1140e001</a>: Fix T102329: assert when cutting node tree link</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc609d9f1f6e">rBdc609d9f</a>: Fix T100988: flickering when using sculpt brush in drag dot mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6295bdfd38d3">rB6295bdfd</a>: Fix T102340: crash when adding image file in node group</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/84c66fe9db93">rB84c66fe9</a>: Fix T102406: OSL script node no longer updates its in and outputs</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57dd1b7799e7">rB57dd1b77</a>: Fix T102386: crash when trying to link sockets from different node trees</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c73ae711bf40">rBc73ae711</a>: BLI: new basic CacheMutex</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6c822733ac7">rBa6c82273</a>: BLI: improve CPPType system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/024bec85f6ae">rB024bec85</a>: Depsgraph: simplify scheduling in depsgraph evaluator</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16464">D16464</a>: Fix T101979: Edge Angle node returns wrong sign (alternative)</li>
+<li>Worked on propagating information backwards during geometry nodes evaluation.</li>
+<li>Worked on refactoring field evaluation.</li></ul>
+<h2><span class="mw-headline" id="Week_209:_November_14_-_18">Week 209: November 14 - 18</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c42e54f6ed7">rB5c42e54f</a>: Fix T101536: missing node tree updates after remapping id</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7b82d8f029cd">rB7b82d8f0</a>: Nodes: move most runtime data out of bNode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ebb7ab41f85">rB0ebb7ab4</a>: Geometry Nodes: disable unreachable nodes in evaluator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b4c3ea264439">rBb4c3ea26</a>: Cleanup: move internal links of nodes to runtime data</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16546">D16546</a>: BLO: Use blender::Map in OldNewMap.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16547">D16547</a>: DNA: Support versioning between inline buffers and pointers. (WIP)</li>
+<li>Moved a bunch of files to C++ to help with refactors.</li>
+<li>Worked more in new field evaluation and value request backward propagation.</li></ul>
+<h2><span class="mw-headline" id="Week_210:_November_21_-_25">Week 210: November 21 - 25</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a87d78860b3c">rBa87d7886</a>: Fix T102693: adding shader node group to geometry nodes crashes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b43bdd8ba28c">rBb43bdd8b</a>: Fix T102751: missing tree update with muted nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/848dff1e4c69">rB848dff1e</a>: Fix: assert when converting between types in geometry nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3648fd9917db">rB3648fd99</a>: Fix: node frame boundaries incorrect when opening files</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/826535979a8b">rB82653597</a>: Nodes: add non-const utility to find socket by identifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/86ade3df5602">rB86ade3df</a>: Nodes: move node registration to nodes module</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4f02817367d4">rB4f028173</a>: Nodes: remove bNodeTree-&gt;interface_type</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f83ef2149e0">rB9f83ef21</a>: BLI: make different pointer types compatible in hash tables</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/01e479b79041">rB01e479b7</a>: Cleanup: simplify removing asset code</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/356373ff7af9">rB356373ff</a>: Cleanup: move some data from bNodeSocket to run-time data</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f626ac331ef">rB5f626ac3</a>: Cleanup: use more concise function names in function nodes</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16596">D16596</a>: Nodes: Refactor how socket positions are determined. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16580">D16580</a>: Cleanup: Remove ui linker hack.</li>
+<li>Moved some files from C to C++.</li></ul>
+<h2><span class="mw-headline" id="Week_211:_November_28_-_02">Week 211: November 28 - 02</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/99c5146e9a7a">rB99c5146e</a>: Fix T101433: crash when deleting hierarchy referenced by Collection Info node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eae2917fde93">rBeae2917f</a>: Fix: crash in node poll function due to missing null check</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57613630c7fa">rB57613630</a>: BLO: use blender::Map in OldNewMap</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7b0829892794">rB7b082989</a>: BLI: use no_unique_address in BitVector</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/85d9f1233931">rB85d9f123</a>: BLI: increase default inline buffer capacity in BitVector</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/39615cd3b779">rB39615cd3</a>: BLI: add atomic disjoint set data structure</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/88c6d824e78e">rB88c6d824</a>: Nodes: ensure that node identifiers are larger than zero</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16668">D16668</a>: Fix T102882: Crash when there are link cycles and a viewer in a node group.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16647">D16647</a>: BLI: Experiment with specializing hash tables for special key types. (WIP)</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16666">D16666</a>: Allocator: Try using OS to determine (peak) memory usage.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16667">D16667</a>: Example for impact of atomics in allocator.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16637">D16637</a>: Geometry Nodes: Output uv map from primitive nodes as anonymous attributes.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16642">D16642</a>: Geometry Nodes: New Interpolate Curves nodes (WIP).</li>
+<li>Updated my Gcov Viewer extension for vscode to give better insights into the coverage data.</li>
+<li>Moved some files to C++.</li></ul>
+<h2><span class="mw-headline" id="Week_212:_December_05_-_09">Week 212: December 05 - 09</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83077d36834a">rB83077d36</a>: Fix: wrong pivot point output in String to Curves node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ccae00c9e239">rBccae00c9</a>: Fix: memory leak in curve circle primitive node</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/122d6d67e6a0">rB122d6d67</a>: Fix: Points to Volume node crashes with too small radius</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a55c356a1c16">rBa55c356a</a>: BLO: shrink old-new-map when it is cleared</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bf1791ba92d2">rBbf1791ba</a>: BLI: add clear-and-shrink method to more data structures</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a45284b855d4">rBa45284b8</a>: BLI: remove deduplicated memory utility functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/05bf5c4e0ea8">rB05bf5c4e</a>: Nodes: simplify handling of function nodes in declaration</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2ca30ea2419">rBc2ca30ea</a>: Cleanup: avoid calling generic node update functions from versioning code</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16711">D16711</a>: BLI: Add TinyMutex class (WIP).</li>
+<li>Added many new regression tests for various nodes that had low test coverage before.</li>
+<li>Finished up Blur Attribute node from community contribution.</li>
+<li>Started working on anonymous attribute lifetime analysis.</li></ul>
+<h2><span class="mw-headline" id="Week_213:_December_12_-_16">Week 213: December 12 - 16</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ffcd8779eb2">rB5ffcd877</a>: Fix: socket tooltip not showing when there was no type conversion</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/28511ac6cf83">rB28511ac6</a>: Fix T103294: bring back modifyMesh function for geometry nodes modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f0dc4d67e56d">rBf0dc4d67</a>: Geometry Nodes: support storing 2d vector attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f879c20f72d9">rBf879c20f</a>: Geometry Nodes: output uv map from primitive nodes as anonymous attributes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c37e07bc01a4">rBc37e07bc</a>: Geometry Nodes: improve dot graph export of lazy function graph</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3aca0bc66a47">rB3aca0bc6</a>: Geometry Nodes: simplify handling of invalid group interface sockets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ea7570989d2a">rBea757098</a>: Cleanup: add utility method to get group input nodes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/719513dd9fe4">rB719513dd</a>: Tests: make mesh comparisons more strict</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/rBL63139">rBL63139</a>: Geometry Nodes: update tests with uv maps</li>
+<li>Continued working on anonymous attribute lifetime analysis.</li>
+<li>Code Review.</li></ul>
+<h2><span class="mw-headline" id="Week_214:_December_19_-_23">Week 214: December 19 - 23</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/288d4c95459b">rB288d4c95</a>: Fix: asset handle in context is always none</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b024577452f5">rBb0245774</a>: Fix: dangling attribute name pointer</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/844b6e39826f">rB844b6e39</a>: Nodes: use CacheMutex to protect topology cache</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ddd24186d9e9">rBddd24186</a>: Geometry Nodes: avoid some overhead during field inferencing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8fab53c023ef">rB8fab53c0</a>: BLI: add last time to scoped averaged time</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16858">D16858</a>: Geometry Nodes: Deterministic anonymous attribute lifetimes (WIP).</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16862">D16862</a>: Allocator: Improve multi-threaded allocation performance.</li></ul>
+<h2><span class="mw-headline" id="Week_215:_December_26_-_30">Week 215: December 26 - 30</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/72b4f9191462">rB72b4f919</a>: Fix T103526: crash when subsurface connects to Shader to RGB</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cc48610d2c55">rBcc48610d</a>: BLI: improve support for using vectors as hash table keys</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e4f9880722a">rB7e4f9880</a>: BLI: improve node graph export in dot format</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6ca942e4773">rBb6ca942e</a>: Functions: support cycles in lazy-function graph</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d39b6b3f491">rB4d39b6b3</a>: Geometry Nodes: skip logging socket values for invisible trees</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a09accb496d3">rBa09accb4</a>: Geometry Nodes: speedup compute context hash generation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dba2d828462a">rBdba2d828</a>: Geometry Nodes: avoid using enumerable thread specific on single thread</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/D16858">D16858</a>: Geometry Nodes: Deterministic anonymous attribute lifetimes (WIP).</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121632
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 2.989 seconds
+Real time usage: 2.991 seconds
+Preprocessor visited node count: 61093/1000000
+Preprocessor generated node count: 10567/1000000
+Post‐expand include size: 248084/2097152 bytes
+Template argument size: 84530/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2778.146      1 -total
+ 96.28% 2674.677    358 Template:GitCommit
+ 83.37% 2316.024    664 Template:GitCommit/PhabricatorParse
+  1.19%   32.994     52 Template:GitCommit/PhabricatorParseDeprecated
+  0.79%   21.863    117 Template:Phab
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6233-0!canonical and timestamp 20240112121629 and revision id 32832
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;oldid=32832">https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;oldid=32832</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 2 January 2023, at 10:37.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:JacquesLucke/Reports/2022.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:JacquesLucke/Reports/2022" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/JacquesLucke.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/JacquesLucke.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/JacquesLucke.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;oldid=32832" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:JacquesLucke/Reports/2022&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"2.989","walltime":"2.991","ppvisitednodes":{"value":61093,"limit":1000000},"ppgeneratednodes":{"value":10567,"limit":1000000},"postexpandincludesize":{"value":248084,"limit":2097152},"templateargumentsize":{"value":84530,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00% 2778.146      1 -total"," 96.28% 2674.677    358 Template:GitCommit"," 83.37% 2316.024    664 Template:GitCommit/PhabricatorParse","  1.19%   32.994     52 Template:GitCommit/PhabricatorParseDeprecated","  0.79%   21.863    117 Template:Phab"]},"cachereport":{"timestamp":"20240112121632","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":3043});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844554badfeab8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

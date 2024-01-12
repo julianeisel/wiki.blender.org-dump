@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Dfelinto/Reports/2019 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Dfelinto/Reports/2019","wgTitle":"Dfelinto/Reports/2019","wgCurRevisionId":13906,"wgRevisionId":13906,"wgArticleId":4322,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Dfelinto/Reports/2019","wgRelevantArticleId":4322,"wgRequestId":"c01f539b932510dd60bf890c","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Dfelinto","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=ext.pygments|mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Dfelinto_Reports_2019 rootpage-User_Dfelinto skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2019.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ADfelinto%2FReports%2F2019" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2019.html#December_23_-_27"><span class="tocnumber">1</span> <span class="toctext">December 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2019.html#December_16_-_20"><span class="tocnumber">2</span> <span class="toctext">December 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2019.html#December_9_-_13"><span class="tocnumber">3</span> <span class="toctext">December 9 - 13</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2019.html#December_2_-_6"><span class="tocnumber">4</span> <span class="toctext">December 2 - 6</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2019.html#November_25_-_29"><span class="tocnumber">5</span> <span class="toctext">November 25 - 29</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2019.html#November_18_-_22"><span class="tocnumber">6</span> <span class="toctext">November 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2019.html#November_11_-_15"><span class="tocnumber">7</span> <span class="toctext">November 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2019.html#November_4_-_8"><span class="tocnumber">8</span> <span class="toctext">November 4 - 8</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2019.html#October_14_-_18.2C_21_-_25.2C_28_-_November_1"><span class="tocnumber">9</span> <span class="toctext">October 14 - 18, 21 - 25, 28 - November 1</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2019.html#October_7_-_11"><span class="tocnumber">10</span> <span class="toctext">October 7 - 11</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2019.html#September_30_-_October_4"><span class="tocnumber">11</span> <span class="toctext">September 30 - October 4</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2019.html#September_23_-_27"><span class="tocnumber">12</span> <span class="toctext">September 23 - 27</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2019.html#September_16_-_20"><span class="tocnumber">13</span> <span class="toctext">September 16 - 20</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2019.html#September_9_-_13"><span class="tocnumber">14</span> <span class="toctext">September 9 - 13</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2019.html#September_2_-_6"><span class="tocnumber">15</span> <span class="toctext">September 2 - 6</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2019.html#August_26_-_30"><span class="tocnumber">16</span> <span class="toctext">August 26 - 30</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2019.html#August_19_-_23"><span class="tocnumber">17</span> <span class="toctext">August 19 - 23</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2019.html#August_12_-_16"><span class="tocnumber">18</span> <span class="toctext">August 12 - 16</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2019.html#August_5_-_9"><span class="tocnumber">19</span> <span class="toctext">August 5 - 9</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="2019.html#Post-Siggraph_OpenXR_.2F_Blender_thoughts"><span class="tocnumber">19.1</span> <span class="toctext">Post-Siggraph OpenXR / Blender thoughts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="2019.html#July_22_-_August_2"><span class="tocnumber">20</span> <span class="toctext">July 22 - August 2</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2019.html#July_15_-_19"><span class="tocnumber">21</span> <span class="toctext">July 15 - 19</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2019.html#July_8_-_12"><span class="tocnumber">22</span> <span class="toctext">July 8 - 12</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2019.html#July_1_-_5"><span class="tocnumber">23</span> <span class="toctext">July 1 - 5</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2019.html#June_24_-_28"><span class="tocnumber">24</span> <span class="toctext">June 24 - 28</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2019.html#June_17_-_21"><span class="tocnumber">25</span> <span class="toctext">June 17 - 21</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2019.html#June_10_-_14"><span class="tocnumber">26</span> <span class="toctext">June 10 - 14</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2019.html#June_3_-_7"><span class="tocnumber">27</span> <span class="toctext">June 3 - 7</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2019.html#May_27_-_31"><span class="tocnumber">28</span> <span class="toctext">May 27 - 31</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2019.html#May_20_-_24"><span class="tocnumber">29</span> <span class="toctext">May 20 - 24</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2019.html#May_13_-_17"><span class="tocnumber">30</span> <span class="toctext">May 13 - 17</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2019.html#May_6_-_10"><span class="tocnumber">31</span> <span class="toctext">May 6 - 10</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2019.html#April_29_-_May_4"><span class="tocnumber">32</span> <span class="toctext">April 29 - May 4</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2019.html#April_22_-_26"><span class="tocnumber">33</span> <span class="toctext">April 22 - 26</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2019.html#April_15_-_19"><span class="tocnumber">34</span> <span class="toctext">April 15 - 19</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2019.html#March_25_-_April_12"><span class="tocnumber">35</span> <span class="toctext">March 25 - April 12</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2019.html#March_18_-_22"><span class="tocnumber">36</span> <span class="toctext">March 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2019.html#March_11_-_15"><span class="tocnumber">37</span> <span class="toctext">March 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2019.html#March_4_-_8"><span class="tocnumber">38</span> <span class="toctext">March 4 - 8</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2019.html#February_25_-_March_1"><span class="tocnumber">39</span> <span class="toctext">February 25 - March 1</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2019.html#February_18_-_22"><span class="tocnumber">40</span> <span class="toctext">February 18 - 22</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2019.html#February_11_-_15"><span class="tocnumber">41</span> <span class="toctext">February 11 - 15</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2019.html#February_4_-_8"><span class="tocnumber">42</span> <span class="toctext">February 4 - 8</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2019.html#January_28_-_February_1"><span class="tocnumber">43</span> <span class="toctext">January 28 - February 1</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2019.html#January_21_-_25"><span class="tocnumber">44</span> <span class="toctext">January 21 - 25</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2019.html#January_14_-_18"><span class="tocnumber">45</span> <span class="toctext">January 14 - 18</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2019.html#January_7_-_11"><span class="tocnumber">46</span> <span class="toctext">January 7 - 11</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2019.html#January_1_-_4"><span class="tocnumber">47</span> <span class="toctext">January 1 - 4</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2019.html#Previous_weekly_reports"><span class="tocnumber">48</span> <span class="toctext">Previous weekly reports</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Dfelinto/Reports/2019</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Dfelinto.html" title="User:Dfelinto">User:Dfelinto</a>&lrm; | <a href="../Reports.html" title="User:Dfelinto/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span class="mw-headline" id="December_23_-_27">December 23 - 27</span></h2>
+<p>Worked only on Monday finishing up the <a rel="nofollow" class="external text" href="https://code.blender.org/2019/12/tracker-curfew/">tracker curfew</a>.
+</p>
+<dl><dt><b>Next Week</b></dt></dl>
+<p>Next year only, catch-up, send emails about weekly reports, see how the tracker curfew is going, and start the work on patch review.
+</p>
+<h2><span class="mw-headline" id="December_16_-_20">December 16 - 20</span></h2>
+<p>I spent most of the week working with Sergey Sharybin in the Tracker Curfew. The most challenge part was the specification of what to do with each existing status and priorities, as well as making sure the migration of the database will happen uneventful.
+</p>
+<dl><dt><b>Official announcement</b></dt></dl>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=HDE2ARiN1a0">https://www.youtube.com/watch?v=HDE2ARiN1a0</a>
+</p>
+<dl><dt><b>Upcoming code.blender.org post</b></dt></dl>
+<ul><li><a rel="nofollow" class="external free" href="https://code.blender.org/?p=3861">https://code.blender.org/?p=3861</a></li></ul>
+<h2><span class="mw-headline" id="December_9_-_13">December 9 - 13</span></h2>
+<p>Blender 2.82 bcon2 took a lot of energy, on helping decide what is finished, what should be on, ...
+</p><p>Besides that I had a meeting with Brecht and another with Sergey on the main goals for the upcoming months.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>UI: Remove User Preference "Enable All Experimental Features" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/afcdea3961c">afcdea3961</a>.</li>
+<li>Cleanup: Fix typo in user preference code <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31a3b570379">31a3b57037</a>.</li></ul>
+<h2><span class="mw-headline" id="December_2_-_6">December 2 - 6</span></h2>
+<p>Week off.
+</p>
+<h2><span class="mw-headline" id="November_25_-_29">November 25 - 29</span></h2>
+<p>Organized the <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-November/050344.html">Blender 2.82 per-module roadmap</a>, started implementing missing outliner id data operators (<a rel="nofollow" class="external text" href="https://developer.blender.org/D6332">D6332</a>), fixed scene statistics for local collections and general tracker/triaging.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T71000">#71000</a>: Statistics don't take collections hidden state into account <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9c4cec2de95">9c4cec2de9</a>.</li></ul>
+<p><br />
+</p>
+<dl><dt><b>Patches waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6332">Outliner: Make Single User - Layer Collection</a>.</li></ul>
+<h2><span class="mw-headline" id="November_18_-_22">November 18 - 22</span></h2>
+<p>Fixed ID operations crash (too risky for 2.81 though), old silly pinning issue for empty images and committed filebrowser patches from last week. Besides triaging early in the week to try to catch any showstoppers for 2.81.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner: Fixup for previous commit on tooltip/crash fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3b16578fb49">3b16578fb4</a>.</li>
+<li>Outliner: Fix crash for tooltips on ID operations <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bc66810064f">bc66810064</a>.</li>
+<li>Outliner: Don't show id operations (make single user) when not supported <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9ca2cbdcea6">9ca2cbdcea</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T69798">#69798</a>: Pinning empty image objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/12915aad65f">12915aad65</a>.</li>
+<li>Fix: Filebrowser saving dialog size when maximized <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/49db3f6bf10">49db3f6bf1</a>.</li></ul>
+<h2><span class="mw-headline" id="November_11_-_15">November 11 - 15</span></h2>
+<p>Most of the week organizing the release, finding people for the showstoppers, and triaging.<br />
+As for myself, fixed two crashes (<a rel="nofollow" class="external text" href="http://developer.blender.org/T71487">#71487</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/T71489">#71489</a>), and ironed out the Filebrowser in Windows (<a rel="nofollow" class="external text" href="http://developer.blender.org/T71590">#71590</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/D6260">D6260</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/D6259">D6259</a>).
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T71487">#71487</a>: Crashes When Calling Texture Space Operators <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c1af9ef0312">c1af9ef031</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T71489">#71489</a>: Video editor crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3e4e346e59a">3e4e346e59</a>.</li></ul>
+<dl><dt><b>Patches waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6260">Fix: Filebrowser saving dialog size when maximized</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6259">Fix T70991 - File Explorer: Maximize window no the filename textbox on Windows</a>.</li></ul>
+<h2><span class="mw-headline" id="November_4_-_8">November 4 - 8</span></h2>
+<p>Organized the docs from the discussions at the conference (on development structure, patch review, bug triaging) and started some of the conversations with the team to get the changes in place (starting with bug triaging).
+</p><p>Implemented the "User Preference Experimental" tab for 2.81 projects (e.g., VR). And fixed stereo 3d camera framing drawing (requested by Clément for the draw manager refactor, so it is working before the refactor takes place).
+</p>
+<dl><dt><b>Documentation</b></dt></dl>
+<ul><li><a href="../../Process/A_Bugs_Life.html" title="Process/A Bugs Life">The Life of a Bug</a></li>
+<li><a href="../Drafts/DevelopmentStructure.html" title="User:Dfelinto/Drafts/DevelopmentStructure">Development Structure</a></li>
+<li><a href="../Drafts/PatchReview.html" title="User:Dfelinto/Drafts/PatchReview">Patch Review</a></li>
+<li><a href="../Drafts/Projects.html" class="mw-redirect" title="User:Dfelinto/Drafts/Projects">Projects</a></li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>User Preference Experimental Tab <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a7fcd78d2d6">a7fcd78d2d</a>.</li>
+<li>Viewport: Fix stereo 3d camera framings when pivot is not center <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/85637311c28">85637311c2</a>.</li></ul>
+<h2><span id="October_14_-_18,_21_-_25,_28_-_November_1"></span><span class="mw-headline" id="October_14_-_18.2C_21_-_25.2C_28_-_November_1">October 14 - 18, 21 - 25, 28 - November 1</span></h2>
+<ul><li>Google Summer of Code Mentor Summit.</li>
+<li>Blender Conference.</li></ul>
+<h2><span class="mw-headline" id="October_7_-_11">October 7 - 11</span></h2>
+<p>I finally went over all the relevant collections issues I could find.
+</p><p>That included finishing and committing the local collections patch, as well as addressing a crash and visibility not-updated, cycles viewport render collections visibility and hiding empties for nested instanced collections. Some of these are patches yet to be reviewed.
+</p><p>Besides that, started organizing the documentation (<a rel="nofollow" class="external text" href="http://developer.blender.org/T70623">#70623</a>, <a rel="nofollow" class="external text" href="http://developer.blender.org/TT70624">#T70624</a>) but the work itself is still to come. Finally, ended up with a fix for filebrowser id filter, besides some minor tracker work.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T64901: Nesting collection instances could clutter object display <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b8f769fee80">b8f769fee8</a>.</li>
+<li>Local Collections: Allow users to show hidden collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0812949bbc3">0812949bbc</a>.</li></ul>
+<dl><dt><b>Patch waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6043">Fix T69644 / T68586: objects flag unsynced when drag hidden collections</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6034">Fix T70670: Hidden collections are still rendered by Cycles in the Viewport</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D6033">Fix Filebrowser Blender ID filter</a></li></ul>
+<h2><span class="mw-headline" id="September_30_-_October_4">September 30 - October 4</span></h2>
+<p>Finished and published the "Release Cycle" blog post, implemented the missing patch for collections in 2.81 (<a rel="nofollow" class="external text" href="https://developer.blender.org/D5992">D5992</a>) and small things like updating our <a href="../../Process/Release_Cycle.html" title="Process/Release Cycle">release cycle wiki</a> with more info, listing the projects we need to move (<a rel="nofollow" class="external text" href="http://developer.blender.org/T68701">#68701</a>) and mild tracker work.
+</p>
+<dl><dt><b>Patch waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5992">Local Collections: Allow users to show hidden collections</a></li></ul>
+<dl><dt><b>Blog post</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://code.blender.org/2019/10/blender-release-cycle/">Blender Release Cycle</a></li></ul>
+<h2><span class="mw-headline" id="September_23_-_27">September 23 - 27</span></h2>
+<p>I worked mostly in collections (3 bugs). I still need to get it to support showing viewport hidden collections though. Other than that preparing and running the biweekly and some triaging.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T70080: Newly created objects not visible with local collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3142ae19d22">3142ae19d2</a>.</li>
+<li>Fix T70046: Linked instanced collections not working with local collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0dd83b385ec">0dd83b385e</a>.</li>
+<li>Make new objects (from enabled collections or append) visible to local views <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8cb8853ebcf">8cb8853ebc</a>.</li></ul>
+<h2><span class="mw-headline" id="September_16_-_20">September 16 - 20</span></h2>
+<p>First pass on the " Blender 2.8x Release Cycle" blog post, finished and moved to the wiki the <a href="../../Process/Bug_Reports/Triaging_Playbook.html" title="Process/Bug Reports/Triaging Playbook">Bug Triaging Playbook</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/p/dfelinto/">tracker</a>.
+</p><p>Working in the tracker lead to the "<a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-September/050198.html">Bugs, Triaging and Bcon2</a>" bf-committers. The goal was to report the status of our tracker, and guide our developers on the decision making process of closing a bug, work on it, ...
+</p>
+<h2><span class="mw-headline" id="September_9_-_13">September 9 - 13</span></h2>
+<p>Mainly a coordination week: Wrote Google Summer of Code report, had the second round of biweekly, removed bf-regression tag, and organized/wrote the initial pass on a "Blender Bug Triaging Playbook". 
+</p><p>As for coding I finished (again&#160;;)) the "Per-Viewport Collection Visibility" patch (D5611), and worked in the tracker with triaging (though that lead me into the Playbook work, so didn't close many reports).
+</p>
+<dl><dt><b>Google Summer of Core report</b></dt></dl>
+<ul><li><a rel="nofollow" class="external free" href="https://code.blender.org/?p=3814">https://code.blender.org/?p=3814</a></li></ul>
+<dl><dt><b>Patch finished</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5611">Per-Viewport Collection Visibility</a></li></ul>
+<h2><span class="mw-headline" id="September_2_-_6">September 2 - 6</span></h2>
+<p>Reviewed the OpenXR branch (<a rel="nofollow" class="external text" href="https://developer.blender.org/D5537">D5537</a>), once my concerns are addressed, it should be ready for a final pass by Brecht or Sergey. I believe we may merge it in time for 2.81. Also spent some time inconclusively trying to fix a stereo/side-by-side bug (<a rel="nofollow" class="external text" href="http://developer.blender.org/T68796">#68796</a>).
+</p><p>Blender 2.81 house cleaning: BCon1 ends next week, so I tagged all "Super Important" tasks to the <a rel="nofollow" class="external text" href="https://developer.blender.org/project/board/88">2.81 milestone</a>, and the ones that won't be ready in time, set to 2.82 and lowered their priority in their respective modules.
+</p><p>Finally a few more development management tasks were created:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T69422">#69422</a>: Canned responses for bug triaging.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T69421">#69421</a>: Allow tasks to be read-only by public</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T69411">#69411</a>: Update release cycle images.</li></ul>
+<h2><span class="mw-headline" id="August_26_-_30">August 26 - 30</span></h2>
+<p>We now have "development management" as an official module - wiki (<a href="../../Modules.html" title="Modules">1</a>, <a href="../../Modules/DevelopmentManagementTasks.html" title="Modules/DevelopmentManagementTasks">2</a>), <a rel="nofollow" class="external text" href="https://developer.blender.org/tag/development_management/">tag</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/T69298">module page</a>). Now it should be more clear for the other developers who is responsible for each area and what we are working on (we still need to add more tasks to it). And we finally have a tag for every top module, as well as a module page for all (VFX &amp; Video was missing one).
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a href="../../File:Dev-management.jpg.html" class="image"><img alt="Dev-management.jpg" src="../../../w/images/thumb/3/39/Dev-management.jpg/800px-Dev-management.jpg" width="800" height="168" class="thumbimage" srcset="../../../w/images/thumb/3/39/Dev-management.jpg/1200px-Dev-management.jpg 1.5x, ../../../w/images/3/39/Dev-management.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Dev-management.jpg.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p><br />
+There was also a meeting about Grease Pencil integration in the video editor (Matias, Daniel, Antonio, Pablo, William, Richard and me). The Grease Pencil team will present a proposal for a (not so) new concept of a project datablocks. There was talk about something similar in the past for Blender, but GreasePencil may be able to deliver our first solid use case for this.
+</p><p><br />
+And we had the first biweekly this week. Most developers were happy to have a moment to report their progress and for feedback. But we will need to work on the details for the next one (for instancing, developers working in the studio are already in too many mandatory meetings for us to add yet another one - Monday dev meeting, Tuesday kick-off, Friday weekly.
+</p><p><br />
+I finished the <a rel="nofollow" class="external text" href="https://developer.blender.org/D5611">Per-Viewport Collection Visibility</a> patch, which is now waiting for review.
+</p><p><br />
+And we kicked off the <a href="../../Mentorship.html" title="Mentorship">Mentorship</a> program with Campbell implementing it for two areas/members.
+</p><p><br />
+</p>
+<dl><dt><b>Patch waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5611">Per-Viewport Collection Visibility</a></li></ul>
+<h2><span class="mw-headline" id="August_19_-_23">August 19 - 23</span></h2>
+<p>The main task this week was to organize the modules tasks. We decided to wait on phabricator changes to update tags and workboards as per the <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050156.html">modules and projects reorganization proposal</a> from last week. That said over 50 new tasks were created and added to the modules main page.
+</p><p><i>"This should help us all to prioritize our work, to give everyone a big picture of where we want to move, and to welcome new developers to get involved in projects that are already in our sight."</i>
+</p><p>I also talked with Campbell Barton and Francesco Siddi. And started working in the per-viewport collection visibility.
+</p>
+<dl><dt><b>New tasks for the modules</b></dt></dl>
+<p>The complete list and email to <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050175.html">bf-commiters</a>.
+</p>
+<ul><li>User Interface: 2</li>
+<li>Mesh Modeling: 8</li>
+<li>Sculpt, Paint &amp; Texture: 7</li>
+<li>Animation: 10</li>
+<li>Render &amp; Cycles: 4</li>
+<li>Data, Assets &amp; I/O: 11</li>
+<li>Python &amp; Add-ons: 2</li>
+<li>Nodes &amp; Physics: 2</li>
+<li>Platforms, Builds &amp; Tests: 2</li>
+<li>EEVEE &amp; Viewport: 8</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Multi-View user interface minor tweak <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/662d94e020f">662d94e020</a>.</li></ul>
+<h2><span class="mw-headline" id="August_12_-_16">August 12 - 16</span></h2>
+<p>This week I helped review the <a rel="nofollow" class="external text" href="https://developer.blender.org/D5388">GSoC Outliner branch</a>, finished the timetable of currently hired developers (not shared publicly yet), and fixed two interesting bugs - an issue with text scale to fit and an "Unbreak Now" crash when changing editors to property editor (technically introduced in May&#160;:/).
+</p><p>Besides a few meetings with the team:
+</p>
+<ul><li>Philipp Oeser - 1:1, bug tracker process</li>
+<li>Sebastian Parborg - 1:1, bug tracker and areas of interest</li>
+<li>William Reynish - <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050148.html">decision process</a></li>
+<li>Daniel Pepeland - state of MPX / VR project</li>
+<li>Julian Eisel - vision of VR and review of his kickoff doc for big picture</li></ul>
+<dl><dt><b>Docs / Meetings Notes</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050139.html">BF coordination meeting notes - 2019.08.12</a></li>
+<li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050148.html">Design process meeting notes - 2019.08.13</a></li>
+<li><a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-August/050156.html">Modules and projects (tags) reorganization proposal</a></li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T68705: Changing any editor to the properties crashes Blender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cbd1739004f">cbd1739004</a>.</li>
+<li>Fix T68658: Text offset makes scale to fit not to work <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb7ead2e3b6">cb7ead2e3b</a>.</li></ul>
+<h2><span class="mw-headline" id="August_5_-_9">August 5 - 9</span></h2>
+<p>Meeting with Nathan Letwory to catch up, meeting with Julian Severin about the OpenXR project, video chat with Pablo Dobarro and Richard Antalík.
+</p><p>I also started to build a timetable of the currently hired developers, to make it easy for people to plan meetings and communicate.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Hours-wiki.jpg.html" class="image"><img alt="Hours-wiki.jpg" src="../../../w/images/thumb/8/85/Hours-wiki.jpg/300px-Hours-wiki.jpg" width="300" height="145" class="thumbimage" srcset="../../../w/images/thumb/8/85/Hours-wiki.jpg/450px-Hours-wiki.jpg 1.5x, ../../../w/images/thumb/8/85/Hours-wiki.jpg/600px-Hours-wiki.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Hours-wiki.jpg.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>Finally here is my write up of OpenXR topics I sent to <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/gsoc-2019-core-support-of-virtual-reality-headsets-through-openxr/7614">Julian Severin</a>:
+</p>
+<h3><span id="Post-Siggraph_OpenXR_/_Blender_thoughts"></span><span class="mw-headline" id="Post-Siggraph_OpenXR_.2F_Blender_thoughts">Post-Siggraph OpenXR / Blender thoughts</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> 
+I don&#39;t think they are to be tackled by the Google Summer of Code project
+(they could be since they all fit within backend / infrastructure support).
+Either way we need to be sure supporting them doesn&#39;t come as a surprise down the line.
+
+
+OpenXR vendor extensions
+-------------------------------------
+* It shouldn&#39;t be too hard in the future (as in, the system should
+allow that without much hassle) to support vendor-specific extensions.
+* For example, Varjo&#39;s HMD requires 4 renders in total to provide a
+20/20 vision for the main focal point.
+
+
+Frontal cameras
+----------------------
+* Part of the core OpenXR implementation is the compositing to combine
+the frontal cameras with the VR set.
+* Example, user may want a mask (e.g., a sphere) to compose keyboard +
+monitor + mouse + self with VR set.
+* Even if custom masks are beyond the scope here, parametric ones
+(cube, sphere, [obj]) should already prove this possible.
+
+
+See-through headsets (mixed reality)
+-------------------------------------------------
+* Use case, user models a car, while the car is on her desk.
+* Streaming of the data may be outside the scope of Blender (there
+must be 3rd party solutions for that), but we should be able to work
+with MR all the same.
+* This also highlights that we need to be able to support scene
+scale/position/orientation per viewport/scene even. If I remember
+correctly OpenXR already accounts for that.
+
+
+User interaction
+---------------------
+* Gestures, controllers, ... these inputs should be mappeable by the user.
+* Core functions like teleport should be presented as options, but we
+also operators (like keymaps).
+* Non-gesture inputs are more tricky to implement (e.g., so you can
+sculpt), but really important as well.
+</pre></div>
+<h2><span class="mw-headline" id="July_22_-_August_2">July 22 - August 2</span></h2>
+<p>Away - vacation + Siggraph.
+</p>
+<h2><span class="mw-headline" id="July_15_-_19">July 15 - 19</span></h2>
+<p>I focused on bug-fixes and tracker, in support to the upcoming release candidate week.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T66948">#66948</a>: Outliner - collections/objects with wrong active state <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6b7ee2a1e8">a6b7ee2a1e</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T64312">#64312</a>: Selection inconsistencies when switching collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bfa6cb3a7d9">bfa6cb3a7d</a>.</li>
+<li>Edge Slide: Fix multi-object for loop early exit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d90201aee21">d90201aee2</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T67078">#67078</a>: Crash with vertex slide and multi-objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ca302cb0cb">5ca302cb0c</a>.</li></ul>
+<h2><span class="mw-headline" id="July_8_-_12">July 8 - 12</span></h2>
+<p>A week full of variety:
+</p>
+<ul><li>Bug fixes (text overflow, selection evaluation, stereo 3d quadbuffer, multi-object up constraint).</li>
+<li>Coordination meetings (notes on bf-committers).</li>
+<li>Small manual update (fonts &gt; layout images).</li>
+<li>Regular tracker work (another round of design iteration in Snap tools (<a rel="nofollow" class="external text" href="http://developer.blender.org/T66484">#66484</a>) and few replies here and there.</li></ul>
+<p>I expect most of the coordination duties to start only in August. But next week we will have our 4th coordination meeting where we get to roles and tasks Brecht wants to delegate.
+</p>
+<dl><dt><b>Patch Waiting for Review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5246">Fix T66614: Text objects: Truncate overflow for non-top aligned text</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5243">Fix T64312: Selection inconsistencies when switching collections</a>.</li></ul>
+<dl><dt><b>Manual</b></dt></dl>
+<ul><li>Updated images on <a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/dev/modeling/texts/layout.html">Texts ➜ Layout</a>.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T66530: set_stereo_3d (pageflip) exists Blender <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d3e1782abc3">d3e1782abc</a>.</li>
+<li>Fix T66627: Multiobject Edit UV constraint to image bounds <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fde88ad9d2f">fde88ad9d2</a>.</li></ul>
+<dl><dt><b>Coordination</b></dt></dl>
+<ul><li>Coordination Monday meeting <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-July/050032.html">notes</a>.</li>
+<li>Coordination Friday meeting <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-July/050051.html">notes</a>.</li></ul>
+<h2><span class="mw-headline" id="July_1_-_5">July 1 - 5</span></h2>
+<p>This week was spent in meetings (3 in total), writing a proposal for the snap tools project (<a rel="nofollow" class="external text" href="http://developer.blender.org/T66484">#66484</a> and a bit of coding. Coding was a regression from 2.7 on cycles baking and a low hanging fruit regarding making duplicated real and the outliner.
+</p>
+<ul><li>Snap tools meeting write up [<a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-July/050020.html">bf-committers</a>]</li>
+<li>Snap tools proposal: <a rel="nofollow" class="external text" href="http://developer.blender.org/T66484">#66484</a></li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T66327 2/2: Make instance real does not clear collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/784121d62ab">784121d62a</a>.</li>
+<li>Fix T66327 1/2: Outliner dupli empty is shown as collection when a different duplitype <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/68c39e2b411">68c39e2b41</a>.</li>
+<li>Fix T63302: Crash when baking normals from selected to active with no cage <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/50ccbe6bb23">50ccbe6bb2</a>.</li></ul>
+<h2><span class="mw-headline" id="June_24_-_28">June 24 - 28</span></h2>
+<p>Bug fixes included outliner drawing issues to display children of "hidden" objects (e.g., when filtering only selected) and an issue of objects stuck in non-object mode. Besides regular tracker work like <a rel="nofollow" class="external text" href="http://developer.blender.org/T63302">#63302</a> (simplifying report) and <a rel="nofollow" class="external text" href="http://developer.blender.org/T66132">#66132</a> (nailing the issue).
+</p><p>I also decided to do an test overview of our Python templates - we had broken samples, outdated tooltip, console warnings and bad behaviour (gizmo going opposite direction to mouse).
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Python Templates: Small fix for gizmo custom geometry <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f5e0ae655e5">f5e0ae655e</a>.</li>
+<li>Python Templates: Update Custom Nodes tooltip <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/30d65c326aa">30d65c326a</a>.</li>
+<li>Python Templates: Silence _MT_ warning in pie menu template <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0519bb584bb">0519bb584b</a>.</li>
+<li>Python Templates: Fix Operator Mesh Add <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/da25748be7e">da25748be7</a>.</li>
+<li>Fix T65263: Outliner doesn't display selected object if parent not selected <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/40a1c671655">40a1c67165</a>.</li>
+<li>Partial fix to T66126: Non-Active Grease Pencil object stuck in drawmode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7037ff92044">7037ff9204</a>.</li>
+<li>Fix T65999: Crash when disabling an addon while its panel is visible <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6d2f9ffd0d">a6d2f9ffd0</a>.</li></ul>
+<h2><span class="mw-headline" id="June_17_-_21">June 17 - 21</span></h2>
+<p>I worked in the collections and view layer pages in the manual. Some of the work was to bring what we had (graphs and text) in the <a rel="nofollow" class="external text" href="https://code.blender.org/2017/09/view-layers-and-collections/">code.blender blog</a> into the manual, and update accordingly. I also did a first pass in the panel to get rid of the old layers.
+</p><p>Besides I worked in a <a rel="nofollow" class="external text" href="https://developer.blender.org/D5116">regression crash</a> and finally managed to work in the <a rel="nofollow" class="external text" href="https://developer.blender.org/D5118">collection UI in the viewport</a>. We haven't yet solved how to display hierarchy there, as well as to make the 1-10 beaviour sane. I'm  yet to hear from other developers, but I'm happy with the result so far.
+</p><p><a href="../../File:Viewport-collection-ui.gif.html" class="image"><img alt="Viewport-collection-ui.gif" src="../../../w/images/7/70/Viewport-collection-ui.gif" width="234" height="304" /></a>
+</p>
+<dl><dt><b>Manual</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/dev/scene_layout/collections/index.html">Collections</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/dev/scene_layout/view_layers/introduction.html">View Layers</a>.</li></ul>
+<dl><dt><b>Patch Waiting for Review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5116:">Fix T65999: Crash when disabling an addon while its panel is visible</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D5118:">Collections viewport UI: show only non-excluded and hierarchy depth</a>.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Rename: Save custom Studio light &gt; Save Custom Studio Light <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dbd3d764474">dbd3d76447</a>.</li>
+<li>Move to Collection: Fix tooltip <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e73647bf5b4">e73647bf5b</a>.</li></ul>
+<h2><span class="mw-headline" id="June_10_-_14">June 10 - 14</span></h2>
+<p>I started this week getting my pipeline for editing the manual up and running. My original pipeline involved live-editing in vim, however it was out (<a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-docboard/2014-September/004569.html">2014</a>) and many things changed since. So I gave up on it and found peace in a <a rel="nofollow" class="external text" href="https://lists.blender.org/pipermail/bf-committers/2019-June/049995.html">vs-code centric pipeline</a>.
+</p><p>This aside I worked mostly in the Outliner manual page (committed), and in the tracker. I really only fixed a simple bug (measure addon), while I spent more time there assigning, reproducing and closing reports.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T65795: MeasureIt addon: measure disappear when I exclude collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dccf8a46">dccf8a46</a>.</li>
+<li>Fix T65641: Move to collection - arrow keys work in the opposite direction <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f51de2246c7">f51de2246c</a> by mano-wii.</li></ul>
+<dl><dt><b>Manual writing within vs code</b></dt></dl>
+<div class="center"><div class="floatnone"><a href="../../File:Outliner-editing.png.html" class="image"><img alt="Outliner-editing.png" src="../../../w/images/thumb/1/11/Outliner-editing.png/800px-Outliner-editing.png" width="800" height="450" srcset="../../../w/images/thumb/1/11/Outliner-editing.png/1200px-Outliner-editing.png 1.5x, ../../../w/images/thumb/1/11/Outliner-editing.png/1600px-Outliner-editing.png 2x" /></a></div></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="June_3_-_7">June 3 - 7</span></h2>
+<p>Fixed outliner bugs (crash and drawing), improved the behaviour of the 1-20 operator (still wants to improve that further) and fixed an issue with files saved in edit mode in some obscure corner cases.
+</p><p>I also spent time investigating an issue with tools and multi-windows (<a rel="nofollow" class="external text" href="http://developer.blender.org/T63694">#63694</a>). I was able to identify what is the issue, and Campbell suggested a plan of action. I haven't tackled it though.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T65420: Crash in file saved with edit mesh <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6a155646823">6a15564682</a>.</li>
+<li>Collections: Never change the collection views visibility when unhiding it <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e70428c80e4">e70428c80e</a>.</li>
+<li>Tooltip: Fix use_preview_range tooltip (OpenGL &gt; View) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dd81efa4a34">dd81efa4a3</a>.</li>
+<li>Fix T65502: Crash when moving Collection into disabled Collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e80cbdac331">e80cbdac33</a>.</li>
+<li>Outliner: Fix drawing of collection with disabled parent <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa24ec41aaf">fa24ec41aa</a>.</li>
+<li>Fix T65448 - Outliner - Show all inside in disabled collection crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c39a8657be6">c39a8657be</a>.</li></ul>
+<h2><span class="mw-headline" id="May_27_-_31">May 27 - 31</span></h2>
+<p>Bug fixing - work in collection like preventing users from setting master collection flags, fix stats info for instances, crash on selection. I also spent some time on the tracker itself, testing bugs, replying, closing.
+</p><p>Besides, walk mode is now using the fancy icons for its shortcuts. It is nice to expand its usage beyond the tools only.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Status_bar_-_walk_mode.png.html" class="image"><img alt="Status bar - walk mode.png" src="../../../w/images/thumb/6/69/Status_bar_-_walk_mode.png/300px-Status_bar_-_walk_mode.png" width="300" height="8" class="thumbimage" srcset="../../../w/images/thumb/6/69/Status_bar_-_walk_mode.png/450px-Status_bar_-_walk_mode.png 1.5x, ../../../w/images/thumb/6/69/Status_bar_-_walk_mode.png/600px-Status_bar_-_walk_mode.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Status_bar_-_walk_mode.png.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T65330: Blender crash when double click on face <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5b813301a8">d5b813301a</a>.</li>
+<li>Fix T64990: Isolate collection wrong reaction <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6f9518f2438">6f9518f243</a>.</li>
+<li>Fix Outliner: New collections are hidden <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d0258abdd7d">d0258abdd7</a>.</li>
+<li>Update Python GPU example to latest depsgraph API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c01e43d024d">c01e43d024</a>.</li>
+<li>Walk mode: Enable fancy icons instead of text for shortcuts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6eebeb577db">6eebeb577d</a>.</li>
+<li>Fix T65278: Stats info and instancing "misinformation" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db67a17d17e">db67a17d17</a>.</li>
+<li>Fix T63173: Dragging hidden collection inside a visible one unhides it <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4ed6b891d59">4ed6b891d5</a>.</li>
+<li>Fix addon (btrace) to use latest depsgraph API <a rel="nofollow" class="external text" href="https://developer.blender.org/rBA178738ed">178738ed</a>.</li></ul>
+<h2><span class="mw-headline" id="May_20_-_24">May 20 - 24</span></h2>
+<p>Bug fixing week, and API cleanup.
+</p><p>For the API it included using the new <code>toggle</code> keyword for the new visibility panel, and remove _base_ from users entirely (simplifying scripts that need to override context).
+</p><p>For bugfixing there was some bugs I introduced in recent commits, but also a sequencer crash, auto-preference saving for theme reset and a few outliner/collection related issues.
+</p>
+<dl><dt><b>Patch Waiting for Review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4945:">Fix T63173: Dragging hidden collection inside a visible one unhides it</a>.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Update "Overriding Context" API example <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/caf52e3779a">caf52e3779</a>.</li>
+<li>Fix T65094: Sequencer crashes blender when scene strip has NULL scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d44184c85c">7d44184c85</a>.</li>
+<li>Sequencer: Fix UI when scene strip has a NULL scene <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0cb2c20ada2">0cb2c20ada</a>.</li>
+<li>Outliner: Fix selecting collections in view layer selecting original objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5df4c0a4693">5df4c0a469</a>.</li>
+<li>Outliner: Set View Layer as the default mode for new outliners <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b60c43aabde">b60c43aabd</a>.</li>
+<li>Fix T65028: Eye icon not toggle-able from the outliner for linked objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d8f096406b2">d8f096406b</a>.</li>
+<li>Fix T65060: Outliner - Sort Alphabetically checkbox is not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/be03e678e31">be03e678e3</a>.</li>
+<li>Fix T65059: Crash in empty scenes for context _bases functions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fae58962493">fae5896249</a>.</li>
+<li>Visibility panel: Use "toggle" keyword <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6539cf31992">6539cf3199</a>.</li>
+<li>Remove "_base*" from context API <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0910932e71d">0910932e71</a>.</li>
+<li>Fix: Reset to the default theme not auto-saved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9be7c831f67">9be7c831f6</a>.</li>
+<li>UI: add Visibility panel for objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/785ff8e1d2e">785ff8e1d2</a>.</li>
+<li>Fix build <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/301806a0676">301806a067</a>.</li></ul>
+<dl><dt><b>Bugs reported</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://developer.blender.org/T65093">#65093</a>: ASAN crash when using navigation (orbiting) gizmo.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T65080">#65080</a>: Assert on editor split while dragging to resize.</li>
+<li><a rel="nofollow" class="external text" href="http://developer.blender.org/T65095">#65095</a>: Hiding a nested collection doesn't immediately update its parent instances in the scene.</li></ul>
+<h2><span class="mw-headline" id="May_13_-_17">May 13 - 17</span></h2>
+<p>More work on the outliner user interface - graying out states based on hierarchy, better tooltips, and Shift + Click for objects properties.
+</p><p>Also worked on a panel for object visibility settings in the Properties editor. It is a bit tricky/hacky to get this right, but I have a working version waiting for review in [<a rel="nofollow" class="external text" href="https://developer.blender.org/D4889">D4889</a>].
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Object_Visibility_Panel.png.html" class="image"><img alt="Object Visibility Panel.png" src="../../../w/images/8/8a/Object_Visibility_Panel.png" width="402" height="105" /></a></div></div>
+<p><br />
+</p>
+<dl><dt><b>Patch Waiting for Review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4889">Properties Panel: Object Visibility Restrictions</a>.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner: Make restriction icons inactive based on hierarchy value <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3ea703b092">e3ea703b09</a>.</li>
+<li>Set selection column restrict hidden by default <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0255cf81260">0255cf8126</a>.</li>
+<li>Fix icon for outliner temporarily hide <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/70d67de5e5b">70d67de5e5</a>.</li>
+<li>Fix default open outliner restrict columns <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5c8df0a742c">5c8df0a742</a>.</li>
+<li>Fix T64467: Outliner Rename drawing overlapping restriction column + checkbox <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a63be6c6c72">a63be6c6c7</a>.</li>
+<li>Outliner Tooltips Cleanup: Retrict/Allow &gt; Restrict&#160;; set/unset &gt; set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/32c7da1e37c">32c7da1e37</a>.</li>
+<li>T64020: Outliner - implement Shift + Click for objects as well <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/41858a73111">41858a7311</a>.</li>
+<li>Code style cleanup: <code>make format</code> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f4902fa2688">f4902fa268</a>.</li>
+<li>Outliner Restriction: Naming sanitization and icon <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/777a546c0c7">777a546c0c</a>.</li>
+<li>Outliner restriction filter: Unify order <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/903041e1c0e">903041e1c0</a>.</li>
+<li>T64607: Outliner UI Tooltips <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9b80318a284">9b80318a28</a>.</li></ul>
+<h2><span class="mw-headline" id="May_6_-_10">May 6 - 10</span></h2>
+<p>Finished the <a rel="nofollow" class="external text" href="https://developer.blender.org/D4823">outliner visibility changes patch</a>:
+</p>
+<ul><li>Granular restriction visibility toggles.</li>
+<li>Expose layer collection "holdout" and "indirect only".</li>
+<li>Set children (shift+click) fully working.</li>
+<li>Isolate (ctrl+click) fully working, and toggleable (if you try to isolate a collection already isolated it toggles between isolate and "show" all).</li></ul>
+<p><i>Note: We need to define what do we want to do with the non-object visibility icons (e.g., modifier, bones). Right now they are in the same column as viewport visibility, but I suspect we may want to shuffle this around or at least make sure they use the same icons as collecions/objects.</i>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Outliner_options.png.html" class="image"><img alt="Outliner options.png" src="../../../w/images/thumb/c/cb/Outliner_options.png/300px-Outliner_options.png" width="300" height="187" class="thumbimage" srcset="../../../w/images/thumb/c/cb/Outliner_options.png/450px-Outliner_options.png 1.5x, ../../../w/images/c/cb/Outliner_options.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Outliner_options.png.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner Visibility Update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b1af6820015">b1af682001</a>.</li></ul>
+<h2><span class="mw-headline" id="April_29_-_May_4">April 29 - May 4</span></h2>
+<p>Finished and committed the refactor/cleanup in the object/object base flag. Small tweaks (UI) and fix (unlink operator not working for children in outliner). But the core of the work was in the (still local, and work in progress) outliner visibility implementation - <a rel="nofollow" class="external text" href="http://developer.blender.org/T651578">#651578</a>:
+</p><p><a href="../../File:Outliner_enable_(wip).gif.html" class="image"><img alt="Outliner enable (wip).gif" src="../../../w/images/e/e4/Outliner_enable_(wip).gif" width="562" height="486" /></a>
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner: Fix "Unlink" not working for parented objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7277aac728">b7277aac72</a>.</li>
+<li>UI: Collections Visibility panel tweaks <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ab33692bc26">ab33692bc2</a>.</li>
+<li>Cleanup/update comment on flag_legacy values <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d4126238b4b">d4126238b4</a>.</li>
+<li>Fix T63343: Duplicated object is hidden whereas it should not <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1aa093ce9c4">1aa093ce9c</a>.</li>
+<li>Stop using deprecated ob-&gt;flag &amp; SELECT <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ae7db030dab">ae7db030da</a>.</li>
+<li>Remove BKE_scene_object_base_flag_sync_from_object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2d32372c59a">2d32372c59</a>.</li>
+<li>Refactor: Use object select API - ED_object_base_select <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/088d59c3d37">088d59c3d3</a>.</li>
+<li>Grease Pencil: Fix using wrong flag for selecting objects on convert <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c7452f14c5d">c7452f14c5</a>.</li>
+<li>Cleanup: Object base syncing already happening as part of ED_object_base_select <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7388856318f">7388856318</a>.</li></ul>
+<h2><span class="mw-headline" id="April_22_-_26">April 22 - 26</span></h2>
+<p>Fixed and refactored the outliner parent patch which is now committed. Besides I spent some time on a needed refactor on the object and base flags (i.e., getting rid of BKE_scene_object_base_flag_sync_from_object, and sanitize the use of ED_object_base_select). Once this is ready this will fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T63343">#63343</a>, but for now I'm keeping the commits local.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner parenting hierarchy: Sort for children when not a-z sorting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/78f8679cfc6">78f8679cfc</a>.</li>
+<li>Fix T63869: Crash in new outliner show parenting hierarchy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/edff7892927">edff789292</a>.</li>
+<li>Outliner: Show parenting hierarchy in view layer view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f888e65c3e">5f888e65c3</a>.</li>
+<li>Outliner draw: Fix using wrong flag to tag object on visibility change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1ab1d987fa6">1ab1d987fa</a>.</li>
+<li>Rename: Separate: By loose parts &gt; By Loose Parts <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e4e1d257cd">0e4e1d257c</a>.</li></ul>
+<h2><span class="mw-headline" id="April_15_-_19">April 15 - 19</span></h2>
+<p>Tackled two high priority bugs this week: one is fixed (outliner crash depending on selected object); the other is waiting for review <a rel="nofollow" class="external text" href="https://developer.blender.org/D4696">show parent/children in outliner</a>.
+</p><p>Besides that I did some small changes: toggle collection visibility with shift; make outliner bone selection to mimic viewport's multi-object behaviour.
+</p>
+<dl><dt><b>Patches waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4696">Outliner: Show parenting hierarchy in view layer view</a>.</li></ul>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="../../File:Outliner_Collection_and_Parenting.png.html" class="image"><img alt="Outliner Collection and Parenting.png" src="../../../w/images/thumb/8/87/Outliner_Collection_and_Parenting.png/300px-Outliner_Collection_and_Parenting.png" width="300" height="231" class="thumbimage" srcset="../../../w/images/thumb/8/87/Outliner_Collection_and_Parenting.png/450px-Outliner_Collection_and_Parenting.png 1.5x, ../../../w/images/thumb/8/87/Outliner_Collection_and_Parenting.png/600px-Outliner_Collection_and_Parenting.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Outliner_Collection_and_Parenting.png.html" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner: Simplify logic for parent nesting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2a39f2595bf">2a39f2595b</a>.</li>
+<li>Selecting a pose bone in outliner deselect others <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d29bd6c6b7b">d29bd6c6b7</a>.</li>
+<li>Fix T63066: Outliner crash when selecting object being in armature editmode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6151bc4c1f">e6151bc4c1</a>.</li>
+<li>Fix T63204: Toggle collection visibility with shift <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e017d89eae5">e017d89eae</a>.</li></ul>
+<h2><span class="mw-headline" id="March_25_-_April_12">March 25 - April 12</span></h2>
+<p>Time off and code quest home stretching.
+</p>
+<h2><span class="mw-headline" id="March_18_-_22">March 18 - 22</span></h2>
+<p>Stereoscopy drawing fixes (sequencer, viewport camera frame), re-did and committed the fix for cycles update on viewlayer change, fixed objects (un)selected on paste, and missing DEG tag update for hiding curves.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T62815: Camera frame shift issue + stereo frame working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/faecac0b5e1">faecac0b5e</a>.</li>
+<li>Viewport Refactor: Move camera tracking reconstruction in own function <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4015d162df5">4015d162df</a>.</li>
+<li>Silence false positive uninitialized warning <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/820be185bc3">820be185bc</a>.</li>
+<li>Fix warning for uninitialized icon_only <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/243a9254ea5">243a9254ea</a>.</li>
+<li>Fix: VSE preview not showing stereo drawing (unreported) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/74b47e4181d">74b47e4181</a>.</li>
+<li>Fix T58517: Multi-view issues with OpenGL render + scene settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f45cbb26ec">5f45cbb26e</a>.</li>
+<li>Silence warnings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/193b708a486">193b708a48</a>.</li>
+<li>Fix T62348: Cycles - Viewport rendering not update on switching viewlayer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9a49a26eb38">9a49a26eb3</a>.</li>
+<li>Fix T62841: Hidden collection shortcut should be work in edit mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a17df6d91e6">a17df6d91e</a>.</li>
+<li>Fix T61670: Copy -&gt; Paste - Pasted elements are not selected <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0c44b7e177f">0c44b7e177</a>.</li>
+<li>Unify "Hide Selected / Reveal Hidden" operator names <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/540f50a4da6">540f50a4da</a>.</li>
+<li>Fix T62735: hiding curves doesnt hide in viewport <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7cf1b81b3c6">7cf1b81b3c</a>.</li>
+<li>Silence sorted function declaration/const warnings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7255d33dac">b7255d33da</a>.</li></ul>
+<h2><span class="mw-headline" id="March_11_-_15">March 11 - 15</span></h2>
+<p>Mixed bug fixes. Finished the workspace context menu issue, master collection in collection related operators, local view fix for python objects (torus) and hook, unhide all selection issue, armature pose/edit mode issues crash and outliner visibility/depsgraph bug.
+</p>
+<dl><dt><b>Patches waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4528">Fix T62348: Cycles - Viewport rendering not update on switching viewlayer</a>.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Remove object hide_* operators from outliner keymap <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4510f88d00a">4510f88d00</a>.</li>
+<li>Fix T62438: Unhide all doesn't set newly visible objects to selected <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b7d942446f8">b7d942446f</a>.</li>
+<li>Fix T62313 - No way to remove object from master collection in 3d view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/713010bd779">713010bd77</a>.</li>
+<li>Fix T62320: Outliner collection disable not propagating to other view layers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fcffbe1d1b3">fcffbe1d1b</a>.</li>
+<li>Fix: "Jump To Target" showing up in workspace context menu <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2e043c266bf">2e043c266b</a>.</li>
+<li>Fix T62377: Crash hiding Armature in edit mode and switching to pose <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/868a6797e0d">868a6797e0</a>.</li>
+<li>Fix Hook to New Object won't appear in Local View <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e37e105fedb">e37e105fed</a>.</li>
+<li>Fix T62436: New added Torus won't appear in Local View <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9054b39b27c">9054b39b27</a>.</li>
+<li>Silence warning commits <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db5ca11d802">db5ca11d80</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aaa35d10924">aaa35d1092</a>.</li></ul>
+<h2><span class="mw-headline" id="March_4_-_8">March 4 - 8</span></h2>
+<p>Another bug fixing week. I started with some stereo drawing reported regression bugs, got a bit caught up on it (fixed some 2.79 bugs even&#160;:/), and moved to grease pencil pinning. This was severely broken and bit beyond the greasepencil team's expertise (Antonio Vazquez asked to look at this).
+</p><p>I then moved on to fix a workspace high priority bug -<a rel="nofollow" class="external text" href="http://developer.blender.org/T57655">#57655</a>. I end up spending my time preparing the terrain - fixed 2 bugs, submitted patch for 2 more workspace issues - but being able to tackle the bug itself yet.
+</p>
+<dl><dt><b>Patches waiting for review</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4489">Fix T60855: Workspace duplicating - addons filter won't duplicate too</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/D4488">Fix/workaround: "Jump To Target" showing up in workspace context menu</a></li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix active workspace changes when deleting workspace <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a0f2923fd82">a0f2923fd8</a>.</li>
+<li>Fix crash when deleting workspaces too fast <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aa49444c291">aa49444c29</a>.</li>
+<li>Final fix for greasepencil materials assign/select/deselect in edit mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ada9c5bc8f">2ada9c5bc8</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T62349">#62349</a>: Grease Pencil top material list not working <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4ccaf56814a">4ccaf56814</a>.</li>
+<li>Properties Editor: Grease Pencil and pinning fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92d185faebe">92d185faeb</a>.</li>
+<li>Minor UI fix: Disable stereo volume alpha when stereo volume is disabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8eca5c3f7ab">8eca5c3f7a</a>.</li>
+<li>Fix build for Linux systems <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c2ff8735f53">c2ff8735f5</a>.</li>
+<li>Fix stereoscopy convergence plane placement <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b94ec178a20">b94ec178a2</a>.</li>
+<li>Fix stereo plane pass and state <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ec98863e27">0ec98863e2</a>.</li>
+<li>Viewport: Fix stereoscopy volume "wires" not showing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3fc7d51ed3d">3fc7d51ed3</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="http://developer.blender.org/T62118">#62118</a>: Stereo drawing options visible from camera view <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1fef41863b">f1fef41863</a>.</li>
+<li>Fixup for fix for OSX build using a build folder name with spaces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69c8248a1ce">69c8248a1c</a>.</li></ul>
+<h2><span class="mw-headline" id="February_25_-_March_1">February 25 - March 1</span></h2>
+<p>I addressed review comments on the outliner collections duplicate patch, and committed it. Followed by sorted bugs such as:
+</p>
+<ul><li>Grease pencil panel not pinning</li>
+<li>Grease pencil icon not building.</li>
+<li>Delete hierarchy crash.</li>
+<li>OSX build fixup</li>
+<li>Visibility icons drag issue.</li></ul>
+<p>Besides work on tracker, and even reporting a few bugs I ran into.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T62098: Outliner: Delete hierarchy crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d1baed5e3d0">d1baed5e3d</a>.</li>
+<li>Fixup for fix for OSX build using a build folder name with spaces <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42faf52d8bc">42faf52d8b</a>.</li>
+<li>Fix T62025: Outliner and viewport missing update after deleting object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/589d0894722">589d089472</a>.</li>
+<li>Fix T62016: Outliner visibility icons drag behaviour broken <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/92182495da8">92182495da</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/568fa11a040">568fa11a04</a>.</li>
+<li>Outliner: Collections Duplicate - remove original duplicate operator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7d4e1ac727f">7d4e1ac727</a>.</li>
+<li>Outliner: Collection - Duplicate Hierarchy, and Duplicate Linked Hierarchy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e7ea99af1b0">e7ea99af1b</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/619c65a4b33">619c65a4b3</a>.</li>
+<li>Cleanup: Set BKE_key_from_object/_p to take const Object * <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dbab52e4c0d">dbab52e4c0</a>.</li>
+<li>Fix: Grease Pencil data panels not working with pinning <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce104ca8964">ce104ca896</a>.</li>
+<li>Grease Pencil: Strokes Cut icon <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1beada2c62d">1beada2c62</a>.</li>
+<li>Grease Pencil: Silence warning <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d59599afe7">3d59599afe</a>.</li></ul>
+<h2><span class="mw-headline" id="February_18_-_22">February 18 - 22</span></h2>
+<p>This week I worked on a fixup for the visibility unification, physics related bug, regression on filepath handling, regression on collection switching and small cleanups.
+</p><p>Besides that, I have a <a rel="nofollow" class="external text" href="https://developers.blender.org/D4394">patch</a> ready for review, requested by Julien Kaspar on <a rel="nofollow" class="external text" href="http://developer.blender.org/T57064">#57064</a>, that adds Duplicate Hierarchy and Duplicate Linked Hierarchy for the outliner.
+</p>
+<dl><dt><b>Patch ready</b></dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://developers.blender.org/D4394">D4394</a>: Outliner: Collection - Duplicate Hierarchy, and Duplicate Linked Hierarchy.</li></ul>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix: Workbench assert on non-image texture node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/655faca1058">655faca105</a>.</li>
+<li>Cleanup: Remove redundant function call <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e9f738754d1">e9f738754d</a>.</li>
+<li>Fix T55921: Toggling visibility for collections doesn't work in Pose <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b6c61945aed">b6c61945ae</a>.</li>
+<li>Fix T61788: Hidden objects reappear after rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e278b38b921">e278b38b92</a>.</li>
+<li>Fix T61600: Physics properties inactive when appending objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bef82f72d27">bef82f72d2</a>.</li>
+<li>EEVEE Shader comments: Explain why material gets darkened when using mix shader <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e7409d466f">0e7409d466</a>.</li>
+<li>Fix T61696: Filepath buttons not accepting empty values <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c0cbfcd530">6c0cbfcd53</a>.</li></ul>
+<h2><span class="mw-headline" id="February_11_-_15">February 11 - 15</span></h2>
+<p>The main fix of this week was outliner and object data. While fixing the crash, I refactored the logic for outliner and obdata clicking. We now switch the active object, and always go to the edit/pose mode expected. Also addressed the bug with high priority that I was more comfortable with (crash switching workspaces) beside sorted fixes (bake action, rigid body data missing).
+</p><p>Finally we had a design meeting about outliner, collections and visibility. William Reynish wrote notes and an initial proposal here: <a rel="nofollow" class="external text" href="http://developer.blender.org/T61578">#61578</a>.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T61512: Crash switching workspace with fullscreen area <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eff3728db91">eff3728db9</a>.</li>
+<li>Fix T61210: Crash/inconsistency when clicking on obdata in outliner <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b7752fb007">2b7752fb00</a>.</li>
+<li>Fix T61567: Object loose its rigid body data when moving to collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f5ac1f444b6">f5ac1f444b</a>.</li>
+<li>Fix Object &gt; Animation &gt; Bake Action <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/caf89c3de16">caf89c3de1</a>.</li>
+<li>Fix "typo" in show_object_viewport* RNA_def_property_update <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/09b40aa0397">09b40aa039</a>.</li>
+<li>Cleanup: Use ID_IS_LINKED instead of id.lib <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/66c23ea2b4a">66c23ea2b4</a>.</li>
+<li>Fix: objects in outliner cannot be disabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/69f50e6ea98">69f50e6ea9</a>.</li></ul>
+<h2><span class="mw-headline" id="February_4_-_8">February 4 - 8</span></h2>
+<p>I wrapped up and committed the outliner visibility unification. The rest of the week was spent polishing up the visibility functionality:
+</p>
+<pre>* A few bug fixes (not change linked ID data).
+* New functionality (H, Alt+H in the outliner unified for objects and collections).
+* Isolate object.
+</pre>
+<p>A lot of the polishing was based on Julien Kaspar feedback, on behalf of the Blender Animation Studio and William Reynish.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Outliner visibility: Prevent changing linked objects and collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/191b8951f7a">191b8951f7</a>.</li>
+<li>Outliner Visibility: Alt+H operator to unhide all objects and collections <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e04d6794d01">e04d6794d0</a>.</li>
+<li>Outliner Visibility: H operator to hide collection or objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/744223afbf4">744223afbf</a>.</li>
+<li>Outliner visibility: Ctrl to isolate object <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3f537f30e6b">3f537f30e6</a>.</li>
+<li>Fix T61287: Object restrict viewport ignored in instanced collection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02581a7ef81">02581a7ef8</a>.</li>
+<li>Remove no-longer needed function <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5ed27372ab4">5ed27372ab</a>.</li>
+<li>Fixup for outliner visibility not changing disable state <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/db231e87fc8">db231e87fc</a>.</li>
+<li>Outliner visibility: Respect original viewport enable/disable state <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/766741b0aa8">766741b0aa</a>.</li>
+<li>Outliner visibility unification: Prevent master collection visibility to change <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3a3782d7fa">e3a3782d7f</a>.</li>
+<li>Outliner visibility unification: Implement 3 levels of viewport visibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/897e047374f">897e047374</a>.</li>
+<li>Outliner: eyes for collection affect collection visibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3f7f0c3ebd">e3f7f0c3eb</a>.</li>
+<li>Outliner: Gray out collections only when they are invisible <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dc7f3123266">dc7f312326</a>.</li>
+<li>Per view-layer collection visibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d984aa1503">3d984aa150</a>.</li>
+<li>Fix T61204: Can't select Camera in stereoscopy mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d1ef6be4a77">d1ef6be4a7</a>.</li></ul>
+<h2><span class="mw-headline" id="January_28_-_February_1">January 28 - February 1</span></h2>
+<p>Besides some minor triaging on tracker, I finished the <a rel="nofollow" class="external text" href="https://developer.blender.org/D4011">outliner visibility patch</a>.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Outliner_Collection_Visibility_Menu.png.html" class="image"><img alt="" src="../../../w/images/thumb/9/96/Outliner_Collection_Visibility_Menu.png/300px-Outliner_Collection_Visibility_Menu.png" width="300" height="163" class="thumbimage" srcset="../../../w/images/thumb/9/96/Outliner_Collection_Visibility_Menu.png/450px-Outliner_Collection_Visibility_Menu.png 1.5x, ../../../w/images/thumb/9/96/Outliner_Collection_Visibility_Menu.png/600px-Outliner_Collection_Visibility_Menu.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Outliner_Collection_Visibility_Menu.png.html" class="internal" title="Enlarge"></a></div>Outliner collection visibility context menu</div></div></div>
+<p>Including&#160;:
+</p>
+<pre>* Not rebuild depsgraph on visibility change (only on disable collections).
+* Expose all options (isolate, hide/show, hide/show hierarchy, enable/disable) to a context menu in outliner.
+* Support drag &amp; drop
+</pre>
+<p>It should be merged as soon as it is reviewed.
+</p>
+<h2><span class="mw-headline" id="January_21_-_25">January 21 - 25</span></h2>
+<p>More bug fixes on stereo (Cycles rendering, image editor), freestyle rendering and small UI polishing. Apart from that I spent the time working on the <a rel="nofollow" class="external text" href="https://developer.blender.org/D4011">outliner visibility patch</a>.
+There are still a few things missing, which I want to address the following week. But this week I tackled:
+</p>
+<pre>* From review: Ctrl + Click to isolate collection
+* From review: Alt + Click to disable visibility
+* From review: hide &gt; disable
+</pre>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Fix T58142: Crash when use Cycles to render stereoscopy <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/699b49e8e9d">699b49e8e9</a>.</li>
+<li>Fix Freestyle (ASAN detected) crash <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fa1d5586a1a">fa1d5586a1</a>.</li>
+<li>Fix T60775: Stereo drawing in image editor broken (shows only right eye) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d96f1fcd394">d96f1fcd39</a>.</li>
+<li>EEVEE UI: Render/Viewport Samples - follow Cycles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/178299278b7">178299278b</a>.</li></ul>
+<h2><span class="mw-headline" id="January_14_-_18">January 14 - 18</span></h2>
+<p>Week off.
+</p>
+<h2><span class="mw-headline" id="January_7_-_11">January 7 - 11</span></h2>
+<p>Stereoscopy 3d drawing is fixed in the viewport, and the stereo 3d support elements are back:
+</p>
+<pre>* Cameras
+* Convergence Plane / Alpha
+* Stereoscopy Volume / Alpha
+</pre>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Stereoscopy_Viewport_Blender_2.80.png.html" class="image"><img alt="Stereoscopy Viewport Blender 2.80.png" src="../../../w/images/thumb/5/58/Stereoscopy_Viewport_Blender_2.80.png/300px-Stereoscopy_Viewport_Blender_2.80.png" width="300" height="124" class="thumbimage" srcset="../../../w/images/thumb/5/58/Stereoscopy_Viewport_Blender_2.80.png/450px-Stereoscopy_Viewport_Blender_2.80.png 1.5x, ../../../w/images/thumb/5/58/Stereoscopy_Viewport_Blender_2.80.png/600px-Stereoscopy_Viewport_Blender_2.80.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Stereoscopy_Viewport_Blender_2.80.png.html" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Initially what was broken was simply the drawing of the stereoscopy 3d for converging cameras. This issue was introduced with copy-on-write.
+With this fixed and out of the way, I decided to port the viewport stereo element drawings since we never prioritized that.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Viewport: Stereoscopy drawing is back <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ce3475f7479">ce3475f747</a>.</li>
+<li>BKE_camera_multiview_model_matrix: Add _scaled version <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ba89b69ebdb">ba89b69ebd</a>.</li>
+<li>Drawing API: shgroup_instance and shgroup_instance_alpha clarification <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9f6e09bd8c1">9f6e09bd8c</a>.</li>
+<li>Fix T60328: Stereoscopy Convergence Plane broken <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0bd20aa7df2">0bd20aa7df</a>.</li>
+<li>Revert "Fix T60044: Sculpting brush is not visible on file load" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/583c3213347">583c321334</a>.</li></ul>
+<h2><span class="mw-headline" id="January_1_-_4">January 1 - 4</span></h2>
+<p>Bug fixing and tracker. More triaging than I was hoping to, but I ran out of confirmed bugs assigned to me.
+</p>
+<dl><dt><b>Commits</b></dt></dl>
+<ul><li>Silence warning <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bfac8a429c7">bfac8a429c</a>.</li>
+<li>Partial fix T60148: EEVEE hangs when anamorphic bokeh is too low <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1753177ad8a">1753177ad8</a>.</li>
+<li>EEVEE DoF: Fix runtime error: division by zero when blades was 0 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bdbe4844284">bdbe484428</a>.</li>
+<li>Fix T60044: Sculpting brush is not visible on file load <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4d8ed937f22">4d8ed937f2</a>.</li>
+<li>Fix poll function for SelectPattern operator <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c862c14339e">c862c14339</a>.</li>
+<li>Fix T60030: Select pattern fails with pose bones <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6fdfa556678">6fdfa55667</a>.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Previous_weekly_reports">Previous weekly reports</span></h2>
+<p><a href="2018.html" title="User:Dfelinto/Reports/2018">2018 Weekly Reports</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240111170424
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.649 seconds
+Real time usage: 0.708 seconds
+Preprocessor visited node count: 9736/1000000
+Preprocessor generated node count: 5977/1000000
+Post‐expand include size: 51462/2097152 bytes
+Template argument size: 15196/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1881/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  469.702      1 -total
+ 91.04%  427.602    186 Template:GitCommit
+ 24.87%  116.801    186 Template:GitCommit/PhabricatorParseDeprecated
+ 18.19%   85.423    186 Template:GitCommit/PhabricatorParse
+  1.46%    6.853     33 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4322-0!canonical and timestamp 20240111170423 and revision id 13906
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;oldid=13906">https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;oldid=13906</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 23 December 2019, at 19:35.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Dfelinto/Reports/2019.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Dfelinto/Reports/2019" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Dfelinto.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Dfelinto.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Dfelinto.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;oldid=13906" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Dfelinto/Reports/2019&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.649","walltime":"0.708","ppvisitednodes":{"value":9736,"limit":1000000},"ppgeneratednodes":{"value":5977,"limit":1000000},"postexpandincludesize":{"value":51462,"limit":2097152},"templateargumentsize":{"value":15196,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1881,"limit":5000000},"timingprofile":["100.00%  469.702      1 -total"," 91.04%  427.602    186 Template:GitCommit"," 24.87%  116.801    186 Template:GitCommit/PhabricatorParseDeprecated"," 18.19%   85.423    186 Template:GitCommit/PhabricatorParse","  1.46%    6.853     33 Template:BugReport"]},"cachereport":{"timestamp":"20240111170424","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84453feb7f1cb918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

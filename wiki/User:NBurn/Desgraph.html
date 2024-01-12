@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Source/Depsgraph - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Source/Depsgraph","wgTitle":"Source/Depsgraph","wgCurRevisionId":25160,"wgRevisionId":25160,"wgArticleId":491,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Source/Depsgraph","wgRelevantArticleId":491,"wgRequestId":"2d943068ae21f57c06c8b6d4","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"User:NBurn/Desgraph","wgWikiEditorEnabledModules":[],"wgInternalRedirectTargetUrl":"/wiki/Source/Depsgraph"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=ext.pygments|mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="../Source/Depsgraph.html"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Source_Depsgraph rootpage-Source skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="../Source/Depsgraph.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=Source%2FDepsgraph" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../Contact.html">Communication</a></li><li id="n-Modules"><a href="../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Desgraph.html#Blender_2.8:_Dependency_Graph"><span class="tocnumber">1</span> <span class="toctext">Blender 2.8: Dependency Graph</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Desgraph.html#Introduction"><span class="tocnumber">1.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Desgraph.html#Overview"><span class="tocnumber">1.2</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Desgraph.html#Dependency_graph_ownership"><span class="tocnumber">1.3</span> <span class="toctext">Dependency graph ownership</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Desgraph.html#Generated_data_and_copy_on_write"><span class="tocnumber">1.4</span> <span class="toctext">Generated data and copy on write</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="Desgraph.html#What_are_the_data_structures_for_generated_data.3F"><span class="tocnumber">1.4.1</span> <span class="toctext">What are the data structures for generated data?</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="Desgraph.html#When_is_the_generated_data_created.3F"><span class="tocnumber">1.4.2</span> <span class="toctext">When is the generated data created?</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="Desgraph.html#How_to_avoid_heavy_geometry_duplication.3F"><span class="tocnumber">1.4.3</span> <span class="toctext">How to avoid heavy geometry duplication?</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="Desgraph.html#How_about_data_compression_inside_of_the_generated_datablock.3F"><span class="tocnumber">1.4.4</span> <span class="toctext">How about data compression inside of the generated datablock?</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="Desgraph.html#Mesh_objects"><span class="tocnumber">1.4.5</span> <span class="toctext">Mesh objects</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="Desgraph.html#Non-mesh_objects"><span class="tocnumber">1.4.6</span> <span class="toctext">Non-mesh objects</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="Desgraph.html#Copy_on_write_for_non-ID_data"><span class="tocnumber">1.4.7</span> <span class="toctext">Copy on write for non-ID data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="Desgraph.html#Integration_with_render_engines"><span class="tocnumber">1.5</span> <span class="toctext">Integration with render engines</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="Desgraph.html#Per-render_engine_data"><span class="tocnumber">1.5.1</span> <span class="toctext">Per-render engine data</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="Desgraph.html#Iterators"><span class="tocnumber">1.5.2</span> <span class="toctext">Iterators</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="Desgraph.html#Integration_with_layers.2Fcollections"><span class="tocnumber">1.6</span> <span class="toctext">Integration with layers/collections</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="Desgraph.html#Overrides"><span class="tocnumber">1.6.1</span> <span class="toctext">Overrides</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="Desgraph.html#Invisible_objects"><span class="tocnumber">1.6.2</span> <span class="toctext">Invisible objects</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="Desgraph.html#Local_view"><span class="tocnumber">1.6.3</span> <span class="toctext">Local view</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="Desgraph.html#Streaming"><span class="tocnumber">1.7</span> <span class="toctext">Streaming</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="Desgraph.html#Data_masks"><span class="tocnumber">1.8</span> <span class="toctext">Data masks</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="Desgraph.html#Duplication_system"><span class="tocnumber">1.9</span> <span class="toctext">Duplication system</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="Desgraph.html#Particles"><span class="tocnumber">1.10</span> <span class="toctext">Particles</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Desgraph.html#Everything_is_a_node"><span class="tocnumber">1.11</span> <span class="toctext">Everything is a node</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">Source/Depsgraph</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../Source.html" title="Source">Source</a></span><span class="mw-redirectedfrom">(Redirected from <a href="https://wiki.blender.org/w/index.php?title=User:NBurn/Desgraph&amp;redirect=no" class="mw-redirect" title="User:NBurn/Desgraph">User:NBurn/Desgraph</a>)</span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Blender_2.8:_Dependency_Graph">Blender 2.8: Dependency Graph</span></h1>
+<div class="bd-lead">
+<p>This document covers all the design specifications of dependency graph to support all new features of Blender 2.8 project.
+</p>
+</div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Let’s start with making it really clear what the dependency graph is, what it is supposed to do and what it not supposed to do under any circumstances.
+The main goal of dependency graph is to make sure scene data is properly updated after any change in the most efficient way. This means the dependency graph only updates what was dependent on the modified value and will not update anything which was not changed. This way artists always have the scene in a relevant state with the maximum update frame rate possible. Dependency graph is doing that by preprocessing scene - creating graph where nodes are entities of the scene (for example, objects) and edges are relations between these objects (for example, when Object A has a parent Object B, the graph will have an edge between nodes which corresponds to these two objects).
+</p><p>Roughly speaking, the dependency graph is responsible for dynamic updates of the scene, where some value varies over time. It is not responsible for one-time changes. For example, the dependency graph is responsible for f-curves evaluation, but not for edge subdivide operation in mesh edit mode.
+</p>
+<h2><span class="mw-headline" id="Overview">Overview</span></h2>
+<p>The new design overview is quite simple and is shown on the following picture.
+</p><p><a href="../File:Dev-Blender_2.8_Data_Flow.png.html" class="image"><img alt="Dev-Blender 2.8 Data Flow.png" src="../../w/images/thumb/a/a6/Dev-Blender_2.8_Data_Flow.png/900px-Dev-Blender_2.8_Data_Flow.png" width="900" height="450" srcset="../../w/images/a/a6/Dev-Blender_2.8_Data_Flow.png 1.5x" /></a>
+</p><p>The changes from existing design in 2.7x series could be summarized as following:
+</p>
+<ul><li>DNA data is directly delivered from .blend file, It is as simple and small as it needed to represent scene in an external storage.</li>
+<li>DNA data has no runtime fields,</li>
+<li>Dependency graph applies all the required changes (modifiers, constraints, etc) on a copy of DNA data. Such data we call generated.</li>
+<li>Dependency graph stores evaluation result on itself. None of the changes are applied on the original DNA.</li>
+<li>Render engines are working with generated data provided by dependency graph and are never touching original DNA.</li>
+<li>Render engines will have generalized and centralized API to store engine-specific data.</li></ul>
+<p>All this is needed to support features like overrides and scene on a different state on different windows. It looks quite simple, but this causes some big design decision to be made to cover all possible tools and corner cases.
+</p>
+<h2><span class="mw-headline" id="Dependency_graph_ownership">Dependency graph ownership</span></h2>
+<p>Before answering the question of who owns dependency graph let’s cover workspaces really briefly.
+</p><p>Workspace is a way to organize artists workflow. Active workspace pointer is stored per window, so window always has one and only one active workspace. Workspace itself defines render engine (which could be the same as Scene render engine, but it’s not always the case). Workspace also defines active scene layer (layer which is visible in all editors of this workspace).
+</p><p>Those are really important statements, because both render engine and active scene layer define ways in which objects are evaluated to their final state. This is so render engine can have some simplification settings, and layer can have some overrides.
+</p><p>The decision here is that it is window who owns the dependency graph (for the interactive operations, for final render see paragraph below). When artist changes workspace, or selects another render engine or scene layer, window is asked to re-create its dependency graph which corresponds to a new window/workspace state.
+</p><p>For the final F12 render ownership is a bit simpler: dependency graph is owned by the Render structure.
+</p><p>This way we have both fast as possible scene evaluation for the visible data and support all needed context-related overrides.
+</p>
+<h2><span class="mw-headline" id="Generated_data_and_copy_on_write">Generated data and copy on write</span></h2>
+<p>Dependency graph always performs evaluation on a copy of original data. This is the only way to support data to be in different states at the same time and the way to solve threading conflicts between render and viewport threads (for example, low-res character in the rest pose in one viewport and hi-res animation playing back in the other viewport). There are several questions to be answered here.
+</p>
+<h3><span id="What_are_the_data_structures_for_generated_data?"></span><span class="mw-headline" id="What_are_the_data_structures_for_generated_data.3F">What are the data structures for generated data?</span></h3>
+<p>For a long time Blender used original Object DNA structure to evaluate animation data and evaluate transformation of the object and used DerivedMesh to store geometry itself. Use of DerivedMesh had some annoying aspects, mainly that some algorithms needs to be implemented twice (for actual Mesh and for DerivedMesh). Also the fact that DerivedMesh is dangerous to be exposed via Python API made us to introduce bpy.data/meshes.new_from_object() which is used by any external render engine and exporter scripts.
+</p><p>The idea is to utilize the same DNA structures as stored in .blend file (with possibly extra data filled in) for the generated data. This has following advantages:
+</p>
+<ul><li>We have one single API to access original data (which might be required for some tools) and for final generated data. Render engine will simply not care about where the data is coming from since it’ll be handled in same way in any case.</li>
+<li>It will naturally allow us to have overrides on transformation (instead of porting transformation to DerivedMesh which will make DerivedMesh almost the same as Mesh)</li>
+<li>This will be a natural way to support proxies on everything.</li></ul>
+<p>One extra point to be raised about DerivedMesh is that drawing code will be moved outside of DerivedMesh. This will make DerivedMesh really same as Mesh and there is no point of having DerivedMesh at all.
+</p>
+<h3><span id="When_is_the_generated_data_created?"></span><span class="mw-headline" id="When_is_the_generated_data_created.3F">When is the generated data created?</span></h3>
+<p>This is quite tricky one. On the one hand we want all the data to be created as late as possible. Ideally, creation of new data should be happening from threads. However, with the current dependency graph design we have to know all the pointers evaluation functions are dealing with at a dependency graph construction time.
+</p><p>There is quite easy work around that. At a dependency graph construction we create shallow copy of the corresponding datablock. Shallow as in we only allocate pointer of a size of the structure but don’t fill it in (for example, we allocate structure of type Mesh but we don’t duplicate any vertices arrays). All the contents of the duplicated block are copied from the evaluation threads.
+</p><p>Here is a brief code snippet to visualize the idea better.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">ID</span> <span class="o">*</span><span class="nf">DEG_create_shallow_copy</span><span class="p">(</span><span class="n">ID</span> <span class="o">*</span><span class="n">original_id</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">ID</span> <span class="o">*</span><span class="n">local_id</span> <span class="o">=</span> <span class="n">MEM_callocN</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DataType</span><span class="p">),</span> <span class="s">&quot;shallow copy for depsgraph&quot;</span><span class="p">);</span>
+	<span class="cm">/* Store original ID so we can do the following things:</span>
+<span class="cm">	 * - Detailize the copy at evaluation.</span>
+<span class="cm">	 * - Go from evaluated object from the original one (some tools needs that)</span>
+<span class="cm">	 */</span>
+	<span class="n">local_id</span><span class="o">-&gt;</span><span class="n">newid</span> <span class="o">=</span> <span class="n">original_id</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">local_id</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">DEG_finish_copy</span><span class="p">(</span><span class="n">ID</span> <span class="o">*</span><span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="cm">/* Go into all possible ID types, copy stuff like mesh vertices and so. */</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">DepsgraphNodeBuilder</span><span class="o">::</span><span class="n">build_object</span><span class="p">(</span><span class="n">Scene</span> <span class="o">*</span><span class="n">scene</span><span class="p">,</span> <span class="n">Object</span> <span class="o">*</span><span class="n">object</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="cm">/* ... */</span>
+
+	<span class="n">Object</span> <span class="o">*</span><span class="n">local_object</span> <span class="o">=</span> <span class="n">DEG_create_shallow_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">object</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
+	<span class="n">add_operation_node</span><span class="p">(</span><span class="o">&amp;</span><span class="n">local_object</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">,</span>
+	                   <span class="n">DEPSNODE_TYPE_TRANSFORM</span><span class="p">,</span>
+	                   <span class="n">DEPSOP_TYPE_EXEC</span><span class="p">,</span>
+	                   <span class="n">function_bind</span><span class="p">(</span><span class="n">BKE_object_eval_transform</span><span class="p">,</span>
+	                                 <span class="n">_1</span><span class="p">,</span>
+	                                 <span class="n">scene</span><span class="p">,</span>
+	                                 <span class="n">local_object</span><span class="p">),</span>
+	                   <span class="n">DEG_OPCODE_OBJECT_UBEREVAL</span><span class="p">);</span>
+
+	<span class="cm">/* ... */</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">deg_eval_task_run_func</span><span class="p">(</span><span class="n">DepsgraphNode</span> <span class="o">*</span><span class="n">node</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="cm">/* ... */</span>
+
+	<span class="n">ID</span> <span class="o">*</span><span class="n">id</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">getCorrespondingID</span><span class="p">();</span>
+	<span class="k">if</span> <span class="p">((</span><span class="n">id</span><span class="o">-&gt;</span><span class="n">eval_flag</span> <span class="o">&amp;</span> <span class="n">DEG_COPIED</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">DEG_finish_copy</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">node</span><span class="o">-&gt;</span><span class="n">update_function</span><span class="p">();</span>
+
+	<span class="cm">/* ... */</span>
+<span class="p">}</span>
+</pre></div>
+<p>Abandoning DerivedMesh will require us to update modifier stack, but conversion should be rather straightforward.
+</p>
+<h3><span id="How_to_avoid_heavy_geometry_duplication?"></span><span class="mw-headline" id="How_to_avoid_heavy_geometry_duplication.3F">How to avoid heavy geometry duplication?</span></h3>
+<p>Initially we can copy everything, including vertices, faces and so on. Such approach will let us to have things up and running quickly. Later on, we can allow sharing pointers to geometry in a similar way as we do for DerivedMesh created from Mesh without modifier. Points here are:
+</p>
+<ul><li>We always create “container” (such as Mesh structure). These structures are quite light-weight and we can have lots of copies of them without having memory penalty which would be a stopper for anyone.</li>
+<li>Such approach is quite simple to implement (we have everything we need in the CustomData module already) and yet it is still fitting nicely in the dependency graph design (and no alters to the design will need to be done to support such referencing)</li></ul>
+<p>The way that modifiers work already ensures that they don’t write to a CustomData layer which is referenced from original data block. Modifiers will do similar way after porting them to dependency graph copy-on-write, without anything special needed to be implemented in modifiers.
+Such always-copy-container structure (like Mesh) also allows us to have per-object VBOs for drawing stored in the Mesh itself.
+</p>
+<h3><span id="How_about_data_compression_inside_of_the_generated_datablock?"></span><span class="mw-headline" id="How_about_data_compression_inside_of_the_generated_datablock.3F">How about data compression inside of the generated datablock?</span></h3>
+<p>The answer here is: memory is becoming cheaper much faster than we tackle all Blender 2.8 projects.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Mesh_objects">Mesh objects</span></h3>
+<p>The idea is to evaluate all mesh-type objects to a Mesh. This way we can use the single API accessing generated data and eliminate temporary objects being created with bpy.data.meshes.new_from_object(). This makes external render engines and exporters to work more uniformly.
+</p>
+<h3><span class="mw-headline" id="Non-mesh_objects">Non-mesh objects</span></h3>
+<p>While it is straightforward to evaluate mesh objects to Mesh, it is more tricky to deal with non-mesh data such as curves, NURBS, meta balls.
+Proposal here goes as following:
+</p>
+<ul><li>We evaluate all this data as-is, so we don’t need to change anything of surface evaluation.</li>
+<li>We convert evaluated result to Mesh after geometry is calculated. We do this unless render engine tells us it knows how to handle particular non-mesh object itself.</li></ul>
+<p>This approach allows us to have non-mesh datablocks handled by all render engines quite easily without need to add exceptions to all the possible render engines.
+</p><p><strong>TODO</strong>: Think how we can speed up evaluation here.
+</p>
+<h3><span class="mw-headline" id="Copy_on_write_for_non-ID_data">Copy on write for non-ID data</span></h3>
+<p>This seems to be required to have some non-ID data covered with copy-on-write. Example of this goes as:
+</p>
+<ul><li>Layer collections, to store evaluated override values</li>
+<li>SceneLayer (perhaps) to store some context/evaluated specific data such as geometry statistics.</li></ul>
+<p>The way to process with this is to first make a CoW copy of the ID block which owns that data and then copy the data from within the new ID datablock. This way we don’t need to specially modify dependency graph to support non-ID outer nodes.
+However, the tricky part here is to free the data. The only way would be to sore some special flag that non-ID data was copied and needs to be freed together with the ID which owns it. Still more clean that modifying dependency graph design.
+</p>
+<h2><span class="mw-headline" id="Integration_with_render_engines">Integration with render engines</span></h2>
+<p>There are various aspects which need to be known and stored by various render engines. The most common things across all render engines are:
+</p>
+<ul><li>Object transform</li>
+<li>Geometry itself</li>
+<li>Materials</li></ul>
+<p>These things are provided by dependency graph evaluation. Just to state it again here, each render engine has access to dependency graph, which contains evaluated data which is to be rendered by that engine (this dependency graph is coming from Window+Workspace combination for interactive rendering and from Render structure for F12 render). This means, there is a natural way of having same scene visualized in multiple states at the same time (so it is possible to have simplified viewport sued for animation and Cycles rendered view without conflicting data).
+The evaluation of those components happens in the same exact way as it always used to be and the only major change here would be change in modifier stack to make it to work with Mesh datablock instead of DerivedMesh.
+</p>
+<h3><span class="mw-headline" id="Per-render_engine_data">Per-render engine data</span></h3>
+<p>This is important to support some render-engine data managed by dependency graph. This is so we don’t have to manually free/invalidate GPU objects from depsgraph flush as it happens currently. Instead, we should introduce Shading component for objects. This component is responsible for tagging pre-calculated GPU arrays (or other render-engine data) as invalid when something related to shading/rendering changes. This component is not responsible for actual data evaluation.
+</p><p>This component is dependent on the following:
+</p>
+<ul><li>Geometry component (so VBOs will be tagged for re-creation when topology changes)</li>
+<li>Transform component, so if render engine data depends on world position it could also be updated.</li>
+<li>Materials which are used by the object.</li>
+<li>Scene layers/collections, so object can have proper overrides and visibility applied.</li></ul>
+<p>It is possible to split invalidation tagging in a way so we know what exactly was changed (so render engine can keep VBOs for geometry when only material changes).
+The image below briefly visualizes depsgraph with such operations and relations.
+</p><p><a href="../File:Dev-Blender_2.8_DEG_per_engine_storage.png.html" class="image"><img alt="Dev-Blender 2.8 DEG per engine storage.png" src="../../w/images/thumb/8/84/Dev-Blender_2.8_DEG_per_engine_storage.png/910px-Dev-Blender_2.8_DEG_per_engine_storage.png" width="910" height="490" srcset="../../w/images/8/84/Dev-Blender_2.8_DEG_per_engine_storage.png 1.5x" /></a>
+</p><p>The render engine specific data is stored in Mesh and is expected to be a “subclass” of the following structure:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">enum</span> <span class="p">{</span>
+	<span class="n">DEG_RE_MATERIALS_UPDATE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span><span class="p">),</span>
+	<span class="n">DEG_RE_GEOMETRY_UPDATE</span>  <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">),</span>
+	<span class="p">...</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">DEGRenderEngineData</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">flag</span><span class="p">;</span>  <span class="cm">/* Bit-field of enum above. */</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">Mesh</span> <span class="p">{</span>
+	<span class="p">...</span>
+	<span class="n">DEGRenderEngineData</span> <span class="o">*</span><span class="n">render_engine_data</span><span class="p">;</span>
+	<span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+<p>This way dependency graph update would not require to know anything about specifics of the render engine itself and will be able to inform any render engine about updated data. It is up to the render engine to allocate render_engine_data when it’s needed. If it is NULL, then nothing there is up to date.
+</p>
+<h3><span class="mw-headline" id="Iterators">Iterators</span></h3>
+<p>The way for render engine to iterate over evaluated objects is to use DEG_OBJECT_ITER() macro from C/C++ side and its analog from Python/C++ RNA sides. This macro will iterate over all objects which are to be rendered by render engine so the latter does not need to worry about doing all the visibility checks and things like that.
+</p><p>This macros will also iterate into duplicated objects and mark them as coming from dupli system so render engine will know that the object is coming from dupli.
+</p><p>This macro will also include objects from set scene and mark those objects as such. This will allow viewport renderers (such as Eevee) can do special tricks for removing selection outlines from those objects.
+</p>
+<h2><span id="Integration_with_layers/collections"></span><span class="mw-headline" id="Integration_with_layers.2Fcollections">Integration with layers/collections</span></h2>
+<p>Those flags are one from the very basic things which layer collections are defining. What is important here is that object can be in multiple collections and each of those collections might have different visibility/selectability flags, so some sort of “solver” is needed here (it might be really simple one, like using settings from the most bottom collection which has given object). What we don’t want is to implement such a “solver” in every render engine.
+</p><p>One of the early implementations was flushing this flags from layer collections to objects on the actual change. This worked, but:
+</p>
+<ul><li>Changing selectability flag might need to require render data to be re-evaluated (to make it so object has no outline and things like that).</li>
+<li>Very similar solver are required for more generic overrides.</li></ul>
+<p>So currently these flags are flushed on object using dependency graph evaluation system. This somewhat uniforms this kind of evaluation.
+</p><p>This approach has following downside: re-arranging or adding/removing layer collections requires dependency graph to be re-built. If that becomes a bottleneck, we can support partial graph rebuilds for certain changes.
+</p><p><strong>NOTE</strong>: Current way of flushing is making me unhappy, it is possible to simplify it somewhat and make it behave same as generic overrides. See the section below for the solution.
+</p>
+<h3><span class="mw-headline" id="Overrides">Overrides</span></h3>
+<p>This section covers overrides which are defined on layer collection level and which are applied on all objects from that collection.
+</p><p>One of the important statements here is: we want overrides to be animatable. By this we mean that, i.e. color of override might be changing over time (not the fact that we are overriding something). In order to support that, we need a full support from the dependency graph.
+</p><p><strong>NOTE</strong>: Here we talk about animation. Drivers on overrides might work, but that is really easy to run into dependency cycle here.
+</p><p>The idea here goes as following:
+</p>
+<ul><li>Layer collections go to a dedicated component of scene ID node and are evaluated one by one sequentially. Evaluation of layer collections merges/copies ID properties (together with selectability/visibility flags) from parent/previous layer collection.</li>
+<li>Layer collection animation goes to scene animation component of dependency graph.</li>
+<li>This is so we don’t have to make collections a real ID.</li>
+<li>Object’s parameters component will have per-collection operation node which flushes visibility/selectability and overrides from corresponding collection to object itself.</li></ul>
+<p>This way we keep all evaluation local to data block which needs it, avoiding possible threading issues. This is briefly visualized on the following picture.
+</p><p><a href="../File:Dev-Blender_2.8_DEG_layer_overrides.png.html" class="image"><img alt="Dev-Blender 2.8 DEG layer overrides.png" src="../../w/images/thumb/4/4e/Dev-Blender_2.8_DEG_layer_overrides.png/900px-Dev-Blender_2.8_DEG_layer_overrides.png" width="900" height="643" srcset="../../w/images/thumb/4/4e/Dev-Blender_2.8_DEG_layer_overrides.png/1350px-Dev-Blender_2.8_DEG_layer_overrides.png 1.5x, ../../w/images/4/4e/Dev-Blender_2.8_DEG_layer_overrides.png 2x" /></a>
+</p><p><strong>NOTE</strong>: The example above does not include relation between object’s parameters operations and its geometry/transform components. Such relations will be constructed similar to drivers’ relations.
+</p>
+<h3><span class="mw-headline" id="Invisible_objects">Invisible objects</span></h3>
+<p>It is important to avoid updates of invisible objects, so it is possible to get maximum FPS even on a complex scenes during animation process. However, it is no longer possible to rely on the layers mask as it used to be in pre-2.8 Blender.
+</p><p>What we can do instead is to use object visibility flag instead of layers bitmask. This is a bit tricky to implement because object visibility is evaluated from inside dependency. What we can do is to have two “waves” of updates: first do visibility flags updates (when any collection is marked for update) and then do rest of the updates. This way in the dependency graph we simply replace bitwise layer comparison with object visibility flag check.
+</p>
+<h3><span class="mw-headline" id="Local_view">Local view</span></h3>
+<p>Local view is gone in the way how we used to think of it. Instead, it will be a temporary collection created “on-fly”. We can utilize overrides and invisible objects optimization to keep it working by creating two nested collections. One with all the objects which were not selected at the Local View operation invocation. This collection will have visibility disabled. Second nested collection will have all selected objects and visibility will be set to Visible.
+</p><p>This way we don’t need anything special from dependency graph to support local view.
+</p>
+<h2><span class="mw-headline" id="Streaming">Streaming</span></h2>
+<p>It is important to make cache streaming a native feature of the new dependency to be able to replace whole subtree with a cache stream (most likely, Alembic).
+</p><p>Let’s assume the following: streaming is an explicit mode of the dependency graph, and dependency graph gets specially re-built when artist says something is to be streamed from cache.
+</p><p>This is the opposite to some early ideas of having runtime switch in the dependency graph. But it has following benefits:
+</p>
+<ul><li>It does not require any extra checks on evaluation to see what is to be evaluated and what is not. Simplifying the code and increasing maximal possible FPS.</li>
+<li>It is always predictable where the data is coming from. There is no way that some frames are fast because are coming from cache and some are slow because they are not cached. Such a mix-up was always a pain for physics cache and for Gooseberry we ended up sticking to policy “don’t try to re-cache on-the-fly”.</li></ul>
+<p>Avoids possible mixture of out-dated cache with real scene.
+</p>
+<ul><li>Cache settings should belong to some ID block in the scene. Possibilities:</li>
+<li>Layer collection can replace itself with cached version.</li>
+<li>Dupligroup can replace itself with cache.</li></ul>
+<p>This way we can either replace individual objects with a cached version or replace the whole collection of objects.
+</p><p>From the dependency graph point of view, caching is a special node, which reads cache file on evaluation. The read data is converted to CoW-type of object without any original datablock which then gets feed to the render engine via depsgraph iterators. This way render engines do not care whether object is coming from cache or from real scene.
+</p>
+<h2><span class="mw-headline" id="Data_masks">Data masks</span></h2>
+<p>Data masks were used to check which custom data layers needs to be evaluated for the current display. This was originally based on iterating over windows, checking all open viewports etc.. Was quite ugly. And then switching drawing modes needed special updates because those might have been needed to have extra custom data layers.
+</p><p>Now, when dependency graph is stored either per window+scene layer (for the viewport) or per (scene+scene layer) for final render such datamask acquisition becomes easier. Basically, what we do is we check what render engine needs for the current context (so Clay only says it needs just meshes, while Eevee might request having UV maps). This seems to be enough, because overlay engines (edit mode overlay i.e.) does not need extra CD layers rather than geometry.
+</p>
+<h2><span class="mw-headline" id="Duplication_system">Duplication system</span></h2>
+<p>Basically the idea here is to move duplication system to a dependency graph iteration process. So instead of iterating over all objects, then checking whether object is a duplicator and then requesting for the list of duplicated objects we simply tell dependency graph iterator that we want to include duplicated objects.
+</p><p>Duplicated objects are tagged with FROM_DUPLI already, so render engine can still do some special logic to optimize those out or treat them differently.
+</p>
+<h2><span class="mw-headline" id="Particles">Particles</span></h2>
+<p>Particles were requested to be covered by Dalai, not sure what’s special about those.
+</p><p>Basically, particles should become a user-guideable duplication system, which is being integrated into regular duplication system described above.
+</p><p>Some special mode drawing might be needed here to have decent visualization prior to system being fully set up (so we can see some “dots” of particles as an overlay in Cycles viewport).
+</p>
+<h2><span class="mw-headline" id="Everything_is_a_node">Everything is a node</span></h2>
+<p>This is something we need to move to, but this is a long way to go and wouldn’t put it as a target for first usable 2.8 release.
+</p><p>The idea of node-everything is to have CoW system in place first. Then we can extend it to support multiple copies within same datablock, so modifiers can share same input, modify it differently and calculate final result from this.
+</p><p>More detailed design of this system will be worked on later.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240112115959
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.053 seconds
+Real time usage: 0.091 seconds
+Preprocessor visited node count: 119/1000000
+Preprocessor generated node count: 172/1000000
+Post‐expand include size: 155/2097152 bytes
+Template argument size: 124/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5749/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.881      1 Template:Lead
+100.00%    0.881      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:491-0!canonical and timestamp 20240112115958 and revision id 25160
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;oldid=25160">https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;oldid=25160</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 24 June 2021, at 08:36.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../Special:WhatLinksHere/Source/Depsgraph.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/Source/Depsgraph" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;oldid=25160" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=Source/Depsgraph&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.053","walltime":"0.091","ppvisitednodes":{"value":119,"limit":1000000},"ppgeneratednodes":{"value":172,"limit":1000000},"postexpandincludesize":{"value":155,"limit":2097152},"templateargumentsize":{"value":124,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5749,"limit":5000000},"timingprofile":["100.00%    0.881      1 Template:Lead","100.00%    0.881      1 -total"]},"cachereport":{"timestamp":"20240112115959","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":37});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844540a91c19b918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

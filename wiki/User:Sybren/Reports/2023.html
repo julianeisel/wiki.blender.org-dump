@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Sybren/Reports/2023 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Sybren/Reports/2023","wgTitle":"Sybren/Reports/2023","wgCurRevisionId":37915,"wgRevisionId":37915,"wgArticleId":6624,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Sybren/Reports/2023","wgRelevantArticleId":6624,"wgRequestId":"dfa020b5b767b8f5e5139f56","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Sybren","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Sybren_Reports_2023 rootpage-User_Sybren skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2023.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ASybren%2FReports%2F2023" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2023.html#Dec_25-31"><span class="tocnumber">1</span> <span class="toctext">Dec 25-31</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2023.html#Animation"><span class="tocnumber">1.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2023.html#Production_pipeline_tools"><span class="tocnumber">1.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2023.html#Other"><span class="tocnumber">1.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="2023.html#Dec_18-24"><span class="tocnumber">2</span> <span class="toctext">Dec 18-24</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="2023.html#Animation_2"><span class="tocnumber">2.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2023.html#Production_pipeline_tools_2"><span class="tocnumber">2.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2023.html#Other_2"><span class="tocnumber">2.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="2023.html#Dec_11-17"><span class="tocnumber">3</span> <span class="toctext">Dec 11-17</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="2023.html#Animation_3"><span class="tocnumber">3.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2023.html#Production_pipeline_tools_3"><span class="tocnumber">3.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2023.html#Other_3"><span class="tocnumber">3.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="2023.html#Dec_4-10"><span class="tocnumber">4</span> <span class="toctext">Dec 4-10</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="2023.html#Animation_4"><span class="tocnumber">4.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2023.html#Production_pipeline_tools_4"><span class="tocnumber">4.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2023.html#Other_4"><span class="tocnumber">4.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="2023.html#Nov_6_-_12"><span class="tocnumber">5</span> <span class="toctext">Nov 6 - 12</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="2023.html#Animation_5"><span class="tocnumber">5.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2023.html#Production_pipeline_tools_5"><span class="tocnumber">5.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2023.html#Other_5"><span class="tocnumber">5.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="2023.html#Oct_31_-_Nov_5"><span class="tocnumber">6</span> <span class="toctext">Oct 31 - Nov 5</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="2023.html#Animation_6"><span class="tocnumber">6.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2023.html#Production_pipeline_tools_6"><span class="tocnumber">6.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2023.html#Other_6"><span class="tocnumber">6.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="2023.html#Oct_23-29"><span class="tocnumber">7</span> <span class="toctext">Oct 23-29</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="2023.html#Animation_7"><span class="tocnumber">7.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2023.html#Production_pipeline_tools_7"><span class="tocnumber">7.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2023.html#Other_7"><span class="tocnumber">7.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="2023.html#Oct_16-22"><span class="tocnumber">8</span> <span class="toctext">Oct 16-22</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="2023.html#Animation_8"><span class="tocnumber">8.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2023.html#Production_pipeline_tools_8"><span class="tocnumber">8.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2023.html#Other_8"><span class="tocnumber">8.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="2023.html#Oct_9-15"><span class="tocnumber">9</span> <span class="toctext">Oct 9-15</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="2023.html#Animation_9"><span class="tocnumber">9.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2023.html#Production_pipeline_tools_9"><span class="tocnumber">9.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2023.html#Other_9"><span class="tocnumber">9.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-37"><a href="2023.html#Oct_2_-_8"><span class="tocnumber">10</span> <span class="toctext">Oct 2 - 8</span></a>
+<ul>
+<li class="toclevel-2 tocsection-38"><a href="2023.html#Animation_10"><span class="tocnumber">10.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2023.html#Production_pipeline_tools_10"><span class="tocnumber">10.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2023.html#Other_10"><span class="tocnumber">10.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="2023.html#Sept_25_-_Oct_1"><span class="tocnumber">11</span> <span class="toctext">Sept 25 - Oct 1</span></a>
+<ul>
+<li class="toclevel-2 tocsection-42"><a href="2023.html#Animation_11"><span class="tocnumber">11.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2023.html#Production_pipeline_tools_11"><span class="tocnumber">11.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2023.html#Other_11"><span class="tocnumber">11.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-45"><a href="2023.html#Sept_18-24"><span class="tocnumber">12</span> <span class="toctext">Sept 18-24</span></a>
+<ul>
+<li class="toclevel-2 tocsection-46"><a href="2023.html#Animation_12"><span class="tocnumber">12.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2023.html#Production_pipeline_tools_12"><span class="tocnumber">12.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2023.html#Other_12"><span class="tocnumber">12.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-49"><a href="2023.html#Sept_11-17"><span class="tocnumber">13</span> <span class="toctext">Sept 11-17</span></a>
+<ul>
+<li class="toclevel-2 tocsection-50"><a href="2023.html#Animation_13"><span class="tocnumber">13.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2023.html#Production_pipeline_tools_13"><span class="tocnumber">13.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2023.html#Other_13"><span class="tocnumber">13.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-53"><a href="2023.html#Sept_4-10"><span class="tocnumber">14</span> <span class="toctext">Sept 4-10</span></a>
+<ul>
+<li class="toclevel-2 tocsection-54"><a href="2023.html#Animation_14"><span class="tocnumber">14.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="2023.html#Production_pipeline_tools_14"><span class="tocnumber">14.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="2023.html#Other_14"><span class="tocnumber">14.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-57"><a href="2023.html#Aug_14-20"><span class="tocnumber">15</span> <span class="toctext">Aug 14-20</span></a>
+<ul>
+<li class="toclevel-2 tocsection-58"><a href="2023.html#Animation_15"><span class="tocnumber">15.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="2023.html#Production_pipeline_tools_15"><span class="tocnumber">15.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-60"><a href="2023.html#Other_15"><span class="tocnumber">15.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-61"><a href="2023.html#Aug_7-13"><span class="tocnumber">16</span> <span class="toctext">Aug 7-13</span></a></li>
+<li class="toclevel-1 tocsection-62"><a href="2023.html#July_31_-_Aug_6"><span class="tocnumber">17</span> <span class="toctext">July 31 - Aug 6</span></a>
+<ul>
+<li class="toclevel-2 tocsection-63"><a href="2023.html#Animation_16"><span class="tocnumber">17.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-64"><a href="2023.html#Production_pipeline_tools_16"><span class="tocnumber">17.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="2023.html#Other_16"><span class="tocnumber">17.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-66"><a href="2023.html#July_24-30"><span class="tocnumber">18</span> <span class="toctext">July 24-30</span></a>
+<ul>
+<li class="toclevel-2 tocsection-67"><a href="2023.html#Animation_17"><span class="tocnumber">18.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-68"><a href="2023.html#Production_pipeline_tools_17"><span class="tocnumber">18.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-69"><a href="2023.html#Other_17"><span class="tocnumber">18.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-70"><a href="2023.html#July_17-23"><span class="tocnumber">19</span> <span class="toctext">July 17-23</span></a>
+<ul>
+<li class="toclevel-2 tocsection-71"><a href="2023.html#Animation_18"><span class="tocnumber">19.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-72"><a href="2023.html#Production_pipeline_tools_18"><span class="tocnumber">19.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-73"><a href="2023.html#Other_18"><span class="tocnumber">19.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-74"><a href="2023.html#July_10-16"><span class="tocnumber">20</span> <span class="toctext">July 10-16</span></a>
+<ul>
+<li class="toclevel-2 tocsection-75"><a href="2023.html#Animation_19"><span class="tocnumber">20.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-76"><a href="2023.html#Production_pipeline_tools_19"><span class="tocnumber">20.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-77"><a href="2023.html#Other_19"><span class="tocnumber">20.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-78"><a href="2023.html#July_3_-_9"><span class="tocnumber">21</span> <span class="toctext">July 3 - 9</span></a>
+<ul>
+<li class="toclevel-2 tocsection-79"><a href="2023.html#Animation_20"><span class="tocnumber">21.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-80"><a href="2023.html#Production_pipeline_tools_20"><span class="tocnumber">21.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-81"><a href="2023.html#Other_20"><span class="tocnumber">21.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-82"><a href="2023.html#June_26_-_July_2"><span class="tocnumber">22</span> <span class="toctext">June 26 - July 2</span></a>
+<ul>
+<li class="toclevel-2 tocsection-83"><a href="2023.html#Animation_21"><span class="tocnumber">22.1</span> <span class="toctext">Animation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-84"><a href="2023.html#June_19-25"><span class="tocnumber">23</span> <span class="toctext">June 19-25</span></a>
+<ul>
+<li class="toclevel-2 tocsection-85"><a href="2023.html#Animation_22"><span class="tocnumber">23.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-86"><a href="2023.html#Production_pipeline_tools_21"><span class="tocnumber">23.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-87"><a href="2023.html#Other_21"><span class="tocnumber">23.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-88"><a href="2023.html#June_12_-_18"><span class="tocnumber">24</span> <span class="toctext">June 12 - 18</span></a>
+<ul>
+<li class="toclevel-2 tocsection-89"><a href="2023.html#Animation_23"><span class="tocnumber">24.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-90"><a href="2023.html#Production_pipeline_tools_22"><span class="tocnumber">24.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-91"><a href="2023.html#Other_22"><span class="tocnumber">24.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-92"><a href="2023.html#June_5-11"><span class="tocnumber">25</span> <span class="toctext">June 5-11</span></a>
+<ul>
+<li class="toclevel-2 tocsection-93"><a href="2023.html#Animation_24"><span class="tocnumber">25.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-94"><a href="2023.html#Production_pipeline_tools_23"><span class="tocnumber">25.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-95"><a href="2023.html#Other_23"><span class="tocnumber">25.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-96"><a href="2023.html#May_29_-_June_4"><span class="tocnumber">26</span> <span class="toctext">May 29 - June 4</span></a>
+<ul>
+<li class="toclevel-2 tocsection-97"><a href="2023.html#Animation_25"><span class="tocnumber">26.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-98"><a href="2023.html#Production_pipeline_tools_24"><span class="tocnumber">26.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-99"><a href="2023.html#Other_24"><span class="tocnumber">26.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-100"><a href="2023.html#May_15_-_21"><span class="tocnumber">27</span> <span class="toctext">May 15 - 21</span></a>
+<ul>
+<li class="toclevel-2 tocsection-101"><a href="2023.html#Animation_26"><span class="tocnumber">27.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-102"><a href="2023.html#Production_pipeline_tools_25"><span class="tocnumber">27.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-103"><a href="2023.html#Other_25"><span class="tocnumber">27.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-104"><a href="2023.html#May_1-7"><span class="tocnumber">28</span> <span class="toctext">May 1-7</span></a>
+<ul>
+<li class="toclevel-2 tocsection-105"><a href="2023.html#Animation_27"><span class="tocnumber">28.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-106"><a href="2023.html#Production_pipeline_tools_26"><span class="tocnumber">28.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-107"><a href="2023.html#Other_26"><span class="tocnumber">28.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-108"><a href="2023.html#April_23-30"><span class="tocnumber">29</span> <span class="toctext">April 23-30</span></a>
+<ul>
+<li class="toclevel-2 tocsection-109"><a href="2023.html#Animation_28"><span class="tocnumber">29.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-110"><a href="2023.html#Production_pipeline_tools_27"><span class="tocnumber">29.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-111"><a href="2023.html#Other_27"><span class="tocnumber">29.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-112"><a href="2023.html#April_17-23"><span class="tocnumber">30</span> <span class="toctext">April 17-23</span></a>
+<ul>
+<li class="toclevel-2 tocsection-113"><a href="2023.html#Animation_29"><span class="tocnumber">30.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-114"><a href="2023.html#Production_pipeline_tools_28"><span class="tocnumber">30.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-115"><a href="2023.html#Other_28"><span class="tocnumber">30.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-116"><a href="2023.html#April_11-16"><span class="tocnumber">31</span> <span class="toctext">April 11-16</span></a>
+<ul>
+<li class="toclevel-2 tocsection-117"><a href="2023.html#Animation_30"><span class="tocnumber">31.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-118"><a href="2023.html#Production_pipeline_tools_29"><span class="tocnumber">31.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-119"><a href="2023.html#Other_29"><span class="tocnumber">31.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-120"><a href="2023.html#April_3-9"><span class="tocnumber">32</span> <span class="toctext">April 3-9</span></a>
+<ul>
+<li class="toclevel-2 tocsection-121"><a href="2023.html#Animation_31"><span class="tocnumber">32.1</span> <span class="toctext">Animation</span></a></li>
+<li class="toclevel-2 tocsection-122"><a href="2023.html#Production_pipeline_tools_30"><span class="tocnumber">32.2</span> <span class="toctext">Production pipeline tools</span></a></li>
+<li class="toclevel-2 tocsection-123"><a href="2023.html#Other_30"><span class="tocnumber">32.3</span> <span class="toctext">Other</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Sybren/Reports/2023</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Sybren.html" title="User:Sybren">User:Sybren</a>&lrm; | <a href="../Reports.html" title="User:Sybren/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>Symbols: ✅=100% done from my side; ✔️=my work is done for now, now waiting for something/someone else; ⭕ I spent time on this, may need more attention this week; ☐ planned work; 🕐 planned work, if there is enough time this week
+</p>
+
+
+<h2><span class="mw-headline" id="Dec_25-31">Dec 25-31</span></h2>
+<p>Mostly Christmas holiday.
+</p>
+<h3><span class="mw-headline" id="Animation">Animation</span></h3>
+<ul><li>Landed in main: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115945">PR #115945</a> Anim: make bone collections hierarchical</li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/17b664f152feaa95cad72593331e808899829cd2">17b664f152</a> Worker: log copy-pastable commandline invocation</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p><p>New year! And also a new location for my weekly reports. They will be on <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/.profile/src/branch/main/reports/2024.md">my Projects profile</a> from now on.
+</p>
+<h2><span class="mw-headline" id="Dec_18-24">Dec 18-24</span></h2>
+<h3><span class="mw-headline" id="Animation_2">Animation</span></h3>
+<ul><li>☐ Plan: Thursday module meeting</li>
+<li>Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115934">#115934</a> Hierarchical Bone Collections
+<ul><li>Mostly working on the RNA API and library override support.</li></ul></li>
+<li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116219">PR #116219</a> Fix: Autokeyframe with Insert Needed with no keyframes</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116189">PR #116189</a> Fix: Set active keying set menu showing wrong label</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115798">PR #115798</a> Anim: Add hotkey for keying set operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112387">PR #112387</a> Anim: Graph Editor Scale From Neighbor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116327">PR #116327</a> Anim: Unit Tests for "Insert Available"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116419">PR #116419</a> Anim: Unit tests for "Insert Needed"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115310">#115310</a> Bone collections can be added to system-overridden (i.e. non-user-editable) armatures</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116328">PR #116328</a> Fix #116320: Crash assigning bone to collection of other armature</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104463">PR #104463</a> Shape Keys: support locking to protect from accidental editing.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113208">PR #113208</a> Anim: Action bake custom properties</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_2">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/116375">#116375</a> Alembic Export: Camera resolution parameters not included. (resx, resy)</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_2">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Built my Gitea profile at <a rel="nofollow" class="external free" href="https://projects.blender.org/dr.sybren">https://projects.blender.org/dr.sybren</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116295">PR #116295</a> Fix #116280: bpy.ops.wm.url_open() cannot open file:///</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Off for christmass.</li>
+<li>Working with Nathan on finishing up the Hierarchical Bone Collections GUI.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112387">PR #112387</a> Anim: Graph Editor Scale From Neighbor.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116200">PR #116200</a> UI: Add elbow in hierarchy line and change padding a bit</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Dec_11-17">Dec 11-17</span></h2>
+<h3><span class="mw-headline" id="Animation_3">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>✅ Plan: planning for Animation 2025 project in 2024.</li>
+<li>Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115934">#115934</a> Hierarchical Bone Collections
+<ul><li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116200">PR #116200</a> UI: Add elbow in hierarchy line and change padding a bit</li></ul></li>
+<li>Tracker:
+<ul><li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115978">#115978</a> FCurve extrapolation ignored in whenever anything is present in the NLA</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">PR #113138</a> Anim: Align new bones with the world axes</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115310">#115310</a> Cannot rename inserted bone collections on overridden armatures.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116101">PR #116101</a> Refactor: Move ED_id_action_ensure to animrig</li>
+<li>Discussion on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112865">PR #112865</a> Refactor: Move NLA anim bake paremeters into dataclass</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_3">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>Released Flamenco v3.3.1 and BAT 1.17.</li>
+<li>✔️ Plan: Flamenco and BAT reports &amp; PRs.</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li>Merged my 'goose' branch, which replaces GORM database automigration with <a rel="nofollow" class="external text" href="https://pressly.github.io/goose/">Goose</a>.</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92886">PR #92886</a> Fix IES lights blocks2assets</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92885">PR #92885</a> blocks2assets: debug filepath on reading unsupported blocks</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104267">#104267</a> Geometry simulation node not running properly</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/99422">#99422</a> Blender Add-on: allow automatically syncing with scene start/end frame</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/100043">#100043</a> Refactor Flamenco version number &amp; release cycle</li>
+<li>Wrote <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104273">#104273</a> Manager: Event bus with public endpoint</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_3">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Blender's birthday preparations.</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Flamenco / BAT:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92885">PR #92885</a> blocks2assets: debug filepath on reading unsupported blocks</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92886">PR #92886</a> Fix IES lights blocks2assets</li></ul></li></ul>
+<h2><span class="mw-headline" id="Dec_4-10">Dec 4-10</span></h2>
+<p>Back from holiday, so spending some time getting up to date again.
+</p>
+<h3><span class="mw-headline" id="Animation_4">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115934">#115934</a> Hierarchical Bone Collections with Nathan.</li>
+<li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115354">PR #115354</a> Anim: store BoneCollections in a flat array</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114845">PR #114845</a> Fix #114828: Don't rebuild outliner tree when frame scrubbing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">PR #110135</a> Drivers: implement fallback values for RNA path based variables.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/79670">#79670</a> Baking animation of bones affected by a curve (spline IK) is wrong</li>
+<li>Nathan Vasili's comment on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105120">PR #105120</a> Animation: Remove collection hotkeys from pose mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115788">PR #115788</a> Fix #115683: Crash with IK constraint</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115792">PR #115792</a> Fix #115678: Padding not applied correctly when framing keyframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104463">PR #104463</a> Shape Keys: support locking to protect from accidental editing.</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113208">PR #113208</a> Anim: Action bake custom properties</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115898">PR #115898</a> Refactor: Pass Keyframe settings as arguments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115000">#115000</a> After update Blender 4.0 keep crashes when adding bone constraint</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_4">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104268">PR #104268</a> Add Description to Job Types</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_4">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li>Flamenco and BAT reports &amp; PRs.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">PR #113138</a> Anim: Align new bones with the world axes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115310">#115310</a> Cannot rename inserted bone collections on overridden armatures.</li></ul>
+<h2><span class="mw-headline" id="Nov_6_-_12">Nov 6 - 12</span></h2>
+<h3><span class="mw-headline" id="Animation_5">Animation</span></h3>
+<ul><li>New layered animation model (<code>anim/animation-id-113594</code> branch):
+<ul><li>fix memory leak in AnimationStrip path function</li>
+<li>separate animation evaluation from updating the data-block</li>
+<li>cache resolved RNA pointer in animation evaluation result</li>
+<li>add basic mixing of animation layer results</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_5">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>Released Flamenco v3.3</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_5">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<h2><span class="mw-headline" id="Oct_31_-_Nov_5">Oct 31 - Nov 5</span></h2>
+<h3><span class="mw-headline" id="Animation_6">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>☐ Plan: Bugfixes for Blender 4.0</li>
+<li>Tracker:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114097">#114097</a> Mesh sequence Cache modifier keyframes not visible in timeline (or dopesheet Cache File mode even).</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">PR #110135</a> Drivers: implement fallback values for RNA path based variables.</li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114224">#114224</a> Bone collections&#160;: Bones disappear in pose mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114324">PR #114324</a> Fix #114224: Bone Disappear in Pose Mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114393">PR #114393</a> Fix #114224: Bones Disappear In Pose/Edit Mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/102488">#102488</a> Not possible to add keyframes to HSV values.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114281">#114281</a> Bone group does not hide bone if it was moved using assign</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113208">PR #113208</a> Anim: Action bake custom properties</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104463">PR #104463</a> Shape Keys: support locking to protect from accidental editing.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114458">PR #114458</a> Fix #114216: crash moving "instanced" NLA strips between tracks</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_6">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104260">PR #104260</a> Added documentation snippet on enabling Symlinks on SAMBA</li>
+<li>✅ Plan: Release Flamenco v3.3-beta2</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104259">#104259</a> Smoke and Fluid effects being submitted to X: drive.</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104263">#104263</a> Error performing BAT pack in Windows with shared storage</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104255">#104255</a> Error performing BAT pack: File is compressed with ZStandard, install the zstandard module to support this.</li>
+<li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104256">PR #104256</a> Fix: Tag Interface Delete Button</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_6">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>✅ Plan: Recuperate from Blender Conference</li>
+<li>☐ Plan: laser cut some gender-neutral bathroom signs for Blender HQ.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114443">PR #114443</a> Fix missing relations built for camera referenced by markers</li></ul>
+<h2><span class="mw-headline" id="Oct_23-29">Oct 23-29</span></h2>
+<p>This week is Blender Conference week. Not much else is going to happen. My talks:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://video.blender.org/w/ot67ZM5auZE57AQKeBcwwe">A New Animation System</a></li>
+<li><a rel="nofollow" class="external text" href="https://video.blender.org/w/hYjm8YqpmQLWLDmBg2LotK">Flamenco v3.3 hands-on class</a></li></ul>
+<h3><span class="mw-headline" id="Animation_7">Animation</span></h3>
+<ul><li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113931">PR #113931</a> Refactor: ANIM_setting_get_rna_values to return a Vector</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/68962">#68962</a> Graph Editor: Link Visible and Selected states</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_7">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104260">PR #104260</a> Added documentation snippet on enabling Symlinks on SAMBA</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_7">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Recuperate from Blender Conference</li>
+<li>Bugfixes for Blender 4.0</li>
+<li>Release Flamenco v3.3-beta2</li></ul>
+<h2><span class="mw-headline" id="Oct_16-22">Oct 16-22</span></h2>
+<h3><span class="mw-headline" id="Animation_8">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>⭕ Plan: Prepare conference talk: Animation 2025</li>
+<li>Layered Animation Data model:
+<ul><li>Get the layers &amp; strips 'done'</li></ul></li></ul>
+<ul><li><ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/395ac4c41f4117283b78dad900389b327a3770d0">395ac4c41f</a> RNA: generate valid infinite float property default values</li></ul></li>
+<li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109212">PR #109212</a> WIP: Discuss edge cases and add regression tests for NLA strip evaluation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113490">PR #113490</a> Fix #113365: Backdrop lines don't match height in nla</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">PR #113138</a> Anim: Align new bones with the world axes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104536">PR #104536</a> Document 105427: Bone relation lines: draw between axis points</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/110650">#110650</a> Drivers of sub-ID properties do not get removed along with the sub-ID</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113853">PR #113853</a> Fix #107920: Weight gradient tool auto normalizes over locked groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113825">PR #113825</a> Fix #113798: Weight paint gradient tool paints over hidden vertices</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_8">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>⭕ Plan: Prepare conference talk: Flamenco v3.3</li>
+<li>⭕ Plan: Release Flamenco v3.3 &amp; BAT 1.16.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92883">PR #92883</a> Add support for IES lighting</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_8">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113840">PR #113840</a> Fix #113810: Frame Range Metadata missing when burned into image</li></ul>
+<p><br />
+<b>Plans for next week:</b>
+</p>
+<ul><li>Blender Conference.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-asset-tracer/pulls/92884">PR #92884</a> Add support for Open VDB</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104260">PR #104260</a> Added documentation snippet on enabling Symlinks on SAMBA</li></ul>
+<h2><span class="mw-headline" id="Oct_9-15">Oct 9-15</span></h2>
+<h3><span class="mw-headline" id="Animation_9">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>✅ Plan: Continue working on layered animation datamodel implementation.
+<ul><li>My personal branch for crashing commits &amp; small experiments: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/113279">https://projects.blender.org/blender/blender/pulls/113279</a></li>
+<li>The public branch Nathan and I work on: <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/src/branch/anim/animation-id-113594">https://projects.blender.org/blender/blender/src/branch/anim/animation-id-113594</a></li></ul></li>
+<li>✅ Plan: Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">PR #113138</a> Anim: Align new bones with the world axes</li>
+<li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112943">#112943</a> Proposal: Unify Active/Selected Bone Colors and set current Blender Theme Colors as Default</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113364">PR #113364</a> Indicate Parent Inverse Matrix State in UI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112639">PR #112639</a> New bone color presets</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113503">PR #113503</a> Refactor: Move keyframing code to animrig</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_9">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104187">#104187</a> The bpy.ops.flamenco.submit_job() API  execution fails when submitting render task in the background</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_9">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Blender Conference preparation</li>
+<li>Tuesday off-schedule module meeting</li></ul>
+<h2><span class="mw-headline" id="Oct_2_-_8">Oct 2 - 8</span></h2>
+<h3><span class="mw-headline" id="Animation_10">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>✅ Plan: Start a branch for the new Animation ID data-block.</li>
+<li>✔️ Plan: Change the default bone orientation to align its axes with the world axes: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113138">PR #113138</a> Anim: Align new bones with the world axes</li>
+<li>☐ Plan: Prepare conference talk: Animation 2025</li>
+<li>Define a working schedule for Nathan and me, to balance module work with Animation 2025.</li>
+<li>Tracker:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112943">#112943</a> Proposal: Unify Active/Selected Bone Colors and set current Blender Theme Colors as Default</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113178">#113178</a> .dae file with collection-less armature crashes on import</li>
+<li>Poked Julian Eisel about <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109157">PR #109157</a> WIP: Fix #108078: Crash when inverting results in pose library sidebar</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113171">PR #113171</a> I18n: make new bones and bone collections' names translatable</li></ul></li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Production_pipeline_tools_10">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:</li>
+<li>☐ Plan: Prepare conference talk: Flamenco v3.3</li></ul>
+<h3><span class="mw-headline" id="Other_10">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113004">#113004</a> Blender Cloud Addon not working on 4.0.0 Beta.
+<ul><li>Archived the <a rel="nofollow" class="external text" href="https://projects.blender.org/archive/blender-cloud-addon">Blender Cloud add-on repository</a>.</li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112534">#112534</a> LayerCollection: Invalid operation on main data from within depsgraph-controlled update code.</li>
+<li>Created Gitea bug report: <a rel="nofollow" class="external text" href="https://github.com/go-gitea/gitea/issues/27458">Link color does not show visited/unvisited status #27458</a>.</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<h2><span class="mw-headline" id="Sept_25_-_Oct_1">Sept 25 - Oct 1</span></h2>
+<h3><span class="mw-headline" id="Animation_11">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>Meeting with Falk &amp; Nathan about GP3 + Animation: <a rel="nofollow" class="external free" href="https://devtalk.blender.org/t/2023-09-29-layered-animation-model-grease-pencil-v3/31361">https://devtalk.blender.org/t/2023-09-29-layered-animation-model-grease-pencil-v3/31361</a></li>
+<li>Meeting with Fiona &amp; Nathan about project planning</li>
+<li>Meeting with studio animators &amp; Nathan</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112861">PR #112861</a> Anim: Improve readability of channel colors in channel list</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112059">#112059</a> Unable to add drivers to bone collections visibility</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112826">#112826</a> shift g layer and group options no longer work after introduction of bone collections.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111043">#111043</a> Armature layers can be put into an invalid state via the Python API</li>
+<li>Reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112836">PR #112836</a> Anim: remove the deprecated use_inherit_scale bone property.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112413">PR #112413</a> Allow setting weights (Ctrl+X) without paintmask enabled</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112865">PR #112865</a> Refactor: Move NLA anim bake paremeters into dataclass</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112587">PR #112587</a> UI: Remove Modes text from NLA and Graph editor snapping menu</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112654">PR #112654</a> WIP: Improved overlapped bone selection with a single click.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">PR #110758</a> Bendy Bones: implement a new curve-aware vertex to segment mapping mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107937">PR #107937</a> Fix #107924: Scale limit respect negative values</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112709">PR #112709</a> Fix #107030: return accurate action frame ranges from the Python API</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112908">PR #112908</a> Fix #112904: Outliner: Bones appear in different places in different modes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112411">PR #112411</a> Fix: remove non-functional choice of weightpaint mode from lattices</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112401">PR #112401</a> Fix #112395: Transform with Proportional Influence in Graph editor only works horizontally</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_11">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104257">#104257</a> Flamenco Worker: Error stating " output uploader: file a format I cannot decode, ignoring it"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104240">PR #104240</a> Makefile: Add the ability to create a source code release with all deps</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_11">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108668">PR #108668</a> Python GPU: expose GPU functions in Python</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113004">#113004</a> Blender Cloud Addon not working on 4.0.0 Beta.</li>
+<li>☐ Plan: Thursday module meeting.</li>
+<li>☐ Plan: Start a branch for the new Animation ID data-block.</li>
+<li>☐ Plan: Change the default bone orientation to align its axes with the world axes.</li></ul>
+<h2><span class="mw-headline" id="Sept_18-24">Sept 18-24</span></h2>
+<h3><span class="mw-headline" id="Animation_12">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>Commits:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7e9497a06c">d7e9497a06</a> Anim: remove bone groups from the outliner</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6b553d57cf">c6b553d57c</a> Anim: Add bone collections to the outliner</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02659c0d017">02659c0d01</a> Anim: merge bone collection assignment menus</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8337a19f97f">8337a19f97</a> Anim: make it possible to select bone collections on linked armature</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38871b9728e">38871b9728</a> Anim: (de)select bones in collection, remove 'name' operator property</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7be628b3960">7be628b396</a> Anim: bone collections: make the "(de)select bones" work on linked arms</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e41fbfd6e93">e41fbfd6e9</a> Anim: add 'select grouped: bone collection' pose mode operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c230c526261">c230c52626</a> Anim: implement 'Select Grouped' by bone color</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5329eeea23">d5329eeea2</a> Anim: armature edit mode 'select by bone collection' operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e59944dba4e">e59944dba4</a> Anim: armature edit mode 'select by bone color' operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/62639080bce">62639080bc</a> Anim: armature edit mode, replace 'bone layers' operator with collections</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b48031df8e7">b48031df8e</a> Anim: armature edit mode, make Shift+M consistent with pose mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/661065aed4d">661065aed4</a> Refactor: Anim, move function for setting active bone collection by name</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/004a348efc8">004a348efc</a> Anim, refactor the show/hide all bone collections functions</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f0c89afb766">f0c89afb76</a> Anim: move creation of default bone collection to the Shift+A operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/83306754d48">83306754d4</a> Collada: add bone collection support</li></ul></li>
+<li>Reviews:
+<ul><li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110758">PR #110758</a> Bendy Bones: implement a new curve-aware vertex to segment mapping mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110121">PR #110121</a> Fix #110108: NLA Markers transform not resetting correctly</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111997">PR #111997</a> Anim: Add channel type options to the Bake Action operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104562">PR #104562</a> Fix "Keep Transform" description for "Parent without Inverse" operator</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_12">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111931">PR #111931</a> USD: Support armature and shape key export</li></ul></li>
+<li>Flamenco:</li></ul>
+<h3><span class="mw-headline" id="Other_12">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<h2><span class="mw-headline" id="Sept_11-17">Sept 11-17</span></h2>
+<h3><span class="mw-headline" id="Animation_13">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>✅ Plan: Tuesday meeting with Blender Studio animators</li>
+<li>Added to the 3.3 and 3.6 LTS backport lists: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110605">PR #110605</a> Fix #110161: Crash on dragging a Speaker NLA strip</li>
+<li>Commits:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c4eb80cc36">6c4eb80cc3</a> Anim: clarify <code>BKE_armature_find_bone_name</code> docstring</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/456d65b00a7">456d65b00a</a> Show FCurve modifier toggle widget as 'inactive' when there are no modifiers</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/68bb3fa388c">68bb3fa388</a> Anim: disallow bone collection operations on linked armatures</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63f2a416b27">63f2a416b2</a> Anim: allow (de)selecting bones in collection on overridden armature</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f1c65c9635a">f1c65c9635</a> Anim: allow appending bone collections with liboverrides</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89aee9defb3">89aee9defb</a> Anim: store Armature's active bone collection by name</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/347ffd62626">347ffd6262</a> Anim: add support for renaming bone collections added by overrides</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8499c6d4b3a">8499c6d4b3</a> Refactor: Anim, consistent abstraction level ANIM_armature_bonecoll_assign</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/24048ef05d7">24048ef05d</a> Anim: allow assigning bones to added-in-local-override collections</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89962977e59">89962977e5</a> Anim: only show editable bone collections in M/shift+M menu</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cb2afa6553b">cb2afa6553</a> Cleanup: Anim, remove out of date note on ANIM_armature_runtime_refresh</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/44d1964b5fd">44d1964b5f</a> Anim: add reverse pointers from bone to collection on overrides</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/de13d7861c3">de13d7861c</a> Anim: when applying overrides, just assert the bone hash is there</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9580c377fe4">9580c377fe</a> Cleanup: Anim, add some more comments to the bone collection system</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ea360ffc12c">ea360ffc12</a> Anim: hide bone collection customprop editor on overrides</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7e9497a06c">d7e9497a06</a> Anim: remove bone groups from the outliner</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6b553d57cf">c6b553d57c</a> Anim: Add bone collections to the outliner</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02659c0d017">02659c0d01</a> Anim: merge bone collection assignment menus</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8337a19f97f">8337a19f97</a> Anim: make it possible to select bone collections on linked armature</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/38871b9728e">38871b9728</a> Anim: (de)select bones in collection, remove 'name' operator property</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7be628b3960">7be628b396</a> Anim: bone collections: make the "(de)select bones" work on linked arms</li></ul></li>
+<li>Finished <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112271">PR #112271</a> WIP: Bone Collections library override support</li>
+<li>Video call with Aurélien Charrier</li>
+<li>Reviews / mingling:
+<ul><li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111997">PR #111997</a> Animation: Add channel type options to the Bake Action operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111050">#111050</a> Better Baking in the Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112134">#112134</a> Animation: create a full separate copy of BoneCollections while in armature edit mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111965">PR #111965</a> Fix #111780: bone collections and undo don't work together</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111986">PR #111986</a> Animation: Graph Editor locked key drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112131">PR #112131</a> Fix #112085: Not able to insert keys on subframes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111143">PR #111143</a> Animation: Graph Editor Handle Selection</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112419">PR #112419</a> Anim: Multi Editing for FCurve modifiers</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_13">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>Meeting with Francesco, Sebastian Parborg, Andy, about studio pipeline changes &amp; impact on Flamenco design.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_13">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<ul><li><ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111931">PR #111931</a> USD: Support armature and shape key export</li></ul></li></ul>
+<h2><span class="mw-headline" id="Sept_4-10">Sept 4-10</span></h2>
+<p>Last week I was on vacation. Now I'm back but with covid, so a slow start.
+</p>
+<h3><span class="mw-headline" id="Animation_14">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111789">#111789</a> Bone Collections: linking the armature from 3.6 doesn't create bone collections</li>
+<li>Wrote <a rel="nofollow" class="external free" href="https://hackmd.io/@anim-rigging/BkDuddEA3">https://hackmd.io/@anim-rigging/BkDuddEA3</a></li>
+<li>Investigated issue back-porting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/51759e6595">51759e6595</a> to 3.3-LTS (conflicts with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/962b647690">962b647690</a>).</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5250ae156e2">5250ae156e</a> Refactor: move default bone collection name to constant</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/bcd0198a46d">bcd0198a46</a> Anim: versioning, also bone create collections for empty bone groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e6bb1374f9c">e6bb1374f9</a> Anim: add bone collection custom properties sub-panel</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a6bb302f9f5">a6bb302f9f</a> Anim: show Bone Collections panel when armature is pinned</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f78ed7b900e">f78ed7b900</a> Anim: rename Armature <code>show_group_colors</code> to <code>show_bone_colors</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/59c592f1de3">59c592f1de</a> Anim: remove RNA access to bone groups</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/afa8596d21b">afa8596d21</a> Anim: add <code>bonecollection.bones</code> RNA collection property</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9d65214d5b9">9d65214d5b</a> Anim: add notifier <code>ND_BONE_COLLECTION</code> for bone collection changes</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0ea79698aca">0ea79698ac</a> Anim: Add <code>bone.collections.clear()</code> RNA function</li>
+<li>Reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109182">PR #109182</a> Fix #100718: NLA Hold Forward Inconsistency</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Move Snapping to Scene</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110788">PR #110788</a> Animation: Graph Editor - Don't draw curve points if they are too close to each other</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108518">PR #108518</a> Animation: Keep icons aligned when curves are baked</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111968">PR #111968</a> Refactor: Code indentation in transform_convert_nla.cc</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112126">PR #112126</a> Animation: Graph Editor optimize handle drawing</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111377">PR #111377</a> Fix: Regression: Box select not working for GP/GPv3 channels</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_14">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104244">PR #104244</a> Web Interface for Tags</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/31a5a8dc23429baab016f4ff50e7479a0082a9e5">31a5a8dc23</a> Webapp: make the Manager responsible for setting a default tag description</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/9029ab89eb222cccea0dc4636c6bb53fbc1355af">9029ab89eb</a> Webapp: show placeholder when worker tag has no description</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/0821df8f3ae3d0679f842029cc07c9357f078342">0821df8f3a</a> Webapp: make Tags view respond to SocketIO messages</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/c12e4cae740bdfa1ead0dbf96b1b21c1f17bf194">c12e4cae74</a> Webapp: add explanation to Tags view</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104255">#104255</a> Error performing BAT pack: File is compressed with ZStandard, install the zstandard module to support this.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/a229c0f75af5a2a8e4203272532ec4e81992d86b">a229c0f75a</a> Make: rename target <code>project-website</code> to <code>deploy-website</code></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/commit/f951981a4c6ae003b58e435e5bb33fc52e1ea325">f951981a4c</a> Make: add targets for running devservers, and avoid installing Hugo</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_14">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111976">PR #111976</a> RNA: return PointerRNA from rna create functions</li>
+<li>Gitea: investigate sign-up flow problem when user has accented username: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111937">#111937</a> Bug with this site when your name has non-ASCII characters.
+<ul><li>Created fix in <a rel="nofollow" class="external free" href="https://github.com/blender/gitea/pull/3">https://github.com/blender/gitea/pull/3</a></li></ul></li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: Monday UI/UX design meeting with Nathan.</li>
+<li>☐ Plan: Tuesday meeting with Blender Studio animators.</li>
+<li>☐ Plan: Thursday module meeting.</li>
+<li>Further work on Bone Collections.</li></ul>
+<h2><span class="mw-headline" id="Aug_14-20">Aug 14-20</span></h2>
+<p>Some loss of efficiency due to jet lag after flying back from Los Angeles &amp; catching up on what happened last week.
+</p>
+<h3><span class="mw-headline" id="Animation_15">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>Reviews:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108142">PR #108142</a> Animation: Graph Editor Handle Selection</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110135">PR #110135</a> Drivers: implement fallback values for RNA path based variables.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_15">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>Implemented 'restartable workers'; doc: <a rel="nofollow" class="external free" href="https://flamenco.blender.org/usage/worker-actions/#shut-down--restart-actions">https://flamenco.blender.org/usage/worker-actions/#shut-down--restart-actions</a></li>
+<li>Updated the Gentoo overlays of Blender Studio to fix installation compatibility with the latest Flamenco &amp; use the restartable workers feature.</li>
+<li>Pushed the new revision of Flamenco to the Blender Studio farm, now that most of the art team is on holiday.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_15">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Debugging issues with the Blender ID webhook on the internal Gitea instance. As it turned out, the URL of that instance changed from <code>A.B.blender.org</code> to <code>B.A.blender.org</code>, and not all the necessary configuration was updated for that change.</li></ul>
+<p><b>Plans for next week:</b>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Aug_7-13">Aug 7-13</span></h2>
+<ul><li>SIGGRAPH in Los Angeles.</li></ul>
+<h2><span class="mw-headline" id="July_31_-_Aug_6">July 31 - Aug 6</span></h2>
+<h3><span class="mw-headline" id="Animation_16">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>☐ Plan: continue working on bone collection system</li>
+<li>Reviews:
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110605">PR #110605</a> Fix #110161: Crash on dragging a Speaker NLA strip</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_16">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>✅ Plan: continue working on the hands-on class I'll be giving at SIGGRAPH 2023.</li>
+<li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104237">#104237</a> Flamenco Manager does not report the storage location correctly when mapping to a bare drive path</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104239">PR #104239</a> Makefile: Add a standalone recipe for building only the addon .zip</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_16">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>SIGGRAPH in LA.</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_24-30">July 24-30</span></h2>
+<h3><span class="mw-headline" id="Animation_17">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>☐ Plan: Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108296">#108296</a> Regression: Cannot Overwrite Pose in Pose Library</li>
+<li>continued working on bone collection system
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110533">PR #110533</a> Refactor: Anim, abstractions for armature layers</li></ul></li>
+<li>Reviews:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110256">PR #110256</a> Fix #110253: Regression: Extruding bone from root fails</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110316">PR #110316</a> Animation: Default NLA duplucation hot keys to duplicate linked</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110139">PR #110139</a> Depsgraph: handle camera switching via markers in context drivers.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/110067">#110067</a> Library Override: Change handling of Animation Data when it exists in both liboverride and linked reference IDs</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110527">PR #110527</a> Anim: Cleanup: Move CfraElem struct to editors</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_17">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>continued working on the hands-on class I'll be giving at SIGGRAPH 2023.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104236">PR #104236</a> Run Flamenco Unit Tests in the local timezone</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_17">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110145">PR #110145</a> makesdna: Give suggestions for fix</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: Thursday module meeting</li>
+<li>☐ Plan: continue working on the hands-on class I'll be giving at SIGGRAPH 2023.</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li>☐ Plan: continue working on bone collection system</li></ul>
+<h2><span class="mw-headline" id="July_17-23">July 17-23</span></h2>
+<h3><span class="mw-headline" id="Animation_18">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>✅ Plan: publish blog post about the Animation workshop, including the recap video: <a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=q-i9MHPOqds">https://www.youtube.com/watch?v=q-i9MHPOqds</a>
+<ul><li>☐ Plan: link to blog post from video description.</li>
+<li>☐ Plan: upload ghosting video to YouTube and include in blog post.</li></ul></li>
+<li>✅ Plan: continue working on bone collection system</li>
+<li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106232">PR #106232</a> Armature drawing code refactor</li>
+<li>Reviews:
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107758">PR #107758</a> WIP: Fix #105260: Skip nla tracks with library linked strips</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/pulls/104513">PR #104513</a> Driver Variables: document camera.location vs camera.matrix_world.</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110306">PR #110306</a> Animation: Disable NLA mapping if no NLA tracks are present</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_18">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>✅ Plan: investigate sleep schedule issue with Dalai's machine.</li>
+<li>⭕ Plan: prepare the hands-on class I'll be giving at SIGGRAPH 2023.</li>
+<li>✔️ Plan: periodically call the database health check. It currently only happens at startup.
+<ul><li>Committed, ready to deploy.</li></ul></li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104235">PR #104235</a> WIP: Fix #99410: SocketIO Reconnect Web Interface</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_18">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Sprouted an opinion on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109151">#109151</a> How to Handle Forward Compatibility</li>
+<li>Read through LazyDodo's <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/cmake-cleanup/30260">CMake Cleanup post</a> on Devtalk.</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110291">PR #110291</a> Makesdna: more verbose Align struct error</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Continue working on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108296">#108296</a> Regression: Cannot Overwrite Pose in Pose Library</li>
+<li>continue working on bone collection system</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li>☐ Plan: prepare the hands-on class I'll be giving at SIGGRAPH 2023.</li></ul>
+<h2><span class="mw-headline" id="July_10-16">July 10-16</span></h2>
+<h3><span class="mw-headline" id="Animation_19">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>✅ Plan: Write blog post about the workshop.</li>
+<li>✅ Plan: Write feedback on Nathan's meta blog post about the workshop.</li>
+<li>Reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109895">PR #109895</a> Fix #109887: Adding driver from python might crash</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109775">PR #109775</a> Animation: Fcurve Channel color band alignment</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108286">PR #108286</a> Animation: Make Vertex Weight Edit modifier inclusive</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109360">PR #109360</a> Cleanup: animation: remove redundant/wrong comments</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109926">PR #109926</a> Fix #109920: f-curve ghosts are drawn with incorrect extrapolation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108807">PR #108807</a> GPv3: Add initial dopesheet support</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110059">PR #110059</a> Fix #109799: Smooth (Gaussian) introduces stepping</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110060">PR #110060</a> Fix: Stepping issue with Butterworth filter</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110032">PR #110032</a> Fix #109787: filter out non Fcurve channels from nlatrack_truncate_temporary_tracks</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_19">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>Resolved an issue with the GORM auto-migrator that caused all tasks to be lost.</li>
+<li>☐ Plan: Prepare hands-on class to give at SIGGRAPH</li>
+<li>✅ Plan: land <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104223">PR #104223</a> Rename worker clusters to tags</li>
+<li>☐ Plan: at the end of the week, periodically call the database health check. It currently only happens at startup.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_19">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Flamenco: investigate sleep schedule issue with Dalai's machine</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108309">PR #108309</a> Animation: Merge Push/Relax Rest Pose operators</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="July_3_-_9">July 3 - 9</span></h2>
+<h3><span class="mw-headline" id="Animation_20">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>⭕ Plan: Write blog post about the workshop. NOTE: don't forget about the dynamic overrides. And about sound strips.</li>
+<li>Reviews:
+<ul><li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109182">PR #109182</a> Fix #100718: NLA Hold Forward Inconsistency</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Snapping options new GUI</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108961">#108961</a> Incorrect label for "Only Keyframes from Selected Channels".</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107902">PR #107902</a> Fix #104054: Symmetrize visible ebones when nothing selected</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107985">PR #107985</a> Animation: Set hardmin/max for frame start and end of action</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108807">PR #108807</a> GPv3: Add initial dopesheet support</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107937">PR #107937</a> Fix #107924: Scale limit respect negative values</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109768">PR #109768</a> Animation: Allow setting the slider unit and mode</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109813">PR #109813</a> Fix #109781: Linked datablocks are keyable</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106052">PR #106052</a> Animation: Improve drawing of locked FCurves</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_20">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109155">PR #109155</a> Cleanup: Alembic, use a structure to hold interpolation settings</li></ul></li>
+<li>Flamenco:
+<ul><li>✅ Plan: continue reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104223">PR #104223</a> Rename worker clusters to tags</li>
+<li>Investigated database corruption issue at Blender Studio</li>
+<li>Add database health check at startup of Flamenco Manager</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104227">PR #104227</a> Update wording for worker maintenance guidance on Flamenco Manager Console</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104224">PR #104224</a> enhance messages when blender is not found</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104225">PR #104225</a> faq on worker not finding blender</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104232">PR #104232</a> FAQ for when worker cannot find Blender executable</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104226">PR #104226</a> fix links in mgr configuration doc section</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104228">#104228</a> Feature - Flamenco-Manager Console - Multi-section Workers and include "Remove" from "Choose an action..."</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104231">PR #104231</a> Flamenco Mgr - fix logURLs possble typo</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104229">PR #104229</a> Flamenco Manager Console - Worker Maintenance section caption</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104234">PR #104234</a> Shaman: fail unit test when running as root user (linux)</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_20">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/93188">#93188</a> Python API&#160;: OBJECT_OT_convert can't be fully abstracted from context with override</li>
+<li>✅ Plan: sit with Francesco to talk about Blender ID &amp; OpenID Connect.</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: Write blog post about the workshop. NOTE: don't forget about the dynamic overrides. And about sound strips.</li>
+<li>Flamenco:
+<ul><li>☐ Plan: Prepare hands-on class to give at SIGGRAPH</li>
+<li>☐ Plan: land <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104223">PR #104223</a> Rename worker clusters to tags</li>
+<li>☐ Plan: at the end of the week, periodically call the database health check. It currently only happens at startup.</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_26_-_July_2">June 26 - July 2</span></h2>
+<h3><span class="mw-headline" id="Animation_21">Animation</span></h3>
+<ul><li>Animation 2025 workshop about the new data model.</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>Write blog post about the workshop.</li></ul>
+<h2><span class="mw-headline" id="June_19-25">June 19-25</span></h2>
+<h3><span class="mw-headline" id="Animation_22">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>☐ Plan: Preparing for next week's animation workshop.</li>
+<li>☐ Plan: investigate Reaper's take system</li>
+<li>✅ Plan: talk with Midge and Nathan about motion graphics</li>
+<li>Reviews:
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107990">PR #107990</a> Animation: NLA Vertical Reorder</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Snapping options new GUI</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108286">PR #108286</a> Animation: Make Vertex Weight Edit modifier inclusive</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/rignodes/pulls/3">PR #3</a> Update new nodes description</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107937">PR #107937</a> Fix #107924: Scale limit respect negative values</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108448">#108448</a> Make channel selection consistent with outliiner</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108538">#108538</a> quaternion rotation values changing to inverse of what's needed when rotating beyond limits of current quaternion segment</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108142">PR #108142</a> Animation: Graph Editor Handle Selection</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106372">#106372</a> (Unneccessarily) restricted execution in scripted expression drivers (using e.g. "self", "bpy.data")</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_21">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>✅ Plan: Review <a rel="nofollow" class="external text" href="https://studio.blender.org/pipeline/td-guide/workstations/maintaince">Workstation Maintenance Guide</a>: <a rel="nofollow" class="external free" href="https://hackmd.io/@blender-studio-pipeline/HkbRsk7u2">https://hackmd.io/@blender-studio-pipeline/HkbRsk7u2</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104222">PR #104222</a> web-api-upgrade</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_21">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Filed two Gitea bug reports:
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/go-gitea/gitea/issues/25435">Logging in when already logged in redirects to front page</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/go-gitea/gitea/issues/25436">Logging out redirects to front page</a></li></ul></li>
+<li>Help Arnd setting up the BlenderID-to-Gitea bridge.
+<ul><li><a rel="nofollow" class="external free" href="https://github.com/go-gitea/gitea/commit/09dd4b42c7afe3f474d900b9d5856af2929a12ea">https://github.com/go-gitea/gitea/commit/09dd4b42c7afe3f474d900b9d5856af2929a12ea</a> caused issues where API keys cannot be given a scope any more. The trick is to remove the <code>gt-hidden</code> class from the <code>&lt;details&gt;</code> element in your browser's inspector.</li></ul></li></ul>
+<p><b>Plans for next week:</b>
+</p><p>Animation workshop.
+</p>
+<h2><span class="mw-headline" id="June_12_-_18">June 12 - 18</span></h2>
+<h3><span class="mw-headline" id="Animation_23">Animation</span></h3>
+<ul><li>✅ Plan: Tuesday module meeting</li>
+<li>✅ Plan: Thursday meeting with Jason &amp; Nathan about animation layering</li>
+<li>✅ Plan: Thursday meeting with Colin Gallacher and Jessica Henry of Haply Robotics, Montreal</li>
+<li>☐ Plan: Continue working on Armature Collections
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108941">#108941</a> Animation: Replacing bone layers + groups with bone collections</li></ul></li>
+<li>✅ Plan: backport to 3.3: 5532d05622, 98334b8f7d. I did not do the latter as it fixes an issue introduced after 3.3.
+<ul><li>Also including f3be425e9724146959a4c25a34536422ebf858a6</li></ul></li>
+<li>Nagged about landing without A&amp;R review: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108025">PR #108025</a> Mesh: Remove face map list, convert to integer attribute</li>
+<li>Attempted &amp; then handed over to Julian: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108078">#108078</a> Blender crash on pose library N-panel</li>
+<li>Fix crash caused by <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108998">PR #108998</a> Cleanup: Move space nla files to C++</li>
+<li>Reviews:
+<ul><li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Snapping options new GUI</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107990">PR #107990</a> Animation: NLA Vertical Reorder</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108286">PR #108286</a> Animation: Make Vertex Weight Edit modifier inclusive</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/rignodes/pulls/3">PR #3</a> Update new nodes description</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107937">PR #107937</a> Fix #107924: Scale limit respect negative values</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108748">PR #108748</a> Refactor: draw fcurve bezt function</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_22">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Flamenco:
+<ul><li>Meeting with Sebastian Parborg about the Blender Studio pipline w.r.t. deployment of Flamenco.</li>
+<li>wrote 2-page abstract for SIGGRAPH class on Flamenco</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_22">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<ul><li>continue working on bone collections.
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107990">PR #107990</a> Animation: NLA Vertical Reorder</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109015">PR #109015</a> Animation: Snapping options new GUI</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108286">PR #108286</a> Animation: Make Vertex Weight Edit modifier inclusive</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/rignodes/pulls/3">PR #3</a> Update new nodes description</li>
+<li>☐ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107937">PR #107937</a> Fix #107924: Scale limit respect negative values</li></ul></li>
+<li>investigate Reaper's take system</li>
+<li>check with Midge about motion graphics discussion at EU Reconnect
+<ul><li>streaming device input for triggering &amp; puppetering stuff</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_5-11">June 5-11</span></h2>
+<h3><span class="mw-headline" id="Animation_24">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>Grease Pencil meeting with Falk, Amélie, Nathan</li>
+<li>✅ Plan: finish <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108547">PR #108547</a> Assets: add function to copy asset data to another ID</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107126">#107126</a> Make FCurve.update() also deduplicate keys</li>
+<li>Reviews:
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/powership/pulls/1">PR #1</a> Motion transfer setup</li>
+<li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/powership/pulls/2">PR #2</a> Fixed powership_transfer.blend</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108549">PR #108549</a> Fix #102737: Keyframe jump operator includes hidden curves in Graph Editor</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108715">PR #108715</a> Cleanup: Move anim_filter.c to C++</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_23">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108701">PR #108701</a> Fix #105942: Wrong text in MeshSequenceCache and Transform Cache</li></ul></li>
+<li>Flamenco:
+<ul><li>Created a two-page abstract for the SIGGRAPH 2023 hands-on lab.</li>
+<li>Reviewed &amp; landed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104220">PR #104220</a> Add 'copy-file' command.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_23">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>✅ Plan: discussion with Blender Studio about how to move forward with the pipeline tooling.</li>
+<li>Investigate why Blender ID username changes don't end up in Gitea any more: <a rel="nofollow" class="external free" href="https://github.com/go-gitea/gitea/pull/24052">https://github.com/go-gitea/gitea/pull/24052</a></li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: Continue working on Armature Collections</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107990">PR #107990</a> Animation: NLA Vertical Reorder</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108286">PR #108286</a> Animation: Make Vertex Weight Edit modifier inclusive</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/rignodes/pulls/3">PR #3</a> Update new nodes description</li></ul>
+<h2><span class="mw-headline" id="May_29_-_June_4">May 29 - June 4</span></h2>
+<p>Only two day work week for me: Monday national holiday, Tuesday off for personal reasons, Wednesday my parttime day off.
+</p>
+<h3><span class="mw-headline" id="Animation_25">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108547">PR #108547</a> Assets: add function to copy asset data to another ID</li>
+<li>Reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/powership/pulls/1">PR #1</a> Motion transfer setup</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107985">PR #107985</a> Animation: Set hardmin/max for frame start and end of action</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_24">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104219">#104219</a> Unit tests are timezone-dependent</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104217">PR #104217</a> Fix #99549: Remember Previous Status</li>
+<li>Implement 'project finders' for Andy, so that the Flamenco add-on can identify the top project directory by finding a <code>.blender_project</code>, <code>.git</code>, or <code>.subversion</code> file.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_24">Other</span></h3>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: finish <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108547">PR #108547</a> Assets: add function to copy asset data to another ID</li>
+<li>☐ Plan: land <a rel="nofollow" class="external text" href="https://projects.blender.org/dr.sybren/powership/pulls/1">PR #1</a> Motion transfer setup</li>
+<li>☐ Plan: discussion with Blender Studio about how to move forward with the pipeline tooling.</li></ul>
+<h2><span class="mw-headline" id="May_15_-_21">May 15 - 21</span></h2>
+<p>Three-day work week for me. Wednesday = my regular day off, and Thursday is a national holiday.
+</p>
+<h3><span class="mw-headline" id="Animation_26">Animation</span></h3>
+<ul><li>Meeting with Nathan &amp; Bastien about Nathan's new animation data model.</li>
+<li>✅ Plan: Tuesday module meeting</li>
+<li>✅ Plan: Land if not yet done: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/issues/104438">#104438</a> Add parent space ransform orientation doc.</li>
+<li>☐ Plan: handle Vittoria Puggioni's manual updates at <a rel="nofollow" class="external free" href="https://hackmd.io/wW_-D93gQXePhAaeI1ElTw">https://hackmd.io/wW_-D93gQXePhAaeI1ElTw</a> after we move to Git-LFS.</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/issues/104439">#104439</a> Updates to Graph Editor manual</li>
+<li>Investigations / fixes:
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/51c2a0f81606d2920146bf3fd3e753148d7c7aca">51c2a0f816</a> Fix #104606: iTaSC solver moves root bone to origin and imobilizes it</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106372">#106372</a> self causes error in scripted expression drivers</li>
+<li>created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108072">PR #108072</a> Fix #102662: NLA-Strip Corrupted after reopening file with library override</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/99471">#99471</a> NLA: New meta strip is created when the selection itself is one metastrip</li></ul></li>
+<li>Reviews:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106518">PR #106518</a> Animation: blend offset slider</li>
+<li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/aaf56d7aa55273dc7ff6963701ad5866517e8e32">aaf56d7aa5</a> Refactor: Anim, Symmetrize Armature operator</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106520">PR #106520</a> Animation: time offset slider</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107990">PR #107990</a> Animation: NLA Vertical Reorder</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107719">PR #107719</a> Fix #107718: Extend channel selection not working due to key conflicts</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_25">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104191">#104191</a> Manager build error on ARM64</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_25">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<ul><li><ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107719">PR #107719</a> Fix #107718: Extend channel selection not working due to key conflicts</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_1-7">May 1-7</span></h2>
+<h3><span class="mw-headline" id="Animation_27">Animation</span></h3>
+<ul><li>☐ Plan: Thursday module meeting</li>
+<li>Reviews:
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104949">PR #104949</a> Allow renaming F-curve modifier</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104565">PR #104565</a> Allow select range in animation editor</li>
+<li>✅ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106918">PR #106918</a> Fix #106853: Tooltip fix of OT_constraints_clear</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107402">PR #107402</a> Refactor: Replace move_key with BKE_fcurve_keyframe_move_value_with_handles</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107435">PR #107435</a> Fix: Graph Editor - add operator flags for cursor wrapping</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107406">PR #107406</a> Refactor: Allow to explicitly set the range on the slider UI element</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107397">PR #107397</a> Fix: Slider bidirectionality in pose_slide.c</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107223">PR #107223</a> Fix #95855: prioritize selecting keys on active fcurve</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107281">PR #107281</a> Fix #100718: NLA Hold Forward Inconsistency</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107610">PR #107610</a> Refactor: pose_slide.c</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_26">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104210">PR #104210</a> Fix #104191: Manager build error on ARM64</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_26">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Core:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/75956">#75956</a> Policy to change clang-format brace placement</li></ul></li>
+<li>Infra:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/infrastructure/blender-projects-platform/issues/1">#1</a> Hook for nickname changes on Blender ID</li></ul></li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li>☐ Plan: handle Vittoria Puggioni's manual updates at <a rel="nofollow" class="external free" href="https://hackmd.io/wW_-D93gQXePhAaeI1ElTw">https://hackmd.io/wW_-D93gQXePhAaeI1ElTw</a></li></ul>
+<h2><span class="mw-headline" id="April_23-30">April 23-30</span></h2>
+<p>Only two days of work for me (Monday + Tuesday). Module meeting is cancelled.
+</p>
+<h3><span class="mw-headline" id="Animation_28">Animation</span></h3>
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106708">#106708</a> Fcurve Problem after baking animation by landing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107089">PR #107089</a> Anim: add low-level function for simple FCurve key deduplication</li>
+<li>Reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107170">PR #107170</a> Refactor: Deduplicate code in graph_slider_ops.c</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107223">PR #107223</a> Fix #95855: prioritize selecting keys on active fcurve</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_27">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:</li>
+<li>Flamenco:</li></ul>
+<h3><span class="mw-headline" id="Other_27">Other</span></h3>
+<p><b>Other work:</b>
+</p><p><b>Plans for next week:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104949">PR #104949</a> Allow renaming F-curve modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104565">PR #104565</a> Allow select range in animation editor</li></ul>
+<h2><span class="mw-headline" id="April_17-23">April 17-23</span></h2>
+<h3><span class="mw-headline" id="Animation_29">Animation</span></h3>
+<ul><li>Thursday afternoon off, Nathan Vegdahl will host the module meeting.</li>
+<li>Finished <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107031">PR #107031</a> Fix #106943: driver on inactive view layer doesn't work</li>
+<li>Fixes / triaging:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106943">#106943</a> Adding driver with python on inactive viewlayer doesn't catch dependency</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107030">#107030</a> action.frame_range span always &gt;=1 when there's only 1 key frame in it.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107032">#107032</a> API Document: matrix_channel (PoseBone) description is incorrect</li></ul></li>
+<li>Reviews:
+<ul><li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105385">PR #105385</a> WIP #104054 Symmetize visible edit bones if nothing has been selected</li>
+<li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105373">#105373</a> Mitigate the risk of wrong shape key selection in sculpt and edit mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106521">PR #106521</a> Animation: shear left slider</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_28">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/91966">#91966</a> Alembic export ignores animation for object parented to bone</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105867">PR #105867</a> Fix #105409: vertex interpolation corrupts Alembic mesh</li></ul></li>
+<li>Flamenco:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104205">PR #104205</a> Resolved Task Limit error in Flamenco Manager #104201</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104195">PR #104195</a> Check for number of workers before soft failing the task.</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/issues/104206">#104206</a> Worker cluster assignment is lost when blender is restarted</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_28">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Stepped down from <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106700">PR #106700</a> Core: Add sub-types for float-type custom properties</li></ul>
+<p><b>Plans for next week:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/infrastructure/blender-projects-platform/issues/1">#1</a> Hook for nickname changes on Blender ID</li></ul>
+<h2><span class="mw-headline" id="April_11-16">April 11-16</span></h2>
+<h3><span class="mw-headline" id="Animation_30">Animation</span></h3>
+<ul><li>✔️ Plan: Tuesday module meeting</li>
+<li>✔️ Plan: Thursday UnrealEngine Control Rig study with Nathan</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105373">#105373</a> Mitigate the risk of wrong shape key selection in sculpt and edit mode.</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/issues/102734">#102734</a> Both Copy Global Transforms and Scatter Objects addons don't have option to report a bug or check out the documentation</li>
+<li>Documented Copy Global Transforms new 'mirroring' functionality.</li>
+<li>⭕ <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106617">PR #106617</a> Fix #106127: crash enabling "Dynamic" on already bound MeshDeform mod</li>
+<li>Triaged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/issues/104537">#104537</a> pose_library:When the Asset Browser exists in the window, pose assets cannot be created</li>
+<li>Reviews:
+<ul><li>✔️ Plan:  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106487">PR #106487</a> Animation: Armature symmetrize ebones refactor</li>
+<li>⭕ Plan:  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105385">PR #105385</a> WIP #104054 Symmetize visible edit bones if nothing has been selected</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106060">PR #106060</a> UI: replace "copy/paste buffer" by "internal clipboard"</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106888">PR #106888</a> Fix: Respect preview range when auto normalizing in Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106890">PR #106890</a> Fix: Normalization with baked curves and preview range</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106904">PR #106904</a> Fix #106771: Selection offset in timeline when NLA track is offset</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104949">PR #104949</a> Allow renaming F-curve modifier</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106521">PR #106521</a> Animation: shear left slider</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_29">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105347">PR #105347</a> USD IO: Move to the new Mesh Attributes API for Colors</li></ul></li>
+<li>Flamenco:
+<ul><li>✔️ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104202">PR #104202</a> Added documentation for multi-pass scripting, bat-pack error, slightly clarifies two-way variables usage.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Other_29">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>Landed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106675">PR #106675</a> Core: Fix ASAN on Clang-14 / Linux</li>
+<li>Filed Gitea feature request about searching accentless names (via go-unidecode): <a rel="nofollow" class="external free" href="https://github.com/go-gitea/gitea/issues/24054">https://github.com/go-gitea/gitea/issues/24054</a></li></ul>
+<h2><span class="mw-headline" id="April_3-9">April 3-9</span></h2>
+<h3><span class="mw-headline" id="Animation_31">Animation</span></h3>
+<ul><li>✅ Plan: Thursday module meeting</li>
+<li>☐ Plan: Continue working on <a rel="nofollow" class="external text" href="https://hackmd.io/@sybren/ByypmW8As">my investigation of the animation filtering system</a></li>
+<li>✅ Plan: check what happened to the 'symmetrize' operator being silent when no bone is selected.</li>
+<li>Reviews:
+<ul><li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106617">PR #106617</a> Fix #106127: crash enabling "Dynamic" on already bound MeshDeform mod</li>
+<li>⭕ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106060">PR #106060</a> UI: replace "copy/paste buffer" by "clipboard"</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105419">PR #105419</a> Python API: expose the math mapping vertex positions to B-Bone segments</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105913">PR #105913</a> Fix #94080: clicking empty space in timeline creates undo step</li>
+<li>🕐 Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106281">PR #106281</a> WIP: Animation&amp;Rigging: Extra operators for the sliders</li>
+<li>🕐 Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105407">#105407</a> Improvement ideas for using Driver Context Properties to access scene custom properties</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">PR #106113</a> Animation: Clean up "Key" menu in Graph Editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104565">PR #104565</a> Allow select range in animation editor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106487">PR #106487</a> Animation: Armature symmetrize ebones refactor</li></ul></li></ul>
+<h3><span class="mw-headline" id="Production_pipeline_tools_30">Production pipeline tools</span></h3>
+<p><b>Pipeline, Assets, and IO:</b>
+</p>
+<ul><li>Blender:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105347">PR #105347</a> USD IO: Move to the new Mesh Attributes API for Colors</li></ul></li>
+<li>Flamenco:
+<ul><li>✅ Plan: Flamenco: clustering of workers + selecting cluser when submitting job</li>
+<li>✅ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104200">PR #104200</a> Make runtime paths configurable at link time</li>
+<li>🕐 Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104194">PR #104194</a> WIP: Single-frame job compiler</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104205">PR #104205</a> Resolved Task Limit error in Flamenco Manager #104201</li></ul></li></ul>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Other_30">Other</span></h3>
+<p><b>Other work:</b>
+</p>
+<ul><li>On-board Nathan Vegdahl at Blender HQ</li>
+<li>🕐 Plan: Maybe work on [#1: Hook for nickname changes on Blender ID](<a rel="nofollow" class="external free" href="https://projects.blender.org/infrastructure/blender-projects-platform/issues/1#issuecomment-907636">https://projects.blender.org/infrastructure/blender-projects-platform/issues/1#issuecomment-907636</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://projects.blender.org/scm/viewvc.php?view=rev&amp;root=bf-blender&amp;revision=d85520f297e2e79a760f47ad6d66a8d701783768">rd85520f297e2e79a760f47ad6d66a8d701783768</a> Python: <code>bl_ui_utils.layout.operator_context</code> context manager</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106661">PR #106661</a> Depsgraph: Fix 'use after free' error in some cases during undo step</li></ul>
+<p><br />
+<b>Plans for next week:</b>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/studio/flamenco/pulls/104202">PR #104202</a> Added documentation for multi-pass scripting, bat-pack error, slightly clarifies two-way variables usage.</li>
+<li>Should be possible to approve: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105373">#105373</a> Mitigate the risk of wrong shape key selection in sculpt and edit mode.</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105347">PR #105347</a> USD IO: Move to the new Mesh Attributes API for Colors</li>
+<li>☐ Plan: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-manual/issues/102734">#102734</a> Both Copy Global Transforms and Scatter Objects addons don't have option to report a bug or check out the documentation</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106487">PR #106487</a> Animation: Armature symmetrize ebones refactor</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105385">PR #105385</a> WIP #104054 Symmetize visible edit bones if nothing has been selected</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120509
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.615 seconds
+Real time usage: 0.615 seconds
+Preprocessor visited node count: 7682/1000000
+Preprocessor generated node count: 10898/1000000
+Post‐expand include size: 43540/2097152 bytes
+Template argument size: 11586/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  352.415      1 -total
+ 34.72%  122.356     58 Template:GitCommit
+ 34.69%  122.261    253 Template:PullRequest
+ 10.63%   37.470     75 Template:Issue
+  9.22%   32.488     51 Template:GitCommit/PhabricatorParseDeprecated
+  6.94%   24.459     51 Template:GitCommit/PhabricatorParse
+  0.35%    1.217      1 Template:Commit
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6624-0!canonical and timestamp 20240112120508 and revision id 37915
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;oldid=37915">https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;oldid=37915</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 2 January 2024, at 13:08.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Sybren/Reports/2023.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Sybren/Reports/2023" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Sybren.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Sybren.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Sybren.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;oldid=37915" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Sybren/Reports/2023&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.615","walltime":"0.615","ppvisitednodes":{"value":7682,"limit":1000000},"ppgeneratednodes":{"value":10898,"limit":1000000},"postexpandincludesize":{"value":43540,"limit":2097152},"templateargumentsize":{"value":11586,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  352.415      1 -total"," 34.72%  122.356     58 Template:GitCommit"," 34.69%  122.261    253 Template:PullRequest"," 10.63%   37.470     75 Template:Issue","  9.22%   32.488     51 Template:GitCommit/PhabricatorParseDeprecated","  6.94%   24.459     51 Template:GitCommit/PhabricatorParse","  0.35%    1.217      1 Template:Commit"]},"cachereport":{"timestamp":"20240112120509","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":682});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844544177def0bae","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

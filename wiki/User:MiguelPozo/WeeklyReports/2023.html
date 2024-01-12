@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:MiguelPozo/WeeklyReports/2023 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:MiguelPozo/WeeklyReports/2023","wgTitle":"MiguelPozo/WeeklyReports/2023","wgCurRevisionId":37889,"wgRevisionId":37889,"wgArticleId":6604,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:MiguelPozo/WeeklyReports/2023","wgRelevantArticleId":6604,"wgRequestId":"fd865bbebf06944824ad48fa","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"MiguelPozo","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_MiguelPozo_WeeklyReports_2023 rootpage-User_MiguelPozo skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2023.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AMiguelPozo%2FWeeklyReports%2F2023" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2023.html#Week_1_.28Jan_02_-_08.29"><span class="tocnumber">1</span> <span class="toctext">Week 1 (Jan 02 - 08)</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2023.html#Week_2_.28Jan_09_-_15.29"><span class="tocnumber">2</span> <span class="toctext">Week 2 (Jan 09 - 15)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2023.html#Week_3_.28Jan_16_-_22.29"><span class="tocnumber">3</span> <span class="toctext">Week 3 (Jan 16 - 22)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2023.html#Week_4_.28Jan_23_-_29.29"><span class="tocnumber">4</span> <span class="toctext">Week 4 (Jan 23 - 29)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2023.html#Week_5_.28Jan_30_-_Feb_5.29"><span class="tocnumber">5</span> <span class="toctext">Week 5 (Jan 30 - Feb 5)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2023.html#Week_6_.28Feb_6_-_12.29"><span class="tocnumber">6</span> <span class="toctext">Week 6 (Feb 6 - 12)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2023.html#Week_7_.28Feb_13_-_19.29"><span class="tocnumber">7</span> <span class="toctext">Week 7 (Feb 13 - 19)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2023.html#Week_8_.28Feb_20_-_26.29"><span class="tocnumber">8</span> <span class="toctext">Week 8 (Feb 20 - 26)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2023.html#Week_9_.28Feb_27_-_Mar_05.29"><span class="tocnumber">9</span> <span class="toctext">Week 9 (Feb 27 - Mar 05)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2023.html#Week_10_.28Mar_06_-_12.29"><span class="tocnumber">10</span> <span class="toctext">Week 10 (Mar 06 - 12)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2023.html#Week_11_.28Mar_13_-_19.29"><span class="tocnumber">11</span> <span class="toctext">Week 11 (Mar 13 - 19)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2023.html#Week_12_.28Mar_20_-_26.29"><span class="tocnumber">12</span> <span class="toctext">Week 12 (Mar 20 - 26)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2023.html#Week_13_.28Mar_27_-_Apr_02.29"><span class="tocnumber">13</span> <span class="toctext">Week 13 (Mar 27 - Apr 02)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2023.html#Week_14_.28Apr_03_-_09.29"><span class="tocnumber">14</span> <span class="toctext">Week 14 (Apr 03 - 09)</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2023.html#Week_15_.28Apr_10_-_16.29"><span class="tocnumber">15</span> <span class="toctext">Week 15 (Apr 10 - 16)</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2023.html#Week_16_.28Apr_17_-_23.29"><span class="tocnumber">16</span> <span class="toctext">Week 16 (Apr 17 - 23)</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2023.html#Week_17_.28Apr_24_-_30.29"><span class="tocnumber">17</span> <span class="toctext">Week 17 (Apr 24 - 30)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2023.html#Week_18_.28May_01_-_07.29"><span class="tocnumber">18</span> <span class="toctext">Week 18 (May 01 - 07)</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2023.html#Week_19_.28May_08_-_14.29"><span class="tocnumber">19</span> <span class="toctext">Week 19 (May 08 - 14)</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2023.html#Week_20_.28May_15_-_21.29"><span class="tocnumber">20</span> <span class="toctext">Week 20 (May 15 - 21)</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2023.html#Week_21_.28May_22_-_28.29"><span class="tocnumber">21</span> <span class="toctext">Week 21 (May 22 - 28)</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2023.html#Week_22_.28May_29_-_Jun_04.29"><span class="tocnumber">22</span> <span class="toctext">Week 22 (May 29 - Jun 04)</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2023.html#Week_23_.28Jun_05_-_Jun_11.29"><span class="tocnumber">23</span> <span class="toctext">Week 23 (Jun 05 - Jun 11)</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2023.html#Week_24_.28Jun_12_-_18.29"><span class="tocnumber">24</span> <span class="toctext">Week 24 (Jun 12 - 18)</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2023.html#Week_25_.28Jun_19_-_25.29"><span class="tocnumber">25</span> <span class="toctext">Week 25 (Jun 19 - 25)</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2023.html#Week_26_.28Jun_26_-_Jul_02.29"><span class="tocnumber">26</span> <span class="toctext">Week 26 (Jun 26 - Jul 02)</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2023.html#Week_27_.28Jul_03_-_Jul_09.29"><span class="tocnumber">27</span> <span class="toctext">Week 27 (Jul 03 - Jul 09)</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2023.html#Week_28_.28Jul_10_-_Jul_16.29"><span class="tocnumber">28</span> <span class="toctext">Week 28 (Jul 10 - Jul 16)</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2023.html#Week_29_.28Jul_17_-_Jul_23.29"><span class="tocnumber">29</span> <span class="toctext">Week 29 (Jul 17 - Jul 23)</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2023.html#Week_30_.28Jul_24_-_Jul_30.29"><span class="tocnumber">30</span> <span class="toctext">Week 30 (Jul 24 - Jul 30)</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2023.html#Week_31_.28Jul_31_-_Aug_06.29"><span class="tocnumber">31</span> <span class="toctext">Week 31 (Jul 31 - Aug 06)</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2023.html#Week_32_.28Aug_07_-_Aug_13.29"><span class="tocnumber">32</span> <span class="toctext">Week 32 (Aug 07 - Aug 13)</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2023.html#Week_33_.28Aug_14_-_Aug_20.29"><span class="tocnumber">33</span> <span class="toctext">Week 33 (Aug 14 - Aug 20)</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2023.html#Week_34_.28Aug_21_-_Aug_27.29"><span class="tocnumber">34</span> <span class="toctext">Week 34 (Aug 21 - Aug 27)</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2023.html#Week_35_.28Aug_28_-_Sep_03.29"><span class="tocnumber">35</span> <span class="toctext">Week 35 (Aug 28 - Sep 03)</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2023.html#Week_36_.28Sep_04_-_Sep_10.29"><span class="tocnumber">36</span> <span class="toctext">Week 36 (Sep 04 - Sep 10)</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2023.html#Week_37_.28Sep_11_-_Sep_17.29"><span class="tocnumber">37</span> <span class="toctext">Week 37 (Sep 11 - Sep 17)</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2023.html#Week_38_.28Sep_17_-_Sep_24.29"><span class="tocnumber">38</span> <span class="toctext">Week 38 (Sep 17 - Sep 24)</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2023.html#Week_39_.28Sep_25_-_Oct_01.29"><span class="tocnumber">39</span> <span class="toctext">Week 39 (Sep 25 - Oct 01)</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2023.html#Week_40_.28Oct_02_-_Oct_08.29"><span class="tocnumber">40</span> <span class="toctext">Week 40 (Oct 02 - Oct 08)</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2023.html#Week_41_.28Oct_09_-_Oct_15.29"><span class="tocnumber">41</span> <span class="toctext">Week 41 (Oct 09 - Oct 15)</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2023.html#Week_42_.28Oct_16_-_Oct_22.29"><span class="tocnumber">42</span> <span class="toctext">Week 42 (Oct 16 - Oct 22)</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2023.html#Week_43_.28Oct_23_-_Oct_29.29"><span class="tocnumber">43</span> <span class="toctext">Week 43 (Oct 23 - Oct 29)</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2023.html#Week_44_.28Oct_30_-_Nov_05.29"><span class="tocnumber">44</span> <span class="toctext">Week 44 (Oct 30 - Nov 05)</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2023.html#Week_45_.28Nov_06_-_Nov_12.29"><span class="tocnumber">45</span> <span class="toctext">Week 45 (Nov 06 - Nov 12)</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2023.html#Week_46_.28Nov_13_-_Nov_19.29"><span class="tocnumber">46</span> <span class="toctext">Week 46 (Nov 13 - Nov 19)</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2023.html#Week_47_.28Nov_20_-_Nov_26.29"><span class="tocnumber">47</span> <span class="toctext">Week 47 (Nov 20 - Nov 26)</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2023.html#Week_48_.28Nov_27_-_Dec_03.29"><span class="tocnumber">48</span> <span class="toctext">Week 48 (Nov 27 - Dec 03)</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2023.html#Week_49_.28Dec_04_-_Dec_10.29"><span class="tocnumber">49</span> <span class="toctext">Week 49 (Dec 04 - Dec 10)</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2023.html#Week_50_.28Dec_11_-_Dec_17.29"><span class="tocnumber">50</span> <span class="toctext">Week 50 (Dec 11 - Dec 17)</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="2023.html#Week_51_.28Dec_18_-_Dec_24.29"><span class="tocnumber">51</span> <span class="toctext">Week 51 (Dec 18 - Dec 24)</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="2023.html#Week_52_.28Dec_25_-_Dec_31.29"><span class="tocnumber">52</span> <span class="toctext">Week 52 (Dec 25 - Dec 31)</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:MiguelPozo/WeeklyReports/2023</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:MiguelPozo.html" title="User:MiguelPozo">User:MiguelPozo</a>&lrm; | <a href="../WeeklyReports.html" title="User:MiguelPozo/WeeklyReports">WeeklyReports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h2><span id="Week_1_(Jan_02_-_08)"></span><span class="mw-headline" id="Week_1_.28Jan_02_-_08.29">Week 1 (Jan 02 - 08)</span></h2>
+<p>Vacations!
+</p>
+<h2><span id="Week_2_(Jan_09_-_15)"></span><span class="mw-headline" id="Week_2_.28Jan_09_-_15.29">Week 2 (Jan 09 - 15)</span></h2>
+<ul><li>Going through the review process for Workbench Next (<a rel="nofollow" class="external text" href="https://developer.blender.org/D16826">D16826</a>), implemented the requested changes.</li>
+<li>Fixed the compute-based culling (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17008">D17008</a>) and the Debug Freeze (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17010">D17010</a>) feature in the new draw manager.</li>
+<li>Worked on overall optimizations in the new draw manager. (uncommitted)</li></ul>
+<h2><span id="Week_3_(Jan_16_-_22)"></span><span class="mw-headline" id="Week_3_.28Jan_16_-_22.29">Week 3 (Jan 16 - 22)</span></h2>
+<ul><li>Add Freeze Culling support to Workbench Next (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB3a06bb5e45e650ac357bf18f7d7d9d9cc4eca00f">commit</a>).</li>
+<li>Avoid creating unneeded handles in Workbench Next (optimization) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB15b2caab21abfb3556d1f57b28d571519c707f89">commit</a>).</li>
+<li>Went through the Workbench commits of the last months, to avoid Workbench Next regressions:
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB1b5a594a0529bf696caa419f26ac34712b5caeb0">Fix textures after D14365</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB99e5f4000c5d6dcca44fe4018c87d37f1a833ea3">Add texture usage flags</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB2c432baad0b4e21c8173d5c66ec07b81c290e16f">Add texture mirror extension type support</a></li></ul></li>
+<li>Fix for instance resource indexing in the new Draw Manager (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17069">D17069</a>).</li>
+<li>Avoid runtime.bb allocation for DupliObjects in the draw code (needs feedback) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa9d716fa0fe3f0d250de3438e0ac8af22514178a">experimental branch</a>).</li>
+<li>Use smaller ObjectBounds to improve performance (includes fixes) (needs feedback) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB693dffb7b7c1039c2165b83b1b81fa39256d6ef8">experimental branch</a>).</li>
+<li>Cleanup the GLSL intersection code (needs feedback) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB2da005902f434b6d4301516e280c899129384b95">experimental branch</a>).</li></ul>
+<h2><span id="Week_4_(Jan_23_-_29)"></span><span class="mw-headline" id="Week_4_.28Jan_23_-_29.29">Week 4 (Jan 23 - 29)</span></h2>
+<ul><li>Workbench Next has landed on Master! (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBba982119cdcacfa8e603457face1d8ebc763ef75">commit</a>)</li>
+<li>Workbench Next fixes:
+<ul><li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB7e834457c5d0c88cde470fca36cc7c90139cad01">Add Workbench Next check to hard-coded Workbench checks</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB405b08e00da6841e27739573e85240ba30c3633f">Ensure matcaps textures are loaded</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB40f9f82977a88126e021125c5a13082053483d97">Fix Alpha Cutout</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.blender.org/rB5cc9f07d5c56e7201f17a40659c3f4c4c5a83002">Fix shaders memory leaks</a></li>
+<li>Other minor fixes.</li></ul></li>
+<li>Improve Texture assignment operator (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17119">D17119</a>) (Required for the matcaps fix).</li>
+<li>Clément asked me for help on virtual shadow maps, so I took a good amount of time learning about the technique.</li></ul>
+<h2><span id="Week_5_(Jan_30_-_Feb_5)"></span><span class="mw-headline" id="Week_5_.28Jan_30_-_Feb_5.29">Week 5 (Jan 30 - Feb 5)</span></h2>
+<ul><li>Workbench Next: Group passes by material (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17163">D17163</a>).</li>
+<li>Fix T103903: Bump Node performance regression (<a rel="nofollow" class="external text" href="https://developer.blender.org/D17198">D17198</a>).</li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://developer.blender.org/T104265#1483666">an issue</a> with dangling pointers in GPU Nodes.<br />Committed a <a rel="nofollow" class="external text" href="https://developer.blender.org/rBfcc1166821804ab257660a5b18bc6038e67ba2e1">temporal workaround </a> to bypass the issue.</li></ul>
+<h2><span id="Week_6_(Feb_6_-_12)"></span><span class="mw-headline" id="Week_6_.28Feb_6_-_12.29">Week 6 (Feb 6 - 12)</span></h2>
+<ul><li>EEVEE Next: Tag shadowmap usage for transparent object volumes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104580">PR #104580</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104637">#104637</a>, caused by <a rel="nofollow" class="external text" href="http://projects.blender.org/scm/viewvc.php?view=rev&amp;root=bf-blender&amp;revision=efabe81c916">refabe81c916</a></li></ul>
+<h2><span id="Week_7_(Feb_13_-_19)"></span><span class="mw-headline" id="Week_7_.28Feb_13_-_19.29">Week 7 (Feb 13 - 19)</span></h2>
+<ul><li>More work on shadowmap usage tagging for transparent object volumes (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104580">PR #104580</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104709">#104709</a>.</li></ul>
+<h2><span id="Week_8_(Feb_20_-_26)"></span><span class="mw-headline" id="Week_8_.28Feb_20_-_26.29">Week 8 (Feb 20 - 26)</span></h2>
+<ul><li>Low overhead handles for the new Draw Manager (used to avoid one full handle for each material slot in Workbench Next).<br />Two different implementations with different pros/cons (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105034">PR #105034</a> &amp; <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105175">PR #105175</a>).<br />The final design will be similar to the first one, but avoids the need for an extra binding slot, which was the main con of that approach.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105042">#105042</a>/<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105175">#105175</a>.</li>
+<li>Initial work on Workbench Next volumes.</li></ul>
+<h2><span id="Week_9_(Feb_27_-_Mar_05)"></span><span class="mw-headline" id="Week_9_.28Feb_27_-_Mar_05.29">Week 9 (Feb 27 - Mar 05)</span></h2>
+<ul><li>Final implementation for the low-overhead handles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105261">PR #105261</a>. Now in addition to the object handle, each draw can specify an additional arbitrary custom ID. Workbench Next already used this system for indexing material parameters.</li>
+<li>Fixed original coordinates in the new Draw Manager <a rel="nofollow" class="external text" href="http://projects.blender.org/scm/viewvc.php?view=rev&amp;root=bf-blender&amp;revision=2a9f792c9e">r2a9f792c9e</a>.</li>
+<li>Workbench Next volumes implementation (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commits/branch/pull-workbench-next-volumes">branch</a>). Currently, they work exactly the same as in the current Workbench engine.</li></ul>
+<h2><span id="Week_10_(Mar_06_-_12)"></span><span class="mw-headline" id="Week_10_.28Mar_06_-_12.29">Week 10 (Mar 06 - 12)</span></h2>
+<ul><li>The dev plan shifted to giving EEVEE Next full priority, so I dropped the planned improvements for Workbench Next Volumes and made a clean-up and pull request for a 1:1 implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105501">PR #105501</a>.</li>
+<li>Looked into bringing back and finalizing the EEVEE Next SSS implementation from the <code>eevee-rewrite</code> branch, but decided to leave it on standby until deferred shading is implemented (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-sss">branch</a>).</li>
+<li>Started working on the EEVEE Next volumes implementation (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes">branch</a>).</li>
+<li>I was involved in the design discussion for the LineArt improvements proposal (<a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/new-line-art-proposal-2023-feedback/28078">devtalk thread</a>).<br />Implemented a basic render engine skeleton for WangZiWei-Jiang to port his line extraction algorithm (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/fork-npr-render">branch</a>).</li></ul>
+<h2><span id="Week_11_(Mar_13_-_19)"></span><span class="mw-headline" id="Week_11_.28Mar_13_-_19.29">Week 11 (Mar 13 - 19)</span></h2>
+<ul><li>Fixed a regression that caused EEVEE to be able to support fewer image nodes than before <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105770">PR #105770</a>.</li>
+<li>Updated the UDIM codegen to ensure each UDIM texture doesn't register more samplers than needed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105772">PR #105772</a>.</li>
+<li>Implemented a surfels debug display utility to prepare for the development of GI in EEVEE Next <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105802">PR #105802</a>.</li>
+<li>Kept working on the EEVEE Next volumes port (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes">branch</a>).</li></ul>
+<h2><span id="Week_12_(Mar_20_-_26)"></span><span class="mw-headline" id="Week_12_.28Mar_20_-_26.29">Week 12 (Mar 20 - 26)</span></h2>
+<p>(4 days week, Monday was public holiday)
+</p>
+<ul><li>Review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105921">PR #105921</a>.</li>
+<li>Found and fixed an issue with <code>draw_procedural</code> not working with <code>PassMain</code>(<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commit/de313a0481297f2537bc62b5239689608f0e0b75">commit</a>).</li>
+<li>More work on EEVEE Next volumes (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes">branch</a>).</li></ul>
+<h2><span id="Week_13_(Mar_27_-_Apr_02)"></span><span class="mw-headline" id="Week_13_.28Mar_27_-_Apr_02.29">Week 13 (Mar 27 - Apr 02)</span></h2>
+<ul><li>EEVEE Next Irradiance Cache Display Grid (<a rel="nofollow" class="external text" href="https://projects.blender.org/fclem/blender/commit/a484f43a177dd30d1a1bd360cd7634acab95352a">commit</a>).</li>
+<li>EEVEE Next Shadow usage tagging for Irradiance Cache Surfels (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commit/70970299ef2c28356c76b999dbeb1af30ff8f1ae">commit</a>).</li>
+<li>Improve GPUPass GC behavior <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106386">PR #106386</a>.</li>
+<li>More work on EEVEE Next volumes (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes">branch</a>).</li></ul>
+<h2><span id="Week_14_(Apr_03_-_09)"></span><span class="mw-headline" id="Week_14_.28Apr_03_-_09.29">Week 14 (Apr 03 - 09)</span></h2>
+<p>Vacations!
+</p>
+<h2><span id="Week_15_(Apr_10_-_16)"></span><span class="mw-headline" id="Week_15_.28Apr_10_-_16.29">Week 15 (Apr 10 - 16)</span></h2>
+<ul><li>EEVEE Next volumes are almost ready (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes">branch</a>).
+<ul><li>Fixed material code generation.</li>
+<li>Fixed volume objects rendering.</li>
+<li>Lighting integration.</li>
+<li>Transparent surface integration.</li>
+<li>Other improvements, fixes, and cleanups.</li></ul></li></ul>
+<h2><span id="Week_16_(Apr_17_-_23)"></span><span class="mw-headline" id="Week_16_.28Apr_17_-_23.29">Week 16 (Apr 17 - 23)</span></h2>
+<ul><li>EEVEE Next volumes pull request <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>
+<ul><li>Ported all the shaders to the compute pipeline.</li>
+<li>Optimized the volume object bounds. (Large performance improvement)</li>
+<li>Clean-up to prepare for the pull request.</li></ul></li>
+<li>Initial implementation of the EEVEE Next Subsurface Scattering port. (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-sss">branch</a>)</li></ul>
+<h2><span id="Week_17_(Apr_24_-_30)"></span><span class="mw-headline" id="Week_17_.28Apr_24_-_30.29">Week 17 (Apr 24 - 30)</span></h2>
+<ul><li>Addressed some feedback from the EEVEE Next volumes pull request <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>EEVEE Next Subsurface Scattering pull request <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107407">PR #107407</a> (Feature complete, but SSS Transmittance energy is greater than Cycles with the same settings. Asked Clément for help on this one).</li></ul>
+<h2><span id="Week_18_(May_01_-_07)"></span><span class="mw-headline" id="Week_18_.28May_01_-_07.29">Week 18 (May 01 - 07)</span></h2>
+<p>(3 days work week due to public holidays)
+</p>
+<ul><li>Overlay/Selection Next (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/overlay-next">branch</a>):
+<ul><li>Refactor, replacing templates with construction time booleans <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107734">PR #107734</a>.</li>
+<li>Started porting DRW_cache shapes and their overlay/selection implementation.</li></ul></li></ul>
+<h2><span id="Week_19_(May_08_-_14)"></span><span class="mw-headline" id="Week_19_.28May_08_-_14.29">Week 19 (May 08 - 14)</span></h2>
+<ul><li>Ported most shape cache functions from <code>DRW_cache</code> to <a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/overlay-next">Overlay Next</a>.</li>
+<li>Tracked a regression that broke Volume rendering in EEVEE and Cycles <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107826">#107826</a>, and fixed other similar (unreported) issues (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8a9f3b2a681a56358ecb78d63deabc62f8ffba15">commit</a>).</li>
+<li>Addressed the feedback for the EEVEE Next Volumes PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>Addressed the feedback for the EEVEE Next SSS PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107407">PR #107407</a>.</li>
+<li>Found and fixed a crash in EEVEE Next when the Scene doesn't have a World <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107891">PR #107891</a>.</li></ul>
+<h2><span id="Week_20_(May_15_-_21)"></span><span class="mw-headline" id="Week_20_.28May_15_-_21.29">Week 20 (May 15 - 21)</span></h2>
+<p>(4 days work week due to public holidays)
+</p>
+<ul><li>Merged Workbench Next Volumes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105501">PR #105501</a>.</li>
+<li>Cleanups and fixes in EEVEE Next Volumes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>Overlay Next (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/overlay-next">branch</a>):
+<ul><li>Cleanups and fixes for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107734">PR #107734</a>.</li>
+<li>Extras::InstanceBuffers refactor.</li>
+<li>Bounds and Collisions.</li>
+<li>Lights.</li>
+<li>Force Fields.</li></ul></li></ul>
+<h2><span id="Week_21_(May_22_-_28)"></span><span class="mw-headline" id="Week_21_.28May_22_-_28.29">Week 21 (May 22 - 28)</span></h2>
+<ul><li>EEVEE Next: Image rendering and render passes fixes/improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108239">PR #108239</a>.
+<ul><li>Fix Image and AOV rendering.</li>
+<li>Optimize image slot usage.</li>
+<li>Fix Diffuse and Specular Light passes.</li>
+<li>Add Environment and Shadow passes.</li></ul></li>
+<li>EEVEE Next: Ensure correct material settings are used <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108283">PR #108283</a>.</li>
+<li>Initial work on EEVEE Next Ambient Occlusion (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-ao">branch</a>).</li></ul>
+<h2><span id="Week_22_(May_29_-_Jun_04)"></span><span class="mw-headline" id="Week_22_.28May_29_-_Jun_04.29">Week 22 (May 29 - Jun 04)</span></h2>
+<ul><li>Added missing Render Passes for:
+<ul><li>Volumes (Volume Lighting) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107407">PR #107407</a>.</li>
+<li>Subsurface Scattering (Diffuse Lighting) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>Ambient Occlusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108398">PR #108398</a>.</li></ul></li>
+<li>Other Ambient Occlusion improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108398">PR #108398</a>.</li></ul>
+<h2><span id="Week_23_(Jun_05_-_Jun_11)"></span><span class="mw-headline" id="Week_23_.28Jun_05_-_Jun_11.29">Week 23 (Jun 05 - Jun 11)</span></h2>
+<ul><li>Overlay Next (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/overlay-next">branch</a>):
+<ul><li>Refactor Extras code.</li>
+<li>Cameras.</li>
+<li>GroundLines, Points, and Line Rendering.</li>
+<li>Object Centers.</li>
+<li>Object Relationship lines.</li></ul></li>
+<li>Fix Shader Builder compilation on Windows <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108820">PR #108820</a></li></ul>
+<h2><span id="Week_24_(Jun_12_-_18)"></span><span class="mw-headline" id="Week_24_.28Jun_12_-_18.29">Week 24 (Jun 12 - 18)</span></h2>
+<ul><li>Created Overlay Next: Shapes and Extras <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108984">PR #108984</a>.</li>
+<li>Merged EEVEE Next Subsurface Scattering after addressing the review feedback <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107407">PR #107407</a>.</li>
+<li>Addressed review feedback for EEVEE Next Ambient Occlusion <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108398">PR #108398</a>.</li>
+<li>EEVEE Next: Improved sampler indices <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108984">PR #108984</a> (merged).</li>
+<li>GPU: Print both resources on ShaderCreateInfo::validate_merge failure <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109017">PR #109017</a> (merged).</li></ul>
+<h2><span id="Week_25_(Jun_19_-_25)"></span><span class="mw-headline" id="Week_25_.28Jun_19_-_25.29">Week 25 (Jun 19 - 25)</span></h2>
+<ul><li>Overlay Next (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/overlay-next">branch</a>):
+<ul><li>Image Empties.</li>
+<li>Camera Background.</li></ul></li>
+<li>Sculpt support for the new Draw Manager and Sculpt rendering in Workbench Next <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109294">PR #109294</a>.</li>
+<li>Fix RenderDoc and Nvidia compatibility <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109214">PR #109214</a>.</li></ul>
+<h2><span id="Week_26_(Jun_26_-_Jul_02)"></span><span class="mw-headline" id="Week_26_.28Jun_26_-_Jul_02.29">Week 26 (Jun 26 - Jul 02)</span></h2>
+<ul><li>Hair and Curves support for the new Draw Manager and Workbench Next implementation  <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109456">PR #109456</a>.</li>
+<li>Point Clouds support for the new Draw Manager and Workbench Next implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109568">PR #109568</a>.</li>
+<li>EEVEE Next: Ambient Occlusion Node and RenderPass merged after addressing feedback <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108398">PR #108398</a>.</li></ul>
+<h2><span id="Week_27_(Jul_03_-_Jul_09)"></span><span class="mw-headline" id="Week_27_.28Jul_03_-_Jul_09.29">Week 27 (Jul 03 - Jul 09)</span></h2>
+<ul><li>EEVEE Next:
+<ul><li>Volumes cleanup <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>Point Clouds implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109832">PR #109832</a>.</li>
+<li>Hair &amp; Curves implementation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109833">PR #109833</a>.</li></ul></li>
+<li>Workbench Next:
+<ul><li>Fix regression with transparency depth <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6335af74f2">6335af74f2</a>.</li>
+<li>Fix Overlay composition with "In Front" objects <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3d62888ed6">3d62888ed6</a>.</li></ul></li></ul>
+<h2><span id="Week_28_(Jul_10_-_Jul_16)"></span><span class="mw-headline" id="Week_28_.28Jul_10_-_Jul_16.29">Week 28 (Jul 10 - Jul 16)</span></h2>
+<ul><li>EEVEE Next:
+<ul><li>Finish and merge Point Clouds <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109832">PR #109832</a>.</li>
+<li>Finish and merge Hair &amp; Curves <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109833">PR #109833</a>.</li>
+<li>Motion Blur fixes (WIP) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110114">PR #110114</a>.</li></ul></li></ul>
+<h2><span id="Week_29_(Jul_17_-_Jul_23)"></span><span class="mw-headline" id="Week_29_.28Jul_17_-_Jul_23.29">Week 29 (Jul 17 - Jul 23)</span></h2>
+<ul><li>EEVEE Next:
+<ul><li>Motion Blur fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110114">PR #110114</a>:
+<ul><li>Fix motion blur when using temporal re-projection.</li>
+<li>Fix per-vertex motion blur in final renders</li></ul></li>
+<li>Overscan support for viewport and final renders <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110313">PR #110313</a>.</li>
+<li>Irradiance cache integration for Volume lighting <a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commit/1202279fd41ebe52ed3d91c3bdb5a925df0191c8">1202279fd4</a>.</li></ul></li></ul>
+<h2><span id="Week_30_(Jul_24_-_Jul_30)"></span><span class="mw-headline" id="Week_30_.28Jul_24_-_Jul_30.29">Week 30 (Jul 24 - Jul 30)</span></h2>
+<ul><li>EEVEE Next:
+<ul><li>Add missing Volumes features (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-volumes-2">branch</a>)
+<ul><li>Self-shadows.</li>
+<li>Shadow-map tagging and shading integration.</li>
+<li>Improve sampling.</li>
+<li>Use blue noise for the froxel jitter. (Experimental, fixes flickering on viewport navigation, but decreases final render quality)</li></ul></li>
+<li>Initial Sculpt support implementation (Shadows are broken) (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-sculpt">branch</a>).</li>
+<li>Test and review Irradiance Bake Virtual Offsets <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110355">PR #110355</a> and Dilation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110386">PR #110386</a></li></ul></li></ul>
+<h2><span id="Week_31_(Jul_31_-_Aug_06)"></span><span class="mw-headline" id="Week_31_.28Jul_31_-_Aug_06.29">Week 31 (Jul 31 - Aug 06)</span></h2>
+<ul><li>EEVEE Next:
+<ul><li>Finish and merge Motion Blur fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110114">PR #110114</a>.</li>
+<li>Finish and merge Overscan support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110313">PR #110313</a>.</li>
+<li>Fix viewport Render Region support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110761">PR #110761</a>.</li>
+<li>Finish and merge Sculpt support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110703">PR #110703</a>.</li>
+<li>Finish and merge Volumes support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107176">PR #107176</a>.</li>
+<li>Move Volume lighting integration improvements to a new PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110809">PR #110809</a>.</li>
+<li>Fix Ambient Oclussion RenderPass <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63f29fdcfe">63f29fdcfe</a>.</li>
+<li>Fix Normal RenderPass viewport display <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2f6af7a4b9">2f6af7a4b9</a>.</li></ul></li></ul>
+<h2><span id="Week_32_(Aug_07_-_Aug_13)"></span><span class="mw-headline" id="Week_32_.28Aug_07_-_Aug_13.29">Week 32 (Aug 07 - Aug 13)</span></h2>
+<p>Vacations!
+</p>
+<h2><span id="Week_33_(Aug_14_-_Aug_20)"></span><span class="mw-headline" id="Week_33_.28Aug_14_-_Aug_20.29">Week 33 (Aug 14 - Aug 20)</span></h2>
+<p>Vacations!
+</p>
+<h2><span id="Week_34_(Aug_21_-_Aug_27)"></span><span class="mw-headline" id="Week_34_.28Aug_21_-_Aug_27.29">Week 34 (Aug 21 - Aug 27)</span></h2>
+<ul><li>Workbench Next:
+<ul><li>Workbench Next is now enabled by default <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111403">PR #111403</a>.</li>
+<li>Workaround lack of texture views to support the Windows ARM software driver <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111402">PR #111402</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Add shadow bias based on depth reconstruction precision <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111478">PR #111478</a>.</li>
+<li>Move the transmittance LUT to the Utility Texture to save a sampler slot in forward materials <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111535">PR #111535</a>.</li>
+<li>Fix Subsurface Scattering regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111534">PR #111534</a>.</li>
+<li>Fix Object Info -&gt; Random <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89dc2e1649">89dc2e1649</a>.</li>
+<li>Fix World Volume material compilation error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f57a8f07c0">f57a8f07c0</a>.</li></ul></li>
+<li>GPU:
+<ul><li>Ensure Textures are not added twice to the same FrameBuffer <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111531">PR #111531</a> (Fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111466">#111466</a>).</li></ul></li></ul>
+<h2><span id="Week_35_(Aug_28_-_Sep_03)"></span><span class="mw-headline" id="Week_35_.28Aug_28_-_Sep_03.29">Week 35 (Aug 28 - Sep 03)</span></h2>
+<ul><li>Workbench Next:
+<ul><li>Fix Overlay in-front compositing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111630">PR #111630</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8ea2364e36">8ea2364e36</a>.</li>
+<li>Fix Viewport Image Render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3acda70d8c">3acda70d8c</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111661">PR #111661</a>.</li>
+<li>Innvestigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111699">#111699</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix Render Region and improve Film naming/documentation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111691">PR #111691</a>.</li></ul></li>
+<li>GPU:
+<ul><li>Fix Next engines support for Intel 4400/4600 <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111587">#111587</a>.</li>
+<li>Allow using the drw_debug API in any shader file and remove it from Release builds <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111710">PR #111710</a>.</li></ul></li></ul>
+<h2><span id="Week_36_(Sep_04_-_Sep_10)"></span><span class="mw-headline" id="Week_36_.28Sep_04_-_Sep_10.29">Week 36 (Sep 04 - Sep 10)</span></h2>
+<ul><li>GPU:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111699">#111699</a>: Remove deleted interfaces from the VAO cache.</li></ul></li>
+<li>Workbench:
+<ul><li>Remove the code from the old implementation and rename Workbench Next to just Workbench <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111993">PR #111993</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix lighting in scenes without shadow casters, as part of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110809">PR #110809</a>.</li>
+<li>Merge all the small UBOs used by the engine to save binding slots <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112046">PR #112046</a>.</li>
+<li>Add basic support for running tests <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112161">PR #112161</a>.</li>
+<li>Add back data passes UI and missing passes (Position and Motion Vectors) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112162">PR #112162</a>.</li>
+<li>Fix motion blur on image renders <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1faa522880">1faa522880</a></li></ul></li></ul>
+<h2><span id="Week_37_(Sep_11_-_Sep_17)"></span><span class="mw-headline" id="Week_37_.28Sep_11_-_Sep_17.29">Week 37 (Sep 11 - Sep 17)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112242">#112242</a>: Allow xray in render mode.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112211">#112211</a>: Clamp infinite inputs in TAA.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112231">#112231</a>: Texture support in sculpt mode.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112289">#112289</a>: Always clear depth_in_front.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112409">#112409</a>: Cavity disabled when Xray is enabled.</li>
+<li>Sculpt fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112344">PR #112344</a>:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112284">#112284</a> and other non-reported sculpt-related regressions in the new Workbench.</li>
+<li>Cleanup ObjectState setup.</li>
+<li>Update <code>sculpt_batches_get</code> to support getting per material batches while passing SculptBatchFeatures.</li>
+<li>Make material indices 0 based.</li></ul></li></ul></li>
+<li>EEVEE:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111960">#111960</a>: Shader compilation errors due to incorrect BuiltinBits::LAYER use <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112245">PR #112245</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix Velocity do_deform detection <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/efb7455">efb7455</a>.</li>
+<li>Add data passes UI and missing passes (Position and Motion Vector) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112162">PR #112162</a>.</li>
+<li>Fix SSS image rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27a36cc">27a36cc</a>.</li>
+<li>Fix Hair and Curves motion vectors (WIP) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112425">PR #112425</a>.</li></ul></li></ul>
+<h2><span id="Week_38_(Sep_17_-_Sep_24)"></span><span class="mw-headline" id="Week_38_.28Sep_17_-_Sep_24.29">Week 38 (Sep 17 - Sep 24)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112675">#112675</a>: Shadows disabled for active object.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix Hair and Curves motion vectors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112425">PR #112425</a>.</li>
+<li>Fix DupliObject ObjectKey <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112544">PR #112544</a>.</li>
+<li>Irradiance Grid:
+<ul><li>Fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112841">PR #112841</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8fbfc991a5">8fbfc991a5</a>.</li>
+<li>Smooth transitions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112842">PR #112842</a>.</li>
+<li>Object visibility settings for probes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112845">PR #112845</a>.</li>
+<li>Clip End (WIP) (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-eevee-next-irradiance-grid">branch</a>).</li></ul></li></ul></li></ul>
+<h2><span id="Week_39_(Sep_25_-_Oct_01)"></span><span class="mw-headline" id="Week_39_.28Sep_25_-_Oct_01.29">Week 39 (Sep 25 - Oct 01)</span></h2>
+<ul><li>Draw:
+<ul><li>Fix Circle select tool low performance <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112164">#112164</a>.</li></ul></li>
+<li>Workbench:
+<ul><li>Fix hair image rendering <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112867">#112867</a>.</li>
+<li>Fix performance regressions (WIP) (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/src/branch/pull-workbench-opti">branch</a>).</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Irradiance Grid clip distance and probe alignment <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112863">PR #112863</a>.</li>
+<li>Ensure volume property textures are cleared <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112871">PR #112871</a>.</li></ul></li></ul>
+<h2><span id="Week_40_(Oct_02_-_Oct_08)"></span><span class="mw-headline" id="Week_40_.28Oct_02_-_Oct_08.29">Week 40 (Oct 02 - Oct 08)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix performance regressions <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113251">PR #113251</a> &amp; <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6194afc41">c6194afc41</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Automatic tests support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112161">PR #112161</a>.</li>
+<li>Fix the DupliObject ObjectKey PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113252">PR #113252</a>.</li>
+<li>Double-sided option for GI <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113362">PR #113362</a>.</li></ul></li></ul>
+<h2><span id="Week_41_(Oct_09_-_Oct_15)"></span><span class="mw-headline" id="Week_41_.28Oct_09_-_Oct_15.29">Week 41 (Oct 09 - Oct 15)</span></h2>
+<ul><li>Draw:
+<ul><li>Proposal: Improve per-object overhead in the Draw module <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113771">#113771</a>.</li></ul></li>
+<li>Workbench:
+<ul><li>Fix resolve_shader_cache initialization <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2b805e777a">2b805e777a</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113580">#113580</a>: Always setup in_front_depth_tx <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/42aa97a080">42aa97a080</a>.</li>
+<li>Fix depth_in_front not being copied after the first sample <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9e7a576cee">9e7a576cee</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Expose Thickness output <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2bafffd9f0">2bafffd9f0</a>.</li>
+<li>Rename light probes types <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113452">PR #113452</a>.</li>
+<li>Skip bake if there's not enough VRAM <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113509">PR #113509</a>.</li>
+<li>Fix Nvidia compilation error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/25160def62">25160def62</a>.</li>
+<li>Fix Bake regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/26154aae81">26154aae81</a>.</li>
+<li>Fix ObjectKey issue with padding bytes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e235913c0d">e235913c0d</a>.</li></ul></li>
+<li>GPU:
+<ul><li>Add GPU_max_storage_buffer_size <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113516">PR #113516</a>.</li></ul></li></ul>
+<h2><span id="Week_42_(Oct_16_-_Oct_22)"></span><span class="mw-headline" id="Week_42_.28Oct_16_-_Oct_22.29">Week 42 (Oct 16 - Oct 22)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix Volume compositing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f2ba12a053">f2ba12a053</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113741">#113741</a>: Reset TAA on overlay toggle <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e3014ffc27">e3014ffc27</a>.</li></ul></li>
+<li>EEVEE-Next:
+<ul><li>Review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113731">PR #113731</a>: Add mesh volume bounds estimation.</li>
+<li>New shadow settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113980">PR #113980</a>.</li>
+<li>Shadows backface culling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113969">PR #113969</a>.</li></ul></li>
+<li>EEVEE:
+<ul><li>Find and report the cause of a Curves Info regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113842">#113842</a>.</li>
+<li>Find the cause of a Color Management issue <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113266">#113266</a>.</li></ul></li>
+<li>GPU:
+<ul><li>Add Texture::debug_clear <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113781">PR #113781</a>.</li></ul></li></ul>
+<h2><span id="Week_43_(Oct_23_-_Oct_29)"></span><span class="mw-headline" id="Week_43_.28Oct_23_-_Oct_29.29">Week 43 (Oct 23 - Oct 29)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix thumbnail shadows <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114096">#114096</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Improve version updating for the new shadow options <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113980">PR #113980</a>.</li>
+<li>Track Material recalc updates <a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commits/branch/pull-material-recalc">WIP</a>.</li>
+<li>Proposal for fixing DrawData recalc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114112">#114112</a>.</li>
+<li>Add Material &gt; Inflate Bounds option so frustum culling can work correctly with vertex displacement <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114200">PR #114200</a>.</li>
+<li>Sphere Probes viewport display and per-probe settings (Sphere and Volumes) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114176">#114176</a>.</li></ul></li>
+<li>Review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114150">PR #114150</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114061">PR #114061</a>.</li></ul>
+<h2><span id="Week_44_(Oct_30_-_Nov_05)"></span><span class="mw-headline" id="Week_44_.28Oct_30_-_Nov_05.29">Week 44 (Oct 30 - Nov 05)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix Shadows debug mode <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2fc17f5afc">2fc17f5afc</a>.</li>
+<li>Investigate VR Session crashes on exit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114189">#114189</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>New Shadow settings <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113980">PR #113980</a>:
+<ul><li>Unify with Cycles settings.</li></ul></li>
+<li>Inflate Bounds <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114200">PR #114200</a>:
+<ul><li>Inflate bounds after material sync.</li>
+<li>Add Manager::update_handle_bounds.</li>
+<li>Add GPU_material_has_displacement_output.</li></ul></li>
+<li>Probes viewport display <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114176">#114176</a>:
+<ul><li>Add Plane Probes display.</li></ul></li>
+<li>Investigate failing Shadow tests (TestAlloc and TestDefrag).</li></ul></li>
+<li>Review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114259">PR #114259</a>.</li></ul>
+<h2><span id="Week_45_(Nov_06_-_Nov_12)"></span><span class="mw-headline" id="Week_45_.28Nov_06_-_Nov_12.29">Week 45 (Nov 06 - Nov 12)</span></h2>
+<ul><li>Workbench:
+<ul><li>Add support for "Channel packed" and "None" Alpha options <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114377">#114377</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Finished and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113980">PR #113980</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114200">PR #114200</a>.</li>
+<li>Fix shadow tests <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114550">PR #114550</a>. Fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113543">#113543</a> and (partially) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114235">#114235</a>.</li>
+<li>Fix normal map node <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114524">#114524</a>.</li>
+<li>Fix Curves material compilation errors <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114598">PR #114598</a>.</li>
+<li>Fix Render region enforced even when disabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114404">#114404</a>.</li>
+<li>Found the cause, but didn't fix yet: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114144">#114144</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114130">#114130</a>, <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114131">#114131</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114696">#114696</a>.</li></ul></li>
+<li>Initial NPR engine discussion.</li></ul>
+<h2><span id="Week_46_(Nov_13_-_Nov_19)"></span><span class="mw-headline" id="Week_46_.28Nov_13_-_Nov_19.29">Week 46 (Nov 13 - Nov 19)</span></h2>
+<ul><li>Workbench:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114189">#114189</a>: VR Session crashes on exit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114795">PR #114795</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114918">#114918</a>: Negative scaled sculpt mesh artifacts.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114001">#114001</a>: Wrong compositing with volumes+transparency</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114651">#114651</a>: SSS NaNs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114928">PR #114928</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114482">#114482</a>: Wrong Texture Coordinates <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115057">PR #115057</a>.</li>
+<li>Sanitize closure nodes inputs <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115059">PR #115059</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114291">#114291</a>: Deferred transparency blending <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115066">PR #115066</a>.</li>
+<li>Discussion on recalc fixes/improvements <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114112">#114112</a>.</li>
+<li>Found the cause, but didn't fix yet: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114752">#114752</a>.</li></ul></li>
+<li>Draw:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114742">#114742</a>: Buffers never shrink <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114857">PR #114857</a>.</li></ul></li></ul>
+<h2><span id="Week_47_(Nov_20_-_Nov_26)"></span><span class="mw-headline" id="Week_47_.28Nov_20_-_Nov_26.29">Week 47 (Nov 20 - Nov 26)</span></h2>
+<ul><li>Core:
+<ul><li>Add ObjectRuntime::last_update transform, geometry and shading <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115196">PR #115196</a>.</li></ul></li>
+<li>EEVEE Next:
+<ul><li>Fix ObjectHandle::recalc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115243">PR #115243</a>.</li>
+<li>Fix Motion Vectors for non float4 position buffers <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115309">PR #115309</a>.</li>
+<li>Fix MaterialKey <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7ab622475d">7ab622475d</a>.</li>
+<li>Fix Texture Coordinate - Window <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115057">PR #115057</a> (Update).</li></ul></li>
+<li>Draw/GPU:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115144">#115144</a>: isect_data_setup compiler error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115175">PR #115175</a>.</li>
+<li>Assert no UINT push constants are used <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f97580f665">f97580f665</a>.</li>
+<li>Add Manager::update_handle_frustum_culling_test <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115375">PR #115375</a>.</li>
+<li>Investigate <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115226">#115226</a>: Nvidia shader compiler error&#160;: too many instructions.</li></ul></li></ul>
+<h2><span id="Week_48_(Nov_27_-_Dec_03)"></span><span class="mw-headline" id="Week_48_.28Nov_27_-_Dec_03.29">Week 48 (Nov 27 - Dec 03)</span></h2>
+<ul><li>EEVEE-Next:
+<ul><li>Use Object::visibility_flag in MaterialKey <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115575">PR #115575</a> (fixes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115488">#115488</a>).</li>
+<li>Fix alpha hashed transparency not converging <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115620">PR #115620</a>.</li>
+<li>Scene sync improvements, fixes and simplification (<a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commits/branch/pull-eevee-reset-cleanup">WIP</a>):
+<ul><li>Rely on the depsgraph to detect scene updates.</li>
+<li>Remove most sampling.reset() calls and their related logic.</li>
+<li>Get rid of GPU_material_recalc_flag_get (broken) and replace it with depsgraph update tags.</li>
+<li>Fix Lightprobe bake update tags.</li></ul></li></ul></li>
+<li>Core:
+<ul><li>Avoid duplicated Depsgraph operation nodes on geometry data <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115615">PR #115615</a></li></ul></li></ul>
+<h2><span id="Week_49_(Dec_04_-_Dec_10)"></span><span class="mw-headline" id="Week_49_.28Dec_04_-_Dec_10.29">Week 49 (Dec 04 - Dec 10)</span></h2>
+<ul><li>EEVEE-Next:
+<ul><li>PRs for last week's scene sync fixes and improvements (<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115758">PR #115758</a> and <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115760">PR #115760</a>).</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115594">#115594</a>: Crash with VDB <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/026cdb1058">026cdb1058</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115786">#115786</a>: Texture paint delayed redraw <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7ec59b05ff">7ec59b05ff</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115289">#115289</a>: Negative scale lights <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3360b6344f">3360b6344f</a>.</li>
+<li>Fix deferred tile stencil compilation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b006bfe10b">b006bfe10b</a>.</li></ul></li>
+<li>Draw: Fix Volume coordinates regression <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/35cf616169">35cf616169</a>.</li>
+<li>GPU: Avoid GPUMaterial/Pass collisions between engines <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115819">PR #115819</a>.</li></ul>
+<h2><span id="Week_50_(Dec_11_-_Dec_17)"></span><span class="mw-headline" id="Week_50_.28Dec_11_-_Dec_17.29">Week 50 (Dec 11 - Dec 17)</span></h2>
+<ul><li>EEVEE-Next:
+<ul><li>Fix motion vectors for static geometry <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/73a5826bf5">73a5826bf5</a>.</li>
+<li>Add Light Path node support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116107">PR #116107</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114284">#114284</a>: Light cutoff with small radius <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/b86d656df4">b86d656df4</a>.</li>
+<li>Fix DeferredProbelLayer emissive materials <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7e4c2b2649">7e4c2b2649</a>.</li>
+<li>Fix from_up_axis sign (fixes surferls debug display) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6c40adcc36">6c40adcc36</a> &amp; <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/937c4ed2c4">937c4ed2c4</a>.</li>
+<li>Fix Volume lighting <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/8e9ce4d03d">8e9ce4d03d</a> &amp; <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9bf942dcc9">9bf942dcc9</a>.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114168">#114168</a>: Viewport image render sampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116198">PR #116198</a>.</li>
+<li>Prototypes:
+<ul><li>Remove forward opaque pipeline. <a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commit/c84f8d87d8">c84f8d87d8</a></li>
+<li>Skip shadow rendering when disabled. <a rel="nofollow" class="external text" href="https://projects.blender.org/pragma37/blender/commit/7c612784c7">7c612784c7</a></li></ul></li></ul></li>
+<li>GPU:
+<ul><li>Add PROFILE_DEBUG_GROUPS <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116304">PR #116304</a>.</li>
+<li>Reuse GPUViewport when doing viewport render animations (fixes EEVEE-Next motion blur) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116199">PR #116199</a>.</li></ul></li></ul>
+<h2><span id="Week_51_(Dec_18_-_Dec_24)"></span><span class="mw-headline" id="Week_51_.28Dec_18_-_Dec_24.29">Week 51 (Dec 18 - Dec 24)</span></h2>
+<ul><li>EEVEE-Next:
+<ul><li>Partial World LightPath node support <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7288201e96">7288201e96</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/116031">#116031</a>: Nishita sky does not work <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/89ec7f5360">89ec7f5360</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114168">#114168</a>: Viewport image render sampling <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116198">PR #116198</a></li>
+<li>Fix World.has_volume() <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a2317726ca">a2317726ca</a></li>
+<li>Fix Volume closure evaluation <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/0e3dbcfae0">0e3dbcfae0</a></li></ul></li>
+<li>Workbench:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/116403">#116403</a>: Broken overlays with clipping planes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116441">PR #116441</a></li></ul></li>
+<li>GPU:
+<ul><li>Add PROFILE_DEBUG_GROUPS <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116304">PR #116304</a></li>
+<li>Reuse GPUViewport when doing viewport render animations <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116199">PR #116199</a></li>
+<li>Print shader source on compilation error <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116470">PR #116470</a></li>
+<li>Nodes:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/116424">#116424</a>: UDIM texture user count <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e8c5f8dddf">e8c5f8dddf</a></li>
+<li>Fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115226">#115226</a>: Don't execute the same node twice <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a90fdd5246">a90fdd5246</a></li></ul></li></ul></li></ul>
+<h2><span id="Week_52_(Dec_25_-_Dec_31)"></span><span class="mw-headline" id="Week_52_.28Dec_25_-_Dec_31.29">Week 52 (Dec 25 - Dec 31)</span></h2>
+<p>Vacations!
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20240111145401
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.367 seconds
+Real time usage: 0.368 seconds
+Preprocessor visited node count: 4880/1000000
+Preprocessor generated node count: 6504/1000000
+Post‐expand include size: 27659/2097152 bytes
+Template argument size: 5645/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  228.686      1 -total
+ 44.26%  101.225     46 Template:GitCommit
+ 26.70%   61.067    129 Template:PullRequest
+ 12.48%   28.548     60 Template:Issue
+ 11.91%   27.245     43 Template:GitCommit/PhabricatorParseDeprecated
+  9.05%   20.705     43 Template:GitCommit/PhabricatorParse
+  0.51%    1.157      2 Template:Commit
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6604-0!canonical and timestamp 20240111145401 and revision id 37889
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;oldid=37889">https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;oldid=37889</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 22 December 2023, at 19:34.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:MiguelPozo/WeeklyReports/2023.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:MiguelPozo/WeeklyReports/2023" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/MiguelPozo.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/MiguelPozo.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/MiguelPozo.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;oldid=37889" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:MiguelPozo/WeeklyReports/2023&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.367","walltime":"0.368","ppvisitednodes":{"value":4880,"limit":1000000},"ppgeneratednodes":{"value":6504,"limit":1000000},"postexpandincludesize":{"value":27659,"limit":2097152},"templateargumentsize":{"value":5645,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  228.686      1 -total"," 44.26%  101.225     46 Template:GitCommit"," 26.70%   61.067    129 Template:PullRequest"," 12.48%   28.548     60 Template:Issue"," 11.91%   27.245     43 Template:GitCommit/PhabricatorParseDeprecated","  9.05%   20.705     43 Template:GitCommit/PhabricatorParse","  0.51%    1.157      2 Template:Commit"]},"cachereport":{"timestamp":"20240111145401","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":40});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844554a99809b8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

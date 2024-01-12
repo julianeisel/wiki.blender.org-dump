@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Source/Nodes/FunctionSystem - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Source/Nodes/FunctionSystem","wgTitle":"Source/Nodes/FunctionSystem","wgCurRevisionId":22020,"wgRevisionId":22020,"wgArticleId":4934,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Source/Nodes/FunctionSystem","wgRelevantArticleId":4934,"wgRequestId":"e349cdf571f69ca5ee45f1a5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=ext.pygments|mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Source_Nodes_FunctionSystem rootpage-Source skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="FunctionSystem.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=Source%2FNodes%2FFunctionSystem" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="FunctionSystem.html#Function_System"><span class="tocnumber">1</span> <span class="toctext">Function System</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="FunctionSystem.html#Motivation"><span class="tocnumber">1.1</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="FunctionSystem.html#Goals"><span class="tocnumber">1.2</span> <span class="toctext">Goals</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="FunctionSystem.html#Simple_Benchmark"><span class="tocnumber">1.3</span> <span class="toctext">Simple Benchmark</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="FunctionSystem.html#LLVM_is_not_the_solution.2C_but"><span class="tocnumber">1.4</span> <span class="toctext">LLVM is not the solution, but</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="FunctionSystem.html#Interface_of_a_Function"><span class="tocnumber">1.5</span> <span class="toctext">Interface of a Function</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="FunctionSystem.html#Runtime_Type_System"><span class="tocnumber">1.6</span> <span class="toctext">Runtime Type System</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="FunctionSystem.html#CPPType"><span class="tocnumber">1.6.1</span> <span class="toctext">CPPType</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="FunctionSystem.html#GenericArrayRef_and_GenericMutableArrayRef"><span class="tocnumber">1.6.2</span> <span class="toctext">GenericArrayRef and GenericMutableArrayRef</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="FunctionSystem.html#GenericVectorArray"><span class="tocnumber">1.6.3</span> <span class="toctext">GenericVectorArray</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="FunctionSystem.html#GenericVirtualListRef"><span class="tocnumber">1.6.4</span> <span class="toctext">GenericVirtualListRef</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="FunctionSystem.html#GenericVirtualListListRef"><span class="tocnumber">1.6.5</span> <span class="toctext">GenericVirtualListListRef</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="FunctionSystem.html#Implementing_a_Function"><span class="tocnumber">1.7</span> <span class="toctext">Implementing a Function</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="FunctionSystem.html#Multi_Function_Network"><span class="tocnumber">1.8</span> <span class="toctext">Multi Function Network</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="FunctionSystem.html#Network_Optimization"><span class="tocnumber">1.9</span> <span class="toctext">Network Optimization</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="FunctionSystem.html#Network_Evaluation"><span class="tocnumber">1.10</span> <span class="toctext">Network Evaluation</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="FunctionSystem.html#Summary"><span class="tocnumber">1.11</span> <span class="toctext">Summary</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">Source/Nodes/FunctionSystem</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../Source.html" title="Source">Source</a>&lrm; | <a href="../Nodes.html" title="Source/Nodes">Nodes</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Function_System">Function System</span></h1>
+<p>The term "function system" describes a library that solves the problem of evaluating user-defined functions at run-time. Having a good solution to this problem is a key ingredient for new node systems in Blender.
+</p>
+<h2><span class="mw-headline" id="Motivation">Motivation</span></h2>
+<p>I've talked about different use-cases for this system in <a rel="nofollow" class="external text" href="EverythingNodes.html">this</a> document before. Many more use-cases can be discovered in the future. The function system also has a lot of immediate value to me. The new particle system heavily depends on user-defined functions to provide more flexibility. The design of the particle system would be very different if we would not able to evaluate functions efficiently.
+</p><p>The image below shows a simple user-defined force that has to be evaluated for every particle in every time step. In fact, forces can only be implemented using nodes currently.
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Force_function.png.html" class="image"><img alt="Force function.png" src="../../../w/images/e/e2/Force_function.png" width="612" height="177" /></a></div></div>
+<h2><span class="mw-headline" id="Goals">Goals</span></h2>
+<p>One of the major goals for this system is <b>performance</b>. However, there are two ways to measure performance:
+</p>
+<ul><li>Latency: This measures how much time it takes to evaluate a function only once. For example, the time it takes to compute the force on a single particle takes 5ns.</li>
+<li>Throughput: This measures how many times the function can be evaluated in a certain amount of time. For example, in 1ms I can compute the force on 1 million particles.</li></ul>
+<p>It turns out that you get very different solutions depending on what you optimize for. My initial implementation of the function system, as described in <a rel="nofollow" class="external text" href="InitialFunctionsSystem.html">this</a> document, was optimizing for latency. However, it turned out that optimizing for throughput makes a lot more sense when it comes to particle systems and many other use-cases.
+</p><p>Even more important than the performance right now, is the <b>optimizability</b> of the system. Whenever there is a bottleneck in the function evaluation, there should be an obvious way to optimize it away. This is important, because micro-optimizing everything won't do us any good, but selectively optimizing small code segments is fine. Optimizing optimizability has two important implications. Firstly, bottlenecks have to be easy to find by looking at a profile. Secondly, bottlenecks must only appear in small loops. I'd say that both things can only be achieved when optimizing for throughput.
+</p><p>The system needs a well defined and extensible <b>type system</b>. Only supporting primitive types like <code>int</code> and <code>float</code> is not an option. It should be possible to use the system with most C++ types (they must be copyable, destructible, ...). Furthermore, passing lists of elements between nodes has to be supported efficiently, i.e. without potentially doing a separate memory allocation for every particle.
+</p><p>Functions have to be <b>composable</b>. That means, I have to be able to take a couple of functions, connect them somehow, and that results in a new function with the same interface as the original functions.
+</p><p>The <b>setup cost</b> should be low. So, transforming a node system or an expression into an executable function should be fast. This is important, because if it is slow, the loading time of .blend files can increase a lot and artists have to wait longer when they change a function. I expect files to have many small functions in the future.
+</p>
+<h2><span class="mw-headline" id="Simple_Benchmark">Simple Benchmark</span></h2>
+<p>Here I'll just provide some perspective for the current performance of the system by comparing it to a precompiled C++ function. Both, the C++ code and the function evaluation can be optimized more of course, but to understand where we stand, it is good enough.
+</p><p>I use Heron's formula to compute the area of a triangle as an example. However, the input will be three vertex coordinates per triangle instead of three side lengths. Below is the C++ code and a screenshot of the node tree (implemented using node groups) that I will compare. I'm running the benchmark on a single core, but both functions can easily be extended to use multiple cores.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">BLI_NOINLINE</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">compute_triangle_areas</span><span class="p">(</span><span class="n">ArrayRef</span><span class="o">&lt;</span><span class="n">float3</span><span class="o">&gt;</span> <span class="n">points_a</span><span class="p">,</span>
+                                                <span class="n">ArrayRef</span><span class="o">&lt;</span><span class="n">float3</span><span class="o">&gt;</span> <span class="n">points_b</span><span class="p">,</span>
+                                                <span class="n">ArrayRef</span><span class="o">&lt;</span><span class="n">float3</span><span class="o">&gt;</span> <span class="n">points_c</span><span class="p">,</span>
+                                                <span class="n">MutableArrayRef</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">r_areas</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">uint</span> <span class="n">amount</span> <span class="o">=</span> <span class="n">points_a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="n">BLI_assert</span><span class="p">(</span><span class="n">points_b</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">amount</span><span class="p">);</span>
+  <span class="n">BLI_assert</span><span class="p">(</span><span class="n">points_c</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">amount</span><span class="p">);</span>
+  <span class="n">BLI_assert</span><span class="p">(</span><span class="n">r_areas</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">amount</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">uint</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">amount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">float3</span> <span class="n">a</span> <span class="o">=</span> <span class="n">points_a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">float3</span> <span class="n">b</span> <span class="o">=</span> <span class="n">points_b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">float3</span> <span class="n">c</span> <span class="o">=</span> <span class="n">points_c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+    <span class="kt">float</span> <span class="n">side1</span> <span class="o">=</span> <span class="n">float3</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">side2</span> <span class="o">=</span> <span class="n">float3</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">side3</span> <span class="o">=</span> <span class="n">float3</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+
+    <span class="kt">float</span> <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">side1</span> <span class="o">+</span> <span class="n">side2</span> <span class="o">+</span> <span class="n">side3</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5f</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">area</span> <span class="o">=</span> <span class="n">sqrtf</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">side1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">side2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">side3</span><span class="p">));</span>
+    <span class="n">r_areas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<div class="center"><div class="floatnone"><a href="../../File:Triangle_area_tree.png.html" class="image"><img alt="Triangle area tree.png" src="../../../w/images/f/f7/Triangle_area_tree.png" width="1237" height="419" /></a></div></div>
+<p>I evaluate the functions on 10.000.000 elements. The C++ code takes approximatly 60ms and the user-defined function 160ms to execute. That are 6ns and 16ns per element on average. There is no compilation happening at run-time. Personally, I think this result is quite good already.
+</p><p>Below is a flame graph that shows roughly the time spent in each function. We can see that the C++ code has been inlined entirely. Furthermore, when evaluating the node tree, almost all of the time is spent in small loops. Those can still be optimized individually or combined if necessary. Most time is spent in the three nodes that compute the vector distances. The other four flat segments of the profile show the time of the sqrt, subtract, add and multiply nodes respectively. The three large peaks indicate page faults when a memory buffer has been written to the first time.
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Benchmark-flame-graph.png.html" class="image"><img alt="Benchmark-flame-graph.png" src="../../../w/images/0/07/Benchmark-flame-graph.png" width="1192" height="185" /></a></div></div>
+<h2><span id="LLVM_is_not_the_solution,_but"></span><span class="mw-headline" id="LLVM_is_not_the_solution.2C_but">LLVM is not the solution, but</span></h2>
+<p>LLVM is not the solution, but can be part of it. There is no doubt, that for many small functions (like the one in the benchmark above), LLVM will provide the best possible performance, probably even faster than the precompiled C++ code on many CPUs. However, LLVM does not solve all problems and comes with it's own set of new problems.
+</p><p>The main downside is compilation time. Both, optimized and unoptimized compilation can take a significant amount of time that quickly adds up when many small functions are used. Furthermore, debugging and profiling functions compiled at run-time is much harder. Integrating non trivial C++ types with LLVM IR can be complex. Also, the performance of working with lists of elements is not magically better by using LLVM. For many nodes, that do more than simple math operations (e.g. compute perlin noise), LLVM does not provide any performance benefit and just makes everything more complex.
+</p><p>That is all to say that, while LLVM is great, it cannot be seen as primary solution to the function evaluation problem (I developed a node tree to LLVM IR compiler last year, so I actually tried this).
+</p><p>Nevertheless, LLVM can be used in a node network optimization step. For example, this optimization could find groups of nodes that can be replaced by a single new node, that has been compiled at run-time.
+</p>
+<h2><span class="mw-headline" id="Interface_of_a_Function">Interface of a Function</span></h2>
+<p>This section shows how a run-time generated function is used. It explains the different data structures used in the interface. A later section will show a function from the inside.
+</p><p>The most important class is <code>FN::MultiFunction</code>. It encapsulates a function, that can be computed on many elements at the same time, hence the name <code>MultiFunction</code>.
+</p><p>Usually, nodes have input and output sockets. However, that concept turned out to be bad for a <code>MultiFunction</code>. Instead, a <code>MultiFunction</code> instance has a list of parameters. Every parameter has an interface category, a data type category and a base type. There are three distinct interface categories:
+</p>
+<ul><li>Input: An input parameter has to be initialized by the caller of the function. It is readonly inside the function.</li>
+<li>Output: An output parameter is initialized by the callee. The caller only provides the memory buffer.</li>
+<li>Mutable: A mutable parameter is initialized by the caller. The function is allowed to modify it.</li></ul>
+<p>There are two data type categories:
+</p>
+<ul><li>Single: A single parameter is one that gets one value per element to be computed.</li>
+<li>Vector: A vector parameter can receive zero or more values per element to be computed.</li></ul>
+<p>Lastly, the base data type of a parameter is represented by an <code>FN::CPPType</code> instance. Such instances are available for many types such as <code>float</code>, <code>int</code> and <code>std::string</code>.
+</p><p>In order to call a function, the caller has to provide all parameters. A special type <code>FN::MFParamsBuilder</code> helps with that (MF = MultiFunction). Remember that a <code>MultiFunction</code> always computes many elements at once.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">const</span> <span class="n">MultiFunction</span> <span class="o">&amp;</span><span class="n">fn</span> <span class="o">=</span> <span class="n">get_add_int_function</span><span class="p">();</span>
+
+<span class="n">uint</span> <span class="n">amount</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inputs_a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inputs_b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">outputs</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
+
+<span class="n">MFParamsBuilder</span> <span class="nf">params_builder</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_readonly_single_input</span><span class="p">(</span><span class="n">inputs_a</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_readonly_single_input</span><span class="p">(</span><span class="n">inputs_b</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_single_output</span><span class="p">(</span><span class="n">outputs</span><span class="p">.</span><span class="n">as_mutable_ref</span><span class="p">());</span>
+
+<span class="n">MFContextBuilder</span> <span class="n">context_builder</span><span class="p">;</span>
+<span class="n">fn</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">IndexRange</span><span class="p">(</span><span class="n">amount</span><span class="p">),</span> <span class="n">params_builder</span><span class="p">,</span> <span class="n">context_builder</span><span class="p">);</span>
+
+<span class="cm">/* The output array contains {4, 5, 5, 6, 6} now. */</span>
+</pre></div>
+<p>The <code>Array&lt;T&gt;.as_ref()</code> and <code>as_mutable_ref()</code> functions return a <code>BLI::ArrayRef&lt;T&gt;</code> and <code>BLI::MutableArrayRef&lt;T&gt;</code> respectively. The <code>context_builder</code> can be used to pass additional information to the function, but we don't need that here.
+</p><p>Note, the first argument of <code>fn.call</code> is an <code>BLI::IndexRange</code>. In this case it is <code>{0, 1, 2, 3, 4}</code>. The parameter is used to tell the callee which elements/indices should be computed. For example, if I only wanted to compute sum at indices 1 and 3, I could pass <code>{1, 3}</code> into the function. Internally, this is converted into an <code>BLI::IndexMask</code> structure, that just references an array of unsigned integers. The indices have to be ordered and duplicates are not allowed.
+</p><p>A great part of the design is that readonly inputs to a function can be "virtual arrays". So it does not have to be an actual array, but only has to look like an array to the callee. This becomes very handy when e.g. the second input in the example above is constant. The <code>MFParamsBuilder</code> takes care of the necessary conversions.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">const</span> <span class="n">MultiFunction</span> <span class="o">&amp;</span><span class="n">fn</span> <span class="o">=</span> <span class="n">get_add_int_function</span><span class="p">();</span>
+
+<span class="n">uint</span> <span class="n">amount</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inputs_a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">input_b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">Array</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">outputs</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="n">MFParamsBuilder</span> <span class="nf">params_builder</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">amount</span><span class="p">);</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_readonly_single_input</span><span class="p">(</span><span class="n">inputs_a</span><span class="p">.</span><span class="n">as_ref</span><span class="p">());</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_readonly_single_input</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input_b</span><span class="p">);</span>
+<span class="n">params_builder</span><span class="p">.</span><span class="n">add_single_output</span><span class="p">(</span><span class="n">outputs</span><span class="p">.</span><span class="n">as_mutable_ref</span><span class="p">());</span>
+
+<span class="n">MFContextBuilder</span> <span class="n">context_builder</span><span class="p">;</span>
+<span class="n">fn</span><span class="p">.</span><span class="n">call</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">},</span> <span class="n">params_builder</span><span class="p">,</span> <span class="n">context_builder</span><span class="p">);</span>
+
+<span class="cm">/* The output array contains {-1, 12, -1, 14, -1} now. */</span>
+</pre></div>
+<h2><span class="mw-headline" id="Runtime_Type_System">Runtime Type System</span></h2>
+<p>A couple of classes are necessary to work with types generically in a good and safe way. This section will explain those classes independently. Afterwards, we'll see how they are used to evaluate functions.
+</p>
+<h3><span class="mw-headline" id="CPPType">CPPType</span></h3>
+<p>The <code>FN::CPPType</code> class is the core of the run-time type system. Every type has a size and alignment. Furthermore, a type has to implement the operations <code>construct_default</code>, <code>destruct</code>, <code>copy_to_initialized</code>, <code>relocate_to_uninitialized</code> and more.
+</p><p>Types are identified by the pointer of their <code>CPPType</code> object. So, there has to be no deep comparison between two types.
+</p><p>Types that correspond to compile time types (all currently) can be accessed using a special template function: <code>template&lt;typename T&gt; const CPPType &amp;CPP_TYPE()</code>. For example, to get the <code>CPPType</code> for <code>float</code>, one can just use <code>CPP_TYPE&lt;float&gt;()</code>. A new type can be defined in a single line with the help of a macro.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">MAKE_CPP_TYPE</span><span class="p">(</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="p">)</span>
+<span class="n">MAKE_CPP_TYPE</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">,</span> <span class="kt">uint32_t</span><span class="p">)</span>
+<span class="n">MAKE_CPP_TYPE</span><span class="p">(</span><span class="n">float3</span><span class="p">,</span> <span class="n">BLI</span><span class="o">::</span><span class="n">float3</span><span class="p">)</span>
+<span class="n">MAKE_CPP_TYPE</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+<p>Whenever a method on a type object is called, the alignment of pointers is checked. So it is important to be aware of alignment when working with generic types.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="n">CPPType</span><span class="o">::</span><span class="n">copy_to_initialized</span><span class="p">(</span><span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">dst</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+  <span class="n">BLI_assert</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pointer_has_valid_alignment</span><span class="p">(</span><span class="n">src</span><span class="p">));</span>
+  <span class="n">BLI_assert</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pointer_has_valid_alignment</span><span class="p">(</span><span class="n">dst</span><span class="p">));</span>
+
+  <span class="n">m_copy_to_initialized</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="GenericArrayRef_and_GenericMutableArrayRef">GenericArrayRef and GenericMutableArrayRef</span></h3>
+<p>Those are mostly equivalent to <code>BLI::ArrayRef&lt;T&gt;</code> and <code>BLI::MutableArrayRef&lt;T&gt;</code>. However, instead of having their type defined at compile time, they have an <code>const CPPType *</code> member.
+</p>
+<h3><span class="mw-headline" id="GenericVectorArray">GenericVectorArray</span></h3>
+<p>This is a more complex data structure (and also the mostly likely to change in the future). Its purpose is to store a constant number of lists of varying length; it is an array of vectors. It also references a <code>CPPType</code>.
+</p>
+<h3><span class="mw-headline" id="GenericVirtualListRef">GenericVirtualListRef</span></h3>
+<p>This is a generic version of <code>BLI::VirtualListRef&lt;T&gt;</code>. It represents something that "looks like" an array. Internally, it can be an actual array, a single value, a smaller repeated array or an array of pointers. The data in the virtual list is readonly. Where performance matters, code can figure out the internal structure of the virtual list and optimize for different cases.
+</p>
+<h3><span class="mw-headline" id="GenericVirtualListListRef">GenericVirtualListListRef</span></h3>
+<p>This is a generic version of <code>BLI::VirtualListListRef&lt;T&gt;</code>. It represents somethings that "looks like" an array of arrays. Internally, it can either be a single array are multiple arrays. External code can optimize for the different cases as well if necessary.
+</p>
+<h2><span class="mw-headline" id="Implementing_a_Function">Implementing a Function</span></h2>
+<p>As an example, I'll implement a function that adds two integers. This function could be used in the example above. Per convention I call it <code>MF_AddInts</code>. Every function has to be a subclass of <code>MultiFunction</code> and has to implement a constructor and <code>call</code> method.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span> <span class="nc">MF_AddInts</span> <span class="k">final</span> <span class="o">:</span> <span class="k">public</span> <span class="n">MultiFunction</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="n">MF_AddInts</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">call</span><span class="p">(</span><span class="n">IndexMask</span> <span class="n">mask</span><span class="p">,</span> <span class="n">MFParams</span> <span class="n">params</span><span class="p">,</span> <span class="n">MFContext</span> <span class="n">context</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>The constructor is used to define the signature of the function as below. The function has three parameters. Two input and one output parameter. I'll give two functionally equivalent definitions of each function.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">MF_AddInts</span><span class="o">::</span><span class="n">MF_AddInts</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">MFSignatureBuilder</span> <span class="n">signature</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_builder</span><span class="p">(</span><span class="s">&quot;Add Ints&quot;</span><span class="p">);</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_input</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_input</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_output</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Result&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">MF_AddInts</span><span class="o">::</span><span class="n">MF_AddInts</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">MFSignatureBuilder</span> <span class="n">signature</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">get_builder</span><span class="p">(</span><span class="s">&quot;Add Ints&quot;</span><span class="p">);</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_input</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="n">CPP_TYPE</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_input</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="n">CPP_TYPE</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+  <span class="n">signature</span><span class="p">.</span><span class="n">single_output</span><span class="p">(</span><span class="s">&quot;Result&quot;</span><span class="p">,</span> <span class="n">CPP_TYPE</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+<p>The actual work happens in the <code>call</code> function. It gets the set of indices to be computed, the parameters and the context as input. You can see that the parameters are accessed in an redundant way on purpose. The first parameter (here 0, 1 and 2) is the parameter index that should be accessed. In debug builds, there will be additional type and name checks to avoid some kinds of errors.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="n">MF_AddInts</span><span class="o">::</span><span class="n">call</span><span class="p">(</span><span class="n">IndexMask</span> <span class="n">mask</span><span class="p">,</span> <span class="n">MFParams</span> <span class="n">params</span><span class="p">,</span> <span class="n">MFContext</span> <span class="n">UNUSED</span><span class="p">(</span><span class="n">context</span><span class="p">))</span> <span class="k">const</span>
+<span class="p">{</span>
+  <span class="n">VirtualListRef</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inputs_a</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">readonly_single_input</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="n">VirtualListRef</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inputs_b</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">readonly_single_input</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="n">MutableArrayRef</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">r_results</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">uninitialized_single_output</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;Result&quot;</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">uint</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">mask</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">r_results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">inputs_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">inputs_b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">MF_AddInts</span><span class="o">::</span><span class="n">call</span><span class="p">(</span><span class="n">IndexMask</span> <span class="n">mask</span><span class="p">,</span> <span class="n">MFParams</span> <span class="n">params</span><span class="p">,</span> <span class="n">MFContext</span> <span class="n">UNUSED</span><span class="p">(</span><span class="n">context</span><span class="p">))</span> <span class="k">const</span>
+<span class="p">{</span>
+  <span class="n">GenericVirtualListRef</span> <span class="n">inputs_a</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">readonly_single_input</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="n">GenericVirtualListRef</span> <span class="n">inputs_b</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">readonly_single_input</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">);</span>
+  <span class="n">GenericMutableArrayRef</span> <span class="n">r_results</span> <span class="o">=</span> <span class="n">params</span><span class="p">.</span><span class="n">uninitialized_single_output</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;Result&quot;</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">uint</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">mask</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">*</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">r_results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">inputs_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">inputs_b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Multi_Function_Network">Multi Function Network</span></h2>
+<p>It is possible to hardcode e.g. the concatenation of multiple functions by calling them one after the other. However, the prefered way of combining multiple functions is to use the multi function network.
+</p><p>Essentially, it is an internal node graph (separate from the one in Blender's node editor) in which most nodes are functions and every socket corresponds to a parameter of a function. Input parameters correspond to an input socket, output socket parameters correspond to an output socket and mutable parameters correspond to an input and an output socket.
+</p><p>There is a second category of nodes: dummy nodes. Those do not correspond to a function, but still have input and output sockets. They are used to represent inputs and outputs of the multi function network.
+</p><p>Every socket has a data type. Links can only be made between sockets that have the exact same data type. Every input socket has to be linked to exactly one output socket. An output socket can be linked to an arbitrary amount of inputs.
+</p><p>There are two classes that can represent these networks: <code>FN::MFNetworkBuilder</code> and <code>FN:MFNetwork</code>. The first one is mutable and allows some invalid states such as an input that is not linked. Nodes and links can be added and removed. The second one represents a finalized network. It cannot change anymore. This is the network that is evaluated in the end.
+</p><p>These networks are usually generated from node trees or potentially expressions in the future. I won't explain the entire API here, but below is a small snippet using it.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="n">MF_AddInts</span> <span class="n">add_ints_fn</span><span class="p">;</span>
+
+<span class="n">MFNetworkBuilder</span> <span class="n">network_builder</span><span class="p">;</span>
+
+<span class="n">MFBuilderNode</span> <span class="o">&amp;</span><span class="n">node_a</span> <span class="o">=</span> <span class="n">network_builder</span><span class="p">.</span><span class="n">add_function</span><span class="p">(</span><span class="n">add_ints_fn</span><span class="p">);</span>
+<span class="n">MFBuilderNode</span> <span class="o">&amp;</span><span class="n">node_b</span> <span class="o">=</span> <span class="n">network_builder</span><span class="p">.</span><span class="n">add_function</span><span class="p">(</span><span class="n">add_ints_fn</span><span class="p">);</span>
+<span class="n">MFBuilderNode</span> <span class="o">&amp;</span><span class="n">input_a</span> <span class="o">=</span> <span class="n">network_builder</span><span class="p">.</span><span class="n">add_dummy</span><span class="p">(</span>
+    <span class="s">&quot;Input 1&quot;</span><span class="p">,</span> <span class="p">{},</span> <span class="p">{</span><span class="n">MFDataType</span><span class="o">::</span><span class="n">ForSingle</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()},</span> <span class="p">{},</span> <span class="p">{</span><span class="s">&quot;Value&quot;</span><span class="p">});</span>
+<span class="n">MFBuilderNode</span> <span class="o">&amp;</span><span class="n">input_b</span> <span class="o">=</span> <span class="n">network_builder</span><span class="p">.</span><span class="n">add_dummy</span><span class="p">(</span>
+    <span class="s">&quot;Input 2&quot;</span><span class="p">,</span> <span class="p">{},</span> <span class="p">{</span><span class="n">MFDataType</span><span class="o">::</span><span class="n">ForSingle</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()},</span> <span class="p">{},</span> <span class="p">{</span><span class="s">&quot;Value&quot;</span><span class="p">});</span>
+<span class="n">MFBuilderNode</span> <span class="o">&amp;</span><span class="n">output</span> <span class="o">=</span> <span class="n">network_builder</span><span class="p">.</span><span class="n">add_dummy</span><span class="p">(</span>
+    <span class="s">&quot;Output&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">MFDataType</span><span class="o">::</span><span class="n">ForSingle</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">()},</span> <span class="p">{},</span> <span class="p">{</span><span class="s">&quot;Value&quot;</span><span class="p">},</span> <span class="p">{});</span>
+
+<span class="n">network_builder</span><span class="p">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">input_a</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">node_a</span><span class="p">.</span><span class="n">input</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">network_builder</span><span class="p">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">input_b</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">node_a</span><span class="p">.</span><span class="n">input</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">network_builder</span><span class="p">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">input_b</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">node_b</span><span class="p">.</span><span class="n">input</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">network_builder</span><span class="p">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">node_a</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">node_b</span><span class="p">.</span><span class="n">input</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="n">network_builder</span><span class="p">.</span><span class="n">add_link</span><span class="p">(</span><span class="n">node_b</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">output</span><span class="p">.</span><span class="n">input</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+<span class="n">MFNetwork</span> <span class="nf">network</span><span class="p">(</span><span class="n">network_builder</span><span class="p">);</span>
+</pre></div>
+<p><br />
+The <code>MFNetworkBuilder</code> has a dot exporter to visualize the graph.
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Network-builder.png.html" class="image"><img alt="Network-builder.png" src="../../../w/images/4/4b/Network-builder.png" width="576" height="187" /></a></div></div>
+<h2><span class="mw-headline" id="Network_Optimization">Network Optimization</span></h2>
+<p>A <code>MFNetworkBuilder</code> generated from user input can often still be optimized. This section presents three optimization passes that I've implemented already. The goal of all these passes is to reduce the number of nodes that need to be evaluated in the end.
+</p><p>The first optimization is <b>constant folding</b>. All function nodes that neither depend in the context nor on dummy nodes, can be collapsed.
+</p><p>Before constant folding:
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Constant_folding_before.png.html" class="image"><img alt="Constant folding before.png" src="../../../w/images/0/0c/Constant_folding_before.png" width="996" height="387" /></a></div></div>
+<p>After constant folding:
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Constant_folding_after.png.html" class="image"><img alt="Constant folding after.png" src="../../../w/images/5/5f/Constant_folding_after.png" width="661" height="555" /></a></div></div>
+<p>As you can see, a set of nodes has been replaced with a constant. However, the nodes have not been removed yet. This is the job of the next optimization called <b>dead node elimination</b>. It removes all nodes that aren't dependencies of dummy nodes. This does not impact evaluation performance as much, but less nodes are always better. Also removing unused nodes helps when visualizing the network.
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Dead_node_removal_after.png.html" class="image"><img alt="Dead node removal after.png" src="../../../w/images/6/6f/Dead_node_removal_after.png" width="632" height="211" /></a></div></div>
+<p>Lastly, there is <b>duplicate removal</b>. It can find and remove duplicate computations in the node tree. Duplicates are often created when a node group is inlined multiple times. This can also detect common subexpression when we are able to generate networks from expressions.
+</p><p>Before duplicate removal:
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Duplicate_removal_before.png.html" class="image"><img alt="Duplicate removal before.png" src="../../../w/images/7/74/Duplicate_removal_before.png" width="1116" height="393" /></a></div></div>
+<p>After duplicate removal:
+</p>
+<div class="center"><div class="floatnone"><a href="../../File:Duplicate_removal_after.png.html" class="image"><img alt="Duplicate removal after.png" src="../../../w/images/d/d1/Duplicate_removal_after.png" width="1125" height="274" /></a></div></div>
+<h2><span class="mw-headline" id="Network_Evaluation">Network Evaluation</span></h2>
+<p>An <code>MFNetwork</code> itself is not a <code>MultiFunction</code> and therefore cannot be called. Currently, the <code>MF_EvaluateNetwork</code> function provides the functionality to execute a network. It takes two sets of sockets as input that represent the inputs and outputs in the network. There has to be at least one output. The <code>MF_EvaluateNetwork</code> is then called like any other <code>MultiFunction</code>.
+</p><p>There are many ways to implement the evaluation of a network. Since I started working on Animation Nodes, I've probably implemented at least a dozen of those. Here are a couple of possible approaches:
+</p>
+<ul><li>Recursive Interpreter: This starts at the output and uses recursion to compute the output of every node. This is the simplest variant when you allow that some nodes will be computed multiple times. With caching it becomes harder, but still fairly doable. The issue with such a recursive approach is that you might run out of stack memory when there are long node chains (which can happen when the network is generated programatically).</li>
+<li>Bytecode Interpreter: Convert the network with its inputs and outputs into some bytecode at construction time and interpret it later on. This can become quite annoying to debug and does not really provide any benefits here.</li>
+<li>Compile: The order in which functions have to be evaluated can be converted into e.g. LLVM IR and then compiled. This is costly, because the compilation can take quite some time. Debugging becomes much harder with this approach. The performance benefit is negilible when many elements are evaluated per node. Also implementing control flow decisions is quite hard.</li>
+<li>Stack-based Interpreter: This is similar to the recursive interpreter with caching. However, instead of using recursion, a stack and a while loop is used. This worked the best in my experiments.</li></ul>
+<p>The current network evaluator has the following features:
+</p>
+<ul><li>It does not use recursion. So there is no problem with long node chains.</li>
+<li>It can handle all existing parameter types (including mutable parameters).</li>
+<li>Memory buffers for intermediate results are cached and reused.</li>
+<li>Uses a "deepest depth first" heuristic to decide in which order the inputs of a node should be computed in order to minimize the number of temporary buffers.</li>
+<li>No data is copied when there is a chain of mutable parameters. So, the same buffer is just passed to every function in the right order.</li>
+<li>Every node is executed at most once.</li>
+<li>If the output of a node is determined to be the same for every element, the node will only be evaluated on a single element (instead of e.g. for every particle).</li>
+<li>The last node before the output node can write directly into the buffer provided by the caller, eliminating a copy.</li>
+<li>The more elements are processed at the same time, the more negilible the overhead of the evaluator itself. That works because the system is throughput optimized and the evaluator does not add overhead for every element.</li></ul>
+<p>The evaluator does not do any multithreading on its own, currently. It does not feel very necessary so far. Simply splitting up the data into smaller chunks of elements is much better, because it scales to an arbitrary number of threads independent of the node network.
+</p>
+<h2><span class="mw-headline" id="Summary">Summary</span></h2>
+<p>The function system contributes the following components to Blender:
+</p>
+<ul><li>A run-time type system and data structures to work with data of unknown type efficiently and safely.</li>
+<li>A flexible and efficient interface for throughput optimized functions for the CPU.</li>
+<li>Efficient data structures and algorithms to combine and evaluate multiple such functions.</li></ul>
+<p>All these components are internal and not visible to the user. However, they are an integral part of the other systems I'm working on:
+</p>
+<ul><li>A node interface framework to allow for more flexible node trees with type inferencing and other features (see <a rel="nofollow" class="external text" href="NodeInterfaceFramework.html">Node Interface Framework</a>).</li>
+<li>A particle nodes implementation using the function system to give the user a lot of flexibility by still achieving high performance (see <a rel="nofollow" class="external text" href="ParticleNodesCoreConcepts.html">Particle Nodes Core Concepts</a>).</li>
+<li>A unified simulation system to integrate different kinds of simulations in a single node system (see <a rel="nofollow" class="external text" href="UnifiedSimulationSystemProposal.html">Unified Simulation System Proposal</a>).</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120252
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.111 seconds
+Real time usage: 0.181 seconds
+Preprocessor visited node count: 147/1000000
+Preprocessor generated node count: 252/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 27424/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4934-0!canonical and timestamp 20240112120251 and revision id 22020
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;oldid=22020">https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;oldid=22020</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 8 February 2021, at 14:38.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/Source/Nodes/FunctionSystem.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/Source/Nodes/FunctionSystem" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;oldid=22020" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=Source/Nodes/FunctionSystem&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.111","walltime":"0.181","ppvisitednodes":{"value":147,"limit":1000000},"ppgeneratednodes":{"value":252,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":27424,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120252","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":228});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844540c24be9b918","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

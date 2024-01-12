@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Sebbas/Reports/2020 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Sebbas/Reports/2020","wgTitle":"Sebbas/Reports/2020","wgCurRevisionId":21322,"wgRevisionId":21322,"wgArticleId":4910,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Sebbas/Reports/2020","wgRelevantArticleId":4910,"wgRequestId":"aee823a66e551edcc9796038","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Sebbas","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Sebbas_Reports_2020 rootpage-User_Sebbas skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2020.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3ASebbas%2FReports%2F2020" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2020.html#Reports_2020"><span class="tocnumber">1</span> <span class="toctext">Reports 2020</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2020.html#December_28_-_01"><span class="tocnumber">1.1</span> <span class="toctext">December 28 - 01</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2020.html#December_21_-_25"><span class="tocnumber">1.2</span> <span class="toctext">December 21 - 25</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2020.html#December_14_-_18"><span class="tocnumber">1.3</span> <span class="toctext">December 14 - 18</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2020.html#December_07_-_11"><span class="tocnumber">1.4</span> <span class="toctext">December 07 - 11</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2020.html#November_30_-_04"><span class="tocnumber">1.5</span> <span class="toctext">November 30 - 04</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2020.html#November_23_-_27"><span class="tocnumber">1.6</span> <span class="toctext">November 23 - 27</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2020.html#November_16_-_20"><span class="tocnumber">1.7</span> <span class="toctext">November 16 - 20</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2020.html#November_09_-_13"><span class="tocnumber">1.8</span> <span class="toctext">November 09 - 13</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2020.html#November_02_-_06"><span class="tocnumber">1.9</span> <span class="toctext">November 02 - 06</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2020.html#October_26_-_30"><span class="tocnumber">1.10</span> <span class="toctext">October 26 - 30</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2020.html#October_19_-_23"><span class="tocnumber">1.11</span> <span class="toctext">October 19 - 23</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2020.html#October_12_-_16"><span class="tocnumber">1.12</span> <span class="toctext">October 12 - 16</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2020.html#October_05_-_09"><span class="tocnumber">1.13</span> <span class="toctext">October 05 - 09</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2020.html#September_28_-_02"><span class="tocnumber">1.14</span> <span class="toctext">September 28 - 02</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2020.html#September_21_-_25"><span class="tocnumber">1.15</span> <span class="toctext">September 21 - 25</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2020.html#September_14_-_18"><span class="tocnumber">1.16</span> <span class="toctext">September 14 - 18</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2020.html#September_07_-_11"><span class="tocnumber">1.17</span> <span class="toctext">September 07 - 11</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2020.html#August_31_-_04"><span class="tocnumber">1.18</span> <span class="toctext">August 31 - 04</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2020.html#August_24_-_28"><span class="tocnumber">1.19</span> <span class="toctext">August 24 - 28</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2020.html#August_17_-_21"><span class="tocnumber">1.20</span> <span class="toctext">August 17 - 21</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2020.html#August_10_-_14"><span class="tocnumber">1.21</span> <span class="toctext">August 10 - 14</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="2020.html#August_03_-_07"><span class="tocnumber">1.22</span> <span class="toctext">August 03 - 07</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="2020.html#July_27_-_31"><span class="tocnumber">1.23</span> <span class="toctext">July 27 - 31</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2020.html#July_20_-_24"><span class="tocnumber">1.24</span> <span class="toctext">July 20 - 24</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2020.html#July_13_-_17"><span class="tocnumber">1.25</span> <span class="toctext">July 13 - 17</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2020.html#July_06_-_10"><span class="tocnumber">1.26</span> <span class="toctext">July 06 - 10</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2020.html#June_29_-_03"><span class="tocnumber">1.27</span> <span class="toctext">June 29 - 03</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2020.html#June_22_-_26"><span class="tocnumber">1.28</span> <span class="toctext">June 22 - 26</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2020.html#June_15_-_19"><span class="tocnumber">1.29</span> <span class="toctext">June 15 - 19</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2020.html#June_08_-_12"><span class="tocnumber">1.30</span> <span class="toctext">June 08 - 12</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2020.html#June_01_-_05"><span class="tocnumber">1.31</span> <span class="toctext">June 01 - 05</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2020.html#May_25_-_29"><span class="tocnumber">1.32</span> <span class="toctext">May 25 - 29</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2020.html#May_18_-_22"><span class="tocnumber">1.33</span> <span class="toctext">May 18 - 22</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2020.html#May_11_-_15"><span class="tocnumber">1.34</span> <span class="toctext">May 11 - 15</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2020.html#May_04_-_08"><span class="tocnumber">1.35</span> <span class="toctext">May 04 - 08</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2020.html#April_27_-_01"><span class="tocnumber">1.36</span> <span class="toctext">April 27 - 01</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2020.html#April_20_-_24"><span class="tocnumber">1.37</span> <span class="toctext">April 20 - 24</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2020.html#April_13_-_17"><span class="tocnumber">1.38</span> <span class="toctext">April 13 - 17</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="2020.html#April_06_-_10"><span class="tocnumber">1.39</span> <span class="toctext">April 06 - 10</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="2020.html#March_30_-_03"><span class="tocnumber">1.40</span> <span class="toctext">March 30 - 03</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="2020.html#March_23_-_27"><span class="tocnumber">1.41</span> <span class="toctext">March 23 - 27</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="2020.html#March_16_-_20"><span class="tocnumber">1.42</span> <span class="toctext">March 16 - 20</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="2020.html#March_09_-_13"><span class="tocnumber">1.43</span> <span class="toctext">March 09 - 13</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="2020.html#March_02_-_06"><span class="tocnumber">1.44</span> <span class="toctext">March 02 - 06</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2020.html#February_24_-_28"><span class="tocnumber">1.45</span> <span class="toctext">February 24 - 28</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2020.html#February_17_-_21"><span class="tocnumber">1.46</span> <span class="toctext">February 17 - 21</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2020.html#February_10_-_14"><span class="tocnumber">1.47</span> <span class="toctext">February 10 - 14</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2020.html#February_03_-_07"><span class="tocnumber">1.48</span> <span class="toctext">February 03 - 07</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="2020.html#January_27_-_31"><span class="tocnumber">1.49</span> <span class="toctext">January 27 - 31</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="2020.html#January_20_-_24"><span class="tocnumber">1.50</span> <span class="toctext">January 20 - 24</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="2020.html#January_13_-_17"><span class="tocnumber">1.51</span> <span class="toctext">January 13 - 17</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="2020.html#January_06_-_10"><span class="tocnumber">1.52</span> <span class="toctext">January 06 - 10</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Sebbas/Reports/2020</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Sebbas.html" title="User:Sebbas">User:Sebbas</a>&lrm; | <a href="../Reports.html" title="User:Sebbas/Reports">Reports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="Reports_2020">Reports 2020</span></h1>
+<h2><span class="mw-headline" id="December_28_-_01">December 28 - 01</span></h2>
+<ul><li>Holiday week</li></ul>
+<h2><span class="mw-headline" id="December_21_-_25">December 21 - 25</span></h2>
+<ul><li>General:
+<ul><li>Started review process of Mantaflow viscosity solver on Bitbucket.</li>
+<li>Committed the current version of the viscosity solver to the master branch (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB635694c0ff8fc5c9828bf920ecb81bb9bf792a82">635694c0ff8f</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM7510">rBM7510</a>). The code might have to be updated again once the review in the Mantaflow repository is complete.</li>
+<li>Updated release notes: <a rel="nofollow" class="external text" href="../../Reference/Release_Notes/2.92/Physics.html">Fluid Simulation Release Notes 2.92</a></li>
+<li>Added documentation and images for new viscosity options to the manual. (<a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/dev/physics/fluid/type/domain/liquid/viscosity.html">Link to manual</a>)</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Christmas holidays!</li></ul></li></ul>
+<h2><span class="mw-headline" id="December_14_-_18">December 14 - 18</span></h2>
+<ul><li>General:
+<ul><li>Finished the viscosity plugin! I.e. all the code has been pushed to the Mantaflow repository on Bitbucket.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Get the viscosity plugin into Blender. Things that have to happen for that: review + merge of viscosity plugin branch into Mantaflow's main branch, write release logs, update manual, adjust Blender UI and add simulation calls for viscosities, write nice commit message when updating the Manta code in Blender.</li></ul></li></ul>
+<h2><span class="mw-headline" id="December_07_-_11">December 07 - 11</span></h2>
+<ul><li>General:
+<ul><li>Worked on the new viscosity solver. Made good progress and set up the foundational viscosity code in a new Mantaflow plugin.</li>
+<li>No results to show so far though, needs still more work</li>
+<li>Spent time reading the actual paper about viscosities ("Accurate Viscous Free Surfaces for Buckling, Coiling, and Rotating Liquids", Batty et al.)</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Continue with viscosity solver, look at more bugs.</li></ul></li></ul>
+<h2><span class="mw-headline" id="November_30_-_04">November 30 - 04</span></h2>
+<ul><li>General:
+<ul><li>Possible fix for exploding smoke simulations with open domain boundaries (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB6f22a536e690133f7b7f9e62e6affd58d5ee2b6c">6f22a536e690</a>)</li>
+<li>macOS: Added pugiXML to libraries (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBL62521">rBL62521</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf8d1378b8457faffbe85c773592a1337c8dcd6f2">f8d1378b8457</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBL62522">rBL62522</a>)</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Didn't make much progress with viscosities, next week will be similar to last week</li></ul></li></ul>
+<h2><span class="mw-headline" id="November_23_-_27">November 23 - 27</span></h2>
+<ul><li>General:
+<ul><li>Pushed updated Mantaflow source files with changes for better particle sampling and OpenVDB sparse grid caching (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBe09d0c0d077c">e09d0c0d077c</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM7426">rBM7426</a>)</li>
+<li>Investigated smoke outflow: There is currently an issue, that causes simulations to become unstable when at least one boundary wall is open</li></ul></li>
+<li>Next week:
+<ul><li>Work on the tracker half of the time, the other half will be spent on work to achieve higher viscosities</li></ul></li></ul>
+<h2><span class="mw-headline" id="November_16_-_20">November 16 - 20</span></h2>
+<ul><li>General:
+<ul><li>Finalized <a rel="nofollow" class="external text" href="../../Reference/Release_Notes/2.91/Physics.html#Fluid">2.91 release notes</a>, created visualizations of improved simulation behavior.</li>
+<li>Finalized work on OpenVDB sparse grids.</li>
+<li>Improved liquid particle sampling: Liquid and secondary particles will from now always be sampled with a fixed seed. This way, simulations will become more predictable as their outcome will be exactly the same when rebaking the simulation.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Update Mantaflow source files to reflect work from last week in Blender.</li></ul></li></ul>
+<h2><span class="mw-headline" id="November_09_-_13">November 09 - 13</span></h2>
+<ul><li>General:
+<ul><li>Spent time on OpenVDB sparse grids, i.e. I have a first MVP implementation in Mantaflow that can be used to cache sparse grids.</li>
+<li>Work in <a rel="nofollow" class="external text" href="https://developer.blender.org/T82488">T82488</a>: Mantaflow - force fields have very low influence compare to 2.90.1</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Push first version of OpenVDB caching improvements to Manta repository, then update Blender.</li>
+<li>Dedicate some time to 2.91 release notes: The physics section needs more visual content.</li></ul></li></ul>
+<h2><span class="mw-headline" id="November_02_-_06">November 02 - 06</span></h2>
+<ul><li>General:
+<ul><li>Cleanup: Fluid engine API return types (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB6bca9d8c113e80aa9550229719b7c59c34e46bb5">6bca9d8c113e</a>)</li>
+<li>Cleanup: Use nullptr everywhere in fluid code (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB311031ecd03dbfbf43e1df672a395f24b2e7d4d3">311031ecd03d</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fluid: Fix crash with viewport display options (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBdf2a0cd6f419c5b359c29d2aa149f864629c304e">df2a0cd6f419</a>)</li>
+<li>Fluid: Potential fix for T74559: Adaptive Domain creates lines in smoke (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB8720c660094e7b08fe4ac8a1879feb2b3aac838e">8720c660094e</a>)</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Continue work on OpenVDB sparse grid caching.</li></ul></li></ul>
+<h2><span class="mw-headline" id="October_26_-_30">October 26 - 30</span></h2>
+<ul><li>General:
+<ul><li>Worked only on features this week:</li>
+<li>Pushed a new simulation method ("APIC") to master (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB8bdf191461a6a09c71258e69246d13fa3034e357">8bdf191461a6</a>)</li>
+<li>Put together a minimal prototype to test the (<a rel="nofollow" class="external text" href="https://twitter.com/sebbas/status/1321371647014805506">MPM method</a>) in Mantaflow</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Participate in the 2nd "2.91 Fall Bug Sprint"</li></ul></li></ul>
+<h2><span class="mw-headline" id="October_19_-_23">October 19 - 23</span></h2>
+<ul><li>General:
+<ul><li>Last polish for new OpenVDB precision option (part of 2.91): "Mini" precision is only available for liquid domains. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBc6c49257710c4c7976601de54bcddc45eb9ee206">c6c49257710c</a>)</li>
+<li>Fixed missing versioning for new "Viewport Display" options. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB5bd7eda093b9b420cccc02f9aeb10ef6ba6f05f6">5bd7eda093b9</a>)</li>
+<li>Exposed fluid-obstacle distance parameter to UI. This value can be used to tweak fluid behavior at inclined obstacles. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7167a57197e9732ddb0a23dc2cedc6651bd55987">7167a57197e9</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB22ceb4a752e8f29d95793fdc81226f7f2dc0c92e">22ceb4a752e8</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM7253">rBM7253</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fixed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79799">T79799</a>: Unable to remove directory warning in the console with quick liquid</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Start work on features for 2.92. Saving grids as sparse grids in OpenVDB is very high on my list.</li>
+<li>The particle loading improvements mentioned last week are still todo. They are a target for 2.92 too.</li></ul></li></ul>
+<h2><span class="mw-headline" id="October_12_-_16">October 12 - 16</span></h2>
+<ul><li>General:
+<ul><li>Updated the 2.91 release notes of the <a href="../../Reference/Release_Notes/2.91/Physics.html#Fluid" title="Reference/Release Notes/2.91/Physics">fluids modifier</a></li>
+<li>Pushed patch that cleans up warnings that showed up on Apple ARM builds (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBab65fe5a2dcca9cb5de14eaeabe5a441bc41f15a">ab65fe5a2dcc</a>)</li>
+<li>Finished implementing last weeks idea to achieve smaller OpenVDB cache files (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM7235">rBM7235</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB2ec07dfa182d4503ccf3930406e8c7b239751e18">2ec07dfa182d</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3d1b5e35bddb9e54257021b2f2d610fbf5f0814b">3d1b5e35bddb</a>)
+<ul><li>This commits introduces a new cache precision option: Precision "Mini". When using it in liquid simulations, particles will take up much less disk space! Try it out yourself&#160;:)</li></ul></li>
+<li>Continued experimenting with liquid simulations in a "beach scene". Made a tweak that could have been the root cause of particles sticking to inclined obstacles (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB2cc7be3e4907a0f9ed508b278cae987b35b2f503">2cc7be3e4907</a>).</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T79537">T79537</a>: 2.90 Mantaflow Smoke Simulation with Turbulence Field Blasts Off</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T81660">T81660</a>: (Mantaflow) Glitch in smoke simulation with wind force</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T80088">T80088</a>: Mantaflow FLIP particles not working correctly</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79871">T79871</a>: Liquid Emission unlimited</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T77833">T77833</a>: Mantaflow (GAS) The simulation does not work correctly when using an object for collisions.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Improve usability when working with large amounts of particles in the viewport: Particle velocity loading should be optional, and similarly, it should be possible to choose which grid data will be read from the cache.</li>
+<li>Look at the features that were brought up in <a rel="nofollow" class="external text" href="https://developer.blender.org/T81678">T81678</a>.</li></ul></li></ul>
+<h2><span class="mw-headline" id="October_05_-_09">October 05 - 09</span></h2>
+<ul><li>General:
+<ul><li>Committed the patch I mentioned last week that makes simulations with multiple obstacles more stable (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB55fd7f55bd184851b321152d61cf9bc8b70cef44">55fd7f55bd18</a>)</li>
+<li>Investigated ways to make particle loading (FLIP and secondary) faster:
+<ul><li><i>1st idea</i> was to add some parallelization to the particle loading functions. While this sounds reasonable in theory, in practice I didn't see very big speed bumps. Especially with smaller amounts of particles (&lt; 1 million) the parallelization overhead made the approach not worth it.</li>
+<li><i>2nd idea</i> was to reduce cache-file sizes in general: Smaller files == faster loading. For this, the OpenVDB API offered some very helpful codecs that can bring file sizes down significantly at a very minor quality loss (e.g. store float as 1 byte instead of 4). The results from this approach were very promising (viewport is much more responsive) and so I am considering to get the patch into the 2.91 release.</li></ul></li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T81420">T81420</a>: SERIOUS BUG: Blender 2.90 crashes when rendering a frame outside of mantaflow cache range.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Participate in the "2.91 Fall Bug Sprint" as much as possible</li>
+<li>Finish "particle-loading-time-improvement" patch from last week</li></ul></li></ul>
+<h2><span class="mw-headline" id="September_28_-_02">September 28 - 02</span></h2>
+<ul><li>General:
+<ul><li>Nothing major to report this week: I spent most of my time on the Mantaflow side (standalone repository). Trying to get simulations with multiple obstacles a bit more stable and looked at potential new features for 2.92 (work in progress).</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Continue work from last week but also engage more in the tracker.</li></ul></li></ul>
+<h2><span class="mw-headline" id="September_21_-_25">September 21 - 25</span></h2>
+<ul><li>General:
+<ul><li>Spent time investigating test failures on macOS (<a rel="nofollow" class="external text" href="https://developer.blender.org/T81077">T81077</a>)</li>
+<li>Submitted patch to cleanup warnings on macOS ARM (<a rel="nofollow" class="external text" href="https://developer.blender.org/D9002">D9002</a>)</li>
+<li>Fluid simulation refactors to resolve unreported bugs (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB97ec16d68f3cf0f81b3de52a7b7c51b8977e943c">97ec16d68f3c</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBedd19c1df91179f283fb5c62f8d041ba43b0fb05">edd19c1df911</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB8d1123ba220b2e473d99960ab44b798c78bad73c">8d1123ba220b</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T80833">T80833</a>: Fluid Initial Velocity 'Source' incorrect when enabling Inflow</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T80698">T80698</a>: Mantaflow simulation visible in last evaluated state outside of cached range</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T80710">T80710</a>: Blender fluid simulation crashes randomly when clicking Free/Bake button</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Besides the usual tracker work, I am planning to spent more time on new features for 2.92.</li></ul></li></ul>
+<h2><span class="mw-headline" id="September_14_-_18">September 14 - 18</span></h2>
+<ul><li>General:
+<ul><li>Work on macOS dependencies (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB177759d8182f64c9aa3680e70b7ef0e27c4c387f">177759d8182f</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBL62485">rBL62485</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBL62487">rBL62487</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB08a3f01ddcd4ad3e81e66d8e05a65b67df5ebf66">08a3f01ddcd4</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/rBL62490">rBL62490</a>)</li>
+<li>Usability improvements in fluid modifier UI (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB59a9cf46b485a00e42fcf93851ff3ed0ba6fe24d">59a9cf46b485</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Invesgating (unreported) issue on animated obstacles (problems currently arise when obstacles overlap)</li>
+<li>Helped Clément debug <a rel="nofollow" class="external text" href="https://developer.blender.org/T78653">T78653</a></li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Tracker work and cleanup warnings on Apple Arm64 machines (from last week)</li></ul></li></ul>
+<h2><span class="mw-headline" id="September_07_-_11">September 07 - 11</span></h2>
+<ul><li>General:
+<ul><li>Meeting with Brecht and Jacques, brainstorming for the hair project</li>
+<li>Finished cleanup of macOS dependency build (<a rel="nofollow" class="external text" href="https://developer.blender.org/D8870">D8870</a>)</li>
+<li>Reviewed GSoC fluid display options project (<a rel="nofollow" class="external text" href="https://developer.blender.org/D8705">D8705</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T79626">T79626</a>: 2.91 Mantaflow crash when adaptive domain + noise are enabled</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T80372">T80372</a>: Mantaflow Noise Not working with Smoke/Smoke and Fire</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79694">T79694</a>: mantaflow modular bake flickers using gas fire and fire+smoke</li>
+<li>Requested review <a rel="nofollow" class="external text" href="https://developer.blender.org/D8872">D8872</a>: GPUTexture: Return NULL texture if data grid is NULL too</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Fix remaining Mantaflow warnings on Apple Arm64 builds</li>
+<li>Update macOS dependencies in SVN</li></ul></li></ul>
+<h2><span class="mw-headline" id="August_31_-_04">August 31 - 04</span></h2>
+<ul><li>General:
+<ul><li>Spent some time going over all the new fluid bugs that accumulated over the past weeks.</li>
+<li>Worked on the macOS dependency build system in the studio.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79941">T79941</a>: fluid simulation error</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79884">T79884</a>: Fluid: Flow object does not emit liquid</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Initial talks for the hair project.</li>
+<li>Finish GSoC patch review <a rel="nofollow" class="external text" href="https://developer.blender.org/D8705">D8705</a>.</li>
+<li>Fix more fluid bugs from the tracker.</li></ul></li></ul>
+<h2><span class="mw-headline" id="August_24_-_28">August 24 - 28</span></h2>
+<ul><li>Holiday week</li></ul>
+<h2><span class="mw-headline" id="August_17_-_21">August 17 - 21</span></h2>
+<ul><li>Holiday week</li></ul>
+<h2><span class="mw-headline" id="August_10_-_14">August 10 - 14</span></h2>
+<ul><li>Holiday week</li></ul>
+<h2><span class="mw-headline" id="August_03_-_07">August 03 - 07</span></h2>
+<ul><li>General:
+<ul><li>Worked exclusively on bugs during this weeks "Bug Sprint Week".</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73447">T73447</a>: Meshing of fluid particle system doesnt appear to capture cavities properly on a plunging wave.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T76691">T76691</a>: [Mantaflow] the number of particles increases over time</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T78266">T78266</a>: Mantaflow: changing flow type (fire -&gt; fire + smoke) resets Surface Emission</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T79423">T79423</a>: Fluid Domain (Liquid mode) - changing "Frame Start" setting for sim causes strange Replay errors</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T74078">T74078</a>: Mantaflow: Flame not working correctly when animating a Fuel value.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73838">T73838</a>: Mantaflow: Viewport shading of gas changes as "Initial Temperature" is modified.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T79201">T79201</a>: Mantaflow: Fluid guides don't affect simulation.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>I am on holiday and so if there will be any updates at all I expect them to be minor.</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_27_-_31">July 27 - 31</span></h2>
+<ul><li>General:
+<ul><li>For a some time now there has been this issue where smoke/fire in the viewport is displayed slightly different when loading it directly from the cache instead of loading it on-the-fly as it is being baked ("Replay Mode"). Especially when resuming a bake job this looks very odd.
+<ul><li>This week, I was finally able to fix this bug! (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBf2b04302cdecb511879cde972e314bca934a32dd">f2b04302cdec</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB51f4bee5a5d7f68b358cdd816c3611a73a594029">51f4bee5a5d7</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB7e64f6cee4226f8b4b488b15f37b6088af274b6b">7e64f6cee422</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB106e7654e85760fe1170ec2ab0cbdb33e59fe8a8">106e7654e857</a>)</li></ul></li>
+<li>Code cleanup. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB2a0a2c105407f9251c6f4c37299e4a7382f58f6d">2a0a2c105407</a>)</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>There is a team-wide "Bug Sprint Week" planned and so I will be working on bugs for the entire week.</li>
+<li>Create demo material of the new OpenVDB fluid IO for the release logs.</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_20_-_24">July 20 - 24</span></h2>
+<ul><li>General:
+<ul><li>Added a new option to the UI that lets users "cap" the number of particles in a simulation. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBe76f64a5329d0e4f095f1beb8a9ab7ea42c0937a">e76f64a5329d</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc9cc5ad1c06b8a4b08749a5ba38ee0f1a546b0f5">c9cc5ad1c06b</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6923">rBM6923</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78290">T78290</a>: Mantaflow smoke simulation render looks different in 2.82 and 2.83</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T79009">T79009</a>: Mantaflow instant crash if noise baked with adaptive domain</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78270">T78270</a>: Mantaflow - Noise Bake with Adaptive Domain Crashes Blender</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78732">T78732</a>: When Press Bake Noise in Mantaflow Smoke, Blender 2.90 Alpha Crashes</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Start creating some design docs for the fluid modifier.</li>
+<li>Create demo material of the new OpenVDB fluid IO for the release logs.</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_13_-_17">July 13 - 17</span></h2>
+<ul><li>General:
+<ul><li>Code cleanup in the Mantaflow repository. While building Blender on the Apple DTK I noticed multiple warnings that needed to be fixed upstream. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBaa547ce88b9c4607e070f8b76341ae2076f28ec7">aa547ce88b9c</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB93f21ebb13f0a63a469e506bd08797fbdf4079b7">93f21ebb13f0</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB0cdc75ccd28c607677c302014cd40df542d85d35">0cdc75ccd28c</a>).</li>
+<li>Added Numpy support (build system) to the fluids system (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB893eb30730c14d0040f5484958289e8fe1d3c4b2">893eb30730c1</a>).</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76687">T76687</a>: [Mantaflow] low domain transformation performance</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T77263">T77263</a>: Mantaflow: Cache gets deleted at changing upres factor under Particles section.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78243">T78243</a>: Mantaflow: changing 'upres' value for noise destroys sim bake (using 'modular' cache)</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78620">T78620</a>: Mantaflow Whitewater Particles baking Error</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Bug reports.</li></ul></li></ul>
+<h2><span class="mw-headline" id="July_06_-_10">July 06 - 10</span></h2>
+<ul><li>General:
+<ul><li>Helped with the initial review of Apple's (ARM64 support) patches (<a rel="nofollow" class="external text" href="https://developer.blender.org/T78710">T78710</a>).</li>
+<li>Went through older reports to get an overview of the current state of the fluid modifier (in preparation for "Bug Sprint Week").</li>
+<li>Worked on various of those older bugs, however, I have nothing tangible to commit at this point.</li></ul></li></ul>
+<ul><li>Next Week:
+<ul><li>There is a team-wide "Bug Sprint Week" planned and so I will be working on bugs for the entire week.</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_29_-_03">June 29 - 03</span></h2>
+<ul><li>General:
+<ul><li>There is now a Blender chat channel for the 'Nodes &amp; Physics' module (<a rel="nofollow" class="external text" href="https://blender.chat/channel/nodes-physics-module">#nodes-physics-module</a>). Feel free to join!</li>
+<li>Added a 'Frame Offset' option to the caching panel (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBfb0f0f4d79a7cc89f31787615d25a98ca263bef5">fb0f0f4d79a7</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6845">rBM6845</a>)</li>
+<li>Spent a fair amount of time on <a rel="nofollow" class="external text" href="https://developer.blender.org/T78270">T78270</a>. Since the issue produces a crash in Blender it is very high on my priority list. The patch is nearly ready but still needs some final touches.</li>
+<li>Code Quality Day: Renaming from old 'manta' naming to scheme new 'fluid' naming (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb1d3850333adfe36c6ff94b8307fdafc9cc5148c">b1d3850333ad</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T77432">T77432</a>: Mantaflow Liquid not work when "Data File Format" is changed to "OpenVDB"</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T78384">T78384</a>: Mantaflow - liquid sim - strange behaviour</li></ul></li></ul>
+<ul><li>Next Week:
+<ul><li>Work on the tracker</li>
+<li>More in-depth documentation on new OpenVDB fluid cache - didn't get to do that last week</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_22_-_26">June 22 - 26</span></h2>
+<ul><li>General:
+<ul><li>I finally pushed the patch for fluid OpenVDB caching to master! (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB9fe64948abe991d18c1af3a52d81e87c24d39687">9fe64948abe9</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9951858942893adeb4eef27ec8a8471a179e9c59">995185894289</a>)</li>
+<li>The manual has been updated too, to reflect the changes in the caching panel (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6809">rBM6809</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T77285">T77285</a>: Incorrect Mantaflow fluid border interaction when collision is turned off</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T77204">T77204</a>: Mantaflow Initial velocity bugged?</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T78170">T78170</a>: Mantaflow Crash | Whitewater Particles Baking</li></ul></li></ul>
+<ul><li>Next Week:
+<ul><li>After working a lot on OpenVDB, this week will be spent mostly on the bug tracker.</li>
+<li>More in-depth documentation on new OpenVDB fluid cache</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_15_-_19">June 15 - 19</span></h2>
+<ul><li>General:
+<ul><li>Continued working on OpenVDB fluids caching. This week I tried to wrap up the project. Making sure that older caches are still compatible took quite some time.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Mostly similar to last week, i.e. get the OpenVDB fluids patch into master + update the documentation.</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_08_-_12">June 08 - 12</span></h2>
+<ul><li>General:
+<ul><li>I am still working on OpenVDB fluid caching:
+<ul><li>This week I tweaked the OpenVDB particle caching a bit more and performed some tests to figure out how efficiently OpenVDB stores point data.</li>
+<li>I also did some optimizations to read particles faster from cache files.</li></ul></li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Before pushing the OpenVDB changes to master I need to make sure that the current caching system does not break. I'll look into this next week and then hopefully get the patch into master.</li>
+<li>At the end of the week I received some questions on why smoke simulations look much more different in 2.83 (compared to 2.83). I found out that <a rel="nofollow" class="external text" href="https://developer.blender.org/D6951">D6951</a> is the reason - next week I'll take a closer look at the patch again and probably get Brecht's opinion too.</li></ul></li></ul>
+<h2><span class="mw-headline" id="June_01_-_05">June 01 - 05</span></h2>
+<ul><li>General:
+<ul><li>OpenVDB fluid cache development is still taking up a lot of my time.
+<ul><li>Most of the OpenVDB caching code is now in the upstream Mantaflow repository.</li>
+<li>For liquids, and in addition to grid caching, I have decided to make use of OpenVDB's ability to store point data. This can be used to efficiently store particle data (FLIP and secondary particles).</li>
+<li>Since grid caching is almost complete, there is not much more to do for smoke.</li></ul></li>
+<li>Code Quality Day: Fluid: Cleanup internal Python object names (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb91b90f0dd3c9bff3b1a6e563c2cce293722ed16">b91b90f0dd3c</a>)</li></ul></li></ul>
+<ul><li>Bugs
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T77203">T77203</a>: Mantaflow Bake All cannot be resumed</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Get first OpenVDB results into master and do more tracker work.</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_25_-_29">May 25 - 29</span></h2>
+<ul><li>General:
+<ul><li>This week I focused completely on the new fluid OpenVDB cache. The overall reading and writing of grids to one file per frame works now. I will publish the first results of this (i.e. commits to master) at the beginning of next week.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>More OpenVDB development and also start doing more bug tracker work + reviews.</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_18_-_22">May 18 - 22</span></h2>
+<ul><li>General:
+<ul><li>Worked more on the OpenVDB exporter for the fluid cache. The progress looks promising (i.e get it ready for 2.9), there are no new commits up yet though.</li>
+<li>Improvements and cleanup in the fluid section of the manual. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6667">rBM6667</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6669">rBM6669</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76814">T76814</a>: [Mantaflow] Surface Tension always works</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76697">T76697</a>: [Mantaflow] mesh generation does not account for some particles</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76812">T76812</a>: [Mantaflow] Inflow particles not continuous</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Work on the bug tracker and continue OpenVDB development. Ideally, I will have a first functional version by the end of next week.</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_11_-_15">May 11 - 15</span></h2>
+<ul><li>General:
+<ul><li>There is now the initial foundation for OpenVDB caching with multiple grids per file in Blender (right now, every grid is stored in its own file). This is a work in progress and users won't notice a difference for now. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa975cb920772dcae69dd38ed32cddfd1d647c721">a975cb920772</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74060">T74060</a>: Smoke flow force field not working with Mantaflow Gas</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73474">T73474</a>: Mantaflow: Liquid simulation appears to be unaffected by scale or "Real World Size" parameters.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Handle more release branch issues and do more OpenVDB development if time allows.</li></ul></li></ul>
+<h2><span class="mw-headline" id="May_04_-_08">May 04 - 08</span></h2>
+<ul><li>General:
+<ul><li>Fixed an issue with the total simulation time. The code was in trouble when using an animated time scale. For this to work, some changes also had to be ported into the Mantaflow repository. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBab122c73ba3504b5bada7f124115a557a7b466ee">ab122c73ba35</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB385559843e6fd0fddf97bae07c9544acd73b73c8">385559843e6f</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBebbaae625f7e3f713fb7918fd59b32b7d9678861">ebbaae625f7e</a>)</li>
+<li>Kickoff for community bonding with GSoC student <i>Sriharsha Kotcharlakot</i> (Project: "Liquid Simulation Display Options"): Got to know each other, adjusted project description and made sure his Wiki is set up.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T75883">T75883</a>: Smoke simulations with Adaptive Domain broken for 'Final' bakes with OpenVDB in 2.83</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76430">T76430</a>: Quick smoke not rendering Cycles and Eevee</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T76312">T76312</a>: Liquid simulation Particle/Mesh vanishes - Only Domain is rendered</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76426">T76426</a>: Mantaflow Liquid - Gravity not respecting Time Scale from domain.</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Similar to last week, but also check that there are no unexpected fluid issues in the 2.83 release branch.</li></ul></li></ul>
+<h2><span class="mw-headline" id="April_27_-_01">April 27 - 01</span></h2>
+<ul><li>General:
+<ul><li>Adjustments to the manual (changes for 2.83 release) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6597">rBM6597</a>)</li>
+<li>Refactored the fluid gravity settings so that any fluid simulation matches the given world units. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB21485e94aac1bc01d032f666ebc54c6008f4d303">21485e94aac1</a>)</li>
+<li>Code Quality:
+<ul><li>Cleanup and refactoring in the main MANTA wrapper class. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB99ee1de094a1744391a1bcddec56e53e3d180c4e">99ee1de094a1</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB82f9ed930561159eee9adcc6f5713d9456ecbeb6">82f9ed930561</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB70fe988dc497ce4de6269aa28f579c528e2ac797">70fe988dc497</a>)</li></ul></li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76097">T76097</a>: Simulations don't take animated gravity into account</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T76276">T76276</a>: Compiler Error C1061 due to too many nested if/else in MANTA_main.cpp</li></ul></li></ul>
+<ul><li>Next week:
+<ul><li>Improve release notes (from last week), tracker and more focus on 2.90 feature development (e.g. Volume object integration)</li></ul></li></ul>
+<h2><span class="mw-headline" id="April_20_-_24">April 20 - 24</span></h2>
+<ul><li>General:
+<ul><li>I figured out what the problem in <a rel="nofollow" class="external text" href="https://developer.blender.org/T75889">T75889</a> is. Unfortunately, I don't have a robust fix for the issue yet.</li>
+<li>Also figured out what might be causing the artifacts when using Smoke Noise (<a rel="nofollow" class="external text" href="https://developer.blender.org/T71391">T71391</a>). Fix for this is also still pending.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T75758">T75758</a>: Fluid: Outflow geometry is not working</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T75729">T75729</a>: Fluid: No Obstacle after resume baking</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Similar to last week, but also improve release notes on fluids.</li></ul></li></ul>
+<h2><span class="mw-headline" id="April_13_-_17">April 13 - 17</span></h2>
+<ul><li>General:
+<ul><li>Committed improvements to the 'Replay' cache option. Cache invalidation should work much better now. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7de86ad61fb1135c9e18f6336b5b01600b381b06">7de86ad61fb1</a>)</li>
+<li>Also committed a fix that addresses inconsistent behavior with flow and effector objects when resuming bake jobs. This issue was reported in multiple reports (<a rel="nofollow" class="external text" href="https://developer.blender.org/T75729">T75729</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/T75758">T75758</a>). (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB76c1a91cfa5a96d4804b90c8ab8d3a92ad8ddd8c">76c1a91cfa5a</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T75681">T75681</a>: Mantaflow crash when trying to bake a cupcake: The CG solver diverged, residual norm &gt; 1e30</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73618">T73618</a>: Mantaflow cycles render fails when started via Python</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T75174">T75174</a>: Mantaflow "Replay" cache not working as expected</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Get the 2.83 release branch in sync with the latest bug fixes in master. Some commits where left out in last weeks transition from <code>bcon2</code> to <code>bcon3</code>.</li>
+<li>High priority bug fixing.</li>
+<li>Didn't find time to do a lot of development besides bug fixing last week. So this week I'll try again.</li></ul></li></ul>
+<h2><span class="mw-headline" id="April_06_-_10">April 06 - 10</span></h2>
+<ul><li>General:
+<ul><li>This week I focused completely on bugs from the tracker. So nothing new to report here in the "General" section.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74828">T74828</a>: Fluid: Crash with Fire/Smoke Noise</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73653">T73653</a>: Mantaflow: Calculate Replay Cache while only playing in a forward direction</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73552">T73552</a>: Mantaflow - liquid particles show up in organized unrealistic structure</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T74171">T74171</a>: Mantaflow: Slight jitter of the Domain object. Gas.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74901">T74901</a>: Smoke Simulation crashes on eevee and is not persistent on Cycles</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T75103">T75103</a>: Fluid: Crash with quick smoke volume in lookdev mode with scene world</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74062">T74062</a>: Mantaflow Gas domain: 'use adaptive time steps' doesn't seem to adapt.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T75659">T75659</a>: Smoke effect render error</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluid bugs from the tracker.</li>
+<li>I also hope to make some time for more "Manta Volume Object" development.</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_30_-_03">March 30 - 03</span></h2>
+<ul><li>General:
+<ul><li>Improved loading times for mesh files by reading bigger chunks of data from the disk at once. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB1280f3c0ae9622a4ca189f22b637ba919fbb6828">1280f3c0ae96</a>)</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D7256">D7256</a>: Fluids: improve subframe handling</li>
+<li>Refactored Mantaflow main class and improved caching in general, especially the 'Replay mode'. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBbfdc42d9906a08ecc8033eeb9fe267e0a7e5265b">bfdc42d9906a</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB70b061b4fdd487c971b12fd0f772767387ebc8f4">70b061b4fdd4</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T72860">T72860</a>: Mantaflow Fluid Sim fails when simulation starts after frame 1</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T75210">T75210</a>: Frame range does not go down to 0 in the physics tab for mantaflow when clicking the left arrow</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73937">T73937</a>: Mantaflow in 2.82 not working</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluid bugs from the tracker.</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_23_-_27">March 23 - 27</span></h2>
+<ul><li>General:
+<ul><li>While the plan for this week was to mainly work on bugs and the Volume type (no further progress), I ended up working on some optimizations too:
+<ul><li>Optimization for liquid / secondary particle file loading (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB7d59f84708fc8a5587b4155cd14162529a4c9baf">7d59f84708fc</a>)</li>
+<li>Support for moving (obstacle) rigid bodies (was broken after optimization for static / dynamic obstacles) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb023c911185636293e928ef998f4c9cad2c15d9c">b023c9111856</a>)</li></ul></li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73866">T73866</a>: Mantaflow Fails to bake liquid particles with plane shaped flow objects</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T73161">T73161</a>: [Mantaflow] Particles not generated on Plane object</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T72542">T72542</a>: Collisions in Mantaflow with Inverted Normals</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluid bugs from the tracker.</li>
+<li>Google Summer of Code communication.</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_16_-_20">March 16 - 20</span></h2>
+<ul><li>General:
+<ul><li>Besides the usual bug fixing for the fluid modifier, I managed to make some general improvements too:
+<ul><li>Aborting fluid bake jobs is now much faster (especially noticeable when cancelling high-res bake jobs). (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb2851dbe784ea82238720a27a0942128fe8158c2">b2851dbe784e</a>)</li>
+<li>General cleanup in the fluid modifier UI. It looked a bit odd when expanding the panel horizontally. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB91c1759956d235c252e6f6220929b52de1a7da4b">91c1759956d2</a>)</li></ul></li>
+<li>Initial thoughts on how to integrate the Volume Object Patch <a rel="nofollow" class="external text" href="https://developer.blender.org/D6945">D6945</a> with the smoke simulator. Also decided to played around with some VDB files now that it's in master.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fixed a regression for smoke simulations (described in <a rel="nofollow" class="external text" href="https://developer.blender.org/T66791">T66791</a>). (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB20d7c04305a39bc18d483baba26dfb54960bb92a">20d7c04305a3</a>)</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74762">T74762</a>: Mantaflow: Non emmiting flow source affects simulation</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T72949">T72949</a>: [Mantaflow] initial velocity ignored in the emission object</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T74154">T74154</a>: Mantaflow crash: Baking data for domain type fluid on a plane.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73988">T73988</a>: Mantaflow fluid simulation - Particles for Spray, Foam and Bubbles are one frame ahead of Mesh</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Follow up on discussions in the reports and close those without replies to my questions from this week.</li>
+<li>Bug fixing and more experiments with the new Volume type.</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_09_-_13">March 09 - 13</span></h2>
+<ul><li>General:
+<ul><li>This week I just looked at a few bugs and did some reviewing. <a rel="nofollow" class="external text" href="https://developer.blender.org/T73921">T73921</a> took me quite some time to fix completely (turned out to be a combination of bug and memory leak).</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D6951">D6951</a>: Smoke: put density/color in separate textures, fixes for workbench shader</li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://developer.blender.org/D7093">D7093</a>: Fix T74525: Fluid caches overwrite each other by default</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72253">T72253</a>: Mantaflow adaptive domain cuts off</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73921">T73921</a>: Eevee volume render test memory leak in Mantaflow</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Get the number of fluid bugs down to a more controllable number (~45 open reports at end of this week).</li>
+<li>Investigate how the Volume Object Patch fits together with the current fluids cache.</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_02_-_06">March 02 - 06</span></h2>
+<ul><li>General:
+<ul><li>The obstacle optimization patch I talked about last week is now in master (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa5c4a44df67ed69844a433179629d861cf10f438">a5c4a44df67e</a>). Again, the two major improvements of this patch are
+<ul><li>Smaller bounding boxes for obstacles and thus faster baking times in general</li>
+<li>Static obstacles (i.e. no movement, rotation, deformation) are only computed once and are now in general faster than moving ones.</li></ul></li>
+<li>This week I also worked on various other smaller optimizations:
+<ul><li>Faster mesh generation for liquids (during replay) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB4a3377fcf6ae0176ac8ec9b544adfd3a5db978a8">4a3377fcf6ae</a>)</li>
+<li>Faster smoke simulations through static / dynamic pressure preconditioner (a smoke simulation with no moving obstacles should be faster than one with now) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB5539b68009e6936238c060808b874e6a6e86a073">5539b68009e6</a>)</li>
+<li>Slightly faster bakes in general (found this through some profiling) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB950a35e35380dc84a4ca7dbff2837cc17a05d85e">950a35e35380</a>)</li></ul></li>
+<li>There are some new features in master too:
+<ul><li>Obstacles can now be enabled / disabled (UI checkbox) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa5c4a44df67ed69844a433179629d861cf10f438">a5c4a44df67e</a>)</li>
+<li>Delete fluid inside obstacles (UI checkbox) (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB6958ec3f7fc23b0ad605c0cfbdbb38417e89f81f">6958ec3f7fc2</a>)</li></ul></li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluids bugs from the tracker.</li>
+<li>The baking speeds can be improved further by lowering certain quality parameters in the pressure solve. The resolution of the simulation would remain unchanged and therefore the quality drop should only be slightly noticeable. The baking times, however, become much shorter!</li>
+<li>Next week, I would like to explore this idea. Maybe a new "Smoke Quality" option would make sense in the UI (to be continued).</li></ul></li></ul>
+<h2><span class="mw-headline" id="February_24_-_28">February 24 - 28</span></h2>
+<ul><li>General:
+<ul><li>This week I was mostly working on an optimization patch: The idea was to reduce the time it takes to scan the obstacle geometry (before exporting it to the simulation) by decreasing the bounding box size of obstacle objects. So with the patch, obstacle objects are turned into grids using a smaller bounding box instead of searching in the entire domain.</li>
+<li>Improved the behavior at outflow boundaries. Smoke should now disappear faster. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBbc2ce31d794096d0785b469752451cc035688dcc">bc2ce31d7940</a>)</li>
+<li>Review <a rel="nofollow" class="external text" href="https://developer.blender.org/D6945">D6945</a>: Objects: add Volume object type, and prototypes for Hair and PointCloud</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Cleanup and commit optimization patch for obstacles.</li>
+<li>Fix more fluids bugs from the tracker.</li></ul></li></ul>
+<h2><span class="mw-headline" id="February_17_-_21">February 17 - 21</span></h2>
+<ul><li>General:
+<ul><li>The <a rel="nofollow" class="external text" href="https://docs.blender.org/manual/en/latest/physics/fluid/introduction.html">documentation for the new fluids system</a> is finally online!</li>
+<li>Made some performance improvements directly in the Manta code. Includes a neat optimization reported by Jacques. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBb8af5e10620fe92f45c5e5003bfb6ef8d91e29bb">b8af5e10620f</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73770">T73770</a>: Mantaflow is unable to bake fluid simulations on non-ASCII file paths</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluids bugs from the tracker.</li></ul></li></ul>
+<h2><span class="mw-headline" id="February_10_-_14">February 10 - 14</span></h2>
+<ul><li>General:
+<ul><li>This week I worked on the fluid documentation page! (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6200">rBM6200</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBM6201">rBM6201</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/rBd6d44ccc7786e36d9453a8e24cdc89f159bdd4ab">d6d44ccc7786</a>: Fire not emitted on first frame.</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Wrap up the documentation and get back to bug fixing.</li></ul></li></ul>
+<h2><span class="mw-headline" id="February_03_-_07">February 03 - 07</span></h2>
+<ul><li>General:
+<ul><li>This week there were two things I really wanted to finish and get into the release branch. It was a bit of a stretch to get everything ready but in the end I think it was worth putting in the effort.
+<ol><li>Faster file loading for smoke simulations: They should now load way faster when replayed from the cache. The cache now loads the files directly into the pointer variables (instead of first loading them via Python and then accessing the pointers). (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBe7d71ce9cf1eb8ea73d5d77527fc65e7bd6f5d4d">e7d71ce9cf1e</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB1bb702df1e1678b83a7238af2a28ecb73b4fb069">1bb702df1e16</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf12b4e53aaf768d54bd85ec4713f94e77aaf72f6">f12b4e53aaf7</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rBffcccf654c8e05f464c59fad82404833160f5b85">ffcccf654c8e</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB68221b7ebafe58a2bbf612ad8c59e24569489be5">68221b7ebafe</a>)</li>
+<li>Fix fluid guiding functionality: I knew this one came a bit short in the past weeks. So I already assumed that through bigger changes I made elsewhere the guiding would be broken. When I tested it, it turned out that it was. Luckily, the fixes weren't too complicated. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB86e24ea10cba05dcb48eccc026530edab14dfe01">86e24ea10cba</a>)</li></ol></li>
+<li>I also wrote some lines for the release notes: <a rel="nofollow" class="external text" href="../../Reference/Release_Notes/2.82/Physics.html">Fluid Simulation Release Notes 2.82</a></li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73537">T73537</a>: Particle system Crash</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73567">T73567</a>: Mantaflow adaptative domain takes objects with the flow turned off…</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fill in the gaps in the manual for 2.82. Fortunately, the maintainers have already adjusted the manual to the new fluids system. Next week, I will fill in all the remaining sections marked as "ToDo" (mostly variable explanations).</li></ul></li></ul>
+<h2><span class="mw-headline" id="January_27_-_31">January 27 - 31</span></h2>
+<ul><li>General:
+<ul><li>Lots of cleanup (e.g. remove obsolete code, updated comments) in the fluids code. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBe782d35d3454eaf764533ac0b4bd64623e7b214a">e782d35d3454</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB42318e358a888d49aeb44198bf5560614d0ca7b3">42318e358a88</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB745e356300585b036adb246fc80d3fcb2f23d83a">745e35630058</a>)</li>
+<li>Liquid simulations with particles don't switch to viewport display mode "Wireframe" automatically anymore. It was causing more confusion than it was actually helping. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBa8bfa916334177531168e15eb6f8d6a8040164cf">a8bfa9163341</a>)</li>
+<li>Improved smoke and liquid inflow. The commits also fix issues with initial velocities mentioned in <a rel="nofollow" class="external text" href="https://developer.blender.org/T73422">T73422</a> and <a rel="nofollow" class="external text" href="https://developer.blender.org/T72949">T72949</a>. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB33317b4647771e2031722531c6f9e6b124255a74">33317b464777</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3601924acb3201a2e8672cf7825a7831c4f0a324">3601924acb32</a>)</li>
+<li>Particle systems settings created by the fluid simulation were sometimes not in sync when deleted manually. Fixed this and cleaned up a warning. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB9b308f27ad8d2eae6d37df65f22ae74bbdb2792b">9b308f27ad8d</a>, <a rel="nofollow" class="external text" href="https://developer.blender.org/rB385b34b9b83f7699b023ae1ec0b7fcdbd2d98799">385b34b9b83f</a>)</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73483">T73483</a>: Mantaflow: Smoke inflow in liquid domain emits liquid</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Update the release logs and the documentation.</li></ul></li></ul>
+<h2><span class="mw-headline" id="January_20_-_24">January 20 - 24</span></h2>
+<ul><li>General:
+<ul><li>Similarly to last week, I spent this week fixing fluid bugs from the tracker. Nothing too exciting to report other than that I am glad that <a rel="nofollow" class="external text" href="https://developer.blender.org/T72894">T72894</a> is out of the way.</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72505">T72505</a>: Mantaflow - Baking Cache=Final</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72562">T72562</a>: Mantaflow: Same particles for Spray, Foam and Bubble</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72894">T72894</a>: Mantaflow: several crashes due to null pointers.</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72975">T72975</a>: [Mantaflow] Mesh generation bug</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72643">T72643</a>: [Mantaflow] Incorrect fluid flow direction</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T63630">T63630</a>: OpenVDB- Smoke disappeares</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73272">T73272</a>: Fire + Smoke broken in Linux</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73292">T73292</a>: Mantaflow - fluid does not render but renders related particles</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73311">T73311</a>: Mantaflow &gt; Liquid: Enabling Initial Velocity on Inflow / Outflow crashes Blender</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T71391">T71391</a>: Line artifacts in Mantaflow smoke sim when using "Noise"</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72789">T72789</a>: Mantaflow cache doesn't work with non-latin cache directory</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73155">T73155</a>: Current Mantaflow build hideously unstable when baking gas sim with adaptive domain</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T53205">T53205</a>: Show Smoke Advance Panel at Outflow type</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T47655">T47655</a>: OpenVDB cache files have extra "_00" at end.</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T50382">T50382</a>: Fluid sim broken when domain/fluid are at large coordinates</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T65977">T65977</a>: domain not replaced by fluid if 'Final Resolution' set higher than 310</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T66244">T66244</a>: Fluid Inflow cant be disabled until it has an enabled keyframe</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T69850">T69850</a>: Fluid Simulation: Volume Initialization bug</li>
+<li>Closed <a rel="nofollow" class="external text" href="https://developer.blender.org/T70531">T70531</a>: Fluid collision doesnť work for objects with armature modifier while "preserve volume" option is checked</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Update the release logs and the documentation.</li></ul></li></ul>
+<h2><span class="mw-headline" id="January_13_-_17">January 13 - 17</span></h2>
+<ul><li>General:
+<ul><li>This week I went step by step through the bug reports for the new fluids system. I started with bugs tagged with high priority and generally try to fix all other bugs chronologically.</li>
+<li>Besides bug fixing, I also committed an update that speeds up cache file loading (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBc7596cd820e32747372378a511cd95894c4829e3">c7596cd</a>).</li></ul></li></ul>
+<ul><li>Bugs:
+<ul><li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72971">T72971</a>: [Mantaflow] FLIP particles not visible</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T73111">T73111</a>: Bake data of fluid causes crash of Blender</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72970">T72970</a>: [Mantaflow] When changing the domain settings, the current frame of the scene is set to 1</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72860">T72860</a>: Mantaflow Fluid Sim fails when simulation starts after frame 1</li>
+<li>Fix <a rel="nofollow" class="external text" href="https://developer.blender.org/T72783">T72783</a>: "Persistent images" option crashes smoke animation render with Cycles</li>
+<li>Fix unreported bug: Fluid: Fix for relative cache paths (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBSe2c8aa497172207b7beda3bbe0dd23a645c9b5e9">Se2c8aa</a>)</li>
+<li>Fix unreported bug: Fixed secondary particle combined export functionality (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB81b7f8efaf7a0dfec7a17a11ff2f2c8af661bbd2">81b7f8e</a>)</li></ul></li></ul>
+<ul><li>Next up:
+<ul><li>Fix more fluid bugs from the tracker.</li>
+<li>Start updating the release logs and the documentation.</li></ul></li></ul>
+<h2><span class="mw-headline" id="January_06_-_10">January 06 - 10</span></h2>
+<ul><li>Holiday week</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121715
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.121 seconds
+Real time usage: 0.121 seconds
+Preprocessor visited node count: 210/1000000
+Preprocessor generated node count: 216/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:4910-0!canonical and timestamp 20240112121715 and revision id 21322
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;oldid=21322">https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;oldid=21322</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 28 December 2020, at 12:16.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Sebbas/Reports/2020.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Sebbas/Reports/2020" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Sebbas.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Sebbas.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Sebbas.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;oldid=21322" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Sebbas/Reports/2020&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.121","walltime":"0.121","ppvisitednodes":{"value":210,"limit":1000000},"ppgeneratednodes":{"value":216,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112121715","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":172});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844555d54a14b8f1","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

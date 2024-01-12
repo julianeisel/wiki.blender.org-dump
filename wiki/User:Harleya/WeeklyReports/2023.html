@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Harleya/WeeklyReports/2023 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Harleya/WeeklyReports/2023","wgTitle":"Harleya/WeeklyReports/2023","wgCurRevisionId":37859,"wgRevisionId":37859,"wgArticleId":6722,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Harleya/WeeklyReports/2023","wgRelevantArticleId":6722,"wgRequestId":"925ae2c35d4ccf7eb1aefbd7","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Harleya","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Harleya_WeeklyReports_2023 rootpage-User_Harleya skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2023.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AHarleya%2FWeeklyReports%2F2023" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2023.html#2023"><span class="tocnumber">1</span> <span class="toctext">2023</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="2023.html#December_11_-_December_17"><span class="tocnumber">1.1</span> <span class="toctext">December 11 - December 17</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="2023.html#December_4_-_December_10"><span class="tocnumber">1.2</span> <span class="toctext">December 4 - December 10</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="2023.html#November_27_-_December_3"><span class="tocnumber">1.3</span> <span class="toctext">November 27 - December 3</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="2023.html#November_20_-_November_26"><span class="tocnumber">1.4</span> <span class="toctext">November 20 - November 26</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="2023.html#November_13_-_November_19"><span class="tocnumber">1.5</span> <span class="toctext">November 13 - November 19</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="2023.html#November_6_-_November_12"><span class="tocnumber">1.6</span> <span class="toctext">November 6 - November 12</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="2023.html#October_30_-_November_5"><span class="tocnumber">1.7</span> <span class="toctext">October 30 - November 5</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="2023.html#October_23_-_October_29"><span class="tocnumber">1.8</span> <span class="toctext">October 23 - October 29</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="2023.html#October_16_-_October_22"><span class="tocnumber">1.9</span> <span class="toctext">October 16 - October 22</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="2023.html#October_9_-_October_15"><span class="tocnumber">1.10</span> <span class="toctext">October 9 - October 15</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="2023.html#October_2_-_October_8"><span class="tocnumber">1.11</span> <span class="toctext">October 2 - October 8</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="2023.html#September_25_-_October_1"><span class="tocnumber">1.12</span> <span class="toctext">September 25 - October 1</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="2023.html#September_18_-_September_24"><span class="tocnumber">1.13</span> <span class="toctext">September 18 - September 24</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="2023.html#September_11_-_September_17"><span class="tocnumber">1.14</span> <span class="toctext">September 11 - September 17</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="2023.html#September_4_-_September_10"><span class="tocnumber">1.15</span> <span class="toctext">September 4 - September 10</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="2023.html#August_28_-_September_3"><span class="tocnumber">1.16</span> <span class="toctext">August 28 - September 3</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="2023.html#August_21_-_August_27"><span class="tocnumber">1.17</span> <span class="toctext">August 21 - August 27</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="2023.html#August_14_-_August_20"><span class="tocnumber">1.18</span> <span class="toctext">August 14 - August 20</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="2023.html#August_7_-_August_13"><span class="tocnumber">1.19</span> <span class="toctext">August 7 - August 13</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="2023.html#July_31_-_August_6"><span class="tocnumber">1.20</span> <span class="toctext">July 31 - August 6</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="2023.html#July_24_-_July_30"><span class="tocnumber">1.21</span> <span class="toctext">July 24 - July 30</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="2023.html#Took_off_much_of_the_week"><span class="tocnumber">1.21.1</span> <span class="toctext">Took off much of the week</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="2023.html#July_17_-_July_23"><span class="tocnumber">1.22</span> <span class="toctext">July 17 - July 23</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="2023.html#July_10_-_July_16"><span class="tocnumber">1.23</span> <span class="toctext">July 10 - July 16</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="2023.html#July_3_-_July_9"><span class="tocnumber">1.24</span> <span class="toctext">July 3 - July 9</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="2023.html#June_26_-_July_2"><span class="tocnumber">1.25</span> <span class="toctext">June 26 - July 2</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="2023.html#June_19_-_June_25"><span class="tocnumber">1.26</span> <span class="toctext">June 19 - June 25</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="2023.html#June_12_-_June_18"><span class="tocnumber">1.27</span> <span class="toctext">June 12 - June 18</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="2023.html#June_5_-_June_11"><span class="tocnumber">1.28</span> <span class="toctext">June 5 - June 11</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="2023.html#May_29_-_June_4"><span class="tocnumber">1.29</span> <span class="toctext">May 29 - June 4</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="2023.html#May_22_-_May_28"><span class="tocnumber">1.30</span> <span class="toctext">May 22 - May 28</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="2023.html#May_15_-_May_21"><span class="tocnumber">1.31</span> <span class="toctext">May 15 - May 21</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="2023.html#May_8_-_May_14"><span class="tocnumber">1.32</span> <span class="toctext">May 8 - May 14</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="2023.html#May_1_-_May_7"><span class="tocnumber">1.33</span> <span class="toctext">May 1 - May 7</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="2023.html#April_24_-_April_30"><span class="tocnumber">1.34</span> <span class="toctext">April 24 - April 30</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="2023.html#April_17_-_April_23"><span class="tocnumber">1.35</span> <span class="toctext">April 17 - April 23</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="2023.html#April_10_-_April_16"><span class="tocnumber">1.36</span> <span class="toctext">April 10 - April 16</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="2023.html#April_3_-_April_9"><span class="tocnumber">1.37</span> <span class="toctext">April 3 - April 9</span></a>
+<ul>
+<li class="toclevel-3 tocsection-40"><a href="2023.html#Bug_Reports"><span class="tocnumber">1.37.1</span> <span class="toctext">Bug Reports</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="2023.html#PRs_reviewed"><span class="tocnumber">1.37.2</span> <span class="toctext">PRs reviewed</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="2023.html#My_PRs"><span class="tocnumber">1.37.3</span> <span class="toctext">My PRs</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="2023.html#Other"><span class="tocnumber">1.37.4</span> <span class="toctext">Other</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="2023.html#Weekend_.26_After_Hours_Experimenting"><span class="tocnumber">1.37.5</span> <span class="toctext">Weekend &amp; After Hours Experimenting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-45"><a href="2023.html#March_27_-_April_2"><span class="tocnumber">1.38</span> <span class="toctext">March 27 - April 2</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="2023.html#March_20_-_March_26"><span class="tocnumber">1.39</span> <span class="toctext">March 20 - March 26</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="2023.html#March_13_-_March_19"><span class="tocnumber">1.40</span> <span class="toctext">March 13 - March 19</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="2023.html#March_6_-_March_12"><span class="tocnumber">1.41</span> <span class="toctext">March 6 - March 12</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="2023.html#February_27_-_March_5"><span class="tocnumber">1.42</span> <span class="toctext">February 27 - March 5</span></a></li>
+</ul>
+</li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Harleya/WeeklyReports/2023</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Harleya.html" title="User:Harleya">User:Harleya</a>&lrm; | <a href="../WeeklyReports.html" title="User:Harleya/WeeklyReports">WeeklyReports</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1><span class="mw-headline" id="2023">2023</span></h1>
+<h2><span class="mw-headline" id="December_11_-_December_17">December 11 - December 17</span></h2>
+<p>Had better luck with right-to-left scripts for Text Objects, in that I now know how I have deal with the character caching in there. Posted a <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116288">WIP of a refactor</a> that might be needed.
+</p>
+<ul><li>Investigating <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115386">Mouse cursor move to center when adjusting values #115386</a></li>
+<li>Helped a bit with Jacques' <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113584">UI: add support for uiLayout based panels #113584</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116103">UI: Unit completion hint when text editing #116103</a></li>
+<li>Approved and Merged Rajesh's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115187">Fix eyedropper outside blender on mac #115187</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116164">Fix #116137: Overflow causing event time false positive warnings #116164</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116201">UI: Show "No results found" for empty searches #116201</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116208">Fix #116135: Ensure blf_font_width_to_rstrlen always works #116208</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104727">WIP: UI: Save Temp Window Sizes &amp; Positions #104727</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116228">Fix #114461: Check Interactivity in button comparisons #116228</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116233">Fix #116196: Edge selection with hidden Asset Shelf #116233</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116240">UI: Consistent Use of Chevron Disclosure Icons #116240</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/116288">WIP: Optional VFont Char Loading by Glyph ID #116288</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="December_4_-_December_10">December 4 - December 10</span></h2>
+<p>Spent quite a bit of time this week investigating both the possible implementation of Open SVG fonts, and of supporting right-to-left scripts for Text Objects. Have a proof of concept for the former, but so far not much luck on the latter.
+</p>
+<ul><li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115812">WIP: BLF: Support OpenType SVG #115812</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-12-05-user-interface-meeting/32178">User Interface Module Meeting</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115822">Fix #115815: Include Category name in Enum Row Calculation #115822</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115872">Fix #40009: Win32 Use Message Time for Events not Current Time #115872</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115958">Fix #100784: Truncate Text with Ellipsis inside Number Inputs #115958</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115959">Fix #114838: Force Full Redraw When Duplicating Areas #115959</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115965">Fix #115938: BLF Handle Negative Left-Side Bearings #115965</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115968">UI: Set Initial Background Color Darker #115968</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115251">UI: Demonstration of Non-Obscuring Area Borders #115251</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">UI: Recent Menu Previews #112644</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="November_27_-_December_3">November 27 - December 3</span></h2>
+<ul><li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115370">I18n: translate new text object body #115370</a></li>
+<li>Created Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115536">Improved Icons #115536</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Approved and Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114012">Fix #95045: UI: keymap header in preferences truncated when filtering #114012</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115187">Fix eyedropper outside blender on mac #115187</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114202">Anim: Add "Add/delete" track operations to NLA context menu #114202</a></li>
+<li>Approved and Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115247">Text Editor: Use active text selection as search query #115247</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115452">BLF: Support All Render and Bitmap Formats #115452</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115638">BLF: Fix Shader Type Conversion #115638</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115640">BLF: Rename Text Shader Depth to Component Len #115640</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114805">Anim: Refactoring NLA menu into more sensible format #114805</a></li>
+<li>Closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115584">deja vu sans stretched with new 4.0 renderer #115584</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115712">UI: Icons for Area Join and Swap #115712</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115680">Fix #115601: Clamp Color Picker Vertical Value Slider Position #115680</a></li>
+<li>Spent time investigating <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/115536">Improved Icons #115536</a></li></ul>
+<h2><span class="mw-headline" id="November_20_-_November_26">November 20 - November 26</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-11-14-user-interface-meeting/31572">User Interface Module Meeting</a></li>
+<li>Approved and Merged Philipp's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115168">Fix #115167: crash opening files with missing fonts on disk #115168</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111303">UI: Linux &amp; Mac Support for Eyedropper Outside Blender #111303</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115213">Fix #114861: Add NLA region padding if markers are present. #115213</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Simplified Process #112261</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115251">UI: Demonstration of Non-Obscuring Area Borders #115251</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115283">Fix #115275: Allow Wrapping of Single Column Enum Menus #115283</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115252">Anim: Marker Drawing Changes #115252</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115318">Fix: Failing bf_io_wavefront_obj_tests test #115318</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114947">Core: Allow Optional Use of Harfbuzz and FriBiDi #114947</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110174">Refactor: Text Editor Formatted Output #110174</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104662">WIP: UI: Bidirectional Text and Complex Shaping #104662</a></li>
+<li>Approved and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114704">Fix: remove leading space in window title #114704</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111794">UI: Improve menu dropshadow #111794</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111554">Fix #95709: Improve pulldown menu corner rounding #111554</a></li>
+<li>Posted DevTalk doc <a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/request-for-community-contributions-to-inter-font-project/32152">Request for Community Contributions to Inter Font Project</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115452">BLF: Support All Render and Bitmap Formats #115452</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115458">Fix #115444: Revert "Refactor: Text Editor Formatted Output" #115458</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="November_13_-_November_19">November 13 - November 19</span></h2>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114719">Fix #114080: Add Khmer Font #114719</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114866">Fix #114855: Crash Loading Win32 Quick Access #114866</a></li>
+<li>Approved and Merged Ray's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114924">Fix #114906 invalid reuse of shell_link #114924</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114874">Cleanup: Synchronizing Icons #114874</a></li>
+<li>Approved and Merged Stefan's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114433">UI: Icons for Horizontal and Vertical Split #114433</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114935">UI: Add Area Split Icons to Header Context Menu #114935</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">UI: Red Auto Keying Button #105574</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104662">WIP: UI: Bidirectional Text and Complex Shaping #104662</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114947">Core: Allow Optional Use of Harfbuzz and FriBiDi #114947</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114932">Anim: Rename NLA "Channels" to "Tracks" #114932</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Simplified Process #112261</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column #105386</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113259">Fix #102714: Interface Font Selection #113259</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112464">UI: File Browser Display Narrowing #112464</a></li>
+<li>Approved and Merged Philipp's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114139">Outliner: clarify "Show Hierarchy" context menu entry #114139</a></li>
+<li>Approved and Merged Philipp's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114138">Outliner: add "Expand/Collapse All" to view context menu #114138</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115027">Fix #115023: Error Measuring Null Menu Item Name #115027</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113753">UI: Color Picker Position Indication #113753</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">UI: Recent Menu Previews #112644</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115102">Fix #115085: Multicolumn Menus without Category Names #115102</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115018">Fix unreported: Allow Win32 clipboard to properly handle large images #115018</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/115120">UI: View As Render for Background Images #115120</a></li>
+<li>Meeting with Pablo</li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="November_6_-_November_12">November 6 - November 12</span></h2>
+<p>Was on holiday in the UK, arriving back home on the night of Thursday, November 9th. <b>So not much Blender work done</b>.
+</p>
+<ul><li>Closed as unneeded <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114074">Fix #113687: Asset Shelf Size Without Region Overlap #114074</a></li>
+<li>Closed Design Doc as done <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112748">Inter Font Tweaking #112748</a></li>
+<li>Closed Design Doc as done <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111436">UI: Placeholder in Text fields #111436</a></li>
+<li>Closed Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106688">Proposed Size Preference for Color Picker #106688</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114719">Fix #114080: Add Khmer Font #114719</a></li>
+<li>Reported <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/114725">New Font Missing Some Abkhaz Characters #114725</a></li>
+<li>Reviewing:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114433">UI: Icons: Add icons for 'Horizontal Split' and 'Vertical Split' buttons on screen edge context menu #114433</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113990">UI: Swapping Widget text style settings #113990</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114202">Anim: Update NLA "Channel Context Menu" to "NLA Tracks" + add/delete operations #114202</a></li></ul></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114631">Fix #114557: UI scrollbar "focus bubble" interaction wrong in cases #114631</a></li>
+<li>Updated:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column #105386</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">UI: Cleanup Dialog to Manage Orphaned Data #106653</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112464">UI: File Browser Display Narrowing #112464</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113259">Fix #102714: Interface Font Selection #113259</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113753">UI: Color Picker Position Indication #113753</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations #104670</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking #104665</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113792">UI: More Defaults for Search Placeholders #113792</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110174">Refactor: Text Editor Formatted Output #110174</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Customizable #112261</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104662">WIP: UI: Bidirectional Text and Complex Shaping #104662</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">WIP: UI: Recent Menu Previews #112644</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="October_30_-_November_5">October 30 - November 5</span></h2>
+<p><b>Holiday</b>: I will be AFK until November 10th while I continue to explore the UK. I should be able to answer email most days though. <b>No Blender work at all.</b>
+</p>
+<ul><li>Monday - Arrive in Newcastle via Ferry from Amsterdam.
+<ul><li>Hire car and attempt driving on the left from the right side of the car.</li>
+<li>Stop in Thirsk and James Herriot’s house.</li>
+<li>Tea and a Fat Rascal at Betty’s in Harrogate.</li>
+<li>Stop for the night in Skipton.</li></ul></li>
+<li>Tuesday- Explore Skipton</li>
+<li>Wednesday
+<ul><li>Drive to Liverpool and wander the city and waterfront.</li>
+<li>Stop for the night in Stoke-on-Trent</li></ul></li>
+<li>Thursday - Explore Staffordshire</li>
+<li>Friday - Drive to Chipping Norton</li>
+<li>Saturday - Explore the Cotswolds</li>
+<li>Sunday - Drive to London</li></ul>
+<h2><span class="mw-headline" id="October_23_-_October_29">October 23 - October 29</span></h2>
+<p><b>Holiday</b>: I will be AFK until November 10th while I traipse around Europe. I should be able to answer email most days though.
+</p>
+<ul><li>Monday - Keeping out of trouble and preparing for the Conference
+<ul><li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113687">Pose labels are hidden in the asset shelf when region overlap is off #113687</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110174">Refactor: Text Editor Formatted Output #110174</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">WIP: UI: Recent Menu Previews #112644</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261#issuecomment-1035680">WIP: UI: Icons at 64x64 and Customizable #112261</a></li></ul></li>
+<li>Tuesday - Travelling starts at 9:00am our time.</li>
+<li>Wednesday - Arrive in Amsterdam at 6:00pm after much delay.</li>
+<li>Thursday - Conference and great conversations.</li>
+<li>Friday - Conference, including <a rel="nofollow" class="external text" href="https://youtu.be/clXMc7PWtlU?si=jphmO_4IwR4_AED-">UI Module Presentation</a></li>
+<li>Saturday - Conference and more talks with wonderful people</li>
+<li>Sunday - Wander the city and then ferry to Newcastle.</li></ul>
+<h2><span class="mw-headline" id="October_16_-_October_22">October 16 - October 22</span></h2>
+<p><b>Upcoming Conference and Holiday</b>: I will be away from my computer from October 24th until November 10th, for the <a rel="nofollow" class="external text" href="https://conference.blender.org/2023/">Blender Conference</a> and followed by a holiday in Northern England and London. I should be able to answer emails most days though.
+</p>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113784">Fix #113766: Incorrect Cursor With Offset Position #113784</a></li>
+<li>Closed old reports as subsequently fixed
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/52106">Render window don't close from Windows taskbar thumbnail #52106</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/73451">File open dialog size larger than screen resolution #73451</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/74308">File Browser and Preference Windows open at unusable position/scale. #74308</a></li></ul></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113793">UI: Modifier Property Icons #113793</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113868">Fix #113826: Set Explicit Font Size for Overlays #113868</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender-addons/pulls/104963">Fix #113866: Import FBX When Recursive File List #104963</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113792">UI: More Defaults for Search Placeholders #113792</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/113559">Regression: "Search for nodes" field doesn't work for custom nodes. #113559</a></li>
+<li>Merged and later reverted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113797">UI: Remove Colons from Property Names #113797</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113753">UI: Color Picker Position Indication #113753</a></li>
+<li>Approved Ray's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113859">Fix #112729: Update pinned blender shortcut #113859</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112454">UI: Configurable UI Font Weight #112454</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/114018">BLF: Improved Cached Fallback Font Setup #114018</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="October_9_-_October_15">October 9 - October 15</span></h2>
+<ul><li>Approved and Merged Phillip's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113350">Fix #113346: Append/Link fails if no name is specified #113350</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113032">Fix #113008: VIEW3D Header Overlap With No Transparency #113032</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations #104670</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Customizable #112261</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112104">UI: Input Placeholders #112104</a></li>
+<li>Reverted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113428">Fix #111666: Hide Mouse in Redo Panel Inputs #113428</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112058">UI: Highlight Selected Item in View3D Mode Menu #112058</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113565">Fix #113511: Win32 Warping Needs Screen Edge Margin #113565</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113399">Fix #113352: UI: Round Pen When Subpixel AA is Off #113399</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113560">UI: Window Title Blender Path Changes #113560</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113520">UI: Type To Search And Space Bar Search #113520</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112487">UI: Allow Tooltip Padding In Any Order #112487</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113688">UI: Improved Placeholder Defaults #113688</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113698">Fix #113689: Improved BLF_width_to_strlen Measurement #113698</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113700">UI: Never Show Unknown Type Placeholder #113700</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113701">UI: Remove Menu Search Console Warning #113701</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113706">UI: Fix Placeholder Bad String Comparison #113706</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113708">Cleanup: Calm Warning in Interface_region_tooltip #113708</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113432">FontBLF: Store Sizes, Styles, and Other Metrics #113432</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">WIP: UI: Recent Menu Previews #112644</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112454">WIP: UI: Configurable UI Variable Text Styles #112454</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113636">Fix #101058: Allow Cryptomatte Picking Between Windows #113636</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113707">Fix #113682: Improved Text Caret Position #113707</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">WIP: VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113749">Fix #113735: Space Characters in UI Text Entry #113749</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113753">WIP: UI: Color Picker Position Indication #113753</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="October_2_-_October_8">October 2 - October 8</span></h2>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113104">Fix #113044: Reset Fonts When Loading New Files #113104</a></li>
+<li>Approved and Merged Pratik's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112652">Fix #112630: Skip grave quotation when selecting #112652</a></li>
+<li>Updated and Merged YimingWu's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112852">UI: Recognize CJK punctuation when selecting text #112852</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113172">Fix #113154: Improved Cursor Step Error Handling #113172</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Customizable #112261</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113216">Fix #102591: Improvements to Context Menu Path Operators #113216</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112925">UI: Add Preference to Instant Search in all Menus #112925</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113259">UI: Interface Font Selection #113259</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">WIP: VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113299">UI: Search All Menus with Space Bar #113299</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112454">WIP: UI: Configurable UI Variable Text Styles #112454</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113227">Fix #112978: MacOS no longer has a path associated with the window #113227</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104662">WIP: UI: Bidirectional Text and Complex Shaping #104662</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113399">WIP: UI: Round Pen When Subpixel AA is Off #113399</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113428">Fix #111666: Hide Mouse in Redo Panel Inputs #113428</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113066">WIP: Fix #109968: Only Wrap Cursor When Out of Bounds #113066</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113432">FontBLF: Store Sizes, Styles, and Other Metrics #113432</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="September_25_-_October_1">September 25 - October 1</span></h2>
+<ul><li>Close design document as complete <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112209">UI: Possible Change of Interface Font #112209</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112652">Fix #112630: Skip grave quotation when selecting #112652</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112875">UI: Change Overlay Text Size with Label Text Style #112875</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-09-26-user-interface-meeting/31112">User Interface Module Meeting</a></li>
+<li>Closed proposal as partially complete <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106678">Possible 4.0 Top Menu Changes #106678</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112852">Add Chinese special characters to STRCUR_DELIM #112852</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112104">UI: Input Placeholders #112104</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111123">UI: Splash Screen Changes #111123</a>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113123">UI: Less Cursor Changes While Loading Files #113123</a></li></ul></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112925">UI: Add Preference to Instant Search in all Menus #112925</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112986">UI: Show Waiting Mouse Cursor While File Loading #112986</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113032">Fix #113008: VIEW3D Header Overlap With No Transparency #113032</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113037">Fix #112642: Anchor Word Start For Double-click Word Select #113037</a>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113125">UI: Anchor Right When Double-Clicking Last Word #113125</a></li></ul></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113027">UI: Allow Separate Configuration of Subpixel Antialiasing #113027</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113066">WIP: Fix #109968: Only Wrap Cursor When Out of Bounds #113066</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/113104">Fix #113044: Reset Fonts When Loading New Files #113104</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 and Customizable #112261</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="September_18_-_September_24">September 18 - September 24</span></h2>
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/activity">UI: Improved Window Titles #111495</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111093">WIP: Multi Object Properties Editing #111093</a></li>
+<li>UI Meeting</li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112592">BLF: Embolden Correction &amp; Comments #112592</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112058%20#112058">UI: Highlight Selected Item in View3D Mode Menu #112058</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112593">UI: improve vertical spacing in node panels #112593</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog #104666</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112643">UI: Custom Tooltips Image Field Correction #112643</a></li>
+<li>Merged and then Reverted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112636">UI: File Loading Waiting Feedback #112636</a></li>
+<li>Investigating <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112642">When double clicking to selecting text the first characters aren't selected #112642</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">BLF: Subpixel Positioning, Anti-aliasing, Hinting #105441</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112603">UI: Replace UI Font with Inter Regular v3.19 #112603</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112454">UI: Configurable UI Variable Text Styles #112454</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112644">WIP: UI: Recent Menu Previews #112644</a></li>
+<li>Merged (by Campbell) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations #108626</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112497">Fix #112441: Restore Key Map Item does not restore the active property #112497</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112696">UI: Remove File Browser "small_size" Feature #112696</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112455">UI: Discrete Thumbnail Sizes for Menus #112455</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112652">Fix #112630: Skip grave quotation when selecting #112652</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112464">UI: File Browser Display Narrowing #112464</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112759">Fix #112736: Don't do Subpixel AA if not Antialised #112759</a></li>
+<li>Created Design Document <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112748">Inter Font Tweaking #112748</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112795">UI: Inter with Features ss01, ss02, and tnum #112795</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112819">UI: Inter Font with regular (non-slashed) zero #112819</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="September_11_-_September_17">September 11 - September 17</span></h2>
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112104">UI: Input Placeholders #112104</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112261">WIP: UI: Icons at 64x64 #112261</a></li>
+<li>Updated &amp; Assisted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110151">Outliner: Double-click on item icon to select contents/hierarchy #110151</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112004">Fix: Inconsistent input drag editing for factor properties #112004</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112189">WIP: Add OSX support for Image copy/paste in the Image Editor osx-clipboard</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111794">UI: Improve menu dropshadow #111794</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-09-13-user-interface-meeting/30896">UI Module Meeting</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112114">UI: Change Order of Lists in File Browser Sidebar #112114</a></li>
+<li>Investigating <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112119">The Chinese input method does not work properly when searching #112119</a></li>
+<li>Merged Mysteryem's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111796">UI: Change menu icons of single-choice enums to radio buttons #111796</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105815">UI: Allow Integer Thumbnail Size Range #105815</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">BLF: Subpixel Positioning, Anti-aliasing, Hinting #105441</a></li>
+<li>Merged Leon's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108027">Fix: Show modal keymap for operators called inside macros #108027</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105905">UI: Custom Tooltips with Optional Images #105905</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112428">UI: Fix Error in Custom Tooltips #112428</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111998">UI: Window Title With Version #111998</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112454">WIP: UI: Configurable UI Text Styles #112454</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112455">UI: Discrete Thumbnail Sizes for Menus #112455</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112464">WIP: UI: File Browser Display Narrowing #112464</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112483">BLF: Slant Angle Correction #112483</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112487">UI: Replace Tooltip "isPad" with Spacer Field #112487</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="September_4_-_September_10">September 4 - September 10</span></h2>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111908">Fix #102687: Use Proper Style for Label Length Estimation (#111908)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111945">Fix #111821: Fix Stats While in Sculpt Mode (#111945)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111903">Merged Fix #111017: Improvements to the drawing of Color Ramps #111903</a></li>
+<li>UI Module Meeting (Papercuts)</li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111998">UI: Window Title With Version #111998</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111999">UI: Allow "New Window" While in Maximized Area #111999</a></li>
+<li>Approved Pablo's <a rel="nofollow" class="external free" href="https://projects.blender.org/blender/blender/pulls/111980">https://projects.blender.org/blender/blender/pulls/111980</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111938">UI: Fixes for the highlighting of Selected Enums #111938</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111949">UI: Proper Selection Highlight for Confirms #111949</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog #104666</a></li>
+<li>Reserved my Conference Tickets!!!</li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112099">Fix #112077: Crash Highlighting Popover menu #112099</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112153">Fix #112081: Incorrect Toolbar Context Highlighting #112153</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112114">UI: Change Order of Lists in File Browser Sidebar #112114</a></li>
+<li>Approved Julian's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112101">Thumbnails: Always use cached thumbnails for offline files #112101</a></li>
+<li>Merged Leon Schittek's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111826">UI: Fix inconsistent menu background padding #111826</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112159">Fix #111831: Proper Highlighting of Inactive Buttons #112159</a></li>
+<li>Created Proposal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112160">UI: Replace UI_ACTIVE with UI_HOVER #112160</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105815">UI: Allow Integer Thumbnail Size Range #105815</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108557">UI: Size Range of Preview Thumbnails #108557</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading #110187</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations #104670</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking #104665</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">UI: Cleanup Dialog to Manage Orphaned Data #106653</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111495">UI: Improved Window Titles #111495</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column #105386</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112058">UI: Highlight Selected Item in View3D Mode Menu #112058</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">BLF: Subpixel Positioning, Anti-aliasing, Hinting #105441</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112193">Fix #112129: Remove Blank Items from "Region Toggle" Pie Menu #112193</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112104">WIP: UI: Input Placeholders #112104</a></li>
+<li>Created Proposal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/112209">UI: Possible Change of Interface Font #112209</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/112189">WIP: Add OSX support for Image copy/paste in the Image Editor osx-clipboard #112189</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="August_28_-_September_3">August 28 - September 3</span></h2>
+<ul><li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109572">Changing UI resolution scale messes up nodes snapping #109572</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111640">UI: Node Grid Adjustments for Line Width #111640</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">WIP: UI: File Loading Dialog #104666</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-08-29-user-interface/30895">UI Module Meeting</a></li>
+<li>Merged Christoph Lendenfeld's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/468584f5e7">UI: Handle lack of active area in NewGeometryNodeGroupTool poll</a></li>
+<li>Created Design Proposal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111712">UI: Merge Text Style "Widget Label" into "Widget", Add "Tooltip" #111712</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111676">UI: Header Status Text Changes #111676</a></li>
+<li>Created Design Proposal <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111714">UI: File Browser System Root View #111714</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/76101">Translated Interface when enable Tooltips #76101</a></li>
+<li>Reviewed and Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111168">Fix #111017: Gap between color square and frame of box in the color ramp #111168</a></li>
+<li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-08-31-animation-rigging-module-meeting/30914">Animation Module Meeting</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109798">UI: Consistent Menu/Block/Popup Content Ordering #109798</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111758">UI: Reverse Order of Timeline Menu Items #111758</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column #105386</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111554">Fix #95709: Improve pulldown menu corner rounding #111554</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111764">UI: Slight reduction and centering of UI_BTYPE_SEPR_LINE #111764</a></li>
+<li>Merged Ludvik Koutny's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111584">Fix #109439: Use List Item widget colors for View Item widgets #111584</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111074">UI: Highlight Selected Enum #111074</a></li>
+<li>Assisted Gilberto Rodrigues with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111431">Remove 'Edge Highlight' overlay toggle #111431</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111818">UI: Improved Enum Title Determination #111818</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111814">UI: Minor Changes to Topbar Edit and File Menus #111814</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111819">UI: Theme Versioning for Enum Highlighting #111819</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111826">UI: Fix inconsistent menu background padding #111826</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111796">UI: Change menu icons of single-choice enums to radio buttons #111796</a></li></ul>
+<h2><span class="mw-headline" id="August_21_-_August_27">August 21 - August 27</span></h2>
+<ul><li>Approved and Merged Guillermo's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105973">UI: Fix scrollbar highlighting outside of regions #105973</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110151">Outliner: Double-click on item icon to select contents/hierarchy #110151</a></li>
+<li>Meeting with Pablo</li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104663">UI: Statistics Overlay Improvements #104663</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations #108626</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111373">Fix #94129: Unable to remove added keying set from context menu #111373</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111376">Fix #109427: Shortcut missing in animation editors channel context menu #111376</a></li>
+<li>Created To Do Task <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111404">UI: Linux &amp; Mac Support for Clipboard Copy/Paste Images #111404</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111341">Fix #111238: Arrow keys in some menus work in the opposite direction #111341</a></li>
+<li>Added to 3.6 backport list: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110513">Fix #110508: Text Object Select Attributes in Object Mode #110513</a></li>
+<li>Updated based on feedback: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105161">WIP: Area Editor Cycling #105161</a></li>
+<li>Updated because of module approval: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li>Updated because of module approval: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column #105386</a></li>
+<li>Updated because of module approval: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog #104666</a></li>
+<li>Updated because of module approval: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations #104670</a></li>
+<li>Review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111436">UI: Placeholder in Text fields #111436</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111356">Fix #97049: Auto-keyframe Status Message Overlaps Navigation Gizmo #111356</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108518">Animation: Keep icons aligned when curves are baked #108518</a></li>
+<li>Updated because of review interest <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking #104665</a></li>
+<li>Updated because of module interest <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">UI: Cleanup Dialog to Manage Orphaned Data #106653</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111243">WIP: UI: TreeView Drop Target Position Feedback #111243</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111489">UI: Improved Default GetWindowUnderCursor Behavior #111489</a></li>
+<li>Created To Do Task <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111303">UI: Linux &amp; Mac Support for Eyedropper Outside Blender #111303</a></li>
+<li>Updated because of module approval: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109798">UI: Consistent Menu/Block/Popup Content Ordering #109798</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111495">UI: Improved Window Titles #111495</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111254">Fix #111212: Error running search if cursor is outside Blender window #111254</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111359">Fix #111295: Add Missing Win32 Platform-Specific Window functions #111359</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111285">UI: Object Types Visibility Popover Tweaks #111285</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109572">Changing UI resolution scale messes up nodes snapping #109572</a></li>
+<li>Approved and Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111265">Fix #94148: Top bar, Status bar Header Colors Differ from Theme Setting #111265</a></li>
+<li>Some review of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111168">Fix #111017: Gap between color square and frame of box in the color ramp #111168</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111584">Fix #109439: Use List Item widget colors for View Item widgets (#111584)</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="August_14_-_August_20">August 14 - August 20</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://devtalk.blender.org/t/2023-08-15-user-interface/30710">UI Module Meeting</a></li>
+<li>Assisting/Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111020">Fix #109968: Mouse warp relocates the cursor incorrectly on WIN32 #111020</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">UI: Allow Eyedropper Outside of Blender (#105324)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking (#104665)</a></li>
+<li>Updated based on feedback <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">UI: Cleanup Dialog to Manage Orphaned Data (#106653)</a></li>
+<li>Merged RedMser's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108431">UI: Windows "Quick Access" items to File Browser System List #108431</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111153">UI: Increase Color Picker Size (#111153)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">Fix #93685: Allow Outliner Drag to Other Windows #105196</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111123">UI: Splash Screen Changes #111123</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105973">UI: Fix scrollbar highlighting outside of regions (#105973)</a></li>
+<li>Worked on, based on feedback <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111074">UI: Highlight Selected Enum #111074</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111243">WIP: UI: TreeView Drop Target Position Feedback #111243</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111194">UI: Make View3D Header Overlapped #111194</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111280">UI: Error Logging for Some Screen Operations (#111280)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111126">Fix #111086: Ignore Scroller Zones in Invisible Regions (#111126)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111254">Fix #111212: Crash when running search while cursor is outside Blender window (#111254)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111285">UI: Object Types Visibility Popover Tweaks (#111285)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111288">Fix #111278: UI Text Extension of Selection #111288</a></li>
+<li>Posted "Good First Issue" To-Do <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/111303">UI: Linux &amp; Mac Support for Eyedropper Outside Blender #111303</a></li>
+<li>Reviewing <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110151">Outliner: Double-click on item icon to select contents/hierarchy (#110151)</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard Maintenance</a></li></ul>
+<h2><span class="mw-headline" id="August_7_-_August_13">August 7 - August 13</span></h2>
+<p>A week of long meetings and cleanup
+</p>
+<ul><li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109968">Regression: Mouse cursor jumps to the left when keep clicking on the colour circle under Windows #109968</a>
+<ul><li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110937">Fix #109968: Win32 Mouse Warp Bounds (#110937)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111020">Alternative Fix #109968 #111020</a></li></ul></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110932">Fix #110721: "show_gizmo" does not switch off all gizmos (#110932)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110402">Fix #110085: Ignore Scroller Zone when on a Screen Edge (#110402)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/111032">WIP: TreeView Item Drag Padding (#111032)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110978">WIP: Splash Screen Preferences Warning (#110978)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations (#108626)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110940">Fix #110917: Multiply UI_SCALE_FAC to view scroll operators (#110940)</a></li>
+<li>UI Module Maintenance</li>
+<li>Documentation (mostly .c ⇨ .cc file reference changes)</li></ul>
+<h2><span class="mw-headline" id="July_31_-_August_6">July 31 - August 6</span></h2>
+<p>Spend most of the week flailing about in unfamiliar areas of code. Did UI Module maintenance and some code review, but overall had a week without successes.
+</p>
+<h2><span class="mw-headline" id="July_24_-_July_30">July 24 - July 30</span></h2>
+<h4><span class="mw-headline" id="Took_off_much_of_the_week">Took off much of the week</span></h4>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110403">UI: Only Show Spreadsheet Scroll Bars When Necessary #110403</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110404">Fix #109663: Allow Animation Keymap in Spreadsheet Editor #110404</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations #108626</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110402">Fix #110085: Ignore Scroller Zone when on a Screen Edge #110402</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110124">WIP: UI: Node Dashed Lines Readability #110124</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/110325">Blender 3.6 LTS, viewport cycle preview is lagging when I use two screens. #110325</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/110425">Splash Screen: "Updated Preferences" Infobox #110425</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110513">Fix #110508: Text Object Select Attributes in Object Mode (#110513)</a></li>
+<li>Improved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations #104670</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110552">BLF: Conversion of blf_font_w32_compat to C++ (#110552)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">UI: Allow Eyedropper Outside of Blender (#105324)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">VFont: Use BLF for font &amp; glyph loading (#110187)</a></li></ul>
+<h2><span class="mw-headline" id="July_17_-_July_23">July 17 - July 23</span></h2>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108210">UI: uiBut Indeterminate State (#108210)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">Fix #93685: Allow Outliner Drag to Other Windows (#105196)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">WIP: VFont: Use BLF for font &amp; glyph loading (#110187)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106164">Fix #106139: Curvemapping clipping range variable error (#106164)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109735">UI: Make 3D Viewport header transparent #109735</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109798">UI: Consistent Menu/Block/Popup Content Ordering (#109798)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">UI: Red Auto Keying Button (#105574)</a></li>
+<li>Abandoned <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109228">UI: Improved Initial Vfont Sizes (#109228)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">Fix #93685: Allow Outliner Drag to Other Windows (#105196)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104662">WIP: UI: Bidirectional Text and Complex Shaping (#104662)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110402">Fix #110085: Ignore Scroller Zone when on a Screen Edge (#110402)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110404">Fix #109663: Allow Animation Keymap in Spreadsheet Editor (#110404)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109473">Animation: Vertically locking the NLA so it doesn't scroll to infinity (#109473)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109775">Animation: Fcurve Channel color band alignment (#109775)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110403">UI: Only Show Spreadsheet Scroll Bars When Necessary (#110403)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110140">UI: Add Save changes before closing dialogue to Load Factory Settings (#110140)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108518">Animation: Draw lock icon on baked curves (#108518)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110124">WIP: UI: Node Dashed Lines Readability (#110124)</a></li>
+<li>Improved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations (#104670)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations (#108626)</a></li></ul>
+<h2><span class="mw-headline" id="July_10_-_July_16">July 10 - July 16</span></h2>
+<ul><li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109946">Fix #109886: Win32 AutoFocus Between Main Windows (#109946)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110020">Fix #40059: Use Modifier Keys Between Windows on Win32 (#110020)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109991">Fix #109525: Improved Win32 Repeat Key Filtering (#109991)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109948">Extern: Update NanoSVG (#109948)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109567">UI: SVG Thumbnails (#109567)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110036">UI: Show SVG Thumbnails with Checkerboard Backgrounds (#110036)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105841">Assets: Implement Traits (#105841)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108210">UI: uiBut Indeterminate State (#108210)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109882">UI: Progress Indicator Variations (#109882)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110124">UI: Node Dashed Lines Readability (#110124)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">WIP UI: Adjustable Color Picker Size (#106135)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110174">Refactor: Text Editor Formatted Output (#110174)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations (#108626)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking (#104665)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column (#105386)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog (#104666)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">BLF: Subpixel Positioning, Anti-aliasing, Hinting (#105441)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/110187">WIP: VFont: Use BLF for font &amp; glyph loading #110187</a></li></ul>
+<h2><span class="mw-headline" id="July_3_-_July_9">July 3 - July 9</span></h2>
+<ul><li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105841">Assets: Implement Traits (#105841)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">WIP UI: Adjustable Color Picker Size (#106135)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109798">WIP: UI: Consistent Menu/Block/Popup Content Ordering (#109798)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations (#108626)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109567">UI: SVG Thumbnails (#109567)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109882">WIP: UI: Progress Indicator Variations (#109882)</a></li>
+<li>Assisted with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109229">UI: Improve 3d text selection #109229</a></li></ul>
+<h2><span class="mw-headline" id="June_26_-_July_2">June 26 - July 2</span></h2>
+<ul><li>Updated for review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108210">UI: uiBut Indeterminate State (#108210)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108554">UI: Transparency Checkerboard behind File Browser Thumbnails (#108554)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109567">UI: SVG Thumbnails (#109567)</a></li>
+<li>Approved and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106388">UI: replace "x" with multiplication sign when displaying calculations (#106388)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations (#108626)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108557">UI: Size Range of Preview Thumbnails (#108557)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105815">UI: Allow Integer Thumbnail Size Range (#105815)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">Fix #72093: Collapse Wide Enum Lists to One Column (#105386)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips (#104547)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">UI: Improved Operator Confirmations (#104670)</a></li>
+<li>Updated and set for review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">BLF: Subpixel Positioning, Anti-aliasing, Hinting (#105441)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking (#104665)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109498">Fix #109455: NLA editor tracks widgets backdrop is too small (#109498)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108431">File Browser: Add "Quick Access" items to sidebar on Windows (#108431)</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/109422">Assertion triggered when opening a new file and "Load UI" is disabled in settings (#109422)</a></li>
+<li>Helped with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109229">UI: Improve 3d text selection (#109229)</a></li></ul>
+<h2><span class="mw-headline" id="June_19_-_June_25">June 19 - June 25</span></h2>
+<ul><li>Still a bit underpowered...</li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108295">UI: Fix Scrollbar overlaps sidebar on zoom #108295</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109163">Refactor: UTF-8 Character Defines #109163</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109224">Refactor: Simplify vfontdata_freetype.c #109224</a></li>
+<li>Assisted with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109229">UI: Improve 3d text selection #109229</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/109228">UI: Improved Initial Vfont Sizes #109228</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107756">Sometime when using color picker, Cursor will snap to middle of the screen. #107756</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations #108626</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104737">Fix #89479: Unable to select hierarchies of multiple objects from outliner #104737</a></li></ul>
+<h2><span class="mw-headline" id="June_12_-_June_18">June 12 - June 18</span></h2>
+<ul><li>Unproductive due to a family health emergency.</li></ul>
+<h2><span class="mw-headline" id="June_5_-_June_11">June 5 - June 11</span></h2>
+<ul><li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108626">UI: Console Text Operations #108626</a></li>
+<li>Approved Guillermo's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107693">UI: Remove unnecessary item separators from the navigation bar (#107693)</a></li>
+<li>Assisted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108431">File Browser: Add "Quick Access" items to sidebar on Windows (#108431)</a></li>
+<li>Approved and committed Leon's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108292">Fix: Correct default width of toolbar (#108292)</a></li>
+<li>Assisted and approved YimingWu's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107803">Fix #107789: Prevent area maximizing when dragging (#107803)</a></li>
+<li>Assisted with Pratik's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104737">Fix #89479: Unable to select hierarchies of multiple objects from outliner #104737</a></li>
+<li>Committed (to 3.6 and main) Sam's [<a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108494">Fix #108303: Added missing Auto-Masking label #108494</a>]</li>
+<li>Approved Leon's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108027">Fix: Show modal keymap for operators called inside macros #108027</a></li>
+<li>Posted experiment for Pablo to test: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108731">WIP: UI Test: Darkened Preview Backgrounds (#108731)</a></li>
+<li>Approved and pushed Guillermo's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108762">Fix #108745: Crash in debug build when deleting object</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108486">UI: Improved Preview Feedback and Reduced Flickering (#108486)</a></li></ul>
+<h2><span class="mw-headline" id="May_29_-_June_4">May 29 - June 4</span></h2>
+<ul><li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">UI: File Save Incremental Operator (#104678</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108486">UI: Improved Preview Feedback and Reduced Flickering (#108486)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108210">UI: uiBut Indeterminate State (#108210)</a></li>
+<li>Worked with Brad Clark on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107950">WIP: VSE Experiment in Mouse Cursor and Transform Status Feedback (#107950)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108557">UI: Size Range of Preview Thumbnails (#108557)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108554">UI: Transparency Checkerboard behind File Browser Thumbnails (#108554)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108248">UI: Allow Opacity for Theme Outline Colors (#108248)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108434">Fix #108403: Console Word Selection Clipboard Copy Incorrect (#108434)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108397">Fix #108356: Group Console with App on Taskbar (#108397)</a></li></ul>
+<h2><span class="mw-headline" id="May_22_-_May_28">May 22 - May 28</span></h2>
+<ul><li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">UI: Updated Windows File Registration (#107013)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108248">UI: Allow Opacity for Theme Outline Colors #108248</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107522">UI: Text cursor behavior for Apple Devices (#107522)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108210">UI: uiBut Indeterminate State (#108210)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108295">UI: Fix Scrollbar overlaps sidebar on zoom (#108295)</a></li>
+<li>Disabled <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108333">UI: Temporarily Disable Apple-specific Text Modifier Support (#108333)</a></li>
+<li>Updated for review <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">UI: Allow Eyedropper Outside of Blender (#105324)</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/108356">Regression: Toggle System Console create new process in taskbar (#108356)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108362">Windows: Do not auto-focus from our console (#108362)</a></li></ul>
+<h2><span class="mw-headline" id="May_15_-_May_21">May 15 - May 21</span></h2>
+<ul><li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106873">Fix #102574: Don't Show "Rename" for Volume and &amp; System lists (#106873)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106515">Fix #106484: Show all rotations with same precision #106515</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107984">Fix #106621: Crash Adding GN Menus to Quick Favorites #107984</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107765">UI: Allow Configuration of Some Operator Confirmations #107765</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106679">Fix #106655: Update Mesh Symmetry Buttons #106679</a></li>
+<li>Test PR for Modelling and VSE: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107950">WIP: VSE Experiment in Mouse Cursor and Transform Status Feedback</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/108050">Animation: Update NLA "TAB" tweak mode to be full stack evaluation #108050</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">UI: Updated Windows File Registration #107013</a></li>
+<li>Approved and merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107691">UI: Rename Copy Vertex Group to Duplicate Vertex Group (#107691)</a></li>
+<li>Updated for possible 4.0 reviews:
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">UI: Screen Area Docking #104665</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog #104666</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">UI: Dynamic File Browser Tooltips #104547</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">UI: File Save Incremental Operator #104678</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">UI: Allow Eyedropper Outside of Blender #105324</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">UI: Adjustable Color Picker Size #106135</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105161">WIP: Area Editor Cycling #105161</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">UI: Cleanup Dialog to Manage Orphaned Data #106653</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="May_8_-_May_14">May 8 - May 14</span></h2>
+<ul><li>Posted PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107765">UI: Allow Configuration of Some Operator Confirmations (#107765)</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107672">UI: Changes to NLA Solo Button #107672</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107698">Fix #106023: File Browser Lists with Incomplete Previews (#107698)</a></li>
+<li>Reviewed and approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107763">WIP: Add ORIENTATION_PARENT icon (#107763)</a></li>
+<li>Discussed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107817">UI: Adjust menu sorting order in Preferences #107817</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106621">Regression: Accessing a GN submenu via Quick Favorites causes crash in #106621</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107808">Fix #107608&#160;: Changing color for simulation zone doesn't save #107808</a></li>
+<li>Merged <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107927">BLI: New functions specifically for word/sequence selection (#107927)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107786">Support dragging to apply blend poses via the Asset Shelf #107786</a></li></ul>
+<p>Much time spent on investigating how Asset Shelf works. Some time spent learning Sequencer code.
+</p>
+<h2><span class="mw-headline" id="May_1_-_May_7">May 1 - May 7</span></h2>
+<p>A less productive week because the large amount of time spent on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107570">Regression: Can`t select ruler or click it to make angular ruler. #107570</a>, narrowing the problem down to code generation errors on the Windows buildbot.
+</p>
+<ul><li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107510">Fix #107499: Text Object Selection with Scale To Fit Mode (#107510)</a></li>
+<li>Updated and set for review: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">UI: Updated Windows File Registration #107013</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107672">UI: Changes to NLA Solo Button (#107672)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107698">Fix #106023: File Browser Lists with Incomplete Previews (#107698)</a></li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107711">UI: Increase File Browser Minimum Cache size (#107711)</a></li>
+<li>Helped @deadpin with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107515">Fix #107212: Fix file browser thumbnails for images #107515</a></li>
+<li>Evaluated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107267">WIP: macOS/File Browser: Support external operations (#107267)</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107616">UI: support operator enums in Quick Favorites (#107616)</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107519">VFONT: Text Object Word Selection #107519</a></li>
+<li>Attended Animation Module meeting.</li></ul>
+<h2><span class="mw-headline" id="April_24_-_April_30">April 24 - April 30</span></h2>
+<ul><li>Helped with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106724">UI: Adds expected text cursor behavior for Apple Devices (#106724)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107296">Fix #107294&#160;: Node Editor "Frame All/Selected" ignore Smooth View #107296</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">WIP: Updated Windows File Registration (#107013)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104666">UI: File Loading Dialog (#104666)</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104663">UI: Statistics Overlay Improvements (#104663)</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106023">Image Thumbnails not loading when importing Matcaps (#106023)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107307">VFont: Corrections to Cursor When on Curve (#107307)</a></li>
+<li>Helped with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107394">Add anti aliasing to transform constraints (#107394)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">Animation: Clean up "Key" menu in Graph Editor (#106113)</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/107443">Regression: Movie Clip Editor doesn't load JPEG / EXR images any more (#107443)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107404">Fix #97530: Overlapping Content Causing Region Scrolling (#107404)</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107427">Fix #107422: Mesh context menus do not open with the last used option (#107427)</a></li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107350">UI: Measure/Ruler Text Position (#107350)</a></li></ul>
+<h2><span class="mw-headline" id="April_17_-_April_23">April 17 - April 23</span></h2>
+<p>Committed
+</p>
+<ul><li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107048#issuecomment-923994">Fix #107009: Setting Text Object Styles #107048</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">UI: OS File Operations Within File Browser #104531</a></li>
+<li>Damien Picard's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106196">Text object: operators to move cursor to the top or bottom #106196</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105812">Assets: Do Not Show Blank Read-Only Metadata #105812</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106915">VFONT: Text Selection Operator #106915</a></li></ul>
+<p>Worked on
+</p>
+<ul><li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106515">Fix #106484: Show all rotations with same precision #106515</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">WIP: Updated Windows File Registration #107013</a></li></ul>
+<h2><span class="mw-headline" id="April_10_-_April_16">April 10 - April 16</span></h2>
+<p>Committed
+</p>
+<ul><li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">"UI: Allow Clipboard Copy/Paste Images #105833"</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106189">"UI: Tooltips for Assets #106189"</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106777">"Fix #106775: File Draw Negative Width Buttons #106777"</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106122">"UI: Color Picker Positioning #106122"</a></li>
+<li>My <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106990">"UI: Capabilities Flag for Clipboard Image copy/paste #106990"</a></li>
+<li>pioverfour's <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105181">"UI: Allow Float Kerning for Text Objects #105181"</a></li></ul>
+<p>Worked on
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105841">"Assets: Implement Traits #105841"</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">"WIP: UI: OS File Operations Within File Browser #104531"</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106915">"WIP: VFONT: Text Selection Operator #106915"</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">"UI: Allow Eyedropper Outside of Blender #105324"</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/107013">"WIP: Updated Windows File Registration #107013"</a></li>
+<li><a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">"WIP: UI: Dynamic File Browser Tooltips #104547"</a></li></ul>
+<h2><span class="mw-headline" id="April_3_-_April_9">April 3 - April 9</span></h2>
+<h3><span class="mw-headline" id="Bug_Reports">Bug Reports</span></h3>
+<ul><li>Participated in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106416">"Front view Y axis keybinding is reversed #106416"</a></li>
+<li>Participated in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106506">"bevel window bug #106506"</a></li>
+<li>Contributed to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106514">"Crashes during file browsing, and when preferences are open #106514"</a></li>
+<li>Participated in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106558">"Add primitive tool Auto Axis option is not saving in startup file #106558"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106589">"file *.blend can't be associated to Blender 3.5 #106589"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106601">"smd and qc file option missing #106601"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106514">"Crashes during file browsing, and when preferences are open #106514"</a></li>
+<li>Confirmed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106655">"mesh symmetry (assign shortcut) #106655"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106695">"Dimesions rounded. #106695"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106693">"Files #106693"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106701">"blender closes anytime i click on material preview and render #106701"</a></li></ul>
+<h3><span class="mw-headline" id="PRs_reviewed">PRs reviewed</span></h3>
+<ul><li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105565">"WIP: Fix #97049: Auto-keyframe Status Message Overlaps Navigation Gizmo #105565"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106126">"WIP: UI: Gray out Scene Auto-Masking option if equivalent Brush option is used #102971 #106126"</a></li>
+<li>Helped and Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106196">"Text object: operators to move cursor to the top or bottom #106196"</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106240">"Font: reorganize Special Characters menu with submenus #106240"</a></li>
+<li>Reviewed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104737">"Fix #89479: Unable to select hierarchies of multiple objects from outliner #104737"</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105973">"UI: Fix scrollbar highlighting outside of regions #105973"</a></li></ul>
+<h3><span class="mw-headline" id="My_PRs">My PRs</span></h3>
+<ul><li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106507">"Fix #106422: Mesh Data Attributes Using tip_ for iface_ #106507"</a></li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106515">"Fix #106484: Show Rotation with higher precision #106515"</a></li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106679">"Fix #106655: Update Mesh Symmetry Buttons #106679"</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106189">"UI: Tooltips for Assets and File Browser Thumbnails #106189"</a></li></ul>
+<h3><span class="mw-headline" id="Other">Other</span></h3>
+<ul><li>Created the <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/projects/16">UI Module Workboard</a></li>
+<li>Created Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106654">"UI: Topbar Menu Changes #106654"</a></li>
+<li>Created Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106688">"Proposed Size Preference for Color Picker #106688"</a></li>
+<li>Created Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106691">"Proposed Custom Confirmation Dialogs #106691"</a></li>
+<li>Created Design Doc <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106699">"Blender 4.0 - Remove Vignetting from Default Theme #106699"</a></li></ul>
+<h3><span id="Weekend_&amp;_After_Hours_Experimenting"></span><span class="mw-headline" id="Weekend_.26_After_Hours_Experimenting">Weekend &amp; After Hours Experimenting</span></h3>
+<ul><li>Removed WIP from <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">"UI: Improved Operator Confirmations #104670"</a></li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106581">"UI: Text Object International Case Change #106581"</a></li>
+<li>Created <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106653">"WIP: Managing Orphaned Data #106653"</a></li>
+<li>Experimented with 64x64 sized interface icon generation.</li>
+<li>Tested using individual icon SVGs as sources for an OpenType SVG font.</li>
+<li>Investigated bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/102919">"Dashed geometry nodes field link too hard to see on macOS #102919"</a> and made a build for the user to test.</li></ul>
+<h2><span class="mw-headline" id="March_27_-_April_2">March 27 - April 2</span></h2>
+<ul><li>Monday
+<ul><li>Kickoff Meeting with Thomas</li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106189">new PR #106189</a></li>
+<li>Approved PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">#106113</a></li>
+<li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106142">my PR #106142</a></li>
+<li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106117">my PR #106117</a> which closes report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106108">#106108</a></li></ul></li>
+<li>Tuesday
+<ul><li>Commented on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106023">#106023</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106189">my PR #106189</a> for review</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">my PR #105833</a> and set ready for review</li>
+<li>Set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104663">my PR #104663</a> for review</li>
+<li>Set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106122">my PR #106122</a> for review</li>
+<li>Set <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">my PR #106135</a> for review</li>
+<li>Cleaned up <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">my WIP PR #104531</a></li></ul></li>
+<li>Wednesday
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">my PR #104531</a></li>
+<li>Added review notes to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106126">PR #106126</a></li>
+<li>Dealt with comments regarding <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">my PR# 105833</a></li>
+<li>Added review notes to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105565">PR #105565</a></li></ul></li>
+<li>Thursday
+<ul><li>Attended Animation Module Meeting</li>
+<li>Created new icons for an <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">updated PR #105574</a></li>
+<li>Commented on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106343">#106343</a></li>
+<li>Commented on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106299">#106299</a></li>
+<li>Chatted with b-init about his GSoC proposal</li></ul></li>
+<li>Friday
+<ul><li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106126">PR #106126</a></li>
+<li>Created Doc page for <a href="../../Source/Interface/Preferences_and_Defaults.html" title="Source/Interface/Preferences and Defaults">Preferences &amp; Defaults</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105905">my PR #105905</a> based on positive feedback from Campbell</li>
+<li>Tested and commented on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106408">#106408</a></li></ul></li>
+<li>Saturday
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">my PR #104678</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">my PR #104670</a></li>
+<li>Commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106388">PR #106388</a></li>
+<li>Commented on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106422">#106422</a></li></ul></li>
+<li>Sunday
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">my PR #105574</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">my PR #104670</a></li>
+<li>Worked on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105905">my PR #105905</a></li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="March_20_-_March_26">March 20 - March 26</span></h2>
+<ul><li>Monday
+<ul><li>Investigation of report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105015">#105015</a></li>
+<li>Work on my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105841">PR #105841</a> based on instruction from Julian</li>
+<li>Updated my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">#104547</a> to align with a need by Julian</li></ul></li>
+<li>Tuesday
+<ul><li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">PR #105324</a></li>
+<li>Chatted with Pablo</li>
+<li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105812">PR #105812</a> based on review</li>
+<li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104665">PR #104665</a> since Pablo asked about it</li></ul></li>
+<li>Wednesday
+<ul><li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106011">PR #106011</a> for report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105891">#105891</a></li>
+<li>Participated on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106004">#106004</a></li>
+<li>Participated on report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106009">#106009</a></li>
+<li>Installed Infinity Photo trial to test my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">PR #105833</a></li>
+<li>Updated my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">#105833</a> to fix Infinity Photo issue</li>
+<li>Participated in report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105918">#105918</a></li>
+<li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104663">PR #104663</a></li></ul></li>
+<li>Thursday
+<ul><li>Worked on my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">PR #104531</a> based on review</li>
+<li>Meeting with Animation Module 10-11am</li>
+<li>Posted updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104531">PR #104531</a> for Brecht to look at</li>
+<li>Evaluated PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104737">#104737</a></li></ul></li>
+<li>Friday
+<ul><li>Participated in bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106013">#106013</a></li>
+<li>Posted my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106117">PR #106117</a> to fix report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106108">#106108</a></li>
+<li>Participated in bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/106111">#106111</a></li>
+<li>Pushed my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106011">PR #106011</a> to close report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105891">#105891</a></li>
+<li>Posted new <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106122">PR #106122</a></li></ul></li>
+<li>Saturday
+<ul><li>Posted new <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">PR #106135</a></li>
+<li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106122">PR #106122</a> based on comment by Leon</li>
+<li>Posted new <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106142">PR #106142</a></li></ul></li>
+<li>Sunday
+<ul><li>Added review comment to PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106113">#106113</a></li>
+<li>Updated my <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/106135">PR #106135</a> based on user feedback</li></ul></li></ul>
+<h2><span class="mw-headline" id="March_13_-_March_19">March 13 - March 19</span></h2>
+<ul><li>Monday
+<ul><li>Kickoff Meeting with Thomas</li>
+<li>Dealing with bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105726">#105726</a></li>
+<li>Contributed to bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/97223">#97223</a></li>
+<li>Contributed to bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105047">#105047</a></li>
+<li>Posted my refactoring PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105750">#105750</a></li>
+<li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105746">#105746</a> for <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105726">#105726</a></li>
+<li>Closed bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/99859">#99859</a></li></ul></li>
+<li>Tuesday
+<ul><li>Contributed to report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/93685">#93685</a></li>
+<li>Pushed my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105746">#105746</a> to close <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105726">#105726</a></li>
+<li>Contributed to and then closed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105047">#105047</a></li></ul></li>
+<li>Wednesday
+<ul><li>Pushed my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105703">#105703</a></li>
+<li>Meeting with Julian</li>
+<li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105812">#105812</a></li>
+<li>Contributed to report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105810">#105810</a></li>
+<li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105815">#105815</a></li></ul></li>
+<li>Thursday
+<ul><li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105808">#105808</a></li>
+<li>Updated my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">#105324</a></li>
+<li>Pushed my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105750">#105750</a></li></ul></li>
+<li>Friday
+<ul><li>Updated my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105841">#105841</a> based on review</li>
+<li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105863">#105863</a> that could fix <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104507">#104507</a></li>
+<li>Investigated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105015">#105015</a></li>
+<li>Reviewed PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105181">#105181</a></li></ul></li>
+<li>Sunday
+<ul><li>Posted my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105905">#105905</a></li>
+<li>Worked a bit on my PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105833">#105833</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="March_6_-_March_12">March 6 - March 12</span></h2>
+<ul><li>Monday
+<ul><li>Investigating <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104932">#104932</a>, Node editor issues on multiple Monitors</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105318">my PR #105318</a> as per review</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">my PR #104678</a> as per review</li>
+<li>Participated in bug report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105500">#105500</a></li>
+<li>Spent the rest of the d*mn day on bug <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104932">#104932</a></li></ul></li>
+<li>Tuesday
+<ul><li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105318">my PR #105318</a> and merged to main</li>
+<li>Participated in PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104882">#104882</a></li>
+<li>Made a build available of <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105446">PR #105446</a> for testing</li>
+<li>Researched and closed report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105500">#105500</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">my PR #105324</a> as ready for review</li>
+<li>Investigated crash report <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105552">#105552</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">my PR #104547</a></li>
+<li>Might have to give up on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104932">#104932</a> as known limitation that I can’t fix</li></ul></li>
+<li>Wednesday
+<ul><li>Dealing a bit with <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">PR #104678</a> re comments by Campbell</li>
+<li>Helped new dev with their PR <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105565">#105565</a></li>
+<li>Tested and commented on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105446">my PR #105446</a> because of comments by Brecht</li>
+<li>Talked to animation-module about the “auto keying” warning</li>
+<li>Talked to ISS about showing blend file details in File browser</li>
+<li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105446">PR #105446</a>, which closes <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/105435">#105435</a></li>
+<li>Made <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">PR #105574</a> for animation module to test</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104547">my WIP PR #104547</a> after conversation with ISS</li></ul></li>
+<li>Thursday
+<ul><li>Participated in <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104882">#104882</a></li>
+<li>Posed possible solution to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/issues/104932">#104932</a></li>
+<li>Worked a bit on prototype code for clipboard copying/pasting of images</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">my PR #104678</a> to incorporate changes suggested by Campbell</li></ul></li>
+<li>Friday
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">my PR #105196</a>, fixing drag and drop between windows</li>
+<li>Answered questions about <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105574">test PR #105574</a></li>
+<li>Added review comments to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104737">#104737</a></li>
+<li>Added review comments to <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104693">#104693</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104692">#104692</a></li>
+<li>Pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105387">my PR #105387</a></li>
+<li>Approved <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104862">#104862</a></li></ul></li>
+<li>Saturday
+<ul><li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">my PR #105324</a></li>
+<li>Simplified <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">my PR #105196</a></li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">my PR #104678</a></li></ul></li>
+<li>Sunday
+<ul><li>More work on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105196">my PR #105196</a></li>
+<li>More work on <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">my PR #104678</a></li>
+<li>Posted New <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105703">PR #105703</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="February_27_-_March_5">February 27 - March 5</span></h2>
+<ul><li>Monday
+<ul><li>Resolved 105204, user error setting PNG alpha</li>
+<li>Submitted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105263">PR #105263</a> for avoiding overflow in grouped number output</li>
+<li>Investigated bug report #105257, assigned to self. Weird text antialiasing issue.</li>
+<li>Contributed to #105262</li>
+<li>Contributed to #105274</li></ul></li>
+<li>Tuesday
+<ul><li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105225">PR #105225</a>, fix for loading some 2.48 blend files</li>
+<li>Above closed #104726</li>
+<li>Committed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105308">PR #105308</a> to close report #105257</li>
+<li>Added <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105318">PR #105318</a> to add license and copyright to assets</li>
+<li>Added WIP <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105324">PR #105324</a> using eyedropper outside of Blender (Windows only)</li>
+<li>* Wednesday (<b>Official Start</b>)</li>
+<li>Updated <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104678">PR #104678</a> Save Incremental operator per review by Pablo</li>
+<li>Participated in 105291</li>
+<li>Updated PR #105263 as pre review by Campbell</li>
+<li>Participated in #105344</li>
+<li>Reverted #105225 after message from Campbell</li>
+<li>Participated in #105277</li>
+<li>Create a <a rel="nofollow" class="external text" href="https://builder.blender.org/download/patch/PR105324/">build of #105324</a> (eyedropper) for public feedback</li>
+<li>Added tests for #105263</li></ul></li>
+<li>Thursday
+<ul><li>Commit of #105263</li>
+<li>Contributed to #105381</li>
+<li>Updated PR #105318 as per review (Asset License and Copyright)</li>
+<li>Added <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105386">PR #105386</a>, collapsing wide multi-column list to single if space constrained</li>
+<li>Added <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105387">PR #105387</a>, operations in popovers including eyedropper</li></ul></li>
+<li>Friday
+<ul><li>Contributed to #105381</li>
+<li>Investigating #105388</li>
+<li>Added captures to PR #104678, assigned Campbell for review</li>
+<li>Contributed to #105402</li>
+<li>Investigated negative feedback on #104681</li>
+<li>Created and pushed <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105415">PR #105415</a> which closed #105388</li></ul></li>
+<li>Saturday
+<ul><li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105446">PR #105446</a> which should fix #105435</li>
+<li>Posted <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/105441">PR #105441</a> for lone_noel to test, blf subpixel positioning and AA</li></ul></li>
+<li>Sunday
+<ul><li>Improved PR #105441 by fixing performance degradation reported by lone_noel</li>
+<li>Worked on WIP <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/pulls/104670">PR #104670</a></li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112120523
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.211 seconds
+Real time usage: 0.211 seconds
+Preprocessor visited node count: 194/1000000
+Preprocessor generated node count: 200/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:6722-0!canonical and timestamp 20240112120523 and revision id 37859
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;oldid=37859">https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;oldid=37859</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 18 December 2023, at 02:25.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Harleya/WeeklyReports/2023.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Harleya/WeeklyReports/2023" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Harleya.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Harleya.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Harleya.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;oldid=37859" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Harleya/WeeklyReports/2023&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.211","walltime":"0.211","ppvisitednodes":{"value":194,"limit":1000000},"ppgeneratednodes":{"value":200,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20240112120523","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":268});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844544775ae90bae","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		

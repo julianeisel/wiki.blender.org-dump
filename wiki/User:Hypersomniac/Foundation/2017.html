@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>User:Hypersomniac/Foundation/2017 - Blender Developer Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"User","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":2,"wgPageName":"User:Hypersomniac/Foundation/2017","wgTitle":"Hypersomniac/Foundation/2017","wgCurRevisionId":715,"wgRevisionId":715,"wgArticleId":382,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"User:Hypersomniac/Foundation/2017","wgRelevantArticleId":382,"wgRequestId":"69a1a5951bcb1079f273e071","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRelevantUserName":"Hypersomniac","wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.bootstrap":"ready"});mw.loader.implement("user.tokens@1lo3932",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.bootstrap.js"]);});</script>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.sectionAnchor|skins.bootstrap&amp;only=styles&amp;skin=bootstrap.css"/>
+<script async="" src="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=bootstrap"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../../w/load.php%3Fdebug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=bootstrap.css"/>
+<meta name="generator" content="MediaWiki 1.31.10"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="shortcut icon" href="../../../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.blender.org/w/opensearch_desc.php" title="Blender Developer Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.blender.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Blender Developer Wiki Atom feed" href="https://wiki.blender.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<script defer data-domain="wiki.blender.org" src="https://analytics.blender.org/js/script.js"></script>
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=bootstrap&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-2 ns-subject page-User_Hypersomniac_Foundation_2017 rootpage-User_Hypersomniac skin-bootstrap action-view"><style>
+   @font-face {
+      font-family: "Heebo";
+      src: url("https://www.blender.org/wp-content/themes/bthree/assets_shared/font/Heebo/Heebo-VariableFont_wght.ttf") format("truetype-variations");
+      font-weight: normal;
+      font-variation-settings: "wght" var(--font-weight);
+      font-style: normal
+    }
+</style>
+
+<style>
+  /* This style block is copied across all sites using the developer navbar.
+   * For custom styling on this website, add a <style> block after this one. */
+
+  /* Variables. */
+  .nav-global {
+    -webkit-font-smoothing: antialiased;
+
+    --nav-global-color-bg: hsl(213, 10%, 14%);
+    --nav-global-color-text: hsl(213, 5%, 64%);
+    --nav-global-color-text-secondary: hsl(213, 5%, 44%);
+    --nav-global-color-text-highlight: hsl(213, 5%, 84%);
+    --nav-global-color-text-hover: white;
+    --nav-global-color-text-active: white;
+
+    --nav-global-color-primary: hsl(204, 98%, 54%);
+    --nav-global-color-primary-bg: hsla(204, 100%, 46%, .1);
+
+    --nav-global-color-button-bg-hover: hsl(213, 10%, 24%);
+    --nav-global-color-button-text: var(--nav-global-color-text);
+
+    --nav-global-color-menu-bg: var(--nav-global-color-bg);
+    --nav-global-color-menu-border: hsl(213, 10%, 18%);
+
+    --nav-global-color-menu-zindex: 1040;
+
+    --nav-global-box-shadow-menu: 0px 5px 15px -2px rgba(0, 0, 0, 0.33), 0px 5px 15px -5px rgba(0, 0, 0, 0.33);
+    --nav-global-box-shadow-menu-item: 0px 1px 4px 0px rgba(0, 0, 0, 0.05), 0px 15px 20px -1px rgba(0, 0, 0, 0.025);
+
+    --nav-global-navbar-height: var(--navbar-primary-height, 56px);
+
+    --nav-global-spacer: 15px;
+    --nav-global-spacer-sm: 10px;
+    --nav-global-spacer-xs: 5px;
+
+    --nav-global-border-radius: 6px;
+    --nav-global-border-radius-lg: 10px;
+
+    --nav-global-button-height: 35px;
+    --nav-global-link-padding-x: var(--nav-global-spacer);
+    --nav-global-link-padding-y: var(--nav-global-spacer-sm);
+
+    --nav-global-font-size: 14px;
+    --nav-global-transition-speed: 150ms;
+  }
+
+  /* Reset. */
+  @namespace svg "http://www.w3.org/2000/svg";
+
+  .nav-global :not(svg|*),
+  .nav-global *::before,
+  .nav-global *::after {
+    -webkit-box-sizing: border-box;
+
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+  }
+
+  .nav-global [default-styles] {
+    all: revert;
+  }
+
+  .nav-global * {
+    -webkit-text-size-adjust: 100%;
+
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variation-settings: 'wght' 400;
+    font-weight: normal;
+  }
+
+  .nav-global {
+    background-color: var(--nav-global-color-bg);
+    color: var(--nav-global-color-text);
+    display: flex;
+    position: relative;
+    z-index: var(--zindex-fixed);
+  }
+
+  .nav-global h3,
+  .nav-global h4,
+  .nav-global strong {
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global figure,
+  .nav-global section {
+    display: block;
+  }
+
+  .nav-global svg:not(:root) {
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .nav-global .nav-global-container {
+    flex: 1;
+    margin: 0 auto;
+  }
+
+  /* Navigation. */
+  .nav-global nav {
+    align-items: center;
+    display: flex;
+    line-height: var(--nav-global-font-size);
+    font-size: var(--nav-global-font-size);
+    height: var(--nav-global-navbar-height);
+    margin: 0 auto;
+    padding: 0 var(--nav-global-spacer);
+    position: relative;
+  }
+
+  /* Links. */
+  .nav-global a:not(.dropdown-item) {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global a:not(.dropdown-item):hover {
+    color: var(--nav-global-color-text-hover);
+  }
+
+  /* Navigation items. */
+  .nav-global nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-global nav > ul,
+  .nav-global nav > ul > li,
+  .nav-global nav > ul > li > a,
+  .nav-global-apps-dropdown-container {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+  }
+
+  .nav-global-apps-dropdown-container {
+    position: relative;
+  }
+
+  .nav-global nav > ul > li > a {
+    padding: var(--nav-global-link-padding-y) var(--nav-global-link-padding-x);
+  }
+
+  .nav-global nav > a.is-active,
+  .nav-global nav > a.is-active svg,
+  .nav-global nav > ul > li > a.is-active,
+  .nav-global .nav-global-link-active,
+  .nav-global .nav-global-link-active svg {
+    color: var(--nav-global-color-text-active) !important;
+    fill: var(--nav-global-color-text-active);
+    font-variation-settings: 'wght' 500;
+  }
+
+  .nav-global .nav-global-links-right {
+    margin-left: auto;
+  }
+
+  /* Logo. */
+  .nav-global a.nav-global-logo {
+    margin-right: var(--nav-global-spacer);
+    position: relative;
+    top: 2px;
+  }
+
+  .nav-global a.nav-global-logo strong {
+    margin-inline: var(--nav-global-spacer-sm);
+    font-size: 18px;
+  }
+
+  .nav-global .nav-global-logo svg {
+    height: 21px;
+  }
+
+  .nav-global a.nav-global-logo svg {
+    position: relative;
+    top: -4px;
+  }
+
+  .nav-global svg {
+    fill: var(--nav-global-color-text);
+    transition: fill var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-logo:hover svg {
+    fill: white;
+  }
+
+  /* Apps button. */
+  .nav-global button,
+  .nav-global .nav-global-btn {
+    -webkit-appearance: button;
+
+    align-items: center;
+    background-color: transparent;
+    border-radius: var(--nav-global-border-radius);
+    border: 0;
+    color: var(--nav-global-color-button-text);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: var(--nav-global-button-height);
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer);
+    text-transform: none;
+    transition: background-color var(--nav-global-transition-speed) ease-out, color var(--nav-global-transition-speed) ease-out, transform var(--nav-global-transition-speed) ease-out;
+    white-space: nowrap;
+  }
+
+  .nav-global button span,
+  .nav-global .nav-global-btn span {
+    white-space: nowrap;
+  }
+
+  .nav-global button:hover,
+  .nav-global .nav-global-btn:hover {
+    background-color: var(--nav-global-color-button-bg-hover);
+    color: var(--nav-global-color-text-hover);
+    cursor: pointer;
+  }
+
+  .nav-global button.nav-global-btn-active,
+  .nav-global .nav-global-btn.nav-global-btn-active {
+    background-color: var(--nav-global-color-primary-bg);
+    color: var(--nav-global-color-primary);
+  }
+
+  .nav-global button.nav-global-btn-active svg,
+  .nav-global .nav-global-btn.nav-global-btn-active svg {
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-icon {
+    height: 20px;
+    pointer-events: none;
+    width: 20px;
+  }
+
+  .nav-global-icon-dropdown-toggle {
+    margin-left: var(--nav-global-spacer-xs);
+  }
+
+  .nav-global button:hover svg,
+  .nav-global .nav-global-btn:hover svg {
+    fill: white;
+  }
+
+  /* Apps dropdown menu. */
+  .nav-global .nav-global-apps-menu {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    border: thin solid var(--nav-global-color-menu-border);
+    box-shadow: var(--nav-global-box-shadow-menu);
+    display: none;
+    padding: var(--nav-global-spacer-sm);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    width: 640px;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-dropdown.is-visible {
+    display: block;
+    visibility: visible;
+  }
+
+  /* Tiny triangle in the corner. */
+  .nav-global .nav-global-apps-menu::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: .85rem;
+    position: absolute;
+    right: .85rem;
+    top: -0.25rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global .nav-global-apps-menu ul {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    display: grid;
+    gap: var(--nav-global-spacer-sm);
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    margin: 0 0 var(--nav-global-spacer-xs) 0;
+    padding: var(--nav-global-spacer-xs) 0 var(--nav-global-spacer-sm) 0;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a {
+    border-radius: var(--nav-global-border-radius-lg);
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--nav-global-color-text-active);
+    box-shadow: var(--nav-global-box-shadow-menu-item);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a:hover h4,
+  .nav-global .nav-global-apps-menu ul>li>a:hover svg {
+    color: var(--nav-global-color-primary);
+    fill: var(--nav-global-color-primary);
+  }
+
+  .nav-global .nav-global-apps-menu h3 {
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    opacity: .3;
+    padding-left: var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu h4 {
+    color: var(--nav-global-color-text-highlight);
+    font-size: 17px;
+    line-height: 18px;
+    margin: var(--nav-global-spacer-xs) 0 0;
+    padding: var(--nav-global-spacer-sm) var(--nav-global-spacer) 0;
+    transition: color var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu p {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    opacity: .8;
+    padding: var(--nav-global-spacer-xs) var(--nav-global-spacer) var(--nav-global-spacer-sm);
+  }
+
+  .nav-global .nav-global-apps-menu figure {
+    margin: var(--nav-global-spacer) 0 0 var(--nav-global-spacer);
+  }
+
+  .nav-global .nav-global-apps-menu ul>li>a svg {
+    position: relative;
+    top: -2px;
+  }
+
+  /* Donate section of the menu. */
+  .nav-global .nav-global-apps-menu-section-donate ul {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate a svg {
+    fill: hsl(352, 90%, 62%) !important;
+    transition: transform var(--nav-global-transition-speed) ease-out;
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a {
+    background-color: hsla(352deg, 90%, 42%, .2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover {
+    background-color: hsla(352deg, 90%, 42%, .5);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover svg {
+    fill: hsl(352, 90%, 72%) !important;
+    transform: scale(1.2);
+  }
+
+  .nav-global .nav-global-apps-menu-section-donate ul>li:first-child>a:hover h4 {
+    color: white;
+  }
+
+/* Mobile. */
+.nav-global button.nav-global-logo {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+
+  .nav-global-apps-dropdown-container,
+  .nav-global a.nav-global-logo {
+    display: none;
+  }
+
+  .nav-global button.nav-global-logo {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-global .nav-global-nav-links {
+    align-items: flex-start;
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: var(--nav-global-border-radius-lg);
+    display: none;
+    flex-direction: column;
+    left: 1rem;
+    padding: 0 var(--nav-global-spacer-sm);
+    position: absolute;
+    top: calc(100% + .5rem);
+    visibility: visible;
+    width: 10rem;
+    z-index: var(--nav-global-color-menu-zindex);
+  }
+
+  .nav-global .nav-global-nav-links.is-visible {
+    display: flex;
+  }
+
+  .nav-global .nav-global-nav-links::before {
+    background-color: var(--nav-global-color-menu-bg);
+    border-radius: 3px;
+    border: 2px var(--nav-global-color-menu-bg) solid;
+    content: '';
+    display: block;
+    height: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    top: -0.133rem;
+    transform: rotate(45deg);
+    width: 1rem;
+    z-index: -1;
+  }
+
+  .nav-global nav>ul {
+    height: initial;
+  }
+
+  .nav-global .nav-global-nav-links>li {
+    border-bottom: 2px solid rgba(255, 255, 255, .05);
+    width: 100%;
+  }
+
+  .nav-global .nav-global-nav-links>li:last-child {
+    border: none;
+  }
+
+  .nav-global .nav-global-nav-links>li>a {
+    padding-inline: 0;
+    width: 100%;
+  }
+}
+</style>
+
+<style>
+  /* Custom styling for code.blender.org */
+  /* Make sure to start every line with ".nav-global"
+   * so changes affect the developer navbar only. */
+
+  /* Limit navbar width on large screens. */
+  @media (min-width: 1200px) {
+    .nav-global .nav-global-container {
+      max-width: 1170px;
+    }
+  }
+</style>
+
+<div class="nav-global">
+  <div class="nav-global-container">
+    <nav>
+      <a href="https://developer.blender.org/" class="nav-global-logo">
+        <svg fill-rule="nonzero" viewBox="0 0 200 162.05">
+          <path
+            d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <strong>Developer</strong>
+        </svg>
+      </a>
+
+      <button class="nav-global-logo js-dropdown-toggle" data-toggle-menu-id="nav-global-nav-links">
+        <svg fill-rule="nonzero" viewBox="0 0 850.2 162.05">
+          <path d="M61.1 104.56c.05 2.6.88 7.66 2.12 11.61a61.27 61.27 0 0 0 13.24 22.92 68.39 68.39 0 0 0 23.17 16.64 74.46 74.46 0 0 0 30.42 6.32 74.52 74.52 0 0 0 30.4-6.42 68.87 68.87 0 0 0 23.15-16.7 61.79 61.79 0 0 0 13.23-22.97 58.06 58.06 0 0 0 2.07-25.55 59.18 59.18 0 0 0-8.44-23.1 64.45 64.45 0 0 0-15.4-16.98h.02L112.76 2.46l-.16-.12c-4.09-3.14-10.96-3.13-15.46.02-4.55 3.18-5.07 8.44-1.02 11.75l-.02.02 26 21.14-79.23.08h-.1c-6.55.01-12.85 4.3-14.1 9.74-1.27 5.53 3.17 10.11 9.98 10.14v.02l40.15-.07-71.66 55-.27.2c-6.76 5.18-8.94 13.78-4.69 19.23 4.32 5.54 13.51 5.55 20.34.03l39.1-32s-.56 4.32-.52 6.91zm100.49 14.47c-8.06 8.2-19.34 12.86-31.54 12.89-12.23.02-23.5-4.6-31.57-12.79-3.93-4-6.83-8.59-8.61-13.48a35.57 35.57 0 0 1 2.34-29.25 39.1 39.1 0 0 1 9.58-11.4 44.68 44.68 0 0 1 28.24-9.85 44.59 44.59 0 0 1 28.24 9.77 38.94 38.94 0 0 1 9.58 11.36 35.58 35.58 0 0 1 4.33 14.18 35.1 35.1 0 0 1-1.98 15.05 37.7 37.7 0 0 1-8.61 13.52zm-57.6-27.91a23.55 23.55 0 0 1 8.55-16.68 28.45 28.45 0 0 1 18.39-6.57 28.5 28.5 0 0 1 18.38 6.57 23.57 23.57 0 0 1 8.55 16.67c.37 6.83-2.37 13.19-7.2 17.9a28.18 28.18 0 0 1-19.73 7.79c-7.83 0-14.84-3-19.75-7.8a23.13 23.13 0 0 1-7.19-17.88z" />
+          <path d="M829.17 133.76h-15.9V64.39h15.13l.77 13.59zM850.07 79q-1.47-.25-3.14-.38-1.6-.13-3.2-.13-5.26 0-8.8 1.92-3.45 1.86-5.25 5.39-1.8 3.46-2.11 8.2l-3.66.07q0-8.78 2.31-15.77 2.3-6.99 6.92-11.1 4.62-4.1 11.54-4.1 1.35 0 3.02.26 1.66.26 2.5.58zm-76.55 56.04q-10.32 0-17.82-4.42-7.5-4.5-11.55-12.06-4.03-7.63-4.03-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104h-53.67V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.4-3.53-4.49-5.7-3.01-2.19-8.07-2.19-5.07 0-8.53 2.89-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.34 7.43 4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-88.67 25.39h-15.9V64.39h14.68l1.22 13.33zm45-60.72q0 10.13-3.13 18.15-3.08 7.95-9.1 12.56-5.97 4.62-14.63 4.62-8.72 0-14.49-4.23-5.7-4.3-8.9-11.8-3.21-7.5-4.43-17.12v-4.55q1.22-10.26 4.42-17.89 3.2-7.7 8.91-11.99 5.71-4.36 14.3-4.36 8.79 0 14.81 4.43 6.03 4.42 9.1 12.37 3.15 7.95 3.15 18.47zm-15.9-1.34q0-6.22-1.6-11.29-1.53-5.06-5-8.01-3.4-2.95-8.9-2.95-3.98 0-6.87 1.35-2.88 1.28-4.87 3.65-1.92 2.37-3.01 5.64-1.1 3.2-1.54 7.05v11.6q.77 4.62 2.56 8.47 1.8 3.85 5.13 6.16 3.4 2.24 8.72 2.24 5.51 0 8.91-3.08 3.4-3.14 4.94-8.2 1.54-5.13 1.54-11.29zm-122.51.06q0-10.13 3.84-18.08 3.85-7.95 11.03-12.57 7.25-4.68 17.38-4.68 10.25 0 17.5 4.68 7.24 4.62 11.03 12.57 3.84 7.95 3.84 18.08v1.35q0 10.06-3.84 18.08-3.79 7.95-11.03 12.56-7.18 4.62-17.38 4.62-10.19 0-17.43-4.62-7.25-4.61-11.1-12.56-3.84-8.02-3.84-18.08zm15.9 1.35q0 6.15 1.73 11.28 1.73 5.07 5.32 8.14 3.65 3.08 9.42 3.08 5.71 0 9.3-3.08 3.65-3.07 5.32-8.14 1.73-5.13 1.73-11.28v-1.35q0-6.09-1.73-11.22-1.67-5.13-5.32-8.2-3.65-3.15-9.42-3.15-5.71 0-9.36 3.14-3.6 3.08-5.33 8.21-1.66 5.13-1.66 11.22zm-29.69 33.98h-15.9V35.28h15.9zm-56.67 1.28q-10.33 0-17.83-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.11-8.08 11.23-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.6 4.3 9.88 12 3.27 7.62 3.27 17.69V104H495.2V92.53h37.96v-1.22q-.13-4.04-1.54-7.56-1.41-3.53-4.49-5.7-3.01-2.19-8.08-2.19-5.06 0-8.52 2.89-3.47 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.18 10.58t6.35 7.43q4.17 2.7 9.94 2.7 5.58 0 9.87-2.18 4.36-2.18 7.5-6.29l8.34 8.34q-3.27 4.93-9.88 8.97-6.54 3.98-16.8 3.98zM464.3 64.39h16.48l-23.98 69.37h-10.26l1.03-12.57zm-12.25 57 .77 12.37h-10.19l-24.17-69.37H435zm-65.88 13.65q-10.32 0-17.82-4.42-7.5-4.5-11.54-12.06-4.04-7.63-4.04-17.05v-2.63q0-10.84 4.1-18.85 4.1-8.08 11.22-12.5 7.18-4.43 16.22-4.43 10 0 16.6 4.36 6.61 4.3 9.88 12 3.27 7.62 3.27 17.69V104H360.4V92.53h37.95v-1.22q-.12-4.04-1.53-7.56-1.42-3.53-4.5-5.7-3-2.19-8.07-2.19t-8.53 2.89q-3.46 2.82-5.26 8.01-1.8 5.13-1.8 12.12v2.63q0 5.9 2.19 10.58 2.18 4.68 6.35 7.43 4.16 2.7 9.93 2.7 5.58 0 9.88-2.18 4.36-2.18 7.5-6.29l8.33 8.34q-3.27 4.93-9.87 8.97-6.54 3.98-16.8 3.98zm-107.64-1.28.12-13.27h19.75q8.6 0 14.36-3.72 5.77-3.72 8.72-10.65 2.95-6.98 2.95-16.67v-4.87q0-9.94-2.95-16.8-2.88-6.86-8.59-10.45-5.7-3.59-13.91-3.59h-20.84V40.41h20.84q12.5 0 21.93 5.51 9.48 5.52 14.8 15.45 5.33 9.94 5.33 23.34v4.74q0 13.47-5.32 23.4-5.33 9.94-14.94 15.46-9.56 5.45-22.38 5.45zm9.23 0h-16.54V40.4h16.54z" />
+        </svg>
+        <svg class="nav-global-icon nav-global-icon-dropdown-toggle" height="100px" width="100px" viewBox="0 0 1000 1000">
+          <path d="m 206.53824,376.41174 a 42,42 0 0 1 71,-29 l 221,220 220,-220 a 42,42 0 1 1 59,59 l -250,250 a 42,42 0 0 1 -59,0 l -250,-250 a 42,42 0 0 1 -12,-30 z"/>
+        </svg>
+      </button>
+
+      <ul class="nav-global-nav-links nav-global-dropdown js-dropdown-menu" id="nav-global-nav-links">
+        <li>
+          <a href="https://projects.blender.org">Projects</a>
+        </li>
+        <li>
+          <a href="https://wiki.blender.org" class="nav-global-link-active">Docs</a>
+        </li>
+        <li>
+          <a href="https://code.blender.org">Blog</a>
+        </li>
+        <li>
+          <a href="https://devtalk.blender.org">Forum</a>
+        </li>
+        <li>
+          <a href="https://builder.blender.org">Builds</a>
+        </li>
+      </ul>
+
+      <ul class="nav-global-links-right">
+        <li>
+          <div class="nav-global-apps-dropdown-container">
+            <button class="js-dropdown-toggle" data-toggle-menu-id="nav-global-apps-menu">
+              <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                <path
+                  d="m 150.5,899 a 50,50 0 0 1 -49,-50 V 749 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 749 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 450 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 450 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m -598,-299 a 50,50 0 0 1 -49,-50 V 151 a 50,50 0 0 1 49,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z m 299,0 a 50,50 0 0 1 -50,-50 V 151 a 50,50 0 0 1 50,-50 h 100 a 50,50 0 0 1 50,50 v 100 a 50,50 0 0 1 -50,50 z"/>
+              </svg>
+            </button>
+
+            <div class="nav-global-apps-menu nav-global-dropdown js-dropdown-menu" id="nav-global-apps-menu">
+              <h3>BLENDER.ORG</h3>
+              <ul>
+                <li>
+                  <a href="https://www.blender.org/download/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 49.15424,599.52895 a 50.360431,50.360431 0 0 0 -49.16137168,50.36043 v 200.24266 c 0,81.53594 68.34629768,149.88226 149.88223168,149.88226 h 700.2498 c 81.53593,0 149.8822,-68.34632 149.8822,-149.88226 V 649.88938 a 50.360431,50.360431 0 1 0 -100.72083,0 v 200.24266 c 0,27.57834 -21.58304,49.16138 -49.16137,49.16138 H 149.8751 c -27.57833,0 -49.16137,-21.58304 -49.16137,-49.16138 V 649.88938 A 50.360431,50.360431 0 0 0 49.15424,599.52895 Z M 249.3969,350.12491 a 50.360431,50.360431 0 0 0 -34.77267,85.13311 l 250.60309,249.40404 a 50.360431,50.360431 0 0 0 70.74442,0 L 785.37577,435.25802 A 50.360431,50.360431 0 1 0 714.63136,364.51361 L 500,579.14497 285.36864,364.51361 A 50.360431,50.360431 0 0 0 249.3969,350.12491 Z M 498.80094,0 A 50.360431,50.360431 0 0 0 449.63957,50.360432 V 649.88938 a 50.360431,50.360431 0 1 0 100.72086,0 V 50.360432 A 50.360431,50.360431 0 0 0 498.80094,0 Z"
+                          style="stroke-width:1.19906" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Download</h4>
+                      <p>Get the latest Blender, older versions, or experimental builds.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.blender.org/download/releases/" target="_blank">
+                    <div>
+                      <h4>What's New</h4>
+                      <p>Stay up-to-date with the new features in the latest Blender releases.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>RESOURCES</h3>
+              <ul>
+                <li>
+                  <a href="https://studio.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 146.70939,1.6802353 c -78.362959,0 -143.678322,64.2057377 -143.6783209,143.6570547 -7.2533835,268.45385 0,463.93349 0,709.63356 0,79.45132 65.3153619,143.65705 143.6783209,143.65705 266.17757,0.51388 460.32009,0 709.61228,0 79.45134,0 143.67832,-64.20573 143.67832,-143.65705 0.37471,-118.45983 0,-235.03162 0,-353.72203 0.017,-0.72264 0.017,-1.4456 0,-2.16825 0.43351,-118.60776 0,-235.80643 0,-353.74328 0,-79.451317 -64.22698,-143.6570547 -143.67832,-143.6570547 -241.21275,-1.18614431 -498.91438,-0.041532 -709.61228,0 z m 0,90.3436617 h 82.71228 V 228.07083 H 93.374735 v -82.73354 c 0,-30.47448 22.860165,-53.313393 53.334655,-53.313393 z m 173.05594,0 h 363.5004 c -5.81542,127.740813 0,236.658243 0,362.416273 h -363.5004 c 0.39671,-121.62159 0,-241.06277 0,-362.416273 z m 453.84406,0 h 82.71228 c 30.4745,0 53.33466,22.838913 53.33466,53.313393 v 82.73354 H 773.60939 Z M 93.374735,318.39324 H 229.42167 V 454.44017 H 93.374735 Z m 680.234655,0 H 909.65633 V 454.44017 H 773.60939 Z M 93.374735,545.86796 H 229.42167 V 681.91489 H 93.374735 Z m 226.390595,0 h 363.5004 c -5.81534,127.74773 0,236.67164 0,362.43753 h -363.5004 c 0.3967,-121.62867 0,-241.07685 0,-362.43753 z m 453.84406,0 H 909.65633 V 681.91489 H 773.60939 Z M 93.374735,772.25856 H 229.42167 v 136.04693 h -82.71228 c -30.47449,0 -53.334655,-22.86016 -53.334655,-53.33464 z m 680.234655,0 h 136.04694 v 82.71229 c 0,30.47448 -22.86016,53.33464 -53.33466,53.33464 h -82.71228 z"
+                          style="stroke-width:1.08838" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Blender Studio</h4>
+                      <p>Access production assets and knowledge from the open movies.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.blender.org/manual/en/latest/" target="_blank">
+                    <div>
+                      <h4>Manual</h4>
+                      <p>Documentation on the usage and features in Blender.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <h3>DEVELOPMENT</h3>
+              <ul>
+                <li>
+                  <a href="https://code.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="m 683.36434,818.19976 a 45.841084,45.841084 0 0 1 -33.83509,-13.09745 45.841084,45.841084 0 0 1 0,-64.39581 L 890.74067,499.49508 649.52925,259.37512 a 45.841084,45.841084 0 0 1 0,-64.39582 45.841084,45.841084 0 0 1 64.39581,0 l 272.8636,272.8636 a 45.841084,45.841084 0 0 1 0,64.39581 l -272.8636,272.8636 a 45.841084,45.841084 0 0 1 -30.56072,13.09745 z m -363.45431,0 A 45.841084,45.841084 0 0 1 286.07494,805.10231 L 13.211339,532.23871 a 45.841084,45.841084 0 0 1 0,-64.39581 L 286.07494,194.9793 a 45.841084,45.841084 0 0 1 64.39581,0 45.841084,45.841084 0 0 1 0,64.39582 L 109.25933,499.49508 350.47075,740.7065 a 45.841084,45.841084 0 0 1 0,64.39581 45.841084,45.841084 0 0 1 -30.56072,13.09745 z"
+                          style="stroke-width:1.09145" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Developers Blog</h4>
+                      <p>Latest development updates, by Blender developers.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wiki.blender.org/" target="_blank">
+                    <div>
+                      <h4>Documentation</h4>
+                      <p>Guidelines, release notes and development docs.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="https://opendata.blender.org/" target="_blank">
+                    <figure>
+                      <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                        <path
+                          d="M 499.99424,0 A 55.30474,55.30474 0 0 0 444.6895,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 499.99424,1000 55.30474,55.30474 0 0 0 555.29898,944.69526 V 55.30474 A 55.30474,55.30474 0 0 0 499.99424,0 Z m 332.95711,332.95711 a 55.30474,55.30474 0 0 0 -55.30474,56.43341 V 944.69526 A 55.30474,55.30474 0 0 0 832.95135,1000 55.30474,55.30474 0 0 0 888.25609,944.69526 V 389.39052 A 55.30474,55.30474 0 0 0 832.95135,332.95711 Z M 167.03713,555.30474 a 55.30474,55.30474 0 0 0 -55.30474,55.30474 V 944.69526 A 55.30474,55.30474 0 0 0 167.03713,1000 55.30474,55.30474 0 0 0 222.34187,944.69526 V 610.60948 a 55.30474,55.30474 0 0 0 -55.30474,-55.30474 z"
+                          style="stroke-width:1.12867" />
+                      </svg>
+                    </figure>
+                    <div>
+                      <h4>Benchmark</h4>
+                      <p>A platform to collect and share results of the Blender Benchmark.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://conference.blender.org/" target="_blank">
+                    <div>
+                      <h4>Blender Conference</h4>
+                      <p>The yearly event that brings the community together.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="nav-global-apps-menu-section-donate">
+                <h3>DONATE</h3>
+                <ul>
+                  <li>
+                    <a href="https://fund.blender.org/" target="_blank">
+                      <figure>
+                        <svg class="nav-global-icon" height="100px" width="100px" viewBox="0 0 1000 1000">
+                          <path
+                            d="M 273.67169,58.416076 C 201.59785,62.59427 135.79129,94.975269 86.697523,145.11359 37.603742,194.20736 4.1781939,260.01391 0,332.08775 -4.1781926,403.11704 22.980065,480.41362 86.697523,545.17562 l 45.960127,45.96013 339.47823,338.43367 a 43.871033,43.871033 0 0 0 61.62835,0 L 872.1979,591.13575 918.15804,545.17562 c 109.67766,-110.72213 109.67766,-290.38445 0,-400.06203 -110.72213,-110.722127 -290.38445,-110.722127 -400.06204,0 l -15.66822,14.62368 -15.66822,-14.62368 C 423.04211,80.351592 345.74553,53.193334 273.67169,58.416076 Z m 5.22274,86.697514 c 48.04922,-3.13365 98.18754,12.53458 146.23677,60.5838 l 47.00468,47.00468 a 43.871033,43.871033 0 0 0 61.62835,0 l 45.96013,-47.00468 c 76.25204,-76.25203 199.50874,-76.25203 276.80532,0 77.29658,77.29658 77.29658,200.5533 0,277.84988 L 810.56956,529.50739 502.42778,837.64917 194.286,529.50739 148.32588,483.54727 C 100.27665,434.45349 84.608431,384.31516 86.697523,336.26594 c 3.133646,-47.00467 26.113717,-95.0539 61.628357,-130.56855 35.51464,-35.51464 82.51932,-58.49471 130.56855,-60.5838 z"
+                            style="stroke-width:1.04455" />
+                        </svg>
+                      </figure>
+                      <div>
+                        <h4>Development Fund</h4>
+                        <p>Support core development with a monthly contribution.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.blender.org/about/donations/" target="_blank">
+                      <div>
+                        <h4>One-time Donations</h4>
+                        <p>Perform a single donation with more payment options available.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const dropdownToggles = document.getElementsByClassName("js-dropdown-toggle");
+  const btnActiveClass = 'nav-global-btn-active';
+  const isVisibleClass = 'is-visible';
+
+  /* Hide all dropdowns. */
+  function dropdownHideAll() {
+    const dropdownMenus = document.getElementsByClassName("js-dropdown-menu");
+
+    if (dropdownMenus) {
+      for (let i = 0; i < dropdownMenus.length; i++) {
+        dropdownMenus[i].classList.remove(isVisibleClass);
+      }
+    }
+
+    /* Remove styling from all dropdown toggles. */
+    for (let i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].classList.remove(btnActiveClass);
+    }
+  }
+
+  for (let i = 0; i < dropdownToggles.length; i++) {
+    dropdownToggles[i].addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdownId = this.getAttribute('data-toggle-menu-id');
+      const el = document.getElementById(dropdownId);
+
+      if (el) {
+        /* If the button is already active, remove styling. */
+        if (el.classList.contains(isVisibleClass)) {
+          dropdownHideAll();
+        } else {
+          /* Style button as active and show menu. */
+          this.classList.add(btnActiveClass);
+          el.classList.add(isVisibleClass);
+        }
+      }
+    });
+  }
+
+  /* Hide all dropdowns when clicking anywhere except menus. */
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("js-dropdown-menu")) {
+      dropdownHideAll();
+    }
+  });
+
+  /* Hide all dropdowns when pressing Esc. */
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      dropdownHideAll();
+    }
+  });
+</script>
+
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://wiki.blender.org/">Developer Documentation</a></li>
+				</ul>
+				<div>
+<ul class="navbar-nav"><li id="ca-view" class="nav-item"><a href="2017.html" redundant="1" class="nav-link">View</a></li><li id="ca-viewsource" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e" class="nav-link">View source</a></li><li id="ca-history" class="nav-item"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class="nav-link">History</a></li><li class="nav-item"><li class="nav-item dropdown" id="p-personal"><a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Personal tools</a><div class="dropdown-menu dropdown-menu-right"><span id="pt-login"><a href="https://wiki.blender.org/w/index.php?title=Special:UserLogin&amp;returnto=User%3AHypersomniac%2FFoundation%2F2017" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class="dropdown-item">Log in</a></span></div></li></li></ul>				</div>
+			</div>
+		</nav>
+
+
+
+		<div id="mw-wrapper" class="container-fluid">
+			<div class="row flex-xl-nowrap">
+				<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+					<form action="https://wiki.blender.org/w/index.php" role="search" class="bd-search d-flex align-items-center" id="p-search"><input type="hidden" value="Special:Search" name="title"/><input type="search" name="search" placeholder="Search..." title="Search Blender Developer Wiki [f]" accesskey="f" id="searchInput" class="form-control ds-input" autocomplete="off"/></form>										<div id="p-Building_Blender">
+						<h5>Building Blender</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Windows"><a href="../../Building_Blender/Windows.html">Windows</a></li><li id="n-macOS"><a href="../../Building_Blender/Mac.html">macOS</a></li><li id="n-Linux"><a href="../../Building_Blender/Linux.html">Linux</a></li>						</ul>
+										</div>
+										<div id="p-Develop">
+						<h5>Develop</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Getting-Started"><a href="../../Developer_Intro.html">Getting Started</a></li><li id="n-Code-Documentation"><a href="../../Source.html">Code Documentation</a></li><li id="n-Style-Guide"><a href="../../Style_Guide.html">Style Guide</a></li><li id="n-Release-Notes"><a href="../../Reference/Release_Notes.html">Release Notes</a></li>						</ul>
+										</div>
+										<div id="p-Process">
+						<h5>Process</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Communication"><a href="../../Contact.html">Communication</a></li><li id="n-Modules"><a href="../../Modules.html">Modules</a></li><li id="n-Bug-Tracker"><a href="../../Process/Bug_Reports.html">Bug Tracker</a></li><li id="n-Code-Review"><a href="../../Process/Contributing_Code.html">Code Review</a></li>						</ul>
+										</div>
+										<div id="p-More">
+						<h5>More</h5>
+						 <!-- If you do not want the words "Navigation" or "Tools" to appear, you can safely remove the line above. -->
+
+											<ul>
+					<li id="n-Google-Summer-of-Code"><a href="../../GSoC.html">Google Summer of Code</a></li><li id="n-Python"><a href="../../Special:RandomRootpage.html">Python</a></li><li id="n-FAQ"><a href="../../FAQ.html">FAQ</a></li>						</ul>
+										</div>
+									</div>
+
+								<div class="d-none d-xl-block col-xl-2 bd-toc">
+					<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="2017.html#Week_51:_4th_-_10th_December"><span class="tocnumber">1</span> <span class="toctext">Week 51: 4th - 10th December</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="2017.html#Week_50:_20th_-_3rd_December"><span class="tocnumber">2</span> <span class="toctext">Week 50: 20th - 3rd December</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="2017.html#Week_49:_19th_-_26th_November"><span class="tocnumber">3</span> <span class="toctext">Week 49: 19th - 26th November</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="2017.html#Week_49:_13th_-_19th_November"><span class="tocnumber">4</span> <span class="toctext">Week 49: 13th - 19th November</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="2017.html#Week_48:_6th_-_12th_November"><span class="tocnumber">5</span> <span class="toctext">Week 48: 6th - 12th November</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="2017.html#Week_47:_30th_-_5th_November"><span class="tocnumber">6</span> <span class="toctext">Week 47: 30th - 5th November</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="2017.html#Week_46:_23rd_-_29th_October"><span class="tocnumber">7</span> <span class="toctext">Week 46: 23rd - 29th October</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="2017.html#Week_45:_16th_-_22nd_October"><span class="tocnumber">8</span> <span class="toctext">Week 45: 16th - 22nd October</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="2017.html#Week_44:_9th_-_15th_October"><span class="tocnumber">9</span> <span class="toctext">Week 44: 9th - 15th October</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="2017.html#Week_43:_2nd_-_8th_October"><span class="tocnumber">10</span> <span class="toctext">Week 43: 2nd - 8th October</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="2017.html#Week_42:_25th_-_1st_October"><span class="tocnumber">11</span> <span class="toctext">Week 42: 25th - 1st October</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="2017.html#Week_41:_18th_-_24th_September"><span class="tocnumber">12</span> <span class="toctext">Week 41: 18th - 24th September</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="2017.html#Week_40:_11th_-_17th_September"><span class="tocnumber">13</span> <span class="toctext">Week 40: 11th - 17th September</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="2017.html#Week_39:_3rd_-_10th_September"><span class="tocnumber">14</span> <span class="toctext">Week 39: 3rd - 10th September</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="2017.html#Week_38:_28th_-_3th_September"><span class="tocnumber">15</span> <span class="toctext">Week 38: 28th - 3th September</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="2017.html#Week_37:_21th_-_27th_August"><span class="tocnumber">16</span> <span class="toctext">Week 37: 21th - 27th August</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="2017.html#Week_36:_14th_-_20th_August"><span class="tocnumber">17</span> <span class="toctext">Week 36: 14th - 20th August</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="2017.html#Week_35:_7th_-_13th_August"><span class="tocnumber">18</span> <span class="toctext">Week 35: 7th - 13th August</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="2017.html#Week_34:_31th_-_6th_August"><span class="tocnumber">19</span> <span class="toctext">Week 34: 31th - 6th August</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="2017.html#Week_33:_24th_-_30th_July"><span class="tocnumber">20</span> <span class="toctext">Week 33: 24th - 30th July</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="2017.html#Week_32:_17th_-_23rd_July"><span class="tocnumber">21</span> <span class="toctext">Week 32: 17th - 23rd July</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="2017.html#Week_31:_10th_-_16th_July"><span class="tocnumber">22</span> <span class="toctext">Week 31: 10th - 16th July</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="2017.html#Week_30:_3rd_-_9th_July"><span class="tocnumber">23</span> <span class="toctext">Week 30: 3rd - 9th July</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="2017.html#Week_29:_26th_-_2nd_July"><span class="tocnumber">24</span> <span class="toctext">Week 29: 26th - 2nd July</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="2017.html#Week_28:_19th_-_25th_June"><span class="tocnumber">25</span> <span class="toctext">Week 28: 19th - 25th June</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="2017.html#Week_27:_12th_-_18th_June"><span class="tocnumber">26</span> <span class="toctext">Week 27: 12th - 18th June</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="2017.html#Week_26:_5th_-_11th_June"><span class="tocnumber">27</span> <span class="toctext">Week 26: 5th - 11th June</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="2017.html#Week_25:_29th_-_4th_June"><span class="tocnumber">28</span> <span class="toctext">Week 25: 29th - 4th June</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="2017.html#Week_24:_22nd_-_28th_May"><span class="tocnumber">29</span> <span class="toctext">Week 24: 22nd - 28th May</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="2017.html#Week_23:_15th_-_21th_May"><span class="tocnumber">30</span> <span class="toctext">Week 23: 15th - 21th May</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="2017.html#Week_22:_8th_-_14th_May"><span class="tocnumber">31</span> <span class="toctext">Week 22: 8th - 14th May</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="2017.html#Week_21:_1st_-_7th_May"><span class="tocnumber">32</span> <span class="toctext">Week 21: 1st - 7th May</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="2017.html#Week_20:_24th_-_30th_April"><span class="tocnumber">33</span> <span class="toctext">Week 20: 24th - 30th April</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="2017.html#Week_19:_17th_-_23th_April"><span class="tocnumber">34</span> <span class="toctext">Week 19: 17th - 23th April</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="2017.html#Week_18:_10th_-_16th_April"><span class="tocnumber">35</span> <span class="toctext">Week 18: 10th - 16th April</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="2017.html#Week_17:_10th_-_16th_April"><span class="tocnumber">36</span> <span class="toctext">Week 17: 10th - 16th April</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="2017.html#Week_16:_3rd_-_9nd_April"><span class="tocnumber">37</span> <span class="toctext">Week 16: 3rd - 9nd April</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="2017.html#Week_15:_27th_-_2nd_April"><span class="tocnumber">38</span> <span class="toctext">Week 15: 27th - 2nd April</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="2017.html#Week_14:_20th_-_26th_March"><span class="tocnumber">39</span> <span class="toctext">Week 14: 20th - 26th March</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="2017.html#Week_13:_13th_-_19th_March"><span class="tocnumber">40</span> <span class="toctext">Week 13: 13th - 19th March</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="2017.html#Week_12:_6th_-_12th_March"><span class="tocnumber">41</span> <span class="toctext">Week 12: 6th - 12th March</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="2017.html#Week_11:_27th_-_5th_March"><span class="tocnumber">42</span> <span class="toctext">Week 11: 27th - 5th March</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="2017.html#Week_10:_20th_-_26th_Febuary"><span class="tocnumber">43</span> <span class="toctext">Week 10: 20th - 26th Febuary</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="2017.html#Week_09:_13th_-_19th_Febuary"><span class="tocnumber">44</span> <span class="toctext">Week 09: 13th - 19th Febuary</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="2017.html#Week_08:_6th_-_12th_Febuary"><span class="tocnumber">45</span> <span class="toctext">Week 08: 6th - 12th Febuary</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="2017.html#Week_07:_30th_-_5th_Febuary"><span class="tocnumber">46</span> <span class="toctext">Week 07: 30th - 5th Febuary</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="2017.html#Week_06:_23rd_-_29th_January"><span class="tocnumber">47</span> <span class="toctext">Week 06: 23rd - 29th January</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="2017.html#Week_05:_16th_-_22nd_January"><span class="tocnumber">48</span> <span class="toctext">Week 05: 16th - 22nd January</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="2017.html#Week_04:_9th_-_15th_January"><span class="tocnumber">49</span> <span class="toctext">Week 04: 9th - 15th January</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="2017.html#Week_03:_1st_-_8th_January"><span class="tocnumber">50</span> <span class="toctext">Week 03: 1st - 8th January</span></a></li>
+</ul>
+</div>				</div>
+				
+								<div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+					<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading">User:Hypersomniac/Foundation/2017</h1>
+					<div class="mw-body-content">
+						<div id="contentSub"><p><span class="subpages">&lt; <a href="../../User:Hypersomniac.html" title="User:Hypersomniac">User:Hypersomniac</a>&lrm; | <a href="../Foundation.html" title="User:Hypersomniac/Foundation">Foundation</a></span></p><p></p></div><div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div style="float:left; margin: 0 40px 40px 0;">
+</div>
+<h2><span class="mw-headline" id="Week_51:_4th_-_10th_December">Week 51: 4th - 10th December</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>I started investigating why Motion blur does not work in ogl render. Seems the problem is deeply rooted and require a bit more time to finish fixing. I still started to work it out.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Various fixes for intel GPUs: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16b9e91bf1db">16b9e91bf1</a>, Fix SSR and SSAO on intel <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9aaf75da3de1">9aaf75da3d</a></li>
+<li>Some codestyle/cleanup.</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>Going into vacation for 3 weeks, see ya in 2018!
+</p>
+<h2><span class="mw-headline" id="Week_50:_20th_-_3rd_December">Week 50: 20th - 3rd December</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Indirect_light_leak.png.html" class="image"><img alt="" src="../../../w/images/thumb/4/48/Indirect_light_leak.png/300px-Indirect_light_leak.png" width="300" height="275" class="thumbimage" srcset="../../../w/images/thumb/4/48/Indirect_light_leak.png/450px-Indirect_light_leak.png 1.5x, ../../../w/images/thumb/4/48/Indirect_light_leak.png/600px-Indirect_light_leak.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Indirect_light_leak.png.html" class="internal" title="Enlarge"></a></div>Previous indirect lighting grid in extreme lighting condition.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Indirect_light_no_leak.png.html" class="image"><img alt="" src="../../../w/images/thumb/6/67/Indirect_light_no_leak.png/300px-Indirect_light_no_leak.png" width="300" height="270" class="thumbimage" srcset="../../../w/images/thumb/6/67/Indirect_light_no_leak.png/450px-Indirect_light_no_leak.png 1.5x, ../../../w/images/thumb/6/67/Indirect_light_no_leak.png/600px-Indirect_light_no_leak.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Indirect_light_no_leak.png.html" class="internal" title="Enlarge"></a></div>New indirect lighting with leak fix.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I've added the irradiance visibility (shadowing) that reduce the indirect light bleeding issues caused by light grid.
+I've also enabled the smooth backface test that can make the surfaces that are near probes a bit "pinchy" (see blue ceilling in the no_leak image attached). In the other hand the other objects like the lucy model here have better lighting.
+The visibility tweaking is done per grid and is simillar to the variance shadow map parameters.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Added Irradiance Visibility: see <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5b6cfa705cb1">5b6cfa705c</a> more details.</li>
+<li>Made the Irradiance Pool size dynamic, thus saving memory <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5bd008f4ddd4">5bd008f4dd</a></li>
+<li>Fix light bounce &gt; 1: It has been broken for a long time. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/eb605c2c2b01">eb605c2c2b</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Instead of following the planning, we agreed that I should focus on bugfix and paying technical depts.
+</p>
+<h2><span class="mw-headline" id="Week_49:_19th_-_26th_November">Week 49: 19th - 26th November</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Sss_translucency.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/b/b9/Sss_translucency.jpg/300px-Sss_translucency.jpg" width="300" height="360" class="thumbimage" srcset="../../../w/images/thumb/b/b9/Sss_translucency.jpg/450px-Sss_translucency.jpg 1.5x, ../../../w/images/thumb/b/b9/Sss_translucency.jpg/600px-Sss_translucency.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Sss_translucency.jpg.html" class="internal" title="Enlarge"></a></div>Viewport render showing SSS, translucency and separate albedo.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>SSS translucency has been added and has great quality. Additional work / bugfixes were done for the SSS.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>SSS Translucency&#160;: This is done by precomputing a translucence profile based on Cycles SSS diffusion. We make some assumptions so the result may be brighter than Cycles reference but it's far more accurate than just applying the same profile as in the Screen space. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/846cdf531871">846cdf5318</a></li>
+<li>SSS&#160;: Support for separated albedo/diffuse texture. This retains the details of the albedo map by applying it after the Screen space convolution. This is optional since it adds quite a bit of overhead. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/7cbc7dd90499">7cbc7dd904</a></li>
+<li>SSS objects do not appear black in probe capture anymore. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5dfeecf47b57">5dfeecf47b</a></li>
+<li>Principled BSDF SSS now can have it's scale controlled via textures (but still uses the default radius vector for its profile) <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/16a28021493d">16a2802149</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Object Motion blur seems to be problematic. Even current camera blur is really hacky and should be done again more properly. I may prioritize other tasks.
+</p>
+<h2><span class="mw-headline" id="Week_49:_13th_-_19th_November">Week 49: 13th - 19th November</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>SSS has been committed and all profiles type are supported. I still want to finish the translucency effect (even with the inherent artifacts / approximation) before moving on to something else.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>SSS&#160;: Support for Gaussian profile (initial implementation). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f8b14305668f">f8b1430566</a></li>
+<li>SSS&#160;: Support for Cubic profile. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/936ddde35cab">936ddde35c</a></li>
+<li>SSS&#160;: Support for Christensen-Burley profile. Do note that this is an approximation and can be a bit more diffused than cycles reference.</li>
+<li>Fixed a bug when editing material with multiple BSSDF. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4de142e0b7ba">4de142e0b7</a></li>
+<li>Found a bug in Cycles cubic SSS profile that will break old files if fixed.</li>
+<li>Started Adding translucency to SSS. I tried to minimize the artifacts that came with shadow filtering but it's not worth the trouble of adding complexity to the material setup an biasing result. But since it's prone to artifacts, I will make it optionnal.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish SSS Translucency and continue to follow planning.
+</p>
+<h2><span class="mw-headline" id="Week_48:_6th_-_12th_November">Week 48: 6th - 12th November</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>SSS implementation is nearly finished. Will be posted in the next few days.
+To use it, you will need to enable it BOTH in the material options tab of your material and in the render settings. Only the gaussian profile is implemented for now.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Screen Space SubSurface Scattering: This is a screen space post process that "blur" the diffuse light reflected by an object. For this reason, it does not produce thin object translucency (red ears effect) and has problems like light bleeding. The radius input is baked into a 1d texture so you cannot control the RGB radii by using a texture or any other input, you have to change the default vector parameter (the one that appears when nothing is linked into this socket).</li></ul></li></ul>
+<p>However, the scale parameter CAN actually be modified by textures and other crazy node setup. The number of different SSS Shader in a scene is limited to 255.
+</p>
+<ul><li><ul><li>Reworked the stencil buffer / operation support in the draw manager (was needed for the SSS)</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I'll finish the initial SSS implementation and add work on polishing it.
+</p>
+<h2><span class="mw-headline" id="Week_47:_30th_-_5th_November">Week 47: 30th - 5th November</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Research on realtime SSS lead me beleive the most efficient solution for this is the Separable SubSurface Scattering. Although it's still not clear to me how to parametrize the 1D kernel.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed some problems related to volumetrics.</li>
+<li>Optimized Drawmanager memory allocation leading to significant performance improvement with Eevee.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I'll focus on SSS inplementation.
+</p>
+<h2><span class="mw-headline" id="Week_46:_23rd_-_29th_October">Week 46: 23rd - 29th October</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Cycles_smoke_sim.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c5/Cycles_smoke_sim.png/300px-Cycles_smoke_sim.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/c/c5/Cycles_smoke_sim.png/450px-Cycles_smoke_sim.png 1.5x, ../../../w/images/thumb/c/c5/Cycles_smoke_sim.png/600px-Cycles_smoke_sim.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cycles_smoke_sim.png.html" class="internal" title="Enlarge"></a></div>Smoke simulation in Cycles</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Eevee_smoke_sim.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/d7/Eevee_smoke_sim.png/300px-Eevee_smoke_sim.png" width="300" height="169" class="thumbimage" srcset="../../../w/images/thumb/d/d7/Eevee_smoke_sim.png/450px-Eevee_smoke_sim.png 1.5x, ../../../w/images/thumb/d/d7/Eevee_smoke_sim.png/600px-Eevee_smoke_sim.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_smoke_sim.png.html" class="internal" title="Enlarge"></a></div>Same smoke simulation in Eevee. Main difference is caused by the lack of volumetric shadowing.</div></div></div>
+<ul><li><strong>General development</strong></li></ul>
+<p>Finished implementing the new volumetric implementation now supporting volume objects.
+</p>
+<ul><li><ul><li>Theses are limited to the bounding sphere of the object for now (no voxelisation).</li>
+<li>It also supports the fluid simulation informations (see image).</li>
+<li>Volume material nodes in object material is now working and mimics cycles behaviour (invisible surface if only a volume closure is conected).</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>I'll focus on fixing bug and start investigating SSS.
+</p>
+<h2><span class="mw-headline" id="Week_45:_16th_-_22nd_October">Week 45: 16th - 22nd October</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Unified_volumetrics.png.html" class="image"><img alt="" src="../../../w/images/thumb/6/6f/Unified_volumetrics.png/300px-Unified_volumetrics.png" width="300" height="197" class="thumbimage" srcset="../../../w/images/thumb/6/6f/Unified_volumetrics.png/450px-Unified_volumetrics.png 1.5x, ../../../w/images/thumb/6/6f/Unified_volumetrics.png/600px-Unified_volumetrics.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Unified_volumetrics.png.html" class="internal" title="Enlarge"></a></div>New volumetric algorithm</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I had a hard time to figure the depth distribution function. But all went well after that. This new implementation has not been pushed yet! I still have to finish some of the polishing of the temporal supersampling before implementing object volumetrics. These might be restricted to volume domain for the moment because they already have a voxelization method and a volume texture ready to be used.
+</p>
+<ul><li><strong>General development</strong></li></ul>
+<p>During the implementation I realised that using a compute shader is a must to reduce the computation time to a minimum (specially during the integration phase). So right now I'm not using a compute shader (compatibility first) so the computation time can still be high.
+The pros and cons of this new method.
+Pros:
+</p>
+<ul><li><ul><li>Unified volumetric pipeline (world, object, fluid sim).</li>
+<li>lower computation time.</li>
+<li>No upsample artifacts.</li>
+<li>Works with transparency. (not implemented yet</li></ul></li></ul>
+<p>Cons:
+</p>
+<ul><li><ul><li>Very high Vram usage (use several HDR 3D textures)</li>
+<li>Require Volumetric shadowmap to correctly handle light decay within a volume. (not implemented yet)</li>
+<li>Subject to trailling artifacts (not in render).</li>
+<li>Can be low resolution</li></ul></li></ul>
+<ul><li><strong>Next week</strong></li></ul>
+<p>Finish the new volumetric implementation and bugfix.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Week_44:_9th_-_15th_October">Week 44: 9th - 15th October</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>I had my new AMD gpu installed and it required a bit of work to get up and running. It also lead to a bug that is making eevee pretty much non workable on this particular GPU. After isolating the problem in a pretty simple program (<a rel="nofollow" class="external free" href="https://github.com/dfelinto/opengl-sandbox/blob/downsample/README.md">https://github.com/dfelinto/opengl-sandbox/blob/downsample/README.md</a>), I made a workaround to this problem <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/12fa6750f5d3">rB12fa6750</a>. I also started investigating the volumetrics overhaul.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed a rather problematic issue: Due to small floating point format (R11F_G11F_B10F) the accumulation of many frames was making the blue color converge to a lower value than the other color, giving a yellowish tone to the image. Using RGB16F for all concerned render target fixed the issue (but not totally, but all colors are drifting the same way now).</li>
+<li>Added cubemap resolution option: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d46842108dde">rBd4684210</a> That said, I did not change the number of samples used in the filtering process, this might produce low quality filtering on higher probe settings.</li>
+<li>Fixed the contact shadows&#160;: there was a backface check that was making the firsts pixels of the contact shadow to fail the shadow test and thus leaking light. This is fixed. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a09b8c08fced">rBa09b8c08</a></li>
+<li>Several bug fixes&#160;: <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/ef1918d3128b">rBef1918d3</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/31386afaa1c8">rB31386afa</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Focus on the volumetric overhaul by folowing <a rel="nofollow" class="external text" href="https://www.ea.com/frostbite/news/physically-based-unified-volumetric-rendering-in-frostbite">Frosbite unified volumetric rendering</a>.
+</p>
+<h2><span class="mw-headline" id="Week_43:_2nd_-_8th_October">Week 43: 2nd - 8th October</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Contact_shadows_off.png.html" class="image"><img alt="" src="../../../w/images/thumb/3/3a/Contact_shadows_off.png/300px-Contact_shadows_off.png" width="300" height="136" class="thumbimage" srcset="../../../w/images/thumb/3/3a/Contact_shadows_off.png/450px-Contact_shadows_off.png 1.5x, ../../../w/images/thumb/3/3a/Contact_shadows_off.png/600px-Contact_shadows_off.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Contact_shadows_off.png.html" class="internal" title="Enlarge"></a></div>Without Contact Shadow enabled</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Contact_shadows_on.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/78/Contact_shadows_on.png/300px-Contact_shadows_on.png" width="300" height="135" class="thumbimage" srcset="../../../w/images/thumb/7/78/Contact_shadows_on.png/450px-Contact_shadows_on.png 1.5x, ../../../w/images/thumb/7/78/Contact_shadows_on.png/600px-Contact_shadows_on.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Contact_shadows_on.png.html" class="internal" title="Enlarge"></a></div>With Contact Shadow enabled</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I tried to improve "compilation" time (linking time to be precise) by reducing the amount of branching in the shader. But this failed and every solution lead to an increase of linking time.
+I now have an AMD gpu with mesa driver which is much more prone to visual glitches if I don't code correctly. Right now Eevee's completely broken on this setup and I need to fix it before anything else.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Added Contact shadows: They helps fix lightleaking from shadowmaping techniques. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/dfcdec914ce9">rBdfcdec91</a> These are to be enabled per light under the shadow tab.</li>
+<li>Helped optimize Gawain: Gawain is constructing a shader interface for each shader after compilation. Previous behaviour was to scan for all active uniforms, but using Array of structure in uniform blocks (UBO) made this unpractical. Now we only query needed uniforms' locations. Reducing Uniforms count to ~50 (previously ~5000). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d7d32ad45217">rBd7d32ad4</a> This reduction let us reduce the number of buckets used to quickly access uniforms and improve lookup time. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a4a5637d7aff">rBa4a5637d</a> Also I made the commonly requested uniforms as "builtin" improving lookup time even further. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f7db1a4366e8">rBf7db1a43</a> Main bottleneck now is Draw Manager memory alloc/free.</li>
+<li>Add uniform block location to Gawain Shader Interface. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/f94f141f2416">rBf94f141f</a></li>
+<li>Made SSR not affected by AO, giving more correct results. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5f7192018eb8">rB5f719201</a></li>
+<li>Finish Fixing probe display. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/57c323b5d3a8">rB57c323b5</a></li>
+<li>Modified Eevee's panels to be more consistent and easy to use. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9422db7796e1">9422db7796</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Fixing Eevee on mesa so I can go on implementing other features. I have also a few fixes to make before starting to implement Volumetric objects.
+</p>
+<h2><span class="mw-headline" id="Week_42:_25th_-_1st_October">Week 42: 25th - 1st October</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>TAA&#160;: Removed the Upper limit of 32 samples. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c1aca25c3bd1">rBc1aca25c</a></li>
+<li>Probes: Add probes data outlines and selectability <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3349f25502e7">rB3349f255</a></li>
+<li>Probe Grid: Add "progressive rendering" <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3349f25502e7">rB3349f255</a> This gives the user a more rapid preview of what the final result will be.</li>
+<li>Probe Grid: Add a setting for the number of indirect light bounce. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3349f25502e7">rB3349f255</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>There is still some problem with probes updates that needs to be figured out. Then I'll follow the planning <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Viewport/Eevee/Roadmap-SeptDec-2017&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Viewport/Eevee/Roadmap-SeptDec-2017 (page does not exist)">(link to planning)</a> and tackle some important issues.
+</p>
+<h2><span class="mw-headline" id="Week_41:_18th_-_24th_September">Week 41: 18th - 24th September</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Outline_aa.png.html" class="image"><img alt="" src="../../../w/images/thumb/0/08/Outline_aa.png/200px-Outline_aa.png" width="200" height="170" class="thumbimage" srcset="../../../w/images/thumb/0/08/Outline_aa.png/300px-Outline_aa.png 1.5x, ../../../w/images/0/08/Outline_aa.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Outline_aa.png.html" class="internal" title="Enlarge"></a></div>Outlines with Anti-Aliasing</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Wire_aa.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/f7/Wire_aa.png/200px-Wire_aa.png" width="200" height="170" class="thumbimage" srcset="../../../w/images/thumb/f/f7/Wire_aa.png/300px-Wire_aa.png 1.5x, ../../../w/images/f/f7/Wire_aa.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Wire_aa.png.html" class="internal" title="Enlarge"></a></div>Mesh Wire with Anti-Aliasing</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>The development planning for the near future of Eevee has been posted <a href="https://wiki.blender.org/w/index.php?title=Dev:2.8/Source/Viewport/Eevee/Roadmap-SeptDec-2017&amp;action=edit&amp;redlink=1" class="new" title="Dev:2.8/Source/Viewport/Eevee/Roadmap-SeptDec-2017 (page does not exist)">here</a>. 
+</p>
+<ul><li><strong>General development</strong></li></ul>
+<p>This week was focused on Anti-Aliasing. I encountered several problems&#160;:
+My first Idea was to use FXAA for everything in the viewport. While this was pretty efficient, it does not handles 1px lines like the non-mesh objects (lamps, empties,...).
+Second Idea was to use TAA for everything. The problem with this is that it would be done at the end of the pipeline and progressive renderer like cycles would not work and produce undesired results (noise from first frame getting stuck in history buffer).
+Third Idea was to use a separate the object mode TAA and composite it on top of the render. But this would not work for outlines and edit mode engine.
+So the final solution I settled with was to use a separate AA technique for each use case.
+</p>
+<ul><li>For Outlines, use FXAA since the outline detection is already a post process. Unfortunately, the FXAA must run (in this case) on the alpha of the line and not the color, leaving transition between colors aliased.</li>
+<li>For Non Meshes objects, use MSAA. (this is the most inefficient technique considering Vram usage though).</li>
+<li>For Edit Mesh Mode, Use a linear function instead of a step function to color pixels. (this has some drawbacks regarding blending)</li>
+<li>For Eevee use TAA.</li></ul>
+<p>There is still some things to be solved, since Eevee's TAA jitters the View Projection matrix, we need to make sure the mode engines that are overlaid on top are not fighting with the jittered depth.
+Also, as much as I would like to see TAA + reprojection, this will have to wait for correct motion blur for everything,  see <a rel="nofollow" class="external text" href="https://bartwronski.com/2014/03/15/temporal-supersampling-and-antialiasing/">this article</a> about it.
+</p>
+<ul><li>I also added a slight fresnel effect to the edit mode wires. This allow to not loose visibility of the model shape even with very high vertex density. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/1a4a1447b728">rB1a4a1447</a></li>
+<li>Fixed SSR not working in Orthogonal View <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/98dd2a518be5">rB98dd2a51</a></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish AA implementation. Polishing or Probes.
+</p>
+<h2><span class="mw-headline" id="Week_40:_11th_-_17th_September">Week 40: 11th - 17th September</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="../../File:Ssr_fix.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/9/9f/Ssr_fix.jpg/300px-Ssr_fix.jpg" width="300" height="83" class="thumbimage" srcset="../../../w/images/thumb/9/9f/Ssr_fix.jpg/450px-Ssr_fix.jpg 1.5x, ../../../w/images/thumb/9/9f/Ssr_fix.jpg/600px-Ssr_fix.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Ssr_fix.jpg.html" class="internal" title="Enlarge"></a></div>Broken and fixed SSR on AMD+Mesa driver</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week has been dedicated to bug fix and planning the coming months with Dalai at the Blender Institute. The planning will be posted soon.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Bugfixes &amp; commits&#160;: <a rel="nofollow" class="external text" href="http://developer.blender.org/T52738">#52738</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T52357">#52357</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T52713">#52713</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T52480">#52480</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T52546">#52546</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T52593">#52593</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d5478e20cc52">d5478e20cc</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/4088c9fa68b8">4088c9fa68</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/9abacf38fd4f">9abacf38fd</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/07e6e5edfb9f">07e6e5edfb</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fc42063d1e23">fc42063d1e</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Post the planning. Begin AA implementation.
+</p>
+<h2><span class="mw-headline" id="Week_39:_3rd_-_10th_September">Week 39: 3rd - 10th September</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Softshadows_1.png.html" class="image"><img alt="" src="../../../w/images/thumb/4/45/Softshadows_1.png/200px-Softshadows_1.png" width="200" height="107" class="thumbimage" srcset="../../../w/images/thumb/4/45/Softshadows_1.png/300px-Softshadows_1.png 1.5x, ../../../w/images/thumb/4/45/Softshadows_1.png/400px-Softshadows_1.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Softshadows_1.png.html" class="internal" title="Enlarge"></a></div>Example of filtered shadowmap</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Softshadows_2.png.html" class="image"><img alt="" src="../../../w/images/thumb/0/0e/Softshadows_2.png/200px-Softshadows_2.png" width="200" height="107" class="thumbimage" srcset="../../../w/images/thumb/0/0e/Softshadows_2.png/300px-Softshadows_2.png 1.5x, ../../../w/images/thumb/0/0e/Softshadows_2.png/400px-Softshadows_2.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Softshadows_2.png.html" class="internal" title="Enlarge"></a></div>Example of heavily filtered shadowmap with Multiple Shadowmap (4 shadow map)</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Shadows has been commited. They are "optimized" because they now use the least amount of sample to filter the target filter size. There is only 256 concentric samples coordinates in the filter shader so big filter on high res shadow maps can not be working. This setup allow a maximum filter size of 3 x 16 pixel of diameter. I had no time to dedicate to bug tracker.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Separate disk filter in 2 steps: One 3x3 box blur and the other depending on lamp settings. Box blur is disabled if soft parameter is 0.0. We now only render to depth buffer and convert the depth to whatever depth format the shadow algorithm needs, during the first box blur. This accelerate the next blur.</li>
+<li>Added filter support for Cascaded Shadowmap (Sun).</li>
+<li>Given the addition of the high bit depth option, the bias attribute needed to be unclamped to fight shadow artifacts of low bit depth VSM.</li>
+<li>Reworked the Cascaded Shadowmaps to have cascade blending, user defined max distance, cascade count, and distribution.</li>
+<li>Started to implement Multiple Shadowmap: Only problem left is to distribute samples correctly. I need help on this.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finishing Multiple shadowmap is a matter of finding the right sampling pattern. It may be a bit tough for me. So I'll prioritize bug fixing for this week.
+</p>
+<h2><span class="mw-headline" id="Week_38:_28th_-_3th_September">Week 38: 28th - 3th September</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Worked on shadows, adding bunch of options (filter size, shadowmap resolution, VSM). <strong>These are still not commited</strong>, I have to finish the sun shadow map first.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Added filter size: Unfortunatly, filtering cubemap is hard as we cannot use separable kernels due to mapping distortion. So a large amount of sample is needed. And the larger the shadow map is, the slower it gets.</li>
+<li>Added Variance Shadow Mapping: As an alternative to ESM, I added back VSM as they were implemented in old viewport. They have different artifacts compared to ESM and might be beneficial in some situations.</li>
+<li>Added Shadow Map Resolution: Resolution of shadows can be changes per render layer now. For optimization purpose (saving texture slots), it will not be possible to change resolution per shadow, and cascade shadows will have the save size as regular point shadows.</li>
+<li>Added High Bit depth shadows: For performance / memory usage purpose, I added an option to use 32bits per channel textures for shadow maps instead of 16bits. It's recomended to use 32bits for VSM though as artifacts are more pronounced in this case.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Need to finish theses goddamn shadows. Then polish and debug, there is too many bug in Eevee right now.
+</p>
+<h2><span class="mw-headline" id="Week_37:_21th_-_27th_August">Week 37: 21th - 27th August</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week has been a failure. I tried several options for implementing soft shadows but basically they all failed somehow. 
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Tried implementing soft shadow method, more on that topic <a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Dev_reports/Soft_shadows_failure&amp;action=edit&amp;redlink=1" class="new" title="User:Hypersomniac/Dev reports/Soft shadows failure (page does not exist)">here</a>.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>As I already loose too much time on soft shadows, I'll be fixing the shadow system, getting sun shadows to work, and use multiple shadow maps for area lights.
+</p>
+<h2><span class="mw-headline" id="Week_36:_14th_-_20th_August">Week 36: 14th - 20th August</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>GTAO refactor is finished and I ogl renders have now less noise in stocastic effects (AO, SSR mainly) thanks to noise offseting for each AA sample. I had no time to investigate TAA. We also had to plan the next few month with dalai.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Finished GTAO refactor: added denoising option.</li>
+<li>Added noise offset for each AA sample. Reducing noise in final olg render <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d007828ae78d">d007828ae7</a></li>
+<li>Added a clamp and a color setting to the bloom effect. Can create visual difference with old file. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/5720890cf85a">5720890cf8</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/63f70ef14d8a">63f70ef14d</a></li>
+<li>Fixed a performance issue related to cubemap filtering. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2abc21ace5a0">2abc21ace5</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>In respect to the new planning, I'll be working on soft shadows next week along side with adding sun shadows.
+</p>
+<h2><span class="mw-headline" id="Week_35:_7th_-_13th_August">Week 35: 7th - 13th August</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_glass.png.html" class="image"><img alt="" src="../../../w/images/thumb/b/bc/Eevee_glass.png/200px-Eevee_glass.png" width="200" height="64" class="thumbimage" srcset="../../../w/images/thumb/b/bc/Eevee_glass.png/300px-Eevee_glass.png 1.5x, ../../../w/images/thumb/b/bc/Eevee_glass.png/400px-Eevee_glass.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_glass.png.html" class="internal" title="Enlarge"></a></div>Raytraced rough refraction using screen space opaque objects color.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Screen Space Refraction is done. There
+\I started to play around denoising/optimisation for GTAO. Idea is to not redo every computation for every bsdf node. We do the horizon search before shading (as it does not need surface normals) and then we do the actual integration when evaluating the BSDF.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Added Screen Space Refraction. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/d16342e5fd1f">d16342e5fd</a></li>
+<li>Fixed some mistakes in the SSR while working on refraction.</li>
+<li>Added a thickness heuristic to the refraction. This allows for 2 interface refraction approximation. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6e2f17ea02be">6e2f17ea02</a></li>
+<li>Optimized outline passes a bit <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ba11d72a2cf">2ba11d72a2</a></li>
+<li>Fixed some issues and optimized GTAO <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ba11d72a2cf">2ba11d72a2</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2ba11d72a2cf">2ba11d72a2</a></li>
+<li>Started to do some optimization on GTAO: separate trace from resolve.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish GTAO optimisation. Then do some polishing on existing features. Use random sampling for OGL render (aka fix the noise). Then investigate TAA.
+</p>
+<h2><span class="mw-headline" id="Week_34:_31th_-_6th_August">Week 34: 31th - 6th August</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Glass_no_ss.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/d5/Glass_no_ss.png/200px-Glass_no_ss.png" width="200" height="64" class="thumbimage" srcset="../../../w/images/thumb/d/d5/Glass_no_ss.png/300px-Glass_no_ss.png 1.5x, ../../../w/images/thumb/d/d5/Glass_no_ss.png/400px-Glass_no_ss.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Glass_no_ss.png.html" class="internal" title="Enlarge"></a></div>Glass materials with different IORs using probes.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Refraction was much more a problem than expected. But managed to find a decent approximation for probes. Started Screen space refraction but need to finish it.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Rewrote the screen space raytracing algorithm in preparation of the Screen Space Refraction.</li>
+<li>Changed the SSR clamp to be like cycles one. (Better looking, more predictable).</li>
+<li>Made Background draw after depth prepass. This saves some times depending on how much the background is visible.</li>
+<li>Added support for probe refraction. Created a 3D Lookup table containing BTDF values for different IOR, Roughness, and N.V values. The roughness fit is really bad ATM and a better fit has yet to be computed (No time for this "R&amp;D" right now).</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish last week plans: screen space refraction. Then GTAO fix, and some polishing.
+</p>
+<h2><span class="mw-headline" id="Week_33:_24th_-_30th_July">Week 33: 24th - 30th July</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Ssr.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/9/9d/Ssr.jpg/200px-Ssr.jpg" width="200" height="126" class="thumbimage" srcset="../../../w/images/thumb/9/9d/Ssr.jpg/300px-Ssr.jpg 1.5x, ../../../w/images/thumb/9/9d/Ssr.jpg/400px-Ssr.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Ssr.jpg.html" class="internal" title="Enlarge"></a></div>Raytraced rough specular using Planar reflection and SSR.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I'm finally somewhat happy with the state of SSR. I optimised it quite a bit and tracing one ray at 1080p halfres is now 1ms on my gtx960. I also lowered the number of sample per resolve pixels to have less blocky artifact at the cost of noise. This make the resolve much faster (4 fetches instead of 9). I will leave it as is until temporal filtering is done. I still need to jitter the sampling pattern when using ogl rendering with full AA.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Added support for rough planar reflection with SSR. Remove rough planar reflection support without SSR.</li>
+<li>Reworked and optimized SSR: Added Max Roughness option to only raytrace for low roughness surfaces (better performance). Added a Trace Quality slide to have better defined object contour.</li>
+<li>Fixed crash when saving with motion blur enabled. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c21dd6906064">c21dd69060</a></li>
+<li>Fixed black squares caused by bloom (hopefully this time for good). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/c6a74edcf86c">c6a74edcf8</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Start by Refraction, then some optimisation work on AO.
+</p>
+<h2><span class="mw-headline" id="Week_32:_17th_-_23rd_July">Week 32: 17th - 23rd July</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>I nearly finished SSR, it should be commited in a few days. This revealed to be much more complex than I expected and I didn't have time left for refraction.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>SSR: spend most of the time getting the stocastic resolve and the raymarching right. Tried to find some meaningfull parameters. Add options for shooting up to 4 rays per pixels.</li></ul></li></ul>
+<p>Commits starts at <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/27dd82a95177">27dd82a951</a>.
+</p>
+<ul><li><ul><li>Temp workaround for crash related to dupli groups: we just cut some features for these (for now). <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/02e318e8b9c4">02e318e8b9</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/3534c3e0df7d">3534c3e0df</a></li>
+<li>Fixed transparent objects not being drawn if volumetrics are enabled. But that does not mean they are affected by it yet. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/fe8fc79cee36">fe8fc79cee</a></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Commit SSR, do some optimisation, then do Refraction.
+</p>
+<h2><span class="mw-headline" id="Week_31:_10th_-_16th_July">Week 31: 10th - 16th July</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_blend_modes.png.html" class="image"><img alt="" src="../../../w/images/thumb/f/fb/Eevee_blend_modes.png/200px-Eevee_blend_modes.png" width="200" height="47" class="thumbimage" srcset="../../../w/images/thumb/f/fb/Eevee_blend_modes.png/300px-Eevee_blend_modes.png 1.5x, ../../../w/images/thumb/f/fb/Eevee_blend_modes.png/400px-Eevee_blend_modes.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_blend_modes.png.html" class="internal" title="Enlarge"></a></div>From left to right: Additive, Multiply, Alpha Blend, Alpha Hashed, Alpha Clip</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I finished blend modes. Unfortunately true transparency (refraction, transmission) is harder than I expected and share some code with SSR. So I focussed on SSR.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Transparency: Added support for different blend modes. These can help simulate transparency.
+<ul><li>The order dependant blended surfaces (Add / Multiply / Alpha Blend) are sorted based on their object origin local Z distance to the camera.</li>
+<li>Added an option to limit transparency to the first "transmission" event. This fixes sorting problem inside the same mesh at the cost of loosing half the mesh.</li>
+<li>A hashed alpha mode was added to support correct alpha blending when using anti-aliasing.</li></ul></li>
+<li>Screen Space Reflection: Spend some time to find how to render multiple specular lobe per surface. Conclusion is: only one lobe for now, and bruteforce for offline rendering. Found a solution to extract which lobe to use. Necessary data (normal, roughness, specular) are outputed to buffers. Theses have required some code changes.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish Screen Space Reflection and add one layer Refraction.
+</p>
+<h2><span class="mw-headline" id="Week_30:_3rd_-_9th_July">Week 30: 3rd - 9th July</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Working on Volumetrics put me behind schedule. I have to catch up on the transparency.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Fixed several eevee bugs: <a rel="nofollow" class="external text" href="http://developer.blender.org/T51979">#51979</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/6eea22b2b702">6eea22b2b7</a> <a rel="nofollow" class="external text" href="http://developer.blender.org/T51904">#51904</a></li>
+<li>World Volumetrics are in a usable state. No Volume object support. World node tree is now supported.</li>
+<li>One commit removed the possibility to connect "shader" sockets to "color" sockets. This may be adressed in the future. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/2eef097831ca">2eef097831</a></li>
+<li>Transparency, started implementation, needs 1 or 2 days to finish it. Complex transparency (absorption, refraction) may require much more work. Can have cheap approximation (one refraction event) while waiting.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finish basic transparency, with sorting per object. Tackle the probe update tagging and see if there is time left for Screen Space Reflections.
+</p>
+<h2><span class="mw-headline" id="Week_29:_26th_-_2nd_July">Week 29: 26th - 2nd July</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_volumetrics.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/b/bf/Eevee_volumetrics.jpg/200px-Eevee_volumetrics.jpg" width="200" height="204" class="thumbimage" srcset="../../../w/images/thumb/b/bf/Eevee_volumetrics.jpg/300px-Eevee_volumetrics.jpg 1.5x, ../../../w/images/thumb/b/bf/Eevee_volumetrics.jpg/400px-Eevee_volumetrics.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_volumetrics.jpg.html" class="internal" title="Enlarge"></a></div>Volumetrics with lamps and shadows</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week focus was on smoothing the User Experience. Helping with some performance issue and some long standing bug like the clamped HDRI values.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Implement fast and ugly Planar Probe roughness blurring: This works somewhat for low roughnes,  but this need much more work, and I think this should be fused with the stochastic approach we will use for SSR to offer best quality result.</li>
+<li>Principled BSDF: Added basic support in order to get rid of the metallic and specular eevee nodes. The plan is to simplify the workflow using only existing nodes. The specular workflow node should be merged with the Principled BSDF using an enum and hiding some inputs. Unfortunately a technical limitation is hitting us right now. Also Sheen parameter is still unsupported. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/08310996645f">0831099664</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/e14fd191054c">e14fd19105</a></li>
+<li>Prepared support for anisotropic shading: waiting for TAA first because it's using a stocastic approach and generate a lot of noise. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/95797336f5ab">95797336f5</a></li>
+<li>Introduced new icons for each probe type.</li>
+<li>Fixed bloom artifacts: clamped colors to avoid too bright or negative color to bleed all over the place.</li>
+<li>Huge shader codebase changes for Principle BSDF, more modularity.</li>
+<li>Unclamped HDRI textures. <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/a1a40bfe7057">a1a40bfe70</a></li>
+<li>Fixed bug with probe shaders: was giving black reflection using AO or bent normals.  <a rel="nofollow" class="external text" href="http://developer.blender.org/T51922">#51922</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/cdb07ff30e86">cdb07ff30e</a> <a rel="nofollow" class="external text" href="https://projects.blender.org/blender/blender/commit/790b15112b63">790b15112b</a></li>
+<li>Worked on Physically based Participating media (aka. Volumetrics).</li></ul></li>
+<li><strong>Next week</strong>
+<ul><li>Finish volumetric basic support (only world nodetree), start transparency.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_28:_19th_-_25th_June">Week 28: 19th - 25th June</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Gtao_bent_normal.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/1/1e/Gtao_bent_normal.jpg/200px-Gtao_bent_normal.jpg" width="200" height="280" class="thumbimage" srcset="../../../w/images/thumb/1/1e/Gtao_bent_normal.jpg/300px-Gtao_bent_normal.jpg 1.5x, ../../../w/images/thumb/1/1e/Gtao_bent_normal.jpg/400px-Gtao_bent_normal.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Gtao_bent_normal.jpg.html" class="internal" title="Enlarge"></a></div>From top to bottom: AO + Bent Normal, Bent Normal only, Original.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Planar_distortion.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/dc/Planar_distortion.png/200px-Planar_distortion.png" width="200" height="122" class="thumbimage" srcset="../../../w/images/thumb/d/dc/Planar_distortion.png/300px-Planar_distortion.png 1.5x, ../../../w/images/thumb/d/dc/Planar_distortion.png/400px-Planar_distortion.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Planar_distortion.png.html" class="internal" title="Enlarge"></a></div>Left: without planar reflection, Right: with planar reflection. Planar delimitation is barely visible.</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week was focus on the Ambient Occlusion. It's in good shape but not pixel perfect and still need more optimisation. I didn't had time to finish the uber shader.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Planar reflection:
+<ul><li>Fix zfighting issue. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB5e3f902eaa35aaba8e6d27dc9d39fdf4d9a37e3e">commit</a></li>
+<li>Add normal distortion based on distance to reflection. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe92940c6f38d587f7fd823631403adae0e3e5b72">commit</a></li>
+<li>Add AO in planar reflection. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBa6593645bfabf93f292421fd39bef1d942a85283">commit</a></li>
+<li>Started to implement planar reflection blurring but that seems to be an harder task than I expected.</li></ul></li>
+<li>AO:
+<ul><li>Revisit GTAO and make is fast. Use higher LOD for further samples from the interest texels.</li>
+<li>Make sample spacing exponential. This way near occlusion is always correct. However there is major artifacts if occluder is very far in screen space.</li>
+<li>Introduce the concept of Bent Normals: This option compute the least occluded direction when computing the AO. This direction is then used to sample the diffuse lighting and mimic the effect of a bounce lighting. This bent normal could also be used for specular shadowing.</li>
+<li>Added the creation of a minmax pyramid that will be usefull in the future.</li></ul></li>
+<li>Optimisation:
+<ul><li>Dalai &amp; I found and fixed the bottleneck causing the major slowdown when updating postprocess values. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB986a3d15ac68545a9886d20f73376f818c28531a">commit</a></li></ul></li>
+<li>GPencil:
+<ul><li>Antonio Vasquez needed some help with rendering multiple grease pencil objects without Z fighting.</li>
+<li>We found a solution to his problem by adding support for rendering depth without depth test <a rel="nofollow" class="external text" href="https://developer.blender.org/rB06cc5e499466a9e9085be987b768e453e9c22ad5">commit</a></li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I still have to finish the uber shader and make it compatible with the principle bsdf. After that I'll fix the bloom and work on a simple fog system.
+</p>
+<h2><span class="mw-headline" id="Week_27:_12th_-_18th_June">Week 27: 12th - 18th June</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Grid_probe_indirect_lighting.png.html" class="image"><img alt="" src="../../../w/images/thumb/9/9e/Grid_probe_indirect_lighting.png/200px-Grid_probe_indirect_lighting.png" width="200" height="127" class="thumbimage" srcset="../../../w/images/thumb/9/9e/Grid_probe_indirect_lighting.png/300px-Grid_probe_indirect_lighting.png 1.5x, ../../../w/images/thumb/9/9e/Grid_probe_indirect_lighting.png/400px-Grid_probe_indirect_lighting.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Grid_probe_indirect_lighting.png.html" class="internal" title="Enlarge"></a></div>Sphere lit by indirect lighting captured by the Grid Probe</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Irradiance volumes (known as probe grid in the UI) are working. It's not finished&#160;: I want to add precomputed visibility, thus lowering the number of samples needed for the grid, but this can wait. Planar reflections are working but still unfinished (no normal deformation, no roughness blurring). Appart from finishing the uber shader we are somewhat following the planning.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Finished Grid Probes: They are used to compute incomming diffuse light from several position inside a volume. They capture multiple light bounces and record directionnal lighting info (works with normal mapping).</li>
+<li>Started Planar probes: They are usefull for large planar glossy surface and does not suffer from artifacts like SSR. But implementation is still incomplete.</li>
+<li>Added options to view probe data inside the viewport.</li></ul></li>
+<li><strong>Next week</strong>
+<ul><li>Tackle GTAO, finish uber shader, finish planar reflection to a state they are usable.</li></ul></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Week_26:_5th_-_11th_June">Week 26: 5th - 11th June</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Probe_object.png.html" class="image"><img alt="" src="../../../w/images/thumb/9/92/Probe_object.png/200px-Probe_object.png" width="200" height="106" class="thumbimage" srcset="../../../w/images/thumb/9/92/Probe_object.png/300px-Probe_object.png 1.5x, ../../../w/images/thumb/9/92/Probe_object.png/400px-Probe_object.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Probe_object.png.html" class="internal" title="Enlarge"></a></div>Probe object with proper parallax</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Probes are in working state. Started the Irradiance Volume implementation since I really felt it was needed.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Probes&#160;: After much debate we decided to go for a dedicated datablock. They are not finished but are ready for testing.
+<ul><li>It's sill missing data previsualisation (for debugging).</li>
+<li>There is still some problems like update not triggering when moving objects near probes. But I'm hesitant to enable this as probes are slower to refresh than shadows.</li>
+<li>Also probes are capturing specular reflection which is a bug and should not happen.</li>
+<li>Blending is not optimal. If a probe is inside another probe they will be considered in their creation order instead of their distance.</li>
+<li>Added proper parallax correction volume (Box and Sphere) and tried to make it easy to use.</li></ul></li>
+<li>Started Implementing a rather crude precomputed Irradiance volume solution. Needs some times to finish it.</li></ul></li>
+<li><strong>Next week</strong>
+<ul><li>Finish Irradiance volume and catch up with the planning (planar reflections and finish uber shader).</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_25:_29th_-_4th_June">Week 25: 29th - 4th June</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Clay_ssao_blue_noise.png.html" class="image"><img alt="" src="../../../w/images/thumb/2/2a/Clay_ssao_blue_noise.png/200px-Clay_ssao_blue_noise.png" width="200" height="77" class="thumbimage" srcset="../../../w/images/thumb/2/2a/Clay_ssao_blue_noise.png/300px-Clay_ssao_blue_noise.png 1.5x, ../../../w/images/thumb/2/2a/Clay_ssao_blue_noise.png/400px-Clay_ssao_blue_noise.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Clay_ssao_blue_noise.png.html" class="internal" title="Enlarge"></a></div>Ssao sampling improvement</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Didn't had time to finish probes. I focused on what would make the probes faster when they will be introduced.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Ported probe rendering to Octahedron env-maps. This enables us to use 2D texture arrays for multiple probes (broader hardware support than cubemap arrays).</li>
+<li>Some UI work on Eevee's World, Material and Light panels.</li>
+<li>Optimized Refreshing of Cubemaps and Shadows by rendering them only when needed.</li>
+<li>Polished ESM with a 32 tap poisson blur (still pretty fast since it's only done on one channel).</li>
+<li>Move Spherical Harmonics to UBO along with probe data (that still need to be tackled).</li>
+<li>Also broke Eevee into smaller files.</li>
+<li>Improve Clay SSAO with blue noise.</li>
+<li>Make use of a ghash to store Shgroups for eevee and not duplicate them. This greatly reduces the cache overhead on scene with lots of objects (by a factor of 4).</li></ul></li>
+<li><strong>Next week</strong>
+<ul><li>Finish probe and move on following the planning (skipping the indirect lighting part for now).</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_24:_22nd_-_28th_May">Week 24: 22nd - 28th May</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>Was at the Blender Institute to plan next few months. Planning can be found <a rel="nofollow" class="external text" href="https://code.blender.org/2017/05/viewport-past-present-and-future/">code.blender.org</a>
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>I tried to make a better cheap area light model together with Luca Rood but we failed to find a competitive solution to LTC. I decided to get rid of lower quality lighting implementation assuming user with low-end hardware will prefer accurate point lights instead of really off area lights.</li>
+<li>Minimized the precision issue with the grid drawing, better but still not enough. This problem seems to be worse on some AMD cards.</li></ul></li>
+<li><strong>Next week</strong>
+<ul><li>Focus on optimisations and add support for probes.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_23:_15th_-_21th_May">Week 23: 15th - 21th May</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week was focused on optimisation. I lost a little bit of time trying to optimized normal drawing that revealed to be a dead end (half a day). The end of the week was used to prepare for the incommint probe implementation. Performance are way better but general editing workflow is still slow. Also it seems that animations are suffering from batch cache invalidation.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>MBC Optimisation&#160;: Deduplicate Vertex buffer and use aliases for material shaders to work. Try to use compressed format where we can. Can use further optimisation for users that wants (reduce precision, range ...).</li>
+<li>ORCO is now derived from local positions inside the shader. It's only a MADD instruction so it's not really slowing things drastically. Also separate edit mode attributes from position / normals. Mesh memory usage went from 434 MB (94ms) to 163 MB (25ms) on my test scene. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBe053fade993204bbfaa98ced1b056e02226a3e61">commit</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/rBf83a24474967170a0a5323abe0e987f3a392f793">commit</a></li>
+<li>Texture Optimisation&#160;: Share additionnal buffers across draw engines to use less different textures. No additionnal buffers are required edit mode wire transparency. Also use 11_11_10 hdr buffers for eevee to reduce bandwidth and storage.</li>
+<li>Added support for instance particle buffer for Particle drawing.</li>
+<li>Octahedron mapping&#160;: Simplier support of old hardware without cubemap array support. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBd9d65a06d3db36efd5848cf7ae3e08c72c2c296b">commit</a></li>
+<li>Starting to implement soft shadows&#160;: Using the ESM method</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>We need to revisit the MBC to make it more efficient. This is the main bottleneck for mesh update.
+Also fix mesh update when not in edit mode (apply scale, set smooth ...).
+I want to fix the freeing of viewport data to be able to carefully handle freing whatever type of data we store in it. Only Passes needs to be in a separate List. This is needed because right now UBO's are leaking on the OGL side (handles are not free).
+Next week will be mainly focused on Probes and fixing remaining problems for daily production usage.
+</p>
+<h2><span class="mw-headline" id="Week_22:_8th_-_14th_May">Week 22: 8th - 14th May</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_post_processes.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/d/db/Eevee_post_processes.jpg/200px-Eevee_post_processes.jpg" width="200" height="112" class="thumbimage" srcset="../../../w/images/thumb/d/db/Eevee_post_processes.jpg/300px-Eevee_post_processes.jpg 1.5x, ../../../w/images/thumb/d/db/Eevee_post_processes.jpg/400px-Eevee_post_processes.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_post_processes.jpg.html" class="internal" title="Enlarge"></a></div>Depth of field, Motion blur, Tonemapping, and subtile bloom</div></div></div>
+<ul><li><strong>General development</strong>
+<ul><li>Depth of field: Revisit the current Depth Of Field algorithm and port it to Eevee. It's using more a more efficient rendering method using generated triangles without any vbos. I also made the depth of field corespond to the actual field of view in camera view (that was not the case before). Algorithm is still slow and should be coupled with a gaussian blur for low brightness pixels.</li>
+<li>Tonemapping: Added support for OCIO tonemapping for Eevee. Now eevee benefits from all OCIO features (dithering, color curve, looks, filmic ...) <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3fbafaffa11632e3b9f7011317060777c48040aa">commit</a></li>
+<li>Added UI for PostProcesses.</li>
+<li>Started Mesh Batch Cache optimisation.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Performance is becoming a critical subject. Next week will be dedicated to solve this matter.
+</p>
+<h2><span class="mw-headline" id="Week_21:_1st_-_7th_May">Week 21: 1st - 7th May</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week was focus on post processes right in the viewport.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Camera Motion Blur: Use animated camera transform deltas to create motion vectors for static objects and create a blur using these vectors. The blur algorithm is simple and suffer from bleeding artifacts.</li>
+<li>Bloom: Added bloom (a.k.a. glare) filter from <a rel="nofollow" class="external text" href="https://github.com/keijiro/KinoBloom/tree/master/">kinobloom</a>. There is still visual artefacts that may come from my bad implementation.</li>
+<li>Display Background Shader for eevee. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB4ef0513aab26f4ac459600e0f1ef6bc731a2ba42">commit</a></li>
+<li>Fix anoying Seam on Equirect Environment Map <a rel="nofollow" class="external text" href="https://developer.blender.org/rB550b0a22ad7d425bace08cb854eddfa440b2f91b">commit</a></li>
+<li>Add memory usage in debug stats.</li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Finishing other key postprocesses.
+</p>
+<h2><span class="mw-headline" id="Week_20:_24th_-_30th_April">Week 20: 24th - 30th April</span></h2>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week was spent entirely on getting the node system to work with the draw manager.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Spent the whole week on modifying the codegen / attribute system to work with eevee. This enables materials generated from nodetree to be compatible with eevee. It's not using PyGLSL but it will greatly benefit from it latter.</li>
+<li>Implemented Specular and Metallic workflow uber shaders.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_19:_17th_-_23th_April">Week 19: 17th - 23th April</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_material_nodes.png.html" class="image"><img alt="" src="../../../w/images/thumb/e/eb/Eevee_material_nodes.png/200px-Eevee_material_nodes.png" width="200" height="77" class="thumbimage" srcset="../../../w/images/thumb/e/eb/Eevee_material_nodes.png/300px-Eevee_material_nodes.png 1.5x, ../../../w/images/thumb/e/eb/Eevee_material_nodes.png/400px-Eevee_material_nodes.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_material_nodes.png.html" class="internal" title="Enlarge"></a></div>Material Nodes with PBR output</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>As I expected porting Materials was not an easy task. I have yet to create special output node for Eevee. At least old nodes works (I have not tested all of them)
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Mesh Batch Cache:
+<ul><li>In order to have full attribute support in materials (UVs, Tangents, Vcols), I needed to add support for them in the MBC. Turns out this was not easy because all of this was mixed between binding time logic in Derived Mesh and shader compile time logic. I tried to come up with a simplest (and more efficient in the end) solution that involves naming the attribute by their layer name. See the [<a rel="nofollow" class="external text" href="https://developer.blender.org/rB19f86a3d5f7f1f8267fef480604c39cf53c491fd">commit</a>] for more details. Tangent support is still wonky.</li></ul></li>
+<li>Eevee&#160;:
+<ul><li>Support for default shader parameters (no nodetree - no texture support). Parameters are not final and needs some design.</li>
+<li>Support for nodetree and current shading nodes. Engines can now request a GPUMaterial with their own GLSL header / vertex code. Implementation is not perfect but it suits our basic needs for now.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I'm going to add Output nodes for both Specular and Metallic workflow. Then I'll follow planning with a bit of delay and work on postprocess effects.
+</p>
+<h2><span class="mw-headline" id="Week_18:_10th_-_16th_April">Week 18: 10th - 16th April</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Cascaded_shadow_map.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c2/Cascaded_shadow_map.png/200px-Cascaded_shadow_map.png" width="200" height="103" class="thumbimage" srcset="../../../w/images/thumb/c/c2/Cascaded_shadow_map.png/300px-Cascaded_shadow_map.png 1.5x, ../../../w/images/thumb/c/c2/Cascaded_shadow_map.png/400px-Cascaded_shadow_map.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Cascaded_shadow_map.png.html" class="internal" title="Enlarge"></a></div>Cascaded shadow map</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week was focus on wrapping up some features from past weeks. I still have not done VSM.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Eevee&#160;:
+<ul><li>Implemented L2 Spherical Harmonic computation for diffuse environment lighting. Optimized generation is roughly 1ms on my system (GTX 960).</li>
+<li>Implemented Cascaded Shadow Map: There was a few trick to make them stable. This gives us scene scale shadows for sun lamps with increassing detail towards the camera.</li>
+<li>Speedup shadow rendering using geometry shader and instancing. Biasing is perfectible and some parameters will need to be on lamps / scene settings.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I will take a bit of time to get the materials working with the new DrawManager. I expect this to be a bit difficult (making old nodes still work with new shaders) and it will surelly put me behind schedule.
+</p>
+<h2><span class="mw-headline" id="Week_17:_10th_-_16th_April">Week 17: 10th - 16th April</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Probe_prefiltering.png.html" class="image"><img alt="" src="../../../w/images/thumb/9/9f/Probe_prefiltering.png/200px-Probe_prefiltering.png" width="200" height="48" class="thumbimage" srcset="../../../w/images/thumb/9/9f/Probe_prefiltering.png/300px-Probe_prefiltering.png 1.5x, ../../../w/images/thumb/9/9f/Probe_prefiltering.png/400px-Probe_prefiltering.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Probe_prefiltering.png.html" class="internal" title="Enlarge"></a></div>World Probe prefiltered</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I've dedicated my week toward Envmap rendering and prefiltering. Rendering is optimized and is about 1ms (Render 0.25ms + prefilter 0.75ms) for 512px cubemap.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Object Mode&#160;:
+<ul><li>Ported Force field display to new Draw Manager <a rel="nofollow" class="external text" href="https://developer.blender.org/rB4f063dc4dd127c9945b345dff7f316645a2470a4">commit</a></li></ul></li>
+<li>Eevee Probe&#160;:
+<ul><li>Implemented World probe rendering and prefiltering. Following Unreal Engine split sum approximation, I generated a slittly different LUT to be merge with the LTC_mag LUT (they use the same parameters). Prefiltering is done by Filtered Importance Sampling with a variying amount of sample, minimizing the time spent for each cubemap. I have not heavily validated against Cycles as it's currently broken in 2.8.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I still need to make the spherical harmonics extraction to have diffuse radiance information from envmap. After that my main focus would go towards the GLSL PyNodes and how to support unreals shader input using PyNodes.
+</p>
+<h2><span class="mw-headline" id="Week_16:_3rd_-_9nd_April">Week 16: 3rd - 9nd April</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_shadow.png.html" class="image"><img alt="" src="../../../w/images/thumb/6/66/Eevee_shadow.png/200px-Eevee_shadow.png" width="200" height="135" class="thumbimage" srcset="../../../w/images/thumb/6/66/Eevee_shadow.png/300px-Eevee_shadow.png 1.5x, ../../../w/images/thumb/6/66/Eevee_shadow.png/400px-Eevee_shadow.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_shadow.png.html" class="internal" title="Enlarge"></a></div>Eevee with point lamp shadow</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week focus was shadows. I lost some day figuring out what was the right approach considering old hardware support first (being gl 3.3 only). I went from a complicated general shadow pool to a per shadow type pool for each viewport. Vram usage is not efficient for now because every viewport allocate their own shadows even if they display the same renderlayer. I did manage to create a point light shadowing system that does not rely on GL_ARB_texture_cube_map_array. Rendering is using Geometry shader and make the whole shadow refreshing very slow. I did not have the time to implement Cascaded Shadow maps and VSM as I would like so current shadow are only using hardware PCF.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Object Mode&#160;:
+<ul><li>Added grid fading based on the angle of view.</li></ul></li>
+<li>Eevee Shadows&#160;:
+<ul><li>Implemented shadows with texture arrays. This gives the benefit to not rely on dynamic shader recompilation to use them and also spare a lot of texture binding slots. The downside for now is that we need to use layered rendering to render these shadowmaps.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I need to keep Eevee dev going and tackle the envmap rendering (will be pretty much similar to the shadow hopefully). We also need to tackle the transition to ogl 3.3 and I'm part of the dev force for it. Main focus will be to port features to new Draw Manager/Mode Engines.
+</p>
+<h2><span class="mw-headline" id="Week_15:_27th_-_2nd_April">Week 15: 27th - 2nd April</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Eevee_area_light.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7a/Eevee_area_light.png/200px-Eevee_area_light.png" width="200" height="61" class="thumbimage" srcset="../../../w/images/thumb/7/7a/Eevee_area_light.png/300px-Eevee_area_light.png 1.5x, ../../../w/images/thumb/7/7a/Eevee_area_light.png/400px-Eevee_area_light.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Eevee_area_light.png.html" class="internal" title="Enlarge"></a></div>Area Light Quality Comparison</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>This week focus was area lights. We are on time following the planning. Quality settings are planned but not there yet.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Eevee Area Lights&#160;: I implemented several techniques for area lighting. Only 2 brdfs are taken into account, lambert diffuse and GGX specular. From cheapest to the most expensive approximation we have&#160;:
+<ul><li>Point light&#160;: If desired, for performance reason, area light can be turned off completely and converted to simple point lights.</li>
+<li>Simple Approximation&#160;: Starting from this level Sphere area light diffuse contribution are calculated analiticaly (exact look). Rectangle Lamps are using structured sampling with 5 points as described in the Frosbite PBR notes. For specular surfaces, we use Brian Karis MRP method for sphere lamps and a custom MRP solution for Rectangle Lamps.</li>
+<li>Expensive Approximation&#160;: If quality is needed, we use the LTC solution from Eric Heitz. This gives us perfect diffuse contribution of Rectangle Lamps and a fairly good approximation for GGX spec. For Sphere Lamps specular, we use the spinning quad technique described <a rel="nofollow" class="external text" href="http://pascal.lecocq.home.free.fr/publications/lecocq_TVCG2017_analyticAreaLightShading.pdf">here</a>. Unfortunatly energy preservation is not perfect and there is an artifact appearing in the light direction.</li>
+<li>Accurate Approximation&#160;: To fix the last problem concerning sphere lamps (see just above), we compute the LTC integral for a whole octogone instead of just a quad. The clipping algorithm is made simpler but introduce a neglectible error. The octogone and the circle have less area difference and thus the approximation is better.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>The plan is to focus on Eevee shadow support.
+</p>
+<h2><span class="mw-headline" id="Week_14:_20th_-_26th_March">Week 14: 20th - 26th March</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:New_outline.png.html" class="image"><img alt="" src="../../../w/images/thumb/5/5a/New_outline.png/200px-New_outline.png" width="200" height="154" class="thumbimage" srcset="../../../w/images/thumb/5/5a/New_outline.png/300px-New_outline.png 1.5x, ../../../w/images/thumb/5/5a/New_outline.png/400px-New_outline.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:New_outline.png.html" class="internal" title="Enlarge"></a></div>Selection outlines reworked</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:New_grid.png.html" class="image"><img alt="" src="../../../w/images/thumb/8/87/New_grid.png/200px-New_grid.png" width="200" height="147" class="thumbimage" srcset="../../../w/images/thumb/8/87/New_grid.png/300px-New_grid.png 1.5x, ../../../w/images/thumb/8/87/New_grid.png/400px-New_grid.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:New_grid.png.html" class="internal" title="Enlarge"></a></div>New fading grid</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Documentation of the draw manager and code flow is up <a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/Dev:2.8/Source/Viewport/DrawManager">there</a>. I've worked a bit off schedule and focused a bit on the outline and grid refactor. I've also written the ideal components of the mesh batch cache to have the maximum memory efficiency (smaller vbos) and data Independence (faster update) <a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1GyRLKcYmj12Bx_zzM6UB18lkfpKc-o-tEL9waQe-zYU/edit?usp=sharing">link</a>.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Object Mode&#160;:
+<ul><li>New Outlines changes&#160;: Following plyczkowski mockups (<a rel="nofollow" class="external text" href="https://developer.blender.org/T51021">T51021</a>) I changed the outline algorithm to have the same appearance.</li>
+<li>New Grid&#160;: Again, following plyczkowski mockups, I implemented a grid that fades away from the camera position. Grid subdivision become lower the further the distance to the camera. For now the fade-out starts at half the clip distance. It is anti-aliased and have constant performance cost (compared to the old grid).  User feedback is needed.</li></ul></li>
+<li>Draw Manager&#160;:
+<ul><li>Refactor Static var&#160;: Engines were relying on a static g_data var when generating the cache, eliminating any parallel executions. This improves code clarity and potential for multi-threading.</li>
+<li>Debug Stats&#160;: Include detailed CPU and GPU timings when debug var is &gt; 30 (CTRL+ALT+D). This will be useful for profiling and performance testing. (<a rel="nofollow" class="external text" href="https://wiki.blender.org/index.php/File:Viewport_debug_stat.jpg">screeshot</a>)</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I'll plan to focus on the scene light support for eevee.
+</p>
+<h2><span class="mw-headline" id="Week_13:_13th_-_19th_March">Week 13: 13th - 19th March</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:New_selection_outline.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7e/New_selection_outline.png/200px-New_selection_outline.png" width="200" height="162" class="thumbimage" srcset="../../../w/images/thumb/7/7e/New_selection_outline.png/300px-New_selection_outline.png 1.5x, ../../../w/images/thumb/7/7e/New_selection_outline.png/400px-New_selection_outline.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:New_selection_outline.png.html" class="internal" title="Enlarge"></a></div>New selection outlines</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Amsterdam Meeting was really productive. Meeting notes are comming soon, but as a short overview we discussed Eevee planning, the current state of the new drawing code, and the OpenGL refactor tasks. I also spend a bit of time on selection outline refinement. For this I implemented stencil masking usage, but final implementation does not rely on it. If I don't find any other I'll remove it. I also started Eevee yay \o/.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Object Mode&#160;:
+<ul><li>New Outlines (see picture): First Implementation used Three passes and was very slow compared to the old one (two passes). Also, appart from modulating the occluded silouhette edges, it was not very different from what we have now. Final implementation is a bit more subtle with an outward gradient and a light fill color.</li></ul></li>
+<li>GPUTexture&#160;:
+<ul><li>Implement Depth Stencil Textures. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBc4644b484d30d7dee62425a18d6896acf6fcbb0c">commit</a></li></ul></li>
+<li>Eevee&#160;:
+<ul><li>Support for 256 scene lights via UBO (only diffuse for point lights), Limit can be highier and needs to be set depending on system capabilities. Old limit was 48 or was prone to shader compilation error (too much variables). <a rel="nofollow" class="external text" href="https://developer.blender.org/rBb7355425cdff8f3f23e386f2817d5702b46f7bd6">commit</a></li></ul></li>
+<li>OpenGL Refactor&#160;:
+<ul><li>Converted gpu_compositing.c. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB407f8eed7def12faf60069a18eabbcc01abc210c">commit</a></li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I'll plan to write documentation about the Draw manager and the whole drawing flow with engines. Then I'll focus on a Memory Manager / Inspector in pair with a statistic tool for benchmarking viewport development.
+</p>
+<h2><span class="mw-headline" id="Week_12:_6th_-_12th_March">Week 12: 6th - 12th March</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Normal_display.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7a/Normal_display.png/200px-Normal_display.png" width="200" height="127" class="thumbimage" srcset="../../../w/images/thumb/7/7a/Normal_display.png/300px-Normal_display.png 1.5x, ../../../w/images/thumb/7/7a/Normal_display.png/400px-Normal_display.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Normal_display.png.html" class="internal" title="Enlarge"></a></div>Transparent occluded Normals</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>A huge portion of the week was dedicated to drawobject.c. Eevee was postponed until we have a solid roadmap for it.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Edit Mode&#160;:
+<ul><li>Ported Normals (Verts/Loops/Face) display.  <a rel="nofollow" class="external text" href="https://developer.blender.org/rB49ef1a25b8d361a75211c29baa131d6958072685">commit</a></li></ul></li>
+<li>Draw Manager&#160;:
+<ul><li>Restructured the overall design to be more modular and allow engine compositing. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB3b91989a093aef874b601efcffd247cf61e73bad">commit</a></li>
+<li>Added templates for all practicle mode engines. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB9c6b9e889c01f3ba9775ea942457f58c1b1e63e9">commit</a></li></ul></li>
+<li>OpenGL Refactor&#160;:
+<ul><li>Nearly finished drawobject.c only remaining legacy calls are for DerivedMesh usage.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Amsterdam Meetup and hopefully a bit of Eevee.
+</p>
+<h2><span class="mw-headline" id="Week_11:_27th_-_5th_March">Week 11: 27th - 5th March</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:New_transparent_wire.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/8/8d/New_transparent_wire.jpg/200px-New_transparent_wire.jpg" width="200" height="224" class="thumbimage" srcset="../../../w/images/thumb/8/8d/New_transparent_wire.jpg/300px-New_transparent_wire.jpg 1.5x, ../../../w/images/thumb/8/8d/New_transparent_wire.jpg/400px-New_transparent_wire.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:New_transparent_wire.jpg.html" class="internal" title="Enlarge"></a></div>New and Old transparent wires</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I left asside the OGL refactor tasks to focus on edit mesh overlays. I've worked on fixing the half edge problem as I found it to be a substancial problem (both verts and edges of faces viewed side-on disappearing, vertex being cut at the triangles boundaries). To fix this, I draw a triangle strip with constant width in viewspace, around every triangle using the geometry shader. But the fact all triangles must be in a strip force us to make degenerate triangles to draw the contour, thus we must output 23 vertices per triangle. It results in very poor performance (roughly 1/3) compared to the normal version. So I disabled the fix when navigating the 3D view. We still benefit from this technique though. We don't need 3 passes to render Verts/Edges/faces and we get no depth-fighting or poking through with underneath render (there is still artifact due to depth precision right in front of camera but it results mostly in noise on the edges).
+We also discussed planning for the month of March. I also detailled the steps for the developpement of the Eevee engine. <a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1SSWN6jHyHXb5kcNCenDdCRhR2o--X3SvkZPrT_uMmVo/edit?usp=sharing">Document</a>
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Edit Mode&#160;:
+<ul><li>Fixed the overlay edges being half width at the silouhette. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB416bd1bbe802ff51b2453fb48dd6daf7aa2f12e3">commit</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/rB96d63d2232919e064d27f337b728065044736149">commit</a></li>
+<li>Added support for loose edges, loose verts and face center. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB677f066634e7434e705c83751dc21a427ed086e1">commit</a></li>
+<li>Added support of the "Limit selection to visible" feature with an opacity slide option. This is an improvement over the old system that was loosing clarity with dense mesh. Now we have a proper depth sorted wires.</li>
+<li>Support for Theme colors via UBO. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBaa102283daf0fd7a6a59d241c0b353f3e0ecfffc">commit</a></li></ul></li>
+<li>Object Mode&#160;:
+<ul><li>Mostly Finished lamp drawing.</li>
+<li>Added Camera drawing. This is a great reference for someone who want to help port other Non-meshes to the new system. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB608b96c49b93cad8a9b68592c00863a84d857d1b">commit</a></li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I will try to cleanup the draw manager and make template of things to do so others can work and help. Then I'll start Eevee.
+</p>
+<h2><span class="mw-headline" id="Week_10:_20th_-_26th_Febuary">Week 10: 20th - 26th Febuary</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Solid_wireframe.png.html" class="image"><img alt="" src="../../../w/images/thumb/c/c7/Solid_wireframe.png/200px-Solid_wireframe.png" width="200" height="130" class="thumbimage" srcset="../../../w/images/thumb/c/c7/Solid_wireframe.png/300px-Solid_wireframe.png 1.5x, ../../../w/images/thumb/c/c7/Solid_wireframe.png/400px-Solid_wireframe.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Solid_wireframe.png.html" class="internal" title="Enlarge"></a></div>New solid wireframe</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>I'm exhausted, I worked 7days full time...
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Opengl Refactoring&#160;:
+<ul><li>Finished interface_panel.c, interface_widgets.c, uvedit_smart_stich.c, paint_stroke.c, gpu_framebuffer.c</li>
+<li>Finished porting all glaDrawPixels function to imm equivalent.</li>
+<li>Ported OCIO implementation to GL 3.3 core. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB1f453a8909527a95fedd597b4fdaab90c18712f9">link</a>)</li></ul></li>
+<li>Clay Engine&#160;:
+<ul><li>Started Edit Armature sub-engine: Base is here so someone can finish it. Only Octahedral armatures are supported. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rBcd0d335183c8aa2c947a68ed6d5ded02a3cf2d2a">link</a>)</li>
+<li>Added Edit Mesh overlays: Based on the work started by Mike Erwin, I removed the artifacts due to cliped vertices following Nvidia's paper. I also added point drawing in the same pass and face drawing. Everything can be done in one rendering pass, except for face centers. There is still artifacts on the silhouette of the mesh, I plan to fix this but this would require 6x time more tris to rasterize. I think this will be a quality switch in the settings panel, or switch if off when rotating the view or anim playback. With this technique we are completely GPU bound when drawing edit mesh. However it need to upload a certain amount of data to the GPU that is still slow to regenerated on edits. This could be optimized later. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB712530eb9321f233694eeb49a10e1c916576b153">link</a>)</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>This is a buffer week. Since I met pretty much all the requirement for this month, I can polish the work done and maybe start on the Eevee engine. I'll try to improve the solid wireframes to use theme color, fix edge artifacts. Maybe do a bit more of the armature drawing to refine the instance batching. I would love to try some temporal refinement too but I don't know if I would have time for this. I also need to create timing code to display render time informations.
+</p>
+<h2><span class="mw-headline" id="Week_09:_13th_-_19th_Febuary">Week 09: 13th - 19th Febuary</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Ao_per_vertex_normals.jpg.html" class="image"><img alt="" src="../../../w/images/thumb/8/8e/Ao_per_vertex_normals.jpg/200px-Ao_per_vertex_normals.jpg" width="200" height="188" class="thumbimage" srcset="../../../w/images/thumb/8/8e/Ao_per_vertex_normals.jpg/300px-Ao_per_vertex_normals.jpg 1.5x, ../../../w/images/thumb/8/8e/Ao_per_vertex_normals.jpg/400px-Ao_per_vertex_normals.jpg 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Ao_per_vertex_normals.jpg.html" class="internal" title="Enlarge"></a></div>New SSAO without artifacts</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Last week was more focused on OGL refactor so I focus back on CLAY. Some work was done not following planning order but overall progress is still on time.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Opengl Refactoring&#160;:
+<ul><li>Finished drawarmature.c, transform_manipulator.c</li></ul></li>
+<li>Clay Engine&#160;:
+<ul><li>Added support for geometry normals. Now clay is better than master matcap+ao because ambient occlusion does not use derived normals (see screenshot).</li>
+<li>Added back some object/edit mode collection settings, namely "Wire (overlay display)", "Backface culling", and "Hidden Wire"</li>
+<li>Added back transform manipulator and info drawing.</li>
+<li>Separated "modes" drawing code into sub-engines. (<a rel="nofollow" class="external text" href="https://developer.blender.org/rB50fb3ea3de8db278fd135392b990158b745e3e3f">commit</a>)</li>
+<li>Added debug variable (Shortcut Ctrl+Alt+D) 666 (no instance caching, non meshes position are recomputed each frame) and 667 (full cache, scene is frozen until you exit this mode) to test viewport cache performance.</li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>Appart from OGL refactor duties, I will contentrate on edit mesh drawing and the overlay shader (with Mike Erwin's help) that will be used whenever we have to draw wire with shaded geometry.
+</p>
+<h2><span class="mw-headline" id="Week_08:_6th_-_12th_Febuary">Week 08: 6th - 12th Febuary</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Clay_render_engine_settings.png.html" class="image"><img alt="" src="../../../w/images/thumb/7/7c/Clay_render_engine_settings.png/200px-Clay_render_engine_settings.png" width="200" height="238" class="thumbimage" srcset="../../../w/images/thumb/7/7c/Clay_render_engine_settings.png/300px-Clay_render_engine_settings.png 1.5x, ../../../w/images/thumb/7/7c/Clay_render_engine_settings.png/400px-Clay_render_engine_settings.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Clay_render_engine_settings.png.html" class="internal" title="Enlarge"></a></div>Collection render settings in action&#160;: multiple matcap materials</div></div></div>
+<ul><li><strong>Info</strong></li></ul>
+<p>Monday we merged clay-engine/render-layers branch to blender2.8. A large portion of my time was dedicated to OGL refactoring tasks.
+</p>
+<ul><li><strong>General development</strong>
+<ul><li>Opengl Refactoring&#160;:
+<ul><li>Finished interface_draw.c</li>
+<li>Nearly finished drawarmature.c</li>
+<li>Added replacement for gluSphere, gluCylinder, glaDrawPixelsTex*</li></ul></li>
+<li>Clay Engine&#160;:
+<ul><li>Added support for collection overrides. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB6b372e3a22cb">6b372e3a22cb</a></li>
+<li>Reworked on Instancing&#160;: it is now more flexible and allowed a good cleanup. <a rel="nofollow" class="external text" href="https://developer.blender.org/rBfc0797142d0c">fc0797142d0c</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/rBfc0797142d0c">fc0797142d0c</a> <a rel="nofollow" class="external text" href="https://developer.blender.org/rBeb473143a8cf">eb473143a8cf</a></li></ul></li></ul></li>
+<li><strong>Next week</strong></li></ul>
+<p>I still need to finish the drawarmature refactoring, that will be done by monday. Since I spent a bit of time on the ogl refactoring, I'll try to catch up and do more work on clay engine. Specially on having everything from old viewport tightly integreted in the new DRW module (cursor, transform tools). Then I will implement the Edit mode Collection settings as planned.
+</p>
+<h2><span class="mw-headline" id="Week_07:_30th_-_5th_Febuary">Week 07: 30th - 5th Febuary</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Added support for instancing. This leads to a new performance gain.</li>
+<li>Ported mostly Empties and Lamps drawing to the new drawing methods.</li>
+<li><a rel="nofollow" class="external text" href="https://docs.google.com/spreadsheets/d/1qASYYdLbuyFlwjx70cl6bgzrvCZUVdBWV89NtQoRqME/edit?usp=sharing">Benchmarked</a> the performance gain of non-meshes drawing with instancing and batching. Test files are available <a rel="nofollow" class="external text" href="https://drive.google.com/open?id=0BznxGZl--8xxN0VoeU40ZDI1Vmc">here</a></li>
+<li>Worked on getting object mode display (wires, outlines).</li>
+<li>Rewrote some bits of the clay engine to not relly on a custom runtime data struct. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB0ee52a5741a1">0ee52a5741a1</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_06:_23rd_-_29th_January">Week 06: 23rd - 29th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Cleanup Clay Engine to support new MBC functions.</li>
+<li>Started Work on object mode overlay an non-meshes object.</li>
+<li>Introduce Dynamic VBOs that are created from a list of objects matrices (giving line or points).</li>
+<li>Use the aformentionned technique to batch object center and relationship lines giving huge performance gain.</li>
+<li>Changes to DNA/RNA for the RenderEngineSetings.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_05:_16th_-_22nd_January">Week 05: 16th - 22nd January</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="../../File:Gtao_wip.png.html" class="image"><img alt="" src="../../../w/images/thumb/d/db/Gtao_wip.png/200px-Gtao_wip.png" width="200" height="402" class="thumbimage" srcset="../../../w/images/thumb/d/db/Gtao_wip.png/300px-Gtao_wip.png 1.5x, ../../../w/images/thumb/d/db/Gtao_wip.png/400px-Gtao_wip.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../../File:Gtao_wip.png.html" class="internal" title="Enlarge"></a></div>Ground truth ambiant occlusion Work in Progress</div></div></div>
+<ul><li><strong>General development</strong>
+<ul><li>Posted a proposal about a cache system to accelerate viewport redrawing. <a rel="nofollow" class="external text" href="https://docs.google.com/document/d/1Lcg2G3v7JJX25kF_b4m2NM286cJkfTBMFDhzmZ2ruAg/edit?usp=sharing">Document</a></li>
+<li>Made an early implementation of Ground Truth AO.</li>
+<li>Added support for Uniform Buffer Object in the GPU module.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_04:_9th_-_15th_January">Week 04: 9th - 15th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Ported SSAO to the new matcap shaders.</li>
+<li>Added an inverted AO effect to Matcap shader using the same loop as the AO "cavity" effect, highlighting edges.</li>
+<li>Added parameters to control Hue Saturation Value and Rotation of the Matcap texture.</li>
+<li>Found a problem in the fragment shader of SSAO and fixed it in master. <a rel="nofollow" class="external text" href="https://developer.blender.org/rB0507b3e4c41ff058c00b7a45d937d82939b4e0d5">0507b3e4c41f</a></li>
+<li>Started investigating Ground Truth AO as replacement of Alchemy AO.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Week_03:_1st_-_8th_January">Week 03: 1st - 8th January</span></h2>
+<ul><li><strong>General development</strong>
+<ul><li>Added 2d texture arrays to draw multiple matcaps with less texture bindings.</li>
+<li>Got matcap to work without proper mesh normal (using dfdy to derive normal) as a quick test waiting for proper VBO request.</li>
+<li>Refactored the GPU_texture module to allow more internal image format and use consistent function names. <a rel="nofollow" class="external text" href="https://developer.blender.org/D2452">D2452</a></li></ul></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20240112121345
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.482 seconds
+Real time usage: 1.212 seconds
+Preprocessor visited node count: 5697/1000000
+Preprocessor generated node count: 3243/1000000
+Post‐expand include size: 25027/2097152 bytes
+Template argument size: 8152/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  255.118      1 -total
+ 95.18%  242.827     59 Template:GitCommit
+ 59.29%  151.263     77 Template:GitCommit/PhabricatorParse
+ 10.32%   26.323     41 Template:GitCommit/PhabricatorParseDeprecated
+  0.90%    2.295      9 Template:BugReport
+-->
+</div>
+<!-- Saved in parser cache with key mw_wiki-mediawiki_:pcache:idhash:382-0!canonical and timestamp 20240112121344 and revision id 715
+ -->
+</div><div class="clearfix"></div><div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;oldid=715">https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;oldid=715</a>"</div>					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer pt-4">
+
+			<!-- Footer Links -->
+			<div class="container-fluid text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+					<div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">info</h5><p id="footer-info-lastmod"> This page was last edited on 23 July 2018, at 11:41.</p><p id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</p></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">places</h5><ul id="footer-places" role="contentinfo"><li id="footer-places-privacy"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:Privacy_policy" title="Blender Developer Wiki:Privacy policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:About" title="Blender Developer Wiki:About">About Blender Developer Wiki</a></li><li id="footer-places-disclaimer"><a href="https://wiki.blender.org/wiki/Blender_Developer_Wiki:General_disclaimer" title="Blender Developer Wiki:General disclaimer">Disclaimers</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Utilities</h5><ul id="p-tb"><li id="t-whatlinkshere"><a href="../../Special:WhatLinksHere/User:Hypersomniac/Foundation/2017.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.blender.org/wiki/Special:RecentChangesLinked/User:Hypersomniac/Foundation/2017" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-contributions"><a href="../../Special:Contributions/Hypersomniac.html" title="A list of contributions by this user">User contributions</a></li><li id="t-log"><a href="../../Special:Log/Hypersomniac.html">Logs</a></li><li id="t-userrights"><a href="../../Special:UserRights/Hypersomniac.html">View user groups</a></li><li id="t-specialpages"><a href="../../Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;oldid=715" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.blender.org/w/index.php?title=User:Hypersomniac/Foundation/2017&amp;action=info" title="More information about this page">Page information</a></li></ul></div><div class="col-md-3 mt-md-0 mt-3"><h5 class="text-uppercase">Navigation</h5><ul id="p-navigation"><li id="n-mainpage-description"><a href="../../Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="../../Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="../../Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li></ul></div>
+				</div>
+				<!-- Grid row -->
+
+				<!-- Grid row -->
+				<div class="row pt-4 pb-4">
+					<div class="col">
+						<!-- Copyright -->
+						<div class="text-center">Creative freedom starts with Blender – The Free and Open Source 3D Creation Suite
+						</div>
+						<!-- Copyright -->
+					</div>
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+		</footer>
+		<!-- Footer -->
+
+
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.482","walltime":"1.212","ppvisitednodes":{"value":5697,"limit":1000000},"ppgeneratednodes":{"value":3243,"limit":1000000},"postexpandincludesize":{"value":25027,"limit":2097152},"templateargumentsize":{"value":8152,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  255.118      1 -total"," 95.18%  242.827     59 Template:GitCommit"," 59.29%  151.263     77 Template:GitCommit/PhabricatorParse"," 10.32%   26.323     41 Template:GitCommit/PhabricatorParseDeprecated","  0.90%    2.295      9 Template:BugReport"]},"cachereport":{"timestamp":"20240112121345","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1265});});</script>		<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"844550af782b0eb4","b":1,"version":"2023.10.0","token":"d5f49e4e21684977a6be2ac49670f7b1"}' crossorigin="anonymous"></script>
+</body>
+		</html>
+
+		
